@@ -1,0 +1,12 @@
+{{ define "header" }}
+  {{ partial "navbar" }}
+{{ end }}
+{{ define "main" }}
+  <main>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </main>
+{{ end }}
+{{ define "footer" }}
+  {{ partial "footer" }}
+{{ end }}
