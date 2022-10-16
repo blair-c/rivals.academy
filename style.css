@@ -57,7 +57,7 @@ button {
 }
 
 /* Large screens */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .nav-item {
     margin-right: 2rem;
   }
@@ -68,7 +68,7 @@ button {
 }
 
 /* Small screens */
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:600px) {
   .nav-item {
     margin-right: 1rem;
   }
