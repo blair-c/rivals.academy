@@ -3,17 +3,21 @@
     <li class="nav-item">
       <a href="/">(logo)</a>
     </li>
-    <li class="nav-item library">
+    <li class="nav-item">
       <a href="/library">Library</a>
     </li>
-    <li class="nav-item class">
+    <li class="nav-item">
       <a href="/community">Class</a>
     </li>
     <li class="nav-item">
-      <a href="#">(search)</a>
+      <button id="nav-search" aria-label="search">
+        {{ partial "svg/magnifying-glass-solid.svg" }}
+      </button>
     </li>
     <li class="nav-item">
-      <a href="#">(theme)</a>
+      <button id="theme-toggle" aria-label="toggle dark/light theme">
+        {{ partial "svg/circle-half-stroke-solid.svg" }}
+      </button>
     </li>
   </ul>
 </nav>
