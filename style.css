@@ -1,8 +1,21 @@
+html[theme='light'] {
+  --text-color: black;
+  --bg-color: white;
+}
+
+html[theme='dark'] {
+  --text-color: white;
+  --bg-color: black;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  font-size: 16;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 a {
@@ -11,6 +24,11 @@ a {
 
 button {
   cursor: pointer;
+}
+
+svg {
+  fill: var(--text-color);
+  transition: fill 1000ms ease-in-out;
 }
 
 .navbar {
