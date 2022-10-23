@@ -32,7 +32,7 @@ const setPreference = () => {
 
 const reflectPreference = () => {
   document.firstElementChild
-    .setAttribute('theme', theme.value)
+    .setAttribute('data-theme', theme.value)
 
   document
     .querySelector('#theme-toggle')

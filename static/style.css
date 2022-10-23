@@ -1,9 +1,9 @@
-html[theme='light'] {
+html[data-theme='light'] {
   --text-color: black;
   --bg-color: white;
 }
 
-html[theme='dark'] {
+html[data-theme='dark'] {
   --text-color: white;
   --bg-color: black;
 }
