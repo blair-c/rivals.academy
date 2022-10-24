@@ -1,1 +1,1 @@
-{{ jsonify .Params.data }}
+{{ index .Site.Data.rivals .File.BaseFileName | jsonify }}
