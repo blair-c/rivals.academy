@@ -31,6 +31,19 @@ svg {
   transition: fill 1000ms ease-in-out;
 }
 
+table, th, td {
+  border: 1px solid var(--text-color);
+  transition: border 1000ms ease-in-out;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.4rem;
+}
+
 .navbar {
   height: 5rem;
   width: 100%;
