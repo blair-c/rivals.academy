@@ -2,3 +2,110 @@ name: Absa
 element: air
 patch: 2.1.4.1
 
+knockbackAdjustment: 1.10
+gravityAccel: 0.30
+hitstunGravityAccel: 0.45
+airFriction: 0.04
+airAccel: 0.40
+maxFallSpeed: 8
+fastFallSpeed: 12
+landTime: 4
+
+groundFriction: 0.63
+initialDash:
+  speed: 4.00
+  time: 8
+run:
+  speed: 6.25
+  stop:
+    time: 4
+  turn:
+    time: 10
+    accel: 1.50
+walk:
+  speed: 3.00
+  accel: 0.20
+  turn:
+    time: 6
+waveland:
+  time: 6
+  friction: 0.00
+
+maxAirSpeed: 6
+maxJumpHorizontalSpeed: 8
+jumpSquat: 5
+fullHop:
+  speed: 7.60
+shortHop:
+  speed: 4.5
+doubleJump:
+  amount: 1
+  speed: -1.00
+  accel: -1.40
+wallJump:
+  speed:
+    vertical: 7
+    horizontal: 6
+pratFall:
+  accel: 0.40
+  landTime: 16
+
+hurtbox:
+  idle:
+    height: 59
+    width: 42
+  crouch:
+    height: 36
+    width: 42
+  hitstun:
+    height: 59
+    width: 42
+
+parry:
+  startup: 2
+  invuln:
+    from: 3
+    to: 10
+    frames: 8
+  endlag: 20
+  firstActiveFrame: 31
+  cooldown: 20
+roll:
+  startup: 3
+  invuln:
+    from:
+    to:
+    active:
+  endlag: 12
+  firstActiveFrame: 
+  speed: 9.5
+airdodge:
+  startup: 2
+  invuln:
+    from: 3
+    to: 
+    active: 12
+  endlag: 12
+  firstActiveFrame: 
+  speed: 8.0
+
+tech:
+  inPlace:
+    startup: 0
+    invuln:
+      from: 1
+      to: 14
+      frames: 14
+    endlag: 4
+    firstActiveFrame: 
+  roll:
+    startup: 8
+    invuln:
+      from: 
+      to: 
+      frames: 12
+    endlag: 14
+    firstActiveFrame: 
+    speed: 8
+  miss:
+    firstActiveFrame: 

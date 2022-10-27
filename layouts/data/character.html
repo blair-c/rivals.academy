@@ -1,0 +1,100 @@
+{{ define "header" }}
+  {{ partial "navbar" }}
+{{ end }}
+
+{{ define "main" }}
+  <main>
+    {{ $c := index .Site.Data.rivals .File.BaseFileName }}
+    <h1>{{ $c.name }}</h1>
+    {{ .Content }}
+
+    <table>
+      <tr>
+        <th>Knockback Adjustment</th>
+        <th>Gravity Acceleration</th>
+        <th>Hitstun Gravity Acceleration</th>
+        <th>Air Friction</th>
+        <th>Air Acceleration</th>
+        <th>Max Fall Speed</th>
+        <th>Fast Fall Speed</th>
+        <th>Land Time</th>
+      </tr>
+      <tr>
+        <td>{{ $c.knockbackAdjustment }}</td>
+        <td>{{ $c.gravityAccel }}</td>
+        <td>{{ $c.hitstunGravityAccel }}</td>
+        <td>{{ $c.airFriction }}</td>
+        <td>{{ $c.airAccel }}</td>
+        <td>{{ $c.maxFallSpeed }}</td>
+        <td>{{ $c.fastFallSpeed }}</td>
+        <td>{{ $c.landTime }}</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>Ground Friction</th>
+        <th>Initial Dash Speed</th>
+        <th>Initial Dash Time  </th>
+        <th>Run Speed</th>
+        <th>Run Stop Time</th>
+        <th>Run Turn Time</th>
+        <th>Run Turn Acceleration</th>
+        <th>Walk Speed</th>
+        <th>Walk Acceleration</th>
+        <th>Walk Turn Time</th>
+        <th>Waveland Time</th>
+        <th>Waveland Friction</th>
+      </tr>
+      <tr>
+        <td>{{ $c.groundFriction }}</td>
+        <td>{{ $c.initialDash.speed }}</td>
+        <td>{{ $c.initialDash.time }}</td>
+        <td>{{ $c.run.speed }}</td>
+        <td>{{ $c.run.stop.time }}</td>
+        <td>{{ $c.run.turn.time }}</td>
+        <td>{{ $c.run.turn.accel }}</td>
+        <td>{{ $c.walk.speed }}</td>
+        <td>{{ $c.walk.accel }}</td>
+        <td>{{ $c.walk.turn.time }}</td>
+        <td>{{ $c.waveland.time }}</td>
+        <td>{{ $c.waveland.friction }}</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <th>Max Air Speed</th>
+        <th>Max Jump Horizontal Speed</th>
+        <th>Jump Squat</th>
+        <th>Full Hop Speed</th>
+        <th>Short Hop Speed</th>
+        <th>Double Jump Amount</th>
+        <th>Double Jump Speed</th>
+        {{ with $c.doubleJump.accel }}
+        <th>Double Jump Acceleration</th>{{ end }}
+        <th>Wall Jump Vertical Speed</th>
+        <th>Wall Jump Horizontal Speed</th>
+        <th>Prat Fall Acceleration</th>
+        <th>Prat Fall Land Time</th>
+      </tr>
+      <tr>
+        <td>{{ $c.maxAirSpeed }}</td>
+        <td>{{ $c.maxJumpHorizontalSpeed }}</td>
+        <td>{{ $c.jumpSquat }}</td>
+        <td>{{ $c.fullHop.speed }}</td>
+        <td>{{ $c.shortHop.speed }}</td>
+        <td>{{ $c.doubleJump.amount }}</td>
+        <td>{{ $c.doubleJump.speed }}</td>
+        {{ with $c.doubleJump.accel }}
+        <td>{{ $c.doubleJump.accel }}</td>{{ end }}
+        <td>{{ $c.wallJump.speed.vertical }}</td>
+        <td>{{ $c.wallJump.speed.horizontal }}</td>
+        <td>{{ $c.pratFall.accel }}</td>
+        <td>{{ $c.pratFall.landTime }}</td>
+      </tr>
+    </table>
+  </main>
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer" }}
+{{ end }}

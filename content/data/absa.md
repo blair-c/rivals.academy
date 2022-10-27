@@ -4,5 +4,6 @@ description: Absa frame data and hitbox info
 outputs:
 - html
 - json
+layout: character
 ---
 
