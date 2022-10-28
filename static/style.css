@@ -77,8 +77,9 @@ td {
   transition: .2s ease-in-out;
 }
 
-.nav-item:first-child:hover {
-  transform: scale(1);
+.nav-item:active {
+  transform: scale(0.95);
+  transition: .05s;
 }
 
 .nav-item a {
