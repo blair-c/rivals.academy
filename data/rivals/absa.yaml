@@ -9,6 +9,7 @@ airFriction: 0.04
 airAccel: 0.40
 maxFallSpeed: 8
 fastFallSpeed: 12
+jumpSquat: 5
 landTime: 4
 
 groundFriction: 0.63
@@ -33,7 +34,6 @@ waveland:
 
 maxAirSpeed: 6
 maxJumpHorizontalSpeed: 8
-jumpSquat: 5
 fullHop:
   speed: 7.60
 shortHop:
