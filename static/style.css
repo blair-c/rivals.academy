@@ -74,7 +74,7 @@ td {
 
 .nav-item:hover {
   transform: scale(1.05);
-  transition: .2s ease-in-out;
+  transition: .1s ease-in-out;
 }
 
 .nav-item:active {
