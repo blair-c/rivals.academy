@@ -10,7 +10,6 @@ body {
   font-size: 16px;
   color: var(--text-color);
   background-color: var(--bg-color);
-  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 a {
@@ -27,7 +26,6 @@ h3 {
 
 table, th, td {
   border: 1px solid var(--text-color);
-  transition: border 1000ms ease-in-out;
 }
 
 table {
