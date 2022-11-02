@@ -79,6 +79,14 @@ td {
   color: currentColor;
 }
 
+.nav-item button {
+  background: transparent;
+  border: none;
+  height: 1.75rem;
+  width: 1.75rem;
+  padding: 5px 0;
+}
+
 /* Large screens */
 @media only screen and (min-width: 600px) {
   .nav-item {
