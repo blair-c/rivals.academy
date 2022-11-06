@@ -1,20 +1,15 @@
 <nav class="navbar">
-  <a id="logo" href="/">(logo)</a>
+  <a class="nav-logo" href="/">(logo)</a>
+
+  <input class="nav-menu" type="checkbox" id="nav-menu"/>
+  <label class="hamb" for="nav-menu"><span class="hamb-line"></span></label>
+
   <ul class="nav-list">
-    <li class="nav-item">
-      <a href="/library">Library</a>
-    </li>
-    <li class="nav-item">
-      <a href="/guides">Guides</a>
-    </li>
-    </li>
-    <li class="nav-item">
-      <a href="/tournaments">Tournaments</a>
-    </li>
-    <li class="nav-item">
-      <a href="/about">About</a>
-    </li>
-    <li class="nav-item">
+    <li><a href="/library">Library</a></li>
+    <li><a href="/guides">Guides</a></li>
+    <li><a href="/tournaments">Tournaments</a></li>
+    <li><a href="/about">About</a></li>
+    <li>
       <a href="{{ site.Data.links.discord }}" target="_blank" rel="noopener noreferrer">
         {{ partial "svg/icon-discord.svg" }}
       </a>
