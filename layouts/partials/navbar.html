@@ -1,17 +1,22 @@
 <nav class="navbar">
+  <a id="logo" href="/">(logo)</a>
   <ul class="nav-list">
-    <li class="nav-item">
-      <a href="/">(logo)</a>
-    </li>
     <li class="nav-item">
       <a href="/library">Library</a>
     </li>
     <li class="nav-item">
-      <a href="/lessons">Lessons</a>
+      <a href="/guides">Guides</a>
+    </li>
     </li>
     <li class="nav-item">
-      <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.discord }}">
-        <button>{{ partial "svg/icon-discord.svg" }}</button>
+      <a href="/tournaments">Tournaments</a>
+    </li>
+    <li class="nav-item">
+      <a href="/about">About</a>
+    </li>
+    <li class="nav-item">
+      <a href="{{ site.Data.links.discord }}" target="_blank" rel="noopener noreferrer">
+        {{ partial "svg/icon-discord.svg" }}
       </a>
     </li>
   </ul>
