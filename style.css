@@ -29,7 +29,9 @@ svg {
   align-items: center;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid var(--text-color);
 }
 
@@ -58,8 +60,13 @@ td {
   width: 2rem;
 }
 
-#logo {
+.nav-logo {
   margin-left: 2rem;
+}
+
+.nav-menu,
+.hamb {
+  display: none;
 }
 
 .nav-list {
@@ -73,33 +80,108 @@ td {
   margin-right: 2rem;
 }
 
-@media only screen and (max-width:30rem) {
-  #logo {
-    margin-left: 1rem;
-  }
-
-  .nav-list {
-    margin-right: 1rem;
-  }
-}
-
-.nav-item {
+.nav-list li {
   margin-left: clamp(1rem, 3vw, 2rem)
 }
 
-.nav-item:hover {
+.nav-list li:hover {
   transform: scale(1.025);
   transition: .1s ease-in-out;
 }
 
-.nav-item:active {
+.nav-list li:active {
   transform: scale(0.95);
   transition: .05s;
 }
 
-.nav-item a {
+.nav-list li a {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 700;
   color: currentColor;
+}
+
+@media only screen and (max-width:40rem) {
+  .nav-list {
+    background-color: var(--bg-color);
+    display: block;
+    position: fixed;
+    align-self: start;
+    width: 100%;
+    margin-top: 5rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+  }
+
+  .nav-list li a {
+    display: block;
+    padding: 1rem;
+  }
+
+  .nav-list li:hover {
+    transform: scale(1);
+  }
+
+  .nav-list li a:hover {
+    background-color: #eee;
+  }
+
+  .hamb {
+    display: block;
+    cursor: pointer;
+    padding: 1rem .5rem;
+    margin-right: 1.5rem;
+  }
+  
+  .hamb-line {
+    display: block;
+    position: relative;
+    background: currentColor;
+    height: 0.2rem;
+    width: 2rem;
+  }
+  
+  .hamb-line::before,
+  .hamb-line::after {
+    display: block;
+    position: absolute;
+    content: '';
+    background: currentColor;
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-out;
+  }
+  
+  .hamb-line::before {
+    top: .5rem;
+  }
+  
+  .hamb-line::after {
+    top: -.5rem;
+  }
+  
+  .nav-menu {
+    display: none;
+  }
+  
+  .nav-menu:checked ~ .nav-list {
+    max-height: 20rem;
+  }
+  
+  .nav-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+  }
+  .nav-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+  }
+  .nav-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+  }
 }
