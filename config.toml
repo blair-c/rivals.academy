@@ -2,3 +2,8 @@ baseURL = 'https://rivals.academy/'
 languageCode = 'en-us'
 title = 'Rivals of Aether Academy'
 enableGitInfo = true
+
+[outputFormats.Data]
+  mediaType = "application/json"
+  baseName = "data"
+  isPlainText = true
