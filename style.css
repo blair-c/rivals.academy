@@ -165,10 +165,6 @@ td {
     top: -.5rem;
   }
   
-  .nav-menu {
-    display: none;
-  }
-  
   .nav-menu:checked ~ .nav-list {
     max-height: 20rem;
   }
