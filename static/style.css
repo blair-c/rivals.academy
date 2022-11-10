@@ -27,6 +27,7 @@
   --nav-height: 4rem;
   --page-padding: 1.5rem;
   --content-max-width: 56rem;
+  --footer-margin: 2rem;
 }
 @media only screen and (max-width:48rem) {
   :root {
@@ -55,7 +56,7 @@ main {
   min-height: calc(100vh - var(--nav-height));
   min-height: calc(100svh - var(--nav-height));
   overflow: hidden;
-  padding-bottom: 2rem;
+  padding-bottom: var(--footer-margin);
 }
 
 p {
@@ -692,7 +693,7 @@ article h4 {
   height: calc(100svh - .25rem);
   position: sticky;
   top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: var(--footer-margin);
 }
 
 #TableOfContents ul {
@@ -930,6 +931,6 @@ article h4 {
 .error-404-img {
   padding: var(--page-padding);
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0;
   max-width: 100%;
 }
