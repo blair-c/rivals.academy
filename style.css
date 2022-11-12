@@ -29,25 +29,6 @@ svg {
   align-items: center;
 }
 
-table,
-th,
-td {
-  border: 1px solid var(--text-color);
-}
-
-table {
-  border-collapse: collapse;
-}
-
-th {
-  padding: 0 0.4rem;
-  text-align: left;
-}
-
-td {
-  padding: 0.2rem 0.4rem;
-}
-
 .navbar {
   height: 5rem;
   width: 100%;
@@ -180,4 +161,26 @@ td {
     transform: rotate(45deg);
     top:0;
   }
+}
+
+.info-table {
+  overflow-x: auto;
+}
+
+.info-table table, th, td {
+  border: 1px solid var(--text-color);
+}
+
+.info-table table {
+  border-collapse: collapse;
+}
+
+.info-table th {
+  padding: 0 .4rem;
+  white-space: nowrap;
+}
+
+.info-table td {
+  padding: .3rem .4rem;
+  text-align: center;
 }
