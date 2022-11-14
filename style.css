@@ -1,6 +1,8 @@
 :root {
-  --text-color: black;
-  --bg-color: white;
+  --clr-text: #202022;
+  --clr-bg: white;
+  --clr-highlight: #ebebf0;
+  --clr-table-border: #a3a2b1;
 }
 
 body {
@@ -8,8 +10,8 @@ body {
   padding: 0;
   font-family: sans-serif;
   font-size: 16px;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
 }
 
 a {
@@ -84,7 +86,7 @@ svg {
 
 @media only screen and (max-width:40rem) {
   .nav-list {
-    background-color: var(--bg-color);
+    background-color: var(--clr-bg);
     display: block;
     position: fixed;
     align-self: start;
@@ -109,7 +111,7 @@ svg {
   }
 
   .nav-list li a:hover {
-    background-color: #eee;
+    background-color: var(--clr-highlight);
   }
 
   .hamb {
@@ -168,7 +170,7 @@ svg {
 }
 
 .info-table table, th, td {
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--clr-table-border);
 }
 
 .info-table table {
@@ -178,6 +180,7 @@ svg {
 .info-table th {
   padding: 0 .4rem;
   white-space: nowrap;
+  background-color: var(--clr-highlight);
 }
 
 .info-table td {
