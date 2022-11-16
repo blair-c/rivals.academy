@@ -1,0 +1,30 @@
+{{ define "header" }}
+  {{ partial "navbar" }}
+{{ end }}
+
+{{ define "main" }}
+  <main>
+    <header>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Description }}</p>
+    </header>
+    
+    <h2>Academy Brackets</h2>
+    {{ range .Param "roaa" }}
+      <h3>{{ .name }}</h3>
+      <p>{{ .day }} @ {{ .time }} ({{ .freq }})</p>
+      <p>{{ .description }}</p>
+    {{ end }}
+
+    <h2>Rivals Recess Brackets</h2>
+    {{ range .Param "rrc" }}
+      <h3>{{ .name }}</h3>
+      <p>{{ .day }} @ {{ .time }} ({{ .freq }})</p>
+      <p>{{ .description }}</p>
+    {{ end }}
+  </main>
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer" }}
+{{ end }}
