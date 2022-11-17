@@ -1,0 +1,61 @@
+name: Zetterburn
+element: fire
+patch: 2.1.4.1
+
+knockbackAdjustment: 1.00
+gravityAccel: 0.50
+hitstunGravityAccel: 0.50
+airFriction: 0.04
+airAccel: 0.30
+maxFallSpeed: 10
+fastFallSpeed: 14
+jumpSquat: 5
+landTime: 4
+
+groundFriction: 0.50
+initialDash:
+  speed: 7.00
+  time: 14
+run:
+  speed: 6.50
+  stop:
+    time: 4
+  turn:
+    time: 10
+    accel: 1.50
+walk:
+  speed: 3.25
+  accel: 0.25
+  turn:
+    time: 6
+waveland:
+  time: 8
+  friction: 0.12
+
+maxAirSpeed: 4
+maxJumpHorizontalSpeed: 6
+fullHop:
+  speed: 10.99
+shortHop:
+  speed: 6.0
+doubleJump:
+  amount: 1
+  speed: 10
+wallJump:
+  speed:
+    vertical: 8
+    horizontal: 7
+pratFall:
+  accel: 0.85
+  landTime: 3
+
+hurtbox:
+  idle:
+    height: 59
+    width: 42
+  crouch:
+    height: 36
+    width: 42
+  hitstun:
+    height: 59
+    width: 42
