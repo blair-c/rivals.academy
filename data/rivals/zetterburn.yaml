@@ -2,6 +2,7 @@ name: Zetterburn
 element: fire
 patch: 2.1.4.1
 
+# Effective Weight
 knockbackAdjustment: 1.00
 gravityAccel: 0.50
 hitstunGravityAccel: 0.50
@@ -11,7 +12,7 @@ maxFallSpeed: 10
 fastFallSpeed: 14
 jumpSquat: 5
 landTime: 4
-
+# Ground Movement
 groundFriction: 0.50
 initialDash:
   speed: 7.00
@@ -31,7 +32,7 @@ walk:
 waveland:
   time: 8
   friction: 0.12
-
+# Aerial Movement
 maxAirSpeed: 4
 maxJumpHorizontalSpeed: 6
 fullHop:
@@ -59,3 +60,1003 @@ hurtbox:
   hitstun:
     height: 59
     width: 42
+
+# Normals
+jab:
+  hitboxes:
+  - name: Jab 1
+    startup: 5
+    active:
+      from: 6
+      to: 7
+      frames: 2
+    endlag: 14
+    cancellable:
+    - name: Jab 2
+      window1:
+        from: 7
+        to: 12
+        window: 6
+      window2:
+        from: 13
+        to: 14
+        window: 2
+    - name: Tilts
+      from: 7
+      to: 14
+      window: 8
+    firstActiveFrame: 22
+    damage: 4
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 0
+    forceFlinch: 1
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+  - name: Jab 2
+    startup: 5
+    active:
+      from: 6
+      to: 7
+      frames: 2
+    endlag: 16
+    cancellable:
+    - name: Jab 3
+      window1:
+        from: 8
+        to: 14
+        window: 7
+      window2:
+        from: 15
+        to: 16
+        window: 2
+    - name: Tilts
+      from: 8
+      to: 16
+      window: 9
+    firstActiveFrame:
+      isolated: 24
+      inContext: 37
+    damage: 4
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+  - name: Jab 3
+    startup: 5
+    active:
+      from: 6
+      to: 7
+      frames: 2
+    endlag: 17
+    firstActiveFrame:
+      isolated: 25
+      inContext: 52
+    damage: 6
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 12
+      scaling: 70
+    priority: 3
+    killsProjectiles: true
+  notes:
+  - Jab combos have varying startup depending on when the attack is input. An attack input during Window 2 will not begin its startup until after the remaining frames of endlag are completed.
+
+dashAttack:
+  hitboxes:
+  - name: Front
+    startup: 10
+    active:
+      from: 11
+      to: 14
+      frames: 4
+    cancellable:
+    - name: Up Strong (On Hit)
+      from: 12
+      to: 14
+      window: 3
+    endlag:
+      hit: 13
+      whiff: 20
+    firstActiveFrame: 35
+    damage: 8
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 35
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 25
+    priority: 2
+    killsProjectiles: true
+  - name: Above
+    active:
+      from: 11
+      to: 12
+      frames: 2
+    cancellable:
+    - name: Up Strong (On Hit)
+      from: 12
+      to: 14
+      window: 3
+    damage: 6
+    angle: 105
+    angleFlipper: 6
+    knockback:
+      base: 5
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 25
+    priority: 1
+    killsProjectiles: true
+  notes:
+  - On hitting a character or object, it is possible to cancel the remaining active frames into up strong. This may be input during hitpause to begin immediately after hitpause has ended.
+
+forwardTilt:
+  hitboxes:
+  - name: Hit 1
+    startup: 8
+    active:
+      "on": 9
+      frames: 1
+    damage: 5
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 50
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - Pulls opponents inwards during hitpause.
+  - name: Hit 2
+    active:
+      from: 10
+      to: 11
+      frames: 2
+    endlag:
+      hit: 7
+      whiff: 11
+    firstActiveFrame: 23
+    damage: 5
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 7
+      scaling: 65
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 100
+    priority: 1
+    killsProjectiles: true
+
+upTilt:
+  hitboxes:
+  - name: Hit 1
+    startup: 8
+    active:
+      from: 9
+      to: 10
+      frames: 2
+    damage: 10
+    angle: 75
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 20
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 25
+    priority: 1
+    killsProjectiles: true
+  - name: Hit 2
+    active:
+      from: 10
+      to: 11
+      frames: 2
+    damage: 8
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 20
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 25
+    priority: 1
+    killsProjectiles: true
+  - name: Hit 3
+    active:
+      from: 11
+      to: 12
+      frames: 2
+    endlag:
+      hit: 8
+      whiff: 12
+    firstActiveFrame: 25
+    damage: 11
+    angle: 105
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 20
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 60
+    priority: 1
+    killsProjectiles: true
+
+downTilt:
+  hitboxes:
+  - startup: 4
+    active:
+      from: 5
+      to: 7
+      frames: 3
+    endlag:
+      hit: 12
+      whiff: 18
+    firstActiveFrame: 26
+    damage: 9
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 25
+    priority: 1
+    killsProjectiles: true
+
+# Aerials
+neutralAir:
+  hitboxes:
+  - name: Hit 1-2
+    startup: 5
+    active:
+    - from: 6
+      to: 7
+      frames: 2
+    - from: 10
+      to: 11
+      frames: 2
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 2
+    angle: 45
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+  - name: Hit 3
+    active:
+      from: 14
+      to: 16
+      frames: 3
+    endlag:
+      hit: 7
+      whiff: 11
+    firstActiveFrame: 28
+    damage: 5
+    angle: 60
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 20
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 20
+    priority: 1
+    killsProjectiles: true
+
+forwardAir:
+  hitboxes:
+  - name: Sour
+    startup: 10
+    active:
+      from: 11
+      to: 13
+      frames: 3
+    landingLag:
+      hit: 6
+      whiff: 9
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 29
+    damage: 8
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 25
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 25
+    priority: 2
+    killsProjectiles: true
+  - name: Top
+    active:
+      from: 11
+      to: 13
+      frames: 3
+    damage: 6
+    angle: 60
+    angleFlipper: 6
+    knockback:
+      base: 5
+      scaling: 20
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 50
+    priority: 3
+    killsProjectiles: true
+  - name: Sweet
+    active:
+      from: 11
+      to: 13
+      frames: 3
+    damage: 13
+    angle: 40
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 75
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 75
+    priority: 4
+    killsProjectiles: true
+
+backAir:
+  hitboxes:
+  - startup: 9
+    active:
+      from: 10
+      to: 12
+      frames: 3
+    landingLag:
+      hit: 4
+      whiff: 6
+    endlag:
+      hit: 7
+      whiff: 11
+    firstActiveFrame: 24
+    damage: 3
+    angle: 110
+    angleFlipper: 6
+    knockback:
+      base: 5
+      scaling: 25
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 25
+    priority: 2
+    killsProjectiles: true
+    setsOnFire: true
+
+upAir:
+  hitboxes:
+  - name: Sour
+    startup: 8
+    active:
+      from: 9
+      to: 11
+      frames: 3
+    landingLag:
+      hit: 4
+      whiff: 6
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 27
+    damage: 7
+    angle: 70
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 20
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 25
+    priority: 2
+    killsProjectiles: true
+  - name: Hands
+    active:
+      from: 9
+      to: 11
+      frames: 3
+    damage: 7
+    angle: 65
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 20
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 25
+    priority: 3
+    killsProjectiles: true
+  - name: Sweet
+    active:
+      from: 9
+      to: 10
+      frames: 2
+    damage: 13
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 82.5
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 75
+    priority: 1
+    killsProjectiles: true
+
+downAir:
+  hitboxes:
+  - startup: 13
+    active:
+      from: 14
+      to: 15
+      frames: 2
+    landingLag:
+      hit: 4
+      whiff: 6
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 31
+    damage: 12
+    angle: 270
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 65
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    priority: 2
+    killsProjectiles: true
+
+# Strongs
+forwardStrong:
+  hitboxes:
+  - name: Hit 1
+    startup: 13
+    active:
+      from: 14
+      to: 18
+      frames: 5
+    damage: 4
+    angle: 10
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    forceFlinch: 2
+    hitstunModifier: 0.25
+    hitpause:
+      base: 5
+      scaling: 0
+      extra: 6
+    untechable: true
+    asdiModifier: 0
+    priority: 2
+    killsProjectiles: true
+    notes:
+    - Pulls opponents in during hitpause.
+  - name: Hit 2
+    active:
+      from: 21
+      to: 22
+      frames: 2
+    endlag:
+      hit: 21
+      whiff: 32
+    firstActiveFrame: 55
+    damage: 8
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 90
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    priority: 1
+    killsProjectiles: true
+  - name: Fire Combustion
+    active:
+      from: 23
+      to: 24
+      frames: 2
+    endlag:
+      hit: 21
+    damage: 10
+    angle: 45
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 120
+    hitstunModifier: 1
+    hitpause:
+      base: 18
+      scaling: 50
+    priority: 3
+    killsProjectiles: true
+    consumesFire: true
+    notes:
+    - Does not replace a hitbox, but instead adds a new one if it detects the struck opponent is on fire.
+
+upStrong:
+  hitboxes:
+  - startup: 11
+    active:
+      "on": 12
+      frames: 1
+    endlag:
+      hit: 24
+      whiff: 36
+    firstActiveFrame: 49
+    damage: 7
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 110
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    priority: 2
+    killsProjectiles: true
+  - name: Fire Combustion
+    active:
+      from: 13
+      to: 14
+      frames: 2
+    endlag:
+      hit: 25
+    damage: 8
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 130
+    hitstunModifier: 1
+    hitpause:
+      base: 18
+      scaling: 50
+    priority: 3
+    killsProjectiles: true
+    consumesFire: true
+    notes:
+    - Does not replace a hitbox, but instead adds a new one if it detects the struck opponent is on fire.
+
+downStrong:
+  hitboxes:
+  - name: Hit 1
+    startup: 4
+    active:
+      "on": 5
+      frames: 1
+    damage: 5
+    angle: 0
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 0
+    forceFlinch: 2
+    hitstunModifier: 0.25
+    hitpause:
+      base: 7
+      scaling: 0
+      extra: 6
+    untechable: true
+    asdiModifier: 0
+    priority: 2
+    killsProjectiles: true
+    notes:
+    - Pulls opponents in during hitpause.
+  - name: Hit 2
+    active:
+      from: 12
+      to: 13
+      frames: 2
+    endlag:
+      hit: 20
+      whiff: 30
+    firstActiveFrame: 44
+    damage: 8
+    angle: 40
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 90
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    priority: 1
+    killsProjectiles: true
+  - name: Fire Combustion
+    active:
+      from: 15
+      to: 16
+      frames: 2
+    endlag:
+      hit: 19
+    damage: 10
+    angle: 45
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 115
+    hitstunModifier: 1
+    hitpause:
+      base: 18
+      scaling: 50
+    priority: 3
+    killsProjectiles: true
+    consumesFire: true
+    notes:
+    - Does not replace a hitbox, but instead adds a new one if it detects the struck opponent is on fire.
+
+# Specials
+neutralSpecial:
+  hitboxes:
+  - name: Uncharged
+    startup: 1
+    active:
+      from: 2
+      to: 4
+      frames: 3
+    endlag: 20
+    cancellable:
+    - name: Jump
+      from: 3
+      to: 24
+      window: 22
+    firstActiveFrame: 25
+    damage: 2
+    angle: 90
+    angleFlipper: 1
+    knockback:
+      base: 8.5
+      scaling: 14
+    hitstunModifier: 0.7
+    hitpause:
+      base: 3
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    setsOnFire: true
+  - name: Full Charge
+    startup: 35
+    active:
+      from: 36
+      to: 38
+      frames: 3
+    endlag: 24
+    cancellable:
+    - name: Jump
+      from: 37
+      to: 62
+      window: 26
+    firstActiveFrame: 63
+    damage: 10
+    angle: 90
+    angleFlipper:
+    knockback:
+      base: 9
+      scaling: 30
+    hitstunModifier: 0.7
+    hitpause:
+      base: 8
+      scaling: 60
+    priority: 3
+    killsProjectiles: true
+    setsOnFire: true
+  notes:
+  - Jumping during hitpause will always buffer a jump after hitpause ends.
+
+sideSpecial:
+  hitboxes:
+  - name: Mane
+    startup: 10
+    active:
+      "on": 11
+      frames: 1
+    endlag: 15
+    firstActiveFrame: 31
+    damage: 3
+    angle: 30
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 10
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 10
+    priority: 1
+    killsProjectiles: true
+    setsOnFire: true
+  - name: Fireball
+    active:
+      from: 16
+      to: 74
+      frames: 59
+    cooldown: 45
+    damage: 2
+    angle: 50
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 10
+    hitstunModifier: 0.5
+    hitpause:
+      base: 6
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+    setsOnFire: true
+    notes:
+    - Cooldown applied first frame of endlag.
+
+upSpecial:
+  hitboxes:
+  - name: Charging
+    startup: 16
+    active:
+    - "on": 17
+      frames: 1
+    - "on": 19
+      frames: 1
+    - "on": 21
+      frames: 1
+    - "on": 23
+      frames: 1
+    - "on": 25
+      frames: 1
+    - "on": 27
+      frames: 1
+    - "on": 29
+      frames: 1
+    - "on": 31
+      frames: 1
+    - "on": 33
+      frames: 1
+    cancellable:
+    - name: Airdodge
+      from: 12
+      to: 35
+      window: 24
+    damage: 1
+    angle: 75
+    angleFlipper: 2
+    knockback:
+      base: 1
+      scaling: 0
+    forceFlinch: 1
+    hitstunModifier: 2
+    hitpause:
+      base: 3
+      scaling: 0
+    asdiModifier: 0.5
+    priority: 1
+    killsProjectiles: false
+    setsOnFire: true
+    notes:
+    - Cannot trigger galaxy KO effect.
+  - name: Travelling
+    active:
+      from: 39
+      to: 62
+      frames: 24
+    cancellable:
+    - name: Angling into the ground
+      from: 41
+      to: 63
+      window: 23
+      endlag: 10
+    endlag: 5
+    firstActiveFrame: 68
+    damage: 8
+    angle: 361
+    angleFlipper: 10
+    knockback:
+      base:
+        from: 7
+        to: 6
+        scaling: Linear
+      scaling: 60
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 60
+    priority: 3
+    killsProjectiles: true
+    setsOnFire: true
+    notes:
+    - Can be angled in 24 possible directions.
+    - Cancelling by angling into the ground will cause the move to become inactive and Zetterburn to enter 10 frames of endlag, including time in a shortened landing lag state.
+    - Will only travel through platforms.
+
+downSpecial:
+  hitboxes:
+  - name: Hit 1 (Grounded)
+    active:
+      "on": 23
+      frames: 1
+    damage: 2
+    angle: -75
+    angleFlipper: 0
+    knockback:
+      base: 4
+      scaling: 0
+    forceFlinch: 1
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    setsOnFire: true
+  - name: Hit 1 (Aerial Dive)
+    active:
+      from: 23
+      to: null
+      frames: null
+    cancellable:
+    - name: Flip
+      from: 1
+      to: 8
+      window: 8
+    - name: Wall Jump
+      from: 24
+      to: null
+      window: null
+    - name: Airdodge/Up Special/Jump
+      from: 54
+      to: null
+      window: null
+    refresh:
+      doubleJump:
+        oneTime: 24
+        always: 44
+    damage: 2
+    angle: -75
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 40
+    forceFlinch: 1
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    untechable:
+      note: Forces a missed tech instead of bouncing the opponent off the ground.
+    priority: 1
+    killsProjectiles: true
+    setsOnFire: true
+    notes:
+    - Zetterburn will flash white when his double jump is restored.
+  - name: Aerial Dive Flip
+    cancellable:
+    - name: Wall Jump
+      from: 9
+      to: null
+      window: null
+    - name: Can fast fall
+      from: 28
+      to: null
+      window: null
+    landingLag: 16
+    firstActiveFrame:
+      onLanding: 17
+    notes:
+    - You are able to drift during the initial flip if you horizontal speed is lowered by hitting the wall or another object.
+  - name: Hit 2
+    active:
+      grounded:
+        from: 24
+        to: 28
+        frames: 5
+      onLanding:
+        from: 1
+        to: 5
+        frames: 5
+    endlag: 21
+    firstActiveFrame:
+      grounded: 50
+      onLanding: 27
+    damage: 8
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 10
+      scaling: 55
+    hitstunModifier: 0.9
+    hitpause:
+      base: 8
+      scaling: 75
+    priority: 3
+    killsProjectiles: true
+    setsOnFire: true
+  - name: Fire Puddle
+    active:
+      grounded:
+        from: 27
+        to: 326
+        frames: 300
+      onLanding:
+        from: 4
+        to: 303
+        frames: 300
+    setsOnFire: true
+    notes:
+    - Activates on the 4th active frame of Hit 2. Ledge-cancelling the attack before this frame will result in the fire puddle not activating.
+  notes:
+  - The only move in the game that you wavebounce with. This applies to both the Aerial Dive and Aerial Dive Flip.
+
+# Character Mechanics
+fire:
+  damage: 1
+  ticks: [60, 90, 120, 150, 180]
+  notes:
+  - Fire is removed frame 180, on parry, or if consumed by any of Zetterburn's strong attacks.
+  - Timer is paused while the on-fire character is in hitstun.
+  - Tick timing may vary slightly post-hitpause due to unknown reasons.
