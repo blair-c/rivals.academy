@@ -1,0 +1,216 @@
+{{/*  Check if there are multiple rows  */}}
+{{ $multiple := gt (len .hitboxes) 1 }}
+{{/*  Initialize all possible columns to false  */}}
+{{ $startup := false }}
+{{ $active := false }}
+{{ $endlag := false }}
+{{ $cancellable := false }}
+{{ $firstActiveFrame := false }}
+{{ $landingLag := false }}
+{{ $cooldown := false }}
+{{ $damage := false }}
+{{ $angle := false }}
+{{ $angleFlipper := false }}
+{{ $knockback := false }}
+{{ $hitstunModifier := false }}
+{{ $forceFlinch := false }}
+{{ $untechable := false }}
+{{ $hitpause := false }}
+{{ $asdiModifier := false }}
+{{ $priority := false }}
+{{ $killsProjectiles := false }}
+{{ $setsOnFire := false }}
+{{ $consumesFire := false }}
+{{ $notes := false}}
+{{/*  Iterate through rows, set existing columns to true  */}}
+{{ range .hitboxes }}
+  {{ if isset . "startup" }} {{ $startup = true }} {{ end }}
+  {{ if isset . "active" }} {{ $active = true }} {{ end }}
+  {{ if isset . "endlag" }} {{ $endlag = true }} {{ end }}
+  {{ if isset . "cancellable" }} {{ $cancellable = true }} {{ end }}
+  {{ if isset . "firstActiveFrame" }} {{ $firstActiveFrame = true }} {{ end }}
+  {{ if isset . "landingLag" }} {{ $landingLag = true }} {{ end }}
+  {{ if isset . "cooldown" }} {{ $cooldown = true }} {{ end }}
+  {{ if isset . "damage" }} {{ $damage = true }} {{ end }}
+  {{ if isset . "angle" }} {{ $angle = true }} {{ end }}
+  {{ if isset . "angleFlipper" }} {{ $angleFlipper = true }} {{ end }}
+  {{ if isset . "knockback" }} {{ $knockback = true }} {{ end }}
+  {{ if isset . "hitstunModifier" }} {{ $hitstunModifier = true }} {{ end }}
+  {{ if isset . "forceFlinch" }} {{ $forceFlinch = true }} {{ end }}
+  {{ if isset . "untechable" }} {{ $untechable = true }} {{ end }}
+  {{ if isset . "hitpause" }} {{ $hitpause = true }} {{ end }}
+  {{ if isset . "asdiModifier" }} {{ $asdiModifier = true }} {{ end }}
+  {{ if isset . "priority" }} {{ $priority = true }} {{ end }}
+  {{ if isset . "killsProjectiles" }} {{ $killsProjectiles = true }} {{ end }}
+  {{ if isset . "setsOnFire" }} {{ $setsOnFire = true }} {{ end }}
+  {{ if isset . "consumesFire" }} {{ $consumesFire = true }} {{ end }}
+  {{ if isset . "notes" }} {{ $notes = true }} {{ end }}
+{{ end }}
+{{/*  Dummy variables  */}}
+{{ $len := 0 }}
+
+<div class="info-table">
+  <table>
+    <tr>
+      {{ if $multiple }}<th>Hitbox</th>{{ end }}
+      {{ if $startup }}<th>Startup</th>{{ end }}
+      {{ if $active }}<th>Active</th>{{ end }}
+      {{ if $endlag }}<th>Endlag</th>{{ end }}
+      {{ if $cancellable }}<th>Cancellable</th>{{ end }}
+      {{ if $firstActiveFrame }}<th>FAF</th>{{ end }}
+      {{ if $landingLag }}<th>Landing Lag</th>{{ end }}
+      {{ if $cooldown }}<th>Cooldown</th>{{ end }}
+      {{ if $damage }}<th>Damage</th>{{ end }}
+      {{ if $angle }}<th>Angle</th>{{ end }}
+      {{ if $angleFlipper }}<th>Flipper</th>{{ end }}
+      {{ if $knockback }}<th>Knockback</th>{{ end }}
+      {{ if $hitstunModifier }}<th>Hitstun Modifier</th>{{ end }}
+      {{ if $forceFlinch }}<th>Force Flinch</th>{{ end }}
+      {{ if $untechable }}<th>Untechable</th>{{ end }}
+      {{ if $hitpause }}<th>Hitpause</th>{{ end }}
+      {{ if $asdiModifier }}<th>ASDI Modifier</th>{{ end }}
+      {{ if $priority }}<th>Priority</th>{{ end }}
+      {{ if $killsProjectiles }}<th>Kills Projectiles</th>{{ end }}
+      {{ if $setsOnFire }}<th>Sets On Fire</th>{{ end }}
+      {{ if $consumesFire }}<th>Consumes Fire</th>{{ end }}
+      {{ if $notes }}<th>Notes</th>{{ end }}
+    </tr>
+
+    {{ range .hitboxes }}<tr>
+
+      {{ if $multiple }}<td>{{ .name }}</td>{{ end }}
+
+      {{ if $startup }}<td>{{ .startup }}</td>{{ end }}
+
+      {{ if $active }}<td>
+        {{ if reflect.IsSlice .active }}
+          {{ $len = len .active }}
+          {{ range $index, $_ := .active }}
+            {{ with .on }}{{ . }}{{ end -}}
+            {{ with .from }}{{ . }}-{{ end -}}
+            {{ with .to }}{{ . }}{{ end -}}
+            {{ if lt (add $index 1) $len }},{{ end -}}
+          {{ end -}}
+        {{ else }}
+          {{ with .active.grounded }}
+            {{ with .on }}{{ . }}{{ end -}}
+            {{ with .from }}{{ . }}-{{ end -}}
+            {{ with .to }}{{ . }}{{ end }} (Grounded)
+          {{ end }}
+          {{ with .active.onLanding }}
+            {{ with .on }}{{ . }}{{ end -}}
+            {{ with .from }}{{ . }}-{{ end -}}
+            {{ with .to }}{{ . }}{{ end }} (On Landing)
+          {{- end -}}
+          {{ with .active.on }}{{ . }}{{ end -}}
+          {{ with .active.from }}{{ . }}-{{ end -}}
+          {{ with .active.to }}{{ . }}{{ end -}}
+        {{ end -}}
+      </td>{{ end }}
+
+      {{ if $endlag }}<td>
+        {{ if isset .endlag "hit" }}
+          {{ .endlag.hit }} / {{ .endlag.whiff -}}
+        {{ else }}
+          {{ .endlag }}
+        {{ end -}}
+      </td>{{ end }}
+
+      {{ if $cancellable }}<td>
+        {{ range .cancellable }}
+          {{ .with }}:
+          {{ with .windows }}
+            {{ range $i, $_ := . }}
+              {{ with .on }}{{ . }}{{ end -}}
+              {{ with .from }}{{ . }}-{{ end -}}
+              {{ with .to }}{{ . }}{{ end }}
+              (Window {{ add $i 1 }})
+            {{ end -}}
+          {{ else }}
+            {{ with .on }}{{ . }}{{ end -}}
+            {{ with .from }}{{ . }}-{{ end -}}
+            {{ with .to }}{{ . }}{{ end -}}
+          {{ end -}}
+        {{ end -}}
+      </td>{{ end }}
+
+      {{ if $firstActiveFrame }}<td>
+        {{ if reflect.IsMap .firstActiveFrame }}
+          {{ if isset .firstActiveFrame "isolated" }}
+            {{ .firstActiveFrame.isolated }} ({{ .firstActiveFrame.inContext }})
+          {{ end -}}
+          {{ with .firstActiveFrame.grounded }}{{ . }} (Grounded){{ end }}
+          {{ with .firstActiveFrame.onLanding }}{{ . }} (On Landing){{ end }}
+        {{- else }}
+          {{ .firstActiveFrame }}
+        {{ end -}}
+      </td>{{ end }}
+
+      {{ if $landingLag }}<td>
+        {{ if isset .landingLag "hit" }}
+          {{ .landingLag.hit }} / {{ .landingLag.whiff -}}
+        {{ else }}
+          {{ .landingLag }}
+        {{ end -}}
+      </td>{{ end }}
+
+      {{ if $cooldown }}<td>
+        {{ .cooldown }}
+      </td>{{ end }}
+
+      {{ if $damage }}<td>
+        {{ if isset . "damage" }}{{ .damage }}%{{ end }}
+      </td>{{ end }}
+
+      {{ if $angle }}<td>
+        {{ if isset . "angle" }}{{ .angle }}°{{ end }}
+      </td>{{ end }}
+
+      {{ if $angleFlipper }}<td>{{ .angleFlipper }}</td>{{ end }}
+
+      {{ if $knockback }}<td>{{ with .knockback }}
+        {{ if isset .base "from" }}
+          {{ with .base.from }}{{ . }}-{{ end -}}
+          {{ with .base.to }}{{ . }}{{ end }}
+          {{ with .base.scaling }}({{ . }}){{ end -}}
+        {{ else -}}
+          {{ .base }} | {{ .scaling }}
+        {{ end -}}
+      {{ end }}</td>{{ end }}
+
+      {{ if $hitstunModifier }}<td>
+        {{ if isset . "hitstunModifier" }}{{ .hitstunModifier }}×{{ end }}
+      </td>{{ end }}
+
+      {{ if $forceFlinch }}<td>{{ .forceFlinch }}</td>{{ end }}
+
+      {{ if $untechable }}<td>
+        {{ if isset .untechable "note" }}{{ .untechable.note }}
+        {{ else }}{{ title .untechable }}{{ end }}
+      </td>{{ end }}
+
+      {{ if $hitpause }}<td>
+        {{ with .hitpause }}{{ .base }} | {{ .scaling }}{{ end }}
+      </td>{{ end }}
+
+      {{ if $asdiModifier }}<td>
+        {{ if isset . "asdiModifier" }}{{ .asdiModifier }}×{{ end }}
+      </td>{{ end }}
+
+      {{ if $priority }}<td>{{ .priority }}</td>{{ end }}
+
+      {{ if $killsProjectiles }}<td>{{ title .killsProjectiles }}</td>{{ end }}
+
+      {{ if $setsOnFire }}<td>{{ title .setsOnFire }}</td>{{ end }}
+
+      {{ if $consumesFire }}<td>{{ title .consumesFire }}</td>{{ end }}
+
+      {{ if $notes }}<td></td>{{ end }}
+
+    </tr>{{ end }}
+  </table>
+</div>
+
+{{ with .notes }}
+  <i>{{ range . }}{{ . }}{{ end }}</i>
+{{ end }}

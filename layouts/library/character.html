@@ -99,6 +99,51 @@
         </tr>
       </table>
     </div>
+
+    <h2>Normal Attacks</h2>
+    {{ range (slice "jab" "dashAttack" "forwardTilt" "upTilt" "downTilt") }}
+      <h3>{{ humanize . | title }}</h3>
+      {{ $move := index $c . }}
+      {{ if isset $move "hitboxes" }}
+        {{ partial "partials/move-display.html" $move }}
+      {{ else }}
+        {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
+      {{ end }}
+    {{ end }}
+
+    <h2>Aerial Attacks</h2>
+    {{ range (slice "neutralAir" "forwardAir" "backAir" "upAir" "downAir") }}
+      <h3>{{ humanize . | title }}</h3>
+      {{ $move := index $c . }}
+      {{ if isset $move "hitboxes" }}
+        {{ partial "partials/move-display.html" $move }}
+      {{ else }}
+        {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
+      {{ end }}
+    {{ end }}
+
+    <h2>Strong Attacks</h2>
+    {{ range (slice "forwardStrong" "upStrong" "downStrong") }}
+      <h3>{{ humanize . | title }}</h3>
+      {{ $move := index $c . }}
+      {{ if isset $move "hitboxes" }}
+        {{ partial "partials/move-display.html" $move }}
+      {{ else }}
+        {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
+      {{ end }}
+    {{ end }}
+
+    <h2>Special Attacks</h2>
+    {{ range (slice "neutralSpecial" "sideSpecial" "upSpecial" "downSpecial") }}
+      <h3>{{ humanize . | title }}</h3>
+      {{ $move := index $c . }}
+      {{ if isset $move "hitboxes" }}
+        {{ partial "partials/move-display.html" $move }}
+      {{ else }}
+        {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
+      {{ end }}
+    {{ end }}
+
   </main>
 {{ end }}
 

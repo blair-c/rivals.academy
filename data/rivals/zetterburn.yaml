@@ -72,16 +72,15 @@ jab:
       frames: 2
     endlag: 14
     cancellable:
-    - name: Jab 2
-      window1:
-        from: 7
+    - with: Jab 2
+      windows:
+      - from: 7
         to: 12
         window: 6
-      window2:
-        from: 13
+      - from: 13
         to: 14
         window: 2
-    - name: Tilts
+    - with: Tilts
       from: 7
       to: 14
       window: 8
@@ -92,8 +91,8 @@ jab:
     knockback:
       base: 4
       scaling: 0
-    forceFlinch: 1
     hitstunModifier: 1
+    forceFlinch: 1
     hitpause:
       base: 4
       scaling: 0
@@ -107,16 +106,15 @@ jab:
       frames: 2
     endlag: 16
     cancellable:
-    - name: Jab 3
-      window1:
-        from: 8
+    - with: Jab 3
+      windows:
+      - from: 8
         to: 14
         window: 7
-      window2:
-        from: 15
+      - from: 15
         to: 16
         window: 2
-    - name: Tilts
+    - with: Tilts
       from: 8
       to: 16
       window: 9
@@ -169,7 +167,7 @@ dashAttack:
       to: 14
       frames: 4
     cancellable:
-    - name: Up Strong (On Hit)
+    - with: Up Strong (On Hit)
       from: 12
       to: 14
       window: 3
@@ -195,7 +193,7 @@ dashAttack:
       to: 12
       frames: 2
     cancellable:
-    - name: Up Strong (On Hit)
+    - with: Up Strong (On Hit)
       from: 12
       to: 14
       window: 3
@@ -376,6 +374,9 @@ neutralAir:
       hit: 7
       whiff: 11
     firstActiveFrame: 28
+    landingLag:
+      hit: 4
+      whiff: 6
     damage: 5
     angle: 60
     angleFlipper: 0
@@ -397,13 +398,13 @@ forwardAir:
       from: 11
       to: 13
       frames: 3
-    landingLag:
-      hit: 6
-      whiff: 9
     endlag:
       hit: 10
       whiff: 15
     firstActiveFrame: 29
+    landingLag:
+      hit: 6
+      whiff: 9
     damage: 8
     angle: 361
     angleFlipper: 6
@@ -421,6 +422,9 @@ forwardAir:
       from: 11
       to: 13
       frames: 3
+    landingLag:
+      hit: 6
+      whiff: 9
     damage: 6
     angle: 60
     angleFlipper: 6
@@ -438,6 +442,9 @@ forwardAir:
       from: 11
       to: 13
       frames: 3
+    landingLag:
+      hit: 6
+      whiff: 9
     damage: 13
     angle: 40
     angleFlipper: 0
@@ -458,13 +465,13 @@ backAir:
       from: 10
       to: 12
       frames: 3
-    landingLag:
-      hit: 4
-      whiff: 6
     endlag:
       hit: 7
       whiff: 11
     firstActiveFrame: 24
+    landingLag:
+      hit: 4
+      whiff: 6
     damage: 3
     angle: 110
     angleFlipper: 6
@@ -487,13 +494,13 @@ upAir:
       from: 9
       to: 11
       frames: 3
-    landingLag:
-      hit: 4
-      whiff: 6
     endlag:
       hit: 10
       whiff: 15
     firstActiveFrame: 27
+    landingLag:
+      hit: 4
+      whiff: 6
     damage: 7
     angle: 70
     angleFlipper: 6
@@ -511,6 +518,9 @@ upAir:
       from: 9
       to: 11
       frames: 3
+    landingLag:
+      hit: 4
+      whiff: 6
     damage: 7
     angle: 65
     angleFlipper: 6
@@ -528,6 +538,9 @@ upAir:
       from: 9
       to: 10
       frames: 2
+    landingLag:
+      hit: 4
+      whiff: 6
     damage: 13
     angle: 90
     angleFlipper: 6
@@ -548,13 +561,13 @@ downAir:
       from: 14
       to: 15
       frames: 2
-    landingLag:
-      hit: 4
-      whiff: 6
     endlag:
       hit: 10
       whiff: 15
     firstActiveFrame: 31
+    landingLag:
+      hit: 4
+      whiff: 6
     damage: 12
     angle: 270
     angleFlipper: 6
@@ -583,13 +596,13 @@ forwardStrong:
     knockback:
       base: 6
       scaling: 0
-    forceFlinch: 2
     hitstunModifier: 0.25
+    forceFlinch: 2
+    untechable: true
     hitpause:
       base: 5
       scaling: 0
       extra: 6
-    untechable: true
     asdiModifier: 0
     priority: 2
     killsProjectiles: true
@@ -697,13 +710,13 @@ downStrong:
     knockback:
       base: 8
       scaling: 0
-    forceFlinch: 2
     hitstunModifier: 0.25
+    forceFlinch: 2
+    untechable: true
     hitpause:
       base: 7
       scaling: 0
       extra: 6
-    untechable: true
     asdiModifier: 0
     priority: 2
     killsProjectiles: true
@@ -764,7 +777,7 @@ neutralSpecial:
       frames: 3
     endlag: 20
     cancellable:
-    - name: Jump
+    - with: Jump
       from: 3
       to: 24
       window: 22
@@ -790,7 +803,7 @@ neutralSpecial:
       frames: 3
     endlag: 24
     cancellable:
-    - name: Jump
+    - with: Jump
       from: 37
       to: 62
       window: 26
@@ -879,7 +892,7 @@ upSpecial:
     - "on": 33
       frames: 1
     cancellable:
-    - name: Airdodge
+    - with: Airdodge
       from: 12
       to: 35
       window: 24
@@ -889,8 +902,8 @@ upSpecial:
     knockback:
       base: 1
       scaling: 0
-    forceFlinch: 1
     hitstunModifier: 2
+    forceFlinch: 1
     hitpause:
       base: 3
       scaling: 0
@@ -906,7 +919,7 @@ upSpecial:
       to: 62
       frames: 24
     cancellable:
-    - name: Angling into the ground
+    - with: Angling into the ground
       from: 41
       to: 63
       window: 23
@@ -946,8 +959,8 @@ downSpecial:
     knockback:
       base: 4
       scaling: 0
-    forceFlinch: 1
     hitstunModifier: 1
+    forceFlinch: 1
     hitpause:
       base: 4
       scaling: 0
@@ -960,15 +973,15 @@ downSpecial:
       to: null
       frames: null
     cancellable:
-    - name: Flip
+    - with: Flip
       from: 1
       to: 8
       window: 8
-    - name: Wall Jump
+    - with: Wall Jump
       from: 24
       to: null
       window: null
-    - name: Airdodge/Up Special/Jump
+    - with: Airdodge/Up Special/Jump
       from: 54
       to: null
       window: null
@@ -982,33 +995,18 @@ downSpecial:
     knockback:
       base: 6
       scaling: 40
-    forceFlinch: 1
     hitstunModifier: 1
+    forceFlinch: 1
+    untechable:
+      note: Forces a missed tech instead of bouncing the opponent off the ground.
     hitpause:
       base: 4
       scaling: 0
-    untechable:
-      note: Forces a missed tech instead of bouncing the opponent off the ground.
     priority: 1
     killsProjectiles: true
     setsOnFire: true
     notes:
     - Zetterburn will flash white when his double jump is restored.
-  - name: Aerial Dive Flip
-    cancellable:
-    - name: Wall Jump
-      from: 9
-      to: null
-      window: null
-    - name: Can fast fall
-      from: 28
-      to: null
-      window: null
-    landingLag: 16
-    firstActiveFrame:
-      onLanding: 17
-    notes:
-    - You are able to drift during the initial flip if you horizontal speed is lowered by hitting the wall or another object.
   - name: Hit 2
     active:
       grounded:
@@ -1049,6 +1047,21 @@ downSpecial:
     setsOnFire: true
     notes:
     - Activates on the 4th active frame of Hit 2. Ledge-cancelling the attack before this frame will result in the fire puddle not activating.
+  - name: Aerial Dive Flip
+    cancellable:
+    - with: Wall Jump
+      from: 9
+      to: null
+      window: null
+    - with: Can fast fall
+      from: 28
+      to: null
+      window: null
+    landingLag: 16
+    firstActiveFrame:
+      onLanding: 17
+    notes:
+    - You are able to drift during the initial flip if you horizontal speed is lowered by hitting the wall or another object.
   notes:
   - The only move in the game that you wavebounce with. This applies to both the Aerial Dive and Aerial Dive Flip.
 
