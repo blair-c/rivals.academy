@@ -52,7 +52,7 @@
 <div class="info-table">
   <table>
     <tr>
-      {{ if $multiple }}<th>Hitbox</th>{{ end }}
+      {{ if $multiple }}<th class="sticky-col">Hitbox</th>{{ end }}
       {{ if $startup }}<th>Startup</th>{{ end }}
       {{ if $active }}<th>Active</th>{{ end }}
       {{ if $endlag }}<th>Endlag</th>{{ end }}
@@ -73,12 +73,12 @@
       {{ if $killsProjectiles }}<th>Kills Projectiles</th>{{ end }}
       {{ if $setsOnFire }}<th>Sets On Fire</th>{{ end }}
       {{ if $consumesFire }}<th>Consumes Fire</th>{{ end }}
-      {{ if $notes }}<th>Notes</th>{{ end }}
+      {{ if $notes }}<th class="align-left">Notes</th>{{ end }}
     </tr>
 
     {{ range .hitboxes }}<tr>
 
-      {{ if $multiple }}<td>{{ .name }}</td>{{ end }}
+      {{ if $multiple }}<td class="sticky-col">{{ .name }}</td>{{ end }}
 
       {{ if $startup }}<td>{{ .startup }}</td>{{ end }}
 
@@ -95,7 +95,7 @@
           {{ with .active.grounded }}
             {{ with .on }}{{ . }}{{ end -}}
             {{ with .from }}{{ . }}-{{ end -}}
-            {{ with .to }}{{ . }}{{ end }} (Grounded)
+            {{ with .to }}{{ . }}{{ end }} (Grounded)<br>
           {{ end }}
           {{ with .active.onLanding }}
             {{ with .on }}{{ . }}{{ end -}}
@@ -120,16 +120,18 @@
         {{ range .cancellable }}
           {{ .with }}:
           {{ with .windows }}
-            {{ range $i, $_ := . }}
+            {{ range $index, $_ := . }}
               {{ with .on }}{{ . }}{{ end -}}
               {{ with .from }}{{ . }}-{{ end -}}
               {{ with .to }}{{ . }}{{ end }}
-              (Window {{ add $i 1 }})
+              (Window {{ add $index 1 }})
+              <br>
             {{ end -}}
           {{ else }}
             {{ with .on }}{{ . }}{{ end -}}
             {{ with .from }}{{ . }}-{{ end -}}
             {{ with .to }}{{ . }}{{ end -}}
+            <br>
           {{ end -}}
         {{ end -}}
       </td>{{ end }}
@@ -139,7 +141,7 @@
           {{ if isset .firstActiveFrame "isolated" }}
             {{ .firstActiveFrame.isolated }} ({{ .firstActiveFrame.inContext }})
           {{ end -}}
-          {{ with .firstActiveFrame.grounded }}{{ . }} (Grounded){{ end }}
+          {{ with .firstActiveFrame.grounded }}{{ . }} (Grounded)<br>{{ end }}
           {{ with .firstActiveFrame.onLanding }}{{ . }} (On Landing){{ end }}
         {{- else }}
           {{ .firstActiveFrame }}
@@ -172,7 +174,8 @@
         {{ if isset .base "from" }}
           {{ with .base.from }}{{ . }}-{{ end -}}
           {{ with .base.to }}{{ . }}{{ end }}
-          {{ with .base.scaling }}({{ . }}){{ end -}}
+          {{ with .base.scaling }}({{ . }}){{ end }}
+           | {{ .scaling -}}
         {{ else -}}
           {{ .base }} | {{ .scaling }}
         {{ end -}}
@@ -185,8 +188,11 @@
       {{ if $forceFlinch }}<td>{{ .forceFlinch }}</td>{{ end }}
 
       {{ if $untechable }}<td>
-        {{ if isset .untechable "note" }}{{ .untechable.note }}
-        {{ else }}{{ title .untechable }}{{ end }}
+        {{ if isset .untechable "note" }}
+          <div class="untechable-note">{{ .untechable.note }}</div>
+        {{ else }}
+          {{ title .untechable }}
+        {{ end }}
       </td>{{ end }}
 
       {{ if $hitpause }}<td>
@@ -205,7 +211,9 @@
 
       {{ if $consumesFire }}<td>{{ title .consumesFire }}</td>{{ end }}
 
-      {{ if $notes }}<td></td>{{ end }}
+      {{ if $notes }}<td><div class="notes align-left">
+        {{ range .notes }}{{ . }} {{ end }}
+      </div></td>{{ end }}
 
     </tr>{{ end }}
   </table>
