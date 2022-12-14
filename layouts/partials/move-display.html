@@ -110,7 +110,8 @@
 
       {{ if $endlag }}<td>
         {{ if isset .endlag "hit" }}
-          {{ .endlag.hit }} / {{ .endlag.whiff -}}
+          {{ .endlag.hit }} /
+          {{ with .endlag.whiff }}{{ . }}{{ else }} - {{ end -}}
         {{ else }}
           {{ .endlag }}
         {{ end -}}
