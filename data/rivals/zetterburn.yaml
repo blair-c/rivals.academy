@@ -1061,7 +1061,7 @@ downSpecial:
     firstActiveFrame:
       onLanding: 17
     notes:
-    - You are able to drift during the initial flip if you horizontal speed is lowered by hitting the wall or another object.
+    - You are able to drift during the initial flip if your horizontal speed is lowered by hitting the wall or another object.
   notes:
   - The only move in the game that you wavebounce with. This applies to both the Aerial Dive and Aerial Dive Flip.
 
