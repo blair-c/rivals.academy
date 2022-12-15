@@ -31,6 +31,21 @@ svg {
   align-items: center;
 }
 
+.skip-nav {
+  position: absolute;
+  transform: translateY(-150%);
+  transition: transform .1s ease-in;
+  color: var(--clr-text);
+  background: var(--clr-highlight);
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  margin: 1rem
+}
+
+.skip-nav:focus {
+  transform: translateY(0);
+}
+
 .navbar {
   height: 5rem;
   width: 100%;

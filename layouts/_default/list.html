@@ -2,11 +2,13 @@
   {{ partial "navbar" }}
 {{ end }}
 {{ define "main" }}
-  <h1>List</h1>
-  {{ range .Pages }}
-    <article>
-      <h2>{{ .Title }}</h2>
-      {{ .Content }}
-    </article>  
-  {{ end }}
+  <main id="main-content">
+    <h1>List</h1>
+    {{ range .Pages }}
+      <article>
+        <h2>{{ .Title }}</h2>
+        {{ .Content }}
+      </article>  
+    {{ end }}
+  </main>
 {{ end }}

@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <main>
+  <main id="main-content">
     {{ $c := index .Site.Data.rivals .File.BaseFileName }}
     <h1>{{ $c.name }}</h1>
     {{ .Content }}
