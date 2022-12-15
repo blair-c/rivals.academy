@@ -1037,6 +1037,7 @@ downSpecial:
     killsProjectiles: true
     setsOnFire: true
   - name: Fire Puddle
+    startup: 3
     active:
       grounded:
         from: 27
