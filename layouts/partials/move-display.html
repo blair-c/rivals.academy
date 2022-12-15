@@ -121,13 +121,14 @@
         {{ range .cancellable }}
           {{ .with }}:
           {{ with .windows }}
+            {{ $len = len . }}
             {{ range $index, $_ := . }}
               {{ with .on }}{{ . }}{{ end -}}
               {{ with .from }}{{ . }}-{{ end -}}
-              {{ with .to }}{{ . }}{{ end }}
-              (Window {{ add $index 1 }})
-              <br>
+              {{ with .to }}{{ . }}{{ end -}}
+              {{ if lt (add $index 1) $len }},{{ end -}}
             {{ end -}}
+            <br>
           {{ else }}
             {{ with .on }}{{ . }}{{ end -}}
             {{ with .from }}{{ . }}-{{ end -}}

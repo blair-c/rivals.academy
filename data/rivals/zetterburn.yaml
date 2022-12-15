@@ -156,7 +156,7 @@ jab:
     priority: 3
     killsProjectiles: true
   notes:
-  - Jab combos have varying startup depending on when the attack is input. An attack input during Window 2 will not begin its startup until after the remaining frames of endlag are completed.
+  - Jab combos have varying startup depending on when the attack is input. A jab input within the final 2 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
 
 dashAttack:
   hitboxes:
