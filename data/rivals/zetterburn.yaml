@@ -950,6 +950,7 @@ upSpecial:
 downSpecial:
   hitboxes:
   - name: Hit 1 (Grounded)
+    startup: 22
     active:
       "on": 23
       frames: 1
@@ -968,6 +969,7 @@ downSpecial:
     killsProjectiles: true
     setsOnFire: true
   - name: Hit 1 (Aerial Dive)
+    startup: 22
     active:
       from: 23
       to: null
@@ -1048,6 +1050,7 @@ downSpecial:
     notes:
     - Activates on the 4th active frame of Hit 2. Ledge-cancelling the attack before this frame will result in the fire puddle not activating.
   - name: Aerial Dive Flip
+    startup: 8
     cancellable:
     - with: Wall Jump
       from: 9
