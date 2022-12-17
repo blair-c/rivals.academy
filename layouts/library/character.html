@@ -8,7 +8,7 @@
     <h1>{{ $c.name }}</h1>
     {{ .Content }}
 
-    <h3>Effective Weight</h3>
+    {{ .RenderString "### Effective Weight" }}
     <div class="info-table">
       <table>
         <tr>
@@ -35,7 +35,7 @@
         </tr>
       </table>
     </div>
-    <h3>Grounded Movement</h3>
+    {{ .RenderString "### Grounded Movement" }}
     <div class="info-table">
       <table>
         <tr>
@@ -68,7 +68,7 @@
         </tr>
       </table>
     </div>
-    <h3>Aerial Movement</h3>
+    {{ .RenderString "### Aerial Movement" }}
     <div class="info-table">
       <table>
         <tr>
@@ -100,9 +100,9 @@
       </table>
     </div>
 
-    <h2>Normal Attacks</h2>
+    {{ .RenderString "## Normal Attacks" }}
     {{ range (slice "jab" "dashAttack" "forwardTilt" "upTilt" "downTilt") }}
-      <h3>{{ humanize . | title }}</h3>
+      {{ $.RenderString (print "### " (humanize . | title)) }}
       {{ $move := index $c . }}
       {{ if isset $move "hitboxes" }}
         {{ partial "partials/move-display.html" $move }}
@@ -111,9 +111,9 @@
       {{ end }}
     {{ end }}
 
-    <h2>Aerial Attacks</h2>
+    {{ .RenderString "## Aerial Attacks" }}
     {{ range (slice "neutralAir" "forwardAir" "backAir" "upAir" "downAir") }}
-      <h3>{{ humanize . | title }}</h3>
+      {{ $.RenderString (print "### " (humanize . | title)) }}
       {{ $move := index $c . }}
       {{ if isset $move "hitboxes" }}
         {{ partial "partials/move-display.html" $move }}
@@ -122,9 +122,9 @@
       {{ end }}
     {{ end }}
 
-    <h2>Strong Attacks</h2>
+    {{ .RenderString "## Strong Attacks" }}
     {{ range (slice "forwardStrong" "upStrong" "downStrong") }}
-      <h3>{{ humanize . | title }}</h3>
+      {{ $.RenderString (print "### " (humanize . | title)) }}
       {{ $move := index $c . }}
       {{ if isset $move "hitboxes" }}
         {{ partial "partials/move-display.html" $move }}
@@ -133,9 +133,9 @@
       {{ end }}
     {{ end }}
 
-    <h2>Special Attacks</h2>
+    {{ .RenderString "## Special Attacks" }}
     {{ range (slice "neutralSpecial" "sideSpecial" "upSpecial" "downSpecial") }}
-      <h3>{{ humanize . | title }}</h3>
+      {{ $.RenderString (print "### " (humanize . | title)) }}
       {{ $move := index $c . }}
       {{ if isset $move "hitboxes" }}
         {{ partial "partials/move-display.html" $move }}

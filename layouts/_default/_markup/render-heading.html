@@ -1,0 +1,13 @@
+{{ if eq .Level 1 }}
+  <h1 id="{{ .Anchor | safeURL }}" class="heading">{{ .Text | safeHTML }}</h1>
+{{ else }}
+  <h{{ .Level }} id="{{ .Anchor | safeURL }}" class="heading">
+    {{ .Text | safeHTML -}}
+    <button class="heading-link"
+            aria-text="Copy link to this section: {{ .Text | safeHTML }}"
+            {{ $link := (print .Page.Permalink "#" (.Anchor)) }}
+            onclick="navigator.clipboard.writeText({{ $link }})">
+      {{ partial "svg/copy.svg" }}
+    </button>
+  </h{{ .Level }}>
+{{ end }}
