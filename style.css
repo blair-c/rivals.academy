@@ -31,6 +31,64 @@ svg {
   align-items: center;
 }
 
+h1 svg {
+  width: 2rem;
+}
+
+h2 svg {
+  width: 1.5rem;
+}
+
+h3 svg {
+  width: 1.125rem;
+}
+
+h4 svg {
+  width: 1rem;
+}
+
+h5 svg {
+  width: 0.8rem;
+}
+
+h6 svg {
+  width: 0.7rem;
+}
+
+.heading-link {
+  border: none;
+  background: none;
+}
+
+.heading-link svg {
+  display: none;
+  padding: 0 .125rem;
+  fill: var(--clr-table-border);
+}
+
+.heading:hover .heading-link svg,
+.heading-link:focus svg {
+  display: flex;
+}
+
+.heading-link:hover svg {
+  fill: currentColor;
+}
+
+@supports selector(:focus-visible) {
+  .heading-link:focus-visible {
+    margin-left: .5rem;
+  }
+
+  .heading-link:focus svg {
+    display: none;
+  }
+
+  .heading-link:focus-visible svg {
+    display: flex;
+  }
+}
+
 .skip-nav {
   position: absolute;
   transform: translateY(-150%);
