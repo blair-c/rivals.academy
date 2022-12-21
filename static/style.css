@@ -245,7 +245,6 @@ svg {
 }
 
 .sticky-col {
-  position: -webkit-sticky;
   position: sticky;
   left: 0;
   text-align: left;
