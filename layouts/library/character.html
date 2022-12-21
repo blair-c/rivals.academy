@@ -100,47 +100,23 @@
       </table>
     </div>
 
-    {{ .RenderString "## Normal Attacks" }}
-    {{ range (slice "jab" "dashAttack" "forwardTilt" "upTilt" "downTilt") }}
-      {{ $.RenderString (print "### " (humanize . | title)) }}
-      {{ $move := index $c . }}
-      {{ if isset $move "hitboxes" }}
-        {{ partial "partials/move-display.html" $move }}
-      {{ else }}
-        {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
-      {{ end }}
-    {{ end }}
-
-    {{ .RenderString "## Aerial Attacks" }}
-    {{ range (slice "neutralAir" "forwardAir" "backAir" "upAir" "downAir") }}
-      {{ $.RenderString (print "### " (humanize . | title)) }}
-      {{ $move := index $c . }}
-      {{ if isset $move "hitboxes" }}
-        {{ partial "partials/move-display.html" $move }}
-      {{ else }}
-        {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
-      {{ end }}
-    {{ end }}
-
-    {{ .RenderString "## Strong Attacks" }}
-    {{ range (slice "forwardStrong" "upStrong" "downStrong") }}
-      {{ $.RenderString (print "### " (humanize . | title)) }}
-      {{ $move := index $c . }}
-      {{ if isset $move "hitboxes" }}
-        {{ partial "partials/move-display.html" $move }}
-      {{ else }}
-        {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
-      {{ end }}
-    {{ end }}
-
-    {{ .RenderString "## Special Attacks" }}
-    {{ range (slice "neutralSpecial" "sideSpecial" "upSpecial" "downSpecial") }}
-      {{ $.RenderString (print "### " (humanize . | title)) }}
-      {{ $move := index $c . }}
-      {{ if isset $move "hitboxes" }}
-        {{ partial "partials/move-display.html" $move }}
-      {{ else }}
-        {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
+    {{ range slice
+      (dict "Normal" (slice "jab" "dashAttack" "forwardTilt" "upTilt" "downTilt"))
+      (dict "Aerial" (slice "neutralAir" "forwardAir" "backAir" "upAir" "downAir"))
+      (dict "Strong" (slice "forwardStrong" "upStrong" "downStrong"))
+      (dict "Special" (slice "neutralSpecial" "sideSpecial" "upSpecial" "downSpecial"))
+    }}
+      {{ range $section, $attacks := . }}
+        {{ $.RenderString (print "## " $section " Attacks") }}
+        {{ range $attacks }}
+          {{ $.RenderString (print "### " (humanize . | title)) }}
+          {{ $move := index $c . }}
+          {{ if isset $move "hitboxes" }}
+            {{ partial "partials/move-display.html" $move }}
+          {{ else }}
+            {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
+          {{ end }}
+        {{ end }}
       {{ end }}
     {{ end }}
 
