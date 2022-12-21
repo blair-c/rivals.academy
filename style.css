@@ -245,22 +245,26 @@ svg {
 }
 
 .sticky-col {
-  position: -webkit-sticky;
-  position: sticky;
-  left: 0;
   text-align: left;
-  border-left: none;
-  background-clip: padding-box;
-  background-color: var(--clr-bg);
 }
 
-.sticky-col::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  border-right: 1px solid var(--clr-table-border);
+@media only screen and (min-width:40rem) {
+  .sticky-col {
+    position: sticky;
+    left: 0;
+    border-left: none;
+    background-clip: padding-box;
+    background-color: var(--clr-bg);
+  }
+
+  .sticky-col::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-right: 1px solid var(--clr-table-border);
+  }
 }
 
 .notes {
