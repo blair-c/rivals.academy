@@ -31,38 +31,16 @@ svg {
   align-items: center;
 }
 
-h1 svg {
-  height: 2rem;
-}
-
-h2 svg {
-  height: 1.5rem;
-}
-
-h3 svg {
-  height: 1.125rem;
-}
-
-h4 svg {
-  height: 1rem;
-}
-
-h5 svg {
-  height: 0.8rem;
-}
-
-h6 svg {
-  height: 0.7rem;
-}
-
 .heading-link {
   border: none;
   background: none;
+  font-size: inherit;
 }
 
 .heading-link svg {
   display: none;
   padding: 0 .125rem;
+  height: 1em;
   fill: var(--clr-table-border);
 }
 
