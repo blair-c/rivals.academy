@@ -100,22 +100,29 @@
       </table>
     </div>
 
-    {{ range slice
-      (dict "Normal" (slice "jab" "dashAttack" "forwardTilt" "upTilt" "downTilt"))
-      (dict "Aerial" (slice "neutralAir" "forwardAir" "backAir" "upAir" "downAir"))
-      (dict "Strong" (slice "forwardStrong" "upStrong" "downStrong"))
-      (dict "Special" (slice "neutralSpecial" "sideSpecial" "upSpecial" "downSpecial"))
+    {{ $attacks := slice
+      (dict
+        "section" "Normal"
+        "attacks" (slice "jab" "dashAttack" "forwardTilt" "upTilt" "downTilt"))
+      (dict
+        "section" "Aerial"
+        "attacks" (slice "neutralAir" "forwardAir" "backAir" "upAir" "downAir"))
+      (dict
+        "section" "Strong"
+        "attacks" (slice "forwardStrong" "upStrong" "downStrong"))
+      (dict
+        "section" "Special"
+        "attacks" (slice "neutralSpecial" "sideSpecial" "upSpecial" "downSpecial"))
     }}
-      {{ range $section, $attacks := . }}
-        {{ $.RenderString (print "## " $section " Attacks") }}
-        {{ range $attacks }}
-          {{ $.RenderString (print "### " (humanize . | title)) }}
-          {{ $move := index $c . }}
-          {{ if isset $move "hitboxes" }}
-            {{ partial "partials/move-display.html" $move }}
-          {{ else }}
-            {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
-          {{ end }}
+    {{ range $attacks }}
+      {{ $.RenderString (print "## " .section " Attacks") }}
+      {{ range .attacks }}
+        {{ $.RenderString (print "### " (humanize . | title)) }}
+        {{ $move := index $c . }}
+        {{ if isset $move "hitboxes" }}
+          {{ partial "partials/move-display.html" $move }}
+        {{ else }}
+          {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
         {{ end }}
       {{ end }}
     {{ end }}
