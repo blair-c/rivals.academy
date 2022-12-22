@@ -4,24 +4,39 @@
 
 {{ define "main" }}
   <main id="main-content">
-    <header>
+    <header class="site-section-header tournaments">
       <h1>{{ .Title }}</h1>
       <p>{{ .Description }}</p>
     </header>
-    
-    <h2>Academy Brackets</h2>
-    {{ range .Param "roaa" }}
-      <h3>{{ .name }}</h3>
-      <p>{{ .day }} @ {{ .time }} ({{ .freq }})</p>
-      <p>{{ .description }}</p>
-    {{ end }}
 
-    <h2>Rivals Recess Brackets</h2>
-    {{ range .Param "rrc" }}
-      <h3>{{ .name }}</h3>
-      <p>{{ .day }} @ {{ .time }} ({{ .freq }})</p>
-      <p>{{ .description }}</p>
-    {{ end }}
+    <div class="tournament-hosts">
+      {{ range slice
+        (dict
+          "name" "Rivals Academy"
+          "links" $.Site.Data.links.roaa
+          "brackets" ($.Param "roaa"))
+        (dict
+          "name" "Rivals Recess"
+          "links" $.Site.Data.links.rrc
+          "brackets" ($.Param "rrc"))
+      }}
+        <section class="tournament-host">
+          <h2>
+            {{ .name }} Brackets
+            <a href="{{ .links.discord }}">{{ partial "svg/icon-discord.svg" }}</a>
+          </h2>
+          <ul class="brackets-list">
+            {{ range .brackets }}
+              <li><a href="{{ .link }}" target="_blank" rel="noopener noreferrer"><div>
+                <h3>{{ .name }}</h3>
+                <p>{{ .day }} @ {{ .time }} ({{ .freq }})</p>
+                <p>{{ .description }}</p>
+              </div></a></li>
+            {{ end }}
+          </ul>
+        </section>
+      {{- end }}
+    </div>
   </main>
 {{ end }}
 

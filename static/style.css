@@ -26,9 +26,14 @@ h3 {
   margin-bottom: 0.3rem;
 }
 
-svg {
-  display: flex;
-  align-items: center;
+h1 svg,
+h2 svg,
+h3 svg,
+h4 svg,
+h5 svg,
+h6 svg {
+  width: 1em;
+  padding: 0 .125rem;
 }
 
 .heading-link {
@@ -92,6 +97,8 @@ svg {
 
 .navbar svg {
   width: 1.8rem;
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo {
@@ -216,6 +223,11 @@ svg {
   }
 }
 
+.site-section-header {
+  text-align: center;
+  background-color: var(--clr-highlight);
+}
+
 .info-table {
   overflow-x: scroll;
 }
@@ -275,4 +287,24 @@ svg {
 .untechable-note {
   white-space: normal;
   width: 12rem;
+}
+
+.brackets-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tournament-host h2 {
+  border-bottom: 1px solid currentColor;
+}
+
+.brackets-list li a {
+  color: currentColor;
+}
+
+@media only screen and (min-width:40rem) {
+  .tournament-hosts {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
