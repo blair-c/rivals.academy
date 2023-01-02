@@ -3,6 +3,8 @@
   --clr-bg: white;
   --clr-highlight: #ebebf0;
   --clr-table-border: #a3a2b1;
+
+  --page-padding: clamp(1rem, 2.5vw, 2rem);
 }
 
 body {
@@ -16,6 +18,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+article {
+  padding: 0 var(--page-padding);
 }
 
 button {
@@ -102,7 +108,7 @@ h6 svg {
 }
 
 .nav-logo {
-  margin-left: 2rem;
+  margin-left: var(--page-padding);
 }
 
 .nav-menu,
@@ -118,11 +124,11 @@ h6 svg {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 2rem;
+  margin-right: var(--page-padding);
 }
 
 .nav-list li {
-  margin-left: clamp(1rem, 3vw, 2rem)
+  margin-left: clamp(1rem, 3vw, 2rem);
 }
 
 .nav-list li:hover {
@@ -176,7 +182,7 @@ h6 svg {
     display: block;
     cursor: pointer;
     padding: 1rem .5rem;
-    margin-right: 1.5rem;
+    margin-right: var(--page-padding);
   }
   
   .hamb-line {
@@ -225,7 +231,16 @@ h6 svg {
 
 .site-section-header {
   text-align: center;
+  padding: 1.5rem var(--page-padding);
   background-color: var(--clr-highlight);
+}
+
+.site-section-header h1 {
+  margin-top: 0;
+}
+
+.site-section-header p {
+  margin-bottom: 0;
 }
 
 .info-table {
@@ -289,13 +304,17 @@ h6 svg {
   width: 12rem;
 }
 
-.brackets-list {
-  list-style: none;
-  padding: 0;
+.tournament-hosts {
+  margin: 0 var(--page-padding);
 }
 
 .tournament-host h2 {
   border-bottom: 1px solid currentColor;
+}
+
+.brackets-list {
+  list-style: none;
+  padding: 0;
 }
 
 .brackets-list li a {
@@ -306,5 +325,6 @@ h6 svg {
   .tournament-hosts {
     display: flex;
     justify-content: space-evenly;
+    gap: 1rem;
   }
 }

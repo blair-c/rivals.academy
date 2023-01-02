@@ -3,129 +3,131 @@
 {{ end }}
 
 {{ define "main" }}
-  <main id="main-content">
-    {{ $c := index .Site.Data.rivals .File.BaseFileName }}
-    <h1>{{ $c.name }}</h1>
-    {{ .Content }}
+  <article>
+    <main id="main-content">
+      {{ $c := index .Site.Data.rivals .File.BaseFileName }}
+      <h1>{{ $c.name }}</h1>
+      {{ .Content }}
 
-    {{ .RenderString "### Effective Weight" }}
-    <div class="info-table">
-      <table>
-        <tr>
-          <th>Knockback Adjust</th>
-          <th>Gravity Accel</th>
-          <th>Hitstun Gravity Accel</th>
-          <th>Air Friction</th>
-          <th>Air Accel</th>
-          <th>Max Fall Speed</th>
-          <th>Fast Fall Speed</th>
-          <th>Jump Squat</th>
-          <th>Land Time</th>
-        </tr>
-        <tr>
-          <td>{{ printf "%.2f" $c.knockbackAdjustment }}</td>
-          <td>{{ printf "%.2f" $c.gravityAccel }}</td>
-          <td>{{ printf "%.2f" $c.hitstunGravityAccel }}</td>
-          <td>{{ printf "%.2f" $c.airFriction }}</td>
-          <td>{{ printf "%.2f" $c.airAccel }}</td>
-          <td>{{ $c.maxFallSpeed }}</td>
-          <td>{{ $c.fastFallSpeed }}</td>
-          <td>{{ $c.jumpSquat }}</td>
-          <td>{{ $c.landTime }}</td>
-        </tr>
-      </table>
-    </div>
-    {{ .RenderString "### Grounded Movement" }}
-    <div class="info-table">
-      <table>
-        <tr>
-          <th>Ground Friction</th>
-          <th>Dash Speed</th>
-          <th>Dash Time  </th>
-          <th>Run Speed</th>
-          <th>Run Stop Time</th>
-          <th>Run Turn Time</th>
-          <th>Run Turn Accel</th>
-          <th>Walk Speed</th>
-          <th>Walk Accel</th>
-          <th>Walk Turn Time</th>
-          <th>Waveland Time</th>
-          <th>Waveland Friction</th>
-        </tr>
-        <tr>
-          <td>{{ printf "%.2f" $c.groundFriction }}</td>
-          <td>{{ printf "%.2f" $c.initialDash.speed }}</td>
-          <td>{{ $c.initialDash.time }}</td>
-          <td>{{ printf "%.2f" $c.run.speed }}</td>
-          <td>{{ $c.run.stop.time }}</td>
-          <td>{{ $c.run.turn.time }}</td>
-          <td>{{ printf "%.2f" $c.run.turn.accel }}</td>
-          <td>{{ printf "%.2f" $c.walk.speed }}</td>
-          <td>{{ printf "%.2f" $c.walk.accel }}</td>
-          <td>{{ $c.walk.turn.time }}</td>
-          <td>{{ $c.waveland.time }}</td>
-          <td>{{ printf "%.2f" $c.waveland.friction }}</td>
-        </tr>
-      </table>
-    </div>
-    {{ .RenderString "### Aerial Movement" }}
-    <div class="info-table">
-      <table>
-        <tr>
-          <th>Max Air Speed</th>
-          <th>Max Jump Horizontal Speed</th>
-          <th>Full Hop Speed</th>
-          <th>Short Hop Speed</th>
-          <th>Double Jump Speed</th>
-          {{ with $c.doubleJump.accel }}
-          <th>Double Jump Accel</th>{{ end }}
-          <th>Wall Jump Vertical Speed</th>
-          <th>Wall Jump Horizontal Speed</th>
-          <th>Prat Fall Accel</th>
-          <th>Prat Fall Land Time</th>
-        </tr>
-        <tr>
-          <td>{{ $c.maxAirSpeed }}</td>
-          <td>{{ $c.maxJumpHorizontalSpeed }}</td>
-          <td>{{ printf "%.2f" $c.fullHop.speed }}</td>
-          <td>{{ printf "%.1f" $c.shortHop.speed }}</td>
-          <td>{{ $c.doubleJump.speed }}</td>
-          {{ with $c.doubleJump.accel }}
-          <td>{{ $c.doubleJump.accel }}</td>{{ end }}
-          <td>{{ $c.wallJump.speed.vertical }}</td>
-          <td>{{ $c.wallJump.speed.horizontal }}</td>
-          <td>{{ printf "%.2f" $c.pratFall.accel }}</td>
-          <td>{{ $c.pratFall.landTime }}</td>
-        </tr>
-      </table>
-    </div>
+      {{ .RenderString "### Effective Weight" }}
+      <div class="info-table">
+        <table>
+          <tr>
+            <th>Knockback Adjust</th>
+            <th>Gravity Accel</th>
+            <th>Hitstun Gravity Accel</th>
+            <th>Air Friction</th>
+            <th>Air Accel</th>
+            <th>Max Fall Speed</th>
+            <th>Fast Fall Speed</th>
+            <th>Jump Squat</th>
+            <th>Land Time</th>
+          </tr>
+          <tr>
+            <td>{{ printf "%.2f" $c.knockbackAdjustment }}</td>
+            <td>{{ printf "%.2f" $c.gravityAccel }}</td>
+            <td>{{ printf "%.2f" $c.hitstunGravityAccel }}</td>
+            <td>{{ printf "%.2f" $c.airFriction }}</td>
+            <td>{{ printf "%.2f" $c.airAccel }}</td>
+            <td>{{ $c.maxFallSpeed }}</td>
+            <td>{{ $c.fastFallSpeed }}</td>
+            <td>{{ $c.jumpSquat }}</td>
+            <td>{{ $c.landTime }}</td>
+          </tr>
+        </table>
+      </div>
+      {{ .RenderString "### Grounded Movement" }}
+      <div class="info-table">
+        <table>
+          <tr>
+            <th>Ground Friction</th>
+            <th>Dash Speed</th>
+            <th>Dash Time  </th>
+            <th>Run Speed</th>
+            <th>Run Stop Time</th>
+            <th>Run Turn Time</th>
+            <th>Run Turn Accel</th>
+            <th>Walk Speed</th>
+            <th>Walk Accel</th>
+            <th>Walk Turn Time</th>
+            <th>Waveland Time</th>
+            <th>Waveland Friction</th>
+          </tr>
+          <tr>
+            <td>{{ printf "%.2f" $c.groundFriction }}</td>
+            <td>{{ printf "%.2f" $c.initialDash.speed }}</td>
+            <td>{{ $c.initialDash.time }}</td>
+            <td>{{ printf "%.2f" $c.run.speed }}</td>
+            <td>{{ $c.run.stop.time }}</td>
+            <td>{{ $c.run.turn.time }}</td>
+            <td>{{ printf "%.2f" $c.run.turn.accel }}</td>
+            <td>{{ printf "%.2f" $c.walk.speed }}</td>
+            <td>{{ printf "%.2f" $c.walk.accel }}</td>
+            <td>{{ $c.walk.turn.time }}</td>
+            <td>{{ $c.waveland.time }}</td>
+            <td>{{ printf "%.2f" $c.waveland.friction }}</td>
+          </tr>
+        </table>
+      </div>
+      {{ .RenderString "### Aerial Movement" }}
+      <div class="info-table">
+        <table>
+          <tr>
+            <th>Max Air Speed</th>
+            <th>Max Jump Horizontal Speed</th>
+            <th>Full Hop Speed</th>
+            <th>Short Hop Speed</th>
+            <th>Double Jump Speed</th>
+            {{ with $c.doubleJump.accel }}
+            <th>Double Jump Accel</th>{{ end }}
+            <th>Wall Jump Vertical Speed</th>
+            <th>Wall Jump Horizontal Speed</th>
+            <th>Prat Fall Accel</th>
+            <th>Prat Fall Land Time</th>
+          </tr>
+          <tr>
+            <td>{{ $c.maxAirSpeed }}</td>
+            <td>{{ $c.maxJumpHorizontalSpeed }}</td>
+            <td>{{ printf "%.2f" $c.fullHop.speed }}</td>
+            <td>{{ printf "%.1f" $c.shortHop.speed }}</td>
+            <td>{{ $c.doubleJump.speed }}</td>
+            {{ with $c.doubleJump.accel }}
+            <td>{{ $c.doubleJump.accel }}</td>{{ end }}
+            <td>{{ $c.wallJump.speed.vertical }}</td>
+            <td>{{ $c.wallJump.speed.horizontal }}</td>
+            <td>{{ printf "%.2f" $c.pratFall.accel }}</td>
+            <td>{{ $c.pratFall.landTime }}</td>
+          </tr>
+        </table>
+      </div>
 
-    {{ $attacks := slice
-      (dict
-        "section" "Normal"
-        "attacks" (slice "jab" "dashAttack" "forwardTilt" "upTilt" "downTilt"))
-      (dict
-        "section" "Aerial"
-        "attacks" (slice "neutralAir" "forwardAir" "backAir" "upAir" "downAir"))
-      (dict
-        "section" "Strong"
-        "attacks" (slice "forwardStrong" "upStrong" "downStrong"))
-      (dict
-        "section" "Special"
-        "attacks" (slice "neutralSpecial" "sideSpecial" "upSpecial" "downSpecial"))
-    }}
-    {{ range $attacks }}
-      {{ $.RenderString (print "## " .section " Attacks") }}
-      {{ range .attacks }}
-        {{ $.RenderString (print "### " (humanize . | title)) }}
-        {{ $move := index $c . }}
-        {{ if isset $move "hitboxes" }}
-          {{ partial "partials/move-display.html" $move }}
-        {{ else }}
-          {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
+      {{ $attacks := slice
+        (dict
+          "section" "Normal"
+          "attacks" (slice "jab" "dashAttack" "forwardTilt" "upTilt" "downTilt"))
+        (dict
+          "section" "Aerial"
+          "attacks" (slice "neutralAir" "forwardAir" "backAir" "upAir" "downAir"))
+        (dict
+          "section" "Strong"
+          "attacks" (slice "forwardStrong" "upStrong" "downStrong"))
+        (dict
+          "section" "Special"
+          "attacks" (slice "neutralSpecial" "sideSpecial" "upSpecial" "downSpecial"))
+      }}
+      {{ range $attacks }}
+        {{ $.RenderString (print "## " .section " Attacks") }}
+        {{ range .attacks }}
+          {{ $.RenderString (print "### " (humanize . | title)) }}
+          {{ $move := index $c . }}
+          {{ if isset $move "hitboxes" }}
+            {{ partial "partials/move-display.html" $move }}
+          {{ else }}
+            {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
+          {{ end }}
         {{ end }}
       {{ end }}
-    {{ end }}
+    </article>
 
   </main>
 {{ end }}
