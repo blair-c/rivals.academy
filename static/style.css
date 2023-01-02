@@ -275,7 +275,7 @@ h6 svg {
 }
 
 .info-table td {
-  padding: .3rem .5rem;
+  padding: .3125rem .5rem;
   vertical-align: bottom;
   border-top: 1px solid var(--clr-table-border);
 }
