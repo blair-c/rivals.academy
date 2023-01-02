@@ -948,7 +948,7 @@ upSpecial:
     - Will only travel through platforms.
 
 downSpecial:
-  hitboxes:
+- hitboxes:
   - name: Hit 1 (Grounded)
     startup: 22
     active:
@@ -1009,6 +1009,7 @@ downSpecial:
     setsOnFire: true
     notes:
     - Zetterburn will flash white when his double jump is restored.
+    - Wavebounce does shift momentum.
   - name: Hit 2
     active:
       grounded:
@@ -1050,8 +1051,9 @@ downSpecial:
     setsOnFire: true
     notes:
     - Activates on the 4th active frame of Hit 2. Ledge-cancelling the attack before this frame will result in the fire puddle not activating.
-  - name: Aerial Dive Flip
-    startup: 8
+- name: Aerial Dive Flip
+  hitboxes:
+  - startup: 8
     cancellable:
     - with: Wall Jump
       from: 9
@@ -1066,8 +1068,7 @@ downSpecial:
       onLanding: 17
     notes:
     - You are able to drift during the initial flip if your horizontal speed is lowered by hitting the wall or another object.
-  notes:
-  - The only move in the game that you wavebounce with. This applies to both the Aerial Dive and Aerial Dive Flip.
+    - Wavebounce does shift momentum.
 
 # Character Mechanics
 fire:
