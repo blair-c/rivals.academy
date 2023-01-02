@@ -245,6 +245,8 @@ h6 svg {
 
 .info-table {
   overflow-x: scroll;
+  border: 1px solid var(--clr-table-border);
+  max-width: fit-content;
 }
 
 .info-table table {
@@ -257,8 +259,14 @@ h6 svg {
   text-align: left;
 }
 
-.info-table th, td {
-  border: 1px solid var(--clr-table-border);
+.info-table th, 
+.info-table td {
+  border-right: 1px solid var(--clr-table-border);
+}
+
+.info-table th:last-child,
+.info-table td:last-child {
+  border-right: none;
 }
 
 .info-table th {
@@ -269,19 +277,26 @@ h6 svg {
 .info-table td {
   padding: .3rem .5rem;
   vertical-align: bottom;
+  border-top: 1px solid var(--clr-table-border);
+}
+
+.no-col-borders td, 
+.no-col-borders th {
+  border-right: none;
 }
 
 .sticky-col {
   text-align: left;
+  border-right: 2px solid var(--clr-table-border) !important;
 }
 
 @media only screen and (min-width:40rem) {
   .sticky-col {
     position: sticky;
     left: 0;
-    border-left: none;
     background-clip: padding-box;
     background-color: var(--clr-bg);
+    border-right: none !important;
   }
 
   .sticky-col::after {
@@ -290,7 +305,7 @@ h6 svg {
     top: 0;
     right: 0;
     height: 100%;
-    border-right: 1px solid var(--clr-table-border);
+    border-right: 2px solid var(--clr-table-border);
   }
 }
 
