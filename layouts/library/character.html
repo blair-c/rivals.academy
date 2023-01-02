@@ -120,10 +120,13 @@
         {{ range .attacks }}
           {{ $.RenderString (print "### " (humanize . | title)) }}
           {{ $move := index $c . }}
-          {{ if isset $move "hitboxes" }}
+          {{ if reflect.IsMap $move }}
             {{ partial "partials/move-display.html" $move }}
           {{ else }}
-            {{ range $move }}{{ partial "partials/move-display.html" . }}{{ end }}
+            {{ range $move }}
+              {{ with .name }}<h4>{{ . }}</h4>{{ end }}
+              {{ partial "partials/move-display.html" . }}
+            {{ end }}
           {{ end }}
         {{ end }}
       {{ end }}
