@@ -38,7 +38,7 @@ h3 svg,
 h4 svg,
 h5 svg,
 h6 svg {
-  width: 1em;
+  height: .875em;
   padding: 0 .125rem;
 }
 
@@ -50,8 +50,6 @@ h6 svg {
 
 .heading-link svg {
   display: none;
-  padding: 0 .125rem;
-  height: 1em;
   fill: var(--clr-table-border);
 }
 
