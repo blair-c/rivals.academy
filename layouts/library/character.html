@@ -3,11 +3,10 @@
 {{ end }}
 
 {{ define "main" }}
-  <article>
-    <main id="main-content">
+  <main id="main-content">
+    <article>
       {{ $c := index .Site.Data.rivals .File.BaseFileName }}
       <h1>{{ $c.name }}</h1>
-      {{ .Content }}
 
       {{ .RenderString "### Effective Weight" }}
       <div class="info-table no-col-borders">
@@ -101,7 +100,7 @@
         </table>
       </div>
 
-      {{ $attacks := slice
+      {{ range slice
         (dict
           "section" "Normal"
           "attacks" (slice "jab" "dashAttack" "forwardTilt" "upTilt" "downTilt"))
@@ -115,7 +114,6 @@
           "section" "Special"
           "attacks" (slice "neutralSpecial" "sideSpecial" "upSpecial" "downSpecial"))
       }}
-      {{ range $attacks }}
         {{ $.RenderString (print "## " .section " Attacks") }}
         {{ range .attacks }}
           {{ $.RenderString (print "### " (humanize . | title)) }}
@@ -131,7 +129,6 @@
         {{ end }}
       {{ end }}
     </article>
-
   </main>
 {{ end }}
 
