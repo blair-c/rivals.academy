@@ -27,11 +27,13 @@
           </h2>
           <ul class="brackets-list">
             {{ range .brackets }}
-              <li><a href="{{ .link }}" target="_blank" rel="noopener noreferrer"><div>
-                <h3>{{ .name }}</h3>
+              <li>
+                <h3><a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+                  {{ .name }} {{ partial "svg/goto.svg" }}
+                </a></h3>
                 <p>{{ .day }} @ {{ .time }} ({{ .freq }})</p>
                 <p>{{ .description }}</p>
-              </div></a></li>
+              </li>
             {{ end }}
           </ul>
         </section>
