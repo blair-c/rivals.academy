@@ -1,5 +1,6 @@
 :root {
   --clr-text: #202022;
+  --clr-text-hc: black;
   --clr-bg: white;
   --clr-highlight: #ebebf0;
   --clr-table-border: #a3a2b1;
@@ -40,6 +41,7 @@ h5 svg,
 h6 svg {
   height: .875em;
   padding: 0 .125rem;
+  fill: var(--clr-table-border);
 }
 
 .heading-link {
@@ -130,6 +132,7 @@ h6 svg {
 }
 
 .nav-list li:hover {
+  color: var(--clr-text-hc);
   transform: scale(1.025);
   transition: .1s ease-in-out;
 }
@@ -338,6 +341,6 @@ h6 svg {
   .tournament-hosts {
     display: flex;
     justify-content: space-evenly;
-    gap: 1rem;
+    gap: var(--page-padding);
   }
 }
