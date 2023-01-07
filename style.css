@@ -99,6 +99,7 @@ h6 svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--clr-bg);
 }
 
 .navbar svg {
@@ -150,16 +151,23 @@ h6 svg {
 }
 
 @media only screen and (max-width:40rem) {
+  .navbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
+
   .nav-list {
     background-color: var(--clr-bg);
     display: block;
     position: fixed;
-    align-self: start;
-    width: 100%;
-    margin-top: 5rem;
+    top: 5rem;
     overflow: hidden;
+    width: 100vw;
     max-height: 0;
-    transition: max-height 0.2s ease-out;
+    opacity: 0;
+    transition: all .1s ease-out;
+    touch-action: none;
   }
 
   .nav-list li {
@@ -168,7 +176,7 @@ h6 svg {
 
   .nav-list li a {
     display: block;
-    padding: 1rem;
+    padding: 1rem var(--page-padding);
   }
 
   .nav-list li:hover {
@@ -190,8 +198,8 @@ h6 svg {
     display: block;
     position: relative;
     background: currentColor;
-    height: 0.2rem;
-    width: 2rem;
+    height: .2rem;
+    width: 1.8rem;
   }
   
   .hamb-line::before,
@@ -202,7 +210,7 @@ h6 svg {
     background: currentColor;
     height: 100%;
     width: 100%;
-    transition: all .2s ease-out;
+    transition: all .1s ease-out;
   }
   
   .hamb-line::before {
@@ -214,7 +222,8 @@ h6 svg {
   }
   
   .nav-menu:checked ~ .nav-list {
-    max-height: 20rem;
+    max-height: 100%;
+    opacity: 100%;
   }
   
   .nav-menu:checked ~ .hamb .hamb-line {
@@ -291,9 +300,10 @@ h6 svg {
   border-right: 2px solid var(--clr-table-border) !important;
 }
 
-@media only screen and (min-width:40rem) {
+@media only screen and (min-width:41rem) {
   .sticky-col {
     position: sticky;
+    position: -webkit-sticky;
     left: 0;
     background-clip: padding-box;
     background-color: var(--clr-bg);
