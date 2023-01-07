@@ -80,6 +80,7 @@ h6 svg {
 
 .skip-nav {
   position: absolute;
+  z-index: 2;
   transform: translateY(-150%);
   transition: transform .1s ease-in;
   color: var(--clr-text);
