@@ -158,6 +158,10 @@ h6 svg {
     top: 0;
   }
 
+  html {
+    scroll-padding-top: 5rem;
+  }
+
   .nav-list {
     background-color: var(--clr-bg);
     display: block;
