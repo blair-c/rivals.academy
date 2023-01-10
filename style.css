@@ -52,7 +52,7 @@ h6 svg {
   position: absolute;
   overflow: hidden;
   white-space: nowrap;
-}
+}/*https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html*/
 
 .heading-link {
   border: none;
