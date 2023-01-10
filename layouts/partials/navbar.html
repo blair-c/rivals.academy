@@ -3,10 +3,15 @@
 <nav class="navbar">
   <a class="nav-logo" href="/">(logo)</a>
 
-  <input class="nav-menu" type="checkbox" id="nav-menu"/>
-  <label class="hamb" for="nav-menu"><span class="hamb-line"></span></label>
+  <button class="hamb-btn"
+          aria-controls="nav-list"
+          aria-expanded="false"
+          onclick="toggleHambMenu()">
+    <span class="sr-only">Menu</span>
+    <div class="hamb-line" aria-hidden="true"></div>
+  </button>
 
-  <ul class="nav-list">
+  <ul class="nav-list" id="nav-list">
     <li><a href="/library">Library</a></li>
     <li><a href="/guides">Guides</a></li>
     <li><a href="/tournaments">Tournaments</a></li>
