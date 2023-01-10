@@ -44,6 +44,16 @@ h6 svg {
   fill: var(--clr-table-border);
 }
 
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .heading-link {
   border: none;
   background: none;
@@ -113,8 +123,7 @@ h6 svg {
   margin-left: var(--page-padding);
 }
 
-.nav-menu,
-.hamb {
+.hamb-btn {
   display: none;
 }
 
@@ -162,41 +171,13 @@ h6 svg {
     scroll-padding-top: 5rem;
   }
 
-  .nav-list {
-    background-color: var(--clr-bg);
-    display: block;
-    position: fixed;
-    top: 5rem;
-    overflow: hidden;
-    width: 100vw;
-    max-height: 0;
-    opacity: 0;
-    transition: all .1s ease-out;
-    touch-action: none;
-  }
-
-  .nav-list li {
-    margin-left: 0;
-  }
-
-  .nav-list li a {
-    display: block;
-    padding: 1rem var(--page-padding);
-  }
-
-  .nav-list li:hover {
-    transform: scale(1);
-  }
-
-  .nav-list li a:hover {
-    background-color: var(--clr-highlight);
-  }
-
-  .hamb {
+  .hamb-btn {
     display: block;
     cursor: pointer;
-    padding: 1rem .5rem;
+    padding: 1rem .125rem;
     margin-right: var(--page-padding);
+    background: transparent;
+    border: none;
   }
   
   .hamb-line {
@@ -226,21 +207,54 @@ h6 svg {
     top: -.5rem;
   }
   
-  .nav-menu:checked ~ .nav-list {
-    max-height: 100%;
-    opacity: 100%;
-  }
-  
-  .nav-menu:checked ~ .hamb .hamb-line {
+  .data-open .hamb-line {
     background: transparent;
   }
-  .nav-menu:checked ~ .hamb .hamb-line::before {
+  .data-open .hamb-line::before {
     transform: rotate(-45deg);
     top:0;
   }
-  .nav-menu:checked ~ .hamb .hamb-line::after {
+  .data-open .hamb-line::after {
     transform: rotate(45deg);
     top:0;
+  }
+
+  .data-open ~ .nav-list {
+    max-height: 100%;
+    opacity: 100%;
+  }
+
+  .data-open ~ .nav-list li a {
+    display: block;
+  }
+
+  .nav-list {
+    background-color: var(--clr-bg);
+    display: block;
+    position: fixed;
+    top: 5rem;
+    overflow: hidden;
+    width: 100vw;
+    max-height: 0;
+    opacity: 0;
+    transition: all .1s ease-out;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+  }
+
+  .nav-list li a {
+    display: none;
+    padding: 1rem var(--page-padding);
+  }
+
+  .nav-list li:hover {
+    transform: scale(1);
+  }
+
+  .nav-list li a:hover {
+    background-color: var(--clr-highlight);
   }
 }
 
