@@ -58,6 +58,8 @@ h6 svg {
   border: none;
   background: none;
   font-size: inherit;
+  padding: 1px 0;
+  margin: 0 .2em;
 }
 
 .heading-link svg {
@@ -75,10 +77,6 @@ h6 svg {
 }
 
 @supports selector(:focus-visible) {
-  .heading-link:focus-visible {
-    margin-left: .5rem;
-  }
-
   .heading-link:focus svg {
     display: none;
   }
@@ -86,6 +84,39 @@ h6 svg {
   .heading-link:focus-visible svg {
     display: flex;
   }
+}
+
+.heading-link ~ .copied {
+  display: none;
+  position: absolute;
+  white-space: nowrap;
+  border-radius: .325em;
+  padding: .125em .4em;
+  margin-left: .25em;
+  font-size: .75em;
+  font-weight: normal;
+  color: var(--clr-bg);
+  background-color: var(--clr-text);
+}
+
+.heading-link ~ .copied:before {
+  content: '';
+  position: absolute;
+  width: .5em;
+  height: .5em;
+  transform: rotate(45deg);
+  z-index: -1;
+  right: 95%;
+  bottom: 35%;
+  background-color: var(--clr-text);
+}
+
+.data-copy-success svg {
+  display: flex !important;
+}
+
+.data-copy-success .copied {
+  display: inline-block;
 }
 
 .skip-nav {
