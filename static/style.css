@@ -68,22 +68,12 @@ h6 svg {
 }
 
 .heading:hover .heading-link svg,
-.heading-link:focus svg {
+.heading-link:focus-visible svg {
   display: flex;
 }
 
 .heading-link:hover svg {
   fill: currentColor;
-}
-
-@supports selector(:focus-visible) {
-  .heading-link:focus svg {
-    display: none;
-  }
-
-  .heading-link:focus-visible svg {
-    display: flex;
-  }
 }
 
 .heading-link ~ .copied {
