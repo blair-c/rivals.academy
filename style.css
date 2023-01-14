@@ -44,6 +44,20 @@ h6 svg {
   fill: var(--clr-table-border);
 }
 
+:not(:active):focus-visible {
+  outline-offset: .125rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :focus-visible {
+    transition: outline-offset .5s ease-out;
+  }
+
+  :not(:active):focus-visible {
+    transition-duration: .25s;
+  }
+}
+
 .sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -68,22 +82,12 @@ h6 svg {
 }
 
 .heading:hover .heading-link svg,
-.heading-link:focus svg {
+.heading-link:focus-visible svg {
   display: flex;
 }
 
 .heading-link:hover svg {
   fill: currentColor;
-}
-
-@supports selector(:focus-visible) {
-  .heading-link:focus svg {
-    display: none;
-  }
-
-  .heading-link:focus-visible svg {
-    display: flex;
-  }
 }
 
 .heading-link ~ .copied {
@@ -123,7 +127,6 @@ h6 svg {
   position: absolute;
   z-index: 2;
   transform: translateY(-150%);
-  transition: transform .1s ease-in;
   color: var(--clr-text);
   background: var(--clr-highlight);
   padding: 1rem 1.5rem;
@@ -131,7 +134,7 @@ h6 svg {
   margin: 1rem
 }
 
-.skip-nav:focus {
+.skip-nav:focus-visible {
   transform: translateY(0);
 }
 
@@ -176,12 +179,20 @@ h6 svg {
 .nav-list li:hover {
   color: var(--clr-text-hc);
   transform: scale(1.025);
-  transition: .1s ease-in-out;
 }
 
 .nav-list li:active {
   transform: scale(0.95);
-  transition: .05s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .nav-list li:hover {
+    transition: .1s ease-in-out;
+  }
+
+  .nav-list li:active {
+    transition: .05s;
+  }
 }
 
 .nav-list li a {
@@ -227,7 +238,13 @@ h6 svg {
     background: currentColor;
     height: 100%;
     width: 100%;
-    transition: all .1s ease-out;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hamb-line::before,
+    .hamb-line::after {
+      transition: all .1s ease-out;
+    }
   }
   
   .hamb-line::before {
@@ -268,7 +285,12 @@ h6 svg {
     width: 100vw;
     max-height: 0;
     opacity: 0;
-    transition: all .1s ease-out;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .nav-list {
+      transition: all .1s ease-out;
+    }
   }
 
   .nav-list li {
