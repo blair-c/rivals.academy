@@ -9,7 +9,8 @@ function toggleHambMenu() {
 
 async function copyHeadingLink(section) {
   // Copy
-  navigator.clipboard.writeText(window.location.href + "#" + section);
+  var baseUrl = window.location.href.split('#')[0];
+  navigator.clipboard.writeText(baseUrl + "#" + section);
   // Display tooltip
   var heading = document.getElementById(section);
   if (!heading.classList.contains("data-copy-success")) {
