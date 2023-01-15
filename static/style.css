@@ -365,6 +365,7 @@ h6 svg {
 
 .info-table {
   overflow-x: scroll;
+  scrollbar-width: thin;
   border: 1px solid var(--clr-table-border);
   max-width: fit-content;
 }
