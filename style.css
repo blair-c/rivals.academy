@@ -5,7 +5,8 @@
   --clr-highlight: #ebebf0;
   --clr-table-border: #a3a2b1;
 
-  --clr-discord-dark: #5865f2;
+  --clr-discord: #5865f2;
+  --clr-discord-hc: #4b53cc;
 
   --nav-height: 4.5rem;
   --page-padding: clamp(1rem, 2.5vw, 2rem);
@@ -207,19 +208,27 @@ h6 svg {
 
 .nav-discord svg {
   display: none;
-  fill: var(--clr-discord-dark);
+  fill: var(--clr-discord);
 }
 
 .nav-discord span {
-  color: var(--clr-discord-dark);
+  color: var(--clr-discord);
 }
 
-@media only screen and (min-width:40rem) {
+@media only screen and (min-width:calc(48rem + 1px)) {
   .nav-discord span {
     padding: .15em .5em;
     border-radius: .15em;
-    background-color: var(--clr-discord-dark);
+    background-color: var(--clr-discord);
     color: var(--clr-bg);
+  }
+
+  .nav-discord:hover:not(:active) span {
+    background-color: var(--clr-discord-hc);
+  }
+
+  .nav-list li:last-child:hover:not(:active) {
+    transform: scale(1);
   }
 }
 
