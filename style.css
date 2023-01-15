@@ -405,6 +405,13 @@ h6 svg {
   width: 12rem;
 }
 
+.move-notes {
+  margin: .25rem 0;
+  padding: 0 .5rem;
+  border-left: .125rem solid var(--clr-table-border);
+  font-style: italic;
+}
+
 .tournament-hosts {
   margin: 0 var(--page-padding);
 }
