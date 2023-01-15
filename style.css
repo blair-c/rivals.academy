@@ -5,7 +5,9 @@
   --clr-highlight: #ebebf0;
   --clr-table-border: #a3a2b1;
 
-  --nav-height: 5rem;
+  --clr-discord-dark: #5865f2;
+
+  --nav-height: 4.5rem;
   --page-padding: clamp(1rem, 2.5vw, 2rem);
 }
 
@@ -149,7 +151,7 @@ h6 svg {
 }
 
 .navbar svg {
-  width: 1.8rem;
+  width: 1.5em;
   display: flex;
   align-items: center;
 }
@@ -201,6 +203,39 @@ h6 svg {
   line-height: 1.75rem;
   font-weight: 700;
   color: currentColor;
+}
+
+.nav-discord svg {
+  display: none;
+  fill: var(--clr-discord-dark);
+}
+
+.nav-discord span {
+  color: var(--clr-discord-dark);
+}
+
+@media only screen and (min-width:40rem) {
+  .nav-discord span {
+    padding: .15em .5em;
+    border-radius: .15em;
+    background-color: var(--clr-discord-dark);
+    color: var(--clr-bg);
+  }
+}
+
+@media only screen and (min-width:40rem) and (max-width:50rem) {
+  .nav-discord svg {
+    display: flex;
+  }
+  .nav-discord span {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+  } /* .sr-only */
 }
 
 @media only screen and (max-width:40rem) {
