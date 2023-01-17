@@ -5,6 +5,7 @@ function toggleHambMenu() {
     'aria-expanded', 
     `${!(hamb.getAttribute('aria-expanded') === 'true')}`
   );
+  document.body.classList.toggle('data-disable-scroll-mobile');
 }
 
 async function copyHeadingLink(section) {
