@@ -810,7 +810,7 @@ neutralSpecial:
     firstActiveFrame: 63
     damage: 10
     angle: 90
-    angleFlipper:
+    angleFlipper: 1
     knockback:
       base: 9
       scaling: 30
