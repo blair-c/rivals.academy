@@ -214,7 +214,7 @@ h6 svg {
   color: var(--clr-discord);
 }
 
-@media only screen and (min-width:calc(48rem + 1px)) {
+@media only screen and (min-width:48rem) {
   .nav-discord span {
     padding: .15em .5em;
     border-radius: .15em;
@@ -424,7 +424,7 @@ h6 svg {
   border-right: 2px solid var(--clr-table-border) !important;
 }
 
-@media only screen and (min-width:41rem) {
+@media only screen and (min-width:calc(40rem + 1px)) {
   .sticky-col {
     position: sticky;
     position: -webkit-sticky;
