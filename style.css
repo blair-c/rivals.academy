@@ -257,6 +257,11 @@ h6 svg {
     scroll-padding-top: var(--nav-height);
   }
 
+  .data-disable-scroll-mobile {
+    height: 100%;
+    overflow: hidden;
+  }
+
   .hamb-btn {
     display: block;
     cursor: pointer;
