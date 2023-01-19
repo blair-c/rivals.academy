@@ -205,6 +205,10 @@ h3 {
   fill: var(--clr-discord);
 }
 
+.nav-discord svg:hover {
+  fill: var(--clr-discord-hc);
+}
+
 .nav-discord span {
   color: var(--clr-discord);
 }
