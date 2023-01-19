@@ -376,7 +376,7 @@ h3 {
 }
 
 .info-table {
-  overflow-x: scroll;
+  overflow-x: auto;
   scrollbar-width: thin;
   border: 1px solid var(--clr-table-border);
   max-width: fit-content;
