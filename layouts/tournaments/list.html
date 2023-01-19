@@ -23,13 +23,12 @@
         <section class="tournament-host">
           <h2>
             {{ .name }} Brackets
-            <a href="{{ .links.discord }}">{{ partial "svg/icon-discord.svg" }}</a>
           </h2>
           <ul class="brackets-list">
             {{ range .brackets }}
               <li>
                 <h3><a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
-                  {{ .name }} {{ partial "svg/goto.svg" }}
+                  {{ .name }}{{ partial "svg/goto.svg" }}
                 </a></h3>
                 <p>{{ .day }} @ {{ .time }} ({{ .freq }})</p>
                 <p>{{ .description }}</p>

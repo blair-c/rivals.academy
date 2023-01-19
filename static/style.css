@@ -36,17 +36,6 @@ h3 {
   margin-bottom: 0.3rem;
 }
 
-h1 svg,
-h2 svg,
-h3 svg,
-h4 svg,
-h5 svg,
-h6 svg {
-  height: .875em;
-  padding: 0 .125rem;
-  fill: var(--clr-table-border);
-}
-
 :not(:active):focus-visible {
   outline-offset: .125rem;
 }
@@ -81,6 +70,8 @@ h6 svg {
 
 .heading-link svg {
   display: none;
+  height: .875em;
+  padding: 0 .125rem;
   fill: var(--clr-table-border);
 }
 
@@ -476,6 +467,12 @@ h6 svg {
 
 .brackets-list li a {
   color: currentColor;
+}
+
+.brackets-list li a svg {
+  height: .875em;
+  padding: 0 .325rem;
+  fill: var(--clr-table-border);
 }
 
 @media only screen and (min-width:40rem) {
