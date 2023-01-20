@@ -380,6 +380,7 @@ h3 {
   scrollbar-width: thin;
   border: 1px solid var(--clr-table-border);
   max-width: fit-content;
+  margin-bottom: .25rem;
 }
 
 .info-table table {
@@ -454,10 +455,14 @@ h3 {
 }
 
 .move-notes {
-  margin: .25rem 0;
+  margin: 0;
   padding: 0 .5rem;
   border-left: .125rem solid var(--clr-table-border);
   font-style: italic;
+}
+
+.hitbox-image {
+  margin-top: .25rem;
 }
 
 .tournament-hosts {

@@ -224,3 +224,5 @@
 {{ with .notes }}
   <p class="move-notes">{{ range . }}{{ . }}{{ end }}</p>
 {{ end }}
+
+{{ with .image }}<div class="hitbox-image"><img src="{{ . }}"></div>{{ end }}
