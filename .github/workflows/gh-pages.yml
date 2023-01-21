@@ -20,6 +20,21 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
+      - name: Setup ImageMagick
+        uses: mfinelli/setup-imagemagick@v1
+
+      - name: Scale Library Images
+        run: |
+          shopt -s nullglob
+          for dir in /content/library/*/
+          do
+            for i in "$dir"/*.png
+            do 
+              convert "$i" -sample 200% "$(dirname $i)/1080_$(basename $i)"
+              echo "Created $(dirname $i)/1080_$(basename $i)"
+            done
+          done
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
