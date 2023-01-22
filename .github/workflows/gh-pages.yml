@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup ImageMagick
-        uses: mfinelli/setup-imagemagick@v1
+        uses: mfinelli/setup-imagemagick@v2
 
       - name: Scale Library Images
         run: |
