@@ -25,8 +25,7 @@ jobs:
 
       - name: Scale Library Images
         run: |
-          shopt -s nullglob
-          for dir in /content/library/*/
+          for dir in content/library/*/
           do
             for i in "$dir"/*.png
             do 
