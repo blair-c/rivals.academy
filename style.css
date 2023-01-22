@@ -461,8 +461,11 @@ h3 {
   font-style: italic;
 }
 
-.hitbox-image {
+.hitbox-image img {
   margin-top: .25rem;
+  max-width: 100%;
+  height: auto;
+  max-height: 12.5rem;
 }
 
 .tournament-hosts {
