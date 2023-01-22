@@ -225,4 +225,4 @@
   <p class="move-notes">{{ range . }}{{ . }}{{ end }}</p>
 {{ end }}
 
-{{ with .image }}<div class="hitbox-image"><img src="{{ . }}"></div>{{ end }}
+{{ with .image }}<div class="hitbox-image"><img src="{{ index . "2x" }}"></div>{{ end }}

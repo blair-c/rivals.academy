@@ -157,7 +157,9 @@ jab:
     killsProjectiles: true
   notes:
   - Jab combos have varying startup depending on when the attack is input. A jab input within the final 2 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
-  image: https://rivals.academy/library/zetterburn/jab.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/jab.png
+    2x: https://rivals.academy/library/zetterburn/1080_jab.png
 
 dashAttack:
   hitboxes:
@@ -212,7 +214,9 @@ dashAttack:
     killsProjectiles: true
   notes:
   - On hitting a character or object, it is possible to cancel the remaining active frames into up strong. This may be input during hitpause to begin immediately after hitpause has ended.
-  image: https://rivals.academy/library/zetterburn/dash-attack.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/dash-attack.png
+    2x: https://rivals.academy/library/zetterburn/1080_dash-attack.png
 
 forwardTilt:
   hitboxes:
@@ -256,7 +260,9 @@ forwardTilt:
       scaling: 100
     priority: 1
     killsProjectiles: true
-  image: https://rivals.academy/library/zetterburn/forward-tilt.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/forward-tilt.png
+    2x: https://rivals.academy/library/zetterburn/1080_forward-tilt.png
 
 upTilt:
   hitboxes:
@@ -316,7 +322,9 @@ upTilt:
       scaling: 60
     priority: 1
     killsProjectiles: true
-  image: https://rivals.academy/library/zetterburn/up-tilt.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/up-tilt.png
+    2x: https://rivals.academy/library/zetterburn/1080_up-tilt.png
 
 downTilt:
   hitboxes:
@@ -341,7 +349,9 @@ downTilt:
       scaling: 25
     priority: 1
     killsProjectiles: true
-  image: https://rivals.academy/library/zetterburn/down-tilt.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/down-tilt.png
+    2x: https://rivals.academy/library/zetterburn/1080_down-tilt.png
 
 # Aerials
 neutralAir:
@@ -394,7 +404,9 @@ neutralAir:
       scaling: 20
     priority: 1
     killsProjectiles: true
-  image: https://rivals.academy/library/zetterburn/neutral-air.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/neutral-air.png
+    2x: https://rivals.academy/library/zetterburn/1080_neutral-air.png
 
 forwardAir:
   hitboxes:
@@ -463,7 +475,9 @@ forwardAir:
       scaling: 75
     priority: 4
     killsProjectiles: true
-  image: https://rivals.academy/library/zetterburn/forward-air.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/forward-air.png
+    2x: https://rivals.academy/library/zetterburn/1080_forward-air.png
 
 backAir:
   hitboxes:
@@ -492,7 +506,9 @@ backAir:
     priority: 2
     killsProjectiles: true
     setsOnFire: true
-  image: https://rivals.academy/library/zetterburn/back-air.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/back-air.png
+    2x: https://rivals.academy/library/zetterburn/1080_back-air.png
 
 upAir:
   hitboxes:
@@ -561,7 +577,9 @@ upAir:
       scaling: 75
     priority: 1
     killsProjectiles: true
-  image: https://rivals.academy/library/zetterburn/up-air.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/up-air.png
+    2x: https://rivals.academy/library/zetterburn/1080_up-air.png
 
 downAir:
   hitboxes:
@@ -589,7 +607,9 @@ downAir:
       scaling: 50
     priority: 2
     killsProjectiles: true
-  image: https://rivals.academy/library/zetterburn/down-air.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/down-air.png
+    2x: https://rivals.academy/library/zetterburn/1080_down-air.png
 
 # Strongs
 forwardStrong:
@@ -661,7 +681,9 @@ forwardStrong:
     consumesFire: true
     notes:
     - Does not replace a hitbox, but instead adds a new one if it detects the struck opponent is on fire.
-  image: https://rivals.academy/library/zetterburn/forward-strong.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/forward-strong.png
+    2x: https://rivals.academy/library/zetterburn/1080_forward-strong.png
 
 upStrong:
   hitboxes:
@@ -707,7 +729,9 @@ upStrong:
     consumesFire: true
     notes:
     - Does not replace a hitbox, but instead adds a new one if it detects the struck opponent is on fire.
-  image: https://rivals.academy/library/zetterburn/up-strong.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/up-strong.png
+    2x: https://rivals.academy/library/zetterburn/1080_up-strong.png
 
 downStrong:
   hitboxes:
@@ -777,7 +801,9 @@ downStrong:
     consumesFire: true
     notes:
     - Does not replace a hitbox, but instead adds a new one if it detects the struck opponent is on fire.
-  image: https://rivals.academy/library/zetterburn/down-strong.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/down-strong.png
+    2x: https://rivals.academy/library/zetterburn/1080_down-strong.png
 
 # Specials
 neutralSpecial:
@@ -836,7 +862,9 @@ neutralSpecial:
     setsOnFire: true
   notes:
   - Jumping during hitpause will always buffer a jump after hitpause ends.
-  image: https://rivals.academy/library/zetterburn/neutral-special.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/neutral-special.png
+    2x: https://rivals.academy/library/zetterburn/1080_neutral-special.png
 
 sideSpecial:
   hitboxes:
@@ -881,7 +909,9 @@ sideSpecial:
     setsOnFire: true
     notes:
     - Cooldown applied first frame of endlag.
-  image: https://rivals.academy/library/zetterburn/side-special.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/side-special.png
+    2x: https://rivals.academy/library/zetterburn/1080_side-special.png
 
 upSpecial:
   hitboxes:
@@ -961,7 +991,9 @@ upSpecial:
     - Can be angled in 24 possible directions.
     - Cancelling by angling into the ground will cause the move to become inactive and Zetterburn to enter 10 frames of endlag, including time in a shortened landing lag state.
     - Will only travel through platforms.
-  image: https://rivals.academy/library/zetterburn/up-special.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/up-special.png
+    2x: https://rivals.academy/library/zetterburn/1080_up-special.png
 
 downSpecial:
 - hitboxes:
@@ -1067,7 +1099,9 @@ downSpecial:
     setsOnFire: true
     notes:
     - Activates on the 4th active frame of Hit 2. Ledge-cancelling the attack before this frame will result in the fire puddle not activating.
-  image: https://rivals.academy/library/zetterburn/down-special.png
+  image:
+    1x: https://rivals.academy/library/zetterburn/down-special.png
+    2x: https://rivals.academy/library/zetterburn/1080_down-special.png
 - name: Aerial Dive Flip
   hitboxes:
   - startup: 8
