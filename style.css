@@ -72,6 +72,16 @@ h3 {
   margin: 0 .2em;
 }
 
+.heading-link:active {
+  transform: scale(0.9);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .heading-link:active {
+    transition: transform .1s ease-out;
+  }
+}
+
 .heading-link svg {
   display: none;
   height: .875em;
@@ -363,16 +373,12 @@ h3 {
 
 .site-section-header {
   text-align: center;
-  padding: 1.5rem var(--page-padding);
+  padding: 1rem var(--page-padding);
   background-color: var(--clr-highlight);
 }
 
 .site-section-header h1 {
-  margin-top: 0;
-}
-
-.site-section-header p {
-  margin-bottom: 0;
+  margin: 1rem 0;
 }
 
 .info-table {
