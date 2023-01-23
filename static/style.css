@@ -72,6 +72,16 @@ h3 {
   margin: 0 .2em;
 }
 
+.heading-link:active {
+  transform: scale(0.9);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .heading-link:active {
+    transition: transform .1s ease-out;
+  }
+}
+
 .heading-link svg {
   display: none;
   height: .875em;
