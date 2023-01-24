@@ -1,6 +1,7 @@
 ---
 title: Tournaments
 description: Free online brackets held in the Rivals Academy Discord and its sister server, Rivals Recess
+layout: tournaments
 
 roaa:
 - name: Rivals Amateur Series
