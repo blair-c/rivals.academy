@@ -1,8 +1,58 @@
 <footer>
-  <div>
-    <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.roaa.discord }}">discord</a>
-    <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.roaa.twitch }}">twitch</a>
-    <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.roaa.twitter }}">twitter</a>
-    <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.roaa.youtube }}">youtube</a>
+  <div class="footer-main-container">
+    <a href="/">
+      <img src="/img/icon_ranno.png" alt="Ranno wearing a graduation cap and gown.">
+    </a>
+    <div class="footer-main">
+      <div class="footer-hero">
+        <a href="/">
+          <img src="/img/icon_ranno.png" alt="Ranno wearing a graduation cap and gown.">
+        </a>
+        <div>
+          <p class="footer-title">Rivals Academy</p>
+          <p>The premier Rivals of Aether learning resource & community.</p>
+          <ul class="footer-socials">
+            <li>
+              <a class="join-discord"
+                href="{{ site.Data.links.roaa.discord }}"
+                target="_blank" rel="noopenernoreferrer">
+                Join Discord →
+              </a>
+            </li>
+            {{ range slice "twitter" "twitch" "youtube"}}
+              <li>
+                <a class="{{ . }}"
+                  href="{{ index site.Data.links.roaa . }}"
+                  target="_blank" rel="noopener noreferrer">
+                  {{ partial (print "svg/socials/" . ".svg") }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      <div class="footer-sections">
+        <div>
+          <p class="footer-title">Resources</p>
+          <p><a href="/library">Frame Data Library</a></p>
+          <p><a href="/guides">Gameplay Guides</a></p>
+          <p><a href="/tournaments">Tournaments</a></p>
+          <p><a href="/library/api">For Developers</a></p>
+        </div>
+        <div>
+          <p class="footer-title">About Us</p>
+          <p><a href="/about">About Academy</a></p>
+          <p><a href="/about#contributors">Contributors</a></p>
+          <p><a href="/about#associates">Associates</a></p>
+          <p><a href="/about#support">Support Academy</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="copyright">
+      {{ partial "svg/copyright.svg" }} Copyright 2023 | Rivals Academy
+    </span>
+    <a href="/privacy-policy">Privacy Policy</a>
   </div>
 </footer>
