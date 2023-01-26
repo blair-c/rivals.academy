@@ -5,8 +5,12 @@
   --clr-highlight: #ebebf0;
   --clr-table-border: #a3a2b1;
 
+  --clr-darken-img: #303033;
+  --clr-text-on-img: #ededf2;
+
   --clr-discord: #5865f2;
   --clr-discord-hc: #4b53cc;
+  --clr-discord-light: #7289da;
   --clr-twitter: #1d9bf0;
   --clr-twitch: #8c45f7;
   --clr-youtube: #fd0000;
@@ -29,6 +33,14 @@ body {
 
 main {
   min-height: calc(100vh - var(--nav-height));
+}
+
+footer a {
+  color: currentColor;
+}
+
+footer svg {
+  fill: currentColor;
 }
 
 a {
@@ -382,13 +394,24 @@ h3 {
   }
 }
 
-footer a {
-  color: currentColor;
-}
-
 .footer-main-container {
   padding: 2rem var(--page-padding);
-  background-color: var(--clr-highlight);
+  background-color: var(--clr-darken-img);
+  background-image: url("img/footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 7% top;
+  background-blend-mode: multiply;
+}
+
+.footer-main-container img:active {
+  transform: scale(.95);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .footer-main-container img {
+    transition: transform .1s ease-out;
+  }
 }
 
 .footer-main-container > a {
@@ -407,12 +430,18 @@ footer a {
 
   .footer-main-container > a img {
     max-height: 15rem;
+    border-radius: 1.25rem;
   }
 }
 
 .footer-main {
   display: grid;
   gap: 1rem;
+  color: var(--clr-text-on-img);
+}
+
+.footer-main a:hover {
+  color: white;
 }
 
 .footer-main ul {
@@ -427,23 +456,11 @@ footer a {
 
 .footer-hero img {
   max-height: 12rem;
+  border-radius: 1rem;
 }
 
 .footer-hero p:not(.footer-title) {
   margin-bottom: calc(1rem + .625rem);
-}
-
-.footer-hero .join-discord {
-  padding: .625rem 1rem;
-  margin: 1rem 0;
-  border-radius: .25rem;
-  font-weight: 500;
-  color: white;
-  background-color: var(--clr-discord);
-}
-
-.footer-hero .join-discord:hover:not(:active) {
-  background-color: var(--clr-discord-hc);
 }
 
 @media only screen and (min-width:45rem) {
@@ -489,7 +506,6 @@ footer a {
 .footer-socials li a svg {
   display: flex;
   align-items: center;
-  fill: var(--clr-table-border);
   width: 2rem;
 }
 
@@ -503,6 +519,19 @@ footer a {
 
 .footer-socials .youtube:hover svg {
   fill: var(--clr-youtube);
+}
+
+.footer-socials .join-discord {
+  padding: .625rem 1rem;
+  margin: 1rem 0;
+  border-radius: .25rem;
+  font-weight: 500;
+  color: white;
+  background-color: var(--clr-discord);
+}
+
+.footer-socials .join-discord:hover:not(:active) {
+  background-color: var(--clr-discord-light);
 }
 
 .footer-sections {
@@ -534,7 +563,6 @@ footer a {
 .copyright svg {
   height: 1rem;
   margin-right: .325rem;
-  fill: currentColor;
 }
 
 .site-section-header {
