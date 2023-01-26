@@ -10,7 +10,6 @@
 
   --clr-discord: #5865f2;
   --clr-discord-hc: #4b53cc;
-  --clr-discord-light: #7289da;
   --clr-twitter: #1d9bf0;
   --clr-twitch: #8c45f7;
   --clr-youtube: #fd0000;
@@ -524,14 +523,14 @@ h3 {
 .footer-socials .join-discord {
   padding: .625rem 1rem;
   margin: 1rem 0;
-  border-radius: .25rem;
+  border-radius: .5rem;
   font-weight: 500;
   color: white;
   background-color: var(--clr-discord);
 }
 
 .footer-socials .join-discord:hover:not(:active) {
-  background-color: var(--clr-discord-light);
+  background-color: var(--clr-discord-hc);
 }
 
 .footer-sections {
