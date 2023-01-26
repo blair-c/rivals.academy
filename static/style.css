@@ -418,7 +418,7 @@ h3 {
   display: none;
 }
 
-@media only screen and (min-width:60rem) {
+@media only screen and (min-width:63rem) {
   .footer-main-container {
     display: flex;
     gap: var(--page-padding);
@@ -429,7 +429,7 @@ h3 {
   }
 
   .footer-main-container > a img {
-    max-height: 15rem;
+    max-height: 14rem;
     border-radius: 1.25rem;
   }
 }
