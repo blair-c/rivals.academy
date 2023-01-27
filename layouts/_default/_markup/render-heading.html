@@ -5,8 +5,7 @@
     {{ .Text | safeHTML -}}
     <button class="heading-link"
             title="Copy link"
-            aria-label="Copy link"
-            aria-text="Copy link to this section: {{ .Text | safeHTML }}"
+            aria-label="Copy link to this section: {{ .Text | safeHTML }}"
             onclick="copyHeadingLink({{ .Anchor | safeURL }})">
       {{ partial "svg/copy.svg" }}
     </button>

@@ -225,4 +225,8 @@
   <p class="move-notes">{{ range . }}{{ . }}{{ end }}</p>
 {{ end }}
 
-{{ with .image.highRes }}<div class="hitbox-image"><img src="{{ . }}"></div>{{ end }}
+{{ with .image.highRes }}
+  <div class="hitbox-image">
+    <img src="{{ . }}" alt="In-game screenshot of this attack's hitbox{{ with $multiple }}es{{ end }}">
+  </div>
+{{ end }}

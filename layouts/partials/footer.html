@@ -1,11 +1,13 @@
 <footer>
   <div class="footer-main-container">
     <a href="/">
+      <span class="sr-only">Homepage</span>
       <img src="/img/icon_ranno.png" alt="Ranno wearing a graduation cap and gown.">
     </a>
     <div class="footer-main">
       <div class="footer-hero">
         <a href="/">
+          <span class="sr-only">Homepage</span>
           <img src="/img/icon_ranno.png" alt="Ranno wearing a graduation cap and gown.">
         </a>
         <div>
@@ -22,8 +24,9 @@
             {{ range slice "twitter" "twitch" "youtube"}}
               <li>
                 <a class="{{ . }}"
-                  href="{{ index site.Data.links.roaa . }}"
-                  target="_blank" rel="noopener noreferrer">
+                   href="{{ index site.Data.links.roaa . }}"
+                   target="_blank" rel="noopener noreferrer">
+                  <span class="sr-only">{{ title . }}</span>
                   {{ partial (print "svg/socials/" . ".svg") }}
                 </a>
               </li>
