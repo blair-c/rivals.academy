@@ -245,7 +245,7 @@ h3 {
   color: var(--clr-discord);
 }
 
-@media only screen and (min-width:48rem) {
+@media only screen and (min-width:calc(48rem + 1px)) {
   .nav-discord span {
     padding: .15em .5em;
     border-radius: .15em;
@@ -262,7 +262,7 @@ h3 {
   }
 }
 
-@media only screen and (min-width:40rem) and (max-width:48rem) {
+@media only screen and (min-width:calc(40rem + 1px)) and (max-width:48rem) {
   .nav-discord svg {
     display: flex;
   }
