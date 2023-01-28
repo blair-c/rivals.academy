@@ -41,6 +41,6 @@ rrc:
   time: 4:00 PM ET
   freq: monthly
   link: https://start.gg/thekingpin
-  description: Monthly open series boasting the largest prize pots, entrant counts, stakes, and prestige. Features an extended stream to cover the action.
+  description: Monthly open series boasting the largest prize pots, entrant counts, and stakes. Features an extended stream to cover the action.
 ---
 
