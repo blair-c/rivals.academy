@@ -32,6 +32,7 @@ body {
 
 main {
   min-height: calc(100vh - var(--nav-height));
+  min-height: calc(100dvh - var(--nav-height));
 }
 
 footer a {
@@ -47,7 +48,7 @@ a {
 }
 
 article {
-  padding: 0 var(--page-padding);
+  padding: 0 var(--page-padding) 2rem var(--page-padding);
 }
 
 button {
@@ -420,6 +421,7 @@ h3 {
 @media only screen and (min-width:63rem) {
   .footer-main-container {
     display: flex;
+    justify-content: center;
     gap: var(--page-padding);
   }
 
