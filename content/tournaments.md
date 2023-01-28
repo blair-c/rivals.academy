@@ -1,6 +1,6 @@
 ---
 title: Tournaments
-description: Free online brackets held in the Rivals Academy Discord and its sister server, Rivals Recess
+description: Free online brackets held in the Rivals Academy Discord and our sister server, Rivals Recess
 layout: tournaments
 
 roaa:
@@ -9,19 +9,19 @@ roaa:
   time: 8:00 PM ET
   freq: weekly
   link: https://msb.challonge.com/
-  description: 
+  description: The community's most longstanding amateur bracket, in which each week's winner "graduates" and is banned from future RAS events, seen as a rite of passage.
 - name: Rivals Amateur Series (EU)
   day: Saturdays
   time: 8:30 PM CEST
   freq: weekly
   link: https://euras.challonge.com/
-  description:
+  description: Europe's take on the RAS format, with a seasonal ban format for three-time winners. Joining the [EU Rivals Discord](https://bit.ly/eurivals-discordapp) is required to enter this event.
 - name: Go to School
   day: Wednesdays
   time: 8:00 PM ET
   freq: weekly
   link: https://start.gg/gts
-  description:
+  description: Adopted from the long-running "Go-to-Sleep" tournament series, GTS is Academy's weekly open bracket open to all skill levels. Enter to compete with Rivals' best.
 
 rrc:
 - name: Rivals Recess Circuit
@@ -29,24 +29,18 @@ rrc:
   time: 7:00 PM ET
   freq: weekly
   link: https://rivalsrecess.challonge.com/
-  description:
+  description: Amateur bracket with a skill cap slightly below RAS's, a seasonal structure + invitational, and round robin pools giving everyone a chance to squeeze in many sets.
 - name: SSSS
   day: Tuesdays
   time: 8:00 PM ET
   freq: weekly
-  link: https://start.gg/s4
-  description:
-- name: Title Match
-  day: Fridays
-  time: 8:00 PM ET
-  freq: weekly
   link: https://rivalsrecess.challonge.com/
-  description:
+  description: Recess' weekly open bracket, with a substantial amount of top level representation and making up the bulk of Rivals' active online scene alongside GTS.
 - name: The Kingpin
   day: Saturdays
   time: 4:00 PM ET
   freq: monthly
   link: https://start.gg/thekingpin
-  description:
+  description: Monthly open series boasting the largest prize pots, entrant counts, stakes, and prestige. Features an extended stream to cover the action.
 ---
 

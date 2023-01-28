@@ -20,7 +20,7 @@
           "links" $.Site.Data.links.rrc
           "brackets" ($.Param "rrc"))
       }}
-        <section class="tournament-host">
+        <section>
           <h2>
             {{ .name }} Brackets
           </h2>
@@ -30,8 +30,8 @@
                 <h3><a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
                   {{ .name }}{{ partial "svg/goto.svg" }}
                 </a></h3>
-                <p>{{ .day }} @ {{ .time }} ({{ .freq }})</p>
-                <p>{{ .description }}</p>
+                <p class="day-time-freq">{{ .day }} @ {{ .time }} ({{ .freq }})</p>
+                <p class="bracket-desc">{{ $.RenderString .description }}</p>
               </li>
             {{ end }}
           </ul>

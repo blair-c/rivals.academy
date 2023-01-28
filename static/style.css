@@ -55,7 +55,7 @@ button {
 }
 
 h2 {
-  border-bottom: 1px solid var(--clr-table-border);
+  border-bottom: 1px solid var(--clr-highlight);
 }
 
 h3 {
@@ -668,7 +668,15 @@ h3 {
 }
 
 .tournament-hosts {
-  margin: 0 var(--page-padding);
+  margin: 0 var(--page-padding) 2rem var(--page-padding);
+}
+
+@media only screen and (min-width:50rem) {
+  .tournament-hosts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--page-padding);
+  }
 }
 
 .brackets-list {
@@ -676,20 +684,34 @@ h3 {
   padding: 0;
 }
 
-.brackets-list li a {
+.brackets-list li {
+  border-bottom: 1px solid var(--clr-highlight);
+}
+
+.brackets-list li:last-child {
+  border-bottom: 1px solid var(--clr-bg);
+}
+
+.brackets-list h3 {
+  margin-bottom: .25em;
+}
+
+.brackets-list h3 a {
   color: currentColor;
 }
 
-.brackets-list li a svg {
+.brackets-list h3 a svg {
   height: .875em;
-  padding: 0 .325rem;
+  padding: 0 .325em;
   fill: var(--clr-table-border);
 }
 
-@media only screen and (min-width:40rem) {
-  .tournament-hosts {
-    display: flex;
-    justify-content: space-evenly;
-    gap: var(--page-padding);
-  }
+.bracket-desc {
+  margin-top: .625rem;
+}
+
+.day-time-freq {
+  margin: 0;
+  font-family: monospace;
+  font-weight: 500;
 }
