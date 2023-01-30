@@ -35,6 +35,17 @@ main {
   min-height: calc(100dvh - var(--nav-height));
 }
 
+.padded-centered {
+  display: flex;
+  justify-content: center;
+  gap: var(--page-padding);
+  padding: 0 var(--page-padding);
+}
+
+footer {
+  margin-top: 2rem;
+}
+
 footer a {
   color: currentColor;
 }
@@ -48,7 +59,7 @@ a {
 }
 
 article {
-  padding: 0 var(--page-padding) 2rem var(--page-padding);
+  overflow: auto;
 }
 
 button {
@@ -667,10 +678,6 @@ h3 {
   max-width: 100%;
   height: auto;
   max-height: 12.5rem;
-}
-
-.tournament-hosts {
-  margin: 0 var(--page-padding) 2rem var(--page-padding);
 }
 
 @media only screen and (min-width:50rem) {

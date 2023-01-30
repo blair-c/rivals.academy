@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <main id="main-content">
+  <main id="main-content" class="padded-centered">
     <article>
       {{ $c := index .Site.Data.rivals .File.BaseFileName }}
       <h1>{{ $c.name }}</h1>
