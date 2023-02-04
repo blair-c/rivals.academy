@@ -4,6 +4,7 @@
   --clr-bg: white;
   --clr-highlight: #ebebf0;
   --clr-table-border: #a2a2b1;
+  --clr-dark-gray: #909099;
 
   --clr-darken-img: #303033;
   --clr-text-on-img: #ededf2;
@@ -623,6 +624,26 @@ h3 {
 
 #TableOfContents ul ul {
   padding-left: 1rem;
+}
+
+#TableOfContents li a {
+  display: block;
+  line-height: 1.625;
+  color: var(--clr-dark-gray);
+}
+
+#TableOfContents li a:hover {
+  color: var(--clr-text-hc);
+}
+
+#TableOfContents .visible > a {
+  color: var(--clr-text);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #TableOfContents .visible > a {
+    transition: color .1s ease-in-out;
+  }
 }
 
 .info-table {

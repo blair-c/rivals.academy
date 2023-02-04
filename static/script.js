@@ -20,3 +20,44 @@ async function copyHeadingLink(section) {
     heading.classList.toggle('data-copy-success');
   }
 }
+
+// https://lab.hakim.se/progress-nav/
+var toc = document.querySelector('#TableOfContents');
+if (toc) {
+  var tocItems = [].slice.call(toc.querySelectorAll('li'));
+  // Cache element references and measurements
+  tocItems = tocItems.map(function(item) {
+    var anchor = item.querySelector('a');
+    var target = document.getElementById(anchor.getAttribute('href').slice(1));
+    return {
+      listItem: item,
+      anchor: anchor,
+      target: target
+    };
+  });
+  // Remove missing targets
+  tocItems = tocItems.filter( function(item) {
+    return !!item.target;
+  });
+
+	// Factor of screen size that the element must cross
+	// before it's considered visible
+	var TOP_MARGIN = -0.1,
+		  BOTTOM_MARGIN = 0.2;
+
+  window.addEventListener( 'scroll', sync, false );
+  sync();
+
+  function sync() {
+    var windowHeight = window.innerHeight;
+    tocItems.forEach(function(item) {
+			var targetBounds = item.target.getBoundingClientRect();
+			if (targetBounds.bottom > windowHeight * TOP_MARGIN && targetBounds.top < windowHeight * (1 - BOTTOM_MARGIN)) {
+				item.listItem.classList.add('visible');
+			}
+			else {
+				item.listItem.classList.remove('visible');
+			}
+		});
+  }
+}
