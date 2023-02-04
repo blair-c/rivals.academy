@@ -3,7 +3,16 @@
 {{ end }}
 
 {{ define "main" }}
-  <main id="main-content" class="padded-centered">
+<div class="cols-sidebar-content">
+  <div class="sidebar">
+    <nav><ul class="char-grid">
+      {{ range (slice 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20) }}
+        <li><a href=""><div></div></a></li>
+      {{ end }}
+    </ul></nav>
+    {{ .TableOfContents }}
+  </div>
+  <main id="main-content">
     <article>
       {{ $c := index .Site.Data.rivals .File.BaseFileName }}
       <h1>{{ $c.name }}</h1>
@@ -130,6 +139,7 @@
       {{ end }}
     </article>
   </main>
+</div>
 {{ end }}
 
 {{ define "footer" }}

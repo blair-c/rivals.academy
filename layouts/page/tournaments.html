@@ -9,36 +9,34 @@
       <p>{{ .Description }}</p>
     </header>
 
-    <div class="padded-centered">
-      <div class="tournament-hosts">
-        {{ range slice
-          (dict
-            "name" "Rivals Academy"
-            "links" $.Site.Data.links.roaa
-            "brackets" ($.Param "roaa"))
-          (dict
-            "name" "Rivals Recess"
-            "links" $.Site.Data.links.rrc
-            "brackets" ($.Param "rrc"))
-        }}
-          <section>
-            <h2>
-              {{ .name }} Brackets
-            </h2>
-            <ul class="brackets-list">
-              {{ range .brackets }}
-                <li>
-                  <h3><a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
-                    {{ .name }}{{ partial "svg/goto.svg" }}
-                  </a></h3>
-                  <p class="day-time-freq">{{ .day }} @ {{ .time }} ({{ .freq }})</p>
-                  <p class="bracket-desc">{{ $.RenderString .description }}</p>
-                </li>
-              {{ end }}
-            </ul>
-          </section>
-        {{- end }}
-      </div>
+    <div class="tournament-hosts padded-centered">
+      {{ range slice
+        (dict
+          "name" "Rivals Academy"
+          "links" $.Site.Data.links.roaa
+          "brackets" ($.Param "roaa"))
+        (dict
+          "name" "Rivals Recess"
+          "links" $.Site.Data.links.rrc
+          "brackets" ($.Param "rrc"))
+      }}
+        <section>
+          <h2>
+            {{ .name }} Brackets
+          </h2>
+          <ul class="brackets-list">
+            {{ range .brackets }}
+              <li>
+                <h3><a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+                  {{ .name }}{{ partial "svg/goto.svg" }}
+                </a></h3>
+                <p class="day-time-freq">{{ .day }} @ {{ .time }} ({{ .freq }})</p>
+                <p class="bracket-desc">{{ $.RenderString .description }}</p>
+              </li>
+            {{ end }}
+          </ul>
+        </section>
+      {{- end }}
     </div>
   </main>
 {{ end }}

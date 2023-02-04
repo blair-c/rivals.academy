@@ -16,6 +16,7 @@
 
   --nav-height: 4.5rem;
   --page-padding: clamp(1rem, 2.5vw, 2rem);
+  --content-max-width: 50rem;
 }
 
 * {
@@ -34,13 +35,7 @@ body {
 main {
   min-height: calc(100vh - var(--nav-height));
   min-height: calc(100dvh - var(--nav-height));
-}
-
-.padded-centered {
-  display: flex;
-  justify-content: center;
-  gap: var(--page-padding);
-  padding: 0 var(--page-padding);
+  overflow: auto;
 }
 
 footer {
@@ -60,7 +55,7 @@ a {
 }
 
 article {
-  overflow: auto;
+  padding: 0 var(--page-padding);
 }
 
 button {
@@ -98,6 +93,12 @@ h3 {
   overflow: hidden;
   white-space: nowrap;
 }/*https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html*/
+
+.padded-centered {
+  padding: 0 var(--page-padding);
+  margin: auto;
+  overflow: hidden;
+}
 
 .heading-link {
   border: none;
@@ -586,6 +587,42 @@ h3 {
 
 .site-section-header h1 {
   margin: 1rem 0;
+}
+
+.cols-sidebar-content {
+  display: grid;
+  grid-template-columns: calc(var(--page-padding) + 12rem) auto;
+}
+
+.sidebar {
+  margin-left: var(--page-padding);
+  padding-right: .5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.char-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  padding-left: 0;
+}
+
+.char-grid li a div {
+  aspect-ratio: 1 / 1;
+  border: 1px solid black;
+}
+
+#TableOfContents {
+  position: sticky;
+  top: 1rem;
+}
+
+#TableOfContents ul ul {
+  padding-left: 1rem;
 }
 
 .info-table {
