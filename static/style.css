@@ -3,8 +3,8 @@
   --clr-text-hc: black;
   --clr-bg: white;
   --clr-highlight: #ebebf0;
-  --clr-table-border: #a2a2b1;
-  --clr-dark-gray: #909099;
+  --clr-gray-1: #a2a2b1;
+  --clr-gray-2: #909099;
 
   --clr-darken-img: #303033;
   --clr-text-on-img: #ededf2;
@@ -123,7 +123,7 @@ h3 {
   display: none;
   height: .875em;
   padding: 0 .125rem;
-  fill: var(--clr-table-border);
+  fill: var(--clr-gray-1);
 }
 
 .heading:hover .heading-link svg,
@@ -629,7 +629,7 @@ h3 {
 #TableOfContents li a {
   display: block;
   line-height: 1.625;
-  color: var(--clr-dark-gray);
+  color: var(--clr-gray-2);
 }
 
 #TableOfContents li a:hover {
@@ -649,7 +649,7 @@ h3 {
 .info-table {
   overflow-x: auto;
   scrollbar-width: thin;
-  border: 1px solid var(--clr-table-border);
+  border: 1px solid var(--clr-gray-1);
   max-width: fit-content;
   margin-bottom: .25rem;
 }
@@ -666,7 +666,7 @@ h3 {
 
 .info-table th, 
 .info-table td {
-  border-right: 1px solid var(--clr-table-border);
+  border-right: 1px solid var(--clr-gray-1);
 }
 
 .info-table th:last-child,
@@ -682,7 +682,7 @@ h3 {
 .info-table td {
   padding: .3125rem .5rem;
   vertical-align: bottom;
-  border-top: 1px solid var(--clr-table-border);
+  border-top: 1px solid var(--clr-gray-1);
 }
 
 .no-col-borders td, 
@@ -692,7 +692,7 @@ h3 {
 
 .sticky-col {
   text-align: left;
-  border-right: 2px solid var(--clr-table-border) !important;
+  border-right: 2px solid var(--clr-gray-1) !important;
 }
 
 @media only screen and (min-width:calc(40rem + 1px)) {
@@ -711,7 +711,7 @@ h3 {
     top: 0;
     right: 0;
     height: 100%;
-    border-right: 2px solid var(--clr-table-border);
+    border-right: 2px solid var(--clr-gray-1);
   }
 }
 
@@ -728,7 +728,7 @@ h3 {
 .move-notes {
   margin: 0;
   padding: 0 .5rem;
-  border-left: .125rem solid var(--clr-table-border);
+  border-left: .125rem solid var(--clr-gray-1);
   font-style: italic;
 }
 
@@ -771,7 +771,7 @@ h3 {
 .brackets-list h3 a svg {
   height: .875em;
   padding: 0 .325em;
-  fill: var(--clr-table-border);
+  fill: var(--clr-gray-1);
 }
 
 .bracket-desc {
