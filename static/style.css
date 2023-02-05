@@ -592,7 +592,7 @@ h3 {
 
 .cols-sidebar-content {
   display: grid;
-  grid-template-columns: calc(var(--page-padding) + 12rem) auto;
+  grid-template-columns: calc(var(--page-padding) + 11rem) auto;
 }
 
 .sidebar {
