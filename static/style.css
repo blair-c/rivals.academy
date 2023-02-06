@@ -98,6 +98,7 @@ h3 {
 .center {
   display: flex;
   justify-content: center;
+  gap: var(--page-padding);
 }
 
 .centered {
@@ -449,12 +450,6 @@ h3 {
 }
 
 @media only screen and (min-width:63rem) {
-  .footer-main-container {
-    display: flex;
-    justify-content: center;
-    gap: var(--page-padding);
-  }
-
   .footer-main-container > a {
     display: revert;
   }
