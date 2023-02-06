@@ -173,6 +173,7 @@ h3 {
   position: absolute;
   z-index: 2;
   transform: translateY(-150%);
+  opacity: 0;
   color: var(--clr-text);
   background: var(--clr-highlight);
   padding: 1rem 1.5rem;
@@ -182,6 +183,13 @@ h3 {
 
 .skip-nav:focus-visible {
   transform: translateY(0);
+  opacity: 100;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .skip-nav:focus-visible {
+    transition: transform .1s ease-in;
+  }
 }
 
 .navbar {
