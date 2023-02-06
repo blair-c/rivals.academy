@@ -3,7 +3,8 @@
   --clr-text-hc: black;
   --clr-bg: white;
   --clr-highlight: #ebebf0;
-  --clr-table-border: #a2a2b1;
+  --clr-gray-1: #a2a2b1;
+  --clr-gray-2: #909099;
 
   --clr-darken-img: #303033;
   --clr-text-on-img: #ededf2;
@@ -16,6 +17,7 @@
 
   --nav-height: 4.5rem;
   --page-padding: clamp(1rem, 2.5vw, 2rem);
+  --content-max-width: 56rem;
 }
 
 * {
@@ -34,13 +36,7 @@ body {
 main {
   min-height: calc(100vh - var(--nav-height));
   min-height: calc(100dvh - var(--nav-height));
-}
-
-.padded-centered {
-  display: flex;
-  justify-content: center;
-  gap: var(--page-padding);
-  padding: 0 var(--page-padding);
+  overflow: hidden;
 }
 
 footer {
@@ -55,12 +51,12 @@ footer svg {
   fill: currentColor;
 }
 
-a {
-  text-decoration: none;
+article {
+  overflow: hidden;
 }
 
-article {
-  overflow: auto;
+a {
+  text-decoration: none;
 }
 
 button {
@@ -81,11 +77,11 @@ h3 {
 
 @media (prefers-reduced-motion: no-preference) {
   :focus-visible {
-    transition: outline-offset .5s ease-out;
+    transition: outline-offset .5s ease-out !important;
   }
 
   :not(:active):focus-visible {
-    transition-duration: .25s;
+    transition-duration: .25s !important;
   }
 }
 
@@ -98,6 +94,21 @@ h3 {
   overflow: hidden;
   white-space: nowrap;
 }/*https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html*/
+
+.center {
+  display: flex;
+  justify-content: center;
+  gap: var(--page-padding);
+}
+
+.centered {
+  margin: auto;
+}
+
+.padded-content {
+  padding: 0 var(--page-padding);
+  max-width: calc(var(--content-max-width) + 2*var(--page-padding));
+}
 
 .heading-link {
   border: none;
@@ -121,7 +132,7 @@ h3 {
   display: none;
   height: .875em;
   padding: 0 .125rem;
-  fill: var(--clr-table-border);
+  fill: var(--clr-gray-1);
 }
 
 .heading:hover .heading-link svg,
@@ -170,6 +181,7 @@ h3 {
   position: absolute;
   z-index: 2;
   transform: translateY(-150%);
+  opacity: 0;
   color: var(--clr-text);
   background: var(--clr-highlight);
   padding: 1rem 1.5rem;
@@ -179,6 +191,13 @@ h3 {
 
 .skip-nav:focus-visible {
   transform: translateY(0);
+  opacity: 100;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .skip-nav:focus-visible {
+    transition: transform .1s ease-in;
+  }
 }
 
 .navbar {
@@ -431,12 +450,6 @@ h3 {
 }
 
 @media only screen and (min-width:63rem) {
-  .footer-main-container {
-    display: flex;
-    justify-content: center;
-    gap: var(--page-padding);
-  }
-
   .footer-main-container > a {
     display: revert;
   }
@@ -444,6 +457,12 @@ h3 {
   .footer-main-container > a img {
     max-height: 14rem;
     border-radius: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 72rem) {
+  .footer-main {
+    border-right: .125rem solid var(--clr-text-on-img);
   }
 }
 
@@ -588,10 +607,66 @@ h3 {
   margin: 1rem 0;
 }
 
+.cols-sidebar-content {
+  display: grid;
+  grid-template-columns: calc(var(--page-padding) + 11rem) auto;
+}
+
+.sidebar {
+  margin-left: var(--page-padding);
+  padding-right: .5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.char-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  padding-left: 0;
+}
+
+.char-grid li a div {
+  aspect-ratio: 1 / 1;
+  border: 1px solid black;
+}
+
+#TableOfContents {
+  position: sticky;
+  top: 1rem;
+}
+
+#TableOfContents ul ul {
+  padding-left: 1rem;
+}
+
+#TableOfContents li a {
+  display: block;
+  line-height: 1.625;
+  color: var(--clr-gray-2);
+}
+
+#TableOfContents li a:hover {
+  color: var(--clr-text-hc);
+}
+
+#TableOfContents .visible > a {
+  color: var(--clr-text);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #TableOfContents .visible > a {
+    transition: color .1s ease-in-out;
+  }
+}
+
 .info-table {
   overflow-x: auto;
   scrollbar-width: thin;
-  border: 1px solid var(--clr-table-border);
+  border: 1px solid var(--clr-gray-1);
   max-width: fit-content;
   margin-bottom: .25rem;
 }
@@ -608,7 +683,7 @@ h3 {
 
 .info-table th, 
 .info-table td {
-  border-right: 1px solid var(--clr-table-border);
+  border-right: 1px solid var(--clr-gray-1);
 }
 
 .info-table th:last-child,
@@ -624,7 +699,7 @@ h3 {
 .info-table td {
   padding: .3125rem .5rem;
   vertical-align: bottom;
-  border-top: 1px solid var(--clr-table-border);
+  border-top: 1px solid var(--clr-gray-1);
 }
 
 .no-col-borders td, 
@@ -634,7 +709,7 @@ h3 {
 
 .sticky-col {
   text-align: left;
-  border-right: 2px solid var(--clr-table-border) !important;
+  border-right: 2px solid var(--clr-gray-1) !important;
 }
 
 @media only screen and (min-width:calc(40rem + 1px)) {
@@ -653,7 +728,7 @@ h3 {
     top: 0;
     right: 0;
     height: 100%;
-    border-right: 2px solid var(--clr-table-border);
+    border-right: 2px solid var(--clr-gray-1);
   }
 }
 
@@ -670,7 +745,7 @@ h3 {
 .move-notes {
   margin: 0;
   padding: 0 .5rem;
-  border-left: .125rem solid var(--clr-table-border);
+  border-left: .125rem solid var(--clr-gray-1);
   font-style: italic;
 }
 
@@ -681,11 +756,16 @@ h3 {
   max-height: 12.5rem;
 }
 
-@media only screen and (min-width:50rem) {
+.tournament-hosts {
+  max-width: var(--content-max-width);
+}
+
+@media only screen and (min-width:60rem) {
   .tournament-hosts {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: var(--page-padding);
+    column-gap: 3vw;
+    max-width: calc(2*43rem + 3vw);
   }
 }
 
@@ -713,7 +793,7 @@ h3 {
 .brackets-list h3 a svg {
   height: .875em;
   padding: 0 .325em;
-  fill: var(--clr-table-border);
+  fill: var(--clr-gray-1);
 }
 
 .bracket-desc {
