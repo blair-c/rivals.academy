@@ -91,6 +91,11 @@ h3 {
   white-space: nowrap;
 }/*https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html*/
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 .centered {
   margin: auto;
 }
