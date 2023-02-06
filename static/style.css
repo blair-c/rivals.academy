@@ -55,11 +55,6 @@ a {
   text-decoration: none;
 }
 
-article {
-  padding: 0 var(--page-padding);
-  max-width: calc(var(--content-max-width) + 2*var(--page-padding));
-}
-
 button {
   cursor: pointer;
 }
@@ -96,9 +91,13 @@ h3 {
   white-space: nowrap;
 }/*https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html*/
 
-.padded-centered {
-  padding: 0 var(--page-padding);
+.centered {
   margin: auto;
+}
+
+.padded-content {
+  padding: 0 var(--page-padding);
+  max-width: calc(var(--content-max-width) + 2*var(--page-padding));
   overflow: auto;
 }
 
