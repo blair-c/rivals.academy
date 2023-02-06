@@ -77,11 +77,11 @@ h3 {
 
 @media (prefers-reduced-motion: no-preference) {
   :focus-visible {
-    transition: outline-offset .5s ease-out;
+    transition: outline-offset .5s ease-out !important;
   }
 
   :not(:active):focus-visible {
-    transition-duration: .25s;
+    transition-duration: .25s !important;
   }
 }
 
