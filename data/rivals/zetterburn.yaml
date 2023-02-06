@@ -1010,6 +1010,8 @@ downSpecial:
       scaling: 0
     hitstunModifier: 1
     forceFlinch: 1
+    untechable:
+      note: Forces a missed tech instead of bouncing the opponent off the ground.
     hitpause:
       base: 4
       scaling: 0
