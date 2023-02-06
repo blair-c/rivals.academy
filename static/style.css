@@ -465,6 +465,12 @@ h3 {
   }
 }
 
+@media only screen and (min-width: 72rem) {
+  .footer-main {
+    border-right: .125rem solid var(--clr-text-on-img);
+  }
+}
+
 .footer-main {
   display: grid;
   gap: 1rem;
