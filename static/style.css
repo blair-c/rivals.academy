@@ -376,24 +376,24 @@ h3 {
     top: -.5rem;
   }
   
-  .data-open .hamb-line {
+  [aria-expanded="true"] .hamb-line {
     background: transparent;
   }
-  .data-open .hamb-line::before {
+  [aria-expanded="true"] .hamb-line::before {
     transform: rotate(-45deg);
     top:0;
   }
-  .data-open .hamb-line::after {
+  [aria-expanded="true"] .hamb-line::after {
     transform: rotate(45deg);
     top:0;
   }
 
-  .data-open ~ .nav-list {
+  [aria-expanded="true"] ~ .nav-list {
     max-height: 100%;
     opacity: 100%;
   }
 
-  .data-open ~ .nav-list li a {
+  [aria-expanded="true"] ~ .nav-list li a {
     display: block;
   }
 
