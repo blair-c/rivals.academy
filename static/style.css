@@ -24,7 +24,7 @@
     --page-padding: .75rem;
   }
 }
-@media only screen and (min-width:80rem) {
+@media only screen and (min-width:64rem) {
   :root {
     --page-padding: 2rem;
   }
@@ -458,7 +458,7 @@ h3 {
   display: none;
 }
 
-@media only screen and (min-width:63rem) {
+@media only screen and (min-width:64rem) {
   .footer-main-container {
     display: flex;
     justify-content: center;
@@ -470,7 +470,7 @@ h3 {
   }
 
   .footer-main-container > a img {
-    max-height: 14rem;
+    max-height: 13.5rem;
     border-radius: 1.25rem;
   }
 }
