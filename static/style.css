@@ -16,8 +16,18 @@
   --clr-youtube: #fd0000;
 
   --nav-height: 4.5rem;
-  --page-padding: clamp(1rem, 2.5vw, 2rem);
+  --page-padding: 1.5rem;
   --content-max-width: 56rem;
+}
+@media only screen and (max-width:40rem) {
+  :root {
+    --page-padding: .75rem;
+  }
+}
+@media only screen and (min-width:80rem) {
+  :root {
+    --page-padding: 2rem;
+  }
 }
 
 * {
@@ -98,7 +108,6 @@ h3 {
 .center {
   display: flex;
   justify-content: center;
-  gap: var(--page-padding);
 }
 
 .centered {
@@ -235,7 +244,7 @@ h3 {
 }
 
 .nav-list li {
-  margin-left: clamp(1rem, 3vw, 2rem);
+  margin-left: clamp(1rem, 2vw, 1.5rem);
 }
 
 .nav-list li:hover {
@@ -450,6 +459,12 @@ h3 {
 }
 
 @media only screen and (min-width:63rem) {
+  .footer-main-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
   .footer-main-container > a {
     display: revert;
   }
@@ -457,12 +472,6 @@ h3 {
   .footer-main-container > a img {
     max-height: 14rem;
     border-radius: 1.25rem;
-  }
-}
-
-@media only screen and (min-width: 72rem) {
-  .footer-main {
-    border-right: .125rem solid var(--clr-text-on-img);
   }
 }
 
@@ -481,6 +490,12 @@ h3 {
   padding: 0;
 }
 
+@media only screen and (min-width: 72rem) {
+  .footer-main {
+    border-right: .125rem solid var(--clr-text-on-img);
+  }
+}
+
 .footer-hero {
   display: flex;
   gap: 1rem;
@@ -495,7 +510,7 @@ h3 {
   margin-bottom: calc(1rem + .625rem);
 }
 
-@media only screen and (min-width:45rem) {
+@media only screen and (min-width:46rem) {
   .footer-main {
     grid-template-columns: 1fr 1fr;
   }
@@ -609,12 +624,11 @@ h3 {
 
 .cols-sidebar-content {
   display: grid;
-  grid-template-columns: calc(var(--page-padding) + 11rem) auto;
+  grid-template-columns: calc(var(--page-padding) + 10.5rem) auto;
 }
 
 .sidebar {
   margin-left: var(--page-padding);
-  padding-right: .5rem;
 }
 
 .sidebar ul {
