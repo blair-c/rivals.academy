@@ -15,7 +15,7 @@
   --clr-twitch: #8c45f7;
   --clr-youtube: #fd0000;
 
-  --nav-height: 4.5rem;
+  --nav-height: 4rem;
   --page-padding: 1.5rem;
   --content-max-width: 56rem;
 }
@@ -244,7 +244,7 @@ h3 {
 }
 
 .nav-list li {
-  margin-left: clamp(1rem, 2vw, 1.5rem);
+  margin-left: clamp(.875rem, 2vw, 1.5rem);
 }
 
 .nav-list li:hover {
@@ -631,11 +631,6 @@ h3 {
   margin-left: var(--page-padding);
 }
 
-.sidebar ul {
-  list-style: none;
-  padding-left: 0;
-}
-
 .char-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -653,8 +648,14 @@ h3 {
   top: 1rem;
 }
 
+#TableOfContents ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 #TableOfContents ul ul {
   padding-left: 1rem;
+  border-left: 1px solid var(--clr-highlight);
 }
 
 #TableOfContents li a {
@@ -674,6 +675,17 @@ h3 {
 @media (prefers-reduced-motion: no-preference) {
   #TableOfContents .visible > a {
     transition: color .1s ease-in-out;
+  }
+}
+
+@media only screen and (max-width:48rem) {
+  .char-grid,
+  #TableOfContents {
+    display: none;
+  }
+
+  .cols-sidebar-content {
+    grid-template-columns: auto;
   }
 }
 
