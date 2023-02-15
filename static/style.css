@@ -3,11 +3,16 @@
   --clr-text-hc: black;
   --clr-bg: white;
   --clr-highlight: #ebebf0;
-  --clr-gray-1: #a2a2b1;
+  --clr-gray-1: #cecee0;
   --clr-gray-2: #909099;
 
   --clr-darken-img: #303033;
   --clr-text-on-img: #ededf2;
+
+  --clr-abxy-green: #009e4e;
+  --clr-abxy-blue: #1f8ccc;
+  --clr-abxy-yellow: #e8982c;
+  --clr-abxy-red: #de2a2a;
 
   --clr-discord: #5865f2;
   --clr-discord-hc: #4b53cc;
@@ -83,11 +88,13 @@ article h1 {
 }
 
 h2 {
+  color: var(--clr-text-hc);
   border-bottom: 1px solid var(--clr-highlight);
 }
 
 h3 {
-  margin-bottom: 0.3rem;
+  font-size: 1.4375rem;
+  margin-bottom: 0.325rem;
 }
 
 :not(:active):focus-visible {
@@ -159,7 +166,7 @@ h3 {
 }
 
 .heading-link:hover svg {
-  fill: currentColor;
+  fill: var(--clr-gray-2);
 }
 
 .heading-link ~ .copied {
@@ -704,7 +711,36 @@ h3 {
   }
 }
 
-.info-table {
+#jab,
+#dash-attack,
+#forward-tilt,
+#up-tilt,
+#down-tilt {
+  color: var(--clr-abxy-green);
+}
+
+#neutral-air,
+#forward-air,
+#back-air,
+#up-air,
+#down-air {
+  color: var(--clr-abxy-blue);
+}
+
+#forward-strong,
+#up-strong,
+#down-strong {
+  color: var(--clr-abxy-yellow);
+}
+
+#neutral-special,
+#side-special,
+#up-special,
+#down-special {
+  color: var(--clr-abxy-red);
+}
+
+.library-table {
   overflow-x: auto;
   scrollbar-width: thin;
   border: 1px solid var(--clr-gray-1);
@@ -712,7 +748,7 @@ h3 {
   margin-bottom: .25rem;
 }
 
-.info-table table {
+.library-table table {
   white-space: nowrap;
   text-align: center;
   border-collapse: collapse;
@@ -722,22 +758,21 @@ h3 {
   text-align: left;
 }
 
-.info-table th, 
-.info-table td {
+.library-table th, 
+.library-table td {
   border-right: 1px solid var(--clr-gray-1);
 }
 
-.info-table th:last-child,
-.info-table td:last-child {
+.library-table th:last-child,
+.library-table td:last-child {
   border-right: none;
 }
 
-.info-table th {
+.library-table th {
   padding: 0 .5rem;
-  background-color: var(--clr-highlight);
 }
 
-.info-table td {
+.library-table td {
   padding: .3125rem .5rem;
   vertical-align: bottom;
   border-top: 1px solid var(--clr-gray-1);
