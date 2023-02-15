@@ -21,9 +21,7 @@
           "brackets" ($.Param "rrc"))
       }}
         <section>
-          <h2>
-            {{ .name }} Brackets
-          </h2>
+          {{ $.RenderString (print "## " .name " Brackets") }}
           <ul class="brackets-list">
             {{ range .brackets }}
               <li>
