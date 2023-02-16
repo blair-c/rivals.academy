@@ -51,31 +51,34 @@
 
 <div class="library-table">
   <table>
-    <tr>
-      {{ if $multiple }}<th class="sticky-col">Hitbox</th>{{ end }}
-      {{ if $startup }}<th>Startup</th>{{ end }}
-      {{ if $active }}<th>Active</th>{{ end }}
-      {{ if $endlag }}<th>Endlag</th>{{ end }}
-      {{ if $cancellable }}<th>Cancellable</th>{{ end }}
-      {{ if $firstActiveFrame }}<th>FAF</th>{{ end }}
-      {{ if $landingLag }}<th>Landing Lag</th>{{ end }}
-      {{ if $cooldown }}<th>Cooldown</th>{{ end }}
-      {{ if $damage }}<th>Damage</th>{{ end }}
-      {{ if $angle }}<th>Angle</th>{{ end }}
-      {{ if $angleFlipper }}<th>Flipper</th>{{ end }}
-      {{ if $knockback }}<th>Knockback</th>{{ end }}
-      {{ if $hitstunModifier }}<th>Hitstun</th>{{ end }}
-      {{ if $forceFlinch }}<th>Force Flinch</th>{{ end }}
-      {{ if $untechable }}<th>Untechable</th>{{ end }}
-      {{ if $hitpause }}<th>Hitpause</th>{{ end }}
-      {{ if $asdiModifier }}<th>ASDI Mod</th>{{ end }}
-      {{ if $priority }}<th>Priority</th>{{ end }}
-      {{ if $killsProjectiles }}<th>Kills Projectiles</th>{{ end }}
-      {{ if $setsOnFire }}<th>Sets On Fire</th>{{ end }}
-      {{ if $consumesFire }}<th>Consumes Fire</th>{{ end }}
-      {{ if $notes }}<th class="align-left">Notes</th>{{ end }}
-    </tr>
+    <thead>
+      <tr>
+        {{ if $multiple }}<th class="sticky-col">Hitbox</th>{{ end }}
+        {{ if $startup }}<th>Startup</th>{{ end }}
+        {{ if $active }}<th>Active</th>{{ end }}
+        {{ if $endlag }}<th>Endlag</th>{{ end }}
+        {{ if $cancellable }}<th>Cancellable</th>{{ end }}
+        {{ if $firstActiveFrame }}<th>FAF</th>{{ end }}
+        {{ if $landingLag }}<th>Landing Lag</th>{{ end }}
+        {{ if $cooldown }}<th>Cooldown</th>{{ end }}
+        {{ if $damage }}<th>Damage</th>{{ end }}
+        {{ if $angle }}<th>Angle</th>{{ end }}
+        {{ if $angleFlipper }}<th>Flipper</th>{{ end }}
+        {{ if $knockback }}<th>Knockback</th>{{ end }}
+        {{ if $hitstunModifier }}<th>Hitstun</th>{{ end }}
+        {{ if $forceFlinch }}<th>Force Flinch</th>{{ end }}
+        {{ if $untechable }}<th>Untechable</th>{{ end }}
+        {{ if $hitpause }}<th>Hitpause</th>{{ end }}
+        {{ if $asdiModifier }}<th>ASDI Mod</th>{{ end }}
+        {{ if $priority }}<th>Priority</th>{{ end }}
+        {{ if $killsProjectiles }}<th>Kills Projectiles</th>{{ end }}
+        {{ if $setsOnFire }}<th>Sets On Fire</th>{{ end }}
+        {{ if $consumesFire }}<th>Consumes Fire</th>{{ end }}
+        {{ if $notes }}<th class="align-left">Notes</th>{{ end }}
+      </tr>
+    </thead>
 
+    <tbody>
     {{ range .hitboxes }}<tr>
 
       {{ if $multiple }}<td class="sticky-col">{{ .name }}</td>{{ end }}
@@ -218,6 +221,7 @@
       </div></td>{{ end }}
 
     </tr>{{ end }}
+    </tbody>
   </table>
 </div>
 
