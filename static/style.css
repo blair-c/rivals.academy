@@ -53,6 +53,10 @@ main {
   overflow: hidden;
 }
 
+p {
+  line-height: 1.5;
+}
+
 footer {
   margin-top: 2rem;
 }
