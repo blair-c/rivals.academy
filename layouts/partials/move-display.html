@@ -19,6 +19,7 @@
 {{ $asdiModifier := false }}
 {{ $priority := false }}
 {{ $killsProjectiles := false }}
+{{ $canGalaxy := false }}
 {{ $setsOnFire := false }}
 {{ $consumesFire := false }}
 {{ $notes := false}}
@@ -42,6 +43,7 @@
   {{ if isset . "asdiModifier" }} {{ $asdiModifier = true }} {{ end }}
   {{ if isset . "priority" }} {{ $priority = true }} {{ end }}
   {{ if isset . "killsProjectiles" }} {{ $killsProjectiles = true }} {{ end }}
+  {{ if isset . "canGalaxy" }} {{ $canGalaxy = true }} {{ end }}
   {{ if isset . "setsOnFire" }} {{ $setsOnFire = true }} {{ end }}
   {{ if isset . "consumesFire" }} {{ $consumesFire = true }} {{ end }}
   {{ if isset . "notes" }} {{ $notes = true }} {{ end }}
@@ -72,6 +74,7 @@
         {{ if $asdiModifier }}<th>ASDI Mod</th>{{ end }}
         {{ if $priority }}<th>Priority</th>{{ end }}
         {{ if $killsProjectiles }}<th>Kills Projectiles</th>{{ end }}
+        {{ if $canGalaxy }}<th>Can Galaxy</th>{{ end }}
         {{ if $setsOnFire }}<th>Sets On Fire</th>{{ end }}
         {{ if $consumesFire }}<th>Consumes Fire</th>{{ end }}
         {{ if $notes }}<th class="align-left">Notes</th>{{ end }}
@@ -211,6 +214,8 @@
       {{ if $priority }}<td>{{ .priority }}</td>{{ end }}
 
       {{ if $killsProjectiles }}<td>{{ title .killsProjectiles }}</td>{{ end }}
+
+      {{ if $canGalaxy }}<td>{{ title .canGalaxy }}</td>{{ end }}
 
       {{ if $setsOnFire }}<td>{{ title .setsOnFire }}</td>{{ end }}
 
