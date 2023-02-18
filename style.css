@@ -762,6 +762,10 @@ article h2 {
   border-collapse: collapse;
 }
 
+.library-table tbody tr:hover td {
+  background-color: var(--clr-highlight);
+}
+
 .align-left {
   text-align: left;
 }
