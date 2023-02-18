@@ -1,0 +1,14 @@
+{
+    "name": "Rivals Academy",
+    "short_name": "Rivals Academy",
+    "description": "Awesome Content for App Developers",
+    "start_url": ".",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "/img/favicon.png",
+        "sizes": "64x64",
+        "type": "image/png"
+    }
+  ]
+}

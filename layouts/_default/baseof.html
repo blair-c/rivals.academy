@@ -5,8 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Page.Title }}</title>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/style.css"type="text/css">
     <script defer src="/script.js"></script>
+
+    <link rel="canonical" href="{{ .Permalink | absURL }}" />
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="description" content="{{ .Description }}">
+    {{ $img := "/img/default-cover.png" }}
+    {{ if fileExists (print .RelPermalink "img/featured.png") }}
+      {{ $img = print .Permalink "img/featured.png" }}{{ end }}
+    <meta name="image" content="{{ $img | absURL }}">
+    <meta property="og:image" content="{{ $img | absURL }}" />
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ .Description }}" />
+    <meta property="og:site_name" content="Rivals Academy">
+    <meta property="og:url" content="{{ .Permalink | absURL }}" />
+    {{ template "_internal/twitter_cards.html" . }}
   </head>
   <body>
     {{ block "header" . }}

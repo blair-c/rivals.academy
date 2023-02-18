@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'Rivals of Aether Academy'
 enableGitInfo = true
 
+[social]
+  twitter = 'rivals_academy'
+
 [outputFormats.Data]
   mediaType = "application/json"
   baseName = "data"

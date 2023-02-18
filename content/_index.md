@@ -1,5 +1,5 @@
 ---
-title: Rivals of Aether Academy
-description: The premier Rivals of Aether learning resource.
+title: Rivals Academy
+description: The premier Rivals of Aether learning resource, since 2016.
 ---
 
