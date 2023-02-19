@@ -10,6 +10,7 @@ outputs:
 ## Effective Weight
 ## Grounded Movement
 ## Aerial Movement
+## Hurtbox
 
 ## Jab
 ## Dash Attack

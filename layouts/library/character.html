@@ -120,6 +120,28 @@
           </tbody>
         </table>
       </div>
+      {{ .RenderString "### Hurtbox" }}
+      <div class="library-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Idle</th>
+              <th>Crouch</th>
+              <th>Hitstun</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ $c.hurtbox.idle.width }} × {{ $c.hurtbox.idle.height }}</td>
+              <td>{{ $c.hurtbox.crouch.width }} × {{ $c.hurtbox.crouch.height }}</td>
+              <td>{{ $c.hurtbox.hitstun.width }} × {{ $c.hurtbox.hitstun.height }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="hitbox-image">
+        <img src="{{ $c.hurtbox.image.highRes }}" alt="In-game screenshot of this {{ $c.name }}'s hurtbox during idle, crouch, and hitstun.">
+      </div>
 
       {{ range slice
         (dict
