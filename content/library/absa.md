@@ -1,10 +1,10 @@
 ---
 title: Absa | Rivals Academy Library
 description: Absa frame data and hitbox info
+layout: character
 outputs:
 - html
 - data
-layout: character
 ---
 
 ## Effective Weight

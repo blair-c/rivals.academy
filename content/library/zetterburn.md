@@ -1,10 +1,10 @@
 ---
 title: Zetterburn - Rivals Academy Library
 description: Zetterburn frame data and hitbox info
+layout: character
 outputs:
 - html
 - data
-layout: character
 ---
 
 ## Effective Weight

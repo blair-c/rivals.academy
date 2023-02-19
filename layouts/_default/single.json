@@ -1,1 +1,1 @@
-{{ index .Site.Data.rivals .File.BaseFileName | jsonify }}
+{{ merge (index .Site.Data.rivals .File.BaseFileName) .Site.Data.library | jsonify }}

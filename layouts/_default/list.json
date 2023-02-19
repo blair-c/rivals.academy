@@ -1,0 +1,1 @@
+{{ merge .Site.Data.rivals .Site.Data.library | jsonify }}

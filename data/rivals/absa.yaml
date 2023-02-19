@@ -1,6 +1,5 @@
 name: Absa
 element: air
-patch: 2.1.5.3
 
 knockbackAdjustment: 1.10
 gravityAccel: 0.30
