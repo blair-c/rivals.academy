@@ -626,14 +626,14 @@ article h2 {
   color: var(--clr-highlight);
 }
 
-.copyright {
+.footer-bottom > * {
   display: flex;
   align-items: center;
+  gap: .325rem;
 }
 
-.copyright svg {
+.footer-bottom svg {
   height: 1rem;
-  margin-right: .325rem;
 }
 
 .site-section-header {
