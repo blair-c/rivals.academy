@@ -149,8 +149,8 @@
           {{ .endlag.hit }} /
           {{ with .endlag.whiff }}
             {{ if isset . "bothHits" }}
-              {{ .bothHits }} (Whiff both Hit 1-2)<br>
-              {{ .onlyHit2 }} (Whiff only Hit 2)
+              <br>{{ .bothHits }} (Whiff both Hit 1-2)
+              <br>{{ .onlyHit2 }} (Whiff only Hit 2)
             {{- else }}{{ . }}{{ end -}}
           {{ else }} - {{ end -}}
         {{ else }}
