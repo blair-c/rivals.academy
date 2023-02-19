@@ -969,7 +969,8 @@ upSpecial:
       window: 23
       endlag: 10
     endlag: 5
-    firstActiveFrame: 68
+    firstActiveFrame:
+      pratFall: 68
     damage: 8
     angle: 361
     angleFlipper: 10

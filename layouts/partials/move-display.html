@@ -17,7 +17,9 @@
 {{ $untechable := false }}
 {{ $hitpause := false }}
 {{ $asdiModifier := false }}
+{{ $hitLockout := false }}
 {{ $priority := false }}
+{{ $extendedParryStun := false }}
 {{ $killsProjectiles := false }}
 {{ $canGalaxy := false }}
 {{ $setsOnFire := false }}
@@ -41,7 +43,9 @@
   {{ if isset . "untechable" }} {{ $untechable = true }} {{ end }}
   {{ if isset . "hitpause" }} {{ $hitpause = true }} {{ end }}
   {{ if isset . "asdiModifier" }} {{ $asdiModifier = true }} {{ end }}
+  {{ if isset . "hitLockout" }} {{ $hitLockout = true }} {{ end }}
   {{ if isset . "priority" }} {{ $priority = true }} {{ end }}
+  {{ if isset . "extendedParryStun" }} {{ $extendedParryStun = true }} {{ end }}
   {{ if isset . "killsProjectiles" }} {{ $killsProjectiles = true }} {{ end }}
   {{ if isset . "canGalaxy" }} {{ $canGalaxy = true }} {{ end }}
   {{ if isset . "setsOnFire" }} {{ $setsOnFire = true }} {{ end }}
@@ -49,7 +53,7 @@
   {{ if isset . "notes" }} {{ $notes = true }} {{ end }}
 {{ end }}
 {{/*  Dummy variables  */}}
-{{ $len := 0 }}
+{{ $len := 0 }} {{ $iter := slice 0 }} {{ $counter := 0 }}
 
 <div class="library-table">
   <table>
@@ -72,7 +76,9 @@
         {{ if $untechable }}<th>Untechable</th>{{ end }}
         {{ if $hitpause }}<th>Hitpause</th>{{ end }}
         {{ if $asdiModifier }}<th>ASDI Mod</th>{{ end }}
+        {{ if $hitLockout }}<th>Hit Lockout</th>{{ end }}
         {{ if $priority }}<th>Priority</th>{{ end }}
+        {{ if $extendedParryStun }}<th>Extended Parry Stun</th>{{ end }}
         {{ if $killsProjectiles }}<th>Kills Projectiles</th>{{ end }}
         {{ if $canGalaxy }}<th>Can Galaxy</th>{{ end }}
         {{ if $setsOnFire }}<th>Sets On Fire</th>{{ end }}
@@ -86,7 +92,12 @@
 
       {{ if $multiple }}<td class="sticky-col">{{ .name }}</td>{{ end }}
 
-      {{ if $startup }}<td>{{ .startup }}</td>{{ end }}
+      {{ if $startup }}<td>
+        {{ if isset .startup "cloud" }}
+          {{ with .startup.initial }}{{ . }} (Initial startup)<br>{{ end }}
+          {{ .startup.cloud }} (Cloud Startup)
+        {{- else }}{{ .startup }}{{ end -}}
+      </td>{{ end }}
 
       {{ if $active }}<td>
         {{ if reflect.IsSlice .active }}
@@ -98,28 +109,56 @@
             {{ if lt (add $index 1) $len }},{{ end -}}
           {{ end -}}
         {{ else }}
-          {{ with .active.grounded }}
-            {{ with .on }}{{ . }}{{ end -}}
-            {{ with .from }}{{ . }}-{{ end -}}
-            {{ with .to }}{{ . }}{{ end }} (Grounded)<br>
-          {{ end }}
-          {{ with .active.onLanding }}
-            {{ with .on }}{{ . }}{{ end -}}
-            {{ with .from }}{{ . }}-{{ end -}}
-            {{ with .to }}{{ . }}{{ end }} (On Landing)
-          {{- end -}}
           {{ with .active.on }}{{ . }}{{ end -}}
           {{ with .active.from }}{{ . }}-{{ end -}}
           {{ with .active.to }}{{ . }}{{ end -}}
+
+          {{ with .active.noLoop }}
+            {{ with .on }}{{ . }}{{ end -}}
+            {{ with .from }}{{ . }}-{{ end -}}
+            {{ with .to }}{{ . }}{{ end }}
+          {{ end }}
+          {{ with .active.loop }}
+            [
+            {{- $len = 2 }}{{ $iter = slice . . -}}
+            {{- range $index, $_ := $iter }}
+              {{- $counter = mul $index (add .frames .gap) -}}
+              {{ add .start $counter }}-
+              {{- sub (add (add .start .frames) $counter) 1 }}
+              {{- if lt (add $index 1) $len }}, {{ else }}...{{ end -}}
+            {{ end -}}
+            ]
+          {{- end -}}
+          {{- with .active.grounded }}
+            Grounded:
+            {{ with .on }}{{ . }}{{ end -}}
+            {{ with .from }}{{ . }}-{{ end -}}
+            {{ with .to }}{{ . }}{{ end }}<br>
+          {{ end }}
+          {{- with .active.onLanding }}
+            On Landing:
+            {{ with .on }}{{ . }}{{ end -}}
+            {{ with .from }}{{ . }}-{{ end -}}
+            {{ with .to }}{{ . }}{{ end }}
+          {{- end -}}
         {{ end -}}
       </td>{{ end }}
 
       {{ if $endlag }}<td>
         {{ if isset .endlag "hit" }}
           {{ .endlag.hit }} /
-          {{ with .endlag.whiff }}{{ . }}{{ else }} - {{ end -}}
+          {{ with .endlag.whiff }}
+            {{ if isset . "bothHits" }}
+              {{ .bothHits }} (Whiff both Hit 1-2)<br>
+              {{ .onlyHit2 }} (Whiff only Hit 2)
+            {{- else }}{{ . }}{{ end -}}
+          {{ else }} - {{ end -}}
         {{ else }}
-          {{ .endlag }}
+          {{ if reflect.IsMap .endlag }}
+            {{ with .endlag.grounded }}Grounded: {{ . }}<br>{{ end }}
+            {{ with .endlag.airborne }}Airborne: {{ . }}<br>{{ end }}
+            {{ with .endlag.cancel }}Cancel: {{ .hit }} / {{ .whiff }}{{ end }}
+          {{ else }}{{ .endlag }}{{ end }}
         {{ end -}}
       </td>{{ end }}
 
@@ -132,13 +171,16 @@
               {{ with .on }}{{ . }}{{ end -}}
               {{ with .from }}{{ . }}-{{ end -}}
               {{ with .to }}{{ . }}{{ end -}}
+              {{ with .endlag }}({{ . }}f Endlag){{ end -}}
               {{ if lt (add $index 1) $len }},{{ end -}}
             {{ end -}}
             <br>
           {{ else }}
+            {{ with .during }}{{ . }} f{{ end -}}
             {{ with .on }}{{ . }}{{ end -}}
             {{ with .from }}{{ . }}-{{ end -}}
             {{ with .to }}{{ . }}{{ end -}}
+            {{ with .endlag }} ({{ . }}f Endlag){{ end -}}
             <br>
           {{ end -}}
         {{ end -}}
@@ -149,8 +191,10 @@
           {{ if isset .firstActiveFrame "isolated" }}
             {{ .firstActiveFrame.isolated }} ({{ .firstActiveFrame.inContext }})
           {{ end -}}
-          {{ with .firstActiveFrame.grounded }}{{ . }} (Grounded)<br>{{ end }}
-          {{ with .firstActiveFrame.onLanding }}{{ . }} (On Landing){{ end }}
+          {{ with .firstActiveFrame.grounded }}Grounded: {{ . }}<br>{{ end }}
+          {{ with .firstActiveFrame.onLanding }}On Landing: {{ . }}{{ end }}
+          {{ with .firstActiveFrame.pratFall }}Prat Fall w/ Landing Lag: {{ . }}<br>{{ end }}
+          {{ with .firstActiveFrame.cancel }}Cancel: {{ .hit }} / {{ .whiff }}{{ end }}
         {{- else }}
           {{ .firstActiveFrame }}
         {{ end -}}
@@ -165,7 +209,13 @@
       </td>{{ end }}
 
       {{ if $cooldown }}<td>
-        {{ .cooldown }}
+        {{ if reflect.IsSlice .cooldown }}
+          {{ $len = len .cooldown }}
+          {{ range $index, $_ :=.cooldown }}
+            {{ .move }}: {{ .time -}}
+            {{ if lt (add $index 1) $len }}<br>{{ end -}}
+          {{ end }}
+        {{- else }}{{ .cooldown }}{{ end -}}
       </td>{{ end }}
 
       {{ if $damage }}<td>
@@ -204,14 +254,19 @@
       </td>{{ end }}
 
       {{ if $hitpause }}<td>
-        {{ with .hitpause }}{{ .base }} | {{ .scaling }}{{ end }}
+        {{ with .hitpause }}{{ .base }} | {{ .scaling }}{{ end -}}
+        {{ with .hitpause.extra }}<br>(+{{ . }}){{ end -}}
       </td>{{ end }}
 
       {{ if $asdiModifier }}<td>
         {{ if isset . "asdiModifier" }}{{ .asdiModifier }}×{{ end }}
       </td>{{ end }}
 
+      {{ if $hitLockout }}<td>{{ .hitLockout }}</td>{{ end }}
+
       {{ if $priority }}<td>{{ .priority }}</td>{{ end }}
+
+      {{ if $extendedParryStun }}<td>{{ title .extendedParryStun }}</td>{{ end }}
 
       {{ if $killsProjectiles }}<td>{{ title .killsProjectiles }}</td>{{ end }}
 
@@ -231,7 +286,7 @@
 </div>
 
 {{ with .notes }}
-  <p class="move-notes">{{ range . }}{{ . }}{{ end }}</p>
+  <p class="move-notes">{{ range . }}{{ . }} {{ end }}</p>
 {{ end }}
 
 {{ with .image.highRes }}

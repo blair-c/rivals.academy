@@ -1,6 +1,6 @@
 name: Absa
 element: air
-patch: 2.1.4.1
+patch: 2.1.5.3
 
 knockbackAdjustment: 1.10
 gravityAccel: 0.30
@@ -60,6 +60,1088 @@ hurtbox:
   hitstun:
     height: 59
     width: 42
+
+# Normals
+jab:
+  hitboxes:
+  - name: Jab 1
+    startup: 3
+    active:
+      noLoop:
+        from: 4
+        to: 6
+        frames: 3
+      loop:
+        start: 24
+        frames: 3
+        gap: 17
+    endlag: 15
+    cancellable:
+    - with: Jab 2
+      from: 6
+      to: 7
+      window: 2
+    - with: Jab 1
+      from: 8
+      to: 15
+      window: 8
+    - with: Tilts
+      from: 6
+      to: 15
+      window: 10
+    firstActiveFrame: 22
+    damage: 3
+    angle: 70
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+  - name: Jab 2
+    startup: 0
+    active:
+      noLoop:
+        from: 14
+        to: 16
+        frames: 3
+      loop:
+        start: 34
+        frames: 3
+        gap: 17
+    endlag: 15
+    cancellable:
+    - with: Jab 1/Tilts
+      from: 6
+      to: 15
+      window: 10
+    firstActiveFrame: 32
+    damage: 4
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - Jab 2 loops back into Jab 1.
+  notes:
+  - If jab is held 1 frame prior to the next part of Absa's jab loop the next hitbox will become active on the next frame, technically making the startup of her jab loops 0.
+  - If you hit another character or object at any time during the jab loop, Absa will be able to cancel into a turnaround tilt at any point in the loop afterwards.
+  image:
+    baseRes: https://rivals.academy/library/absa/jab.png
+    highRes: https://rivals.academy/library/absa/1080_jab.png
+
+dashAttack:
+  hitboxes:
+  - name: Hit 1
+    startup: 6
+    active:
+      from: 7
+      to: 9
+      frames: 3
+    firstActiveFrame: 35
+    damage: 3
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 3
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+  - name: Hit 2
+    active:
+      from: 13
+      to: 15
+      frames: 3
+    endlag:
+      hit: 18
+      whiff: 27
+    damage: 6
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/dash-attack.png
+    highRes: https://rivals.academy/library/absa/1080_dash-attack.png
+
+forwardTilt:
+- hitboxes:
+  - startup: 7
+    active:
+      from: 8
+      to: 11
+      frames: 4
+    cancellable:
+    - with: Ftilt2
+      from: 15
+      to: 20
+      window: 6
+    endlag:
+      hit: 12
+      whiff: 18
+    FAF: 30
+    damage: 6
+    angle: 70
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 20
+    priority: 4
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/forward-tilt-1.png
+    highRes: https://rivals.academy/library/absa/1080_forward-tilt-1.png
+- name: Lightning Whip (Ftilt2)
+  hitboxes:
+  - startup: 12
+    active:
+      from: 13
+      to: 14
+      frames: 2
+    endlag:
+      hit: 17
+      whiff: 
+        bothHits: 28
+        onlyHit2: 22
+    firstActiveFrame: 43
+    damage: 4
+    angle: 85
+    angleFlipper: 0
+    knockback:
+      base: 9
+      scaling: 25
+    hitstunModifier: 0.5
+    forceFlinch: 3
+    hitpause:
+      base: 6
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/forward-tilt-2.png
+    highRes: https://rivals.academy/library/absa/1080_forward-tilt-2.png
+
+upTilt:
+  hitboxes:
+  - name: Above
+    startup: 10
+    active:
+      from: 11
+      to: 12
+      frames: 2
+    damage: 10
+    angle: 80
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 70
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 40
+    priority: 5
+    killsProjectiles: true
+  - name: Center
+    startup: 10
+    active:
+      from: 11
+      to: 12
+      frames: 2
+    damage: 10
+    angle: 80
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 70
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 40
+    priority: 4
+    killsProjectiles: true
+  - name: Late
+    active:
+      from: 13
+      to: 17
+      frames: 5
+    endlag:
+      hit: 9
+      whiff: 14
+    firstActiveFrame: 32
+    damage: 4
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 35
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 20
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/up-tilt.png
+    highRes: https://rivals.academy/library/absa/1080_up-tilt.png
+
+downTilt:
+  hitboxes:
+  - startup: 5
+    active:
+      from: 6
+      to: 11
+      frames: 6
+    endlag:
+      hit: 9
+      whiff: 14
+    firstActiveFrame: 26
+    damage: 7
+    angle: 30
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 45
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 60
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/down-tilt.png
+    highRes: https://rivals.academy/library/absa/1080_down-tilt.png
+
+# Aerials
+neutralAir:
+  hitboxes:
+  - name: Hit 1-4
+    startup: 8
+    active:
+    - from: 9
+      to: 10
+      frames: 2
+    - from: 13
+      to: 14
+      frames: 2
+    - from: 17
+      to: 18
+      frames: 2
+    - from: 21
+      to: 22
+      frames: 2
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 2
+    angle: 90
+    angleFlipper: 2
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+  - name: Hit 5
+    active:
+      from: 29
+      to: 30
+      frames: 2
+    endlag:
+      hit: 12
+      whiff: 18
+    firstActiveFrame: 49
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 5
+    angle: 70
+    angleFlipper: 3
+    knockback:
+      base: 7
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 20
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/neutral-air.png
+    highRes: https://rivals.academy/library/absa/1080_neutral-air.png
+
+forwardAir:
+- hitboxes:
+  - name: Sweet
+    startup: 8
+    active:
+      from: 9
+      to: 10
+      frames: 2
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 12
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 100
+    hitstunModifier: 0.9
+    hitpause:
+      base: 12
+      scaling: 100
+    priority: 8
+    killsProjectiles: true
+  - name: Sour
+    active:
+      from: 10
+      to: 12
+      frames: 3
+    endlag:
+      hit: 13
+      whiff: 20
+    firstActiveFrame: 33
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 6
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 40
+    hitstunModifier: 0.85
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/forward-air.png
+    highRes: https://rivals.academy/library/absa/1080_forward-air.png
+- name: Cloud Kick
+  hitboxes:
+  - notes:
+    - Can explode cloud by kicking it to extend hitbox with identical knockback properties. Cloud explosion is active for 3 frames, which is extended to 12 frames due to 9 frames of hitpause. The last 3 frames of hitpause will decay the base knockback by 1.5, which then remains at 6.5 BKB until the move is no longer active.
+  image:
+    baseRes: https://rivals.academy/library/absa/forward-air-cloud-kick.png
+    highRes: https://rivals.academy/library/absa/1080_forward-air-cloud-kick.png
+
+backAir:
+- hitboxes:
+  - name: Sweet
+    startup: 12
+    active:
+      from: 13
+      to: 14
+      frames: 2
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 12
+    angle: 32
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 100
+    hitstunModifier: 1
+    hitpause:
+      base: 12
+      scaling: 100
+    priority: 8
+    killsProjectiles: true
+  - name: Sour
+    active:
+      from: 14
+      to: 16
+      frames: 3
+    endlag:
+      hit: 13
+      whiff: 20
+    firstActiveFrame: 37
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 6
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 40
+    hitstunModifier: 0.85
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/back-air.png
+    highRes: https://rivals.academy/library/absa/1080_back-air.png
+- name: Cloud Kick
+  hitboxes:
+  - notes:
+    - Can explode cloud by kicking it to extend hitbox with identical knockback properties. Cloud explosion is active for 3 frames, which is extended to 12 frames due to 9 frames of hitpause. The last 3 frames of hitpause will decay the base knockback by 1.5, which then remains at 4.5 BKB until the move is no longer active.
+  image:
+    baseRes: https://rivals.academy/library/absa/back-air-cloud-kick.png
+    highRes: https://rivals.academy/library/absa/1080_back-air-cloud-kick.png
+
+upAir:
+  hitboxes:
+  - name: Sweet
+    startup: 16
+    active:
+      from: 17
+      to: 20
+      frames: 4
+    endlag:
+      hit: 22
+      whiff: 33
+    firstActiveFrame: 54
+    landingLag:
+      hit: 8
+      whiff: 12
+    damage: 12
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 7
+      scaling: 120
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 80
+    priority: 2
+    killsProjectiles: true
+  - name: Sour
+    active:
+      from: 17
+      to: 20
+      frames: 4
+    landingLag:
+      hit: 8
+      whiff: 12
+    damage: 12
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 100
+    hitstunModifier: 0.9
+    hitpause:
+      base: 10
+      scaling: 80
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/up-air.png
+    highRes: https://rivals.academy/library/absa/1080_up-air.png
+
+downAir:
+- hitboxes:
+  - name: Sweet
+    startup: 8
+    active:
+      from: 9
+      to: 10
+      frames: 2
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 12
+    angle: 270
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 100
+    hitstunModifier: 1
+    hitpause:
+      base: 12
+      scaling: 100
+    priority: 8
+    killsProjectiles: true
+  - name: Sour
+    active:
+      from: 10
+      to: 12
+      frames: 3
+    endlag:
+      hit: 13
+      whiff: 20
+    firstActiveFrame: 33
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 6
+    angle: 60
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 60
+    hitstunModifier: 0.85
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/forward-air.png
+    highRes: https://rivals.academy/library/absa/1080_forward-air.png
+- name: Cloud Kick
+  hitboxes:
+  - notes:
+    - Can explode cloud by kicking it to extend hitbox with identical knockback properties. Cloud explosion is active for 3 frames, which is extended to 12 frames due to 9 frames of hitpause. The last 3 frames of hitpause will decay the base knockback by 1.5, which then remains at 5.5 BKB until the move is no longer active.
+  image:
+    baseRes: https://rivals.academy/library/absa/down-air-cloud-kick.png
+    highRes: https://rivals.academy/library/absa/1080_down-air-cloud-kick.png
+
+# Strongs
+forwardStrong:
+  hitboxes:
+  - name: Hit 1-4
+    startup: 11
+    active:
+    - from: 12
+      to: 13
+      frames: 2
+    - from: 14
+      to: 15
+      frames: 2
+    - from: 16
+      to: 17
+      frames: 2
+    - from: 18
+      to: 19
+      frames: 2
+    damage: 2
+    angle: 361
+    angleFlipper: 4
+    knockback:
+      base: 2
+      scaling: 0
+    hitstunModifier: 1
+    untechable: true
+    hitpause:
+      base: 2
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+  - name: Hit 5
+    active:
+      from: 20
+      to: 22
+      frames: 3
+    endlag:
+      hit: 15
+      whiff: 23
+    cancellable:
+    - with: Special (On Hit)
+      during: Endlag
+      from: 8
+      to: 15
+      window: 8
+    firstActiveFrame: 46
+    damage: 8
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 80
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 80
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/forward-strong.png
+    highRes: https://rivals.academy/library/absa/1080_forward-strong.png
+
+upStrong:
+  hitboxes:
+  - name: Hit 1-2
+    startup: 15
+    active:
+    - from: 16
+      to: 17
+      frames: 2
+    - from: 19
+      to: 20
+      frames: 2
+    damage: 3
+    angle: 80
+    angleFlipper: 9
+    knockback:
+      base: 3
+      scaling: 0
+    hitstunModifier: 1
+    untechable: true
+    hitpause:
+      base: 3
+      scaling: 0
+    asdiModifier: 0
+    priority: 1
+    killsProjectiles: true
+  - name: Hit 3
+    active:
+      from: 22
+      to: 24
+      frames: 3
+    endlag:
+      hit: 17
+      whiff: 26
+    cancellable:
+    - with: Special (On Hit)
+      during: Endlag
+      from: 8
+      to: 17
+      window: 10
+    firstActiveFrame: 51
+    damage: 8
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 7
+      scaling: 120
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 80
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/up-strong.png
+    highRes: https://rivals.academy/library/absa/1080_up-strong.png
+
+downStrong:
+  hitboxes:
+  - name: Hit 1, 3
+    startup: 8
+    active:
+    - from: 9
+      to: 10
+      frames: 2
+    - from: 17
+      to: 18
+      frames: 2
+    damage: 2
+    angle: 0
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 1
+    untechable: true
+    hitpause:
+      base: 2
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+  - name: Hit 2, 4
+    active:
+    - from: 13
+      to: 14
+      frames: 2
+    - from: 21
+      to: 22
+      frames: 2
+    damage: 2
+    angle: 180
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 1
+    untechable: true
+    hitpause:
+      base: 2
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+  - name: Hit 5
+    active:
+      from: 26
+      to: 29
+      frames: 4
+    endlag:
+      hit: 12
+      whiff: 18
+    cancellable:
+    - with: Special (On Hit)
+      during: Endlag
+      from: 8
+      to: 12
+      window: 5
+    firstActiveFrame: 48
+    damage: 5
+    angle: 35
+    angleFlipper: 6
+    knockback:
+      base: 7
+      scaling: 80
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 60
+    priority: 8
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/absa/down-strong.png
+    highRes: https://rivals.academy/library/absa/1080_down-strong.png
+
+# Specials
+neutralSpecial:
+- hitboxes:
+  - name: Cloud Hop
+    startup: 15
+    firstActiveFrame: 17
+    cooldown:
+    - move: Cloud Pop/Thunder Line
+      time: 10
+    notes:
+    - Interrupting Absa by hitting her during the cloud hop startup will prevent the cloud from being created.
+    - Cloud will despawn on Absa's death.
+  - name: Cloud Pop
+    startup:
+      initial: 3
+      cloud: 4
+    active:
+      from: 8
+      to: 11
+      frames: 4
+    endlag: 9
+    firstActiveFrame: 13
+    cooldown:
+    - move: Cloud Hop
+      time: 30
+    damage: 4
+    angle: 361
+    angleFlipper: 3
+    knockback:
+      base: 6
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 0
+    priority: 4
+    extendedParryStun: true
+    killsProjectiles: true
+    notes:
+    - Interrupting Absa by hitting her during the first 3 frames of startup before the cloud startup begins will prevent the hitbox from becoming active, however the cloud will still remain.
+  image:
+    baseRes: https://rivals.academy/library/absa/neutral-special-cloud.png
+    highRes: https://rivals.academy/library/absa/1080_neutral-special-cloud.png
+- name: Thunder Line
+  hitboxes:
+  - name: Thunder Line
+    startup: 28
+    active:
+      from: 29
+      to: 37
+      frames: 9
+    endlag: 28
+    firstActiveFrame: 58
+    cooldown:
+    - move: Cloud Hop
+      time: 30
+    damage: 12
+    angle: 90
+    flipper: 0
+    knockback:
+      base:
+        from: 9
+        to: 6
+        scaling: linear
+      scaling: 100
+    hitstunModifier: 0.7
+    hitpause:
+      base: 8
+      scaling: 0
+    hitLockout: 10
+    extendedParryStun: true
+    killsProjectiles: true
+  - name: Cloud
+    active:
+      from: 34
+      to: 37
+      frames: 4
+    cooldown:
+    - move: Cloud Hop
+      time: 30
+    damage: 12
+    angle: 90
+    flipper: 0
+    knockback:
+      base:
+        from: 9
+        to: 6
+        scaling: linear
+      scaling: 100
+    hitstunModifier: 0.7
+    hitpause:
+      base: 8
+      scaling: 0
+    hitLockout: 10
+    extendedParryStun: true
+    killsProjectiles: true
+  notes:
+  - Releasing the charge at any time before frame 15 will cause Absa to transition immediately into cloud pop, with the cloud exploding 5 frames later.
+  - Interrupting Absa by hitting her before the thunder bolt becomes active will prevent both hitboxes from becoming active, however the cloud will still remain. Hitting Absa on the first active frame of the thunder line (f29) will cause the bolt to be active for only 1 frame, however the cloud will still explode at its regular time.
+  image:
+    baseRes: https://rivals.academy/library/absa/neutral-special-thunder-line.png
+    highRes: https://rivals.academy/library/absa/1080_neutral-special-thunder-line.png
+
+sideSpecial:
+  hitboxes:
+  - name: Minimum
+    startup:
+      initial: 19
+      cloud: 8
+    active:
+      from: 28
+      to: 30
+      frames: 3
+    endlag: 16
+    firstActiveFrame: 36
+    cooldown:
+    - move: Side Special
+      time: 24
+    - move: Cloud Pop/Thunder Line
+      time: 4
+    damage: 5
+    angle: 361
+    angleFlipper: 4
+    knockback:
+      base: 6
+      scaling: 30
+    hitstunModifier: 0.6
+    hitpause:
+      base: 6
+      scaling: 60
+    priority: 3
+    extendedParryStun: true
+    killsProjectiles: true
+  - name: Maximum
+    startup:
+      cloud: 8
+    active:
+      from: 78
+      to: 80
+      frames: 3
+    endlag: 16
+    firstActiveFrame: 71
+    cooldown:
+    - move: Side Special
+      time: 24
+    - move: Cloud Pop/Thunder Line
+      time: 4
+    damage: 5
+    angle: 361
+    angleFlipper: 4
+    knockback:
+      base: 6
+      scaling: 30
+    hitstunModifier: 0.6
+    hitpause:
+      base: 6
+      scaling: 60
+    priority: 3
+    extendedParryStun: true
+    killsProjectiles: true
+    notes:
+    - The endlag window for Absa's forward special will always begin on frame 54 if you are still controlling the cloud, however you are still able to control and place the cloud until frame 69, after which the cloud locks into place and begins its 8 frames of startup.
+  notes:
+  - Interrupting Absa by hitting her while she is in forward special or during cloud's 8 frames of startup will prevent the hitbox from becoming active, however the cloud will still remain.
+  - Cloud will automatically be placed and begin to detonate upon contact of either a wall or solid object, such as Kragg/Shovel Knight rock or Kragg pillar.
+  - Cloud will despawn on Absa's death, however if the stock is lost during Forward Special the cloud will still be controllable and placed as normal without despawing.
+  image:
+    baseRes: https://rivals.academy/library/absa/side-special.png
+    highRes: https://rivals.academy/library/absa/1080_side-special.png
+
+upSpecial:
+  hitboxes:
+  - name: Zip 1
+    startup: 12
+    active:
+      from: 13
+      to: 20
+      frames: 8
+    cancellable:
+    - with: Wall Jump
+      from: 27
+      to: null
+      window: null
+    endlag:
+      grounded: 21
+      airborne: 21
+      cancel:
+        hit: 6
+        whiff: 10
+    firstActiveFrame:
+      grounded: 42
+      pratFall: 42
+      cancel:
+        hit: 27
+        whiff: 31
+    damage: 4
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 5
+      scaling: 15
+    hitstunModifier: 1
+    forceFlinch: 3
+    hitpause:
+      base: 4
+      scaling: 0
+    hitLockout: 4
+    priority: 4
+    killsProjectiles: false
+  - name: Zip 2
+    active:
+      from: 27
+      to: 34
+      frames: 8
+    cancellable:
+    - with: Wall Jump
+      from: 35
+      to: null
+      window: null
+    - with: Fast Fall
+      from: 56
+      to: null
+      frames: null
+    endlag:
+      grounded: 20
+      airborne: 28
+      cancel:
+        hit: 8
+        whiff: 12
+    firstActiveFrame:
+      grounded: 63
+      pratFall: 63
+      cancel:
+        hit: 43
+        whiff: 47
+    damage: 4
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 15
+    hitstunModifier: 1
+    forceFlinch: 3
+    hitpause:
+      base: 4
+      scaling: 0
+    hitLockout: 4
+    priority: 4
+    killsProjectiles: false
+  notes:
+  - When travelling from ground to air, Absa will cancel part of the endlag and be actionable without going into prat-fall. This also applies when touching the ground with the first part of up special before becoming airborne again.
+  - Can shift the up-special angle downwards slightly while travelling horizontally in the air by inputting fast-fall.
+  - Snaps to the ledge within 16px while moving horizontally.
+  image:
+    baseRes: https://rivals.academy/library/absa/up-special.png
+    highRes: https://rivals.academy/library/absa/1080_up-special.png
+
+downSpecial:
+- name: Cloud Bomb
+  hitboxes:
+  - startup: 23
+    active:
+      from: 114
+      to: 118
+      frames: 5
+    endlag: 8
+    firstActiveFrame: 33
+    cooldown:
+    - move: Cloud Creation
+      time: 40
+    - move: Cloud Bomb
+      time: 12
+    damage: 11
+    angle: 90
+    angleFlipper: 8
+    knockback:
+      base: 5
+      scaling: 150
+    hitstunModifier: 0.9
+    hitpause:
+      base: 8
+      scaling: 60
+    hitLockout: 6
+    priority: 8
+    extendedParryStun: true
+    killsProjectiles: true
+  notes:
+  - Interrupting Absa by hitting her before the cloud is primed will prevent the hitbox from becoming active, however the cloud will still remain. If a cloud does not exist and Absa is interuppted before frame 24, one will not be created.
+  - Starting the timer on down-special (f33) begins a 40 frame cooldown on both cloud hop and forward-special, preventing a new cloud from being created during the initial charge time of the cloud bomb.
+  - Once the cloud bomb has finished detonating (after the last active frame) you are able to use it again after a 12 frame cooldown.
+  - Cloud will despawn on Absa's death.
+  image:
+    baseRes: https://rivals.academy/library/absa/down-special.png
+    highRes: https://rivals.academy/library/absa/1080_down-special.png
+- name: Charged to Absa
+  hitboxes:
+  - startup: 39
+    active:
+      from: 148
+      to: 152
+      frames: 5
+    endlag: 27
+    firstActiveFrame: 67
+    cooldown:
+    - move: Cloud Bomb
+      time: 12
+    damage: 11
+    angle: 90
+    angleFlipper: 8
+    knockback:
+      base: 5
+      scaling: 150
+    hitstunModifier: 0.9
+    hitpause:
+      base: 8
+      scaling: 60
+    hitLockout: 6
+    priority: 8
+    extendedParryStun: true
+    killsProjectiles: true
+  notes:
+  - Once the cloud bomb has finished detonating (after the last active frame) you are able to use it again after a 12 frame cooldown.
+  image:
+    baseRes: https://rivals.academy/library/absa/down-special-charged.png
+    highRes: https://rivals.academy/library/absa/1080_down-special-charged.png
 
 parry:
   startup: 2
