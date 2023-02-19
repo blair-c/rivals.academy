@@ -170,7 +170,8 @@ dashAttack:
       to: 14
       frames: 4
     cancellable:
-    - with: Up Strong (On Hit)
+    - with: Up Strong
+      onlyOnHit: true
       from: 12
       to: 14
       window: 3
@@ -196,7 +197,8 @@ dashAttack:
       to: 12
       frames: 2
     cancellable:
-    - with: Up Strong (On Hit)
+    - with: Up Strong
+      onlyOnHit: true
       from: 12
       to: 14
       window: 3

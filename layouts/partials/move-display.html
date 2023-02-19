@@ -164,7 +164,7 @@
 
       {{ if $cancellable }}<td>
         {{ range .cancellable }}
-          {{ .with }}:
+          {{ .with }}{{ if .onlyOnHit }} (On Hit){{ end }}:
           {{ with .windows }}
             {{ $len = len . }}
             {{ range $index, $_ := . }}

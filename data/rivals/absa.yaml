@@ -663,7 +663,8 @@ forwardStrong:
       hit: 15
       whiff: 23
     cancellable:
-    - with: Special (On Hit)
+    - with: Special
+      onlyOnHit: true
       during: Endlag
       from: 8
       to: 15
@@ -719,7 +720,8 @@ upStrong:
       hit: 17
       whiff: 26
     cancellable:
-    - with: Special (On Hit)
+    - with: Special
+      onlyOnHit: true
       during: Endlag
       from: 8
       to: 17
@@ -795,7 +797,8 @@ downStrong:
       hit: 12
       whiff: 18
     cancellable:
-    - with: Special (On Hit)
+    - with: Special
+      onlyOnHit: true
       during: Endlag
       from: 8
       to: 12
