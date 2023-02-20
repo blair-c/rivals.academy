@@ -1,6 +1,7 @@
 name: Absa
 element: air
 
+# Effective Weight
 knockbackAdjustment: 1.10
 gravityAccel: 0.30
 hitstunGravityAccel: 0.45
@@ -10,7 +11,7 @@ maxFallSpeed: 8
 fastFallSpeed: 12
 jumpSquat: 5
 landTime: 4
-
+# Ground Movement
 groundFriction: 0.63
 initialDash:
   speed: 4.00
@@ -30,7 +31,7 @@ walk:
 waveland:
   time: 6
   friction: 0.00
-
+# Aerial Movement
 maxAirSpeed: 6
 maxJumpHorizontalSpeed: 8
 fullHop:
