@@ -49,7 +49,7 @@ body {
 
 main {
   min-height: calc(100vh - var(--nav-height));
-  min-height: calc(100dvh - var(--nav-height));
+  min-height: calc(100svh - var(--nav-height));
   overflow: hidden;
 }
 
