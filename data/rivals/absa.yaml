@@ -616,8 +616,8 @@ downAir:
     priority: 2
     killsProjectiles: true
   image:
-    baseRes: https://rivals.academy/library/absa/forward-air.png
-    highRes: https://rivals.academy/library/absa/1080_forward-air.png
+    baseRes: https://rivals.academy/library/absa/down-air.png
+    highRes: https://rivals.academy/library/absa/1080_down-air.png
 - name: Cloud Kick
   hitboxes:
   - notes:
