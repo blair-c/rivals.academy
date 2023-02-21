@@ -101,7 +101,12 @@ article h1 {
 }
 
 article h2 {
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1.75rem;
+}
+
+article h3 {
+  margin-top: 1.5rem;
 }
 
 :not(:active):focus-visible {
