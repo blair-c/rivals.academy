@@ -60,6 +60,9 @@ hurtbox:
   hitstun:
     height: 59
     width: 42
+  image:
+    baseRes: https://rivals.academy/library/absa/hurtbox.png
+    highRes: https://rivals.academy/library/absa/1080_hurtbox.png
 
 # Normals
 jab:
