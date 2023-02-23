@@ -12,7 +12,7 @@
   --clr-abxy-green: #009e4e;
   --clr-abxy-blue: #1f8ccc;
   --clr-abxy-yellow: #e8982c;
-  --clr-abxy-red: #de2a2a;
+  --clr-abxy-red: #de2c2c;
 
   --clr-discord: #5865f2;
   --clr-discord-hc: #4b53cc;
@@ -101,7 +101,12 @@ article h1 {
 }
 
 article h2 {
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1.75rem;
+}
+
+article h3 {
+  margin-top: 1.5rem;
 }
 
 :not(:active):focus-visible {
