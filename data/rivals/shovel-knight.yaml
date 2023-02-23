@@ -1,0 +1,1531 @@
+name: Shovel Knight
+element: guest
+
+# Effective Weight
+knockbackAdjustment: 0.95
+gravityAccel: 0.50
+hitstunGravityAccel: 0.50
+airFriction: 0.04
+airAccel: 0.30
+maxFallSpeed: 10
+fastFallSpeed: 13
+jumpSquat: 5
+landTime: 4
+# Ground Movement
+groundFriction: 0.60
+initialDash:
+  speed: 6.25
+  time: 10
+run:
+  speed: 6.00
+  stop:
+    time: 6
+  turn:
+    time: 18
+    accel: 0.50
+walk:
+  speed: 3.25
+  accel: 0.20
+  turn:
+    time: 6
+waveland:
+  time: 8
+  friction: 0.13
+# Aerial Movement
+maxAirSpeed: 6
+maxJumpHorizontalSpeed: 7
+fullHop:
+  speed: 10.99
+shortHop:
+  speed: 6.0
+doubleJump:
+  amount: 1
+  speed: 10
+wallJump:
+  speed:
+    vertical: 9
+    horizontal: 5
+pratFall:
+  accel: 1.00
+  landTime: 20
+
+hurtbox:
+  idle:
+    height: 59
+    width: 42
+  crouch:
+    height: 55
+    width: 42
+  hitstun:
+    height: 59
+    width: 42
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/hurtbox.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_hurtbox.png
+
+# Normals
+jab:
+  hitboxes:
+  - startup: 4
+    active:
+      from: 5
+      to: 6
+      frames: 2
+    endlag:
+      hit: 12
+      whiff: 18
+    cancellable:
+    - with: Tilts
+      during: endlag
+      from: 9
+      to: null
+      window: null
+    firstActiveFrame: 25
+    damage: 6
+    angle: 60
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 70
+    priority: 6
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/jab.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_jab.png
+
+dashAttack:
+  hitboxes:
+  - name: Early
+    startup: 7
+    active:
+      from: 8
+      to: 13
+      frames: 6
+    damage: 8
+    angle: 60
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 40
+    priority: 2
+    killsProjectiles: true
+  - name: Late
+    active:
+      from: 14
+      to: 17
+      frames: 4
+    endlag:
+      hit: 15
+      whiff: 23
+    firstActiveFrame: 41
+    damage: 6
+    angle: 60
+    angleFlipper: 0
+    knockback:
+      base:
+        from: 6
+        to: 3
+        scaling: linear
+      scaling: 25
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 40
+    priority: 2
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/dash-attack.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_dash-attack.png
+
+forwardTilt:
+  hitboxes:
+  - name: Hit 1
+    startup: 
+      initial: 8
+      loop: 4
+    active:
+      from: 9
+      to: 11
+      frames: 3
+    endlag:
+      hit: 8
+      whiff: 12
+    cancellable:
+    - with: Hit 2
+      during: endlag
+      hit:
+        from: 6
+        to: 8
+        window: 3
+      whiff:
+        from: 6
+        to: 12
+        window: 7
+    firstActiveFrame: 24
+    damage: 5
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 10
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 0
+    hitLockout: 3
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - If looping the attack you must hit your opponent or an object to cancel into Forward Tilt Hit 2.
+  - name: Hit 2
+    startup: 4
+    active:
+      from: 5
+      to: 7
+      frames: 3
+    endlag:
+      hit: 8
+      whiff: 12
+    cancellable:
+    - with: Hit 1
+      during: endlag
+      onlyOnHit: true
+      from: 6
+      to: 8
+      window: 3
+    firstActiveFrame:
+      isolated: 20
+      inContext: 36
+    damage: 5
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 10
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 0
+    hitLockout: 3
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - Can cancel into Forward Tilt Hit 1 on hit to loop the attack.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/forward-tilt.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_forward-tilt.png
+
+upTilt:
+  hitboxes:
+  - name: Hit 1
+    startup: 8
+    active:
+      from: 9
+      to: 28
+      frames: 20
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 44
+    damage: 8
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 30
+    priority: 3
+    killsProjectiles: true
+    notes:
+    - As Up Tilt counts as a projectile, Shovel Knight does not suffer any hitpause on hitting another character with it.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/up-tilt.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_up-tilt.png
+
+downTilt:
+  hitboxes:
+  - name: Hit 1
+    startup: 6
+    active:
+      from: 7
+      to: 8
+      frames: 2
+    damage: 4
+    angle: 270
+    angleFlipper: 0
+    knockback:
+      base: 4
+      scaling: 40
+    hitstunModifier: 1
+    forceFlinch: 1
+    untechable: true
+    hitpause:
+      base: 6
+      scaling: 20
+    priority: 6
+    killsProjectiles: true
+  - name: Hit 2
+    active:
+      from: 13
+      to: 15
+      frames: 3
+    endlag:
+      hit: 12
+      whiff: 18
+    firstActiveFrame: 34
+    damage: 8
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 50
+    hitstunModifier: 1.2
+    hitpause:
+      base: 7
+      scaling: 40
+    priority: 6
+    killsProjectiles: true
+    notes:
+    - Has an indentically sized hitbox which can only hit projectiles. This hitbox has a higher priority value and a knockback angle of 80. This hitbox can move Kragg/Shovel Knight Rocks.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/down-tilt.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_down-tilt.png
+
+# Aerials
+neutralAir:
+  hitboxes:
+  - startup: 4
+    active:
+      from: 5
+      to: 6
+      frames: 2
+    endlag:
+      hit: 16
+      whiff: 24
+    firstActiveFrame: 31
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 6
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 70
+    priority: 6
+    killsProjectiles: true
+  notes:
+  - Can transition into jab if landing during startup, replacing landing lag with jab's endlag.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/neutral-air.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_neutral-air.png
+
+forwardAir:
+  hitboxes:
+  - name: Hit 1
+    startup: 
+      initial: 8
+      loop: 4
+    active:
+      from: 9
+      to: 11
+      frames: 3
+    endlag:
+      hit: 8
+      whiff: 12
+    cancellable:
+    - with: Hit 2
+      during: endlag
+      hit:
+        from: 6
+        to: 8
+        window: 3
+      whiff:
+        from: 6
+        to: 12
+        window: 7
+    firstActiveFrame: 24
+    damage: 5
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 10
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 0
+    hitLockout: 3
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - If looping the attack you must hit your opponent or an object to cancel into Forward Air Hit 2.
+  - name: Hit 2
+    startup: 4
+    active:
+      from: 5
+      to: 7
+      frames: 3
+    endlag:
+      hit: 8
+      whiff: 12
+    cancellable:
+    - with: Hit 1
+      during: endlag
+      onlyOnHit: true
+      from: 6
+      to: 8
+      window: 3
+    firstActiveFrame:
+      isolated: 20
+      inContext: 36
+    damage: 5
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 10
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 0
+    hitLockout: 3
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - Can cancel into Forward Air Hit 1 on hit to loop the attack.
+  notes:
+  - Transitions into Forward Tilt when landing in all stages of the move, making this move have no landing lag.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/forward-air.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_forward-air.png
+
+backAir:
+  hitboxes:
+  - name: Hit 1-2
+    startup: 12
+    active:
+    - from: 13
+      to: 14
+      frames: 2
+    - from: 15
+      to: 16
+      frames: 2
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 3
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 0.65
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+  - name: Hit 3
+    active:
+      from: 17
+      to: 20
+      frames: 4
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 36
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 4
+    angle: 120
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 70
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 50
+    priority: 5
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/back-air.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_back-air.png
+
+upAir:
+  hitboxes:
+  - name: Hit 1
+    startup: 9
+    active:
+      minimum:
+        from: 10
+        to: 13
+        frames: 4
+      continue:
+      - from: 14
+        to: 17
+        frames: 4
+      - from: 22
+        to: 25
+        frames: 4
+      - from: 14
+        to: 17
+        frames: 4
+      - from: 26
+        to: 29
+        frames: 4
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 2
+    angle: 70
+    angleFlipper: 0
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority:
+    - hitbox: Hilt
+      priority: 6
+    - hitbox: Tip
+      priority: 2
+    killsProjectiles: true
+  - name: Hit 1 (Body)
+    active:
+      minimum:
+        from: 10
+        to: 13
+        frames: 4
+      continue:
+      - from: 14
+        to: 17
+        frames: 4
+      - from: 22
+        to: 25
+        frames: 4
+      - from: 14
+        to: 17
+        frames: 4
+      - from: 26
+        to: 29
+        frames: 4
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 2
+    angle: 70
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+  - name: Final Hit
+    active:
+      possible:
+      - from: 14
+        to: 16
+        frames: 3
+      - from: 18
+        to: 21
+        frames: 3
+      - from: 22
+        to: 25
+        frames: 3
+      - from: 26
+        to: 29
+        frames: 3
+    endlag:
+      hit: 15
+      whiff: 21
+    firstActiveFrame:
+      possible: [38, 42, 46, 50, 54]
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 3
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 70
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 80
+    priority: 6
+    killsProjectiles: true
+    notes:
+    - Will replace the next attack in hit 1's loop on releasing attack.
+  - name: Final Hit (Tip)
+    active:
+      possible:
+      - from: 14
+        to: 16
+        frames: 3
+      - from: 18
+        to: 21
+        frames: 3
+      - from: 22
+        to: 25
+        frames: 3
+      - from: 26
+        to: 29
+        frames: 3
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 3
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 55
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 80
+    priority: 2
+    killsProjectiles: true
+    notes:
+    - Will replace the next attack in hit 1's loop on releasing attack.
+  notes:
+  - Up Air will loop hit 1 up to 4 times while holding attack. This allows you to delay the final hit, connect hit 1 multiple times and will lift Shovel Knight into the air.
+  - Dagger hilt has higher knockback than the tip.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/up-air.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_up-air.png
+
+downAir:
+  hitboxes:
+  - name: Early
+    startup: 6
+    active:
+      from: 7
+      to: 8
+      frames: 2
+    landingLag:
+      hit: 12
+      whiff: 18
+    damage: 9
+    angle: 35
+    angleFlipper: 3
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 80
+    hitLockout: 20
+    priority: 10
+    killsProjectiles: true
+  - name: Early (Spike)
+    active:
+      from: 7
+      to: 8
+      frames: 2
+    landingLag:
+      hit: 12
+      whiff: 18
+    damage: 10
+    angle: 270
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 70
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 120
+    hitLockout: 20
+    priority: 2
+    killsProjectiles: true
+  - name: Late
+    active:
+      from: 9
+      to: 17
+      frames: 2
+      holdExtend: true
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 33
+    landingLag:
+      hit: 12
+      whiff: 18
+    damage: 7
+    angle: 55
+    angleFlipper: 3
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 50
+    hitLockout: 20
+    priority: 8
+    killsProjectiles: true
+    notes:
+    - Releasing attack after frame 17 will make the hitbox disappear 1 frame later if the attack has not yet hit another character or object. When hitting another character or object, Shovel Knight will bounce and Dair will remain active for a further 11 frames before you are able to begin the endlag state.
+  - name: Late (Spike)
+    active:
+      from: 9
+      to: 17
+      frames: 2
+      holdExtend: true
+    landingLag:
+      hit: 12
+      whiff: 18
+    damage: 8
+    angle: 270
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 56
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 100
+    hitLockout: 20
+    priority: 2
+    killsProjectiles: true
+  notes:
+  - Dair has unique interactions after bouncing off of both Lily (Maypul's Down Special), causing her to bite, and Absa's cloud, pushing it down slightly.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/down-air.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_down-air.png
+
+# Strongs
+forwardStrong:
+  hitboxes:
+  - startup: 13
+    active:
+      from: 14
+      to: 16
+      frames: 3
+    endlag:
+      hit: 18
+      whiff: 27
+    firstActiveFrame: 44
+    damage: 11
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 100
+    hitstunModifier: 1
+    hitpause:
+      base: 9
+      scaling: 110
+    hitLockout: 10
+    priority: 7
+    killsProjectiles: true
+  notes:
+  - Dynamo Mail allows you to use Forward Strong in the air. You cannot cancel the move by landing during startup, active frames, or endlag, meaning it perfectly transitions into a grounded attack.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/forward-strong.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_forward-strong.png
+
+upStrong:
+- hitboxes:
+  - startup: 12
+    active:
+      from: 13
+      to: 15
+      frames: 3
+    damage: 11
+    angle: 80
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 110
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 70
+    hitLockout: 10
+    priority:
+    - hitbox: Front
+      priority: 7
+    - hitbox: Above
+      priority: 5
+    killsProjectiles: true
+    movesRocks: true
+  - name: Behind
+    active:
+      from: 13
+      to: 16
+      frames: 4
+    endlag:
+      hit: 18
+      whiff: 27
+    firstActiveFrame: 44
+    damage: 6
+    angle: 135
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 70
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 70
+    hitLockout: 10
+    priority: 2
+    killsProjectiles: true
+    movesRocks: true
+  notes:
+  - Dynamo Mail allows you to use Up Strong in the air. You cannot cancel the move by landing during startup, active frames, or endlag, meaning it perfectly transitions into a grounded attack.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/up-strong.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_up-strong.png
+- name: Rock
+  hitboxes:
+  - startup: 72
+    active:
+      from: 73
+      to: null
+      frames: null
+    firstActiveFrame: 104
+    damage:
+      creation: 6
+      movedBy:
+      - move: Up Strong
+        damage:
+          from: 4
+          to: 6
+          scaling: charge
+      - move: Down Tilt
+        damage: 4
+      - move: all other moves
+        damage: 6
+    angle: 90
+    angleFlipper: 3
+    knockback:
+      base: 7
+      scaling: 80
+    hitstunModifier: 0.8
+    forceFlinch: 2
+    hitpause:
+      base: 8
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+    notes:
+    - When moved with Up Strong, damage and knockback scales with with the charge damage multiplier, causing it to deal 1.25x total knockback when creating it and 1.6x damage (6%).
+    - Retains a hitbox until landed, spikes while falling.
+  notes:
+  - Spawns only if Up Strong is fully charged (while on the ground).
+  - Can angle the initial arc on creation by holding a horizontal direction.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/up-strong-rock.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_up-strong-rock.png
+
+downStrong:
+  hitboxes:
+  - name: Hit 1 (Falling)
+    startup: 18
+    active:
+      from: 19
+      to: null
+      frames: null
+    cancellable:
+    - with: Jump/Up Special
+      from: 51
+      to: null
+      window: null
+    damage: 1
+    angle: 270
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 0
+    hitstunModifier: 1
+    forceFlinch: 1
+    untechable:
+      note: Forces a missed tech instead of bouncing the opponent off the ground.
+    hitpause:
+      base: 6
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+    canGalaxy: false
+    notes:
+    - Holding upwards on the left stick on frame 6 will cause Shovel Knight to jump higher, allowing him to reach standard sized platforms.
+    - The charge window for Down Strong begins in the air and raises Shovel Knight's vertical position for 1 extra frame, allowing him to reach the platforms on Abyssal Gates.
+  - name: Hit 2 (Landing)
+    active:
+      onLanding:
+        from: 1
+        to: 3
+        frames: 3
+    damage: 2
+    angle: 135
+    angleFlipper: 6
+    knockback:
+      base: 3
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+    canGalaxy: false
+    notes:
+    - If you land before Hit 1 is active, you will instead go straight to Hit 2.
+  - name: Flame Pillar 1
+    active:
+      onLanding:
+        from: 4
+        to: 6
+        frames: 3
+    damage: 10
+    angle: 70
+    angleFlipper: 6
+    knockback:
+      base: 7
+      scaling: 130
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 100
+    hitLockout: 10
+    priority: 6
+    killsProjectiles: true
+  - name: Flame Pillar 2
+    active:
+      onLanding:
+        from: 7
+        to: 9
+        frames: 3
+    damage: 7
+    angle: 70
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 120
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 100
+    hitLockout: 10
+    priority: 6
+    killsProjectiles: true
+  - name: Flame Pillar 3
+    active:
+      onLanding:
+        from: 10
+        to: 17
+        frames: 8
+    endlag:
+      hit: 20
+      whiff: 30
+    firstActiveFrame: 48
+    damage: 4
+    angle: 70
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 50
+    priority: 6
+    killsProjectiles: true
+  notes:
+  - Dynamo Mail allows you to use Down Strong in the air. Performing Down Strong immediately after jump-squat when Dynamo Mail is active performs a super jump Down Strong, with height variations for short hop and full hop.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/down-strong.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_down-strong.png
+
+# Specials
+neutralSpecial:
+- name: Coin Capture
+  hitboxes:
+  - startup: 7
+    capture:
+      from: 8
+    endlag: 20
+    firstActiveFrame: 28
+    notes:
+    - Once captured, coins cannot change ownership and will travel to Shovel Knight even if he is interrupted.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/neutral-special-coin-capture.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_neutral-special-coin-capture.png
+- name: War Horn
+  cost: 1000
+  hitboxes:
+  - name: Center
+    startup: 25
+    active:
+      from: 26
+      to: 33
+      frames: 8
+    airBrakes:
+      during: active frames
+    endlag: 35
+    firstActiveFrame: 69
+    damage: 8
+    angle: 45
+    angleFlipper: 8
+    knockback:
+      base:
+        from: 6
+        to: 3
+        scaling:
+      scaling: 70
+    hitstunModifier: 0.9
+    hitpause:
+      base: 10
+      scaling: 50
+    priority: 10
+    killsProjectiles: true
+  - name: Sweet
+    active:
+      from: 26
+      to: 33
+      frames: 8
+    airBrakes:
+      during: active frames
+    damage: 12
+    angle: 45
+    angleFlipper: 8
+    knockback:
+      base:
+        from: 7
+        to: 3
+        scaling:
+      scaling: 100
+    hitstunModifier: 0.9
+    hitpause:
+      base: 10
+      scaling: 50
+    priority: 9
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/neutral-special-war-horn.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_neutral-special-war-horn.png
+- name: Mobile Gear
+  cost: 1200
+  hitboxes:
+  - name: Throw
+    startup: 15
+    active:
+      from: 16
+      to: null
+      frames: null
+    endlag: 13
+    firstActiveFrame: 29
+    cooldown: 120
+    damage: 2
+    angle: 60
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 20
+    hitstunModifier: 0.5
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - You can control the trajectory of the gear by holding a horizontal or vertical direction on the left stick, allowing Shovel Knight to throw the gear in 5 different arcs.
+    - Cooldown applies on the last frame of endlag and is only relevant if the gear is destroyed or despawned sooner than 120 frames, otherwise the gear is throwable immediately on the previous one hitting entering the blastzone.
+  - name: Mobile
+    startup:
+      fromLanding: 51
+    active:
+      from: 52
+      to: null
+      frames: null
+    damage: 2
+    angle: 55
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 10
+    hitstunModifier: 0.5
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - If Mobile Gear's path is blocked, it will lose its hitbox and disappear 50 frames later. Unblocking its path will not make it mobile again.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/neutral-special-mobile-gear.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_neutral-special-mobile-gear.png
+- name: Ghost Glove
+  cost: 1400
+  hitboxes:
+  - startup: 6
+    active:
+      minimum:
+        from: 17
+        to: 35
+        frames: 19
+      loop:
+        start: 37
+        frames: 19
+        gap: 1
+    endlag:
+      twoOrLessGloves: 15
+      overTwoGloves: 27
+    cancellable:
+    - with: Autocancel (Land)
+      from: 18
+      to: 43
+      window: 22
+    firstActiveFrame:
+      minimum: 32
+    damage: 4
+    angle: 36
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 10
+    hitstunModifier: 0.7
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - Autocancel window allows you to short hop and time a fast fall to act as soon as possible after throwing the projectile.
+    - On parrying a Ghost Glove, it will become transcendent when being reflected, allowing it to break other projectiles on its return.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/neutral-special-ghost-glove.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_neutral-special-ghost-glove.png
+
+sideSpecial:
+  hitboxes:
+  - name: Min Charge
+    startup:
+      initial: 16
+      dagger: 2
+    active:
+      from: 19
+      to: 31
+      frames: 13
+    endlag:
+      hit: 11
+      whiff: 17
+    cancellable:
+    - with: Jump
+      onlyGrounded: true
+      from: 20
+      to: 31
+      frames: 12
+      endlag: 15
+    firstActiveFrame:
+      hit: 12
+      whiff: 49
+    cooldown:
+    - "on": Whiff in Air
+      time: 30
+    - "on": Hit
+      time: 40
+    damage: 6
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 80
+    priority:
+    - hitbox: Tip
+      priority: 5
+    - hitbox: Hilt
+      priority: 1
+    killsProjectiles: false
+  - name: Full Charge
+    startup:
+      charge: 95
+      dagger: 2
+    active:
+      from: 98
+      to: 138
+      frames: 41
+    endlag:
+      hit: 11
+      whiff: 17
+    cancellable:
+    - with: Jump
+      onlyGrounded: true
+      from: 99
+      to: 138
+      frames: 40
+      endlag: 15
+    firstActiveFrame:
+      hit: 12
+      whiff: 156
+    cooldown:
+    - "on": Whiff in Air
+      time: 30
+    - "on": Hit
+      time: 40
+    damage: 8
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 60
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 80
+    priority:
+    - hitbox: Tip
+      priority: 5
+    - hitbox: Hilt
+      priority: 1
+    killsProjectiles: false
+  - name: Infinidagger
+    startup:
+      charge: 95
+      dagger: 2
+    active:
+      from: 19
+      to: null
+      frames: null
+    endlag:
+      hit: 11
+    cancellable:
+    - with: Jump
+      onlyGrounded: true
+      from: 99
+      to: null
+      frames: null
+      endlag: 15
+    - with: Cancel
+      input: Parry
+      from: 99
+      to: null
+      frames: null
+      endlag: 18
+    firstActiveFrame:
+      hit: 12
+      cancel: 19
+    cooldown:
+    - "on": Whiff in Air
+      time: 30
+    - "on": Hit
+      time: 40
+    damage: 6
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 80
+    priority:
+    - hitbox: Tip
+      priority: 5
+    - hitbox: Hilt
+      priority: 1
+    killsProjectiles: false
+    notes:
+    - Infinidagger is locked in if special is held until the 96th frame of startup, which immediately starts the 2 frame startup window before releasing.
+    - Travels much faster than partially charging forward-special.
+  notes:
+  - Holding down on any actionable frame during either the hit/bounce animation or during jump-cancel's momentum will cancel the animation and slow Shovel Knight's aerial momentum to his usual amount.
+  - Holding back on the same frame you jump-cancel will cause Shovel Knight to turnaround on the first frame of jump-squat, allowing him to face the opposite direction in the air.
+  - A 30 frame cooldown applies on the final frame of endlag if you are in the air on whiff. On hit or after bouncing all versions of Forward Special will apply a 40 frame cooldown on the first frame of endlag, which is effectively a 29 frame cooldown once you are actionable.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/side-special.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_side-special.png
+
+upSpecial:
+  hitboxes:
+  - name: Hit 1
+    startup: 12
+    active:
+      from: 13
+      to: 14
+      frames: 2
+    damage: 7
+    angle: 135
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 80
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 60
+    priority: 6
+    killsProjectiles: true
+  - name: Hit 1 (Sweet)
+    active:
+      from: 13
+      to: 14
+      frames: 2
+    damage: 10
+    angle: 135
+    angleFlipper: 0
+    knockback:
+      base: 9
+      scaling: 110
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 100
+    hitLockout: 10
+    priority: 8
+    killsProjectiles: true
+  - name: Hit 2 (Swing)
+    active:
+      from: 15
+      to: 16
+      frames: 2
+    damage: 5
+    angle: 65
+    angleFlipper: 0
+    knockback:
+      base: 10
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 40
+    priority: 3
+    killsProjectiles: true
+  - name: Hit 3 (Rising)
+    active:
+      from: 19
+      to: 32
+      frames: 14
+    cancellable:
+    - with: Wall Jump
+      from: 28
+      to: null
+      window: null
+    damage: 5
+    angle: 65
+    angleFlipper: 0
+    knockback:
+      base:
+        from: 10
+        to: 7
+        scaling: linear
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 40
+    priority: 4
+    killsProjectiles: true
+    notes:
+    - Same hitbox group as Hit 2, meaning you cannot hit a character with this hitbox if they were previously hit by Hit 2.
+  - name: Hit 4 (Falling)
+    active:
+      from: 45
+      to: null
+      frames: null
+    cancellable:
+    - with: Wall Jump
+      from: 28
+      to: null
+      window: null
+    - with: Can Fast Fall
+      from: 47
+      to: null
+      window: null
+    damage: 5
+    angle: 270
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 60
+    hitstunModifier: 1
+    untechable:
+      note: Forces a missed tech instead of bouncing the opponent off the ground.
+    hitpause:
+      base: 6
+      scaling: 90
+    priority: 8
+    killsProjectiles: true
+    notes:
+    - Unable to land and refresh resources until 58-.
+  - name: Landing
+    active:
+      onLanding:
+        from: 1
+        to: 6
+        frames: 6
+    endlag:
+      hit: 15
+      whiff: 20
+    firstActiveFrame:
+      onLanding: 27
+    damage: 5
+    angle: 70
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 20
+    priority: 3
+    killsProjectiles: false
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/up-special.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_up-special.png
+
+downSpecial:
+- hitboxes:
+  - name: Cast Anchor
+    startup: 16
+    active:
+      from: 17
+      to: null
+      frames:
+        max: 60
+    airBrakes:
+      from: 15
+      to: null
+      frames: null
+    firstActiveFrame:
+      anchorIsUnableToCast: 31
+    damage: 8
+    angle: 270
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+  - name: Reel Anchor
+    startup: 3
+    active:
+      from: 4
+      to: null
+      frames:
+        max: 60
+    endlag:
+      fromAnchorReachingSK: 14
+    firstActiveFrame:
+      fromAnchorReachingSK: 14
+      maximum: 152
+    damage: 8
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 50
+    hitstunModifier: 1.1
+    hitpause:
+      base: 10
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - Must be idle for 20 frames before you can reel in a treasure.
+    - After idling with the anchor on the ground for 180 frames the anchor will automatically reel in.
+    - On catch, reel f1-12 for a Golden Troupple Fish, f13-16 for a treasure pile.					
+  notes:
+  - You can only down-special once per airtime.
+  - Anchor will continue travelling during hitpause. 
+  - Hitbox detection is active while travelling, however the hitbox itself only becomes active on hitting a character and the anchor cannot otherwise break projectiles.	
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/down-special.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_down-special.png
+- name: Treasure Pile
+  hitboxes:
+  - startup: 1
+    active:
+      from: 2
+      to: null
+      frames: null
+    damage: 2
+    angle: 60
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 20
+    hitstunModifier: 0.5
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - Can hit the same character once every 10 frames.
+    - Becomes inactive on landing.
+  notes:
+  - Reeling in from frame 13 of a catch onwards will result in a Treasure Pile.
+  - Treaure Pile will remain onscreen for 600 frames, the timer for which begins immediately on beginning to reel it in. This 600 frame lifetime resets upon hitting it, reducing it in size if the rock has not been destroyed.
+  - Treasure Pile has 20 health in total and reduces in size slightly every 4 damage that's dealt to it.
+  - Only one treasure pile can be active at once, and reeling in a new one will cause the previous one to disappear.
+
+taunt:
+  hitboxes:
+  - name: Open Shop
+    startup: 14
+    active:
+      from: 15
+      to: 17
+      frames: 3
+    firstActiveFrame:
+      shop: 32
+    damage: 6
+    angle: 45
+    angleFlipper: 0
+    knockback:
+      base: 10
+      scaling: 25
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 50
+    priority: 6
+    killsProjectiles: true
+    notes:
+    - "Right stick binds: Left = War Horn, Up = Mobile Gear, Right = Mail of Momentum, Down = Dynamo Mail."
+    - Purchasing an item will make it free for the remainder of the game if you choose to repurchase it, despite not being reflected in the UI.
+  - name: Close Shop/Buy
+    firstActiveFrame: 34
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/taunt.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_taunt.png

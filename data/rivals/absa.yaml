@@ -68,9 +68,11 @@ hurtbox:
 jab:
   hitboxes:
   - name: Jab 1
-    startup: 3
+    startup:
+      initial: 3
+      loop: 0
     active:
-      noLoop:
+      minimum:
         from: 4
         to: 6
         frames: 3
@@ -81,14 +83,17 @@ jab:
     endlag: 15
     cancellable:
     - with: Jab 2
+      during: endlag
       from: 6
       to: 7
       window: 2
     - with: Jab 1
+      during: endlag
       from: 8
       to: 15
       window: 8
     - with: Tilts
+      during: endlag
       from: 6
       to: 15
       window: 10
@@ -108,7 +113,7 @@ jab:
   - name: Jab 2
     startup: 0
     active:
-      noLoop:
+      minimum:
         from: 14
         to: 16
         frames: 3
@@ -119,6 +124,7 @@ jab:
     endlag: 15
     cancellable:
     - with: Jab 1/Tilts
+      during: endlag
       from: 6
       to: 15
       window: 10
@@ -252,7 +258,7 @@ forwardTilt:
 
 upTilt:
   hitboxes:
-  - name: Above
+  - name: Early
     startup: 10
     active:
       from: 11
@@ -268,25 +274,11 @@ upTilt:
     hitpause:
       base: 8
       scaling: 40
-    priority: 5
-    killsProjectiles: true
-  - name: Center
-    startup: 10
-    active:
-      from: 11
-      to: 12
-      frames: 2
-    damage: 10
-    angle: 80
-    angleFlipper: 6
-    knockback:
-      base: 8
-      scaling: 70
-    hitstunModifier: 1
-    hitpause:
-      base: 8
-      scaling: 40
-    priority: 4
+    priority:
+    - hitbox: Above
+      priority: 5
+    - hitbox: Center
+      priority: 4
     killsProjectiles: true
   - name: Late
     active:
@@ -668,7 +660,7 @@ forwardStrong:
     cancellable:
     - with: Special
       onlyOnHit: true
-      during: Endlag
+      during: endlag
       from: 8
       to: 15
       window: 8
@@ -725,7 +717,7 @@ upStrong:
     cancellable:
     - with: Special
       onlyOnHit: true
-      during: Endlag
+      during: endlag
       from: 8
       to: 17
       window: 10
@@ -802,7 +794,7 @@ downStrong:
     cancellable:
     - with: Special
       onlyOnHit: true
-      during: Endlag
+      during: endlag
       from: 8
       to: 12
       window: 5

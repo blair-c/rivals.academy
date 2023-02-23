@@ -75,6 +75,7 @@ jab:
     endlag: 14
     cancellable:
     - with: Jab 2
+      during: endlag
       windows:
       - from: 7
         to: 12
@@ -83,6 +84,7 @@ jab:
         to: 14
         window: 2
     - with: Tilts
+      during: endlag
       from: 7
       to: 14
       window: 8
@@ -109,6 +111,7 @@ jab:
     endlag: 16
     cancellable:
     - with: Jab 3
+      during: endlag
       windows:
       - from: 8
         to: 14
@@ -117,6 +120,7 @@ jab:
         to: 16
         window: 2
     - with: Tilts
+      during: endlag
       from: 8
       to: 16
       window: 9
@@ -1116,7 +1120,7 @@ downSpecial:
       from: 9
       to: null
       window: null
-    - with: Can fast fall
+    - with: Can Fast Fall
       from: 28
       to: null
       window: null

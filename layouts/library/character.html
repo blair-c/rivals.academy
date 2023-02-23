@@ -140,7 +140,7 @@
         </table>
       </div>
       <div class="hitbox-image">
-        <img src="{{ $c.hurtbox.image.highRes }}" alt="In-game screenshot of this {{ $c.name }}'s hurtbox during idle, crouch, and hitstun.">
+        <img src="{{ $c.hurtbox.image.highRes }}" alt="In-game screenshot of {{ $c.name }}'s hurtbox during idle, crouch, and hitstun.">
       </div>
 
       {{ range slice
@@ -165,11 +165,18 @@
             {{ partial "partials/move-display.html" $move }}
           {{ else }}
             {{ range $move }}
-              {{ with .name }}<h4>{{ . }}</h4>{{ end }}
+              {{ if isset . "name" }}<h4>
+                {{ .name }}{{ with .cost }} ({{ . }} Gems){{ end }}
+              </h4>{{ end }}
               {{ partial "partials/move-display.html" . }}
             {{ end }}
           {{ end }}
         {{ end }}
+      {{ end }}
+
+      {{ with index $c "taunt" }}
+        {{ $.RenderString "### Taunt" }}
+        {{ partial "partials/move-display.html" . }}
       {{ end }}
     </article>
   </main>
