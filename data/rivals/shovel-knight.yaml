@@ -1258,7 +1258,7 @@ sideSpecial:
       priority: 5
     - hitbox: Hilt
       priority: 1
-    killsProjectiles: false
+    killsProjectiles: true
     notes:
     - Infinidagger is locked in if special is held until the 96th frame of startup, which immediately starts the 2 frame startup window before releasing.
     - Travels much faster than partially charging forward-special.
