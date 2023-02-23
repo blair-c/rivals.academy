@@ -1030,8 +1030,6 @@ downSpecial:
     startup: 22
     active:
       from: 23
-      to: null
-      frames: null
     cancellable:
     - with: Flip
       from: 1
@@ -1039,12 +1037,8 @@ downSpecial:
       window: 8
     - with: Wall Jump
       from: 24
-      to: null
-      window: null
     - with: Airdodge/Up Special/Jump
       from: 54
-      to: null
-      window: null
     refresh:
       doubleJump:
         oneTime: 24
@@ -1118,12 +1112,8 @@ downSpecial:
     cancellable:
     - with: Wall Jump
       from: 9
-      to: null
-      window: null
     - with: Can Fast Fall
       from: 28
-      to: null
-      window: null
     landingLag: 16
     firstActiveFrame:
       onLanding: 17

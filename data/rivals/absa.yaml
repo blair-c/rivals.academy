@@ -996,8 +996,6 @@ upSpecial:
     cancellable:
     - with: Wall Jump
       from: 27
-      to: null
-      window: null
     endlag:
       grounded: 21
       airborne: 21
@@ -1032,12 +1030,8 @@ upSpecial:
     cancellable:
     - with: Wall Jump
       from: 35
-      to: null
-      window: null
     - with: Fast Fall
       from: 56
-      to: null
-      frames: null
     endlag:
       grounded: 20
       airborne: 28

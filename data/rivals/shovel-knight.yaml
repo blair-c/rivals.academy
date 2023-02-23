@@ -78,8 +78,6 @@ jab:
     - with: Tilts
       during: endlag
       from: 9
-      to: null
-      window: null
     firstActiveFrame: 25
     damage: 6
     angle: 60
@@ -810,8 +808,6 @@ upStrong:
   - startup: 72
     active:
       from: 73
-      to: null
-      frames: null
     firstActiveFrame: 104
     damage:
       creation: 6
@@ -853,13 +849,9 @@ downStrong:
     startup: 18
     active:
       from: 19
-      to: null
-      frames: null
     cancellable:
     - with: Jump/Up Special
       from: 51
-      to: null
-      window: null
     damage: 1
     angle: 270
     angleFlipper: 0
@@ -1037,8 +1029,6 @@ neutralSpecial:
     startup: 15
     active:
       from: 16
-      to: null
-      frames: null
     endlag: 13
     firstActiveFrame: 29
     cooldown: 120
@@ -1062,8 +1052,6 @@ neutralSpecial:
       fromLanding: 51
     active:
       from: 52
-      to: null
-      frames: null
     damage: 2
     angle: 55
     angleFlipper: 0
@@ -1215,22 +1203,16 @@ sideSpecial:
       dagger: 2
     active:
       from: 19
-      to: null
-      frames: null
     endlag:
       hit: 11
     cancellable:
     - with: Jump
       onlyGrounded: true
       from: 99
-      to: null
-      frames: null
       endlag: 15
     - with: Cancel
       input: Parry
       from: 99
-      to: null
-      frames: null
       endlag: 18
     firstActiveFrame:
       hit: 12
@@ -1330,8 +1312,6 @@ upSpecial:
     cancellable:
     - with: Wall Jump
       from: 28
-      to: null
-      window: null
     damage: 5
     angle: 65
     angleFlipper: 0
@@ -1352,17 +1332,11 @@ upSpecial:
   - name: Hit 4 (Falling)
     active:
       from: 45
-      to: null
-      frames: null
     cancellable:
     - with: Wall Jump
       from: 28
-      to: null
-      window: null
     - with: Can Fast Fall
       from: 47
-      to: null
-      window: null
     damage: 5
     angle: 270
     angleFlipper: 0
@@ -1412,13 +1386,10 @@ downSpecial:
     startup: 16
     active:
       from: 17
-      to: null
       frames:
         max: 60
     airBrakes:
       from: 15
-      to: null
-      frames: null
     firstActiveFrame:
       anchorIsUnableToCast: 31
     damage: 8
@@ -1437,7 +1408,6 @@ downSpecial:
     startup: 3
     active:
       from: 4
-      to: null
       frames:
         max: 60
     endlag:
@@ -1473,8 +1443,6 @@ downSpecial:
   - startup: 1
     active:
       from: 2
-      to: null
-      frames: null
     damage: 2
     angle: 60
     angleFlipper: 0
