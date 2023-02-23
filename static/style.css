@@ -92,7 +92,7 @@ h2 {
 
 h3 {
   font-size: 1.4375rem;
-  margin-bottom: 0.325rem;
+  margin-bottom: 0.3125rem;
 }
 
 article h1 {
@@ -185,7 +185,7 @@ article h3 {
   display: none;
   position: absolute;
   white-space: nowrap;
-  border-radius: .325em;
+  border-radius: .3125em;
   padding: .15em .4em;
   margin-left: .25em;
   font-size: .75em;
@@ -634,7 +634,7 @@ article h3 {
 .footer-bottom > * {
   display: flex;
   align-items: center;
-  gap: .325rem;
+  gap: .3125rem;
 }
 
 .footer-bottom svg {
@@ -881,7 +881,7 @@ article h3 {
 
 .brackets-list h3 a svg {
   height: .875em;
-  padding: 0 .325em;
+  padding: 0 .3125em;
   fill: var(--clr-gray-1);
 }
 
