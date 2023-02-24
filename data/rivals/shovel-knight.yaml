@@ -1133,11 +1133,12 @@ sideSpecial:
       endlag: 15
     firstActiveFrame:
       hit: 12
+      bounce: 12
       whiff: 49
     cooldown:
     - "on": Whiff in Air
       time: 30
-    - "on": Hit
+    - "on": Hit/Bounce
       time: 40
     damage: 6
     angle: 361
@@ -1175,11 +1176,12 @@ sideSpecial:
       endlag: 15
     firstActiveFrame:
       hit: 12
+      bounce: 12
       whiff: 156
     cooldown:
     - "on": Whiff in Air
       time: 30
-    - "on": Hit
+    - "on": Hit/Bounce
       time: 40
     damage: 8
     angle: 361
@@ -1216,11 +1218,12 @@ sideSpecial:
       endlag: 18
     firstActiveFrame:
       hit: 12
+      bounce: 12
       cancel: 19
     cooldown:
     - "on": Whiff in Air
       time: 30
-    - "on": Hit
+    - "on": Hit/Bounce
       time: 40
     damage: 6
     angle: 361
