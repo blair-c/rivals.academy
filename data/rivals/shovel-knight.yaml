@@ -1202,7 +1202,7 @@ sideSpecial:
       charge: 95
       dagger: 2
     active:
-      from: 19
+      from: 98
     endlag:
       hit: 11
     cancellable:
