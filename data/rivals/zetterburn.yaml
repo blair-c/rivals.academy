@@ -124,9 +124,7 @@ jab:
       from: 8
       to: 16
       window: 9
-    firstActiveFrame:
-      isolated: 24
-      inContext: 37
+    firstActiveFrame: 24
     damage: 4
     angle: 361
     angleFlipper: 6
@@ -146,9 +144,7 @@ jab:
       to: 7
       frames: 2
     endlag: 17
-    firstActiveFrame:
-      isolated: 25
-      inContext: 52
+    firstActiveFrame: 25
     damage: 6
     angle: 361
     angleFlipper: 6

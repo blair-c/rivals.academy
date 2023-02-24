@@ -282,9 +282,6 @@
             {{ .firstActiveFrame.hit }} /
             {{ with .firstActiveFrame.whiff }}{{ . }}{{ else }}-{{ end }}<br>
           {{ end }}
-          {{ if isset .firstActiveFrame "isolated" }}
-            {{ .firstActiveFrame.isolated }} ({{ .firstActiveFrame.inContext }})
-          {{ end -}}
           {{ with .firstActiveFrame.minimum }}{{ . }} (Minimum){{ end }}
           {{ with .firstActiveFrame.possible }}
             [
