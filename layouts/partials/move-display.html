@@ -108,15 +108,11 @@
           {{ end }}
           {{ if isset .startup "loop" -}}
             {{ .startup.initial }} ({{ .startup.loop }} in loop)
-          {{ end }}
-          {{ if isset .startup "cloud" }}
+          {{ else }}
             {{ with .startup.initial }}{{ . }} (Initial)<br>{{ end }}
-            {{ .startup.cloud }} (Cloud)
-          {{ end }}
-          {{ if isset .startup "dagger" }}
-            {{ with .startup.initial }}{{ . }} (Initial)<br>{{ end }}
+            {{ with .startup.cloud }}{{ . }} (Cloud){{ end }}
             {{ with .startup.charge }}{{ . }} (Charge)<br>{{ end }}
-            {{ .startup.dagger }} (Dagger)
+            {{ with .startup.dagger }}{{ . }} (Dagger){{ end }}
           {{ end }}
         {{- else }}{{ .startup }}{{ end -}}
       </td>{{ end }}
@@ -240,9 +236,7 @@
           {{ if isset .endlag "overTwoGloves" }}
             {{ .endlag.twoOrLessGloves }} ({{ .endlag.overTwoGloves }} if >2 gloves are thrown)
           {{ end }}
-          {{ with .endlag.fromAnchorReachingSK }}
-            From Anchor Reaching SK: {{ . }}<br>
-          {{ end }}
+          {{ with .endlag.fromAnchorReachingSK }}From Anchor Reaching SK: {{ . }}{{ end }}
         {{ else }}{{ .endlag }}{{ end }}
       </td>{{ end }}
 
@@ -291,9 +285,7 @@
           {{ if isset .firstActiveFrame "isolated" }}
             {{ .firstActiveFrame.isolated }} ({{ .firstActiveFrame.inContext }})
           {{ end -}}
-          {{ with .firstActiveFrame.minimum }}
-            {{ . }} (Minimum)
-          {{ end }}
+          {{ with .firstActiveFrame.minimum }}{{ . }} (Minimum){{ end }}
           {{ with .firstActiveFrame.possible }}
             [
             {{ $len = len . }}
@@ -308,9 +300,9 @@
           {{ with .firstActiveFrame.cancel }}
             Cancel: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}
           {{ end }}
-          {{ with .firstActiveFrame.maximum }}Maximum: {{ . }}{{ end }}
+          {{ with .firstActiveFrame.maximum }}Maximum: {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.anchorIsUnableToCast }}Anchor is unable to cast: {{ . }}{{ end }}
-          {{ with .firstActiveFrame.fromAnchorReachingSK }}From Anchor Reaching SK: {{ . }}<br>{{ end }}
+          {{ with .firstActiveFrame.fromAnchorReachingSK }}From Anchor Reaching SK: {{ . }}{{ end }}
           {{ with .firstActiveFrame.shop }}Shop: {{ . }}{{ end }}
         {{- else }}
           {{ .firstActiveFrame }}
