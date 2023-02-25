@@ -989,7 +989,7 @@ neutralSpecial:
       base:
         from: 6
         to: 3
-        scaling:
+        scaling: linear
       scaling: 70
     hitstunModifier: 0.9
     hitpause:
@@ -1011,7 +1011,7 @@ neutralSpecial:
       base:
         from: 7
         to: 3
-        scaling:
+        scaling: linear
       scaling: 100
     hitstunModifier: 0.9
     hitpause:
@@ -1072,7 +1072,9 @@ neutralSpecial:
 - name: Ghost Glove
   cost: 1400
   hitboxes:
-  - startup: 6
+  - startup:
+      initial: 16
+      loop: 7
     active:
       minimum:
         from: 17
@@ -1087,9 +1089,15 @@ neutralSpecial:
       overTwoGloves: 27
     cancellable:
     - with: Autocancel (Land)
-      from: 18
-      to: 43
-      window: 22
+      during: endlag
+      hit:
+        from: 1
+        to: 15
+        window: 15
+      whiff:
+        from: 1
+        to: 27
+        window: 27
     firstActiveFrame:
       minimum: 32
     damage: 4
@@ -1105,8 +1113,10 @@ neutralSpecial:
     priority: 1
     killsProjectiles: true
     notes:
-    - Autocancel window allows you to short hop and time a fast fall to act as soon as possible after throwing the projectile.
     - On parrying a Ghost Glove, it will become transcendent when being reflected, allowing it to break other projectiles on its return.
+  notes:
+  - If airborne, frames 16 and 17 will stall when reaching the ground and prevent you from landing until frame 18.
+  - Landing anytime from frame 18 onwards during the remaining frames of endlag will cause you to immediately cancel into default landing lag.
   image:
     baseRes: https://rivals.academy/library/shovel-knight/neutral-special-ghost-glove.png
     highRes: https://rivals.academy/library/shovel-knight/1080_neutral-special-ghost-glove.png
@@ -1270,6 +1280,7 @@ upSpecial:
     hitpause:
       base: 8
       scaling: 60
+    hitLockout: 10
     priority: 6
     killsProjectiles: true
   - name: Hit 1 (Sweet)
@@ -1355,6 +1366,7 @@ upSpecial:
     priority: 8
     killsProjectiles: true
     notes:
+    - Fast-fall window assumes that Up Special does not hit a ceiling during the rising section of the move.
     - Unable to land and refresh resources until 58-.
   - name: Landing
     active:

@@ -246,7 +246,7 @@
           {{- with .input }} (Input {{ . }}){{ end }}
           {{- if .onlyOnHit }} (On Hit){{ end }}
           {{- if .onlyGrounded }} (While grounded){{ end }}:
-          {{ with .during }}{{ title . }} f{{ end -}}
+          {{ with .during }}{{ title . }} {{ end -}}
           {{ with .windows -}}
             {{ $len = len . -}}
             {{ range $index, $_ := . -}}
