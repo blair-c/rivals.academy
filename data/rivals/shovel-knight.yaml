@@ -1505,11 +1505,11 @@ taunt:
       scaling: 50
     priority: 6
     killsProjectiles: true
-    notes:
-    - "Right stick binds: Left = War Horn, Up = Mobile Gear, Right = Mail of Momentum, Down = Dynamo Mail."
-    - Purchasing an item will make it free for the remainder of the game if you choose to repurchase it, despite not being reflected in the UI.
   - name: Close Shop/Buy
     firstActiveFrame: 34
+  notes:
+  - "Right stick binds: Left = War Horn, Up = Mobile Gear, Right = Mail of Momentum, Down = Dynamo Mail."
+  - Purchasing an item will make it free for the remainder of the game if you choose to repurchase it, despite not being reflected in the UI.
   image:
     baseRes: https://rivals.academy/library/shovel-knight/taunt.png
     highRes: https://rivals.academy/library/shovel-knight/1080_taunt.png
