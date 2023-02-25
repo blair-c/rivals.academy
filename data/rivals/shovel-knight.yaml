@@ -1506,6 +1506,7 @@ taunt:
     priority: 6
     killsProjectiles: true
   - name: Close Shop/Buy
+    endlag: 33
     firstActiveFrame: 34
   notes:
   - "Right stick binds: Left = War Horn, Up = Mobile Gear, Right = Mail of Momentum, Down = Dynamo Mail."
