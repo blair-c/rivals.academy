@@ -5,10 +5,12 @@
 {{ $active := false }}
 {{ $capture := false }}
 {{ $airBrakes := false }}
+{{ $projectileInvuln := false }}
 {{ $endlag := false }}
 {{ $cancellable := false }}
 {{ $firstActiveFrame := false }}
 {{ $landingLag := false }}
+{{ $lifetime := false }}
 {{ $cooldown := false }}
 {{ $damage := false }}
 {{ $angle := false }}
@@ -27,6 +29,9 @@
 {{ $movesRocks := false }}
 {{ $setsOnFire := false }}
 {{ $consumesFire := false }}
+{{ $appliesMark := false }}
+{{ $wrapsMarked := false }}
+{{ $wrapLockout := false }}
 {{ $notes := false}}
 {{/*  Iterate through rows, set existing columns to true  */}}
 {{ range .hitboxes }}
@@ -34,10 +39,12 @@
   {{ if isset . "active" }} {{ $active = true }} {{ end }}
   {{ if isset . "capture" }} {{ $capture = true }} {{ end }}
   {{ if isset . "airBrakes" }} {{ $airBrakes = true }} {{ end }}
+  {{ if isset . "projectileInvuln" }} {{ $projectileInvuln = true }} {{ end }}
   {{ if isset . "endlag" }} {{ $endlag = true }} {{ end }}
   {{ if isset . "cancellable" }} {{ $cancellable = true }} {{ end }}
   {{ if isset . "firstActiveFrame" }} {{ $firstActiveFrame = true }} {{ end }}
   {{ if isset . "landingLag" }} {{ $landingLag = true }} {{ end }}
+  {{ if isset . "lifetime" }} {{ $lifetime = true }} {{ end }}
   {{ if isset . "cooldown" }} {{ $cooldown = true }} {{ end }}
   {{ if isset . "damage" }} {{ $damage = true }} {{ end }}
   {{ if isset . "angle" }} {{ $angle = true }} {{ end }}
@@ -56,6 +63,9 @@
   {{ if isset . "movesRocks" }} {{ $movesRocks = true }} {{ end }}
   {{ if isset . "setsOnFire" }} {{ $setsOnFire = true }} {{ end }}
   {{ if isset . "consumesFire" }} {{ $consumesFire = true }} {{ end }}
+  {{ if isset . "appliesMark" }} {{ $appliesMark = true }} {{ end }}
+  {{ if isset . "wrapsMarked" }} {{ $wrapsMarked = true }} {{ end }}
+  {{ if isset . "wrapLockout" }} {{ $wrapLockout = true }} {{ end }}
   {{ if isset . "notes" }} {{ $notes = true }} {{ end }}
 {{ end }}
 {{/*  Dummy variables  */}}
@@ -70,10 +80,12 @@
         {{ if $active }}<th>Active</th>{{ end }}
         {{ if $capture }}<th>Capture</th>{{ end }}
         {{ if $airBrakes }}<th>Air Brakes</th>{{ end }}
+        {{ if $projectileInvuln }}<th>Projectile Invuln.</th>{{ end }}
         {{ if $endlag }}<th>Endlag</th>{{ end }}
         {{ if $cancellable }}<th>Cancellable</th>{{ end }}
         {{ if $firstActiveFrame }}<th>FAF</th>{{ end }}
         {{ if $landingLag }}<th>Landing Lag</th>{{ end }}
+        {{ if $lifetime }}<th>Lifetime</th>{{ end }}
         {{ if $cooldown }}<th>Cooldown</th>{{ end }}
         {{ if $damage }}<th>Damage</th>{{ end }}
         {{ if $angle }}<th>Angle</th>{{ end }}
@@ -92,6 +104,9 @@
         {{ if $movesRocks }}<th>Moves Kragg/SK Rocks</th>{{ end }}
         {{ if $setsOnFire }}<th>Sets On Fire</th>{{ end }}
         {{ if $consumesFire }}<th>Consumes Fire</th>{{ end }}
+        {{ if $appliesMark }}<th>Applies Watcher's Mark</th>{{ end }}
+        {{ if $wrapsMarked }}<th>Wraps Marked Opponents</th>{{ end }}
+        {{ if $wrapLockout }}<th>Wrap Lockout</th>{{ end }}
         {{ if $notes }}<th class="align-left">Notes</th>{{ end }}
       </tr>
     </thead>
@@ -103,16 +118,20 @@
 
       {{ if $startup }}<td>
         {{ if reflect.IsMap .startup }}
-          {{ if isset .startup "fromLanding" }}
-            {{ .startup.fromLanding }} (From landing)
-          {{ end }}
           {{ if isset .startup "loop" -}}
             {{ .startup.initial }} ({{ .startup.loop }} in loop)
           {{ else }}
             {{ with .startup.initial }}{{ . }} (Initial)<br>{{ end }}
-            {{ with .startup.cloud }}{{ . }} (Cloud){{ end }}
             {{ with .startup.charge }}{{ . }} (Charge)<br>{{ end }}
+            {{ with .startup.root }}{{ . }} (Root){{ end }}
+            {{ with .startup.tether }}{{ . }} (Tether){{ end }}
+            {{ with .startup.lily }}{{ . }} (Lily){{ end }}
+            {{ with .startup.cloud }}{{ . }} (Cloud){{ end }}
             {{ with .startup.dagger }}{{ . }} (Dagger){{ end }}
+          {{ end }}
+          {{ with .startup.fromLanding }}{{ . }} (From landing){{ end }}
+          {{ if isset .startup "targetInHitstun" }}
+            {{ .startup.targetNotInHitstun }} ({{ .startup.targetInHitstun}} if target in hitstun)
           {{ end }}
         {{- else }}{{ .startup }}{{ end -}}
       </td>{{ end }}
@@ -189,6 +208,53 @@
             {{ end }}
             ]
           {{ end -}}
+
+          {{ with .active.soonest }}
+            {{ if isset . "loop" }}
+              {{ with .minimum }}
+                {{ if reflect.IsSlice . }}
+                  {{ $len = len . }}
+                  {{ range $index, $_ := . }}
+                    {{ with .on }}{{ . }}{{ end -}}
+                    {{ with .from }}{{ . }}-{{ end -}}
+                    {{ with .to }}{{ . }}{{ end -}}
+                    {{ if lt (add $index 1) $len }}, {{ end -}}
+                  {{ end -}}
+                {{ else }}
+                  {{ with .on }}{{ . }}{{ end -}}
+                  {{ with .from }}{{ . }}-{{ end -}}
+                  {{ with .to }}{{ . }}{{ end -}}
+                {{ end }}
+              {{ end }}
+              {{ with .loop }}
+                [
+                {{ $len = 2 }}{{ $iter = slice . . -}}
+                {{- range $index, $_ := $iter }}
+                  {{- $counter = mul $index (add .frames .gap) -}}
+                  {{ add .start $counter }}-
+                  {{- sub (add (add .start .frames) $counter) 1 }}
+                  {{- if lt (add $index 1) $len }}, {{ else }}...{{ end -}}
+                {{ end }}
+                ]
+              {{- end }}
+            {{ else }}
+              {{ if reflect.IsSlice . }}
+                {{ $len = len . }}
+                {{ range $index, $_ := . }}
+                  {{ with .on }}{{ . }}{{ end -}}
+                  {{ with .from }}{{ . }}-{{ end -}}
+                  {{ with .to }}{{ . }}{{ end -}}
+                  {{ if lt (add $index 1) $len }}, {{ end -}}
+                {{ end -}}
+              {{ else }}
+                {{ with .on }}{{ . }}{{ end -}}
+                {{ with .from }}{{ . }}-{{ end -}}
+                {{ with .to }}{{ . }}{{ end -}}
+              {{ end }}
+            {{ end }}
+            (Soonest)
+          {{ end }}
+
           {{- with .active.grounded }}
             Grounded:
             {{ with .on }}{{ . }}{{ end -}}
@@ -201,6 +267,14 @@
             {{ with .from }}{{ . }}-{{ end -}}
             {{ with .to }}{{ . }}{{ end }}
           {{- end -}}
+          {{ if isset .active "targetInHitstun" }}
+            {{ with .active.targetNotInHitstun.on }}{{ . }}{{ end -}}
+            {{ with .active.targetNotInHitstun.from }}{{ . }}-{{ end -}}
+            {{ with .active.targetNotInHitstun.to }}{{ . }}{{ end }}
+            ({{ with .active.targetInHitstun.on }}{{ . }}{{ end -}}
+            {{ with .active.targetInHitstun.from }}{{ . }}-{{ end -}}
+            {{ with .active.targetInHitstun.to }}{{ . }}{{ end }} if target not in hitstun)
+          {{ end }}
         {{ end -}}
       </td>{{ end }}
 
@@ -217,6 +291,12 @@
         {{ end }}
       </td>{{ end }}
 
+      {{ if $projectileInvuln }}<td>
+        {{ with .projectileInvuln }}
+          {{ .during }} ({{ .from }}-{{ .to }})
+        {{ end }}
+      </td>{{ end }}
+
       {{ if $endlag }}<td>
         {{ if isset .endlag "hit" }}
           {{ .endlag.hit }} /
@@ -228,7 +308,10 @@
           {{ else }} - {{ end -}}<br>
         {{ end }}
         {{ if reflect.IsMap .endlag }}
-          {{ with .endlag.grounded }}Grounded: {{ . }}<br>{{ end }}
+          {{ with .endlag.grounded }}
+            Grounded: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}<br>
+          {{ end }}
+          {{ with .endlag.groundedReverse }}Reverse (Grounded): {{ . }}<br>{{ end }}
           {{ with .endlag.airborne }}Airborne: {{ . }}<br>{{ end }}
           {{ with .endlag.cancel }}
             Cancel: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}
@@ -243,10 +326,14 @@
       {{ if $cancellable }}<td>
         {{ range .cancellable }}
           {{ .with }}
-          {{- with .input }} (Input {{ . }}){{ end }}
           {{- if .onlyOnHit }} (On Hit){{ end }}
-          {{- if .onlyGrounded }} (While grounded){{ end }}:
-          {{ with .during }}{{ title . }} {{ end -}}
+          {{- if .onlyGrounded }} (While grounded){{ end }}
+          {{- with .input }} (Input {{ . }}){{ end }}
+          {{- with .tether }} (
+            {{- if .targetInHitstun }}Target in hitstun{{ end }}
+            {{- with .direction }}, Tether {{ . }}{{ end }})
+          {{- end }}:
+          {{ with .during }}{{ title . }} f{{ end -}}
           {{ with .windows -}}
             {{ $len = len . -}}
             {{ range $index, $_ := . -}}
@@ -282,6 +369,7 @@
             {{ .firstActiveFrame.hit }} /
             {{ with .firstActiveFrame.whiff }}{{ . }}{{ else }}-{{ end }}<br>
           {{ end }}
+          {{ with .firstActiveFrame.soonest }}{{ . }} (Soonest){{ end }}
           {{ with .firstActiveFrame.minimum }}{{ . }} (Minimum){{ end }}
           {{ with .firstActiveFrame.possible }}
             [
@@ -292,12 +380,14 @@
             ]
           {{ end -}}
           {{ with .firstActiveFrame.grounded }}Grounded: {{ . }}<br>{{ end }}
+          {{ with .firstActiveFrame.groundedReverse }}Reverse (Grounded): {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.onLanding }}On Landing: {{ . }}{{ end }}
           {{ with .firstActiveFrame.pratFall }}Prat Fall w/ Landing Lag: {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.cancel }}
             Cancel: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}
           {{ end }}
           {{ with .firstActiveFrame.maximum }}Maximum: {{ . }}<br>{{ end }}
+          {{ with .firstActiveFrame.postTravelTime }}{{ . }} (Post Travel Time){{ end }}
           {{ with .firstActiveFrame.anchorIsUnableToCast }}Anchor is unable to cast: {{ . }}{{ end }}
           {{ with .firstActiveFrame.fromAnchorReachingSK }}From Anchor Reaching SK: {{ . }}{{ end }}
           {{ with .firstActiveFrame.shop }}Shop: {{ . }}{{ end }}
@@ -312,6 +402,13 @@
         {{ else }}
           {{ .landingLag }}
         {{ end -}}
+      </td>{{ end }}
+
+      {{ if $lifetime }}<td>
+        {{ if isset . "lifetime" }}
+          {{ .lifetime.duration }} ({{ .lifetime.from }}-{{ .lifetime.to }})
+          <br>Reset by: {{ .lifetime.resetBy }}
+        {{ end }}
       </td>{{ end }}
 
       {{ if $cooldown }}<td>
@@ -361,7 +458,10 @@
           {{ with .base.scaling }}({{ . }}){{ end }}
            | {{ .scaling -}}
         {{ else -}}
-          {{ .base }} | {{ .scaling }}
+          {{ .base }} |
+          {{ if reflect.IsMap .scaling }}{{ .scaling.standard }}
+            {{ with .scaling.tetherCancel }}({{ . }} after Tether){{ end }}
+          {{ else }}{{ .scaling }}{{ end }}
         {{ end -}}
       {{ end }}</td>{{ end }}
 
@@ -408,8 +508,11 @@
       {{ if $movesRocks}}<td>{{ title .movesRocks }}</td>{{ end }}
 
       {{ if $setsOnFire }}<td>{{ title .setsOnFire }}</td>{{ end }}
-
       {{ if $consumesFire }}<td>{{ title .consumesFire }}</td>{{ end }}
+
+      {{ if $appliesMark }}<td>{{ title .appliesMark }}</td>{{ end }}
+      {{ if $wrapsMarked }}<td>{{ title .wrapsMarked }}</td>{{ end }}
+      {{ if $wrapLockout }}<td>{{ title .wrapLockout }}</td>{{ end }}
 
       {{ if $notes }}<td><div class="notes align-left">
         {{ range .notes }}{{ . }} {{ end }}

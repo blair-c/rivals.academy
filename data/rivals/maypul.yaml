@@ -1,0 +1,900 @@
+name: Maypul
+element: earth
+
+# Effective Weight
+knockbackAdjustment: 1.10
+gravityAccel: 0.50
+hitstunGravityAccel: 0.50
+airFriction: 0.06
+airAccel: 0.20
+maxFallSpeed: 10
+fastFallSpeed: 15
+jumpSquat: 5
+landTime: 4
+# Ground Movement
+groundFriction: 1.00
+initialDash:
+  speed: 9.00
+  time: 10
+run:
+  speed: 9.00
+  stop:
+    time: 6
+  turn:
+    time: 10
+    accel: 2.00
+walk:
+  speed: 4.50
+  accel: 0.50
+  turn:
+    time: 6
+waveland:
+  time: 8
+  friction: 0.06
+# Aerial Movement
+maxAirSpeed: 6
+maxJumpHorizontalSpeed: 8
+fullHop:
+  speed: 10.50
+shortHop:
+  speed: 5.50
+doubleJump:
+  amount: 1
+  speed: 10.50
+wallJump:
+  speed:
+    vertical: 10
+    horizontal: 4
+pratFall:
+  accel: 0.85
+  landTime: 10
+
+hurtbox:
+  idle:
+    height: 49
+    width: 57
+  crouch:
+    height: 27
+    width: 67
+  hitstun:
+    height: 49
+    width: 57
+  image:
+    baseRes: https://rivals.academy/library/maypul/hurtbox.png
+    highRes: https://rivals.academy/library/maypul/1080_hurtbox.png
+
+# Normals
+jab:
+  hitboxes:
+  - name: Jab 1
+    startup: 3
+    active:
+      minimum:
+        from: 4
+        to: 5
+        frames: 2
+      loop:
+        start: 26
+        frames: 2
+        gap: 20
+    endlag: 14
+    cancellable:
+    - with: Jab 2
+      during: endlag
+      windows:
+      - from: 7
+        to: 12
+        window: 6
+      - from: 13
+        to: 14
+        window: 2
+    - with: Tilts
+      during: endlag
+      from: 7
+      to: 14
+      window: 8
+    firstActiveFrame: 20
+    damage: 3
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    forceFlinch: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+  - name: Jab 2
+    startup: 3
+    active:
+      soonest:
+        minimum:
+          from: 15
+          to: 16
+          frames: 2
+        loop:
+          start: 37
+          frames: 2
+          gap: 20
+    endlag: 17
+    cancellable:
+    - with: Jab 1
+      during: endlag
+      from: 7
+      to: 10
+      window: 4
+    - with: Tilts
+      during: endlag
+      from: 7
+      to: 13
+      window: 7
+    firstActiveFrame:
+      soonest: 34
+    damage: 3
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - Jab 2 loops back into Jab 1.
+    - Varying startup depending on when the attack is input. A jab input within the final 2 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
+  notes:
+  - If you hit another character or object at any time during the jab loop, Maypul will be able to cancel into a turnaround tilt at any point in the loop afterwards.
+  image:
+    baseRes: https://rivals.academy/library/maypul/jab.png
+    highRes: https://rivals.academy/library/maypul/1080_jab.png
+
+dashAttack:
+  hitboxes:
+  - name: Hit 1
+    startup: 8
+    active:
+      from: 9
+      to: 14
+      frames: 6
+    damage: 3
+    angle: 30
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 0
+    hitstunModifier: 1
+    forceFlinch: 2
+    untechable: true
+    hitpause:
+      base: 7
+      scaling: 10
+    priority: 2
+    killsProjectiles: true
+    notes:
+    - Repositions characters during hitpause, scaling based on how late into the active frames it hits.
+  - name: Hit 2
+    active:
+      from: 20
+      to: 23
+      frames: 4
+    endlag:
+      hit: 13
+      whiff: 20
+    firstActiveFrame: 44
+    damage: 3
+    angle: 70
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 25
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/maypul/dash-attack.png
+    highRes: https://rivals.academy/library/maypul/1080_dash-attack.png
+
+forwardTilt:
+  hitboxes:
+  - startup: 4
+    active:
+      from: 5
+      to: 8
+      frames: 4
+    endlag:
+      hit: 11
+      whiff: 17
+    firstActiveFrame: 26
+    damage: 8
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 60
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/maypul/forward-tilt.png
+    highRes: https://rivals.academy/library/maypul/1080_forward-tilt.png
+
+upTilt:
+  hitboxes:
+  - startup: 8
+    active:
+      from: 9
+      to: 12
+      frames: 4
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 28
+    damage: 8
+    angle: 80
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 50
+    priority: 2
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/maypul/up-tilt.png
+    highRes: https://rivals.academy/library/maypul/1080_up-tilt.png
+
+downTilt:
+  hitboxes:
+  - startup: 4
+    active:
+      from: 5
+      to: 7
+      frames: 3
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 23
+    damage: 7
+    angle: 70
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 35
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 35
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/maypul/down-tilt.png
+    highRes: https://rivals.academy/library/maypul/1080_down-tilt.png
+
+# Aerials
+neutralAir:
+  hitboxes:
+  - name: Early
+    startup: 8
+    active:
+      from: 9
+      to: 10
+      frames: 2
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 8
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 7
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 45
+    priority: 1
+    killsProjectiles: true
+  - name: Late
+    active:
+      from: 11
+      to: 15
+      frames: 5
+    endlag:
+      hit: 9
+      whiff: 14
+    firstActiveFrame: 30
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 4
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 5
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 20
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/maypul/neutral-air.png
+    highRes: https://rivals.academy/library/maypul/1080_neutral-air.png
+
+forwardAir:
+  hitboxes:
+  - name: Sour
+    startup: 12
+    active:
+      from: 13
+      to: 15
+      frames: 3
+    endlag:
+      hit: 14
+      whiff: 21
+    firstActiveFrame: 37
+    landingLag:
+      hit: 6
+      whiff: 9
+    damage: 8
+    angle: -50
+    angleFlipper: 0
+    knockback:
+      base: 5.5
+      scaling: 65
+    hitstunModifier: 0.8
+    hitpause:
+      base: 5
+      scaling: 20
+    priority: 2
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/maypul/forward-air.png
+    highRes: https://rivals.academy/library/maypul/1080_forward-air.png
+
+backAir:
+  hitboxes:
+  - name: Hit 1
+    startup: 6
+    active:
+      from: 7
+      to: 8
+      frames: 2
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 4
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 5
+      scaling: 25
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 25
+    priority: 2
+    killsProjectiles: true
+  - name: Hit 2
+    active:
+      from: 13
+      to: 15
+      frames: 3
+    endlag:
+      hit: 8
+      whiff: 12
+    firstActiveFrame: 28
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 5
+    angle: 361
+    angleFlipper: 5
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 25
+    priority: 2
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/maypul/back-air.png
+    highRes: https://rivals.academy/library/maypul/1080_back-air.png
+
+upAir:
+  hitboxes:
+  - name: Hit 1-2
+    startup: 8
+    active:
+    - from: 9
+      to: 10
+      frames: 2
+    - from: 13
+      to: 14
+      frames: 2
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 2
+    angle: 60
+    angleFlipper: 4
+    knockback:
+      base: 3
+      scaling:
+        standard: 10
+        tetherCancel: 20
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    asdiModifier: 1.2
+    priority:
+    - hitbox: TODO
+      priority: 2
+    - hitbox: TODO
+      priority: 1
+    killsProjectiles: true
+    notes:
+    - Doubled knockback scaling after cancelling Tether endlag into Up Air makes it easier to DI up to escape the final hit.
+  - name: Hit 3
+    active:
+      from: 21
+      to: 23
+      frames: 3
+    endlag:
+      hit: 6
+      whiff: 9
+    firstActiveFrame: 33
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 5
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 70
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 80
+    priority:
+    - hitbox: TODO
+      priority: 2
+    - hitbox: TODO
+      priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/maypul/up-air.png
+    highRes: https://rivals.academy/library/maypul/1080_up-air.png
+
+downAir:
+  hitboxes:
+  - startup:
+      initial: 7
+      root: 3
+    active:
+      from: 11
+      to: 18
+      frames: 8
+    endlag:
+      hit: 24
+      whiff: 33
+    firstActiveFrame: 41
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 5
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 3
+    extendedParryStun: true
+    killsProjectiles: true
+    notes:
+    - Interrupting Maypul before frame 8 will prevent root from spawning.
+  image:
+    baseRes: https://rivals.academy/library/maypul/down-air.png
+    highRes: https://rivals.academy/library/maypul/1080_down-air.png
+
+# Strongs
+forwardStrong:
+  hitboxes:
+  - startup: 20
+    active:
+      from: 21
+      to: 23
+      frames: 3
+    endlag:
+      hit: 17
+      whiff: 26
+    firstActiveFrame: 50
+    damage: 11
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 100
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 70
+    priority: 7
+    killsProjectiles: true
+    wrapsMarked: true
+    wrapLockout: 3
+  image:
+    baseRes: https://rivals.academy/library/maypul/forward-strong.png
+    highRes: https://rivals.academy/library/maypul/1080_forward-strong.png
+
+upStrong:
+  hitboxes:
+  - startup: 22
+    active:
+      from: 23
+      to: 28
+      frames: 6
+    endlag:
+      hit: 17
+      whiff: 26
+    firstActiveFrame: 55
+    damage: 11
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 7.5
+      scaling: 120
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 70
+    priority: 7
+    killsProjectiles: true
+    wrapsMarked: true
+    wrapLockout: 3
+  - name: Tip
+    active:
+      from: 23
+      to: 28
+      frames: 6
+    damage: 11
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 6.5
+      scaling: 110
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 70
+    priority: 5
+    killsProjectiles: true
+    wrapsMarked: true
+    wrapLockout: 3
+  image:
+    baseRes: https://rivals.academy/library/maypul/up-strong.png
+    highRes: https://rivals.academy/library/maypul/1080_up-strong.png
+
+downStrong:
+  hitboxes:
+  - name: Hit 1
+    startup: 12
+    active:
+      from: 13
+      to: 15
+      frames: 3
+    damage: 10
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 110
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 70
+    priority: 7
+    killsProjectiles: true
+    wrapsMarked: true
+    wrapLockout: 3
+  - name: Hit 2
+    active:
+      from: 21
+      to: 23
+      frames: 3
+    endlag:
+      hit: 13
+      whiff: 20
+    firstActiveFrame: 44
+    damage: 10
+    angle: 361
+    angleFlipper: 5
+    knockback:
+      base: 7
+      scaling: 110
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 70
+    priority: 7
+    killsProjectiles: true
+    wrapsMarked: true
+    wrapLockout: 3
+  image:
+    baseRes: https://rivals.academy/library/maypul/down-strong.png
+    highRes: https://rivals.academy/library/maypul/1080_down-strong.png
+
+# Specials
+neutralSpecial:
+  hitboxes:
+  - startup: 6
+    active:
+      from: 7
+    endlag: 13
+    firstActiveFrame: 20
+    cooldown: 20
+    damage: 2
+    angle: 55
+    angleFlipper: 0
+    knockback:
+      base: 0
+      scaling: 0
+    hitstunModifier: 0.4
+    hitpause:
+      base: 6
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+    appliesMark: true
+  image:
+    baseRes: https://rivals.academy/library/maypul/neutral-special.png
+    highRes: https://rivals.academy/library/maypul/1080_neutral-special.png
+
+sideSpecial:
+  hitboxes:
+  - startup: 8
+    active:
+      from: 9
+      to: 16
+      frames: 8
+    endlag:
+      grounded:
+        hit: 9
+        whiff: 18
+      groundedReverse: 9
+      airborne: 9
+    cancellable:
+    - with: Wall Jump
+      from: 19
+    firstActiveFrame:
+      grounded: 34
+      groundedReverse: 26
+      pratFall: 26
+    damage: 4
+    angle: 120
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 30
+    hitstunModifier: 0.8
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 2
+    killsProjectiles: false
+    appliesMark: true
+    notes:
+    - Endlag is doubled on whiff if started either on the ground or within 32px of it, so long as the move was also not reversed and the endlag does not begin while airborne.
+    - Snaps to the ledge within 20px.
+  notes:
+  - Aerial forward special will travel further than grounded forward special.
+  image:
+    baseRes: https://rivals.academy/library/maypul/side-special.png
+    highRes: https://rivals.academy/library/maypul/1080_side-special.png
+
+upSpecial:
+- name: Uppercut
+  hitboxes:
+  - name: Hit 1
+    startup: 9
+    active:
+      "on": 10
+      frames: 1
+    cancellable:
+    - with: Platform Drop
+      onlyOnHit: true
+      during: endlag
+      "on": 1
+    damage: 2
+    angle: 95
+    angleFlipper: 7
+    knockback:
+      base: 8
+      scaling: 50
+    hitstunModifier: 2
+    forceFlinch: 1
+    hitpause:
+      base: 8
+      scaling: 0
+      extra: 1
+    priority: 2
+    killsProjectiles: true
+    notes:
+    - On being parried, Maypul is unable to drop through platforms for a short period of time, extending a few frames into the prat-fall state.
+  - name: Hit 2
+    active:
+      from: 11
+      to: 18
+      frames: 8
+    endlag: 14
+    firstActiveFrame:
+      pratFall: 33
+    damage: 8
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 100
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 80
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/maypul/up-special-uppercut.png
+    highRes: https://rivals.academy/library/maypul/1080_up-special-uppercut.png
+- name: Tether
+  hitboxes:
+  - startup:
+      initial: 9
+      tether: 5
+    projectileInvuln:
+      from: 15
+      during: Travel Time
+    endlag: 7
+    cancellable:
+    - with: Specials, except up special
+      during: endlag
+      from: 1
+      to: 7
+      window: 7
+    - with: Aerials/Airdodge
+      tether:
+        targetInHitstun: true
+        direction: left/right
+      during: endlag
+      from: 1
+      to: 7
+      window: 7
+    firstActiveFrame:
+      postTravelTime: 8
+  notes:
+  - Tether's travel time scales with distance, the direction you travel to (Above, In Front, Behind) and whether the marked player is in hitstun or not. Tether travel time is 3 times faster when the marked player is in hitstun and a minimum 5 frames slower when they are not.
+  - Hitstun distinction registered at the start of tether.
+  - Cancelling tether endlag into Up Air will double the knockback scaling of the move's multi-hits.
+  - Maypul has the ability to tether to any character that has been wrapped as if they are marked and in hitstun.						
+  image:
+    baseRes: https://rivals.academy/library/maypul/up-special-tether.png
+    highRes: https://rivals.academy/library/maypul/1080_up-special-tether.png
+
+downSpecial:
+- name: Place Lily
+  hitboxes:
+  - startup:
+      initial: 29
+      lily: 45
+    endlag: 3
+    firstActiveFrame: 25
+    lifetime:
+      from: 75
+      to: 555
+      duration: 480
+      resetBy: Feeding Lily a seed
+    cooldown:
+    - move: Lily
+      time: 600
+  notes:
+  - Lily will spit an active seed up in the air upon eating it. If this seed does not collide with another character, object or platform it will then be swallowed by Lily again, resetting her lifetime duration a second time before disappearing.
+  - Maypul can place Lily again during Lily's despawn animation, as well as during the hitpause of Lily's bite.
+- name: Lily's Bite
+  hitboxes:
+  - startup:
+      targetNotInHitstun: 8
+      targetInHitstun: 3
+    active:
+      targetNotInHitstun:
+        "on": 9
+        frames: 1
+      targetInHitstun:
+        "on": 4
+        frames: 1
+    cooldown:
+    - move: Lily
+      time: 228
+      "on": Parry
+    damage: 8
+    angle: 361
+    angleFlipper: 3
+    knockback:
+      base: 6
+      scaling: 30
+    hitstunModifier: 0.9
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+    wrapsMarked: In Hitstun
+    notes:
+    - Lily will always start her attack 1 frame after detecting an opponent in her range, increasing her effective startup by 1. This is reflected in the animation for the attack.
+  notes:
+    - Maypul can place Lily again during Lily's despawn animation, as well as during the hitpause of Lily's bite.
+    - If Bite is initiated by a character with Watcher's Mark but does not succesfully hit them, that character's Watcher's Mark will be removed.
+  image:
+    baseRes: https://rivals.academy/library/maypul/down-special-bite.png
+    highRes: https://rivals.academy/library/maypul/1080_down-special-bite.png
+- name: Aerial
+  hitboxes:
+  - startup: 13
+    active:
+      from: 14
+      to: 21
+      frames: 8
+    endlag: 11
+    cancellable:
+    - with: Side Special
+      during: endlag
+      from: 3
+      to: 11
+      window: 9
+    firstActiveFrame: 33
+    landingLag: 8
+    damage: 4
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 20
+    hitstunModifier: 0.85
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 2
+    killsProjectiles: false
+    appliesMark: true
+  notes:
+  - Holding down will allow down-special to travel through platforms.
+  image:
+    baseRes: https://rivals.academy/library/maypul/down-special-aerial.png
+    highRes: https://rivals.academy/library/maypul/1080_down-special-aerial.png
+
+# Character Mechanics
+wrap:
+  base: 34
+  scaling: 0.13
+  distanceScaling:
+    minimum: 0.75

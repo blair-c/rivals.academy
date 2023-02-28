@@ -105,9 +105,10 @@ jab:
   - name: Jab 2
     startup: 5
     active:
-      from: 6
-      to: 7
-      frames: 2
+      soonest:
+        from: 19
+        to: 20
+        frames: 2
     endlag: 16
     cancellable:
     - with: Jab 3
@@ -124,7 +125,8 @@ jab:
       from: 8
       to: 16
       window: 9
-    firstActiveFrame: 24
+    firstActiveFrame:
+      soonest: 37
     damage: 4
     angle: 361
     angleFlipper: 6
@@ -140,11 +142,13 @@ jab:
   - name: Jab 3
     startup: 5
     active:
-      from: 6
-      to: 7
-      frames: 2
+      soonest:
+        from: 33
+        to: 34
+        frames: 2
     endlag: 17
-    firstActiveFrame: 25
+    firstActiveFrame:
+      soonest: 52
     damage: 6
     angle: 361
     angleFlipper: 6

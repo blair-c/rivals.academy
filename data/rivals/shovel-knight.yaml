@@ -1458,6 +1458,11 @@ downSpecial:
   - startup: 1
     active:
       from: 2
+    lifetime:
+      from: 1
+      to: 600
+      duration: 600
+      resetBy: Hitting Treasure Pile
     damage: 2
     angle: 60
     angleFlipper: 0
@@ -1475,7 +1480,6 @@ downSpecial:
     - Becomes inactive on landing.
   notes:
   - Reeling in from frame 13 of a catch onwards will result in a Treasure Pile.
-  - Treaure Pile will remain onscreen for 600 frames, the timer for which begins immediately on beginning to reel it in. This 600 frame lifetime resets upon hitting it, reducing it in size if the rock has not been destroyed.
   - Treasure Pile has 20 health in total and reduces in size slightly every 4 damage that's dealt to it.
   - Only one treasure pile can be active at once, and reeling in a new one will cause the previous one to disappear.
   image:
