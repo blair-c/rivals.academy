@@ -808,15 +808,15 @@ downSpecial:
       initial: 29
       lily: 45
     endlag: 3
-    firstActiveFrame: 25
+    firstActiveFrame: 33
     lifetime:
       from: 75
-      to: 555
+      to: 554
       duration: 480
       resetBy: Feeding Lily a seed
     cooldown:
     - move: Lily
-      time: 600
+      time: 480
   notes:
   - Lily will spit an active seed up in the air upon eating it. If this seed does not collide with another character, object or platform it will then be swallowed by Lily again, resetting her lifetime duration a second time before disappearing.
   - Maypul can place Lily again during Lily's despawn animation, as well as during the hitpause of Lily's bite.
