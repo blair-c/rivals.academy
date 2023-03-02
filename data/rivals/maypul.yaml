@@ -734,7 +734,7 @@ upSpecial:
     knockback:
       base: 8
       scaling: 50
-    hitstunModifier: 2
+    hitstunModifier: 1
     forceFlinch: 1
     hitpause:
       base: 8
@@ -796,7 +796,7 @@ upSpecial:
   - Tether's travel time scales with distance, the direction you travel to (Above, In Front, Behind) and whether the marked player is in hitstun or not. Tether travel time is 3 times faster when the marked player is in hitstun and a minimum 5 frames slower when they are not.
   - Hitstun distinction registered at the start of tether.
   - Cancelling tether endlag into Up Air will double the knockback scaling of the move's multi-hits.
-  - Maypul has the ability to tether to any character that has been wrapped as if they are marked and in hitstun.						
+  - Maypul has the ability to tether to any character that has been wrapped as if they are marked and in hitstun.
   image:
     baseRes: https://rivals.academy/library/maypul/up-special-tether.png
     highRes: https://rivals.academy/library/maypul/1080_up-special-tether.png

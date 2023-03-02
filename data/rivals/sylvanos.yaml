@@ -1,0 +1,1453 @@
+name: Sylvanos
+element: earth
+
+# Effective Weight
+knockbackAdjustment: 0.95
+gravityAccel: 0.60
+hitstunGravityAccel: 0.51
+airFriction: 0.06
+airAccel: 0.20
+maxFallSpeed: 11
+fastFallSpeed: 16
+jumpSquat: 5
+landTime: 6
+# Ground Movement
+groundFriction: 0.80
+initialDash:
+  speed: 8.00
+  time: 10
+run:
+  speed: 7.50
+  stop:
+    time: 4
+  turn:
+    time: 10
+    accel: 2.00
+walk:
+  speed: 4.50
+  accel: 0.35
+  turn:
+    time: 6
+waveland:
+  time: 8
+  friction: 0.06
+# Aerial Movement
+maxAirSpeed: 4
+maxJumpHorizontalSpeed: 8
+fullHop:
+  speed: 12.00
+shortHop:
+  speed: 7.40
+doubleJump:
+  amount: 1
+  speed: 12.00
+wallJump:
+  speed:
+    vertical: 9
+    horizontal: 6
+pratFall:
+  accel: 1.50
+  landTime: 15
+
+hurtbox:
+  idle:
+    height: 44
+    width: 75
+  crouch:
+    height: 27
+    width: 75
+  hitstun:
+    height: 57
+    width: 75
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/hurtbox.png
+    highRes: https://rivals.academy/library/sylvanos/1080_hurtbox.png
+
+# Normals
+jab:
+- hitboxes:
+  - name: Jab 1
+    startup: 5
+    active:
+      from: 6
+      to: 7
+      frames: 2
+    endlag: 15
+    cancellable:
+    - with: Jab 2
+      during: endlag
+      windows:
+      - from: 6
+        to: 13
+        window: 8
+      - from: 14
+        to: 15
+        window: 2
+    - with: Tilts
+      during: endlag
+      from: 6
+      to: 15
+      window: 8
+    firstActiveFrame: 23
+    damage: 4
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    forceFlinch: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+  - name: Jab 2
+    startup: 4
+    active:
+      soonest:
+        from: 17
+        to: 18
+        frames: 2
+    endlag: 18
+    cancellable:
+    - with: Jab 2
+      during: endlag
+      windows:
+      - from: 6
+        to: 16
+        window: 11
+      - from: 17
+        to: 18
+        window: 2
+    - with: Tilts
+      during: endlag
+      from: 6
+      to: 18
+      window: 13
+    firstActiveFrame:
+      soonest: 37
+    damage: 4
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+  - name: Jab 3
+    startup:
+      initial: 6
+      loop: 12
+    active:
+      soonest:
+        minimum:
+          from: 30
+          to: 31
+          frames: 2
+        loop:
+          start: 44
+          frames: 2
+          gap: 12
+    endlag:
+      jab34: 18
+      following: 27
+    firstActiveFrame:
+      soonest: 50
+    damage: 6
+    angle: 55
+    angleFlipper: 6
+    knockback:
+      base: 11
+      scaling: 25
+    hitstunModifier: 0.75
+    hitpause:
+      base: 6
+      scaling: 30
+    priority: 1
+    killsProjectiles: true
+  notes:
+  - Jab combos have varying startup depending on when the attack is input. A jab input within the final 2 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/jab.png
+    highRes: https://rivals.academy/library/sylvanos/1080_jab.png
+- name: Jab Special Finisher
+  hitboxes:
+  - name: Tail Swipe
+    startup: 5
+    active:
+      soonest:
+        from: 29
+        to: 31
+        frames: 3
+    endlag:
+      hit: 13
+      whiff: 20
+    firstActiveFrame:
+      soonest: 52
+    damage: 5
+    angle: 30
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 20
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 10
+    priority: 6
+    killsProjectiles: true
+    notes:
+    - Interrupting Sylvanos prevents Petal Wave from spawning.							
+  - name: Petal Wave
+    startup: 16
+    active:
+      soonest:
+        loop:
+          start: 40
+          frames: 3
+          gap: 0
+    damage: 2
+    angle: 30
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    hitLockout: 4
+    priority: 1
+    extendedParryStun: true
+    killsProjectiles: false
+    notes:
+    - Grass is spawned behind the wave of petals as they travel accross the ground.
+  notes:
+  - Replaces Jab 3						
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/jab-special.png
+    highRes: https://rivals.academy/library/sylvanos/1080_jab-special.png
+
+dashAttack:
+  hitboxes:
+  - name: Early
+    startup: 6
+    active:
+      from: 7
+      to: 9
+      frames: 3
+    damage: 9
+    angle: 60
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 75
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 70
+    priority: 8
+    killsProjectiles: true
+  - name: Late
+    active:
+      from: 10
+      to: 16
+      frames: 7
+    endlag:
+      hit: 19
+      whiff: 29
+    firstActiveFrame: 46
+    damage: 6
+    angle: 60
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 45
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 40
+    priority: 4
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/dash-attack.png
+    highRes: https://rivals.academy/library/sylvanos/1080_dash-attack.png
+
+forwardTilt:
+- hitboxes:
+  - name: Physical
+    startup: 8
+    active:
+      from: 9
+      to: 11
+      frames: 3
+    endlag: 30
+    firstActiveFrame: 47
+    damage: 3
+    angle: 30
+    angleFlipper: 0
+    knockback:
+      base: 4.75
+      scaling: 0
+    hitstunModifier: 1
+    untechable: true
+    hitpause:
+      base: 6
+      scaling: 10
+    priority: 6
+    killsProjectiles: true
+  - name: Seed Shot
+    active:
+      from: 17
+    cooldown: 20
+    damage: 4
+    angle: 60
+    angleFlipper: 3
+    knockback:
+      base: 4
+      scaling: 35
+    hitstunModifier: 0.5
+    hitpause:
+      base: 6
+      scaling: 10
+    priority: 1
+    killsProjectiles: true
+    notes:
+    - You can control the horizontal and vertical trajectory of the seed by holding any direction on the left stick before it spawns.
+  - name: Seed Multihit
+    active:
+      mustConnect: Seed Shot
+      onHit:
+      - "on": 6
+        frames: 1
+      - "on": 11
+        frames: 1
+      - "on": 16
+        frames: 1
+      - "on": 21
+        frames: 1
+    damage: 1
+    angle: 60
+    angleFlipper: 3
+    knockback:
+      base: 4
+      scaling: 20
+    hitstunModifier: 0.9
+    hitpause:
+      base: 3
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+    notes:
+    - Not active during hitpause.
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/forward-tilt.png
+    highRes: https://rivals.academy/library/sylvanos/1080_forward-tilt.png
+- name: Flower
+  hitboxes:
+  - projectileInvuln:
+      onLanding:
+        from: 1
+        to: 60
+        frames: 60
+        onlyLessThan8: True
+  notes:
+  - Maintains all grass on the current platform or ground it is occupying, preventing it from being removed if Sylvanos leaves that surface for too long.
+  - Can have 3 flowers placed at a time, with the oldest flower being removed from play if a new flower is spawned (seeds can still be spawned freely).
+  - A spawned flower will grow a small patch of grass, likewise, destroying flower will also destroy a small area of grass, unless the grass is currently inactive.
+  - If the ground beneath a flower disappears it will snap to the nearest ground within 32px, otherwise it will be destroyed.
+  - Hitting only a flower will cause the players move to have halved hitpause.
+
+upTilt:
+  hitboxes:
+  - name: Hit 1-2
+    startup: 8
+    active:
+    - from: 9
+      to: 10
+      frames: 2
+    - from: 13
+      to: 14
+      frames: 2
+    damage: 2
+    angle: 70
+    angleFlipper: 9
+    knockback:
+      base: 7
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+  - name: Hit 3
+    active:
+      from: 17
+      to: 18
+      frames: 2
+    endlag:
+      hit: 13
+      whiff: 20
+    firstActiveFrame: 39
+    damage: 4
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 30
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/up-tilt.png
+    highRes: https://rivals.academy/library/sylvanos/1080_up-tilt.png
+
+downTilt:
+  hitboxes:
+  - name: Hit 1 (Sour)
+    startup: 9
+    active:
+      from: 10
+      to: 11
+      frames: 2
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 29
+    damage: 3
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 35
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+      extra: 4
+    priority: 1
+    killsProjectiles: true
+  - name: Hit 1 (Sweet)
+    active:
+      from: 10
+      to: 11
+      frames: 2
+    damage: 5
+    angle: 100
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 0
+      extra: 4
+    priority: 6
+    killsProjectiles: true
+  - name: Hit 2 (Sour)
+    active:
+      from: 14
+      to: 16
+      frames: 3
+    endlag:
+      hit: 14
+      whiff: 21
+    firstActiveFrame: 38
+    damage: 3
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 35
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 30
+    priority: 1
+    killsProjectiles: true
+  - name: Hit 2 (Sweet)
+    active:
+      from: 14
+      to: 16
+      frames: 3
+    damage: 5
+    angle: 100
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 40
+    priority: 6
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/down-tilt.png
+    highRes: https://rivals.academy/library/sylvanos/1080_down-tilt.png
+
+# Aerials
+neutralAir:
+  hitboxes:
+  - startup: 8
+    active:
+    - "on": 9
+      frames: 1
+    - "on": 12
+      frames: 1
+    - "on": 15
+      frames: 2
+    - from: 18
+      to: 20
+      frames: 3
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 36
+    landingLag:
+      hit: 6
+      whiff: 8
+    damage: 2
+    angle: 300
+    angleFlipper: 4
+    knockback:
+      base: 3
+      scaling: 20
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 10
+    priority: 2
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/neutral-air.png
+    highRes: https://rivals.academy/library/sylvanos/1080_neutral-air.png
+
+forwardAir:
+  hitboxes:
+  - name: Sour
+    startup: 12
+    active:
+      from: 13
+      to: 15
+      frames: 3
+    endlag:
+      hit: 12
+      whiff: 18
+    firstActiveFrame: 34
+    landingLag:
+      hit: 8
+      whiff: 12
+    damage: 6
+    angle: 55
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 25
+    priority: 3
+    killsProjectiles: true
+  - name: Sweet
+    active:
+      from: 13
+      to: 15
+      frames: 3
+    landingLag:
+      hit: 8
+      whiff: 12
+    damage: 8
+    angle: 40
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 60
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 50
+    priority: 2
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/forward-air.png
+    highRes: https://rivals.academy/library/sylvanos/1080_forward-air.png
+
+backAir:
+- hitboxes:
+  - name: Extending Hit 1
+    startup: 15
+    angleRegistered: 15
+    active:
+      from: 16
+      to: 18
+      frames: 3
+    landingLag:
+      hit: 7
+      whiff: 11
+    damage: 5
+    angle: 135
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 30
+    hitLockout: 10
+    priority: 3
+    killsProjectiles: true
+  - name: Extending Hit 2
+    active:
+      from: 16
+      to: 18
+      frames: 3
+    landingLag:
+      hit: 7
+      whiff: 11
+    damage: 5
+    angle: 135
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 30
+    hitLockout: 10
+    priority: 4
+    killsProjectiles: true
+  - name: Extending Hit 3
+    active:
+      from: 17
+      to: 18
+      frames: 2
+    landingLag:
+      hit: 7
+      whiff: 11
+    damage: 5
+    angle: 135
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 30
+    hitLockout: 10
+    priority: 5
+    killsProjectiles: true
+  - name: Extending Hit 4
+    active:
+      "on": 18
+      frames: 1
+    landingLag:
+      hit: 7
+      whiff: 11
+    damage: 6
+    angle: 135
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 60
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 50
+    hitLockout: 10
+    priority: 6
+    killsProjectiles: true
+  - name: Tipper (Sour)
+    active:
+      "on": 18
+      frames: 1
+    landingLag:
+      hit: 7
+      whiff: 11
+    damage: 7
+    angle: 135
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 70
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 70
+    hitLockout: 10
+    priority: 7
+    killsProjectiles: true
+  - name: Tipper (Sweet)
+    active:
+      "on": 18
+      frames: 1
+    endlag:
+      hit: 20
+      whiff: 30
+    firstActiveFrame: 49
+    landingLag:
+      hit: 7
+      whiff: 11
+    damage: 16
+    angle: 158
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 100
+    hitstunModifier: 1
+    hitpause:
+      base: 12
+      scaling: 90
+    hitLockout: 10
+    priority: 8
+    killsProjectiles: true
+  notes:
+  - Bair will extend directly outwards or can be angled up or down by the player. It is possible to aim Bair using the right stick, which takes priority over your left stick input.
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/back-air.png
+    highRes: https://rivals.academy/library/sylvanos/1080_back-air.png
+- name: Pin
+  hitboxes:
+  - endlag:
+      hit: 1
+      whiff: 10
+    cancellable:
+    - with: Unpin
+      input: Bair
+      hit:
+        from: 1
+        to: 96
+        window: 96
+      whiff:
+        from: 11
+        to: 96
+        window: 86
+      endlag: 10
+    - with: Double Jump, Aerials, Specials, Airdodge
+      hit:
+        from: 1
+        to: 96
+        window: 96
+      whiff:
+        from: 11
+        to: 96
+        window: 86
+    cooldown:
+    - move: Bair
+      "on": Unpin
+      time: 25
+  notes:
+  - You can pin with extending hits, with the pin taking 1 frame to confirm (this can be either during the active frames or as an additional frame of endlag).
+  - Can remain pinned for 96 frames before it is automatically cancelled.
+  - Maintains grass as if grounded if pinned onto a surface with grass on it. Pinning the wall maintains grass on the stage floor.
+  - Landing during unpin cancel endlag will incur whiff landing lag even if the attack hit an opponent prior to this. Allowing pin to end naturally will cause landing lag to consider if the move had hit an opponent or whiffed prior to the pin.					
+
+upAir:
+  hitboxes:
+  - name: Hit 1
+    startup: 6
+    active:
+      from: 7
+      to: 9
+      frames: 3
+    landingLag:
+      hit: 8
+      whiff: 12
+    damage: 3
+    angle: 82
+    angleFlipper: 0
+    knockback:
+      base: 2
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    asdiModifier: 1.6
+    priority: 2
+    killsProjectiles: true
+  - name: Hit 2
+    active:
+      from: 13
+      to: 15
+      frames: 3
+    endlag:
+      hit: 15
+      whiff: 23
+    firstActiveFrame: 39
+    landingLag:
+      hit: 8
+      whiff: 12
+    damage: 5
+    angle: 75
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 70
+    hitstunModifier: 0.85
+    hitpause:
+      base: 6
+      scaling: 50
+    hitLockout: 3
+    priority: 5
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/up-air.png
+    highRes: https://rivals.academy/library/sylvanos/1080_up-air.png
+
+downAir:
+  hitboxes:
+  - name: Spike
+    startup: 8
+    active:
+      from: 9
+      to: 11
+      frames: 3
+    landingLag:
+      hit: 6
+      whiff: 9
+    damage: 10
+    angle: 280
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 65
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 50
+    hitLockout: 10
+    priority: 8
+    killsProjectiles: true
+  - name: Dive
+    active:
+      from: 12
+      to: 24
+      frames: 13
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 40
+    landingLag:
+      hit: 6
+      whiff: 9
+    damage: 7
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 55
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 50
+    priority: 3
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/down-air.png
+    highRes: https://rivals.academy/library/sylvanos/1080_down-air.png
+
+# Strongs
+forwardStrong:
+  hitboxes:
+  - name: Hit 1-2
+    startup: 14
+    active:
+    - from: 15
+      to: 16
+      frames: 2
+    - from: 23
+      to: 24
+      frames: 2
+    damage: 2
+    angle: 361
+    angleFlipper: 4
+    knockback:
+      base: 2
+      scaling: 0
+    hitstunModifier: 1.5
+    forceFlinch: 2
+    hitpause:
+      base: 2
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+  - name: Hit 3
+    startup: 20
+    active:
+      from: 31
+      to: 34
+      frames: 4
+    endlag:
+      hit: 15
+      whiff: 23
+    firstActiveFrame: 58
+    damage: 10
+    angle: 45
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 115
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 80
+    hitLockout: 10
+    priority: 1
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/forward-strong.png
+    highRes: https://rivals.academy/library/sylvanos/1080_forward-strong.png
+
+upStrong:
+  hitboxes:
+  - name: Middle/Bottom
+    startup: 26
+    active:
+      from: 27
+      to: 29
+      frames: 3
+    damage: 10
+    angle: 55
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 100
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 90
+    hitLockout: 10
+    priority:
+    - hitbox: middle
+      priority: 2
+    - hitbox: bottom
+      priority: 1
+    killsProjectiles: true
+  - name: Top/Middle
+    active:
+      from: 27
+      to: 29
+      frames: 3
+    damage: 14
+    angle: 55
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 110
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 100
+    hitLockout: 10
+    priority:
+    - hitbox: top
+      priority: 6
+    - hitbox: middle
+      priority: 5
+    killsProjectiles: true
+  - name: Top
+    active:
+      from: 27
+      to: 29
+      frames: 3
+    endlag:
+      hit: 20
+      whiff: 30
+    firstActiveFrame: 60
+    damage: 18
+    angle: 55
+    angleFlipper: 0
+    knockback:
+      base: 9
+      scaling: 120
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 100
+    hitLockout: 10
+    priority: 8
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/up-strong.png
+    highRes: https://rivals.academy/library/sylvanos/1080_up-strong.png
+
+downStrong:
+  hitboxes:
+  - name: Hit 1
+    startup: 10
+    active:
+      from: 11
+      to: 12
+      frames: 2
+    endlag:
+      hit: 24
+      whiff: 36
+    firstActiveFrame: 49
+    damage: 11
+    angle: 50
+    angleFlipper: 4
+    knockback:
+      base: 7
+      scaling: 105
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 70
+    hitLockout: 10
+    priority: 2
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/down-strong.png
+    highRes: https://rivals.academy/library/sylvanos/1080_down-strong.png
+
+# Specials
+neutralSpecial:
+- hitboxes:
+  - name: Seed Shot
+    startup: 9
+    active:
+      from: 10
+    endlag: 30
+    firstActiveFrame: 40
+    cooldown: 20
+    damage: 4
+    angle: 60
+    angleFlipper: 3
+    knockback:
+      base: 4
+      scaling: 35
+    hitstunModifier: 0.5
+    hitpause:
+      base: 6
+      scaling: 10
+    priority: 2
+    killsProjectiles: true
+    notes:
+    - You can control the horizontal and vertical trajectory of the seed by holding any direction on the left stick before it spawns.
+  - name: Seed Multihit
+    active:
+      mustConnect: Seed Shot
+      onHit:
+      - "on": 6
+        frames: 1
+      - "on": 11
+        frames: 1
+      - "on": 16
+        frames: 1
+      - "on": 21
+        frames: 1
+    damage: 1
+    angle: 60
+    angleFlipper: 3
+    knockback:
+      base: 4
+      scaling: 20
+    hitstunModifier: 0.9
+    hitpause:
+      base: 3
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+    notes:
+    - Not active during hitpause.
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/neutral-special.png
+    highRes: https://rivals.academy/library/sylvanos/1080_neutral-special.png
+- name: Flower
+  hitboxes:
+  - projectileInvuln:
+      onLanding:
+        from: 1
+        to: 60
+        frames: 60
+        onlyLessThan8: True
+  notes:
+  - Maintains all grass on the current platform or ground it is occupying, preventing it from being removed if Sylvanos leaves that surface for too long.
+  - Can have 3 flowers placed at a time, with the oldest flower being removed from play if a new flower is spawned (seeds can still be spawned freely).
+  - A spawned flower will grow a small patch of grass, likewise, destroying flower will also destroy a small area of grass, unless the grass is currently inactive.
+  - If the ground beneath a flower disappears it will snap to the nearest ground within 32px, otherwise it will be destroyed.
+  - Hitting only a flower will cause the players move to have halved hitpause.
+
+sideSpecial:
+  hitboxes:
+  - startup:
+      initial: 17
+      loop: 7
+    active:
+      minimum:
+        from: 18
+        to: 21
+        frames: 4
+      loop:
+        start: 29
+        gap: 7
+        frames: 4
+    endlag: 30
+    cancellable:
+    - with: IASA
+      onlyOnHit: true
+      during: endlag
+      from: 1
+      to: 10
+      window: 10
+    - with: Wall Jump
+      from: 25
+    firstActiveFrame:
+      pratFall: 52
+    damage: 8
+    angle: 45
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 35
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 35
+    priority: 2
+    killsProjectiles: false
+  notes:
+  - Holding special while on grass on the 2nd frame of endlag allows you to continue the attack until either releasing special, no grass remains or you become airborne.
+  - Sylvanos spawns grass behind him if there isn't any or he eats any grass beneath him from f14 onwards.
+  - Hitting another character or object will prevent Sylvanos from entering prat-fall at the end of the move.
+  - Holding either horizontal direction allows you to increase or decrease the move's travel speed.
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/side-special.png
+    highRes: https://rivals.academy/library/sylvanos/1080_side-special.png
+
+upSpecial:
+- name: Dive
+  hitboxes:
+  - name: Hit 1
+    startup: 8
+    active:
+      from: 9
+      to: 12
+      frames: 4
+    cancellable:
+    - with: Cancel
+      input: Parry
+      from: 10
+      endlag: 6
+    damage: 2
+    angle: 45
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 1
+    killsProjectiles: false
+    canGalaxy: false
+  - name: Hit 2
+    active:
+      from: 16
+      to: 19
+      frames: 4
+    cancellable:
+    - with: Cancel
+      input: Parry
+      from: 10
+      endlag: 6
+    damage: 2
+    angle: 20
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 1
+    killsProjectiles: false
+    canGalaxy: false
+  - name: Hit 3
+    active:
+      from: 23
+      to: 26
+      frames: 4
+    cancellable:
+    - with: Cancel
+      input: Parry
+      from: 10
+      endlag: 6
+    damage: 2
+    angle: 0
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 1
+    killsProjectiles: false
+    canGalaxy: false
+  - name: Hit 4
+    active:
+      from: 30
+      to: 33
+      frames: 4
+    cancellable:
+    - with: Cancel
+      input: Parry
+      from: 10
+      endlag: 6
+    damage: 2
+    angle: -20
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 1
+    killsProjectiles: false
+    canGalaxy: false
+  - name: Hit 5
+    active:
+      from: 37
+      to: 40
+      frames: 4
+    cancellable:
+    - with: Cancel
+      input: Parry
+      from: 10
+      endlag: 6
+    damage: 2
+    angle: -45
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 1
+    killsProjectiles: false
+    canGalaxy: false
+  - name: Hit 6
+    active:
+      minimum:
+        from: 44
+        to: 47
+        frames: 4
+      loop:
+        start: 52
+        gap: 4
+        frames: 8
+    cancellable:
+    - with: Cancel
+      input: Parry
+      from: 10
+      endlag: 6
+    damage: 2
+    angle: -60
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 10
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    hitLockout: 4
+    priority: 1
+    killsProjectiles: false
+    canGalaxy: false
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/up-special-dive.png
+    highRes: https://rivals.academy/library/sylvanos/1080_up-special-dive.png
+- name: Burrow
+  hitboxes:
+  - name: Instant Burrow
+    startup: 8
+    active:
+      from: 9
+      to: 14
+      frames: 5
+    endlag: 7
+    damage: 5
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 15
+    hitstunModifier: 1.2
+    hitpause:
+      base: 6
+      scaling: 10
+    priority: 3
+    killsProjectiles: true
+    notes:
+    - Holding the special button when performing up-special while grounded allows Sylvanos to instantly burrow into the ground, skipping the dive section of the move.
+  - name: Dive Into Ground
+    active:
+      from: 1
+      to: 5
+      frames: 5
+    endlag: 7
+    damage: 5
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 15
+    hitstunModifier: 1.2
+    hitpause:
+      base: 6
+      scaling: 10
+    priority: 3
+    killsProjectiles: true
+  - name: Dive Into Wall
+    active:
+      from: 1
+      to: 5
+      frames: 5
+    endlag: 7
+    damage: 5
+    angle: 135
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 10
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 10
+    priority: 3
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/up-special-burrow.png
+    highRes: https://rivals.academy/library/sylvanos/1080_up-special-burrow.png
+- name: Emerge
+  hitboxes:
+  - name: Emerge
+    intangible:
+      from: 1
+      to: 16
+      frames: 16
+    endlag:
+      offGrass: 28
+      onGrass: 20
+    firstActiveFrame:
+      offGrass: 45
+      onGrass: 37
+    notes:
+    - You have full control to move under the stage during intangible frames.
+    - Hold special f16 to Bite, hold taunt to emerge with taunt.
+  - name: Bite
+    startup: 22
+    intangible:
+      from: 1
+      to: 22
+      frames: 22
+    active:
+      from: 23
+      to: 25
+      frames: 3
+    endlag: 30
+    firstActiveFrame: 56
+    damage: 10
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 9
+      scaling: 105
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 100
+    hitLockout: 10
+    priority: 3
+    killsProjectiles: true
+  - name: Bite (Sour)
+    active:
+      from: 23
+      to: 25
+      frames: 3
+    damage: 8
+    angle: 60
+    angleFlipper: 6
+    knockback:
+      base: 7
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 50
+    priority: 2
+    killsProjectiles: true
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/up-special-bite.png
+    highRes: https://rivals.academy/library/sylvanos/1080_up-special-bite.png
+
+downSpecial:
+  hitboxes:
+  - startup:
+      initial: 16
+      root: 6
+    active:
+      from: 23
+      frames: 1
+    endlag: 19
+    firstActiveFrame: 35
+    damage: 4
+    angle: 110
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 20
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    hitLockout: 3
+    priority: 1
+    extendedParryStun: true
+    killsProjectiles: false
+  notes:
+  - Howl activates grass outwards in a circular radius around Sylvanos every frame after f16.
+  - Grass is unable to disappear once Howl has begun.
+  - Interrupting Sylvanos anytime before frame 16 will prevent any grass from spawning roots, and reset all active grass to its full 60 frame timer.
+  - Interrupting Sylvanos anytime from frame 16 onwards will prevent any further grass from spawning hitboxes, however any grass which is in its root startup state will still spawn its 1 frame hitbox and become inactive for 180 frames.
+  image:
+    baseRes: https://rivals.academy/library/sylvanos/down-special.png
+    highRes: https://rivals.academy/library/sylvanos/1080_down-special.png
+
+# Character Mechanics
+grass:
+  time:
+    active: 60
+    inactive: 180
+  notes:
+  - Grass will spawn beneath Sylvanos while he is grounded. This grass will stay so long as Sylvanos is grounded, but only remains for 60 frames after Sylvanos has left the ground before disappearing.
+  - You can maintain grass using flowers to prevent it from despawning by having one planted on the same level that the grass exists. It is also possible to maintain grass by using Bair to pin into the ground or platform or by pinning into the wall, which will keep all grass on ground-level active.
+  - Jab Special Finisher will spawn a wave of petals, creating grass behind them if none already exists.- To perform Up Special's bite there must be active grass on that part of the ground. Grass will also decrease the endlag of emerging out of Up Specials' burrow without attacking with the bite.
+  - Sylvanos will eat active grass during forward special and is able to loop the attack for the full length of grass by holding special.
+  - Down Special spawns roots out of the grass to attack anyone in their path, which then causes grass to become inactive for 180 frames, after which despawning completely. On inputting Down Special, all active grass is prevented from becoming inactive until the Howl reaches it to summon roots. If Sylvanos is interrupted prior during Down Special's initial startup all active grass will be reset to it's 60 frame lifetime.
+  - Inactive grass does not provide any of the benefits that active grass provides and all moves or their properties which require grass will not be usable on it.
+  - Upon being destroyed, a flower will remove all active grass in the small area surrounding it. 
+  - Dying will remove all flowers and all grass.
