@@ -280,7 +280,7 @@ dashAttack:
 
 forwardTilt:
 - hitboxes:
-  - name: Physical
+  - name: Tail Swipe
     startup: 8
     active:
       from: 9
@@ -1280,7 +1280,7 @@ upSpecial:
   image:
     baseRes: https://rivals.academy/library/sylvanos/up-special-dive.png
     highRes: https://rivals.academy/library/sylvanos/1080_up-special-dive.png
-- name: Burrow
+- name: Burrow/Emerge
   hitboxes:
   - name: Instant Burrow
     startup: 8
@@ -1339,11 +1339,6 @@ upSpecial:
       scaling: 10
     priority: 3
     killsProjectiles: true
-  image:
-    baseRes: https://rivals.academy/library/sylvanos/up-special-burrow.png
-    highRes: https://rivals.academy/library/sylvanos/1080_up-special-burrow.png
-- name: Emerge
-  hitboxes:
   - name: Emerge
     intangible:
       from: 1
@@ -1401,8 +1396,8 @@ upSpecial:
     priority: 2
     killsProjectiles: true
   image:
-    baseRes: https://rivals.academy/library/sylvanos/up-special-bite.png
-    highRes: https://rivals.academy/library/sylvanos/1080_up-special-bite.png
+    baseRes: https://rivals.academy/library/sylvanos/up-special-burrow-bite.png
+    highRes: https://rivals.academy/library/sylvanos/1080_up-special-burrow-bite.png
 
 downSpecial:
   hitboxes:
