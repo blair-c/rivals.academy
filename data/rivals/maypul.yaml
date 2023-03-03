@@ -855,8 +855,8 @@ downSpecial:
     - Maypul can place Lily again during Lily's despawn animation, as well as during the hitpause of Lily's bite.
     - If Bite is initiated by a character with Watcher's Mark but does not succesfully hit them, that character's Watcher's Mark will be removed.
   image:
-    baseRes: https://rivals.academy/library/maypul/down-special-bite.png
-    highRes: https://rivals.academy/library/maypul/1080_down-special-bite.png
+    baseRes: https://rivals.academy/library/maypul/down-special-lily.png
+    highRes: https://rivals.academy/library/maypul/1080_down-special-lily.png
 - name: Aerial
   hitboxes:
   - startup: 13
