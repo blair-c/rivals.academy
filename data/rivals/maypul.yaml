@@ -725,7 +725,7 @@ upSpecial:
       frames: 1
     cancellable:
     - with: Platform Drop
-      onlyOnHit: true
+      condition: On Hit
       during: endlag
       "on": 1
     damage: 2
@@ -783,9 +783,7 @@ upSpecial:
       to: 7
       window: 7
     - with: Aerials/Airdodge
-      tether:
-        targetInHitstun: true
-        direction: left/right
+      condition: Target in Hitstun, Tether left/right
       during: endlag
       from: 1
       to: 7

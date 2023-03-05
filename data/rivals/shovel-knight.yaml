@@ -195,7 +195,7 @@ forwardTilt:
     cancellable:
     - with: Hit 1
       during: endlag
-      onlyOnHit: true
+      condition: On Hit
       from: 6
       to: 8
       window: 3
@@ -385,7 +385,7 @@ forwardAir:
     cancellable:
     - with: Hit 1
       during: endlag
-      onlyOnHit: true
+      condition: On Hit
       from: 6
       to: 8
       window: 3
@@ -1136,7 +1136,7 @@ sideSpecial:
       whiff: 17
     cancellable:
     - with: Jump
-      onlyGrounded: true
+      condition: While Grounded
       from: 20
       to: 31
       frames: 12
@@ -1179,7 +1179,7 @@ sideSpecial:
       whiff: 17
     cancellable:
     - with: Jump
-      onlyGrounded: true
+      condition: While Grounded
       from: 99
       to: 138
       frames: 40
@@ -1219,7 +1219,7 @@ sideSpecial:
       hit: 11
     cancellable:
     - with: Jump
-      onlyGrounded: true
+      condition: While Grounded
       from: 99
       endlag: 15
     - with: Cancel

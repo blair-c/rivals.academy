@@ -21,6 +21,7 @@
 {{ $forceFlinch := false }}
 {{ $untechable := false }}
 {{ $hitpause := false }}
+{{ $tipperStun := false }}
 {{ $asdiModifier := false }}
 {{ $hitLockout := false }}
 {{ $priority := false }}
@@ -56,6 +57,7 @@
   {{ if isset . "forceFlinch" }} {{ $forceFlinch = true }} {{ end }}
   {{ if isset . "untechable" }} {{ $untechable = true }} {{ end }}
   {{ if isset . "hitpause" }} {{ $hitpause = true }} {{ end }}
+  {{ if isset . "tipperStun" }} {{ $tipperStun = true }} {{ end }}
   {{ if isset . "asdiModifier" }} {{ $asdiModifier = true }} {{ end }}
   {{ if isset . "hitLockout" }} {{ $hitLockout = true }} {{ end }}
   {{ if isset . "priority" }} {{ $priority = true }} {{ end }}
@@ -98,6 +100,7 @@
         {{ if $forceFlinch }}<th>Force Flinch</th>{{ end }}
         {{ if $untechable }}<th>Untechable</th>{{ end }}
         {{ if $hitpause }}<th>Hitpause</th>{{ end }}
+        {{ if $tipperStun }}<th>Tipper Stun</th>{{ end }}
         {{ if $asdiModifier }}<th>ASDI Mod</th>{{ end }}
         {{ if $hitLockout }}<th>Hit Lockout</th>{{ end }}
         {{ if $priority }}<th>Priority</th>{{ end }}
@@ -158,6 +161,10 @@
           {{ if reflect.IsMap .active.frames -}}
             {{ with .active.frames.max }} (Max {{ . }}f){{ end -}}
           {{ end -}}
+
+          {{ with .active.earliest }}{{ .from }}-{{ .to }} (Earliest){{ end -}}
+          {{ if and (isset .active "earliest") (isset .active "maximum") }},{{ end }}
+          {{ with .active.maximum }}{{ .from }}-{{ .to }} (Maximum){{ end }}
 
           {{ with .active.minimum }}
             {{ if reflect.IsSlice . }}
@@ -326,8 +333,8 @@
       </td>{{ end }}
 
       {{ if $endlag }}<td>
-        {{ if isset .endlag "hit" }}
-          {{ .endlag.hit }} /
+        {{ if or (isset .endlag "hit") (isset .endlag "whiff") }}
+          {{ with .endlag.hit }}{{ . }}{{ else }} - {{ end }} /
           {{ with .endlag.whiff }}
             {{ if isset . "bothHits" }}
               <br>{{ .bothHits }} (Whiff both Hit 1-2)
@@ -360,13 +367,8 @@
       {{ if $cancellable }}<td>
         {{ range .cancellable }}
           {{ .with }}
-          {{- if .onlyOnHit }} (On Hit){{ end }}
-          {{- if .onlyGrounded }} (While grounded){{ end }}
-          {{- with .input }} (Input {{ . }}){{ end }}
-          {{- with .tether }} (
-            {{- if .targetInHitstun }}Target in hitstun{{ end }}
-            {{- with .direction }}, Tether {{ . }}{{ end }})
-          {{- end }}:
+          {{- with .condition }} ({{ . }}){{ end }}
+          {{- with .input }} (Input {{ . }}){{ end }}:
           {{ with .during }}{{ title . }} f{{ end -}}
           {{ with .windows -}}
             {{ $len = len . -}}
@@ -382,10 +384,12 @@
             {{ if isset . "hit" -}}
               {{ with .hit.on }}{{ . }}{{ end -}}
               {{ with .hit.from }}{{ . }}-{{ end -}}
-              {{ with .hit.to }}{{ . }}{{ end }} /
+              {{ with .hit.to }}{{ . }}{{ end }}
+              {{ with .hit.condition }}({{ . }}){{ end }} /
               {{ with .whiff.on }}{{ . }}{{ end -}}
               {{ with .whiff.from }}{{ . }}-{{ end -}}
-              {{ with .whiff.to }}{{ . }}{{ end -}}
+              {{ with .whiff.to }}{{ . }}{{ end }}
+              {{ with .whiff.condition }}({{ . }}){{ end }}
             {{ else -}}
               {{ with .on }}{{ . }}{{ end -}}
               {{ with .from }}{{ . }}-{{ end -}}
@@ -403,6 +407,11 @@
             {{ with .firstActiveFrame.whiff }}{{ . }}{{ else }}-{{ end }}<br>
           {{ end }}
           {{ with .firstActiveFrame.soonest }}{{ . }} (Soonest){{ end }}
+          {{ if isset .firstActiveFrame "earliest" }}
+            {{ .firstActiveFrame.earliest }}-{{ .firstActiveFrame.maximum }}
+          {{ else }}
+            {{ with .firstActiveFrame.maximum }}Maximum: {{ . }}<br>{{ end }}
+          {{ end }}
           {{ with .firstActiveFrame.minimum }}{{ . }} (Minimum){{ end }}
           {{ with .firstActiveFrame.possible }}
             [
@@ -419,7 +428,6 @@
           {{ with .firstActiveFrame.cancel }}
             Cancel: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}
           {{ end }}
-          {{ with .firstActiveFrame.maximum }}Maximum: {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.postTravelTime }}{{ . }} (Post Travel Time){{ end }}
           {{ if isset .firstActiveFrame "onGrass" }}
             {{ .firstActiveFrame.offGrass }} ({{ .firstActiveFrame.onGrass }} on grass)
@@ -443,7 +451,7 @@
       {{ if $lifetime }}<td>
         {{ if isset . "lifetime" }}
           {{ .lifetime.duration }} ({{ .lifetime.from }}-{{ .lifetime.to }})
-          <br>Reset by: {{ .lifetime.resetBy }}
+          {{ with .lifetime.resetBy }}<br>Reset by: {{ . }}{{ end }}
         {{ end }}
       </td>{{ end }}
 
@@ -519,6 +527,8 @@
         {{ with .hitpause }}{{ .base }} | {{ .scaling }}{{ end -}}
         {{ with .hitpause.extra }}<br>(+{{ . }}){{ end -}}
       </td>{{ end }}
+
+      {{ if $tipperStun }}<td>{{ .tipperStun }}</td>{{ end }}
 
       {{ if $asdiModifier }}<td>
         {{ if isset . "asdiModifier" }}{{ .asdiModifier }}×{{ end }}

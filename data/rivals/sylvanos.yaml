@@ -1099,7 +1099,7 @@ sideSpecial:
     endlag: 30
     cancellable:
     - with: IASA
-      onlyOnHit: true
+      condition: On Hit
       during: endlag
       from: 1
       to: 10
