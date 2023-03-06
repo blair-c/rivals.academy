@@ -1,0 +1,27 @@
+{{ define "header" }}
+  {{ partial "navbar" }}
+{{ end }}
+
+{{ define "main" }}
+  <main id="main-content">
+    <header class="site-section-header">
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Description }}</p>
+    </header>
+
+    <ul class="library-select">
+      {{ range (slice "zetterburn" "orcane" "kragg" "wrastor" 
+                      "forsburn" "etalus" "maypul" "absa"
+                      "clairen" "ranno" "sylvanos" "elliana"
+                      "mollo" "hodan" "olympia" "pomme"
+                      "ori" "shovel-knight") }}
+        <li><a href="/library/{{ . }}">{{ humanize . | title }}</a></li>
+      {{ end }}
+      <li><a href="/library/stages">Stages</a></li>
+    </ul>
+  </main>
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer" }}
+{{ end }}
