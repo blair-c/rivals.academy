@@ -915,28 +915,28 @@ forwardStrong:
 
 upStrong:
   hitboxes:
-  - name: Middle/Bottom
+  - name: Top
     startup: 26
     active:
       from: 27
       to: 29
       frames: 3
-    damage: 10
+    endlag:
+      hit: 20
+      whiff: 30
+    firstActiveFrame: 60
+    damage: 18
     angle: 55
     angleFlipper: 0
     knockback:
-      base: 7
-      scaling: 100
+      base: 9
+      scaling: 120
     hitstunModifier: 1
     hitpause:
-      base: 8
-      scaling: 90
+      base: 10
+      scaling: 100
     hitLockout: 10
-    priority:
-    - hitbox: middle
-      priority: 2
-    - hitbox: bottom
-      priority: 1
+    priority: 8
     killsProjectiles: true
   - name: Top/Middle
     active:
@@ -960,27 +960,28 @@ upStrong:
     - hitbox: middle
       priority: 5
     killsProjectiles: true
-  - name: Top
+  - name: Middle/Bottom
     active:
       from: 27
       to: 29
       frames: 3
-    endlag:
-      hit: 20
-      whiff: 30
-    firstActiveFrame: 60
-    damage: 18
+    damage: 10
     angle: 55
     angleFlipper: 0
     knockback:
-      base: 9
-      scaling: 120
+      base: 7
+      scaling: 100
     hitstunModifier: 1
     hitpause:
-      base: 10
-      scaling: 100
+      base: 8
+      scaling: 90
     hitLockout: 10
-    priority: 8
+    priority:
+    - hitbox: middle
+      priority: 2
+    - hitbox: bottom
+      priority: 1
+    killsProjectiles: true
   image:
     baseRes: https://rivals.academy/library/sylvanos/up-strong.png
     highRes: https://rivals.academy/library/sylvanos/1080_up-strong.png
