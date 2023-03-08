@@ -1144,8 +1144,7 @@ upSpecial:
     notes:
     - You can control the height that Elliana is ejected to by holding a vertical direction on f8 of Up Special.
     - Ejecting from the mech refreshes airdodge if it has already been used.
-    - If any character is stuck by Elliana's mine, the stuck mine will begin falling from their character on f4 of eject.
-    - Elliana's new mech will begin at 99% heat capacity and be reduced to 0 heat f4-9 of rebuild.
+    - Elliana's mines begin falling from the characters they were stuck to on f4 of eject.
   - name: Mech Explosion
     startup:
       initial: 26
