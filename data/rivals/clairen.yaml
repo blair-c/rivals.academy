@@ -1219,7 +1219,7 @@ upSpecial:
     asdiModifier: 0.5
     priority: 1
     killsProjectiles: true
-    canGalaxy: false
+    cannotGalaxy: true
   - name: Rising Hit 2-3
     active:
     - from: 20
@@ -1248,7 +1248,7 @@ upSpecial:
     asdiModifier: 0.5
     priority: 1
     killsProjectiles: true
-    canGalaxy: false
+    cannotGalaxy: true
   - name: Slash
     startup: 10
     active:

@@ -963,7 +963,7 @@ upSpecial:
     asdiModifier: 0.5
     priority: 1
     killsProjectiles: false
-    canGalaxy: false
+    cannotGalaxy: true
     setsOnFire: true
   - name: Travelling
     active:

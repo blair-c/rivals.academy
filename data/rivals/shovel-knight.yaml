@@ -867,7 +867,7 @@ downStrong:
       scaling: 0
     priority: 2
     killsProjectiles: true
-    canGalaxy: false
+    cannotGalaxy: true
     notes:
     - Holding upwards on the left stick on frame 6 will cause Shovel Knight to jump higher, allowing him to reach standard sized platforms.
     - The charge window for Down Strong begins in the air and raises Shovel Knight's vertical position for 1 extra frame, allowing him to reach the platforms on Abyssal Gates.
@@ -889,7 +889,7 @@ downStrong:
       scaling: 0
     priority: 2
     killsProjectiles: true
-    canGalaxy: false
+    cannotGalaxy: true
     notes:
     - If you land before Hit 1 is active, you will instead go straight to Hit 2.
   - name: Flame Pillar 1

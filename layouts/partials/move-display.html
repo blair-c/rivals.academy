@@ -28,7 +28,7 @@
 {{ $priority := false }}
 {{ $extendedParryStun := false }}
 {{ $killsProjectiles := false }}
-{{ $canGalaxy := false }}
+{{ $cannotGalaxy := false }}
 {{ $movesRocks := false }}
 {{ $setsOnFire := false }}
 {{ $consumesFire := false }}
@@ -66,7 +66,7 @@
   {{ if isset . "priority" }} {{ $priority = true }} {{ end }}
   {{ if isset . "extendedParryStun" }} {{ $extendedParryStun = true }} {{ end }}
   {{ if isset . "killsProjectiles" }} {{ $killsProjectiles = true }} {{ end }}
-  {{ if isset . "canGalaxy" }} {{ $canGalaxy = true }} {{ end }}
+  {{ if isset . "cannotGalaxy" }} {{ $cannotGalaxy = true }} {{ end }}
   {{ if isset . "movesRocks" }} {{ $movesRocks = true }} {{ end }}
   {{ if isset . "setsOnFire" }} {{ $setsOnFire = true }} {{ end }}
   {{ if isset . "consumesFire" }} {{ $consumesFire = true }} {{ end }}
@@ -111,7 +111,7 @@
         {{ if $priority }}<th>Priority</th>{{ end }}
         {{ if $extendedParryStun }}<th>Extended Parry Stun</th>{{ end }}
         {{ if $killsProjectiles }}<th>Kills Projectiles</th>{{ end }}
-        {{ if $canGalaxy }}<th>Can Galaxy</th>{{ end }}
+        {{ if $cannotGalaxy }}<th>Cannot Galaxy</th>{{ end }}
         {{ if $movesRocks }}<th>Moves Kragg/SK Rocks</th>{{ end }}
         {{ if $setsOnFire }}<th>Sets On Fire</th>{{ end }}
         {{ if $consumesFire }}<th>Consumes Fire</th>{{ end }}
@@ -652,7 +652,7 @@
 
       {{ if $killsProjectiles }}<td>{{ title .killsProjectiles }}</td>{{ end }}
 
-      {{ if $canGalaxy }}<td>{{ title .canGalaxy }}</td>{{ end }}
+      {{ if $cannotGalaxy }}<td>{{ humanize .cannotGalaxy }}</td>{{ end }}
 
       {{ if $movesRocks}}<td>{{ title .movesRocks }}</td>{{ end }}
 

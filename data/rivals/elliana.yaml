@@ -658,7 +658,7 @@ forwardStrong:
     asdiModifier: 2.5
     priority: 1
     killsProjectiles: false
-    canGalaxy: false
+    cannotGalaxy: true
     notes:
     - Ignores players in the first 9 frames of hitstun.
     - Cannot hit mine.	
@@ -766,7 +766,7 @@ upStrong:
     asdiModifier: 2.5
     priority: 1
     killsProjectiles: false
-    canGalaxy: false
+    cannotGalaxy: true
     notes:
     - Ignores players in the first 9 frames of hitstun.
     - Cannot hit mine.	
@@ -896,7 +896,7 @@ downStrong:
     asdiModifier: 2.5
     priority: 1
     killsProjectiles: false
-    canGalaxy: false
+    cannotGalaxy: true
     notes:
     - Ignores players in the first 9 frames of hitstun.
     - Cannot hit mine.	
@@ -1072,8 +1072,7 @@ sideSpecial:
       scaling: 0
     priority: 3
     killsProjectiles: true
-    notes:
-    - Can not trigger galaxy kill effect on a character who is stuck by a mine.
+    cannotGalaxy: Characters stuck by a mine
   notes:
   - Control over the missile is lost on death.
   - Missiles do not have an explosion hitbox, so a hidden pillar destruction hitbox with a radius of 32px will appear on missile exploding.
@@ -1108,8 +1107,7 @@ sideSpecial:
       scaling: 90
     priority: 3
     killsProjectiles: true
-    notes:
-    - Can not trigger galaxy kill effect on a character who is stuck by a mine.
+    cannotGalaxy: Characters stuck by a mine
   notes:
   - Cannot be broken by attacks or projectiles.
   - Does not break upon hitting the ground at certain angles, but will instead slide along it, lowering the missile's speed.
