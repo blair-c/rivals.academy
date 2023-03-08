@@ -814,9 +814,9 @@ upStrong:
       movedBy:
       - move: Up Strong
         damage:
-          from: 4
-          to: 6
-          scaling: charge
+          min: 4
+          max: 6
+          basedOn: charge
       - move: Down Tilt
         damage: 4
       - move: all other moves
@@ -1122,15 +1122,21 @@ neutralSpecial:
     highRes: https://rivals.academy/library/shovel-knight/1080_neutral-special-ghost-glove.png
 
 sideSpecial:
-  hitboxes:
-  - name: Min Charge
-    startup:
-      initial: 16
+- hitboxes:
+  - startup:
+      initial:
+        min: 16
+        max: 95
       dagger: 2
     active:
-      from: 19
-      to: 31
-      frames: 13
+      soonest:
+        from: 19
+        to: 31
+        frames: 13
+      latest:
+        from: 98
+        to: 138
+        frames: 41
     endlag:
       hit: 11
       whiff: 17
@@ -1150,12 +1156,24 @@ sideSpecial:
       time: 30
     - "on": Hit/Bounce
       time: 40
-    damage: 6
+    damage:
+      min: 6
+      max: 8
+      basedOn: charge
+      calculator: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY/
     angle: 361
     angleFlipper: 0
     knockback:
-      base: 6
-      scaling: 50
+      base:
+        min: 6
+        max: 7
+        basedOn: charge
+        calculator: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY/
+      scaling:
+        min: 50
+        max: 60
+        basedOn: charge
+        calculator: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY/
     hitstunModifier: 1
     hitpause:
       base: 8
@@ -1166,51 +1184,16 @@ sideSpecial:
     - hitbox: Hilt
       priority: 1
     killsProjectiles: false
-  - name: Full Charge
-    startup:
-      charge: 95
-      dagger: 2
-    active:
-      from: 98
-      to: 138
-      frames: 41
-    endlag:
-      hit: 11
-      whiff: 17
-    cancellable:
-    - with: Jump
-      condition: While Grounded
-      from: 99
-      to: 138
-      frames: 40
-      endlag: 15
-    firstActiveFrame:
-      hit: 12
-      bounce: 12
-      whiff: 156
-    cooldown:
-    - "on": Whiff in Air
-      time: 30
-    - "on": Hit/Bounce
-      time: 40
-    damage: 8
-    angle: 361
-    angleFlipper: 0
-    knockback:
-      base: 8
-      scaling: 60
-    hitstunModifier: 1
-    hitpause:
-      base: 8
-      scaling: 80
-    priority:
-    - hitbox: Tip
-      priority: 5
-    - hitbox: Hilt
-      priority: 1
-    killsProjectiles: false
-  - name: Infinidagger
-    startup:
+  notes:
+  - Holding down on any actionable frame during either the hit/bounce animation or during jump-cancel's momentum will cancel the animation and slow Shovel Knight's aerial momentum to his usual amount.
+  - Holding back on the same frame you jump-cancel will cause Shovel Knight to turnaround on the first frame of jump-squat, allowing him to face the opposite direction in the air.
+  - A 30 frame cooldown applies on the final frame of endlag if you are in the air on whiff. On hit or after bouncing all versions of Forward Special will apply a 40 frame cooldown on the first frame of endlag, which is effectively a 29 frame cooldown once you are actionable.
+  image:
+    baseRes: https://rivals.academy/library/shovel-knight/side-special.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_side-special.png
+- name: Infinidagger
+  hitboxes:
+  - startup:
       charge: 95
       dagger: 2
     active:
@@ -1251,16 +1234,15 @@ sideSpecial:
     - hitbox: Hilt
       priority: 1
     killsProjectiles: true
-    notes:
-    - Infinidagger is locked in if special is held until the 96th frame of startup, which immediately starts the 2 frame startup window before releasing.
-    - Travels much faster than partially charging forward-special.
   notes:
+  - Infinidagger is locked in if special is held until the 96th frame of startup, which immediately starts the 2 frame startup window before releasing.
+  - Travels much faster than partially charging forward-special.
   - Holding down on any actionable frame during either the hit/bounce animation or during jump-cancel's momentum will cancel the animation and slow Shovel Knight's aerial momentum to his usual amount.
   - Holding back on the same frame you jump-cancel will cause Shovel Knight to turnaround on the first frame of jump-squat, allowing him to face the opposite direction in the air.
   - A 30 frame cooldown applies on the final frame of endlag if you are in the air on whiff. On hit or after bouncing all versions of Forward Special will apply a 40 frame cooldown on the first frame of endlag, which is effectively a 29 frame cooldown once you are actionable.
   image:
-    baseRes: https://rivals.academy/library/shovel-knight/side-special.png
-    highRes: https://rivals.academy/library/shovel-knight/1080_side-special.png
+    baseRes: https://rivals.academy/library/shovel-knight/side-special-infinidagger.png
+    highRes: https://rivals.academy/library/shovel-knight/1080_side-special-infinidagger.png
 
 upSpecial:
   hitboxes:
@@ -1428,8 +1410,7 @@ downSpecial:
     endlag:
       fromAnchorReachingSK: 14
     firstActiveFrame:
-      fromAnchorReachingSK: 14
-      maximum: 152
+      fromAnchorReachingSK: 15
     damage: 8
     angle: 90
     angleFlipper: 0

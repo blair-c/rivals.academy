@@ -1069,19 +1069,19 @@ neutralSpecial:
   - name: Forward Throw
     startup: 9
     active:
-      earliest:
+      soonest:
         from: 29
         to: 39
         frames: 11
-      maximum:
+      latest:
         from: 49
         to: 59
         frames: 11
     endlag:
       hit: 12
     firstActiveFrame:
-      earliest: 52
-      maximum: 72
+      min: 52
+      max: 72
     damage: 3
     angle: 70
     angleFlipper: 0
@@ -1099,19 +1099,19 @@ neutralSpecial:
   - name: Back Throw
     startup: 9
     active:
-      earliest:
+      soonest:
         from: 29
         to: 39
         frames: 11
-      maximum:
+      latest:
         from: 49
         to: 59
         frames: 11
     endlag:
       hit: 12
     firstActiveFrame:
-      earliest: 52
-      maximum: 72
+      min: 52
+      max: 72
     damage: 3
     angle: 110
     angleFlipper: 0

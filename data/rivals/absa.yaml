@@ -920,43 +920,22 @@ neutralSpecial:
 
 sideSpecial:
   hitboxes:
-  - name: Minimum
-    startup:
-      initial: 19
+  - startup:
+      initial:
+        min: 19
+        max: 69
       cloud: 8
     active:
-      from: 28
-      to: 30
-      frames: 3
+      soonest:
+        from: 28
+        to: 30
+        frames: 3
+      latest:
+        from: 78
+        to: 80
+        frames: 3
     endlag: 16
     firstActiveFrame: 36
-    cooldown:
-    - move: Side Special
-      time: 24
-    - move: Cloud Pop/Thunder Line
-      time: 4
-    damage: 5
-    angle: 361
-    angleFlipper: 4
-    knockback:
-      base: 6
-      scaling: 30
-    hitstunModifier: 0.6
-    hitpause:
-      base: 6
-      scaling: 60
-    priority: 3
-    extendedParryStun: true
-    killsProjectiles: true
-  - name: Maximum
-    startup:
-      cloud: 8
-    active:
-      from: 78
-      to: 80
-      frames: 3
-    endlag: 16
-    firstActiveFrame: 71
     cooldown:
     - move: Side Special
       time: 24
