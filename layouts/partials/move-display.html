@@ -554,9 +554,9 @@
               <a href="{{ . }}" title="Calculator" target="_blank" rel="noopener noreferrer">
             {{ end }}
             {{ with .damage.min }}{{ . }}-{{ end -}}
-            {{ with .damage.max }}{{ . }}{{ end }}
+            {{ with .damage.max }}{{ . }}%{{ end }}
             {{ with .damage.from }}{{ . }}-{{ end -}}
-            {{ with .damage.to }}{{ . }}{{ end }}
+            {{ with .damage.to }}{{ . }}%{{ end }}
             {{ with .damage.basedOn }}({{ . }}){{ end }}
             {{ with .damage.calculator }}</a>{{ end }}
             {{ with .damage.creation }}Creation: {{ . }}%<br>{{ end }}
