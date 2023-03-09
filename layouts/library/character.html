@@ -115,7 +115,7 @@
               <td>{{ $c.maxJumpHorizontalSpeed }}</td>
               <td>{{ printf "%.2f" $c.fullHop.speed }}</td>
               <td>{{ printf "%.1f" $c.shortHop.speed }}</td>
-              <td>{{ $c.doubleJump.speed }}</td>
+              <td>{{ printf "%.2f" $c.doubleJump.speed }}</td>
               {{ with $c.doubleJump.accel }}
               <td>{{ $c.doubleJump.accel }}</td>{{ end }}
               <td>{{ $c.wallJump.speed.vertical }}</td>

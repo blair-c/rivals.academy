@@ -40,7 +40,7 @@ shortHop:
   speed: 6.0
 doubleJump:
   amount: 1
-  speed: 10
+  speed: 10.00
 wallJump:
   speed:
     vertical: 9
