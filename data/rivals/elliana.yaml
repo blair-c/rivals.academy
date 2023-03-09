@@ -1118,9 +1118,9 @@ sideSpecial:
     highRes: https://rivals.academy/library/elliana/1080_side-special-charged.png
 
 upSpecial:
+- name: Eject/Rebuild
   hitboxes:
-  - name: Eject/Rebuild
-    startup: 3
+  - startup: 3
     invuln:
       from: 4
       to: 7
@@ -1148,8 +1148,9 @@ upSpecial:
   image:
     baseRes: https://rivals.academy/library/elliana/up-special-eject-rebuild.png
     highRes: https://rivals.academy/library/elliana/1080_up-special-eject-rebuild.png
-  - name: Mech Explosion
-    startup:
+- name: Mech Explosion
+  hitboxes:
+  - startup:
       initial: 26
       charge:
         min: 0
@@ -1162,14 +1163,15 @@ upSpecial:
         to: 55
         note: or until overheated
     active:
-      soonest:
-        from: 31
-        to: 34
-        frames: 4
-      latest:
-        from: 60
-        to: 63
-        frames: 4
+      onLanding:
+        soonest:
+          from: 31
+          to: 34
+          frames: 4
+        latest:
+          from: 60
+          to: 63
+          frames: 4
     damage: 10
     angle: 70
     angleFlipper: 10

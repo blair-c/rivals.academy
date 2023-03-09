@@ -307,6 +307,8 @@
             {{ with .on }}{{ . }}{{ end -}}
             {{ with .from }}{{ . }}-{{ end -}}
             {{ with .to }}{{ . }}{{ end }}
+            {{ with .soonest }}{{ .from }}-{{ .to }} (Soonest){{ end }}
+            {{ with .latest }}{{ .from }}-{{ .to }} (Latest){{ end }}
           {{- end -}}
           {{ if isset .active "onHit" }}
             On {{ with .active.mustConnect }}{{ . }} {{ end }}Hit:
