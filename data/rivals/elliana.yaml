@@ -982,7 +982,7 @@ neutralSpecial:
     extendedParryStun: true
     killsProjectiles: true
     notes:
-    - Cannot be broken by projectiles which deal <8%.
+    - Cannot be broken by projectiles that deal <8%.
   - name: Explosion
     active:
       from: 48
