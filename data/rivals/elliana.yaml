@@ -1145,6 +1145,9 @@ upSpecial:
     - You can control the height that Elliana is ejected to by holding a vertical direction on f8 of Up Special.
     - Ejecting from the mech refreshes airdodge if it has already been used.
     - Elliana's mines begin falling from the characters they were stuck to on f4 of eject.
+  image:
+    baseRes: https://rivals.academy/library/elliana/up-special-eject-rebuild.png
+    highRes: https://rivals.academy/library/elliana/1080_up-special-eject-rebuild.png
   - name: Mech Explosion
     startup:
       initial: 26
@@ -1182,8 +1185,8 @@ upSpecial:
     notes:
     - Mech is rebuilt on landing before extended parry stun is applied, adding 32 additional frames to her inactive time. Elliana is not considered in the attacking state upon landing and an additional 10 frames of parry stun is also applied to the extended parry stun formula.
   image:
-    baseRes: https://rivals.academy/library/elliana/up-special.png
-    highRes: https://rivals.academy/library/elliana/1080_up-special.png
+    baseRes: https://rivals.academy/library/elliana/up-special-mech-explosion.png
+    highRes: https://rivals.academy/library/elliana/1080_up-special-mech-explosion.png
 
 downSpecial:
 - name: Plant Mine
