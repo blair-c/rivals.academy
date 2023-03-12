@@ -335,7 +335,7 @@
                 {{ with .on }}{{ . }}{{ end -}}
                 {{ with .from }}{{ . }}-{{ end -}}
                 {{ with .to }}{{ . }}{{ end }}
-                {{ if .onlyHitsProjectiles }}(Anti-Projectile){{ end }}
+                {{ if .onlyHitsProjectiles }}<br>(Only Hits Projectiles){{ end }}
               {{ end }}
             {{ end }}
           {{ end }}
@@ -373,7 +373,7 @@
               {{ else }}{{ .on }}{{ end }}
             {{ end }}
           {{ end }}
-          {{ if .active.onlyHitsProjectiles }}(Anti-Projectile){{ end }}
+          {{ if .active.onlyHitsProjectiles }}<br>(Only Hits Projectiles){{ end }}
         {{ end -}}
       </td>{{ end }}
 

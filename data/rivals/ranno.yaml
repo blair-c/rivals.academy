@@ -659,9 +659,7 @@ downAir:
     endlag:
       whiff: 21
     firstActiveFrame: 49
-    landingLag:
-      hit: 6
-      whiff: 9
+    landingLag: 9
     damage: 3
     angle: 70
     angleFlipper: 7
@@ -686,9 +684,7 @@ downAir:
         from: 39
         to: 40
         frames: 2
-    landingLag:
-      hit: 6
-      whiff: 9
+    landingLag: 9
     damage: 3
     angle: 70
     angleFlipper: 7
@@ -733,8 +729,6 @@ downAir:
     priority: 4
     killsProjectiles: true
     parryStun: true
-  notes:
-  - Whiff landing lag value applies unless you hit a character or object with Hit 3.
   image:
     baseRes: https://rivals.academy/library/ranno/down-air.png
     highRes: https://rivals.academy/library/ranno/1080_down-air.png

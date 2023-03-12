@@ -73,10 +73,11 @@ jab:
         from: 4
         to: 5
         frames: 2
-      loop:
-        start: 26
-        frames: 2
-        gap: 20
+      soonest:
+        loop:
+          start: 26
+          frames: 2
+          gap: 20
     endlag: 14
     cancellable:
     - with: Jab 2
