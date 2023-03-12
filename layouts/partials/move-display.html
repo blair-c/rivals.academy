@@ -26,8 +26,8 @@
 {{ $asdiModifier := false }}
 {{ $hitLockout := false }}
 {{ $priority := false }}
-{{ $extendedParryStun := false }}
 {{ $killsProjectiles := false }}
+{{ $parryStun := false }}
 {{ $cannotGalaxy := false }}
 {{ $movesRocks := false }}
 {{ $setsOnFire := false }}
@@ -35,6 +35,7 @@
 {{ $appliesMark := false }}
 {{ $wrapsMarked := false }}
 {{ $wrapLockout := false }}
+{{ $appliesPoison := false }}
 {{ $heat := false }}
 {{ $notes := false}}
 {{/*  Iterate through rows, set existing columns to true  */}}
@@ -64,8 +65,8 @@
   {{ if isset . "asdiModifier" }} {{ $asdiModifier = true }} {{ end }}
   {{ if isset . "hitLockout" }} {{ $hitLockout = true }} {{ end }}
   {{ if isset . "priority" }} {{ $priority = true }} {{ end }}
-  {{ if isset . "extendedParryStun" }} {{ $extendedParryStun = true }} {{ end }}
   {{ if isset . "killsProjectiles" }} {{ $killsProjectiles = true }} {{ end }}
+  {{ if isset . "parryStun" }} {{ $parryStun = true }} {{ end }}
   {{ if isset . "cannotGalaxy" }} {{ $cannotGalaxy = true }} {{ end }}
   {{ if isset . "movesRocks" }} {{ $movesRocks = true }} {{ end }}
   {{ if isset . "setsOnFire" }} {{ $setsOnFire = true }} {{ end }}
@@ -73,6 +74,7 @@
   {{ if isset . "appliesMark" }} {{ $appliesMark = true }} {{ end }}
   {{ if isset . "wrapsMarked" }} {{ $wrapsMarked = true }} {{ end }}
   {{ if isset . "wrapLockout" }} {{ $wrapLockout = true }} {{ end }}
+  {{ if isset . "appliesPoison" }} {{ $appliesPoison = true }} {{ end }}
   {{ if isset . "heat" }} {{ $heat = true }} {{ end }}
   {{ if isset . "notes" }} {{ $notes = true }} {{ end }}
 {{ end }}
@@ -109,8 +111,8 @@
         {{ if $asdiModifier }}<th>ASDI Mod</th>{{ end }}
         {{ if $hitLockout }}<th>Hit Lockout</th>{{ end }}
         {{ if $priority }}<th>Priority</th>{{ end }}
-        {{ if $extendedParryStun }}<th>Extended Parry Stun</th>{{ end }}
         {{ if $killsProjectiles }}<th>Kills Projectiles</th>{{ end }}
+        {{ if $parryStun }}<th>Parry Stun</th>{{ end }}
         {{ if $cannotGalaxy }}<th>Cannot Galaxy</th>{{ end }}
         {{ if $movesRocks }}<th>Moves Kragg/SK Rocks</th>{{ end }}
         {{ if $setsOnFire }}<th>Sets On Fire</th>{{ end }}
@@ -118,6 +120,7 @@
         {{ if $appliesMark }}<th>Applies Watcher's Mark</th>{{ end }}
         {{ if $wrapsMarked }}<th>Wraps Marked Opponents</th>{{ end }}
         {{ if $wrapLockout }}<th>Wrap Lockout</th>{{ end }}
+        {{ if $appliesPoison }}<th>Applies Poison</th>{{ end }}
         {{ if $heat }}<th>Heat</th>{{ end }}
         {{ if $notes }}<th class="align-left">Notes</th>{{ end }}
       </tr>
@@ -149,6 +152,7 @@
             {{ with .startup.tether }}{{ . }} (Tether){{ end }}
             {{ with .startup.lily }}{{ . }} (Lily){{ end }}
             {{ with .startup.cloud }}{{ . }} (Cloud){{ end }}
+            {{ with .startup.throw }}{{ . }} (Throw){{ end }}
             {{ with .startup.dagger }}{{ . }} (Dagger){{ end }}
             {{ with .startup.missile }}{{ . }} (Shoot Missile){{ end }}
             {{ with .startup.explosion }}{{ . }} (Explosion){{ end }}
@@ -157,7 +161,8 @@
           {{ if isset .startup "targetInHitstun" }}
             {{ .startup.targetNotInHitstun }} ({{ .startup.targetInHitstun}} if target in hitstun)
           {{ end }}
-        {{- else }}{{ .startup }}{{ end -}}
+        {{- else }}{{ .startup }}{{ end }}
+        {{ with .mustConnect }}({{ . }} Must Hit){{ end }}
       </td>{{ end }}
 
       {{ if $intangible }}<td>{{ with .intangible }}{{ .from }}-{{ .to }}{{ end }}</td>{{ end }}
@@ -189,6 +194,7 @@
                 {{ with .to }}{{ . }}{{ end -}}
                 {{ if lt (add $index 1) $len }}, {{ end -}}
               {{ end -}}
+              {{ if gt $len 5 }}<br>{{ end }}
             {{ else }}
               {{ with .on }}{{ . }}{{ end -}}
               {{ with .from }}{{ . }}-{{ end -}}
@@ -258,6 +264,7 @@
                     {{ with .from }}{{ . }}-{{ end -}}
                     {{ with .to }}{{ . }}{{ end -}}
                     {{ if lt (add $index 1) $len }}, {{ end -}}
+                    {{ if eq $index 4 }}<br>{{ end }}
                   {{ end -}}
                 {{ else }}
                   {{ with .on }}{{ . }}{{ end -}}
@@ -294,7 +301,12 @@
             (Soonest)
           {{- end -}}
           {{ if and (isset .active "soonest") (isset .active "latest") }},{{ end }}
-          {{ with .active.latest }}{{ .from }}-{{ .to }} (Latest){{ end }}
+          {{ with .active.latest }}
+            {{ with .on }}{{ . }}{{ end }}
+            {{ with .from }}{{ . }}-{{ end -}}
+            {{ with .to }}{{ . }}{{ end }}
+            (Latest)
+          {{ end }}
 
           {{- with .active.grounded }}
             Grounded:
@@ -307,11 +319,9 @@
             {{ with .on }}{{ . }}{{ end -}}
             {{ with .from }}{{ . }}-{{ end -}}
             {{ with .to }}{{ . }}{{ end }}
-            {{ with .soonest }}{{ .from }}-{{ .to }} (Soonest){{ end }}
-            {{ with .latest }}{{ .from }}-{{ .to }} (Latest){{ end }}
           {{- end -}}
           {{ if isset .active "onHit" }}
-            On {{ with .active.mustConnect }}{{ . }} {{ end }}Hit:
+            On Hit:
             {{ with .active.onHit }}
               {{ if reflect.IsSlice . }}
                 {{ $len = len . }}
@@ -324,7 +334,8 @@
               {{ else }}
                 {{ with .on }}{{ . }}{{ end -}}
                 {{ with .from }}{{ . }}-{{ end -}}
-                {{ with .to }}{{ . }}{{ end -}}
+                {{ with .to }}{{ . }}{{ end }}
+                {{ if .onlyHitsProjectiles }}(Anti-Projectile){{ end }}
               {{ end }}
             {{ end }}
           {{ end }}
@@ -362,6 +373,7 @@
               {{ else }}{{ .on }}{{ end }}
             {{ end }}
           {{ end }}
+          {{ if .active.onlyHitsProjectiles }}(Anti-Projectile){{ end }}
         {{ end -}}
       </td>{{ end }}
 
@@ -415,6 +427,14 @@
           {{ else }} - {{ end -}}<br>
         {{ end }}
         {{ if reflect.IsMap .endlag }}
+          {{ with .endlag.possible }}
+            [
+            {{ $len = len . }}
+            {{ range $index, $_ := . }}
+              {{ . }}{{ if lt (add $index 1) $len }} / {{ end -}}
+            {{ end -}}
+            ]
+          {{ end -}}
           {{ with .endlag.grounded }}
             Grounded: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}<br>
           {{ end }}
@@ -422,6 +442,11 @@
           {{ with .endlag.airborne }}Airborne: {{ . }}<br>{{ end }}
           {{ with .endlag.cancel }}
             Cancel: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}
+          {{ end }}
+          {{ with .endlag.spitBack }}Spit Back: {{ . }}<br>{{ end }}
+          {{ with .endlag.slingshot }}
+            Slingshot (Grounded): {{ .grounded.min }}-{{ .grounded.max }}<br>
+            Slingshot (Aerial): {{ .aerial.min }}-{{ .aerial.max }}
           {{ end }}
           {{ if isset .endlag "jab34" }}
             {{ .endlag.jab34 }} ({{ .endlag.following }} following Jab 3-4)
@@ -485,10 +510,6 @@
 
       {{ if $firstActiveFrame }}<td>
         {{ if reflect.IsMap .firstActiveFrame }}
-          {{ if isset .firstActiveFrame "hit" }}
-            {{ .firstActiveFrame.hit }} /
-            {{ with .firstActiveFrame.whiff }}{{ . }}{{ else }}-{{ end }}<br>
-          {{ end }}
           {{ with .firstActiveFrame.soonest }}{{ . }} (Soonest){{ end }}
           {{ if isset .firstActiveFrame "max" }}
             {{ .firstActiveFrame.min }}-{{ .firstActiveFrame.max }}
@@ -502,16 +523,26 @@
             {{ end -}}
             ]
           {{ end -}}
+          {{ with .firstActiveFrame.whiff }}Whiff: {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.grounded }}Grounded: {{ . }}<br>{{ end }}
+          {{ with .firstActiveFrame.airborne }}Airborne: {{ . }}{{ end }}
           {{ with .firstActiveFrame.groundedReverse }}Reverse (Grounded): {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.onLanding }}On Landing: {{ . }}{{ end }}
-          {{ with .firstActiveFrame.pratFall }}Prat Fall w/ Landing Lag: {{ . }}<br>{{ end }}
+          {{ with .firstActiveFrame.pratFall }}
+            Prat Fall w/ Landing Lag:
+            {{ if isset . "min" }}{{ .min }}-{{ .max }}{{ else }}{{ . }}{{ end }}<br>
+          {{ end }}
           {{ with .firstActiveFrame.cancel }}
             Cancel: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}
           {{ end }}
           {{ with .firstActiveFrame.postTravelTime }}{{ . }} (Post Travel Time){{ end }}
           {{ if isset .firstActiveFrame "onGrass" }}
             {{ .firstActiveFrame.offGrass }} ({{ .firstActiveFrame.onGrass }} on grass)
+          {{ end }}
+          {{ with .firstActiveFrame.spitBack }}Spit Back: {{ . }}<br>{{ end }}
+          {{ with .firstActiveFrame.slingshot }}
+            Slingshot (Grounded): {{ .grounded.min }}-{{ .grounded.max }}<br>
+            Slingshot (Aerial): {{ .aerial.min }}-{{ .aerial.max }}
           {{ end }}
           {{ with .firstActiveFrame.rebuildMech }}Rebuild Mech: {{ . }}{{ end }}
           {{ with .firstActiveFrame.anchorIsUnableToCast }}Anchor is unable to cast: {{ . }}{{ end }}
@@ -532,8 +563,10 @@
 
       {{ if $lifetime }}<td>
         {{ if isset . "lifetime" }}
-          {{ .lifetime.duration }} ({{ .lifetime.from }}-{{ .lifetime.to }})
+          {{ with .lifetime.duration }}{{ . }}f{{ end }}
+          {{ if isset .lifetime "from" }}({{ .lifetime.from }}-{{ .lifetime.to }}){{ end }}
           {{ with .lifetime.resetBy }}<br>Reset by: {{ . }}{{ end }}
+          {{ with .lifetime.despawn }}(+{{ . }} despawn){{ end }}
         {{ end }}
       </td>{{ end }}
 
@@ -543,7 +576,11 @@
           {{ range $index, $_ :=.cooldown }}
             {{ with .move }}{{ . }}:{{ end }}
             {{ .time -}}
-            {{ with .on }} (On {{ . }}){{ end }}
+            {{ if or (isset . "on") (isset . "onlyInAir") }}
+              ({{ with .on }}On {{ . }}{{ end }}
+              {{- if and (isset . "on") (isset . "onlyInAir") }} {{ end }}
+              {{- with .onlyInAir }}in air{{ end }})
+            {{ end }}
             {{ if lt (add $index 1) $len }}<br>{{ end -}}
           {{ end }}
         {{- else }}{{ .cooldown }}{{ end -}}
@@ -650,9 +687,22 @@
         {{- else }}{{ .priority }}{{ end -}}
       </td>{{ end }}
 
-      {{ if $extendedParryStun }}<td>{{ title .extendedParryStun }}</td>{{ end }}
-
       {{ if $killsProjectiles }}<td>{{ title .killsProjectiles }}</td>{{ end }}
+
+      {{ if $parryStun }}<td>
+        {{ if isset . "parryStun" }}
+          {{ if reflect.IsMap .parryStun }}
+            {{ with .parryStun.uniqueEndlag }}
+              {{ .animation }}
+              {{ with .frames }}
+                {{ if isset . "min" }}{{ .min }}-{{ .max }}{{ else }}{{ . }}{{ end }}f
+              {{ end }}
+            +{{ end }}
+            {{ if .parryStun.extended }}Extended{{ else }}40f{{ end }}
+            {{ with .parryStun.extra }}+ {{ . }}f{{ end }}
+          {{ else }}{{ if .parryStun }}Standard{{ else }}None{{ end }}{{ end }}
+        {{ end }}
+      </td>{{ end }}
 
       {{ if $cannotGalaxy }}<td>{{ humanize .cannotGalaxy }}</td>{{ end }}
 
@@ -664,6 +714,10 @@
       {{ if $appliesMark }}<td>{{ title .appliesMark }}</td>{{ end }}
       {{ if $wrapsMarked }}<td>{{ title .wrapsMarked }}</td>{{ end }}
       {{ if $wrapLockout }}<td>{{ title .wrapLockout }}</td>{{ end }}
+
+      {{ if $appliesPoison }}<td>
+        {{ with .appliesPoison }}{{ . }} Stack{{ if gt . 1 }}s{{ end }}{{ end }}
+      </td>{{ end }}
 
       {{ if $heat }}<td>
         {{ with .heat.added }}+

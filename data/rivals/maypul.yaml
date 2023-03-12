@@ -107,6 +107,8 @@ jab:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun:
+      extended: true
   - name: Jab 2
     startup: 3
     active:
@@ -145,6 +147,8 @@ jab:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun:
+      extended: true
     notes:
     - Jab 2 loops back into Jab 1.
     - Varying startup depending on when the attack is input. A jab input within the final 2 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
@@ -176,6 +180,7 @@ dashAttack:
       scaling: 10
     priority: 2
     killsProjectiles: true
+    parryStun: true
     notes:
     - Repositions characters during hitpause, scaling based on how late into the active frames it hits.
   - name: Hit 2
@@ -199,6 +204,7 @@ dashAttack:
       scaling: 25
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/maypul/dash-attack.png
     highRes: https://rivals.academy/library/maypul/1080_dash-attack.png
@@ -226,6 +232,7 @@ forwardTilt:
       scaling: 60
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/maypul/forward-tilt.png
     highRes: https://rivals.academy/library/maypul/1080_forward-tilt.png
@@ -253,6 +260,7 @@ upTilt:
       scaling: 50
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/maypul/up-tilt.png
     highRes: https://rivals.academy/library/maypul/1080_up-tilt.png
@@ -280,6 +288,7 @@ downTilt:
       scaling: 35
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/maypul/down-tilt.png
     highRes: https://rivals.academy/library/maypul/1080_down-tilt.png
@@ -308,6 +317,7 @@ neutralAir:
       scaling: 45
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Late
     active:
       from: 11
@@ -332,6 +342,7 @@ neutralAir:
       scaling: 20
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/maypul/neutral-air.png
     highRes: https://rivals.academy/library/maypul/1080_neutral-air.png
@@ -363,6 +374,7 @@ forwardAir:
       scaling: 20
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/maypul/forward-air.png
     highRes: https://rivals.academy/library/maypul/1080_forward-air.png
@@ -390,6 +402,7 @@ backAir:
       scaling: 25
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2
     active:
       from: 13
@@ -414,6 +427,7 @@ backAir:
       scaling: 25
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/maypul/back-air.png
     highRes: https://rivals.academy/library/maypul/1080_back-air.png
@@ -451,6 +465,7 @@ upAir:
     - hitbox: TODO
       priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - Doubled knockback scaling after cancelling Tether endlag into Up Air makes it easier to DI up to escape the final hit.
   - name: Hit 3
@@ -481,6 +496,7 @@ upAir:
     - hitbox: TODO
       priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/maypul/up-air.png
     highRes: https://rivals.academy/library/maypul/1080_up-air.png
@@ -512,8 +528,9 @@ downAir:
       base: 5
       scaling: 0
     priority: 3
-    extendedParryStun: true
     killsProjectiles: true
+    parryStun:
+      extended: true
     notes:
     - Interrupting Maypul before frame 8 will prevent root from spawning.
   image:
@@ -544,6 +561,7 @@ forwardStrong:
       scaling: 70
     priority: 7
     killsProjectiles: true
+    parryStun: true
     wrapsMarked: true
     wrapLockout: 3
   image:
@@ -573,6 +591,7 @@ upStrong:
       scaling: 70
     priority: 7
     killsProjectiles: true
+    parryStun: true
     wrapsMarked: true
     wrapLockout: 3
   - name: Tip
@@ -592,6 +611,7 @@ upStrong:
       scaling: 70
     priority: 5
     killsProjectiles: true
+    parryStun: true
     wrapsMarked: true
     wrapLockout: 3
   image:
@@ -618,6 +638,7 @@ downStrong:
       scaling: 70
     priority: 7
     killsProjectiles: true
+    parryStun: true
     wrapsMarked: true
     wrapLockout: 3
   - name: Hit 2
@@ -641,6 +662,7 @@ downStrong:
       scaling: 70
     priority: 7
     killsProjectiles: true
+    parryStun: true
     wrapsMarked: true
     wrapLockout: 3
   image:
@@ -668,6 +690,7 @@ neutralSpecial:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: false
     appliesMark: true
   image:
     baseRes: https://rivals.academy/library/maypul/neutral-special.png
@@ -705,6 +728,7 @@ sideSpecial:
       scaling: 0
     priority: 2
     killsProjectiles: false
+    parryStun: true
     appliesMark: true
     notes:
     - Endlag is doubled on whiff if started either on the ground or within 32px of it, so long as the move was also not reversed and the endlag does not begin while airborne.
@@ -742,6 +766,7 @@ upSpecial:
       extra: 1
     priority: 2
     killsProjectiles: true
+    parryStun: true
     notes:
     - On being parried, Maypul is unable to drop through platforms for a short period of time, extending a few frames into the prat-fall state.
   - name: Hit 2
@@ -764,6 +789,7 @@ upSpecial:
       scaling: 80
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/maypul/up-special-uppercut.png
     highRes: https://rivals.academy/library/maypul/1080_up-special-uppercut.png
@@ -846,6 +872,7 @@ downSpecial:
       scaling: 0
     priority: 3
     killsProjectiles: true
+    parryStun: false
     wrapsMarked: In Hitstun
     notes:
     - Lily will always start her attack 1 frame after detecting an opponent in her range, increasing her effective startup by 1. This is reflected in the animation for the attack.
@@ -883,6 +910,7 @@ downSpecial:
       scaling: 0
     priority: 2
     killsProjectiles: false
+    parryStun: true
     appliesMark: true
   notes:
   - Holding down will allow down-special to travel through platforms.

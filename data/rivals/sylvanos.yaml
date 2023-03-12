@@ -102,6 +102,7 @@ jab:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: false
   - name: Jab 2
     startup: 4
     active:
@@ -111,7 +112,7 @@ jab:
         frames: 2
     endlag: 18
     cancellable:
-    - with: Jab 2
+    - with: Jab 3
       during: endlag
       windows:
       - from: 6
@@ -139,6 +140,7 @@ jab:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: false
   - name: Jab 3
     startup:
       initial: 6
@@ -170,6 +172,7 @@ jab:
       scaling: 30
     priority: 1
     killsProjectiles: true
+    parryStun: true
   notes:
   - Jab combos have varying startup depending on when the attack is input. A jab input within the final 2 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
   image:
@@ -201,6 +204,7 @@ jab:
       scaling: 10
     priority: 6
     killsProjectiles: true
+    parryStun: true
     notes:
     - Interrupting Sylvanos prevents Petal Wave from spawning.							
   - name: Petal Wave
@@ -223,8 +227,9 @@ jab:
       scaling: 0
     hitLockout: 4
     priority: 1
-    extendedParryStun: true
     killsProjectiles: false
+    parryStun:
+      extended: true
     notes:
     - Grass is spawned behind the wave of petals as they travel accross the ground.
   notes:
@@ -253,6 +258,7 @@ dashAttack:
       scaling: 70
     priority: 8
     killsProjectiles: true
+    parryStun: true
   - name: Late
     active:
       from: 10
@@ -274,6 +280,7 @@ dashAttack:
       scaling: 40
     priority: 4
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/sylvanos/dash-attack.png
     highRes: https://rivals.academy/library/sylvanos/1080_dash-attack.png
@@ -301,6 +308,7 @@ forwardTilt:
       scaling: 10
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Seed Shot
     active:
       from: 17
@@ -317,11 +325,12 @@ forwardTilt:
       scaling: 10
     priority: 1
     killsProjectiles: true
+    parryStun: false
     notes:
     - You can control the horizontal and vertical trajectory of the seed by holding any direction on the left stick before it spawns.
   - name: Seed Multihit
+    mustConnect: Seed Shot
     active:
-      mustConnect: Seed Shot
       onHit:
       - "on": 6
         frames: 1
@@ -343,6 +352,7 @@ forwardTilt:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: false
     notes:
     - Not active during hitpause.
   image:
@@ -386,6 +396,7 @@ upTilt:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Hit 3
     active:
       from: 17
@@ -407,6 +418,7 @@ upTilt:
       scaling: 30
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/sylvanos/up-tilt.png
     highRes: https://rivals.academy/library/sylvanos/1080_up-tilt.png
@@ -436,6 +448,7 @@ downTilt:
       extra: 4
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Hit 1 (Sweet)
     active:
       from: 10
@@ -454,6 +467,7 @@ downTilt:
       extra: 4
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 (Sour)
     active:
       from: 14
@@ -475,6 +489,7 @@ downTilt:
       scaling: 30
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 (Sweet)
     active:
       from: 14
@@ -492,6 +507,7 @@ downTilt:
       scaling: 40
     priority: 6
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/sylvanos/down-tilt.png
     highRes: https://rivals.academy/library/sylvanos/1080_down-tilt.png
@@ -529,6 +545,7 @@ neutralAir:
       scaling: 10
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/sylvanos/neutral-air.png
     highRes: https://rivals.academy/library/sylvanos/1080_neutral-air.png
@@ -560,6 +577,7 @@ forwardAir:
       scaling: 25
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Sweet
     active:
       from: 13
@@ -580,6 +598,7 @@ forwardAir:
       scaling: 50
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/sylvanos/forward-air.png
     highRes: https://rivals.academy/library/sylvanos/1080_forward-air.png
@@ -609,6 +628,7 @@ backAir:
     hitLockout: 10
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Extending Hit 2
     active:
       from: 16
@@ -630,6 +650,7 @@ backAir:
     hitLockout: 10
     priority: 4
     killsProjectiles: true
+    parryStun: true
   - name: Extending Hit 3
     active:
       from: 17
@@ -651,6 +672,7 @@ backAir:
     hitLockout: 10
     priority: 5
     killsProjectiles: true
+    parryStun: true
   - name: Extending Hit 4
     active:
       "on": 18
@@ -671,6 +693,7 @@ backAir:
     hitLockout: 10
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Tipper (Sour)
     active:
       "on": 18
@@ -691,6 +714,7 @@ backAir:
     hitLockout: 10
     priority: 7
     killsProjectiles: true
+    parryStun: true
   - name: Tipper (Sweet)
     active:
       "on": 18
@@ -715,6 +739,7 @@ backAir:
     hitLockout: 10
     priority: 8
     killsProjectiles: true
+    parryStun: true
   notes:
   - Bair will extend directly outwards or can be angled up or down by the player. It is possible to aim Bair using the right stick, which takes priority over your left stick input.
   image:
@@ -780,6 +805,7 @@ upAir:
     asdiModifier: 1.6
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2
     active:
       from: 13
@@ -805,6 +831,7 @@ upAir:
     hitLockout: 3
     priority: 5
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/sylvanos/up-air.png
     highRes: https://rivals.academy/library/sylvanos/1080_up-air.png
@@ -833,6 +860,7 @@ downAir:
     hitLockout: 10
     priority: 8
     killsProjectiles: true
+    parryStun: true
   - name: Dive
     active:
       from: 12
@@ -857,6 +885,7 @@ downAir:
       scaling: 50
     priority: 3
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/sylvanos/down-air.png
     highRes: https://rivals.academy/library/sylvanos/1080_down-air.png
@@ -886,6 +915,7 @@ forwardStrong:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Hit 3
     startup: 20
     active:
@@ -909,6 +939,7 @@ forwardStrong:
     hitLockout: 10
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/sylvanos/forward-strong.png
     highRes: https://rivals.academy/library/sylvanos/1080_forward-strong.png
@@ -938,6 +969,7 @@ upStrong:
     hitLockout: 10
     priority: 8
     killsProjectiles: true
+    parryStun: true
   - name: Top/Middle
     active:
       from: 27
@@ -960,6 +992,7 @@ upStrong:
     - hitbox: middle
       priority: 5
     killsProjectiles: true
+    parryStun: true
   - name: Middle/Bottom
     active:
       from: 27
@@ -982,6 +1015,7 @@ upStrong:
     - hitbox: bottom
       priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/sylvanos/up-strong.png
     highRes: https://rivals.academy/library/sylvanos/1080_up-strong.png
@@ -1011,6 +1045,7 @@ downStrong:
     hitLockout: 10
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/sylvanos/down-strong.png
     highRes: https://rivals.academy/library/sylvanos/1080_down-strong.png
@@ -1037,11 +1072,12 @@ neutralSpecial:
       scaling: 10
     priority: 2
     killsProjectiles: true
+    parryStun: false
     notes:
     - You can control the horizontal and vertical trajectory of the seed by holding any direction on the left stick before it spawns.
   - name: Seed Multihit
+    mustConnect: Seed Shot
     active:
-      mustConnect: Seed Shot
       onHit:
       - "on": 6
         frames: 1
@@ -1063,6 +1099,7 @@ neutralSpecial:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: false
     notes:
     - Not active during hitpause.
   image:
@@ -1121,6 +1158,7 @@ sideSpecial:
       scaling: 35
     priority: 2
     killsProjectiles: false
+    parryStun: true
   notes:
   - Holding special while on grass on the 2nd frame of endlag allows you to continue the attack until either releasing special, no grass remains or you become airborne.
   - Sylvanos spawns grass behind him if there isn't any or he eats any grass beneath him from f14 onwards.
@@ -1156,6 +1194,7 @@ upSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: false
+    parryStun: true
     canGalaxy: false
   - name: Hit 2
     active:
@@ -1179,6 +1218,7 @@ upSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: false
+    parryStun: true
     canGalaxy: false
   - name: Hit 3
     active:
@@ -1202,6 +1242,7 @@ upSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: false
+    parryStun: true
     canGalaxy: false
   - name: Hit 4
     active:
@@ -1225,6 +1266,7 @@ upSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: false
+    parryStun: true
     canGalaxy: false
   - name: Hit 5
     active:
@@ -1248,6 +1290,7 @@ upSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: false
+    parryStun: true
     canGalaxy: false
   - name: Hit 6
     active:
@@ -1277,6 +1320,7 @@ upSpecial:
     hitLockout: 4
     priority: 1
     killsProjectiles: false
+    parryStun: true
     canGalaxy: false
   image:
     baseRes: https://rivals.academy/library/sylvanos/up-special-dive.png
@@ -1302,6 +1346,7 @@ upSpecial:
       scaling: 10
     priority: 3
     killsProjectiles: true
+    parryStun: true
     notes:
     - Holding the special button when performing up-special while grounded allows Sylvanos to instantly burrow into the ground, skipping the dive section of the move.
   - name: Dive Into Ground
@@ -1322,6 +1367,7 @@ upSpecial:
       scaling: 10
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Dive Into Wall
     active:
       from: 1
@@ -1340,6 +1386,7 @@ upSpecial:
       scaling: 10
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Emerge
     intangible:
       from: 1
@@ -1379,6 +1426,7 @@ upSpecial:
     hitLockout: 10
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Bite (Sour)
     active:
       from: 23
@@ -1396,6 +1444,7 @@ upSpecial:
       scaling: 50
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/sylvanos/up-special-burrow-bite.png
     highRes: https://rivals.academy/library/sylvanos/1080_up-special-burrow-bite.png
@@ -1422,8 +1471,9 @@ downSpecial:
       scaling: 0
     hitLockout: 3
     priority: 1
-    extendedParryStun: true
     killsProjectiles: false
+    parryStun:
+      extended: true
   notes:
   - Howl activates grass outwards in a circular radius around Sylvanos every frame after f16.
   - Grass is unable to disappear once Howl has begun.

@@ -91,6 +91,7 @@ jab:
       scaling: 70
     priority: 6
     killsProjectiles: true
+    parryStun: false
   image:
     baseRes: https://rivals.academy/library/shovel-knight/jab.png
     highRes: https://rivals.academy/library/shovel-knight/1080_jab.png
@@ -115,6 +116,7 @@ dashAttack:
       scaling: 40
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Late
     active:
       from: 14
@@ -139,6 +141,7 @@ dashAttack:
       scaling: 40
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/shovel-knight/dash-attack.png
     highRes: https://rivals.academy/library/shovel-knight/1080_dash-attack.png
@@ -181,6 +184,7 @@ forwardTilt:
     hitLockout: 3
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - If looping the attack you must hit your opponent or an object to cancel into Forward Tilt Hit 2.
   - name: Hit 2
@@ -215,6 +219,7 @@ forwardTilt:
     hitLockout: 3
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - Can cancel into Forward Tilt Hit 1 on hit to loop the attack.
   image:
@@ -245,6 +250,7 @@ upTilt:
       scaling: 30
     priority: 3
     killsProjectiles: true
+    parryStun: true
     notes:
     - As Up Tilt counts as a projectile, Shovel Knight does not suffer any hitpause on hitting another character with it.
   image:
@@ -273,6 +279,7 @@ downTilt:
       scaling: 20
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2
     active:
       from: 13
@@ -294,6 +301,7 @@ downTilt:
       scaling: 40
     priority: 6
     killsProjectiles: true
+    parryStun: true
     notes:
     - Has an indentically sized hitbox which can only hit projectiles. This hitbox has a higher priority value and a knockback angle of 80. This hitbox can move Kragg/Shovel Knight Rocks.
   image:
@@ -327,6 +335,7 @@ neutralAir:
       scaling: 70
     priority: 6
     killsProjectiles: true
+    parryStun: true
   notes:
   - Can transition into jab if landing during startup, replacing landing lag with jab's endlag.
   image:
@@ -371,6 +380,7 @@ forwardAir:
     hitLockout: 3
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - If looping the attack you must hit your opponent or an object to cancel into Forward Air Hit 2.
   - name: Hit 2
@@ -405,6 +415,7 @@ forwardAir:
     hitLockout: 3
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - Can cancel into Forward Air Hit 1 on hit to loop the attack.
   notes:
@@ -439,6 +450,7 @@ backAir:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Hit 3
     active:
       from: 17
@@ -463,6 +475,7 @@ backAir:
       scaling: 50
     priority: 5
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/shovel-knight/back-air.png
     highRes: https://rivals.academy/library/shovel-knight/1080_back-air.png
@@ -508,6 +521,7 @@ upAir:
     - hitbox: Tip
       priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Hit 1 (Body)
     active:
       minimum:
@@ -542,6 +556,7 @@ upAir:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Final Hit
     active:
       possible:
@@ -577,6 +592,7 @@ upAir:
       scaling: 80
     priority: 6
     killsProjectiles: true
+    parryStun: true
     notes:
     - Will replace the next attack in hit 1's loop on releasing attack.
   - name: Final Hit (Tip)
@@ -609,6 +625,7 @@ upAir:
       scaling: 80
     priority: 2
     killsProjectiles: true
+    parryStun: true
     notes:
     - Will replace the next attack in hit 1's loop on releasing attack.
   notes:
@@ -642,6 +659,7 @@ downAir:
     hitLockout: 20
     priority: 10
     killsProjectiles: true
+    parryStun: true
   - name: Early (Spike)
     active:
       from: 7
@@ -663,11 +681,12 @@ downAir:
     hitLockout: 20
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Late
     active:
       from: 9
       to: 17
-      frames: 2
+      frames: 9
       holdExtend: true
     endlag:
       hit: 10
@@ -689,13 +708,14 @@ downAir:
     hitLockout: 20
     priority: 8
     killsProjectiles: true
+    parryStun: true
     notes:
     - Releasing attack after frame 17 will make the hitbox disappear 1 frame later if the attack has not yet hit another character or object. When hitting another character or object, Shovel Knight will bounce and Dair will remain active for a further 11 frames before you are able to begin the endlag state.
   - name: Late (Spike)
     active:
       from: 9
       to: 17
-      frames: 2
+      frames: 9
       holdExtend: true
     landingLag:
       hit: 12
@@ -713,8 +733,16 @@ downAir:
     hitLockout: 20
     priority: 2
     killsProjectiles: true
+    parryStun: true
+  - name: Shoulder
+    active:
+      from: 7
+      to: 17
+      holdExtend: true
+      onlyHitsProjectiles: true
+    killsProjectiles: true
   notes:
-  - Dair has unique interactions after bouncing off of both Lily (Maypul's Down Special), causing her to bite, and Absa's cloud, pushing it down slightly.
+  - Dair has unique interactions after bouncing off of both Lily, causing her to bite, and Absa's cloud, pushing it down slightly.
   image:
     baseRes: https://rivals.academy/library/shovel-knight/down-air.png
     highRes: https://rivals.academy/library/shovel-knight/1080_down-air.png
@@ -744,6 +772,7 @@ forwardStrong:
     hitLockout: 10
     priority: 7
     killsProjectiles: true
+    parryStun: true
   notes:
   - Dynamo Mail allows you to use Forward Strong in the air. You cannot cancel the move by landing during startup, active frames, or endlag, meaning it perfectly transitions into a grounded attack.
   image:
@@ -774,6 +803,7 @@ upStrong:
     - hitbox: Above
       priority: 5
     killsProjectiles: true
+    parryStun: true
     movesRocks: true
   - name: Behind
     active:
@@ -797,6 +827,7 @@ upStrong:
     hitLockout: 10
     priority: 2
     killsProjectiles: true
+    parryStun: true
     movesRocks: true
   notes:
   - Dynamo Mail allows you to use Up Strong in the air. You cannot cancel the move by landing during startup, active frames, or endlag, meaning it perfectly transitions into a grounded attack.
@@ -833,6 +864,7 @@ upStrong:
       scaling: 0
     priority: 3
     killsProjectiles: true
+    parryStun: false
     notes:
     - When moved with Up Strong, damage and knockback scales with with the charge damage multiplier, causing it to deal 1.25x total knockback when creating it and 1.6x damage (6%).
     - Retains a hitbox until landed, spikes while falling.
@@ -867,6 +899,7 @@ downStrong:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
     cannotGalaxy: true
     notes:
     - Holding upwards on the left stick on frame 6 will cause Shovel Knight to jump higher, allowing him to reach standard sized platforms.
@@ -889,6 +922,7 @@ downStrong:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
     cannotGalaxy: true
     notes:
     - If you land before Hit 1 is active, you will instead go straight to Hit 2.
@@ -911,6 +945,7 @@ downStrong:
     hitLockout: 10
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Flame Pillar 2
     active:
       onLanding:
@@ -930,6 +965,7 @@ downStrong:
     hitLockout: 10
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Flame Pillar 3
     active:
       onLanding:
@@ -952,6 +988,7 @@ downStrong:
       scaling: 50
     priority: 6
     killsProjectiles: true
+    parryStun: true
   notes:
   - Dynamo Mail allows you to use Down Strong in the air. Performing Down Strong immediately after jump-squat when Dynamo Mail is active performs a super jump Down Strong, with height variations for short hop and full hop.
   image:
@@ -997,6 +1034,7 @@ neutralSpecial:
       scaling: 50
     priority: 10
     killsProjectiles: true
+    parryStun: true
   - name: Sweet
     active:
       from: 26
@@ -1019,6 +1057,7 @@ neutralSpecial:
       scaling: 50
     priority: 9
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/shovel-knight/neutral-special-war-horn.png
     highRes: https://rivals.academy/library/shovel-knight/1080_neutral-special-war-horn.png
@@ -1044,6 +1083,7 @@ neutralSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: false
     notes:
     - You can control the trajectory of the gear by holding a horizontal or vertical direction on the left stick, allowing Shovel Knight to throw the gear in 5 different arcs.
     - Cooldown applies on the last frame of endlag and is only relevant if the gear is destroyed or despawned sooner than 120 frames, otherwise the gear is throwable immediately on the previous one hitting entering the blastzone.
@@ -1064,6 +1104,7 @@ neutralSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: false
     notes:
     - If Mobile Gear's path is blocked, it will lose its hitbox and disappear 50 frames later. Unblocking its path will not make it mobile again.
   image:
@@ -1112,6 +1153,7 @@ neutralSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: false
     notes:
     - On parrying a Ghost Glove, it will become transcendent when being reflected, allowing it to break other projectiles on its return.
   notes:
@@ -1148,11 +1190,10 @@ sideSpecial:
       frames: 12
       endlag: 15
     firstActiveFrame:
-      hit: 12
-      bounce: 12
-      whiff: 49
+      soonest: 49
     cooldown:
-    - "on": Whiff in Air
+    - "on": Whiff
+      onlyInAir: true
       time: 30
     - "on": Hit/Bounce
       time: 40
@@ -1184,6 +1225,7 @@ sideSpecial:
     - hitbox: Hilt
       priority: 1
     killsProjectiles: false
+    parryStun: true
   notes:
   - Holding down on any actionable frame during either the hit/bounce animation or during jump-cancel's momentum will cancel the animation and slow Shovel Knight's aerial momentum to his usual amount.
   - Holding back on the same frame you jump-cancel will cause Shovel Knight to turnaround on the first frame of jump-squat, allowing him to face the opposite direction in the air.
@@ -1209,12 +1251,9 @@ sideSpecial:
       input: Parry
       from: 99
       endlag: 18
-    firstActiveFrame:
-      hit: 12
-      bounce: 12
-      cancel: 19
     cooldown:
-    - "on": Whiff in Air
+    - "on": Whiff
+      onlyInAir: true
       time: 30
     - "on": Hit/Bounce
       time: 40
@@ -1234,6 +1273,7 @@ sideSpecial:
     - hitbox: Hilt
       priority: 1
     killsProjectiles: true
+    parryStun: true
   notes:
   - Infinidagger is locked in if special is held until the 96th frame of startup, which immediately starts the 2 frame startup window before releasing.
   - Travels much faster than partially charging forward-special.
@@ -1265,6 +1305,7 @@ upSpecial:
     hitLockout: 10
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 1 (Sweet)
     active:
       from: 13
@@ -1283,6 +1324,7 @@ upSpecial:
     hitLockout: 10
     priority: 8
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 (Swing)
     active:
       from: 15
@@ -1300,6 +1342,7 @@ upSpecial:
       scaling: 40
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Hit 3 (Rising)
     active:
       from: 19
@@ -1323,6 +1366,7 @@ upSpecial:
       scaling: 40
     priority: 4
     killsProjectiles: true
+    parryStun: true
     notes:
     - Same hitbox group as Hit 2, meaning you cannot hit a character with this hitbox if they were previously hit by Hit 2.
   - name: Hit 4 (Falling)
@@ -1347,6 +1391,7 @@ upSpecial:
       scaling: 90
     priority: 8
     killsProjectiles: true
+    parryStun: true
     notes:
     - Fast-fall window assumes that Up Special does not hit a ceiling during the rising section of the move.
     - Unable to land and refresh resources until 58-.
@@ -1373,6 +1418,7 @@ upSpecial:
       scaling: 20
     priority: 3
     killsProjectiles: false
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/shovel-knight/up-special.png
     highRes: https://rivals.academy/library/shovel-knight/1080_up-special.png
@@ -1401,6 +1447,7 @@ downSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Reel Anchor
     startup: 3
     active:
@@ -1423,6 +1470,7 @@ downSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - Must be idle for 20 frames before you can reel in a treasure.
     - After idling with the anchor on the ground for 180 frames the anchor will automatically reel in.
@@ -1456,6 +1504,7 @@ downSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: false
     notes:
     - Can hit the same character once every 10 frames.
     - Becomes inactive on landing.
@@ -1490,6 +1539,7 @@ taunt:
       scaling: 50
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Close Shop/Buy
     endlag: 33
     firstActiveFrame: 34

@@ -102,6 +102,7 @@ jab:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: false
   - name: Jab 2
     startup: 5
     active:
@@ -139,6 +140,7 @@ jab:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: false
   - name: Jab 3
     startup: 5
     active:
@@ -161,6 +163,7 @@ jab:
       scaling: 70
     priority: 3
     killsProjectiles: true
+    parryStun: true
   notes:
   - Jab combos have varying startup depending on when the attack is input. A jab input within the final 2 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
   image:
@@ -197,6 +200,7 @@ dashAttack:
       scaling: 25
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Above
     active:
       from: 11
@@ -220,8 +224,9 @@ dashAttack:
       scaling: 25
     priority: 1
     killsProjectiles: true
+    parryStun: true
   notes:
-  - On hitting a character or object, it is possible to cancel the remaining active frames into up strong. This may be input during hitpause to begin immediately after hitpause has ended.
+  - Up Strong may be input during hitpause to begin immediately after hitpause has ended.
   image:
     baseRes: https://rivals.academy/library/zetterburn/dash-attack.png
     highRes: https://rivals.academy/library/zetterburn/1080_dash-attack.png
@@ -245,6 +250,7 @@ forwardTilt:
       scaling: 50
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - Pulls opponents inwards during hitpause.
   - name: Hit 2
@@ -268,6 +274,7 @@ forwardTilt:
       scaling: 100
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/zetterburn/forward-tilt.png
     highRes: https://rivals.academy/library/zetterburn/1080_forward-tilt.png
@@ -292,6 +299,7 @@ upTilt:
       scaling: 25
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2
     active:
       from: 10
@@ -309,6 +317,7 @@ upTilt:
       scaling: 25
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Hit 3
     active:
       from: 11
@@ -330,6 +339,7 @@ upTilt:
       scaling: 60
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/zetterburn/up-tilt.png
     highRes: https://rivals.academy/library/zetterburn/1080_up-tilt.png
@@ -357,6 +367,7 @@ downTilt:
       scaling: 25
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/zetterburn/down-tilt.png
     highRes: https://rivals.academy/library/zetterburn/1080_down-tilt.png
@@ -388,6 +399,7 @@ neutralAir:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Hit 3
     active:
       from: 14
@@ -412,6 +424,7 @@ neutralAir:
       scaling: 20
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/zetterburn/neutral-air.png
     highRes: https://rivals.academy/library/zetterburn/1080_neutral-air.png
@@ -443,6 +456,7 @@ forwardAir:
       scaling: 25
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Top
     active:
       from: 11
@@ -463,6 +477,7 @@ forwardAir:
       scaling: 50
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Sweet
     active:
       from: 11
@@ -483,6 +498,7 @@ forwardAir:
       scaling: 75
     priority: 4
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/zetterburn/forward-air.png
     highRes: https://rivals.academy/library/zetterburn/1080_forward-air.png
@@ -513,6 +529,7 @@ backAir:
       scaling: 25
     priority: 2
     killsProjectiles: true
+    parryStun: true
     setsOnFire: true
   image:
     baseRes: https://rivals.academy/library/zetterburn/back-air.png
@@ -545,6 +562,7 @@ upAir:
       scaling: 25
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Hands
     active:
       from: 9
@@ -565,6 +583,7 @@ upAir:
       scaling: 25
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Sweet
     active:
       from: 9
@@ -585,6 +604,7 @@ upAir:
       scaling: 75
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/zetterburn/up-air.png
     highRes: https://rivals.academy/library/zetterburn/1080_up-air.png
@@ -615,6 +635,7 @@ downAir:
       scaling: 50
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/zetterburn/down-air.png
     highRes: https://rivals.academy/library/zetterburn/1080_down-air.png
@@ -644,6 +665,7 @@ forwardStrong:
     asdiModifier: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
     notes:
     - Pulls opponents in during hitpause.
   - name: Hit 2
@@ -667,6 +689,7 @@ forwardStrong:
       scaling: 50
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Fire Combustion
     active:
       from: 23
@@ -686,6 +709,7 @@ forwardStrong:
       scaling: 50
     priority: 3
     killsProjectiles: true
+    parryStun: true
     consumesFire: true
     notes:
     - Does not replace a hitbox, but instead adds a new one if it detects the struck opponent is on fire.
@@ -715,6 +739,7 @@ upStrong:
       scaling: 50
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Fire Combustion
     active:
       from: 13
@@ -734,6 +759,7 @@ upStrong:
       scaling: 50
     priority: 3
     killsProjectiles: true
+    parryStun: true
     consumesFire: true
     notes:
     - Does not replace a hitbox, but instead adds a new one if it detects the struck opponent is on fire.
@@ -764,6 +790,7 @@ downStrong:
     asdiModifier: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
     notes:
     - Pulls opponents in during hitpause.
   - name: Hit 2
@@ -787,6 +814,7 @@ downStrong:
       scaling: 50
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Fire Combustion
     active:
       from: 15
@@ -806,6 +834,7 @@ downStrong:
       scaling: 50
     priority: 3
     killsProjectiles: true
+    parryStun: true
     consumesFire: true
     notes:
     - Does not replace a hitbox, but instead adds a new one if it detects the struck opponent is on fire.
@@ -841,6 +870,7 @@ neutralSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
     setsOnFire: true
   - name: Full Charge
     startup: 35
@@ -867,6 +897,7 @@ neutralSpecial:
       scaling: 60
     priority: 3
     killsProjectiles: true
+    parryStun: true
     setsOnFire: true
   notes:
   - Jumping during hitpause will always buffer a jump after hitpause ends.
@@ -895,6 +926,7 @@ sideSpecial:
       scaling: 10
     priority: 1
     killsProjectiles: true
+    parryStun: true
     setsOnFire: true
   - name: Fireball
     active:
@@ -914,6 +946,7 @@ sideSpecial:
       scaling: 0
     priority: 3
     killsProjectiles: true
+    parryStun: false
     setsOnFire: true
     notes:
     - Cooldown applied first frame of endlag.
@@ -963,6 +996,7 @@ upSpecial:
     asdiModifier: 0.5
     priority: 1
     killsProjectiles: false
+    parryStun: true
     cannotGalaxy: true
     setsOnFire: true
   - name: Travelling
@@ -994,6 +1028,7 @@ upSpecial:
       scaling: 60
     priority: 3
     killsProjectiles: true
+    parryStun: true
     setsOnFire: true
     notes:
     - Can be angled in 24 possible directions.
@@ -1025,6 +1060,7 @@ downSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
     setsOnFire: true
   - name: Hit 1 (Aerial Dive)
     startup: 22
@@ -1059,6 +1095,7 @@ downSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
     setsOnFire: true
     notes:
     - Zetterburn will flash white when his double jump is restored.
@@ -1089,6 +1126,7 @@ downSpecial:
       scaling: 75
     priority: 3
     killsProjectiles: true
+    parryStun: true
     setsOnFire: true
   - name: Fire Puddle
     startup: 3

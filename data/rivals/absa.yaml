@@ -110,6 +110,7 @@ jab:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: false
   - name: Jab 2
     startup: 0
     active:
@@ -141,6 +142,7 @@ jab:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: false
     notes:
     - Jab 2 loops back into Jab 1.
   notes:
@@ -171,6 +173,7 @@ dashAttack:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2
     active:
       from: 13
@@ -191,6 +194,7 @@ dashAttack:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/absa/dash-attack.png
     highRes: https://rivals.academy/library/absa/1080_dash-attack.png
@@ -223,6 +227,7 @@ forwardTilt:
       scaling: 20
     priority: 4
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/absa/forward-tilt-1.png
     highRes: https://rivals.academy/library/absa/1080_forward-tilt-1.png
@@ -252,6 +257,7 @@ forwardTilt:
       scaling: 0
     priority: 3
     killsProjectiles: true
+    parryStun: false
   image:
     baseRes: https://rivals.academy/library/absa/forward-tilt-2.png
     highRes: https://rivals.academy/library/absa/1080_forward-tilt-2.png
@@ -280,6 +286,7 @@ upTilt:
     - hitbox: Center
       priority: 4
     killsProjectiles: true
+    parryStun: true
   - name: Late
     active:
       from: 13
@@ -301,6 +308,7 @@ upTilt:
       scaling: 20
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/absa/up-tilt.png
     highRes: https://rivals.academy/library/absa/1080_up-tilt.png
@@ -328,6 +336,7 @@ downTilt:
       scaling: 60
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/absa/down-tilt.png
     highRes: https://rivals.academy/library/absa/1080_down-tilt.png
@@ -365,6 +374,7 @@ neutralAir:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Hit 5
     active:
       from: 29
@@ -389,6 +399,7 @@ neutralAir:
       scaling: 20
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/absa/neutral-air.png
     highRes: https://rivals.academy/library/absa/1080_neutral-air.png
@@ -416,6 +427,7 @@ forwardAir:
       scaling: 100
     priority: 8
     killsProjectiles: true
+    parryStun: true
   - name: Sour
     active:
       from: 10
@@ -440,6 +452,7 @@ forwardAir:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/absa/forward-air.png
     highRes: https://rivals.academy/library/absa/1080_forward-air.png
@@ -474,6 +487,7 @@ backAir:
       scaling: 100
     priority: 8
     killsProjectiles: true
+    parryStun: true
   - name: Sour
     active:
       from: 14
@@ -498,6 +512,7 @@ backAir:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/absa/back-air.png
     highRes: https://rivals.academy/library/absa/1080_back-air.png
@@ -536,6 +551,7 @@ upAir:
       scaling: 80
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Sour
     active:
       from: 17
@@ -556,6 +572,7 @@ upAir:
       scaling: 80
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/absa/up-air.png
     highRes: https://rivals.academy/library/absa/1080_up-air.png
@@ -583,6 +600,7 @@ downAir:
       scaling: 100
     priority: 8
     killsProjectiles: true
+    parryStun: true
   - name: Sour
     active:
       from: 10
@@ -607,6 +625,7 @@ downAir:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/absa/down-air.png
     highRes: https://rivals.academy/library/absa/1080_down-air.png
@@ -649,6 +668,7 @@ forwardStrong:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Hit 5
     active:
       from: 20
@@ -677,6 +697,7 @@ forwardStrong:
       scaling: 80
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/absa/forward-strong.png
     highRes: https://rivals.academy/library/absa/1080_forward-strong.png
@@ -706,6 +727,7 @@ upStrong:
     asdiModifier: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
   - name: Hit 3
     active:
       from: 22
@@ -734,6 +756,7 @@ upStrong:
       scaling: 80
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/absa/up-strong.png
     highRes: https://rivals.academy/library/absa/1080_up-strong.png
@@ -762,6 +785,7 @@ downStrong:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2, 4
     active:
     - from: 13
@@ -783,6 +807,7 @@ downStrong:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Hit 5
     active:
       from: 26
@@ -811,6 +836,7 @@ downStrong:
       scaling: 60
     priority: 8
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/absa/down-strong.png
     highRes: https://rivals.academy/library/absa/1080_down-strong.png
@@ -851,8 +877,9 @@ neutralSpecial:
       base: 8
       scaling: 0
     priority: 4
-    extendedParryStun: true
     killsProjectiles: true
+    parryStun:
+      extended: true
     notes:
     - Interrupting Absa by hitting her during the first 3 frames of startup before the cloud startup begins will prevent the hitbox from becoming active, however the cloud will still remain.
   image:
@@ -885,8 +912,9 @@ neutralSpecial:
       base: 8
       scaling: 0
     hitLockout: 10
-    extendedParryStun: true
     killsProjectiles: true
+    parryStun:
+      extended: true
   - name: Cloud
     active:
       from: 34
@@ -909,8 +937,9 @@ neutralSpecial:
       base: 8
       scaling: 0
     hitLockout: 10
-    extendedParryStun: true
     killsProjectiles: true
+    parryStun:
+      extended: true
   notes:
   - Releasing the charge at any time before frame 15 will cause Absa to transition immediately into cloud pop, with the cloud exploding 5 frames later.
   - Interrupting Absa by hitting her before the thunder bolt becomes active will prevent both hitboxes from becoming active, however the cloud will still remain. Hitting Absa on the first active frame of the thunder line (f29) will cause the bolt to be active for only 1 frame, however the cloud will still explode at its regular time.
@@ -952,8 +981,9 @@ sideSpecial:
       base: 6
       scaling: 60
     priority: 3
-    extendedParryStun: true
     killsProjectiles: true
+    parryStun:
+      extended: true
     notes:
     - The endlag window for Absa's forward special will always begin on frame 54 if you are still controlling the cloud, however you are still able to control and place the cloud until frame 69, after which the cloud locks into place and begins its 8 frames of startup.
   notes:
@@ -1001,6 +1031,7 @@ upSpecial:
     hitLockout: 4
     priority: 4
     killsProjectiles: false
+    parryStun: true
     notes:
     - Can shift the up-special angle downwards slightly while travelling horizontally in the air by inputting fast-fall.
     - Snaps to the ledge within 16px while moving horizontally.
@@ -1040,6 +1071,7 @@ upSpecial:
     hitLockout: 4
     priority: 4
     killsProjectiles: false
+    parryStun: true
     notes:
     - Can shift the up-special angle downwards slightly while travelling horizontally in the air by inputting fast-fall.
     - Snaps to the ledge within 16px while moving horizontally.
@@ -1076,8 +1108,9 @@ downSpecial:
       scaling: 60
     hitLockout: 6
     priority: 8
-    extendedParryStun: true
     killsProjectiles: true
+    parryStun:
+      extended: true
   notes:
   - Interrupting Absa by hitting her before the cloud is primed will prevent the hitbox from becoming active, however the cloud will still remain. If a cloud does not exist and Absa is interuppted before frame 24, one will not be created.
   - Starting the timer on down-special (f33) begins a 40 frame cooldown on both cloud hop and forward-special, preventing a new cloud from being created during the initial charge time of the cloud bomb.
@@ -1110,8 +1143,9 @@ downSpecial:
       scaling: 60
     hitLockout: 6
     priority: 8
-    extendedParryStun: true
     killsProjectiles: true
+    parryStun:
+      extended: true
   notes:
   - Once the cloud bomb has finished detonating (after the last active frame) you are able to use it again after a 12 frame cooldown.
   image:
@@ -1130,11 +1164,11 @@ parry:
 roll:
   startup: 3
   invuln:
-    from:
-    to:
-    active:
+    from: 4
+    to: 17
+    frames: 14
   endlag: 12
-  firstActiveFrame: 
+  firstActiveFrame: 30
   speed: 9.5
 airdodge:
   startup: 2

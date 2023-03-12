@@ -96,6 +96,7 @@ jab:
       scaling: 0
     priority: 6
     killsProjectiles: true
+    parryStun: false
   - name: Tipper
     active:
       from: 6
@@ -114,6 +115,7 @@ jab:
     tipperStun: 12
     priority: 3
     killsProjectiles: true
+    parryStun: false
   image:
     baseRes: https://rivals.academy/library/clairen/jab.png
     highRes: https://rivals.academy/library/clairen/1080_jab.png
@@ -146,6 +148,7 @@ dashAttack:
       hitbox: Above
       priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Tipper
     active:
       from: 19
@@ -172,6 +175,7 @@ dashAttack:
     - hitbox: Above/Behind
       priority: 1
     killsProjectiles: true
+    parryStun: true
   notes:
   - On hitting a character or object, it is possible to cancel the remaining active frames into up strong. This may be input during hitpause to begin immediately after hitpause has ended.
   image:
@@ -202,6 +206,7 @@ forwardTilt:
       scaling: 50
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Tipper
     active:
       from: 8
@@ -220,6 +225,7 @@ forwardTilt:
     tipperStun: 20
     priority: 3
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/forward-tilt.png
     highRes: https://rivals.academy/library/clairen/1080_forward-tilt.png
@@ -244,6 +250,7 @@ upTilt:
       scaling: 20
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 1 Tipper
     active:
       from: 9
@@ -262,6 +269,7 @@ upTilt:
     tipperStun: 20
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 Sour
     active:
       from: 12
@@ -283,6 +291,7 @@ upTilt:
       scaling: 20
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 Tipper
     active:
       from: 12
@@ -301,6 +310,7 @@ upTilt:
     tipperStun: 20
     priority: 6
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/up-tilt.png
     highRes: https://rivals.academy/library/clairen/1080_up-tilt.png
@@ -329,6 +339,7 @@ downTilt:
       scaling: 20
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Tipper
     startup: 6
     active:
@@ -352,6 +363,7 @@ downTilt:
     tipperStun: 20
     priority: 3
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/down-tilt.png
     highRes: https://rivals.academy/library/clairen/1080_down-tilt.png
@@ -387,6 +399,7 @@ neutralAir:
       scaling: 0
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 6 Sour
     active:
       from: 20
@@ -411,6 +424,7 @@ neutralAir:
       scaling: 20
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 1-5 Tipper
     active:
     - "on": 10
@@ -440,6 +454,7 @@ neutralAir:
     hitLockout: 10
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Hit 6 Tipper
     active:
       from: 20
@@ -461,6 +476,7 @@ neutralAir:
     tipperStun: 24
     priority: 6
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/neutral-air.png
     highRes: https://rivals.academy/library/clairen/1080_neutral-air.png
@@ -492,6 +508,7 @@ forwardAir:
     - hitbox: Below
       priority: 5
     killsProjectiles: true
+    parryStun: true
   - name: Hit 1 Tipper
     active:
       from: 7
@@ -513,6 +530,7 @@ forwardAir:
     tipperStun: 20
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 Sour
     active:
       from: 16
@@ -537,6 +555,7 @@ forwardAir:
       scaling: 20
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 Sour (Above/Below)
     active:
       from: 16
@@ -557,6 +576,7 @@ forwardAir:
       scaling: 20
     priority: 5
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 Tipper
     active:
       from: 16
@@ -578,6 +598,7 @@ forwardAir:
     tipperStun: 20
     priority: 3
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/forward-air.png
     highRes: https://rivals.academy/library/clairen/1080_forward-air.png
@@ -609,6 +630,7 @@ backAir:
       scaling: 20
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Tipper
     active:
       from: 9
@@ -630,6 +652,7 @@ backAir:
     tipperStun: 20
     priority: 3
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/back-air.png
     highRes: https://rivals.academy/library/clairen/1080_back-air.png
@@ -661,6 +684,7 @@ upAir:
       scaling: 50
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Sour (Hilt)
     active:
       from: 16
@@ -681,6 +705,7 @@ upAir:
       scaling: 25
     priority: 5
     killsProjectiles: true
+    parryStun: true
   - name: Tipper
     active:
       from: 16
@@ -702,6 +727,7 @@ upAir:
     tipperStun: 24
     priority: 3
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/up-air.png
     highRes: https://rivals.academy/library/clairen/1080_up-air.png
@@ -729,6 +755,7 @@ downAir:
       scaling: 50
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 1 Tipper
     active:
       from: 16
@@ -750,6 +777,7 @@ downAir:
     tipperStun: 24
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 Sour
     active:
       from: 19
@@ -774,6 +802,7 @@ downAir:
       scaling: 50
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 Tipper
     active:
       from: 19
@@ -795,6 +824,7 @@ downAir:
     tipperStun: 24
     priority: 3
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/down-air.png
     highRes: https://rivals.academy/library/clairen/1080_down-air.png
@@ -820,6 +850,7 @@ forwardStrong:
       scaling: 80
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 1 Tipper
     active:
       from: 11
@@ -838,6 +869,7 @@ forwardStrong:
     tipperStun: 24
     priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2
     active:
       from: 13
@@ -863,6 +895,7 @@ forwardStrong:
     - hitbox: Above
       priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 Tipper
     active:
       from: 13
@@ -887,6 +920,7 @@ forwardStrong:
     - hitbox: Above
       priority: 3
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/forward-strong.png
     highRes: https://rivals.academy/library/clairen/1080_forward-strong.png
@@ -915,6 +949,7 @@ upStrong:
       scaling: 70
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Sour (Hilt)
     active:
       "on": 12
@@ -931,6 +966,7 @@ upStrong:
       scaling: 60
     priority: 5
     killsProjectiles: true
+    parryStun: true
   - name: Tipper
     active:
       from: 12
@@ -949,6 +985,7 @@ upStrong:
     tipperStun: 24
     priority: 4
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/up-strong.png
     highRes: https://rivals.academy/library/clairen/1080_up-strong.png
@@ -973,6 +1010,7 @@ downStrong:
       scaling: 70
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 1 Tipper
     active:
       from: 8
@@ -995,6 +1033,7 @@ downStrong:
     - hitbox: Front
       priority: 3
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 Sour
     active:
       from: 20
@@ -1016,6 +1055,7 @@ downStrong:
       scaling: 70
     priority: 6
     killsProjectiles: true
+    parryStun: true
   - name: Hit 2 Tipper
     active:
       from: 20
@@ -1034,6 +1074,7 @@ downStrong:
     tipperStun: 24
     priority: 3
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/down-strong.png
     highRes: https://rivals.academy/library/clairen/1080_down-strong.png
@@ -1062,8 +1103,8 @@ neutralSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: false
     notes:
-    - Does not place Clairen in Parry Stun when parried.
     - Can shift downwards while airborne after a succesful grab by inputting fast-fall.
     - Neutral special will refresh your double-jump on grabbing another character a single time while you are airborne. This one time refresh is not used if you already have a double-jump.
   - name: Forward Throw
@@ -1094,6 +1135,7 @@ neutralSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: false
     notes:
     - Window to input direction of throw is f20-39. On f40 Clairen will begin throwing the grabbed character forward by default.
   - name: Back Throw
@@ -1124,6 +1166,7 @@ neutralSpecial:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: false
     notes:
     - Window to input direction of throw is f20-39. On f40 Clairen will begin throwing the grabbed character forward by default.
   image:
@@ -1173,6 +1216,7 @@ sideSpecial:
       scaling: 80
     priority: 3
     killsProjectiles: true
+    parryStun: true
     notes:
     - If on the ground when cancelling you can hold back and jump to turnaround on the first frame of jump-squat.
   - name: Sweet
@@ -1193,6 +1237,7 @@ sideSpecial:
     tipperStun: 32
     priority: 6
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/side-special.png
     highRes: https://rivals.academy/library/clairen/1080_side-special.png
@@ -1219,6 +1264,7 @@ upSpecial:
     asdiModifier: 0.5
     priority: 1
     killsProjectiles: true
+    parryStun: true
     cannotGalaxy: true
   - name: Rising Hit 2-3
     active:
@@ -1248,6 +1294,7 @@ upSpecial:
     asdiModifier: 0.5
     priority: 1
     killsProjectiles: true
+    parryStun: true
     cannotGalaxy: true
   - name: Slash
     startup: 10
@@ -1273,6 +1320,7 @@ upSpecial:
       scaling: 20
     priority: 6
     killsProjectiles: true
+    parryStun: true
     notes:
     - Earliest frame to input is 23 (as early as frame 17 buffering on whiff). Last frame to input is 33. Startup always begins on frame 34.
   - name: Slash Tipper
@@ -1293,6 +1341,7 @@ upSpecial:
     tipperStun: 20
     priority: 3
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/clairen/up-special.png
     highRes: https://rivals.academy/library/clairen/1080_up-special.png
@@ -1339,8 +1388,8 @@ downSpecial:
     asdiModifier: 0.5
     priority: 1
     killsProjectiles: true
+    parryStun: false
     notes:
-    - Does not place Clairen into stun when parried.
     - Plasma Field is not created if parried.
   - name: Hit 3 Tipper
     intangible:
@@ -1370,8 +1419,8 @@ downSpecial:
     tipperStun: 16
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
-    - Does not place Clairen into stun when parried.
     - Plasma Field is not created if parried.
   - name: Plasma Field
     lifetime:

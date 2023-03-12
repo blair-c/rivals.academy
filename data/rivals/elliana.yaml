@@ -141,6 +141,7 @@ dashAttack:
       scaling: 30
     priority: 2
     killsProjectiles: true
+    parryStun: false
   image:
     baseRes: https://rivals.academy/library/elliana/dash-attack.png
     highRes: https://rivals.academy/library/elliana/1080_dash-attack.png
@@ -180,6 +181,7 @@ forwardTilt:
       scaling: 0
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Finisher
     startup: 6
     active:
@@ -203,6 +205,7 @@ forwardTilt:
       scaling: 40
     priority: 5
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/elliana/forward-tilt.png
     highRes: https://rivals.academy/library/elliana/1080_forward-tilt.png
@@ -230,6 +233,7 @@ upTilt:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - On grabbing multiple characters, the claw will use port-priority to decide which opponent to lock on to.
     - Launch opponent in the opposite direction by inputting away while they are still in the chain.
@@ -273,6 +277,7 @@ upTilt:
     hitLockout: 20
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - If dodge is not held, Up Tilt Hit 2 will consume all heat to increase the base knockback, knockback scaling, and endlag of the move.
   image:
@@ -318,6 +323,7 @@ downTilt:
       scaling: 0
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - Has the ability to knock a Planted Mine a short distance directly upwards from the ground.
   - name: Hit 2
@@ -343,6 +349,7 @@ downTilt:
       scaling: 60
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/elliana/down-tilt.png
     highRes: https://rivals.academy/library/elliana/1080_down-tilt.png
@@ -375,6 +382,7 @@ neutralAir:
     hitLockout: 4
     priority: 4
     killsProjectiles: true
+    parryStun: true
   - name: Ball/Chains
     active:
       from: 11
@@ -396,6 +404,7 @@ neutralAir:
     hitLockout: 6
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/elliana/neutral-air.png
     highRes: https://rivals.academy/library/elliana/1080_neutral-air.png
@@ -426,6 +435,7 @@ forwardAir:
       scaling: 10
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Hit 3
     active:
       from: 17
@@ -451,6 +461,7 @@ forwardAir:
     hitLockout: 6
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/elliana/forward-air.png
     highRes: https://rivals.academy/library/elliana/1080_forward-air.png
@@ -482,6 +493,7 @@ backAir:
       scaling: 40
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Sweet
     active:
       from: 12
@@ -503,6 +515,7 @@ backAir:
     hitLockout: 10
     priority: 6
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/elliana/back-air.png
     highRes: https://rivals.academy/library/elliana/1080_back-air.png
@@ -541,6 +554,7 @@ upAir:
     hitLockout: 10
     priority: 1
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/elliana/up-air.png
     highRes: https://rivals.academy/library/elliana/1080_up-air.png
@@ -572,6 +586,7 @@ downAir:
       scaling: 20
     priority: 2
     killsProjectiles: true
+    parryStun: true
   - name: Hit 3
     active:
       from: 18
@@ -597,6 +612,7 @@ downAir:
     hitLockout: 6
     priority: 2
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/elliana/down-air.png
     highRes: https://rivals.academy/library/elliana/1080_down-air.png
@@ -638,6 +654,7 @@ forwardStrong:
     hitLockout: 5
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - Air acceleration while charging strong attacks is multiplied by 0.5x.			
   - name: Steam
@@ -658,6 +675,7 @@ forwardStrong:
     asdiModifier: 2.5
     priority: 1
     killsProjectiles: false
+    parryStun: false
     cannotGalaxy: true
     notes:
     - Ignores players in the first 9 frames of hitstun.
@@ -703,6 +721,7 @@ forwardStrong:
     hitLockout: 10
     priority: 8
     killsProjectiles: true
+    parryStun: true
     notes:
     - Air acceleration while charging strong attacks is multiplied by 0.5x.
     - Heat reduction is paused during startup/charge frames.
@@ -746,6 +765,7 @@ upStrong:
     hitLockout: 5
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - Air acceleration while charging strong attacks is multiplied by 0.5x.			
   - name: Steam
@@ -766,6 +786,7 @@ upStrong:
     asdiModifier: 2.5
     priority: 1
     killsProjectiles: false
+    parryStun: false
     cannotGalaxy: true
     notes:
     - Ignores players in the first 9 frames of hitstun.
@@ -811,6 +832,7 @@ upStrong:
     hitLockout: 10
     priority: 8
     killsProjectiles: true
+    parryStun: true
     notes:
     - Air acceleration while charging strong attacks is multiplied by 0.5x.
     - Heat reduction is paused during startup/charge frames.
@@ -832,6 +854,7 @@ upStrong:
     hitLockout: 10
     priority: 6
     killsProjectiles: true
+    parryStun: true
   image:
     baseRes: https://rivals.academy/library/elliana/up-strong-overheated.png
     highRes: https://rivals.academy/library/elliana/1080_up-strong-overheated.png
@@ -876,6 +899,7 @@ downStrong:
     hitLockout: 5
     priority: 1
     killsProjectiles: true
+    parryStun: true
     notes:
     - Air acceleration while charging strong attacks is multiplied by 0.5x.			
   - name: Steam
@@ -896,6 +920,7 @@ downStrong:
     asdiModifier: 2.5
     priority: 1
     killsProjectiles: false
+    parryStun: false
     cannotGalaxy: true
     notes:
     - Ignores players in the first 9 frames of hitstun.
@@ -945,6 +970,7 @@ downStrong:
     hitLockout: 10
     priority: 8
     killsProjectiles: true
+    parryStun: true
     notes:
     - Air acceleration while charging strong attacks is multiplied by 0.5x.
     - Heat reduction is paused during startup/charge frames.
@@ -979,8 +1005,9 @@ neutralSpecial:
       base: 6
       scaling: 50
     priority: 1
-    extendedParryStun: true
     killsProjectiles: true
+    parryStun:
+      extended: true
     notes:
     - Cannot be broken by projectiles that deal <8%.
   - name: Explosion
@@ -1000,8 +1027,9 @@ neutralSpecial:
       scaling: 100
     hitLockout: 15
     priority: 7
-    extendedParryStun: true
     killsProjectiles: true
+    parryStun:
+      extended: true
   - name: Explosion (Mine)
     active:
       onHit:
@@ -1020,8 +1048,9 @@ neutralSpecial:
       scaling: 100
     hitLockout: 15
     priority: 7
-    extendedParryStun: true
     killsProjectiles: true
+    parryStun:
+      extended: true
   notes:
   - Fist begins exploding on contact with the ground, walls, objects, or an active mine while travelling. Passes through characters without exploding unless they are stickied with an active mine.
   - Knockback is increased on hitting an active mine, conveyed visually by a red explosion animation rather than the regular orange one.
@@ -1072,6 +1101,7 @@ sideSpecial:
       scaling: 0
     priority: 3
     killsProjectiles: true
+    parryStun: false
     cannotGalaxy: Characters stuck by a mine
   notes:
   - Control over the missile is lost on death.
@@ -1107,6 +1137,7 @@ sideSpecial:
       scaling: 90
     priority: 3
     killsProjectiles: true
+    parryStun: false
     cannotGalaxy: Characters stuck by a mine
   notes:
   - Cannot be broken by attacks or projectiles.
@@ -1163,15 +1194,14 @@ upSpecial:
         to: 55
         note: or until overheated
     active:
-      onLanding:
-        soonest:
-          from: 31
-          to: 34
-          frames: 4
-        latest:
-          from: 60
-          to: 63
-          frames: 4
+      soonest:
+        from: 31
+        to: 34
+        frames: 4
+      latest:
+        from: 60
+        to: 63
+        frames: 4
     damage: 10
     angle: 70
     angleFlipper: 10
@@ -1184,8 +1214,12 @@ upSpecial:
       scaling: 80
     priority: 10
     killsProjectiles: true
-    notes:
-    - Mech is rebuilt on landing before extended parry stun is applied, adding 32 additional frames to her inactive time. Elliana is not considered in the attacking state upon landing and an additional 10 frames of parry stun is also applied to the extended parry stun formula.
+    parryStun:
+      extended: true
+      extra: 10
+      uniqueEndlag:
+        animation: Rebuild
+        frames: 32
   image:
     baseRes: https://rivals.academy/library/elliana/up-special-mech-explosion.png
     highRes: https://rivals.academy/library/elliana/1080_up-special-mech-explosion.png
@@ -1200,6 +1234,7 @@ downSpecial:
     firstActiveFrame: 15
     cooldown: 90
     damage: 2
+    parryStun: false
     notes:
     - Mine takes 100 frames to become active if stuck on a player.
   notes:
@@ -1241,6 +1276,7 @@ downSpecial:
       scaling: 0
     priority: 7
     killsProjectiles: true
+    parryStun: false
   - name: Hit 3
     active:
       unstuck:
@@ -1265,6 +1301,7 @@ downSpecial:
       scaling: 0
     priority: 7
     killsProjectiles: true
+    parryStun: false
     notes:
     - Destroys mine if stuck to player.
   image:
