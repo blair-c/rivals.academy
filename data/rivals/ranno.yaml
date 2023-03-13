@@ -1130,7 +1130,7 @@ upSpecial:
   image:
     baseRes: https://rivals.academy/library/ranno/up-special.png
     highRes: https://rivals.academy/library/ranno/1080_up-special.png
-- name: Poison Spin
+- name: Needle Storm
   hitboxes:
   - name: Vortex
     startup: 9
@@ -1251,8 +1251,8 @@ upSpecial:
     parryStun: true
     appliesPoison: 1
   image:
-    baseRes: https://rivals.academy/library/ranno/up-special-poison-spin.png
-    highRes: https://rivals.academy/library/ranno/1080_up-special-poison-spin.png
+    baseRes: https://rivals.academy/library/ranno/up-special-needle-storm.png
+    highRes: https://rivals.academy/library/ranno/1080_up-special-needle-storm.png
 
 downSpecial:
 - hitboxes:
