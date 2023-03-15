@@ -522,8 +522,7 @@ backAir:
 
 upAir:
   hitboxes:
-  - name: Hit 1
-    startup: 8
+  - startup: 8
     active:
     - from: 9
       to: 10

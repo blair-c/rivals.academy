@@ -181,9 +181,6 @@ dashAttack:
     cancellable:
     - with: Up Strong
       condition: On Hit
-      from: 12
-      to: 14
-      window: 3
     endlag:
       hit: 13
       whiff: 20
@@ -209,9 +206,6 @@ dashAttack:
     cancellable:
     - with: Up Strong
       condition: On Hit
-      from: 12
-      to: 14
-      window: 3
     damage: 6
     angle: 105
     angleFlipper: 6

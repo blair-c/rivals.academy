@@ -133,6 +133,7 @@
 
       {{ if $startup }}<td>
         {{ if reflect.IsMap .startup }}
+          {{ if isset .startup "min" }}{{ .startup.min }}-{{ .startup.max }}{{ end }}
           {{ if isset .startup "loop" -}}
             {{ .startup.initial }} ({{ .startup.loop }} in loop)
           {{ else }}
@@ -148,18 +149,22 @@
               {{ with .max }}{{ . }}{{ end }}
               {{ else }}{{ . }}{{ end }} (Charge)<br>
             {{ end }}
+            {{ with .startup.fromLanding }}{{ . }} (From landing){{ end }}
+
             {{ with .startup.root }}{{ . }} (Root){{ end }}
             {{ with .startup.tether }}{{ . }} (Tether){{ end }}
             {{ with .startup.lily }}{{ . }} (Lily){{ end }}
+            {{ if isset .startup "targetInHitstun" }}
+              {{ .startup.targetNotInHitstun }} ({{ .startup.targetInHitstun}} if target in hitstun)
+            {{ end }}
             {{ with .startup.cloud }}{{ . }} (Cloud){{ end }}
             {{ with .startup.throw }}{{ . }} (Throw){{ end }}
             {{ with .startup.dagger }}{{ . }} (Dagger){{ end }}
             {{ with .startup.missile }}{{ . }} (Shoot Missile){{ end }}
             {{ with .startup.explosion }}{{ . }} (Explosion){{ end }}
-          {{ end }}
-          {{ with .startup.fromLanding }}{{ . }} (From landing){{ end }}
-          {{ if isset .startup "targetInHitstun" }}
-            {{ .startup.targetNotInHitstun }} ({{ .startup.targetInHitstun}} if target in hitstun)
+            {{ with .startup.detonation }}
+              {{ .initial }} (Initial Detonation)<br>{{ .lockedIn }} (Locked In Detonation)
+            {{ end }}
           {{ end }}
         {{- else }}{{ .startup }}{{ end }}
         {{ with .mustConnect }}({{ . }} Must Hit){{ end }}
@@ -300,7 +305,7 @@
             {{ end }}
             (Soonest)
           {{- end -}}
-          {{ if and (isset .active "soonest") (isset .active "latest") }},{{ end }}
+          {{ if and (isset .active "soonest") (isset .active "latest") }}<br>{{ end }}
           {{ with .active.latest }}
             {{ with .on }}{{ . }}{{ end }}
             {{ with .from }}{{ . }}-{{ end -}}
@@ -396,12 +401,15 @@
 
       {{ if $projectileInvuln }}<td>
         {{ with .projectileInvuln }}
-          {{ if isset . "during" }}
-            {{ .during }} {{ if isset . "from" }}({{ .from }}-{{ .to }}){{ end }}
-          {{ else }}
-            {{ with .onLanding }}On Landing:
-              {{ .from }}-{{ .to }}{{ if .onlyLessThan8 }} (Projectiles Less Than 8%){{ end }}
-            {{ end }}
+          {{ with .during }}{{ . }}{{ end }}
+          {{ if isset . "from" }}
+            {{ with .during }}({{ end }}{{ .from }}-{{ .to }}{{ with .during }}){{ end }}
+          {{ end }}
+          {{ if isset . "min" }}
+            {{ .min.from }}-{{ .min.to }} (Minimum)<br>{{ .max.from }}-{{ .max.to }} (Maximum)
+          {{ end }}
+          {{ with .onLanding }}On Landing:
+            {{ .from }}-{{ .to }}{{ if .onlyLessThan8 }} (Projectiles Less Than 8%){{ end }}
           {{ end }}
         {{ end }}
       </td>{{ end }}
@@ -455,6 +463,11 @@
             {{ .endlag.offGrass }} ({{ .endlag.onGrass }} on grass)
           {{ end }}
           {{ with .endlag.rebuildMech }}Rebuild Mech: {{ . }}{{ end }}
+          {{ with .endlag.sein }}Sein:
+            {{ if reflect.IsMap . }}
+              {{ .hit }} / {{ .whiff.fullyInactive }}+{{ .whiff.teamUpAvailable }}
+            {{ else }}{{ . }}{{ end }}
+          {{ end }}
           {{ if isset .endlag "overTwoGloves" }}
             {{ .endlag.twoOrLessGloves }} ({{ .endlag.overTwoGloves }} if >2 gloves are thrown)
           {{ end }}
@@ -466,7 +479,9 @@
         {{ range .cancellable }}
           {{ .with }}
           {{- with .condition }} ({{ . }}){{ end }}
-          {{- with .input }} (Input {{ . }}){{ end }}:
+          {{- with .input }} (Input {{ . }}){{ end }}
+          {{- with or (isset . "during") (isset . "windows")
+            (isset . "hit") (isset . "on") (isset . "from") }}:{{ end }}
           {{ with .during }}{{ title . }} f{{ end -}}
           {{ with .windows -}}
             {{ $len = len . -}}
@@ -503,7 +518,9 @@
               {{ with .from }}{{ . }}-{{ end -}}
               {{ with .to }}{{ . }}{{ end -}}
             {{ end }}
-            {{ with .endlag }} ({{ . }}f Endlag){{ end }}<br>
+            {{ with .endlag }} ({{ . }}f Endlag){{ end }}
+            {{ with .cooldown }}({{ . }}f Cooldown){{ end }}
+            <br>
           {{ end -}}
         {{ end -}}
       </td>{{ end }}
@@ -554,11 +571,10 @@
       </td>{{ end }}
 
       {{ if $landingLag }}<td>
-        {{ if isset .landingLag "hit" }}
-          {{ .landingLag.hit }} / {{ .landingLag.whiff -}}
-        {{ else }}
-          {{ .landingLag }}
-        {{ end -}}
+        {{ if reflect.IsMap .landingLag }}
+          {{ if isset .landingLag "hit" }}{{ .landingLag.hit }} / {{ .landingLag.whiff -}}{{ end }}
+          {{ with .landingLag.openParasol }}{{ . }} (Open Parasol){{ end }}
+        {{ else }}{{ .landingLag }}{{ end -}}
       </td>{{ end }}
 
       {{ if $lifetime }}<td>
@@ -575,7 +591,8 @@
           {{ $len = len .cooldown }}
           {{ range $index, $_ :=.cooldown }}
             {{ with .move }}{{ . }}:{{ end }}
-            {{ .time -}}
+            {{ if reflect.IsMap .time }}{{ .time.min }}-{{ .time.max }}{{ else }}{{ .time }}{{ end -}}
+            {{ with .additional }}+{{ . }}{{ end }}
             {{ if or (isset . "on") (isset . "onlyInAir") }}
               ({{ with .on }}On {{ . }}{{ end }}
               {{- if and (isset . "on") (isset . "onlyInAir") }} {{ end }}

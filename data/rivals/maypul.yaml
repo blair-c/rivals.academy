@@ -45,6 +45,8 @@ wallJump:
   speed:
     vertical: 10
     horizontal: 4
+wallCling:
+  max: 60
 pratFall:
   accel: 0.85
   landTime: 10
@@ -751,8 +753,6 @@ upSpecial:
     cancellable:
     - with: Platform Drop
       condition: On Hit
-      during: endlag
-      "on": 1
     damage: 2
     angle: 95
     angleFlipper: 7
