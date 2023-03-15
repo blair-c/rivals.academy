@@ -725,9 +725,9 @@ forwardStrong:
     parryStun: true
   - name: Hit 3
     active:
-      from: 23
-      to: 24
-      frames: 2
+      from: 25
+      to: 27
+      frames: 3
     endlag:
       hit: 24
       whiff: 36
