@@ -1099,5 +1099,5 @@ downSpecial:
     killsProjectiles: true
     parryStun: true
   image:
-    baseRes: https://rivals.academy/library/forsburn/down-special.png
-    highRes: https://rivals.academy/library/forsburn/1080_down-special.png
+    baseRes: https://rivals.academy/library/forsburn/down-special-empowered.png
+    highRes: https://rivals.academy/library/forsburn/1080_down-special-empowered.png
