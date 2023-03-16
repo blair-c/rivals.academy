@@ -207,6 +207,8 @@ forwardTilt:
       frames: 1
     - "on": 9
       frames: 1
+    smoke:
+      inactive: 11
     damage: 3
     angle: 361
     angleFlipper: 0
@@ -225,6 +227,8 @@ forwardTilt:
     active:
       "on": 15
       frames: 1
+    smoke:
+      active:
     endlag:
       hit: 8
       whiff: 12
@@ -623,6 +627,11 @@ forwardStrong:
           from: 15
           to: 24
           window: 10
+    - with: Jab/Tilts
+      during: endlag
+      from: 2
+      to: 16
+      window: 15
     firstActiveFrame: 44
     damage: 4
     angle: 361
@@ -737,6 +746,11 @@ upStrong:
           from: 15
           to: 24
           window: 10
+    - with: Jab/Tilts
+      during: endlag
+      from: 2
+      to: 16
+      window: 15
     firstActiveFrame: 45
     damage: 4
     angle: 140
@@ -824,11 +838,10 @@ neutralSpecial:
   - smoke:
       inactive: [26, 36, 46, 56, 66, 76, 86, 96, 106, 116]
       active: 126
-      note: If Forsburn is within a patch of smoke (inactive or active) during one of these intervals it will skip this cycle and guarantee that the next interval will spawn smoke instead, with the exception of the second interval which always spawns smoke on f36.
     firstActiveFrame: 20
     notes:
-    - Releases 5-10 clouds of smoke unless interrupted by Forsburn being hit or performing another special, both of which cause all smoke to immediately become active.
-    - An attack which places Forsburn into the flinch state does not interrupt smoke creation.
+    - Releases 5-10 clouds of smoke unless interrupted by Forsburn being hit (barring flinch) or performing another special, both of which cause all smoke to become active.
+    - During each release interval if Forsburn is within a patch of smoke it will skip that cycle and guarantee that the next interval will spawn smoke instead, with the exception of the second interval which always spawns smoke.
   - name: "Empowered"
     smoke:
       inactive: 10

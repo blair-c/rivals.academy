@@ -4,6 +4,7 @@
 {{ $startup := false }}
 {{ $intangible := false }}
 {{ $active := false }}
+{{ $smoke := false }}
 {{ $capture := false }}
 {{ $airBrakes := false }}
 {{ $invuln := false }}
@@ -43,6 +44,7 @@
   {{ if isset . "startup" }} {{ $startup = true }} {{ end }}
   {{ if isset . "intangible" }} {{ $intangible = true }} {{ end }}
   {{ if isset . "active" }} {{ $active = true }} {{ end }}
+  {{ if isset . "smoke" }} {{ $smoke = true }} {{ end }}
   {{ if isset . "capture" }} {{ $capture = true }} {{ end }}
   {{ if isset . "airBrakes" }} {{ $airBrakes = true }} {{ end }}
   {{ if isset . "invuln" }} {{ $invuln = true }} {{ end }}
@@ -89,6 +91,7 @@
         {{ if $startup }}<th>Startup</th>{{ end }}
         {{ if $intangible }}<th>Intangible</th>{{ end }}
         {{ if $active }}<th>Active</th>{{ end }}
+        {{ if $smoke }}<th>Smoke</th>{{ end }}
         {{ if $capture }}<th>Capture</th>{{ end }}
         {{ if $airBrakes }}<th>Air Brakes</th>{{ end }}
         {{ if $invuln }}<th>Invulnerable</th>{{ end }}
@@ -381,6 +384,19 @@
           {{ end }}
           {{ if .active.onlyHitsProjectiles }}<br>(Only Hits Projectiles){{ end }}
         {{ end -}}
+      </td>{{ end }}
+
+      {{ if $smoke }}<td>
+        {{ with .smoke.inactive }}Inactive:
+          {{ if reflect.IsSlice . }}
+            {{ $len = len . }}
+            {{ range $index, $_ := . }}
+              {{ . }}{{ if lt (add $index 1) $len }}, {{ end -}}
+              {{ if or (eq $index 3) }}<br>{{ end }}
+            {{ end }}
+          {{ else }}{{ . }}{{ end }}
+        {{ end }}<br>
+        {{ with .smoke.active }}Active: {{ . }}{{ end }}
       </td>{{ end }}
 
       {{ if $capture }}<td>
