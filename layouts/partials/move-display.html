@@ -3,6 +3,7 @@
 {{/*  Initialize all possible columns to false  */}}
 {{ $startup := false }}
 {{ $intangible := false }}
+{{ $angleRegistered := false }}
 {{ $active := false }}
 {{ $smoke := false }}
 {{ $capture := false }}
@@ -43,6 +44,7 @@
 {{ range .hitboxes }}
   {{ if isset . "startup" }} {{ $startup = true }} {{ end }}
   {{ if isset . "intangible" }} {{ $intangible = true }} {{ end }}
+  {{ if isset . "angleRegistered" }} {{ $angleRegistered = true }} {{ end }}
   {{ if isset . "active" }} {{ $active = true }} {{ end }}
   {{ if isset . "smoke" }} {{ $smoke = true }} {{ end }}
   {{ if isset . "capture" }} {{ $capture = true }} {{ end }}
@@ -90,6 +92,7 @@
         {{ if $multiple }}<th class="sticky-col">Hitbox</th>{{ end }}
         {{ if $startup }}<th>Startup</th>{{ end }}
         {{ if $intangible }}<th>Intangible</th>{{ end }}
+        {{ if $angleRegistered }}<th>Angle Registered</th>{{ end }}
         {{ if $active }}<th>Active</th>{{ end }}
         {{ if $smoke }}<th>Smoke</th>{{ end }}
         {{ if $capture }}<th>Capture</th>{{ end }}
@@ -175,6 +178,8 @@
       </td>{{ end }}
 
       {{ if $intangible }}<td>{{ with .intangible }}{{ .from }}-{{ .to }}{{ end }}</td>{{ end }}
+
+      {{ if $angleRegistered }}<td>{{ .angleRegistered }}</td>{{ end }}
 
       {{ if $active }}<td>
         {{ if reflect.IsSlice .active }}
