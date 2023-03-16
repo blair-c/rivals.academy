@@ -1,0 +1,1089 @@
+name: Forsburn
+element: fire
+
+# Effective Weight
+knockbackAdjustment: 1.00
+gravityAccel: 0.50
+hitstunGravityAccel: 0.50
+airFriction: 0.04
+airAccel: 0.30
+maxFallSpeed: 10
+fastFallSpeed: 14
+jumpSquat: 5
+landTime: 4
+# Ground Movement
+groundFriction: 0.40
+initialDash:
+  speed: 7.00
+  time: 16
+run:
+  speed: 6.00
+  stop:
+    time: 4
+  turn:
+    time: 10
+    accel: 1.50
+walk:
+  speed: 3.25
+  accel: 0.20
+  turn:
+    time: 6
+waveland:
+  time: 8
+  friction: 0.15
+# Aerial Movement
+maxAirSpeed: 4
+maxJumpHorizontalSpeed: 6
+fullHop:
+  speed: 10.99
+shortHop:
+  speed: 6.0
+doubleJump:
+  amount: 1
+  speed: 10.00
+wallJump:
+  speed:
+    vertical: 8
+    horizontal: 7
+pratFall:
+  accel: 0.85
+  landTime: 16
+
+hurtbox:
+  idle:
+    height: 59
+    width: 42
+  crouch:
+    height: 36
+    width: 42
+  hitstun:
+    height: 59
+    width: 42
+  image:
+    baseRes: https://rivals.academy/library/forsburn/hurtbox.png
+    highRes: https://rivals.academy/library/forsburn/1080_hurtbox.png
+
+# Normals
+jab:
+  hitboxes:
+  - name: Jab 1
+    startup: 5
+    active:
+      from: 6
+      to: 7
+      frames: 2
+    endlag: 13
+    cancellable:
+    - with: Jab 2
+      during: endlag
+      windows:
+      - from: 7
+        to: 11
+        window: 5
+      - from: 12
+        to: 13
+        window: 2
+    - with: Tilts
+      during: endlag
+      from: 7
+      to: 13
+      window: 7
+    firstActiveFrame: 21
+    damage: 4
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    forceFlinch: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+    parryStun: false
+  - name: Jab 2
+    startup: 5
+    active:
+      soonest:
+        from: 19
+        to: 20
+        frames: 2
+    endlag: 16
+    cancellable:
+    - with: Jab 3
+      during: endlag
+      windows:
+      - from: 8
+        to: 14
+        window: 7
+      - from: 15
+        to: 16
+        window: 2
+    - with: Tilts
+      during: endlag
+      from: 8
+      to: 16
+      window: 9
+    firstActiveFrame:
+      soonest: 37
+    damage: 4
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    parryStun: false
+  - name: Jab 3
+    startup: 8
+    active:
+      soonest:
+        from: 36
+        to: 37
+        frames: 2
+    endlag: 17
+    firstActiveFrame:
+      soonest: 55
+    damage: 6
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 60
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+  notes:
+  - Jab combos have varying startup depending on when the attack is input. A jab input within the final 2 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
+  image:
+    baseRes: https://rivals.academy/library/forsburn/jab.png
+    highRes: https://rivals.academy/library/forsburn/1080_jab.png
+
+dashAttack:
+  hitboxes:
+  - startup: 8
+    active:
+      from: 9
+      to: 12
+      frames: 4
+    endlag:
+      hit: 17
+      whiff: 26
+    firstActiveFrame: 39
+    damage: 8
+    angle: 70
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 25
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/forsburn/dash-attack.png
+    highRes: https://rivals.academy/library/forsburn/1080_dash-attack.png
+
+forwardTilt:
+  hitboxes:
+  - name: Hit 1-2
+    startup: 6
+    active:
+    - "on": 7
+      frames: 1
+    - "on": 9
+      frames: 1
+    damage: 3
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 2
+      scaling: 0
+    hitstunModifier: 1
+    untechable: true
+    hitpause:
+      base: 3
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 3
+    active:
+      "on": 15
+      frames: 1
+    endlag:
+      hit: 8
+      whiff: 12
+    firstActiveFrame: 28
+    damage: 5
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 50
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/forsburn/forward-tilt.png
+    highRes: https://rivals.academy/library/forsburn/1080_forward-tilt.png
+
+upTilt:
+  hitboxes:
+  - name: Hit 1-2
+    startup: 9
+    active:
+    - from: 10
+      to: 11
+      frames: 2
+    - from: 14
+      to: 15
+      frames: 2
+    damage: 2
+    angle: 361
+    angleFlipper: 9
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 1
+    untechable:
+      note: Forces a missed tech instead of bouncing the opponent off the ground.
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 3
+    active:
+      from: 16
+      to: 18
+      frames: 3
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 34
+    damage: 4
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 25
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 20
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/forsburn/up-tilt.png
+    highRes: https://rivals.academy/library/forsburn/1080_up-tilt.png
+
+downTilt:
+  hitboxes:
+  - startup: 6
+    active:
+      from: 7
+      to: 9
+      frames: 3
+    endlag:
+      hit: 12
+      whiff: 18
+    firstActiveFrame: 28
+    damage: 9
+    angle: 75
+    angleFlipper: 6
+    knockback:
+      base: 7
+      scaling: 45
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 25
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/forsburn/down-tilt.png
+    highRes: https://rivals.academy/library/forsburn/1080_down-tilt.png
+
+# Aerials
+neutralAir:
+  hitboxes:
+  - name: Hit 1 (Behind)
+    startup: 6
+    active:
+      from: 7
+      to: 9
+      frames: 3
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 2
+    angle: 135
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 25
+    hitstunModifier: 0.6
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 1 (Front)
+    startup: 6
+    active:
+      from: 7
+      to: 9
+      frames: 3
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 3
+    angle: 50
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 20
+    hitstunModifier: 0.5
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 2
+    active:
+      from: 11
+      to: 13
+      frames: 3
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 2
+    angle: 10
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 25
+    hitstunModifier: 0.6
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 3
+    active:
+      from: 15
+      to: 17
+      frames: 3
+    endlag:
+      hit: 13
+      whiff: 20
+    firstActiveFrame: 38
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 4
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 20
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/forsburn/neutral-air.png
+    highRes: https://rivals.academy/library/forsburn/1080_neutral-air.png
+
+forwardAir:
+  hitboxes:
+  - startup: 6
+    active:
+      from: 7
+      to: 9
+      frames: 3
+    endlag:
+      hit: 9
+      whiff: 14
+    firstActiveFrame: 24
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 6
+    angle: 70
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 25
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/forsburn/forward-air.png
+    highRes: https://rivals.academy/library/forsburn/1080_forward-air.png
+
+backAir:
+  hitboxes:
+  - name: Sour
+    startup: 13
+    active:
+      from: 14
+      to: 27
+      frames: 8
+    endlag:
+      hit: 8
+      whiff: 12
+    firstActiveFrame: 40
+    landingLag:
+      hit: 6
+      whiff: 9
+    damage: 4
+    angle: 361
+    angleFlipper: 5
+    knockback:
+      base: 6
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 25
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  - name: Early
+    active:
+      from: 14
+      to: 15
+      frames: 2
+    landingLag:
+      hit: 6
+      whiff: 9
+    damage: 13
+    angle: 361
+    angleFlipper: 5
+    knockback:
+      base: 8
+      scaling: 90
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 25
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/forsburn/back-air.png
+    highRes: https://rivals.academy/library/forsburn/1080_back-air.png
+
+upAir:
+  hitboxes:
+  - startup: 7
+    active:
+      from: 8
+      to: 17
+      frames: 10
+    endlag:
+      hit: 13
+      whiff: 20
+    firstActiveFrame: 38
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 7
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base:
+        from: 8
+        to: 4
+        scaling: linear
+      scaling: 35
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 25
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/forsburn/up-air.png
+    highRes: https://rivals.academy/library/forsburn/1080_up-air.png
+
+downAir:
+  hitboxes:
+  - name: Front
+    startup: 11
+    active:
+      from: 12
+      to: 13
+      frames: 2
+    landingLag:
+      hit: 6
+      whiff: 9
+    damage: 12
+    angle: 35
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    hitLockout: 6
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  - name: Spike
+    active:
+      from: 15
+      to: 17
+      frames: 3
+    endlag:
+      hit: 16
+      whiff: 24
+    firstActiveFrame: 42
+    landingLag:
+      hit: 6
+      whiff: 9
+    damage: 12
+    angle: 290
+    angleFlipper: 5
+    knockback:
+      base: 8
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 25
+    hitLockout: 5
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/forsburn/down-air.png
+    highRes: https://rivals.academy/library/forsburn/1080_down-air.png
+
+# Strongs
+forwardStrong:
+  hitboxes:
+  - name: Cape
+    startup: 14
+    active:
+      from: 15
+      to: 19
+      frames: 5
+    endlag:
+      hit: 16
+      whiff: 24
+    cancellable:
+    - with: Dagger
+      during: endlag
+      windows:
+      - from: 10
+        to: 14
+        frames: 5
+      - hit:
+          from: 15
+          to: 16
+          window: 2
+        whiff:
+          from: 15
+          to: 24
+          window: 10
+    firstActiveFrame: 44
+    damage: 4
+    angle: 361
+    angleFlipper: 7
+    knockback:
+      base: 3
+      scaling: 5
+    hitstunModifier: 1.5
+    hitpause:
+      base: 7
+      scaling: 0
+    hitLockout: 6
+    priority: 2
+    killsProjectiles: true
+    movesRocks: true
+  - name: Dagger
+    startup: 6
+    active:
+      soonest:
+        from: 35
+        to: 37
+        frames: 3
+      latest:
+        from: 50
+        to: 52
+        frames: 3
+    endlag:
+      hit: 24
+      whiff: 36
+    firstActiveFrame:
+      soonest: 74
+      latest: 89
+    damage: 12
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 90
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  notes:
+  - Dagger has varying startup depending on when the attack is input. A dagger input after the first 5 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
+  image:
+    baseRes: https://rivals.academy/library/forsburn/forward-strong.png
+    highRes: https://rivals.academy/library/forsburn/1080_forward-strong.png
+
+upStrong:
+  hitboxes:
+  - name: Cape Hit 1
+    active:
+      from: 15
+      to: 16
+      frames: 2
+    damage: 4
+    angle: 40
+    angleFlipper: 7
+    knockback:
+      base: 2
+      scaling: 10
+    hitstunModifier: 2
+    hitpause:
+      base: 7
+      scaling: 0
+    hitLockout: 6
+    priority: 2
+    killsProjectiles: true
+    movesRocks: true
+  - name: Cape Hit 2
+    active:
+      from: 17
+      to: 18
+      frames: 2
+    damage: 4
+    angle: 70
+    angleFlipper: 7
+    knockback:
+      base: 2
+      scaling: 10
+    hitstunModifier: 2
+    hitpause:
+      base: 7
+      scaling: 0
+    hitLockout: 6
+    priority: 2
+    killsProjectiles: true
+    movesRocks: true
+  - name: Cape Hit 3
+    active:
+      from: 19
+      to: 20
+      frames: 2
+    endlag:
+      hit: 16
+      whiff: 24
+    cancellable:
+    - with: Dagger
+      during: endlag
+      windows:
+      - from: 10
+        to: 14
+        frames: 5
+      - hit:
+          from: 15
+          to: 16
+          window: 2
+        whiff:
+          from: 15
+          to: 24
+          window: 10
+    firstActiveFrame: 45
+    damage: 4
+    angle: 140
+    angleFlipper: 7
+    knockback:
+      base: 4
+      scaling: 10
+    hitstunModifier: 2
+    hitpause:
+      base: 7
+      scaling: 0
+    hitLockout: 6
+    priority: 2
+    killsProjectiles: true
+    movesRocks: true
+  - name: Dagger
+    startup: 4
+    active:
+      soonest:
+        from: 34
+        to: 36
+        frames: 3
+      latest:
+        from: 49
+        to: 51
+        frames: 3
+    endlag:
+      hit: 24
+      whiff: 36
+    firstActiveFrame:
+      soonest: 73
+      latest: 88
+    damage: 12
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 115
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    hitLockout: 3
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  notes:
+  - Dagger has varying startup depending on when the attack is input. A dagger input after the first 5 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
+  image:
+    baseRes: https://rivals.academy/library/forsburn/up-strong.png
+    highRes: https://rivals.academy/library/forsburn/1080_up-strong.png
+
+downStrong:
+  hitboxes:
+  - startup: 8
+    active:
+      from: 9
+      to: 10
+      frames: 2
+    endlag:
+      hit: 23
+      whiff: 35
+    firstActiveFrame: 46
+    damage: 11
+    angle: 70
+    angleFlipper: 7
+    knockback:
+      base: 8
+      scaling: 115
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 90
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/forsburn/down-strong.png
+    highRes: https://rivals.academy/library/forsburn/1080_down-strong.png
+
+# Specials
+neutralSpecial:
+  hitboxes:
+  - smoke:
+      inactive: [26, 36, 46, 56, 66, 76, 86, 96, 106, 116]
+      active: 126
+      note: If Forsburn is within a patch of smoke (inactive or active) during one of these intervals it will skip this cycle and guarantee that the next interval will spawn smoke instead, with the exception of the second interval which always spawns smoke on f36.
+    firstActiveFrame: 20
+    notes:
+    - Releases 5-10 clouds of smoke unless interrupted by Forsburn being hit or performing another special, both of which cause all smoke to immediately become active.
+    - An attack which places Forsburn into the flinch state does not interrupt smoke creation.
+  - name: "Empowered"
+    smoke:
+      inactive: 10
+      active: 29
+    refresh:
+    - resource: Double Jump
+      frame: 10
+    firstActiveFrame: 20
+    notes:
+    - Interrupting Forsburn before frame 10 will cause him to lose his smoke charges and not release any smoke.
+  notes:
+  - There can be a maximum of 20 smoke clouds shared by all Forsburns at once in a given game, with new clouds of smoke removing the oldest active smoke cloud.
+  - Active smoke hides Forsburn's movements whenever he is not attacking, allows him to create a clone or teleport into it silently and invisibly, and is consumable with down-special.
+  - Active smoke can also be destroyed by enemy characters. Upon being destroyed, smoke remains active for 12 frames before disappearing.
+  - Inactive smoke does not conceal the player and cannot be destroyed or interacted with in any way.
+  - Forsburn's neutral special will be disabled if there is inactive smoke or an active clone in play.
+
+sideSpecial:
+- name: Clone
+  hitboxes:
+  - name: Create Clone
+    startup: 22
+    endlag: 3
+    firstActiveFrame: 26
+    cooldown:
+    - time: 180
+      "on": Clone Death
+    notes:
+    - Clone Spawns f23, hurtbox appears f25 (Can spawn Smoke upon death from f25-). Clone is active f26-.
+  - name: Clone Combust
+    startup:
+      initial: 1
+      clone: 4
+    active:
+      from: 6
+      to: 9
+      frames: 4
+    endlag: 6
+    firstActiveFrame: 8
+    cooldown:
+    - move: Create Clone
+      time: 60
+    damage: 8
+    angle: 90
+    angleFlipper: 1
+    knockback:
+      base: 6
+      scaling: 10
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 10
+    priority: 3
+    killsProjectiles: true
+    parryStun:
+      extended: true
+    notes:
+    - Clone will be removed 14 frames after active frames have ended, after which  cooldown will begin.
+  notes:
+  - A single cloud of smoke is created upon hitting and destroying clone.
+  - Clone is instantly destroyed upon hitting Forsburn.
+  - Pressing neutral or side special while clone is active toggles between Attack and Evade movement patterns.
+  - Holding special after spawning a clone will prevent him from jumping, wall jumping or using Up Special. On releasing special, the clone will double jump, wall jump or Up Special 10 frames later.
+  - If the clone has their Up Special parried it will disappear immediately without leaving a smoke cloud.
+  - Creating a clone whilst hiding behind smoke will not play an audio cue.
+  - The cooldown indicator will remain active on creating a clone and will only become inactive on the clone being destroyed or after clone combust has been commanded.
+  image:
+    baseRes: https://rivals.academy/library/forsburn/side-special.png
+    highRes: https://rivals.academy/library/forsburn/1080_side-special.png
+- name: "Empowered: Super Clone"
+  hitboxes:
+  - name: Create Clone
+    startup: 22
+    invuln:
+      from: 11
+      to: 29
+      frames: 19
+    endlag: 3
+    firstActiveFrame: 26
+    cooldown:
+    - time: 180
+      "on": Clone Death
+    notes:
+    - Clone Spawns f23, hurtbox appears f25 (Can spawn Smoke upon death from f25-). Clone is active f26-.
+  - name: Clone Combust (Sweet)
+    startup:
+      initial: 1
+      clone: 9
+    active:
+      from: 11
+      to: 15
+      frames: 5
+    endlag: 6
+    firstActiveFrame: 8
+    damage: 10
+    angle: 90
+    angleFlipper: 1
+    knockback:
+      base: 7
+      scaling: 90
+    hitstunModifier: 0.8
+    hitpause:
+      base: 10
+      scaling: 60
+    hitLockout: 8
+    priority: 8
+    killsProjectiles: true
+    parryStun:
+      extended: true
+    notes:
+    - Sweetspot is in the center of combust.
+    - Hitting Forsburn during the startup frames of clone combust does not destroy the clone.
+  - name: Clone Combust (Sour)
+    active:
+      from: 11
+      to: 15
+      frames: 5
+    damage: 10
+    angle: 90
+    angleFlipper: 1
+    knockback:
+      base: 6
+      scaling: 70
+    hitstunModifier: 0.8
+    hitpause:
+      base: 10
+      scaling: 60
+    hitLockout: 8
+    priority: 3
+    killsProjectiles: true
+    parryStun:
+      extended: true
+  notes:
+  - A single cloud of smoke is created upon hitting and destroying clone.
+  - Clone is instantly destroyed upon hitting Forsburn.
+  - Pressing neutral or side special while super clone is active commands him to attack.
+  - Clone will automatically attack 120 frames from FAF of previous attack.
+  - Super clone's movement is always in attack mode, unless its target is invincible, in which case it will swap to evade mode for the duration of the opposing characters invulnerability and you will be unable to command it to attack.
+  - Holding special after spawning a clone will prevent him from jumping, wall jumping or using Up Special. On releasing special, the clone will double jump, wall jump or Up Special 10 frames later.
+  - If the clone has their Up Special parried it will disappear immediately without leaving a smoke cloud.
+  - Creating a clone whilst hiding behind smoke will not play an audio cue.
+  - The cooldown indicator will remain active on creating a clone and will only become inactive on the clone being destroyed or after clone combust has been commanded.
+  image:
+    baseRes: https://rivals.academy/library/forsburn/side-special-empowered.png
+    highRes: https://rivals.academy/library/forsburn/1080_side-special-empowered.png
+
+upSpecial:
+  hitboxes:
+  - startup: 18
+    intangible:
+      from: 19
+      to: 42
+      frames: 24
+    angleRegistered: 20
+    active:
+      from: 44
+      to: 48
+      frames: 5
+    endlag:
+      grounded: 28
+      airborne: 9
+    firstActiveFrame:
+      pratFall: 77
+      airborne: 58
+    damage: 8
+    angle: 80
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 75
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 60
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+    notes:
+    - Landing immediately out of up-special increases the prat-fall landing lag time, causing Forsburn to remain in grounded landing lag for 20 frames after 8 frames of endlag from the teleport. If airborne, Forsburn can control his aerial drift from frame 58 and has a decreased prat-fall landing lag value of 10, which make landing directly from the teleport slower than ending up-special in the air in some circumstances.
+  - name: Into Smoke
+    startup: 18
+    intangible:
+      from: 19
+      to: 37
+      frames: 19
+    angleRegistered: 20
+    endlag: 0
+    firstActiveFrame: 38
+    notes:
+    - Vanishing into active smoke to become immediately actionable after appearing with no active hitbox.
+    - Both silent and invisible.
+  image:
+    baseRes: https://rivals.academy/library/forsburn/up-special.png
+    highRes: https://rivals.academy/library/forsburn/1080_up-special.png
+
+downSpecial:
+- name: Consume
+  hitboxes:
+  - startup: 8
+    endlag:
+      inSmoke: 22
+      notInSmoke: 5
+    firstActiveFrame:
+      inSmoke: 41
+      notInSmoke: 15
+    notes:
+    - Successfully consumed f19 in smoke.
+- name: "Empowered: Combust"
+  hitboxes:
+  - name: Sweet
+    startup: 10
+    active:
+      from: 11
+      to: 15
+      frames: 5
+    endlag: 10
+    firstActiveFrame: 26
+    damage: 10
+    angle: 90
+    angleFlipper: 1
+    knockback:
+      base: 7
+      scaling: 120
+    hitstunModifier: 0.8
+    hitpause:
+      base: 10
+      scaling: 60
+    hitLockout: 8
+    priority: 8
+    killsProjectiles: true
+    parryStun: true
+    notes:
+    - Sweetspot is in the center of combust.
+    - Interrupting Forburn anytime during this move will cause him to lose his smoke charges.
+  - name: Sour
+    startup: 10
+    active:
+      from: 11
+      to: 15
+      frames: 5
+    endlag: 10
+    firstActiveFrame: 26
+    damage: 10
+    angle: 90
+    angleFlipper: 1
+    knockback:
+      base: 6
+      scaling: 110
+    hitstunModifier: 0.8
+    hitpause:
+      base: 10
+      scaling: 60
+    hitLockout: 8
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/forsburn/down-special.png
+    highRes: https://rivals.academy/library/forsburn/1080_down-special.png

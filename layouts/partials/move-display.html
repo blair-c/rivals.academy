@@ -151,6 +151,7 @@
             {{ end }}
             {{ with .startup.fromLanding }}{{ . }} (From landing){{ end }}
 
+            {{ with .startup.clone }}{{ . }} (Clone){{ end }}
             {{ with .startup.root }}{{ . }} (Root){{ end }}
             {{ with .startup.tether }}{{ . }} (Tether){{ end }}
             {{ with .startup.lily }}{{ . }} (Lily){{ end }}
@@ -451,6 +452,9 @@
           {{ with .endlag.cancel }}
             Cancel: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}
           {{ end }}
+          {{ if isset .endlag "inSmoke" }}
+            {{ .endlag.notInSmoke }} ({{ .endlag.inSmoke }} in smoke)
+          {{ end }}
           {{ with .endlag.spitBack }}Spit Back: {{ . }}<br>{{ end }}
           {{ with .endlag.slingshot }}
             Slingshot (Grounded): {{ .grounded.min }}-{{ .grounded.max }}<br>
@@ -542,7 +546,7 @@
           {{ end -}}
           {{ with .firstActiveFrame.whiff }}Whiff: {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.grounded }}Grounded: {{ . }}<br>{{ end }}
-          {{ with .firstActiveFrame.airborne }}Airborne: {{ . }}{{ end }}
+          {{ with .firstActiveFrame.airborne }}Airborne: {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.groundedReverse }}Reverse (Grounded): {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.onLanding }}On Landing: {{ . }}{{ end }}
           {{ with .firstActiveFrame.pratFall }}
@@ -553,6 +557,9 @@
             Cancel: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}
           {{ end }}
           {{ with .firstActiveFrame.postTravelTime }}{{ . }} (Post Travel Time){{ end }}
+          {{ if isset .firstActiveFrame "inSmoke" }}
+            {{ .firstActiveFrame.notInSmoke }} ({{ .firstActiveFrame.inSmoke }} in smoke)
+          {{ end }}
           {{ if isset .firstActiveFrame "onGrass" }}
             {{ .firstActiveFrame.offGrass }} ({{ .firstActiveFrame.onGrass }} on grass)
           {{ end }}
