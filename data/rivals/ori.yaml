@@ -1149,6 +1149,7 @@ neutralSpecial:
     highRes: https://rivals.academy/library/ori/1080_neutral-special-charged.png
 
 sideSpecial:
+  name: Light Orb
   hitboxes:
   - name: Projectile
     startup:
@@ -1208,6 +1209,7 @@ sideSpecial:
     highRes: https://rivals.academy/library/ori/1080_side-special.png
 
 upSpecial:
+  name: Parasol
   hitboxes:
   - name: Hit 1-4
     startup: 16

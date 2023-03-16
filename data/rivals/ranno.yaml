@@ -923,6 +923,7 @@ downStrong:
 
 # Specials
 neutralSpecial:
+  name: Darts
   hitboxes:
   - name: Charge
     startup:

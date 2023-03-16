@@ -838,6 +838,7 @@ downStrong:
 
 # Specials
 neutralSpecial:
+  name: Shine
   hitboxes:
   - name: Uncharged
     startup: 1
@@ -900,6 +901,7 @@ neutralSpecial:
     highRes: https://rivals.academy/library/zetterburn/1080_neutral-special.png
 
 sideSpecial:
+  name: Fireball
   hitboxes:
   - name: Mane
     startup: 10
@@ -922,7 +924,7 @@ sideSpecial:
     killsProjectiles: true
     parryStun: true
     setsOnFire: true
-  - name: Fireball
+  - name: Projectile
     active:
       from: 16
       to: 74

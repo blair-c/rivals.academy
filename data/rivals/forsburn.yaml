@@ -819,6 +819,7 @@ downStrong:
 
 # Specials
 neutralSpecial:
+  name: Release Smoke
   hitboxes:
   - smoke:
       inactive: [26, 36, 46, 56, 66, 76, 86, 96, 106, 116]

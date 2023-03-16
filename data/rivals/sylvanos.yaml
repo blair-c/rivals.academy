@@ -1121,6 +1121,7 @@ neutralSpecial:
   - Hitting only a flower will cause the players move to have halved hitpause.
 
 sideSpecial:
+  name: Beast Dash
   hitboxes:
   - startup:
       initial: 17
@@ -1452,6 +1453,7 @@ upSpecial:
     highRes: https://rivals.academy/library/sylvanos/1080_up-special-burrow-bite.png
 
 downSpecial:
+  name: Howl
   hitboxes:
   - startup:
       initial: 16

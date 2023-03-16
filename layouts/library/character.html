@@ -168,6 +168,7 @@
           {{ $.RenderString (print "### " (humanize . | title)) }}
           {{ $move := index $c . }}
           {{ if reflect.IsMap $move }}
+            {{ with $move.name }}<h4>{{ . }}</h4>{{ end }}
             {{ partial "partials/move-display.html" $move }}
           {{ else }}
             {{ range $move }}

@@ -505,6 +505,7 @@ upAir:
     highRes: https://rivals.academy/library/maypul/1080_up-air.png
 
 downAir:
+  name: Root
   hitboxes:
   - startup:
       initial: 7
@@ -674,6 +675,7 @@ downStrong:
 
 # Specials
 neutralSpecial:
+  name: Seed
   hitboxes:
   - startup: 6
     active:
