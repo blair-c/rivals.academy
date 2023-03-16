@@ -843,6 +843,7 @@ neutralSpecial:
     - Releases 5-10 clouds of smoke unless interrupted by Forsburn being hit (barring flinch) or performing another special, both of which cause all smoke to become active.
     - During each release interval if Forsburn is within a patch of smoke it will skip that cycle and guarantee that the next interval will spawn smoke instead, with the exception of the second interval which always spawns smoke.
   - name: "Empowered"
+    startup: 9
     smoke:
       inactive: 10
       active: 29

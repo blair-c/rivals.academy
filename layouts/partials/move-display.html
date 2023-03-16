@@ -155,7 +155,9 @@
               {{ with .max }}{{ . }}{{ end }}
               {{ else }}{{ . }}{{ end }} (Charge)<br>
             {{ end }}
-            {{ with .startup.fromLanding }}{{ . }} (From landing){{ end }}
+            {{ with .startup.fromLanding }}From Landing: {{ . }}{{ end }}
+            {{ with .startup.grounded }}Grounded: {{ . }}<br>{{ end }}
+            {{ with .startup.airborne }}Airborne: {{ . }}{{ end }}
 
             {{ with .startup.clone }}{{ . }} (Clone){{ end }}
             {{ with .startup.root }}{{ . }} (Root){{ end }}
@@ -177,7 +179,13 @@
         {{ with .mustConnect }}({{ . }} Must Hit){{ end }}
       </td>{{ end }}
 
-      {{ if $intangible }}<td>{{ with .intangible }}{{ .from }}-{{ .to }}{{ end }}</td>{{ end }}
+      {{ if $intangible }}<td>
+        {{ if isset .intangible "from" }}{{ .intangible.from }}-{{ .intangible.to }}
+        {{ else }}
+          {{ with .intangible.grounded }}Grounded: {{ .from }}-{{ .to }}<br>{{ end }}
+          {{ with .intangible.airborne }}Airborne: {{ .from }}-{{ .to }}{{ end }}
+        {{ end }}
+      </td>{{ end }}
 
       {{ if $angleRegistered }}<td>{{ .angleRegistered }}</td>{{ end }}
 
@@ -322,20 +330,22 @@
             (Latest)
           {{ end }}
 
-          {{- with .active.grounded }}
-            Grounded:
+          {{- with .active.grounded }}Grounded:
             {{ with .on }}{{ . }}{{ end -}}
             {{ with .from }}{{ . }}-{{ end -}}
             {{ with .to }}{{ . }}{{ end }}<br>
           {{ end }}
-          {{- with .active.onLanding }}
-            On Landing:
+          {{- with .active.airborne }}Airborne:
+            {{ with .on }}{{ . }}{{ end -}}
+            {{ with .from }}{{ . }}-{{ end -}}
+            {{ with .to }}{{ . }}{{ end }}<br>
+          {{ end }}
+          {{- with .active.onLanding }}On Landing:
             {{ with .on }}{{ . }}{{ end -}}
             {{ with .from }}{{ . }}-{{ end -}}
             {{ with .to }}{{ . }}{{ end }}
           {{- end -}}
-          {{ if isset .active "onHit" }}
-            On Hit:
+          {{ if isset .active "onHit" }}On Hit:
             {{ with .active.onHit }}
               {{ if reflect.IsSlice . }}
                 {{ $len = len . }}
@@ -721,7 +731,10 @@
         {{ if isset . "asdiModifier" }}{{ .asdiModifier }}×{{ end }}
       </td>{{ end }}
 
-      {{ if $hitLockout }}<td>{{ .hitLockout }}</td>{{ end }}
+      {{ if $hitLockout }}<td>
+        {{ if isset .hitLockout "internal" }}{{ .hitLockout.internal }} (Internal)
+        {{ else }}{{ .hitLockout }}{{ end }}
+      </td>{{ end }}
 
       {{ if $priority }}<td>
         {{ if reflect.IsSlice .priority }}
