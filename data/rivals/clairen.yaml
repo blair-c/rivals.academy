@@ -1419,7 +1419,7 @@ downSpecial:
     tipperStun: 16
     priority: 1
     killsProjectiles: true
-    parryStun: true
+    parryStun: false
     notes:
     - Plasma Field is not created if parried.
   - name: Plasma Field

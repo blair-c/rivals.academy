@@ -991,8 +991,8 @@ downSpecial:
   - Puddle created f12 if in range of ground, otherwise droplet spawns f13.
   - Cooldown begins when puddle/droplet is spawned.
   image:
-    baseRes: https://rivals.academy/library/orcane/down-special.png
-    highRes: https://rivals.academy/library/orcane/1080_down-special.png
+    baseRes: https://rivals.academy/library/orcane/down-special-droplet.png
+    highRes: https://rivals.academy/library/orcane/1080_down-special-droplet.png
 - name: Bubbles
   hitboxes:
   - startup: 7
@@ -1012,3 +1012,6 @@ downSpecial:
     - Clears air-dodge buffer when hitting grounded characters.
   notes:
   - Holding a horizontal direction will affect the angle that bubbles travel in.
+  image:
+    baseRes: https://rivals.academy/library/orcane/down-special-bubbles.png
+    highRes: https://rivals.academy/library/orcane/1080_down-special-bubbles.png
