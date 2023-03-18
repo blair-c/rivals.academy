@@ -309,6 +309,8 @@ forwardTilt:
     priority: 6
     killsProjectiles: true
     parryStun: true
+    notes:
+    - Endlag based on projectile, not physical hit.
   - name: Seed Shot
     active:
       from: 17
