@@ -1005,8 +1005,7 @@ upSpecial:
       grounded: 28
       airborne: 9
     firstActiveFrame:
-      pratFall: 77
-      airborne: 58
+      pratFall: 58
     damage: 8
     angle: 80
     angleFlipper: 6

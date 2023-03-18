@@ -1,0 +1,1179 @@
+name: Kragg
+element: earth
+
+# Effective Weight
+knockbackAdjustment: 0.90
+gravityAccel: 0.60
+hitstunGravityAccel: 0.53
+airFriction: 0.04
+airAccel: 0.30
+maxFallSpeed: 11
+fastFallSpeed: 16
+jumpSquat: 5
+landTime: 6
+# Ground Movement
+groundFriction: 0.50
+initialDash:
+  speed: 6.25
+  time: 12
+run:
+  speed: 5.75
+  stop:
+    time: 4
+  turn:
+    time: 10
+    accel: 0.50
+walk:
+  speed: 3.00
+  accel: 0.25
+  turn:
+    time: 6
+waveland:
+  time: 8
+  friction: 0.10
+# Aerial Movement
+maxAirSpeed: 4
+maxJumpHorizontalSpeed: 6
+fullHop:
+  speed: 12.00
+shortHop:
+  speed: 7.4
+doubleJump:
+  amount: 1
+  speed: 12.00
+wallJump:
+  speed:
+    vertical: 8
+    horizontal: 7
+pratFall:
+  accel: 0.50
+  landTime: 11
+
+hurtbox:
+  idle:
+    height: 64
+    width: 60
+  crouch:
+    height: 35
+    width: 60
+  hitstun:
+    height: 64
+    width: 60
+  image:
+    baseRes: https://rivals.academy/library/kragg/hurtbox.png
+    highRes: https://rivals.academy/library/kragg/1080_hurtbox.png
+
+# Normals
+jab:
+  hitboxes:
+  - name: Jab 1
+    startup: 4
+    active:
+      from: 5
+      to: 6
+      frames: 2
+    endlag: 14
+    cancellable:
+    - with: Jab 2
+      during: endlag
+      windows:
+      - from: 7
+        to: 12
+        window: 6
+      - from: 13
+        to: 14
+        window: 2
+    - with: Tilts
+      during: endlag
+      from: 7
+      to: 14
+      window: 8
+    firstActiveFrame: 21
+    damage: 4
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    forceFlinch: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+    parryStun: false
+  - name: Jab 2
+    startup: 5
+    active:
+      soonest:
+        from: 18
+        to: 19
+        frames: 2
+    endlag: 13
+    cancellable:
+    - with: Jab 3
+      during: endlag
+      windows:
+      - from: 8
+        to: 11
+        window: 4
+      - from: 12
+        to: 13
+        window: 2
+    - with: Tilts
+      during: endlag
+      from: 8
+      to: 13
+      window: 6
+    - with: Jump
+      condition: On Jab 1/2 Hit
+      during: endlag
+      from: 3
+      to: 13
+      frames: 11
+    firstActiveFrame:
+      soonest: 33
+    damage: 4
+    angle: 60
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    parryStun: false
+  - name: Jab 3
+    startup: 5
+    active:
+      soonest:
+        from: 32
+        to: 33
+        frames: 2
+    endlag: 19
+    firstActiveFrame:
+      soonest: 53
+    damage: 6
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 55
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 70
+    hitLockout: 4
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+  notes:
+  - Jab combos have varying startup depending on when the attack is input. A jab input within the final 2 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
+  image:
+    baseRes: https://rivals.academy/library/kragg/jab.png
+    highRes: https://rivals.academy/library/kragg/1080_jab.png
+
+dashAttack:
+  hitboxes:
+  - startup: 7
+    active:
+      from: 8
+      to: 15
+      frames: 8
+    cancellable:
+    - with: Jab/Tilts
+      condition: On Hit
+      during: endlag
+      from: 2
+      to: 15
+      window: 14
+    endlag:
+      hit: 15
+      whiff: 23
+    firstActiveFrame: 39
+    damage: 8
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 45
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 25
+    hitLockout: 4
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/dash-attack.png
+    highRes: https://rivals.academy/library/kragg/1080_dash-attack.png
+
+forwardTilt:
+  hitboxes:
+  - startup: 9
+    active:
+      from: 10
+      to: 12
+      frames: 3
+    endlag:
+      hit: 9
+      whiff: 14
+    firstActiveFrame: 27
+    damage: 7
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/forward-tilt.png
+    highRes: https://rivals.academy/library/kragg/1080_forward-tilt.png
+
+upTilt:
+  hitboxes:
+  - name: Hit 1
+    startup: 4
+    active:
+      from: 5
+      to: 6
+      frames: 2
+    damage: 2
+    angle: 150
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 2
+      scaling: 0
+    asdiModifier: 0
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+    notes:
+    - Pulls opponents inwards during hitpause.
+  - name: Hit 2
+    active:
+      from: 9
+      to: 12
+      frames: 4
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 28
+    damage: 10
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/up-tilt.png
+    highRes: https://rivals.academy/library/kragg/1080_up-tilt.png
+
+downTilt:
+  hitboxes:
+  - startup: 3
+    active:
+      from: 4
+      to: 6
+      frames: 3
+    endlag:
+      hit: 8
+      whiff: 12
+    firstActiveFrame: 19
+    damage: 7
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 45
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 25
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/down-tilt.png
+    highRes: https://rivals.academy/library/kragg/1080_down-tilt.png
+
+# Aerials
+neutralAir:
+  hitboxes:
+  - name: Hit 1
+    startup: 4
+    active:
+      from: 5
+      to: 6
+      frames: 2
+    landingLag:
+      hit: 6
+      whiff: 9
+    damage: 4
+    angle: 55
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 10
+    hitLockout: 10
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 2
+    active:
+      from: 9
+      to: 10
+      frames: 2
+    landingLag:
+      hit: 6
+      whiff: 9
+    damage: 4
+    angle: 80
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 25
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 10
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 3
+    active:
+      from: 13
+      to: 14
+      frames: 2
+    landingLag:
+      hit: 6
+      whiff: 9
+    damage: 4
+    angle: 100
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 10
+    hitLockout: 8
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 4
+    active:
+      from: 17
+      to: 19
+      frames: 3
+    endlag:
+      hit: 12
+      whiff: 18
+    firstActiveFrame: 38
+    landingLag:
+      hit: 6
+      whiff: 9
+    damage: 8
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 10
+    hitLockout: 8
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/neutral-air.png
+    highRes: https://rivals.academy/library/kragg/1080_neutral-air.png
+
+forwardAir:
+  hitboxes:
+  - startup: 12
+    active:
+      from: 12
+      to: 17
+      frames: 6
+    endlag:
+      hit: 13
+      whiff: 20
+    firstActiveFrame: 38
+    landingLag:
+      hit: 8
+      whiff: 912
+    damage: 11
+    angle: 40
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 85
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/forward-air.png
+    highRes: https://rivals.academy/library/kragg/1080_forward-air.png
+
+backAir:
+  hitboxes:
+  - startup: 7
+    active:
+      from: 8
+      to: 15
+      frames: 8
+    endlag:
+      hit: 9
+      whiff: 14
+    firstActiveFrame: 30
+    landingLag:
+      hit: 6
+      whiff: 8
+    damage: 9
+    angle: 55
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 25
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/back-air.png
+    highRes: https://rivals.academy/library/kragg/1080_back-air.png
+
+upAir:
+  hitboxes:
+  - startup: 12
+    active:
+      from: 13
+      to: 15
+      frames: 3
+    endlag:
+      hit: 14
+      whiff: 21
+    firstActiveFrame: 37
+    landingLag:
+      hit: 6
+      whiff: 8
+    damage: 11
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 9
+      scaling: 70
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 75
+    hitLockout: 3
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/up-air.png
+    highRes: https://rivals.academy/library/kragg/1080_up-air.png
+
+downAir:
+  hitboxes:
+  - startup: 13
+    active:
+      from: 14
+      to: 16
+      frames: 3
+    endlag:
+      hit: 13
+      whiff: 20
+    firstActiveFrame: 37
+    landingLag:
+      hit: 6
+      whiff: 8
+    damage: 11
+    angle: 270
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 60
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 40
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/down-air.png
+    highRes: https://rivals.academy/library/kragg/1080_down-air.png
+
+# Strongs
+forwardStrong:
+  hitboxes:
+  - startup: 24
+    active:
+      from: 25
+      to: 29
+      frames: 5
+    endlag:
+      hit: 19
+      whiff: 29
+    firstActiveFrame: 59
+    damage: 18
+    angle: 45
+    angleFlipper: 0
+    knockback:
+      base: 9
+      scaling: 125
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 100
+    hitLockout: 10
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/forward-strong.png
+    highRes: https://rivals.academy/library/kragg/1080_forward-strong.png
+
+upStrong:
+  hitboxes:
+  - startup: 16
+    active:
+      from: 17
+      to: 21
+      frames: 5
+    endlag:
+      hit: 20
+      whiff: 30
+    firstActiveFrame: 52
+    damage: 16
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 9
+      scaling: 110
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 100
+    hitLockout: 20
+    priority: 7
+    killsProjectiles: true
+    parryStun: true
+  - name: Behind
+    active:
+      from: 17
+      to: 21
+      frames: 5
+    damage: 6
+    angle: 120
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 80
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    hitLockout: 10
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/up-strong.png
+    highRes: https://rivals.academy/library/kragg/1080_up-strong.png
+
+downStrong:
+  hitboxes:
+  - name: Front
+    startup: 12
+    active:
+      from: 13
+      to: 18
+      frames: 6
+    endlag:
+      hit: 20
+      whiff: 30
+    firstActiveFrame: 49
+    damage: 10
+    angle: 50
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 115
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 80
+    hitLockout: 10
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  - name: Behind
+    active:
+      from: 13
+      to: 18
+      frames: 6
+    damage: 10
+    angle: 130
+    angleFlipper: 6
+    knockback:
+      base: 7
+      scaling: 115
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 80
+    hitLockout: 10
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  - name: Center
+    active:
+      from: 13
+      to: 16
+      frames: 4
+    damage: 11
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 7
+      scaling: 120
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 80
+    hitLockout: 10
+    priority: 8
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/down-strong.png
+    highRes: https://rivals.academy/library/kragg/1080_down-strong.png
+
+# Specials
+neutralSpecial:
+- hitboxes:
+  - name: Pull Rock
+    startup: 26
+    endlag: 7
+    cancellable:
+    - with: Rock Shine
+      input: parry
+      from: 2
+      to: 6
+      window: 5
+    firstActiveFrame: 34
+  - name: Rock Pickup
+    startup: 6
+    active:
+      "on": 7
+      frames: 1
+    endlag: 5
+    cancellable:
+    - with: Rock Shine
+      input: parry
+      from: 1
+      to: 5
+      window: 5
+    firstActiveFrame: 13
+    damage: 4
+    angle: 60
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 55
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 30
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  - name: Rock Shine
+    startup: 6
+    active:
+      from: 7
+      to: 8
+      frames: 1
+    endlag: 4
+    firstActiveFrame: 13
+    damage: 4
+    angle: 60
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 55
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 30
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/neutral-special-rock-shine.png
+    highRes: https://rivals.academy/library/kragg/1080_neutral-special-rock-shine.png
+- name: Rock Throw
+  hitboxes:
+  - name: Neutral
+    startup: 6
+    active:
+      from: 7
+    endlag: 12
+    firstActiveFrame: 19
+    damage: 8
+    angle: 361
+    angleFlipper: 3
+    knockback:
+      base: 7
+      scaling: 40
+    hitstunModifier: 0.8
+    forceFlinch: 2
+    hitpause:
+      base: 8
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+    parryStun: false
+  - name: Forward
+    startup: 6
+    active:
+      from: 7
+    endlag: 12
+    firstActiveFrame: 19
+    damage: 8
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 40
+    hitstunModifier: 0.8
+    forceFlinch: 2
+    hitpause:
+      base: 8
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+    parryStun: false
+  - name: Up
+    startup: 6
+    active:
+      from: 7
+    endlag: 12
+    firstActiveFrame: 19
+    damage: 8
+    angle: 90
+    angleFlipper: 3
+    knockback:
+      base: 7
+      scaling: 40
+    hitstunModifier: 0.8
+    forceFlinch: 2
+    hitpause:
+      base: 8
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+    parryStun: false
+  - name: Down
+    startup: 6
+    active:
+      from: 7
+    endlag: 12
+    firstActiveFrame: 19
+    damage: 8
+    angle: 270
+    angleFlipper: 3
+    knockback:
+      base: 6
+      scaling: 40
+    hitstunModifier: 0.8
+    forceFlinch: 2
+    hitpause:
+      base: 8
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+    parryStun: false
+  image:
+    baseRes: https://rivals.academy/library/kragg/neutral-special-rock-throw.png
+    highRes: https://rivals.academy/library/kragg/1080_neutral-special-rock-throw.png
+- name: Rock Shards
+  hitboxes:
+  - startup:
+      grounded: 10
+      airborne: 11
+    active:
+      grounded:
+        from: 11
+      airborne:
+        from: 12
+    damage: 3
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 30
+    hitstunModifier: 0.75
+    hitpause:
+      base: 6
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+    parryStun: false
+    notes:
+    - Breaking an airborne rock has 1 additional frame of hitpause due to rock state change.
+  image:
+    baseRes: https://rivals.academy/library/kragg/neutral-special-rock-shards.png
+    highRes: https://rivals.academy/library/kragg/1080_neutral-special-rock-shards.png
+
+sideSpecial:
+- hitboxes:
+  - name: Grounded
+    startup: 14
+    active:
+      from: 15
+      to: 90
+      frames: 1
+    armor:
+      superArmor:
+        from: 15
+        to: 91
+        frames: 77
+    endlag: 32
+    cancellable:
+    - with: Jump
+      condition: On Hitting Character
+    - with: Jump
+      condition: On Hitting Object
+      during: Post-Hitpause
+      from: 1
+      to: 10
+      window: 10
+    - with: Cancel
+      input: Special
+      from: 42
+    - with: Pillarless
+      input: Parry
+      from: 1
+      to: 14
+      window: 14
+    firstActiveFrame:
+      min: 74
+      max: 123
+    damage: 4
+    angle: 55
+    angleFlipper: 0
+    knockback:
+      base: 9
+      scaling: 30
+    hitstunModifier: 0.75
+    hitpause:
+      base: 5
+      scaling: 10
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+    notes:
+    - Kragg can turnaround after moving on the ground with an active hitbox for 9 frames, causing the hitbox to become inactive but your super armour to remain. The hitbox will remain inactive for 18 frames before becoming active again if in the active window.
+  - name: Airborne
+    startup: 14
+    active:
+      from: 15
+      to: 90
+      frames: 1
+    armor:
+      superArmor:
+        from: 15
+        to: 91
+        frames: 77
+    endlag: 32
+    cancellable:
+    - with: Jump
+      condition: On Hitting Character
+    - with: Jump
+      condition: On Hitting Object
+      during: Post-Hitpause
+      from: 1
+      to: 10
+      window: 10
+    - with: Cancel
+      input: Special
+      from: 42
+    - with: Pillarless
+      input: Parry
+      from: 1
+      to: 14
+      window: 14
+    firstActiveFrame:
+      min: 74
+      max: 123
+    damage: 4
+    angle: 55
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 20
+    hitstunModifier: 0.75
+    hitpause:
+      base: 5
+      scaling: 10
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/side-special.png
+    highRes: https://rivals.academy/library/kragg/1080_side-special.png
+- name: Pillarless
+  hitboxes:
+  - startup:
+      min: 2
+      max: 15
+    endlag: 9
+    firstActiveFrame:
+      pratFall:
+        min: 11
+        max: 24
+  notes:
+  - Destroys existing pillar 2 frames after cancel has been input. Interrupting Kragg on this frame does not prevent the pillar from breaking once pillarless has been input.
+
+upSpecial:
+- name: Pillar
+  hitboxes:
+  - startup: 16
+    active:
+      min:
+        "on": 14
+        frames: 1
+      max:
+        from: 14
+        to: 25
+        frames: 12
+    refresh:
+    - resource: Jump/Airdodge
+      frame: 14
+    endlag: 25
+    firstActiveFrame:
+      min: 40
+      max: 51
+    damage: 7
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 10
+    hitstunModifier:
+      opponentAirborne: 1
+      opponentGrounded: 0.25
+    hitpause:
+      base: 8
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+    parryStun:
+      extended: true
+  notes:
+  - Spawning a pillar increases Kragg's vertical position by 80px.
+  - Pillar's maximum height is dependent on the blastzone height, meaning active frames and FAF may vary slightly.
+  - Breaking pillar adds 10 frames hitpause.
+  - Crouch cancelling a pillar will prevent your character from entering hitstun at all. Air-dodging down towards a pillar while it's rising will make you waveland onto it.
+  - Pillar has full invulnerability while rising and then projectile invulnerability for 60 frames afterwards. Successfully parrying a move while on the pillar will provide the pillar projectile invulnerability for 60 frames.
+  - If a character or rock is on the pillar anytime after 90 frames of it being spawned the pillar will slowly move downwards. If a character leaves the pillar unoccupied while it is descending it will continue to fall for a further 20 frames before stopping. Each time a character re-lands and leaves the pillar unoccupied following this will increase the time Pillar falls while unoccupied for a further 5 frames i.e. 20 frames, 25 frames, 30 frames and so on.
+  - If a character is on the pillar when it is broken they will go into prat-fall unless they are currently invulnerable, in which case they will lose their invulnerability. If you are wrapped by Maypul and standing on a pillar as it is broken you will float in place and will not enter prat-fall upon becoming actionable. Prat-fall landing lag is 30 frames if you are on the pillar when it is broken for all characters.
+  - If both sides of the pillar sink into the stage floor it will break immediately.
+  image:
+    baseRes: https://rivals.academy/library/kragg/up-special.png
+    highRes: https://rivals.academy/library/kragg/1080_up-special.png
+- name: Pillarless
+  hitboxes:
+  - startup: 1
+    endlag: 9
+    firstActiveFrame:
+      pratFall: 10
+  notes:
+  - Destroys existing pillar on 2nd frame of animation. Interrupting Kragg on this frame does not prevent the pillar from breaking once pillarless has been input.
+
+downSpecial:
+- hitboxes:
+  - name: Spike 1
+    startup:
+      initial: 12
+      spike: 3
+    active:
+      from: 16
+      to: 27
+      frames: 12
+    cooldown: 60
+    damage: 2
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 3
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+    parryStun:
+      extended: true
+    notes:
+    - Interrupting Kragg before frame 13 will prevent this spike from spawning.
+  - name: Spike 2
+    startup:
+      initial: 13
+      spike: 11
+    active:
+      from: 25
+      to: 36
+      frames: 12
+    endlag: 16
+    firstActiveFrame: 32
+    damage: 4
+    angle: 361
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+    parryStun:
+      extended: true
+    notes:
+    - Interrupting Kragg before frame 14 will prevent this spike from spawning.
+    - Endlag value is based on this summon frame.
+  - name: Spike 3
+    startup:
+      initial: 37
+    active:
+      from: 38
+      to: 57
+      frames: 10
+    damage: 10
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 11
+      scaling: 20
+    hitstunModifier: 1.2
+    forceFlinch: 2
+    hitpause:
+      base: 8
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+    parryStun:
+      extended: true
+    notes:
+    - Interrupting Kragg by hitting him anytime before frame 38 (1-37) will prevent this spike from spawning.
+    - Spike hitbox extends further upwards and backwards from frame 44, allowing it to hit characters from beneath Spirit Tree's platforms. Ground detection width for this spike is only 9px as opposed to the full sprite.
+  image:
+    baseRes: https://rivals.academy/library/kragg/down-special.png
+    highRes: https://rivals.academy/library/kragg/1080_down-special.png
+- name: Aerial Dive Flip
+  hitboxes:
+  - startup:
+      min: 19
+      max: 21
+    active:
+      possible:
+      - from: 20
+        to: 22
+        frames: 3
+      - from: 21
+        to: 23
+        frames: 3
+      - from: 22
+        to: 24
+        frames: 3
+    endlag: 13
+    firstActiveFrame:
+      possible: [36, 37, 38]
+    damage: 14
+    angle: 300
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 90
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 40
+    hitLockout: 10
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+    notes:
+    - Landing f1-8 transitions into Grounded Down Special, landing f9-19 reduces startup from 21 to 19, landing f20 reduces startup from 21 to 20.
+
+
+taunt:
+  hitboxes:
+  - startup: 12
+    active:
+      from: 13
+      to: 15
+      frames: 3
+    endlag: 57
+    firstActiveFrame: 73
+    damage: 4
+    angle: 270
+    angleFlipper: 0
+    knockback:
+      base: 3
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 25
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/kragg/taunt.png
+    highRes: https://rivals.academy/library/kragg/1080_taunt.png
+

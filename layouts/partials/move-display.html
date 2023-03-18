@@ -159,6 +159,7 @@
             {{ with .startup.grounded }}Grounded: {{ . }}<br>{{ end }}
             {{ with .startup.airborne }}Airborne: {{ . }}{{ end }}
 
+            {{ with .startup.spike }}{{ . }} (Spike){{ end }}
             {{ with .startup.clone }}{{ . }} (Clone){{ end }}
             {{ with .startup.root }}{{ . }} (Root){{ end }}
             {{ with .startup.tether }}{{ . }} (Tether){{ end }}
@@ -328,6 +329,21 @@
             {{ with .from }}{{ . }}-{{ end -}}
             {{ with .to }}{{ . }}{{ end }}
             (Latest)
+          {{ end }}
+
+          {{ if isset .active "min" }}
+            {{- with .active.min }}
+              {{ with .on }}{{ . }}{{ end -}}
+              {{ with .from }}{{ . }}-{{ end -}}
+              {{ with .to }}{{ . }}{{ end }}
+              (Minimum)<br>
+            {{ end }}
+            {{- with .active.max }}
+              {{ with .on }}{{ . }}{{ end -}}
+              {{ with .from }}{{ . }}-{{ end -}}
+              {{ with .to }}{{ . }}{{ end }}
+              (Maximum)<br>
+            {{ end }}
           {{ end }}
 
           {{- with .active.grounded }}Grounded:
@@ -580,8 +596,7 @@
           {{ with .firstActiveFrame.airborne }}Airborne: {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.groundedReverse }}Reverse (Grounded): {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.onLanding }}On Landing: {{ . }}{{ end }}
-          {{ with .firstActiveFrame.pratFall }}
-            Prat Fall w/ Landing Lag:
+          {{ with .firstActiveFrame.pratFall }}In Prat Fall:
             {{ if isset . "min" }}{{ .min }}-{{ .max }}{{ else }}{{ . }}{{ end }}<br>
           {{ end }}
           {{ with .firstActiveFrame.cancel }}
@@ -707,7 +722,12 @@
       {{ end }}</td>{{ end }}
 
       {{ if $hitstunModifier }}<td>
-        {{ if isset . "hitstunModifier" }}{{ .hitstunModifier }}×{{ end }}
+        {{ if isset . "hitstunModifier" }}
+          {{ if reflect.IsMap .hitstunModifier }}
+            {{ with .hitstunModifier.opponentAirborne }}Opponent Airborne: {{ . }}×<br>{{ end }}
+            {{ with .hitstunModifier.opponentGrounded }}Opponent Grounded: {{ . }}×{{ end }}
+          {{ else }}{{ .hitstunModifier }}×{{ end }}
+        {{ end }}
       </td>{{ end }}
 
       {{ if $forceFlinch }}<td>{{ .forceFlinch }}</td>{{ end }}
