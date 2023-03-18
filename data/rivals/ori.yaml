@@ -1059,6 +1059,7 @@ neutralSpecial:
       frames: 1
     - "on": 6
       frames: 1
+    notActiveDuringHitpause: true
     endlag:
       sein: 18
     cooldown:
@@ -1082,7 +1083,6 @@ neutralSpecial:
     parryStun: false
   notes:
   - Only causes knockback, hitstun, and hitpause to characters already in hitstun or put into hitstun by another tap within the last 30 frames.
-  - Not active during hitpause.
   - Each spirit flame applies 16 frames of heat to Sein. After 18 frames of endlag, if heat has reached or exceeded a value of 48 Sein will be placed in an inactive cooldown period equal to the heat value. Heat is reduced by 1 each frame f18- after the last hit.
   - Sein moves 1.5x faster after Spirit Flame is used to reposition itself.
   image:

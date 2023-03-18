@@ -342,6 +342,7 @@ forwardTilt:
         frames: 1
       - "on": 21
         frames: 1
+    notActiveDuringHitpause: true
     damage: 1
     angle: 60
     angleFlipper: 3
@@ -355,8 +356,6 @@ forwardTilt:
     priority: 2
     killsProjectiles: true
     parryStun: false
-    notes:
-    - Not active during hitpause.
   image:
     baseRes: https://rivals.academy/library/sylvanos/forward-tilt.png
     highRes: https://rivals.academy/library/sylvanos/1080_forward-tilt.png
@@ -1089,6 +1088,7 @@ neutralSpecial:
         frames: 1
       - "on": 21
         frames: 1
+    notActiveDuringHitpause: true
     damage: 1
     angle: 60
     angleFlipper: 3
@@ -1102,8 +1102,6 @@ neutralSpecial:
     priority: 2
     killsProjectiles: true
     parryStun: false
-    notes:
-    - Not active during hitpause.
   image:
     baseRes: https://rivals.academy/library/sylvanos/neutral-special.png
     highRes: https://rivals.academy/library/sylvanos/1080_neutral-special.png

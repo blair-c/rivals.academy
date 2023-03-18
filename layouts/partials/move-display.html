@@ -415,6 +415,7 @@
           {{ end }}
           {{ if .active.onlyHitsProjectiles }}<br>(Only Hits Projectiles){{ end }}
         {{ end -}}
+        {{ if .notActiveDuringHitpause }}<br>(Not active during hitpause){{ end }}
       </td>{{ end }}
 
       {{ if $smoke }}<td>
