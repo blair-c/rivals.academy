@@ -1112,7 +1112,7 @@ downSpecial:
     parryStun:
       extended: true
     notes:
-    - Interrupting Kragg by hitting him anytime before frame 38 (1-37) will prevent this spike from spawning.
+    - Interrupting Kragg by hitting him before frame 38 will prevent this spike from spawning.
   image:
     baseRes: https://rivals.academy/library/kragg/down-special-spikes.png
     highRes: https://rivals.academy/library/kragg/1080_down-special-spikes.png
