@@ -834,6 +834,8 @@ neutralSpecial:
     priority: 3
     killsProjectiles: true
     parryStun: false
+  notes:
+  - Rock will be active if falling (off a broken pillar for example) or moved by a hitbox from another character. In this case the rock will deal 7 damage and have a force flinch value of 0, allowing it to be crouch cancelled. A rock which falls from a pillar or platform will deal identical knockback to a rock thrown by down throw (with the damage and force flinch value being altered per above). Attacks which can move the rock (such as Forsburn's cape, Etalus up air etc.) will set the rock's other knockback values to match either forward throw if rock's horizontal speed is greater than 8 or neutral throw if its horizontal speed is 8 or less.
   image:
     baseRes: https://rivals.academy/library/kragg/neutral-special-rock-throw.png
     highRes: https://rivals.academy/library/kragg/1080_neutral-special-rock-throw.png
@@ -963,7 +965,7 @@ sideSpecial:
   image:
     baseRes: https://rivals.academy/library/kragg/side-special.png
     highRes: https://rivals.academy/library/kragg/1080_side-special.png
-- name: Pillarless
+- name: Pillarless Cancel
   hitboxes:
   - startup:
       min: 2
@@ -1033,7 +1035,7 @@ upSpecial:
   - Destroys existing pillar on 2nd frame of animation. Interrupting Kragg on this frame does not prevent the pillar from breaking once pillarless has been input.
 
 downSpecial:
-- name: Spikes
+- name: Rock Spikes
   hitboxes:
   - name: Spike 1
     startup:
