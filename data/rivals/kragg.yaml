@@ -623,7 +623,7 @@ upStrong:
 
 downStrong:
   hitboxes:
-  - name: Front
+  - name: Front/Behind
     startup: 12
     active:
       from: 13
@@ -634,27 +634,12 @@ downStrong:
       whiff: 30
     firstActiveFrame: 49
     damage: 10
-    angle: 50
+    angle:
+    - hitbox: Front
+      angle: 50
+    - hitbox: Behind
+      angle: 130
     angleFlipper: 0
-    knockback:
-      base: 7
-      scaling: 115
-    hitstunModifier: 1
-    hitpause:
-      base: 6
-      scaling: 80
-    hitLockout: 10
-    priority: 2
-    killsProjectiles: true
-    parryStun: true
-  - name: Behind
-    active:
-      from: 13
-      to: 18
-      frames: 6
-    damage: 10
-    angle: 130
-    angleFlipper: 6
     knockback:
       base: 7
       scaling: 115

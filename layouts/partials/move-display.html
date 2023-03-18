@@ -496,10 +496,13 @@
             Grounded: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}<br>
           {{ end }}
           {{ with .endlag.groundedReverse }}Reverse (Grounded): {{ . }}<br>{{ end }}
-          {{ with .endlag.airborne }}Airborne: {{ . }}<br>{{ end }}
-          {{ with .endlag.cancel }}
-            Cancel: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}
+          {{ with .endlag.airborne }}Airborne:
+            {{ if isset . "hit" }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}<br>{{ end }}
           {{ end }}
+          {{ with .endlag.cancel }}Cancel:
+            {{ if isset . "hit" }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}
+          {{ end }}
+          {{ with .endlag.breakingObject }}Breaking Object: {{ . }}{{ end }}
           {{ if isset .endlag "inSmoke" }}
             {{ .endlag.notInSmoke }} ({{ .endlag.inSmoke }} in smoke)
           {{ end }}
@@ -534,7 +537,7 @@
           {{- with .input }} (Input {{ . }}){{ end }}
           {{- with or (isset . "during") (isset . "windows")
             (isset . "hit") (isset . "on") (isset . "from") }}:{{ end }}
-          {{ with .during }}{{ title . }} f{{ end -}}
+          {{ with .during }}{{ title . }}{{ end }}
           {{ with .windows -}}
             {{ $len = len . -}}
             {{ range $index, $_ := . -}}
@@ -560,9 +563,9 @@
               {{ with .hit.on }}{{ . }}{{ end -}}
               {{ with .hit.from }}{{ . }}-{{ end -}}
               {{ with .hit.to }}{{ . }}{{ end }}
-              {{ with .hit.condition }}({{ . }}){{ end }} /
-              {{ with .whiff.on }}{{ . }}{{ end -}}
-              {{ with .whiff.from }}{{ . }}-{{ end -}}
+              {{ with .hit.condition }}({{ . }}){{ end }}
+              {{ with .whiff.on }}/ {{ . }}{{ end -}}
+              {{ with .whiff.from }}/ {{ . }}-{{ end -}}
               {{ with .whiff.to }}{{ . }}{{ end }}
               {{ with .whiff.condition }}({{ . }}){{ end }}
             {{ else -}}
@@ -593,7 +596,9 @@
             ]
           {{ end -}}
           {{ with .firstActiveFrame.whiff }}Whiff: {{ . }}<br>{{ end }}
-          {{ with .firstActiveFrame.grounded }}Grounded: {{ . }}<br>{{ end }}
+          {{ with .firstActiveFrame.grounded }}Grounded: 
+            {{ if reflect.IsMap . }}{{ .min }}-{{ .max }}{{ else }}{{ . }}{{ end }}<br>
+          {{ end }}
           {{ with .firstActiveFrame.airborne }}Airborne: {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.groundedReverse }}Reverse (Grounded): {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.onLanding }}On Landing: {{ . }}{{ end }}
@@ -628,6 +633,8 @@
         {{ if reflect.IsMap .landingLag }}
           {{ if isset .landingLag "hit" }}{{ .landingLag.hit }} / {{ .landingLag.whiff -}}{{ end }}
           {{ with .landingLag.openParasol }}{{ . }} (Open Parasol){{ end }}
+          {{ with .landingLag.duringActivePlus1 }}During Active/1st Frame Endlag: {{ . }}<br>{{ end }}
+          {{ with .landingLag.duringRemaining }}During Remaining Endlag: {{ . }}{{ end }}
         {{ else }}{{ .landingLag }}{{ end -}}
       </td>{{ end }}
 
@@ -689,7 +696,14 @@
       </td>{{ end }}
 
       {{ if $angle }}<td>
-        {{ if isset . "angle" }}{{ .angle }}°{{ end }}
+        {{ if isset . "angle" }}
+          {{ if reflect.IsSlice .angle }}
+            {{ $len = len .angle }}
+            {{ range $index, $_ := .angle }}
+              {{ .angle }}°{{ if lt (add $index 1) $len }} / {{ end -}}
+            {{ end }}
+          {{- else }}{{ .angle }}°{{ end -}}
+        {{ end }}
       </td>{{ end }}
 
       {{ if $angleFlipper }}<td>{{ .angleFlipper }}</td>{{ end }}
