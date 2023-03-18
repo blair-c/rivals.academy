@@ -750,8 +750,8 @@ neutralSpecial:
     killsProjectiles: true
     parryStun: true
   image:
-    baseRes: https://rivals.academy/library/kragg/neutral-special-rock-shine.png
-    highRes: https://rivals.academy/library/kragg/1080_neutral-special-rock-shine.png
+    baseRes: https://rivals.academy/library/kragg/neutral-special-rockshine.png
+    highRes: https://rivals.academy/library/kragg/1080_neutral-special-rockshine.png
 - name: Rock Throw
   hitboxes:
   - name: Neutral
@@ -1033,7 +1033,8 @@ upSpecial:
   - Destroys existing pillar on 2nd frame of animation. Interrupting Kragg on this frame does not prevent the pillar from breaking once pillarless has been input.
 
 downSpecial:
-- hitboxes:
+- name: Spikes
+  hitboxes:
   - name: Spike 1
     startup:
       initial: 12
@@ -1110,11 +1111,10 @@ downSpecial:
       extended: true
     notes:
     - Interrupting Kragg by hitting him anytime before frame 38 (1-37) will prevent this spike from spawning.
-    - Spike hitbox extends further upwards and backwards from frame 44, allowing it to hit characters from beneath Spirit Tree's platforms. Ground detection width for this spike is only 9px as opposed to the full sprite.
   image:
-    baseRes: https://rivals.academy/library/kragg/down-special.png
-    highRes: https://rivals.academy/library/kragg/1080_down-special.png
-- name: Aerial Dive Flip
+    baseRes: https://rivals.academy/library/kragg/down-special-spikes.png
+    highRes: https://rivals.academy/library/kragg/1080_down-special-spikes.png
+- name: Aerial Stomp
   hitboxes:
   - startup:
       min: 19
@@ -1149,6 +1149,9 @@ downSpecial:
     parryStun: true
     notes:
     - Landing f1-8 transitions into Grounded Down Special, landing f9-19 reduces startup from 21 to 19, landing f20 reduces startup from 21 to 20.
+  image:
+    baseRes: https://rivals.academy/library/kragg/down-special-aerial.png
+    highRes: https://rivals.academy/library/kragg/1080_down-special-aerial.png
 
 
 taunt:
