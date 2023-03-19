@@ -11,10 +11,20 @@
                     "clairen" "ranno" "sylvanos" "elliana"
                     "mollo" "hodan" "olympia" "pomme"
                     "ori" "shovel-knight") }}
-      <li><a href="/library/{{ . }}"><div></div></a></li>
+      <li><a href="/library/{{ . }}" title="{{ humanize . | title }}">
+        <div>
+          <img src="/img/icons-full/{{ . }}.png" aria-hidden="true">
+          <span class="sr-only">{{ humanize . | title }}</span>
+        </div>
+      </a></li>
     {{ end }}
-    <li><a href="/library/stages"><div></div></a></li>
-    {{/*  <li><a><div></div></a></li><li><a><div></div></a></li>  */}}
+    <li><a href="/library/stages" title="Stages">
+      <div>
+        <img src="/img/icon-stages.png" aria-hidden="true">
+        <span class="sr-only">Stages</span>
+      </div>
+    </a></li>
+    <li><a><div></div></a></li>
     </ul></nav>
     {{ .TableOfContents }}
   </div>
