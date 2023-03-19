@@ -683,7 +683,8 @@ article h3 {
   justify-content: center;
 }
 
-.library-grid li a div:hover {
+.library-grid li a div:hover,
+.library-grid li a:focus-visible div {
   border: 3px solid var(--clr-training-border-hc);
 }
 
