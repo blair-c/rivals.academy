@@ -110,6 +110,10 @@ article h3 {
   margin-top: 1.5rem;
 }
 
+article h4 {
+  margin-bottom: 0.3125rem;
+}
+
 :not(:active):focus-visible {
   outline-offset: .125rem;
 }
