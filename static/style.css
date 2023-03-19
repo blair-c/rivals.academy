@@ -671,6 +671,7 @@ article h3 {
   grid-template-columns: repeat(4, 1fr);
   background: var(--clr-training-bg);
   border: 2px solid var(--clr-training-border);
+  border-radius: 2px;
   list-style: none;
   padding-left: 0;
   margin: 0;
