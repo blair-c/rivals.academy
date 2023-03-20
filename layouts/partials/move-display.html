@@ -6,8 +6,8 @@
 {{ $angleRegistered := false }}
 {{ $active := false }}
 {{ $smoke := false }}
+{{ $iceCreated := false }}
 {{ $capture := false }}
-{{ $airBrakes := false }}
 {{ $invuln := false }}
 {{ $projectileInvuln := false }}
 {{ $endlag := false }}
@@ -47,8 +47,8 @@
   {{ if isset . "angleRegistered" }} {{ $angleRegistered = true }} {{ end }}
   {{ if isset . "active" }} {{ $active = true }} {{ end }}
   {{ if isset . "smoke" }} {{ $smoke = true }} {{ end }}
+  {{ if isset . "iceCreated" }} {{ $iceCreated = true }} {{ end }}
   {{ if isset . "capture" }} {{ $capture = true }} {{ end }}
-  {{ if isset . "airBrakes" }} {{ $airBrakes = true }} {{ end }}
   {{ if isset . "invuln" }} {{ $invuln = true }} {{ end }}
   {{ if isset . "projectileInvuln" }} {{ $projectileInvuln = true }} {{ end }}
   {{ if isset . "endlag" }} {{ $endlag = true }} {{ end }}
@@ -95,8 +95,8 @@
         {{ if $angleRegistered }}<th>Angle Registered</th>{{ end }}
         {{ if $active }}<th>Active</th>{{ end }}
         {{ if $smoke }}<th>Smoke</th>{{ end }}
+        {{ if $iceCreated }}<th>Ice Created</th>{{ end }}
         {{ if $capture }}<th>Capture</th>{{ end }}
-        {{ if $airBrakes }}<th>Air Brakes</th>{{ end }}
         {{ if $invuln }}<th>Invulnerable</th>{{ end }}
         {{ if $projectileInvuln }}<th>Projectile Invuln.</th>{{ end }}
         {{ if $endlag }}<th>Endlag</th>{{ end }}
@@ -167,6 +167,8 @@
             {{ if isset .startup "targetInHitstun" }}
               {{ .startup.targetNotInHitstun }} ({{ .startup.targetInHitstun}} if target in hitstun)
             {{ end }}
+            {{ with .startup.icicle }}{{ . }} (Icicle){{ end }}
+            {{ with .startup.preLaunch }}{{ . }} (Pre-Launch){{ end }}
             {{ with .startup.cloud }}{{ . }} (Cloud){{ end }}
             {{ with .startup.throw }}{{ . }} (Throw){{ end }}
             {{ with .startup.dagger }}{{ . }} (Dagger){{ end }}
@@ -431,17 +433,22 @@
         {{ with .smoke.active }}Active: {{ . }}{{ end }}
       </td>{{ end }}
 
-      {{ if $capture }}<td>
-        {{ if isset . "capture" }}{{ .capture.from }}-{{ end }}
+      {{ if $iceCreated }}<td>
+        {{ with .iceCreated }}
+          {{ if reflect.IsSlice . }}
+            {{ $len = len . }}
+            {{ range $index, $_ := . }}
+              {{ . }}{{ if lt (add $index 1) $len }}, {{ end -}}
+            {{ end }}
+          {{ else if reflect.IsMap . }}
+            {{ with .soonest }}{{ . }} (Soonest)<br>{{ end }}
+            {{ with .latest }}{{ . }} (Latest){{ end }}
+          {{ else }}{{ . }}{{ end }}
+        {{ end }}<br>
       </td>{{ end }}
 
-      {{ if $airBrakes }}<td>
-        {{ if isset .airBrakes "during" }}
-          During {{ .airBrakes.during }}
-        {{ else }}
-          {{ with .airBrakes.from }}f{{ . }}-{{ end -}}
-          {{ with .airBrakes.to }}{{ . }}{{ end }}
-        {{ end }}
+      {{ if $capture }}<td>
+        {{ if isset . "capture" }}{{ .capture.from }}-{{ end }}
       </td>{{ end }}
 
       {{ if $invuln }}<td>
@@ -484,6 +491,8 @@
           {{ else }} - {{ end -}}<br>
         {{ end }}
         {{ if reflect.IsMap .endlag }}
+          {{ with .endlag.min }}{{ . }}-{{ end -}}
+          {{ with .endlag.max }}{{ . }}{{ end }}
           {{ with .endlag.possible }}
             [
             {{ $len = len . }}
@@ -537,6 +546,7 @@
           {{- with .input }} (Input {{ . }}){{ end }}
           {{- with or (isset . "during") (isset . "windows")
             (isset . "hit") (isset . "on") (isset . "from") }}:{{ end }}
+          {{ with .last }}Last {{ . }}f{{ end }}
           {{ with .during }}{{ title . }}{{ end }}
           {{ with .windows -}}
             {{ $len = len . -}}
@@ -739,6 +749,9 @@
       {{ if $hitstunModifier }}<td>
         {{ if isset . "hitstunModifier" }}
           {{ if reflect.IsMap .hitstunModifier }}
+            {{ with .hitstunModifier.from }}{{ . }}-{{ end -}}
+            {{ with .hitstunModifier.to }}{{ . }}×{{ end }}
+            {{ with .hitstunModifier.scaling }}({{ . }}){{ end }}
             {{ with .hitstunModifier.opponentAirborne }}Opponent Airborne: {{ . }}×<br>{{ end }}
             {{ with .hitstunModifier.opponentGrounded }}Opponent Grounded: {{ . }}×{{ end }}
           {{ else }}{{ .hitstunModifier }}×{{ end }}

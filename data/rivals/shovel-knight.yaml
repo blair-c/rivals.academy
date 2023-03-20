@@ -1015,8 +1015,6 @@ neutralSpecial:
       from: 26
       to: 33
       frames: 8
-    airBrakes:
-      during: active frames
     endlag: 35
     firstActiveFrame: 69
     damage: 8
@@ -1040,8 +1038,6 @@ neutralSpecial:
       from: 26
       to: 33
       frames: 8
-    airBrakes:
-      during: active frames
     damage: 12
     angle: 45
     angleFlipper: 8
@@ -1058,6 +1054,8 @@ neutralSpecial:
     priority: 9
     killsProjectiles: true
     parryStun: true
+  notes:
+  - Air brakes during active frames.
   image:
     baseRes: https://rivals.academy/library/shovel-knight/neutral-special-war-horn.png
     highRes: https://rivals.academy/library/shovel-knight/1080_neutral-special-war-horn.png
@@ -1431,8 +1429,6 @@ downSpecial:
       from: 17
       frames:
         max: 60
-    airBrakes:
-      from: 15
     firstActiveFrame:
       anchorIsUnableToCast: 31
     damage: 8
@@ -1448,6 +1444,8 @@ downSpecial:
     priority: 1
     killsProjectiles: true
     parryStun: true
+    notes:
+    - Air brakes f15-.
   - name: Reel Anchor
     startup: 3
     active:

@@ -681,7 +681,7 @@ forwardStrong:
     highRes: https://rivals.academy/library/ori/1080_forward-strong.png
 - name: Sein Team-Up
   hitboxes:
-  - name: Hit 1 (Back)
+  - name: Hit 1 (Body)
     startup: 12
     active:
       from: 13
