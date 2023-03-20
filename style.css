@@ -9,6 +9,10 @@
   --clr-darken-img: #303033;
   --clr-text-on-img: #ededf2;
 
+  --clr-training-bg: #16162e;
+  --clr-training-border: #252244;
+  --clr-training-border-hc: #3f3e6c;
+
   --clr-abxy-green: #009e4e;
   --clr-abxy-blue: #1f8ccc;
   --clr-abxy-yellow: #e8982c;
@@ -104,6 +108,10 @@ article h2 {
 
 article h3 {
   margin-top: 1.5rem;
+}
+
+article h4 {
+  margin-bottom: 0.3125rem;
 }
 
 :not(:active):focus-visible {
@@ -665,6 +673,9 @@ article h3 {
 .library-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  background: var(--clr-training-bg);
+  border: 2px solid var(--clr-training-border);
+  border-radius: 2px;
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -672,7 +683,18 @@ article h3 {
 
 .library-grid li a div {
   aspect-ratio: 1 / 1;
-  border: 1px solid black;
+  border: 2px solid var(--clr-training-border);
+  display: flex;
+  justify-content: center;
+}
+
+.library-grid li:not(:last-child) a div:hover,
+.library-grid li a:focus-visible div {
+  border: 3px solid var(--clr-training-border-hc);
+}
+
+.library-grid li a div img {
+  margin: auto;
 }
 
 #TableOfContents {
@@ -698,11 +720,11 @@ article h3 {
 }
 
 #TableOfContents li a:hover {
-  color: var(--clr-text-hc);
+  color: var(--clr-training-bg);
 }
 
 #TableOfContents .visible > a {
-  color: var(--clr-text);
+  color: var(--clr-training-bg);
 }
 
 @media (prefers-reduced-motion: no-preference) {
