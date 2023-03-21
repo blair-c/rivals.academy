@@ -678,7 +678,7 @@ article h4 {
   border-radius: 2px;
   list-style: none;
   padding-left: 0;
-  margin: 0;
+  margin-top: 0;
 }
 
 .library-grid li a div {
@@ -697,15 +697,21 @@ article h4 {
   margin: auto;
 }
 
-#TableOfContents {
+.toc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - .25rem);
+  height: calc(100svh - .25rem);
   position: sticky;
   top: 1rem;
+  padding-bottom: 2rem;
 }
 
 #TableOfContents ul {
   list-style: none;
   padding-left: 0;
-  padding-bottom: 2rem
+  margin: 0;
 }
 
 #TableOfContents ul ul {
@@ -733,18 +739,39 @@ article h4 {
   }
 }
 
+.to-top {
+  display: inline-block;
+  text-align: center;
+  width: 4rem;
+  padding-top: .3125rem;
+  border-radius: 100rem;
+  border: 3px solid var(--clr-gray-1);
+}
+
+.to-top svg {
+  fill: var(--clr-abxy-yellow);
+  height: 1.25rem;
+}
+
+.to-top:hover svg {
+  fill: var(--clr-abxy-blue);
+  transition: all .1s ease-in;
+}
+
 @media only screen and (max-width:48rem) {
+  .cols-sidebar-content {
+    grid-template-columns: auto;
+  }
+
   .sidebar {
+    position: fixed;
     padding-top: 0;
   }
 
   .library-grid,
-  #TableOfContents {
+  #TableOfContents,
+  .to-top {
     display: none;
-  }
-
-  .cols-sidebar-content {
-    grid-template-columns: auto;
   }
 }
 
