@@ -26,7 +26,12 @@
     </a></li>
     <li><a><div></div></a></li>
     </ul></nav>
-    {{ .TableOfContents }}
+    <div class="toc">
+      {{ .TableOfContents }}
+      <a href="#" class="to-top" title="Jump to Top">
+        {{ partial "svg/up.svg" }}<span class="sr-only">Jump to Top</span>
+      </a>
+    </div>
   </div>
   <main id="main-content">
     <article class="padded-content">
