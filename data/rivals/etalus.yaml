@@ -1302,7 +1302,7 @@ upSpecial:
       latest:
         from: 63
         to: 64
-        frames: 2
+        frames: 2-armored
     iceCreated:
       soonest: 19
       latest: 69
@@ -1431,8 +1431,8 @@ upSpecial:
   notes:
   - Armoured Up Special travels slightly less distance vertically in comparison to the non-armoured versions at the same level of charge, however you are able to act sooner due to decreased endlag and an earlier cancel window as a result.
   image:
-    baseRes: https://rivals.academy/library/etalus/up-special.png
-    highRes: https://rivals.academy/library/etalus/1080_up-special.png
+    baseRes: https://rivals.academy/library/etalus/up-special-armored.png
+    highRes: https://rivals.academy/library/etalus/1080_up-special-armored.png
 
 downSpecial:
 - hitboxes:
