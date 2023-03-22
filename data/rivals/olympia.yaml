@@ -1,0 +1,1127 @@
+name: Olympia
+element: earth
+
+# Effective Weight
+knockbackAdjustment: 0.98
+gravityAccel: 0.65
+hitstunGravityAccel: 0.51
+airFriction: 0.05
+airAccel: 0.30
+maxFallSpeed: 11
+fastFallSpeed: 16
+jumpSquat: 5
+landTime: 6
+# Ground Movement
+groundFriction: 0.35
+initialDash:
+  speed: 6.75
+  time: 8
+run:
+  speed: 5.30
+  stop:
+    time: 8
+  turn:
+    time: 9
+    accel: 1.00
+walk:
+  speed: 2.25
+  accel: 0.30
+  turn:
+    time: 6
+waveland:
+  time: 8
+  friction: 0.07
+# Aerial Movement
+maxAirSpeed: 5
+maxJumpHorizontalSpeed: 7
+fullHop:
+  speed: 12.45
+shortHop:
+  speed: 7.0
+doubleJump:
+  amount: 1
+  speed: 10.75
+wallJump:
+  speed:
+    vertical: 8
+    horizontal: 7
+pratFall:
+  accel: 0.85
+  landTime: 11
+
+hurtbox:
+  idle:
+    height: 59
+    width: 42
+  crouch:
+    height: 36
+    width: 42
+  hitstun:
+    height: 59
+    width: 42
+  image:
+    baseRes: https://rivals.academy/library/olympia/hurtbox.png
+    highRes: https://rivals.academy/library/olympia/1080_hurtbox.png
+
+# Normals
+jab:
+  hitboxes:
+  - name: Jab 1
+    startup: 4
+    active:
+      from: 5
+      to: 7
+      frames: 3
+    endlag: 12
+    cancellable:
+    - with: Jab 2
+      during: endlag
+      windows:
+      - from: 5
+        to: 10
+        window: 6
+      - from: 11
+        to: 12
+        window: 2
+    - with: Tilts
+      during: endlag
+      from: 5
+      to: 12
+      window: 8
+    firstActiveFrame: 10
+    damage: 2
+    angle: 35
+    angleFlipper: 0
+    knockback:
+      base: 3
+      scaling: 0
+    hitstunModifier: 1
+    forceFlinch: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+    parryStun: false
+  - name: Jab 2
+    startup: 4
+    active:
+      soonest:
+        from: 16
+        to: 19
+        frames: 4
+    endlag: 8
+    cancellable:
+    - with: Jab 3
+      during: endlag
+      windows:
+      - from: 3
+        to: 6
+        window: 4
+      - from: 7
+        to: 8
+        window: 2
+    - with: Tilts
+      during: endlag
+      from: 3
+      to: 8
+      window: 6
+    firstActiveFrame:
+      soonest: 28
+    damage: 3
+    angle: 80
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 3
+    killsProjectiles: true
+    parryStun: false
+  - name: Jab 3
+    startup: 5
+    active:
+      soonest:
+        from: 27
+        to: 31
+        frames: 5
+    endlag: 23
+    firstActiveFrame:
+      soonest: 55
+    damage: 7
+    angle: 45
+    angleFlipper: 6
+    knockback:
+      base: 7
+      scaling: 55
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 250
+    priority: 4
+    killsProjectiles: true
+    parryStun: true
+  notes:
+  - Jab combos have varying startup depending on when the attack is input. A jab input within the final 2 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
+  image:
+    baseRes: https://rivals.academy/library/olympia/jab.png
+    highRes: https://rivals.academy/library/olympia/1080_jab.png
+
+dashAttack:
+  hitboxes:
+  - name: Hit 1
+    startup: 6
+    active:
+      from: 7
+      to: 9
+      frames: 3
+    damage: 4
+    angle: 60
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 2
+    active:
+      from: 12
+      to: 14
+      frames: 3
+    endlag:
+      hit: 14
+      whiff: 21
+    firstActiveFrame: 36
+    damage: 4
+    angle: 40
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 30
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 105
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/olympia/dash-attack.png
+    highRes: https://rivals.academy/library/olympia/1080_dash-attack.png
+
+forwardTilt:
+  hitboxes:
+  - startup: 10
+    active:
+      from: 11
+      to: 16
+      frames: 6
+    endlag:
+      hit: 11
+      whiff: 18
+    firstActiveFrame: 35
+    damage: 8
+    angle: 40
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 85
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 60
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/olympia/forward-tilt.png
+    highRes: https://rivals.academy/library/olympia/1080_forward-tilt.png
+
+upTilt:
+  hitboxes:
+  - name: Hit 1-2
+    startup: 5
+    active:
+    - from: 6
+      to: 7
+      frames: 2
+    - from: 8
+      to: 12
+      frames: 5
+    damage: 5
+    angle: 70
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 35
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 3
+    active:
+      "on": 15
+      frames: 1
+    damage: 2
+    angle: 275
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 35
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 4
+    active:
+      from: 16
+      to: 19
+      frames: 2
+    endlag:
+      hit: 12
+      whiff: 16
+    firstActiveFrame: 36
+    damage: 8
+    angle: 250
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 20
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 35
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/olympia/up-tilt.png
+    highRes: https://rivals.academy/library/olympia/1080_up-tilt.png
+
+downTilt:
+  hitboxes:
+  - startup: 4
+    active:
+      from: 5
+      to: 7
+      frames: 3
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 23
+    damage: 5
+    angle: 85
+    angleFlipper: 0
+    knockback:
+      base: 4
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 35
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/olympia/down-tilt.png
+    highRes: https://rivals.academy/library/olympia/1080_down-tilt.png
+
+# Aerials
+neutralAir:
+  hitboxes:
+  - name: Hit 1
+    startup: 4
+    active:
+      from: 5
+      to: 8
+      frames: 4
+    landingLag:
+      hit: 6
+      whiff: 8
+    damage: 2
+    angle: 80
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 0.5
+    hitpause:
+      base: 5
+      scaling: 0
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 2
+    active:
+      from: 13
+      to: 19
+      frames: 7
+    endlag:
+      hit: 9
+      whiff: 12
+    firstActiveFrame: 32
+    landingLag:
+      hit: 6
+      whiff: 8
+    damage: 5
+    angle: 70
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 60
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 20
+    priority: 1
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/olympia/neutral-air.png
+    highRes: https://rivals.academy/library/olympia/1080_neutral-air.png
+
+forwardAir:
+  hitboxes:
+  - startup: 11
+    active:
+      from: 12
+      to: 16
+      frames: 5
+    endlag:
+      hit: 12
+      whiff: 18
+    firstActiveFrame: 29
+    landingLag:
+      hit: 8
+      whiff: 12
+    damage: 9
+    angle: 40
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 80
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 100
+    priority: 4
+    killsProjectiles: true
+    parryStun: true
+  - name: Spike
+    active:
+      "on": 12
+      frames: 1
+    landingLag:
+      hit: 8
+      whiff: 12
+    damage: 11
+    angle: -45
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 9
+      scaling: 120
+    priority: 5
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/olympia/forward-air.png
+    highRes: https://rivals.academy/library/olympia/1080_forward-air.png
+
+backAir:
+  hitboxes:
+  - startup: 7
+    active:
+      from: 8
+      to: 13
+      frames: 6
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 29
+    landingLag:
+      hit: 6
+      whiff: 8
+    damage: 5
+    angle: 45
+    angleFlipper: 6
+    knockback:
+      base:
+        from: 6
+        to: 5
+        scaling: linear
+      scaling: 40
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 25
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  notes:
+  - Olympia will turn around in the air on frame 7.
+  image:
+    baseRes: https://rivals.academy/library/olympia/back-air.png
+    highRes: https://rivals.academy/library/olympia/1080_back-air.png
+
+upAir:
+  hitboxes:
+  - name: Hit 1
+    startup: 6
+    active:
+      from: 7
+      to: 8
+      frames: 2
+    landingLag:
+      hit: 8
+      whiff: 12
+    damage: 8
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 60
+    hitstunModifier: 0.85
+    hitpause:
+      base: 6
+      scaling: 40
+    priority: 8
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 2
+    active:
+      from: 9
+      to: 12
+      frames: 4
+    landingLag:
+      hit: 4
+      whiff: 6
+    damage: 8
+    angle: 90
+    angleFlipper: 6
+    knockback:
+      base: 7
+      scaling: 60
+    hitstunModifier: 0.85
+    hitpause:
+      base: 6
+      scaling: 40
+    priority: 8
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 3
+    active:
+      from: 13
+      to: 14
+      frames: 2
+    endlag:
+      hit: 10
+      whiff: 15
+    firstActiveFrame: 30
+    landingLag:
+      hit: 8
+      whiff: 12
+    damage: 4
+    angle: 300
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 50
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 30
+    priority: 5
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/olympia/up-air.png
+    highRes: https://rivals.academy/library/olympia/1080_up-air.png
+
+downAir:
+  hitboxes:
+  - startup: 14
+    active:
+      from: 15
+      to: 17
+      frames: 3
+    endlag:
+      hit: 15
+      whiff: 21
+    firstActiveFrame: 39
+    landingLag:
+      hit: 6
+      whiff: 8
+    damage: 10
+    angle: 240
+    angleFlipper: 6
+    knockback:
+      base: 4
+      scaling: 60
+    hitstunModifier: 1
+    hitpause:
+      base: 6
+      scaling: 60
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  - name: Sweet
+    active:
+      from: 15
+      to: 17
+      frames: 3
+    landingLag:
+      hit: 6
+      whiff: 8
+    damage: 14
+    angle: 270
+    angleFlipper: 6
+    knockback:
+      base: 6
+      scaling: 80
+    hitstunModifier: 1
+    hitpause:
+      base: 12
+      scaling: 100
+    priority: 6
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/olympia/down-air.png
+    highRes: https://rivals.academy/library/olympia/1080_down-air.png
+
+# Strongs
+forwardStrong:
+  hitboxes:
+  - name: Early
+    startup: 22
+    active:
+      from: 23
+      to: 26
+      frames: 4
+    damage: 17
+    angle: 40
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 120
+    hitstunModifier: 1
+    hitpause:
+      base: 18
+      scaling: 100
+    hitLockout: 10
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+  - name: Late
+    active:
+      from: 27
+      to: 31
+      frames: 5
+    endlag:
+      hit: 19
+      whiff: 27
+    firstActiveFrame: 59
+    damage: 14
+    angle: 40
+    angleFlipper: 0
+    knockback:
+      base: 6
+      scaling: 80
+    hitstunModifier: 1
+    hitpause:
+      base: 12
+      scaling: 100
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/olympia/forward-strong.png
+    highRes: https://rivals.academy/library/olympia/1080_forward-strong.png
+
+upStrong:
+  hitboxes:
+  - name: Hit 1 (Lower)
+    startup: 15
+    active:
+      from: 16
+      to: 19
+      frames: 4
+    damage: 6
+    angle: 70
+    angleFlipper: 7
+    knockback:
+      base: 6
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 1 (Upper)
+    active:
+      from: 16
+      to: 19
+      frames: 4
+    damage: 6
+    angle: 55
+    angleFlipper: 7
+    knockback:
+      base: 4
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  - name: Hit 2
+    active:
+      from: 24
+      to: 29
+      frames: 6
+    endlag:
+      hit: 26
+      whiff: 40
+    firstActiveFrame: 44
+    damage: 10
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 120
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 50
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/olympia/up-strong.png
+    highRes: https://rivals.academy/library/olympia/1080_up-strong.png
+
+downStrong:
+  hitboxes:
+  - startup: 23
+    active:
+      from: 24
+      to: 28
+      frames: 5
+    endlag:
+      hit: 17
+      whiff: 26
+    firstActiveFrame: 44
+    damage: 15
+    angle: 60
+    angleFlipper: 6
+    knockback:
+      base: 9
+      scaling: 110
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 90
+    hitLockout: 6
+    priority: 2
+    killsProjectiles: true
+    parryStun: true
+  - name: Crystals
+    active:
+      from: 26
+      to: 27
+      frames: 2
+    damage: 12
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 100
+    hitstunModifier: 1
+    hitpause:
+      base: 8
+      scaling: 90
+    hitLockout: 6
+    priority: 1
+    killsProjectiles: true
+    parryStun:
+      extended: true
+    notes:
+    - An extra crystal is added to either side Down Strong on frames 1, 13, 25, 37 and 49 of charging.
+    - All crystals are active at once.
+  image:
+    baseRes: https://rivals.academy/library/olympia/down-strong.png
+    highRes: https://rivals.academy/library/olympia/1080_down-strong.png
+
+# Specials
+neutralSpecial:
+- name: Throw Gem
+  hitboxes:
+  - startup: 8
+    active:
+      from: 9
+      to: 33
+      frames: 25
+    endlag: 19
+    cancellable:
+    - with: Manually Spawn Field
+      from: 9
+      to: 27
+      window: 19
+      endlag: 16
+    firstActiveFrame: 28
+    damage: 5
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 5
+      scaling: 0
+    hitstunModifier: 0.5
+    hitpause:
+      base: 5
+      scaling: 30
+    priority: 3
+    killsProjectiles: true
+    parryStun: false
+  notes:
+  - Once thrown, the Gem Field automatically spawns on frame 34 or on hitting another character.
+  - Also automatically spawn on hitting specific destructible objects, being Sylvanos' flowers, Ranno's bubble and an opposing Olympia's Gem.
+  - Once created, Gem can be destroyed by any physical attack or projectile.
+  image:
+    baseRes: https://rivals.academy/library/olympia/neutral-special.png
+    highRes: https://rivals.academy/library/olympia/1080_neutral-special.png
+- name: Activate Gem Field
+  hitboxes:
+  - startup: 27
+    active:
+      from: 28
+      to: 29
+      frames: 2
+    endlag: 18
+    firstActiveFrame: 46
+    cooldown:
+    - time: 120
+    - "on": Gem Break
+      time: 120
+    - "on": Field Spawn
+      time: 10
+    damage: 2
+    angle: 90
+    angleFlipper: 3
+    knockback:
+      base: 8
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 20
+    priority: 3
+    killsProjectiles: true
+    parryStun:
+      extended: true
+    crystalises: true
+  image:
+    baseRes: https://rivals.academy/library/olympia/neutral-special-activate.png
+    highRes: https://rivals.academy/library/olympia/1080_neutral-special-activate.png
+- name: Crystalise (Break Out)
+  hitboxes:
+  - active:
+      "on": 1
+      frames: 1
+    damage: 1
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 35
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 0
+    asdiModifier: 0
+    priority: 1
+    killsProjectiles: true
+  notes:
+  - Crystalised characters break out and take damage/knockback upon taking 30 damage during Crystalise, touching the ground or wall at any time, or exiting hitstun.
+  - Characters with Super Armour will have the Crystalise effect stored on them, but immediately break out once their attack ends. Hitting a character with a stored Crystalise effect removes it, even if they still have Super Armour upon being hit.
+
+sideSpecial:
+  hitboxes:
+  - startup:
+      initial:
+        min: 9
+        max: 38
+      postCharge: 6
+    active:
+      soonest:
+        from: 16
+        to: 20
+        frames: 5
+      latest:
+        from: 45
+        to: 58
+        frames: 41
+    endlag:
+      min: 30
+      max: 38
+      calculator: https://docs.google.com/spreadsheets/d/16v6aPfEKQ8ErQTRgOWRYTf3atl29CfGBa1k-dSf2f9A
+    cancellable:
+    - with: Walljump
+      from: 11
+    - with: Jump
+      condition: In Gem Field
+      from: 4
+    - with: IASA
+      condition: On Hit
+      during: endlag
+      min:
+        from: 10
+        to: 30
+        window: 21
+      max:
+        from: 12
+        to: 38
+        window: 27
+    firstActiveFrame:
+      min: 51
+      max: 97
+    damage:
+      min: 6
+      max: 16
+      basedOn: charge
+      calculator: https://docs.google.com/spreadsheets/d/16v6aPfEKQ8ErQTRgOWRYTf3atl29CfGBa1k-dSf2f9A
+    angle: 60
+    angleFlipper: 0
+    knockback:
+      base:
+        min: 6
+        max: 8
+        basedOn: charge
+        calculator: https://docs.google.com/spreadsheets/d/16v6aPfEKQ8ErQTRgOWRYTf3atl29CfGBa1k-dSf2f9A
+      scaling:
+        min: 70
+        max: 95
+        basedOn: charge
+        calculator: https://docs.google.com/spreadsheets/d/16v6aPfEKQ8ErQTRgOWRYTf3atl29CfGBa1k-dSf2f9A
+    hitstunModifier: 1
+    hitpause:
+      base: 9
+      scaling: 50
+    priority: 3
+    killsProjectiles: false
+    parryStun: true
+  notes:
+  - Unique jump-cancel with 4 frames of jump squat while in Gem Field.
+  - Snaps to ledge within 32px.
+  image:
+    baseRes: https://rivals.academy/library/olympia/side-special.png
+    highRes: https://rivals.academy/library/olympia/1080_side-special.png
+
+upSpecial:
+  hitboxes:
+  - name: Hit 1
+    startup: 7
+    active:
+      from: 8
+      to: 9
+      frames: 2
+    damage: 1
+    angle: 80
+    angleFlipper: 0
+    knockback:
+      base: 10
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    asdiModifier: 0
+    priority: 1
+    killsProjectiles: false
+    parryStun: true
+  - name: Hit 2-6
+    active:
+    - from: 12
+      to: 13
+      frames: 2
+    - from: 15
+      to: 16
+      frames: 2
+    - from: 18
+      to: 19
+      frames: 2
+    - from: 21
+      to: 22
+      frames: 2
+    - from: 24
+      to: 25
+      frames: 2
+    damage: 1
+    angle: 70
+    angleFlipper: 0
+    knockback:
+      base: 8
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 4
+      scaling: 0
+    asdiModifier: 0
+    priority: 1
+    killsProjectiles: false
+    parryStun: true
+  - name: Final
+    active:
+      from: 30
+      to: 33
+      frames: 4
+    endlag: 8
+    firstActiveFrame:
+      pratFall: 42
+    damage: 7
+    angle: 361
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 85
+    hitstunModifier: 1
+    hitpause:
+      base: 5
+      scaling: 30
+    priority:
+    - hitbox: "?"
+      priority: 2
+    - hitbox: "?"
+      priority: 1
+    killsProjectiles: false
+    parryStun: true
+  image:
+    baseRes: https://rivals.academy/library/olympia/up-special.png
+    highRes: https://rivals.academy/library/olympia/1080_up-special.png
+
+downSpecial:
+- name: Focus Punch
+  hitboxes:
+  - name: Unfocused Punch
+    startup:
+      initial:
+        min: 22
+      punch: 10
+    active:
+      soonest:
+        from: 33
+        to: 37
+        frames: 5
+    endlag:
+      hit: 10
+      whiff: 15
+    cancellable:
+    - with: Cancel Dash
+      min:
+        from: 9
+        to: 22
+        window: 14
+    firstActiveFrame:
+      soonest: 53
+    damage: 7
+    angle: 80
+    angleFlipper: 6
+    knockback:
+      base: 8
+      scaling: 70
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 20
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+  - name: Focus Punch
+    startup:
+      initial: 42
+      punch: 2
+    active:
+      from: 45
+      to: 49
+      frames: 5
+    endlag:
+      hit: 10
+      whiff: 15
+    cancellable:
+    - with: Cancel Dash
+      from: 9
+      to: 42
+      window: 34
+    firstActiveFrame: 65
+    damage: 10
+    angle: 80
+    angleFlipper: 6
+    knockback:
+      base: 5
+      scaling: 0
+    hitstunModifier: 1
+    hitpause:
+      base: 10
+      scaling: 20
+    priority: 3
+    killsProjectiles: true
+    parryStun: true
+    crystalises: true
+  - name: Cancel Dash
+    intangible:
+      from: 1
+      to: 5
+      frames: 5
+    endlag: 7
+    firstActiveFrame: 13
+    cooldown:
+    - move: Focus Punch
+      time: 30
+    notes:
+    - Available once per airtime. Refreshes on landing, walljump, or hit.
+  notes:
+  - Canceling Down Special's charge into Unfocused Punch or Cancel Dash removes super armor immediately.
+  image:
+    baseRes: https://rivals.academy/library/olympia/down-special.png
+    highRes: https://rivals.academy/library/olympia/1080_down-special.png
+- name: Crystalise (Break Out)
+  hitboxes:
+  - active:
+      "on": 1
+      frames: 1
+    damage: 1
+    angle: 90
+    angleFlipper: 0
+    knockback:
+      base: 7
+      scaling: 35
+    hitstunModifier: 1
+    hitpause:
+      base: 7
+      scaling: 0
+    asdiModifier: 0
+    priority: 1
+    killsProjectiles: true
+  notes:
+  - Crystalised characters break out and take damage/knockback upon taking 30 damage during Crystalise, touching the ground or wall at any time, or exiting hitstun.
+  - Characters with Super Armour will have the Crystalise effect stored on them, but immediately break out once their attack ends. Hitting a character with a stored Crystalise effect removes it, even if they still have Super Armour upon being hit.

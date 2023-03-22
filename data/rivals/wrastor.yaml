@@ -446,7 +446,7 @@ neutralAir:
       whiff: 6
     damage: 4
     angle: 40
-    angleFlipper: 5
+    angleFlipper: 6
     knockback:
       base:
         from: 8

@@ -1167,7 +1167,7 @@ sideSpecial:
       initial:
         min: 16
         max: 95
-      dagger: 2
+      postCharge: 2
     active:
       soonest:
         from: 19
@@ -1183,9 +1183,14 @@ sideSpecial:
     cancellable:
     - with: Jump
       condition: While Grounded
-      from: 20
-      to: 31
-      frames: 12
+      min:
+        from: 20
+        to: 31
+        frames: 12
+      max:
+        from: 99
+        to: 138
+        frames: 40
       endlag: 15
     firstActiveFrame:
       soonest: 49
@@ -1199,7 +1204,7 @@ sideSpecial:
       min: 6
       max: 8
       basedOn: charge
-      calculator: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY/
+      calculator: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY
     angle: 361
     angleFlipper: 0
     knockback:
@@ -1207,12 +1212,12 @@ sideSpecial:
         min: 6
         max: 7
         basedOn: charge
-        calculator: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY/
+        calculator: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY
       scaling:
         min: 50
         max: 60
         basedOn: charge
-        calculator: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY/
+        calculator: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY
     hitstunModifier: 1
     hitpause:
       base: 8
@@ -1235,7 +1240,7 @@ sideSpecial:
   hitboxes:
   - startup:
       charge: 95
-      dagger: 2
+      postCharge: 2
     active:
       from: 98
     endlag:

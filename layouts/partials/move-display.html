@@ -1,5 +1,6 @@
 {{/*  Check if there are multiple rows  */}}
 {{ $multiple := gt (len .hitboxes) 1 }}
+{{ range .hitboxes }}{{ if isset . "name" }}{{ $multiple = true }}{{ end }}{{ end }}
 {{/*  Initialize all possible columns to false  */}}
 {{ $startup := false }}
 {{ $intangible := false }}
@@ -39,6 +40,7 @@
 {{ $wrapLockout := false }}
 {{ $appliesPoison := false }}
 {{ $heat := false }}
+{{ $crystalises := false }}
 {{ $notes := false}}
 {{/*  Iterate through rows, set existing columns to true  */}}
 {{ range .hitboxes }}
@@ -80,6 +82,7 @@
   {{ if isset . "wrapLockout" }} {{ $wrapLockout = true }} {{ end }}
   {{ if isset . "appliesPoison" }} {{ $appliesPoison = true }} {{ end }}
   {{ if isset . "heat" }} {{ $heat = true }} {{ end }}
+  {{ if isset . "crystalises" }} {{ $crystalises = true }} {{ end }}
   {{ if isset . "notes" }} {{ $notes = true }} {{ end }}
 {{ end }}
 {{/*  Dummy variables  */}}
@@ -128,6 +131,7 @@
         {{ if $wrapLockout }}<th>Wrap Lockout</th>{{ end }}
         {{ if $appliesPoison }}<th>Applies Poison</th>{{ end }}
         {{ if $heat }}<th>Heat</th>{{ end }}
+        {{ if $crystalises }}<th>Crystalises</th>{{ end }}
         {{ if $notes }}<th class="align-left">Notes</th>{{ end }}
       </tr>
     </thead>
@@ -155,6 +159,7 @@
               {{ with .max }}{{ . }}{{ end }}
               {{ else }}{{ . }}{{ end }} (Charge)<br>
             {{ end }}
+            {{ with .startup.postCharge }}{{ . }} (Post-Charge){{ end }}
             {{ with .startup.fromLanding }}From Landing: {{ . }}{{ end }}
             {{ with .startup.grounded }}Grounded: {{ . }}<br>{{ end }}
             {{ with .startup.airborne }}Airborne: {{ . }}{{ end }}
@@ -171,12 +176,12 @@
             {{ with .startup.preLaunch }}{{ . }} (Pre-Launch){{ end }}
             {{ with .startup.cloud }}{{ . }} (Cloud){{ end }}
             {{ with .startup.throw }}{{ . }} (Throw){{ end }}
-            {{ with .startup.dagger }}{{ . }} (Dagger){{ end }}
             {{ with .startup.missile }}{{ . }} (Shoot Missile){{ end }}
             {{ with .startup.explosion }}{{ . }} (Explosion){{ end }}
             {{ with .startup.detonation }}
               {{ .initial }} (Initial Detonation)<br>{{ .lockedIn }} (Locked In Detonation)
             {{ end }}
+            {{ with .startup.punch }}{{ . }} (Punch){{ end }}
           {{ end }}
         {{- else }}{{ .startup }}{{ end }}
         {{ with .mustConnect }}({{ . }} Must Hit){{ end }}
@@ -578,6 +583,9 @@
               {{ with .whiff.from }}/ {{ . }}-{{ end -}}
               {{ with .whiff.to }}{{ . }}{{ end }}
               {{ with .whiff.condition }}({{ . }}){{ end }}
+            {{ else if isset . "min" }}
+              {{ with .min }}{{ .from }}-{{ .to }} (Min){{ end }}
+              {{- with .max }}, {{ .from }}-{{ .to }} (Max){{ end }}
             {{ else -}}
               {{ with .on }}{{ . }}{{ end -}}
               {{ with .from }}{{ . }}-{{ end -}}
@@ -866,6 +874,8 @@
           {{- with .note }}, {{ . }}{{ end }}
         {{ end }}
       </td>{{ end }}
+
+      {{ if $crystalises }}<td>{{ title .crystalises }}</td>{{ end }}
 
       {{ if $notes }}<td><div class="notes align-left">
         {{ range .notes }}{{ . }} {{ end }}
