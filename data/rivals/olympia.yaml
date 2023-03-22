@@ -614,8 +614,8 @@ forwardStrong:
     startup: 22
     active:
       from: 23
-      to: 26
-      frames: 4
+      to: 25
+      frames: 3
     damage: 17
     angle: 40
     angleFlipper: 0
@@ -632,12 +632,12 @@ forwardStrong:
     parryStun: true
   - name: Late
     active:
-      from: 27
-      to: 31
-      frames: 5
+      from: 26
+      to: 29
+      frames: 4
     endlag:
       hit: 19
-      whiff: 27
+      whiff: 29
     firstActiveFrame: 59
     damage: 14
     angle: 40
@@ -748,8 +748,8 @@ downStrong:
     parryStun: true
   - name: Crystals
     active:
-      from: 26
-      to: 27
+      from: 25
+      to: 26
       frames: 2
     damage: 12
     angle: 90
@@ -770,8 +770,8 @@ downStrong:
     - An extra crystal is added to either side Down Strong on frames 1, 13, 25, 37 and 49 of charging.
     - All crystals are active at once.
   image:
-    baseRes: https://rivals.academy/library/olympia/down-strong.png
-    highRes: https://rivals.academy/library/olympia/1080_down-strong.png
+    baseRes: https://rivals.academy/library/olympia/down-strong-full.png
+    highRes: https://rivals.academy/library/olympia/1080_down-strong-full.png
 
 # Specials
 neutralSpecial:
@@ -808,8 +808,8 @@ neutralSpecial:
   - Also automatically spawn on hitting specific destructible objects, being Sylvanos' flowers, Ranno's bubble and an opposing Olympia's Gem.
   - Once created, Gem can be destroyed by any physical attack or projectile.
   image:
-    baseRes: https://rivals.academy/library/olympia/neutral-special.png
-    highRes: https://rivals.academy/library/olympia/1080_neutral-special.png
+    baseRes: https://rivals.academy/library/olympia/neutral-special-throw.png
+    highRes: https://rivals.academy/library/olympia/1080_neutral-special-throw.png
 - name: Activate Gem Field
   hitboxes:
   - startup: 27
@@ -864,6 +864,9 @@ neutralSpecial:
   notes:
   - Crystalised characters break out and take damage/knockback upon taking 30 damage during Crystalise, touching the ground or wall at any time, or exiting hitstun.
   - Characters with Super Armour will have the Crystalise effect stored on them, but immediately break out once their attack ends. Hitting a character with a stored Crystalise effect removes it, even if they still have Super Armour upon being hit.
+  image:
+    baseRes: https://rivals.academy/library/olympia/neutral-special-break-out.png
+    highRes: https://rivals.academy/library/olympia/1080_neutral-special-break-out.png
 
 sideSpecial:
   hitboxes:
@@ -1125,3 +1128,6 @@ downSpecial:
   notes:
   - Crystalised characters break out and take damage/knockback upon taking 30 damage during Crystalise, touching the ground or wall at any time, or exiting hitstun.
   - Characters with Super Armour will have the Crystalise effect stored on them, but immediately break out once their attack ends. Hitting a character with a stored Crystalise effect removes it, even if they still have Super Armour upon being hit.
+  image:
+    baseRes: https://rivals.academy/library/olympia/neutral-special-break-out.png
+    highRes: https://rivals.academy/library/olympia/1080_neutral-special-break-out.png
