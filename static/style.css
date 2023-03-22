@@ -945,3 +945,10 @@ article h4 {
   font-family: monospace;
   font-weight: 500;
 }
+
+.error-404-img {
+  padding: var(--page-padding);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  max-width: 100%;
+}

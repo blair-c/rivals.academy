@@ -1,3 +1,19 @@
+{{ define "header" }}
+  {{ partial "navbar" }}
+{{ end }}
+
 {{ define "main" }}
-Page Not Found.
+  <main id="main-content">
+    <header class="site-section-header">
+      <h1>404</h1>
+      <p>Page Not Found</p>
+    </header>
+    <div class="center">
+      <img src="/img/mindset.jpg" class="error-404-img">
+    </div>
+  </main>
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer" }}
 {{ end }}
