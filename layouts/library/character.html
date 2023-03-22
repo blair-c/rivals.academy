@@ -49,8 +49,8 @@
               <th>Air Friction</th>
               <th>Air Accel</th>
               <th>Max Fall Speed</th>
-              <th>Fast Fall Speed</th>
-              <th>Jump Squat</th>
+              <th>Fastfall Speed</th>
+              <th>Jumpsquat</th>
               <th>Land Time</th>
             </tr>
           </thead>
@@ -62,8 +62,8 @@
               <td>{{ printf "%.2f" $c.airFriction }}</td>
               <td>{{ printf "%.2f" $c.airAccel }}</td>
               <td>{{ $c.maxFallSpeed }}</td>
-              <td>{{ $c.fastFallSpeed }}</td>
-              <td>{{ $c.jumpSquat }}</td>
+              <td>{{ $c.fastfallSpeed }}</td>
+              <td>{{ $c.jumpsquat }}</td>
               <td>{{ $c.landTime }}</td>
             </tr>
           </tbody>
@@ -113,13 +113,13 @@
             <tr>
               <th>Max Air Speed</th>
               <th>Max Jump Horizontal Speed</th>
-              <th>Full Hop Speed</th>
-              <th>Short Hop Speed</th>
+              <th>Fullhop Speed</th>
+              <th>Shorthop Speed</th>
               <th>Double Jump Speed</th>
               {{ with $c.doubleJump.accel }}<th>Double Jump Accel</th>{{ end }}
-              <th>Wall Jump Vertical Speed</th>
-              <th>Wall Jump Horizontal Speed</th>
-              {{ with $c.wallCling.max }}<th>Wall Cling Max</th>{{ end }}
+              <th>Walljump Vertical Speed</th>
+              <th>Walljump Horizontal Speed</th>
+              {{ with $c.wallcling.max }}<th>Wallcling Max</th>{{ end }}
               <th>Prat Fall Accel</th>
               <th>Prat Fall Land Time</th>
             </tr>
@@ -128,13 +128,13 @@
             <tr>
               <td>{{ $c.maxAirSpeed }}</td>
               <td>{{ $c.maxJumpHorizontalSpeed }}</td>
-              <td>{{ printf "%.2f" $c.fullHop.speed }}</td>
-              <td>{{ printf "%.1f" $c.shortHop.speed }}</td>
+              <td>{{ printf "%.2f" $c.fullhop.speed }}</td>
+              <td>{{ printf "%.1f" $c.shorthop.speed }}</td>
               <td>{{ printf "%.2f" $c.doubleJump.speed }}</td>
               {{ with $c.doubleJump.accel }}<td>{{ . }}</td>{{ end }}
-              <td>{{ $c.wallJump.speed.vertical }}</td>
-              <td>{{ $c.wallJump.speed.horizontal }}</td>
-              {{ with $c.wallCling.max }}<td>{{ . }}</td>{{ end }}
+              <td>{{ $c.walljump.speed.vertical }}</td>
+              <td>{{ $c.walljump.speed.horizontal }}</td>
+              {{ with $c.wallcling.max }}<td>{{ . }}</td>{{ end }}
               <td>{{ printf "%.2f" $c.pratFall.accel }}</td>
               <td>{{ $c.pratFall.landTime }}</td>
             </tr>

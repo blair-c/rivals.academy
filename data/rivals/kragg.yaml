@@ -8,8 +8,8 @@ hitstunGravityAccel: 0.53
 airFriction: 0.04
 airAccel: 0.30
 maxFallSpeed: 11
-fastFallSpeed: 16
-jumpSquat: 5
+fastfallSpeed: 16
+jumpsquat: 5
 landTime: 6
 # Ground Movement
 groundFriction: 0.50
@@ -34,14 +34,14 @@ waveland:
 # Aerial Movement
 maxAirSpeed: 4
 maxJumpHorizontalSpeed: 6
-fullHop:
+fullhop:
   speed: 12.00
-shortHop:
+shorthop:
   speed: 7.4
 doubleJump:
   amount: 1
   speed: 12.00
-wallJump:
+walljump:
   speed:
     vertical: 8
     horizontal: 7

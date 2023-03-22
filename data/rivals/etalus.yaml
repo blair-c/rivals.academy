@@ -8,8 +8,8 @@ hitstunGravityAccel: 0.50
 airFriction: 0.04
 airAccel: 0.30
 maxFallSpeed: 6
-fastFallSpeed: 15
-jumpSquat: 5
+fastfallSpeed: 15
+jumpsquat: 5
 landTime: 6
 # Ground Movement
 groundFriction: 0.30
@@ -34,14 +34,14 @@ waveland:
 # Aerial Movement
 maxAirSpeed: 4
 maxJumpHorizontalSpeed: 6
-fullHop:
+fullhop:
   speed: 11.00
-shortHop:
+shorthop:
   speed: 7.4
 doubleJump:
   amount: 1
   speed: 11.50
-wallJump:
+walljump:
   speed:
     vertical: 8
     horizontal: 7
@@ -1327,7 +1327,7 @@ upSpecial:
       from: 1
       to: 4
       window: 4
-    - with: Wall Jump
+    - with: Walljump
       during: endlag
       from: 15
     - with: All actions except specials
@@ -1355,7 +1355,7 @@ upSpecial:
     parryStun: true
     notes:
     - Air brakes on frame 5 except for when cancelling the first 4 frames of double-jump into Up Special, in which case Etalus' vertical speed is set to 0 instantly.
-    - Cancelling with airdodge anytime before endlag f4 will allow you to use Up Special again without wall jumping or touching the ground.
+    - Cancelling with airdodge anytime before endlag f4 will allow you to use Up Special again without walljumping or touching the ground.
   image:
     baseRes: https://rivals.academy/library/etalus/up-special.png
     highRes: https://rivals.academy/library/etalus/1080_up-special.png
@@ -1399,7 +1399,7 @@ upSpecial:
       from: 1
       to: 4
       window: 4
-    - with: Wall Jump
+    - with: Walljump
       during: endlag
       from: 15
     - with: All actions except specials
@@ -1427,7 +1427,7 @@ upSpecial:
     parryStun: true
     notes:
     - Air brakes on frame 5 except for when cancelling the first 4 frames of double-jump into Up Special, in which case Etalus' vertical speed is set to 0 instantly.
-    - Cancelling with airdodge anytime before endlag f4 will allow you to use Up Special again without wall jumping or touching the ground.
+    - Cancelling with airdodge anytime before endlag f4 will allow you to use Up Special again without walljumping or touching the ground.
   notes:
   - Armoured Up Special travels slightly less distance vertically in comparison to the non-armoured versions at the same level of charge, however you are able to act sooner due to decreased endlag and an earlier cancel window as a result.
   image:
@@ -1467,7 +1467,7 @@ downSpecial:
       from: 37
     cooldown: 60
     cancellable:
-    - with: Wall Jump
+    - with: Walljump
       from: 38
     damage: 12
     angle: 80

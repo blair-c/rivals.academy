@@ -8,8 +8,8 @@ hitstunGravityAccel: 0.45
 airFriction: 0.04
 airAccel: 0.40
 maxFallSpeed: 8
-fastFallSpeed: 12
-jumpSquat: 5
+fastfallSpeed: 12
+jumpsquat: 5
 landTime: 4
 # Ground Movement
 groundFriction: 0.63
@@ -34,15 +34,15 @@ waveland:
 # Aerial Movement
 maxAirSpeed: 6
 maxJumpHorizontalSpeed: 8
-fullHop:
+fullhop:
   speed: 7.60
-shortHop:
+shorthop:
   speed: 4.5
 doubleJump:
   amount: 1
   speed: -1.00
   accel: -1.40
-wallJump:
+walljump:
   speed:
     vertical: 7
     horizontal: 6
@@ -1041,9 +1041,9 @@ upSpecial:
       to: 34
       frames: 8
     cancellable:
-    - with: Wall Jump
+    - with: Walljump
       from: 35
-    - with: Fast Fall
+    - with: Can Fastfall
       from: 56
     endlag:
       grounded: 20
