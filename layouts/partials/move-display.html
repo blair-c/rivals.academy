@@ -40,7 +40,7 @@
 {{ $wrapLockout := false }}
 {{ $appliesPoison := false }}
 {{ $heat := false }}
-{{ $crystalises := false }}
+{{ $crystallizes := false }}
 {{ $notes := false}}
 {{/*  Iterate through rows, set existing columns to true  */}}
 {{ range .hitboxes }}
@@ -82,7 +82,7 @@
   {{ if isset . "wrapLockout" }} {{ $wrapLockout = true }} {{ end }}
   {{ if isset . "appliesPoison" }} {{ $appliesPoison = true }} {{ end }}
   {{ if isset . "heat" }} {{ $heat = true }} {{ end }}
-  {{ if isset . "crystalises" }} {{ $crystalises = true }} {{ end }}
+  {{ if isset . "crystallizes" }} {{ $crystallizes = true }} {{ end }}
   {{ if isset . "notes" }} {{ $notes = true }} {{ end }}
 {{ end }}
 {{/*  Dummy variables  */}}
@@ -131,7 +131,7 @@
         {{ if $wrapLockout }}<th>Wrap Lockout</th>{{ end }}
         {{ if $appliesPoison }}<th>Applies Poison</th>{{ end }}
         {{ if $heat }}<th>Heat</th>{{ end }}
-        {{ if $crystalises }}<th>Crystalises</th>{{ end }}
+        {{ if $crystallizes }}<th>Crystallizes</th>{{ end }}
         {{ if $notes }}<th class="align-left">Notes</th>{{ end }}
       </tr>
     </thead>
@@ -875,7 +875,7 @@
         {{ end }}
       </td>{{ end }}
 
-      {{ if $crystalises }}<td>{{ title .crystalises }}</td>{{ end }}
+      {{ if $crystallizes }}<td>{{ title .crystallizes }}</td>{{ end }}
 
       {{ if $notes }}<td><div class="notes align-left">
         {{ range .notes }}{{ . }} {{ end }}

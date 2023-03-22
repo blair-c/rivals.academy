@@ -839,11 +839,11 @@ neutralSpecial:
     killsProjectiles: true
     parryStun:
       extended: true
-    crystalises: true
+    crystallizes: true
   image:
     baseRes: https://rivals.academy/library/olympia/neutral-special-activate.png
     highRes: https://rivals.academy/library/olympia/1080_neutral-special-activate.png
-- name: Crystalise (Break Out)
+- name: crystallize (Break Out)
   hitboxes:
   - active:
       "on": 1
@@ -862,11 +862,11 @@ neutralSpecial:
     priority: 1
     killsProjectiles: true
   notes:
-  - Crystalised characters break out and take damage/knockback upon taking 30 damage during Crystalise, touching the ground or wall at any time, or exiting hitstun.
-  - Characters with Super Armour will have the Crystalise effect stored on them, but immediately break out once their attack ends. Hitting a character with a stored Crystalise effect removes it, even if they still have Super Armour upon being hit.
+  - Crystallized characters break out and take damage/knockback upon taking 30 damage during Crystallize, touching the ground or wall at any time, or exiting hitstun.
+  - Characters with Super Armour will have the Crystallize effect stored on them, but immediately break out once their attack ends. Hitting a character with a stored Crystallize effect removes it, even if they still have Super Armour upon being hit.
   image:
-    baseRes: https://rivals.academy/library/olympia/neutral-special-break-out.png
-    highRes: https://rivals.academy/library/olympia/1080_neutral-special-break-out.png
+    baseRes: https://rivals.academy/library/olympia/crystallize-break-out.png
+    highRes: https://rivals.academy/library/olympia/1080_crystallize-break-out.png
 
 sideSpecial:
   hitboxes:
@@ -1089,7 +1089,7 @@ downSpecial:
     priority: 3
     killsProjectiles: true
     parryStun: true
-    crystalises: true
+    crystallizes: true
   - name: Cancel Dash
     intangible:
       from: 1
@@ -1107,7 +1107,7 @@ downSpecial:
   image:
     baseRes: https://rivals.academy/library/olympia/down-special.png
     highRes: https://rivals.academy/library/olympia/1080_down-special.png
-- name: Crystalise (Break Out)
+- name: Crystallize (Break Out)
   hitboxes:
   - active:
       "on": 1
@@ -1126,8 +1126,8 @@ downSpecial:
     priority: 1
     killsProjectiles: true
   notes:
-  - Crystalised characters break out and take damage/knockback upon taking 30 damage during Crystalise, touching the ground or wall at any time, or exiting hitstun.
-  - Characters with Super Armour will have the Crystalise effect stored on them, but immediately break out once their attack ends. Hitting a character with a stored Crystalise effect removes it, even if they still have Super Armour upon being hit.
+  - Crystallized characters break out and take damage/knockback upon taking 30 damage during Crystallize, touching the ground or wall at any time, or exiting hitstun.
+  - Characters with Super Armour will have the Crystallize effect stored on them, but immediately break out once their attack ends. Hitting a character with a stored Crystallize effect removes it, even if they still have Super Armour upon being hit.
   image:
-    baseRes: https://rivals.academy/library/olympia/neutral-special-break-out.png
-    highRes: https://rivals.academy/library/olympia/1080_neutral-special-break-out.png
+    baseRes: https://rivals.academy/library/olympia/crystallize-break-out.png
+    highRes: https://rivals.academy/library/olympia/1080_crystallize-break-out.png
