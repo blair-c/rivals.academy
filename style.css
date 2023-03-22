@@ -749,12 +749,12 @@ article h4 {
 }
 
 .to-top svg {
-  fill: var(--clr-abxy-yellow);
+  fill: var(--clr-gray-2);
   height: 1.25rem;
 }
 
 .to-top:hover svg {
-  fill: var(--clr-abxy-blue);
+  fill: var(--clr-training-border-hc);
   transition: all .1s ease-in;
 }
 
