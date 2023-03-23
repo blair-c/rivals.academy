@@ -32,7 +32,7 @@ waveland:
   time: 8
   friction: 0.10
 # Aerial Movement
-maxAirSpeed: 4
+maxAirSpeed: 4.0
 maxJumpHorizontalSpeed: 6
 fullhop:
   speed: 12.00
@@ -1139,7 +1139,6 @@ downSpecial:
   image:
     baseRes: https://rivals.academy/library/kragg/down-special-aerial.png
     highRes: https://rivals.academy/library/kragg/1080_down-special-aerial.png
-
 
 taunt:
   hitboxes:

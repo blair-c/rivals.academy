@@ -32,7 +32,7 @@ waveland:
   time: 8
   friction: 0.07
 # Aerial Movement
-maxAirSpeed: 5
+maxAirSpeed: 5.0
 maxJumpHorizontalSpeed: 7
 fullhop:
   speed: 12.45
@@ -871,9 +871,10 @@ neutralSpecial:
 sideSpecial:
   hitboxes:
   - startup:
-      initial:
-        min: 9
-        max: 38
+      initial: 9
+      charge:
+        min: 0
+        max: 29
       postCharge: 6
     active:
       soonest:

@@ -159,6 +159,7 @@
               {{ with .max }}{{ . }}{{ end }}
               {{ else }}{{ . }}{{ end }} (Charge)<br>
             {{ end }}
+            {{ with .startup.fullCharge }}{{ . }} (Full Charge)<br>{{ end }}
             {{ with .startup.postCharge }}{{ . }} (Post-Charge){{ end }}
             {{ with .startup.fromLanding }}From Landing: {{ . }}{{ end }}
             {{ with .startup.grounded }}Grounded: {{ . }}<br>{{ end }}
@@ -182,6 +183,7 @@
               {{ .initial }} (Initial Detonation)<br>{{ .lockedIn }} (Locked In Detonation)
             {{ end }}
             {{ with .startup.punch }}{{ . }} (Punch){{ end }}
+            {{ with .startup.grab }}{{ . }} (Grab){{ end }}
           {{ end }}
         {{- else }}{{ .startup }}{{ end }}
         {{ with .mustConnect }}({{ . }} Must Hit){{ end }}
@@ -532,6 +534,8 @@
             {{ .endlag.offGrass }} ({{ .endlag.onGrass }} on grass)
           {{ end }}
           {{ with .endlag.rebuildMech }}Rebuild Mech: {{ . }}{{ end }}
+          {{ with .endlag.noHarmonyField }}No Harmony Field: {{ . }}<br>{{ end }}
+          {{ with .endlag.harmonyField }}Harmony Field: {{ . }}{{ end }}
           {{ with .endlag.sein }}Sein:
             {{ if reflect.IsMap . }}
               {{ .hit }} / {{ .whiff.fullyInactive }}+{{ .whiff.teamUpAvailable }}
@@ -541,7 +545,7 @@
             {{ .endlag.twoOrLessGloves }} ({{ .endlag.overTwoGloves }} if >2 gloves are thrown)
           {{ end }}
           {{ with .endlag.fromAnchorReachingSK }}From Anchor Reaching SK: {{ . }}{{ end }}
-        {{ else }}{{ .endlag }}{{ end }}
+          {{ else }}{{ .endlag }}{{ end }}
       </td>{{ end }}
 
       {{ if $cancellable }}<td>
@@ -620,8 +624,8 @@
           {{ with .firstActiveFrame.airborne }}Airborne: {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.groundedReverse }}Reverse (Grounded): {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.onLanding }}On Landing: {{ . }}{{ end }}
-          {{ with .firstActiveFrame.pratFall }}In Prat Fall:
-            {{ if isset . "min" }}{{ .min }}-{{ .max }}{{ else }}{{ . }}{{ end }}<br>
+          {{ with .firstActiveFrame.pratFall }}
+            {{ if isset . "min" }}{{ .min }}-{{ .max }}{{ else }}{{ . }}{{ end }} (In Prat Fall)<br>
           {{ end }}
           {{ with .firstActiveFrame.cancel }}
             Cancel: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}
@@ -639,6 +643,8 @@
             Slingshot (Aerial): {{ .aerial.min }}-{{ .aerial.max }}
           {{ end }}
           {{ with .firstActiveFrame.rebuildMech }}Rebuild Mech: {{ . }}{{ end }}
+          {{ with .firstActiveFrame.noHarmonyField }}No Harmony Field: {{ .pratFall }} (In Prat Fall)<br>{{ end }}
+          {{ with .firstActiveFrame.harmonyField }}Harmony Field: {{ . }}{{ end }}
           {{ with .firstActiveFrame.anchorIsUnableToCast }}Anchor is unable to cast: {{ . }}{{ end }}
           {{ with .firstActiveFrame.fromAnchorReachingSK }}From Anchor Reaching SK: {{ . }}{{ end }}
           {{ with .firstActiveFrame.shop }}Shop: {{ . }}{{ end }}
@@ -653,6 +659,10 @@
           {{ with .landingLag.openParasol }}{{ . }} (Open Parasol){{ end }}
           {{ with .landingLag.duringActivePlus1 }}During Active/1st Frame Endlag: {{ . }}<br>{{ end }}
           {{ with .landingLag.duringRemaining }}During Remaining Endlag: {{ . }}{{ end }}
+          {{ with .landingLag.duringStartup }}During Startup: {{ . }}<br>{{ end }}
+          {{ with .landingLag.duringActiveEndlag }}
+            During Active/Endlag: {{ .hit.from }}-{{ .hit.to }} / {{ .whiff.from }}-{{ .whiff.to }}
+          {{ end }}
         {{ else }}{{ .landingLag }}{{ end -}}
       </td>{{ end }}
 
@@ -778,7 +788,10 @@
 
       {{ if $hitpause }}<td>
         {{ with .hitpause }}{{ .base }} | {{ .scaling }}{{ end -}}
-        {{ with .hitpause.extra }}<br>(+{{ . }}){{ end -}}
+        {{ with .hitpause.extra }}<br>
+          {{ if isset . "onOpponent" }} (+{{ .onOpponent }} on opponent)
+          {{ else }}(+{{ . }}){{ end }}
+        {{ end -}}
       </td>{{ end }}
 
       {{ if $tipperStun }}<td>{{ .tipperStun }}</td>{{ end }}

@@ -32,7 +32,7 @@ waveland:
   time: 8
   friction: 0.11
 # Aerial Movement
-maxAirSpeed: 3
+maxAirSpeed: 3.0
 maxJumpHorizontalSpeed: 4
 fullhop:
   speed: 11.00

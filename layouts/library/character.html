@@ -126,7 +126,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>{{ $c.maxAirSpeed }}</td>
+              <td>{{ printf "%.1f" $c.maxAirSpeed }}</td>
               <td>{{ $c.maxJumpHorizontalSpeed }}</td>
               <td>{{ printf "%.2f" $c.fullhop.speed }}</td>
               <td>{{ printf "%.1f" $c.shorthop.speed }}</td>

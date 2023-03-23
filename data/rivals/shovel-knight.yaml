@@ -32,7 +32,7 @@ waveland:
   time: 8
   friction: 0.13
 # Aerial Movement
-maxAirSpeed: 6
+maxAirSpeed: 6.0
 maxJumpHorizontalSpeed: 7
 fullhop:
   speed: 10.99
@@ -1164,9 +1164,10 @@ neutralSpecial:
 sideSpecial:
 - hitboxes:
   - startup:
-      initial:
-        min: 16
-        max: 95
+      initial: 16
+      charge:
+        min: 0
+        max: 79
       postCharge: 2
     active:
       soonest:
@@ -1239,7 +1240,7 @@ sideSpecial:
 - name: Infinidagger
   hitboxes:
   - startup:
-      charge: 95
+      fullCharge: 95
       postCharge: 2
     active:
       from: 98
@@ -1518,7 +1519,6 @@ downSpecial:
   image:
     baseRes: https://rivals.academy/library/shovel-knight/down-special-treasure-pile.png
     highRes: https://rivals.academy/library/shovel-knight/1080_down-special-treasure-pile.png
-
 
 taunt:
   hitboxes:
