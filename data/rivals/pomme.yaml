@@ -518,9 +518,9 @@ upAir:
     parryStun: true
   - name: Sour
     active:
-      from: 9
-      to: 11
-      frames: 3
+      from: 13
+      to: 16
+      frames: 4
     landingLag:
       hit: 4
       whiff: 6
