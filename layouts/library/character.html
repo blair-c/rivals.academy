@@ -198,6 +198,7 @@
 
       {{ with index $c "taunt" }}
         {{ $.RenderString "### Taunt" }}
+        {{ with .name }}<h4>{{ . }}</h4>{{ end }}
         {{ partial "partials/move-display.html" . }}
       {{ end }}
     </article>

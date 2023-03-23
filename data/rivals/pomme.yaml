@@ -953,6 +953,7 @@ downSpecial:
     highRes: https://rivals.academy/library/pomme/1080_down-special.png
 
 taunt:
+  name: Mic Drop
   hitboxes:
   - startup: 31
     active:
