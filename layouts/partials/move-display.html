@@ -147,52 +147,52 @@
           {{ if isset .startup "loop" -}}
             {{ .startup.initial }} ({{ .startup.loop }} in loop)
           {{ else }}
-            {{ with .startup.initial }}
+            {{ with .startup.initial }}Initial:
               {{ if reflect.IsMap . }}
                 {{ if isset . "min" }}{{ .min }}-{{ end -}}
                 {{ with .max }}{{ . }}{{ end }}
                 {{ if isset . "withBomb" }}
                   {{ .withoutBomb }} (+{{ sub .withBomb .withoutBomb }} With Bomb)
                 {{ end }}
-              {{ else }}{{ . }}{{ end }} (Initial)<br>
+              {{ else }}{{ . }}{{ end }}<br>
             {{ end }}
-            {{ with .startup.charge }}
+            {{ with .startup.charge }}Charge:
               {{ if reflect.IsMap . }}
                 {{ if isset . "min" }}{{ .min }}-{{ end -}}
                 {{ with .max }}{{ . }}{{ end }}
-              {{ else }}{{ . }}{{ end }} (Charge)<br>
+              {{ else }}{{ . }}{{ end }}<br>
             {{ end }}
-            {{ with .startup.aim }}
+            {{ with .startup.aim }}Aim:
               {{ if reflect.IsMap . }}
                 {{ if isset . "min" }}{{ .min }}-{{ end -}}
                 {{ with .max }}{{ . }}{{ end }}
-              {{ else }}{{ . }}{{ end }} (Aim)<br>
+              {{ else }}{{ . }}{{ end }}<br>
             {{ end }}
-            {{ with .startup.fullCharge }}{{ . }} (Full Charge)<br>{{ end }}
-            {{ with .startup.postCharge }}{{ . }} (Post-Charge){{ end }}
+            {{ with .startup.fullCharge }}Full Charge: {{ . }}<br>{{ end }}
+            {{ with .startup.postCharge }}Post-Charge: {{ . }}{{ end }}
             {{ with .startup.fromLanding }}From Landing: {{ . }}{{ end }}
             {{ with .startup.grounded }}Grounded: {{ . }}<br>{{ end }}
             {{ with .startup.airborne }}Airborne: {{ . }}{{ end }}
 
-            {{ with .startup.spike }}{{ . }} (Spike){{ end }}
-            {{ with .startup.clone }}{{ . }} (Clone){{ end }}
-            {{ with .startup.root }}{{ . }} (Root){{ end }}
-            {{ with .startup.tether }}{{ . }} (Tether){{ end }}
-            {{ with .startup.lily }}{{ . }} (Lily){{ end }}
+            {{ with .startup.spike }}Spike: {{ . }}{{ end }}
+            {{ with .startup.clone }}Clone:{{ . }}{{ end }}
+            {{ with .startup.root }}Root: {{ . }}{{ end }}
+            {{ with .startup.tether }}Tether: {{ . }}{{ end }}
+            {{ with .startup.lily }}Lily: {{ . }}{{ end }}
             {{ if isset .startup "targetInHitstun" }}
               {{ .startup.targetNotInHitstun }} ({{ .startup.targetInHitstun}} if target in hitstun)
             {{ end }}
-            {{ with .startup.icicle }}{{ . }} (Icicle){{ end }}
+            {{ with .startup.icicle }}Icicle: {{ . }}{{ end }}
             {{ with .startup.preLaunch }}{{ . }} (Pre-Launch){{ end }}
-            {{ with .startup.cloud }}{{ . }} (Cloud){{ end }}
-            {{ with .startup.throw }}{{ . }} (Throw){{ end }}
-            {{ with .startup.missile }}{{ . }} (Shoot Missile){{ end }}
+            {{ with .startup.cloud }}Cloud: {{ . }}{{ end }}
+            {{ with .startup.throw }}Throw: {{ . }}{{ end }}
+            {{ with .startup.missile }}Shoot Missile: {{ . }}{{ end }}
             {{ with .startup.explosion }}{{ . }} (Explosion){{ end }}
-            {{ with .startup.flareShot }}{{ . }} (Flare Shot){{ end }}
-            {{ with .startup.punch }}{{ . }} (Punch){{ end }}
-            {{ with .startup.grab }}{{ . }} (Grab){{ end }}
+            {{ with .startup.flareShot }}Flare Shot: {{ . }}{{ end }}
+            {{ with .startup.punch }}Punch: {{ . }}{{ end }}
+            {{ with .startup.grab }}Grab: {{ . }}{{ end }}
             {{ with .startup.detonation }}
-              {{ .initial }} (Initial Detonation)<br>{{ .lockedIn }} (Locked In Detonation)
+              Initial Detonation: {{ .initial }}<br>Locked In Detonation: {{ .lockedIn }}
             {{ end }}
           {{ end }}
         {{- else }}{{ .startup }}{{ end }}
