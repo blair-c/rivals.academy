@@ -1342,7 +1342,7 @@ downSpecial:
     parryStun: true
   - name: Throw
     startup: 61
-    angleRegistered: 40
+    directionLockedIn: 40
     active:
       "on": 62
       frames: 1
@@ -1390,7 +1390,7 @@ downSpecial:
     startup:
       min: 11
       max: 61
-    angleRegistered: 61
+    directionLockedIn: 61
     active:
       soonest:
         "on": 12

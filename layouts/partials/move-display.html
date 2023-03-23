@@ -4,7 +4,7 @@
 {{/*  Initialize all possible columns to false  */}}
 {{ $startup := false }}
 {{ $intangible := false }}
-{{ $angleRegistered := false }}
+{{ $directionLockedIn := false }}
 {{ $active := false }}
 {{ $smoke := false }}
 {{ $iceCreated := false }}
@@ -46,7 +46,7 @@
 {{ range .hitboxes }}
   {{ if isset . "startup" }} {{ $startup = true }} {{ end }}
   {{ if isset . "intangible" }} {{ $intangible = true }} {{ end }}
-  {{ if isset . "angleRegistered" }} {{ $angleRegistered = true }} {{ end }}
+  {{ if isset . "directionLockedIn" }} {{ $directionLockedIn = true }} {{ end }}
   {{ if isset . "active" }} {{ $active = true }} {{ end }}
   {{ if isset . "smoke" }} {{ $smoke = true }} {{ end }}
   {{ if isset . "iceCreated" }} {{ $iceCreated = true }} {{ end }}
@@ -95,7 +95,7 @@
         {{ if $multiple }}<th class="sticky-col">Hitbox</th>{{ end }}
         {{ if $startup }}<th>Startup</th>{{ end }}
         {{ if $intangible }}<th>Intangible</th>{{ end }}
-        {{ if $angleRegistered }}<th>Angle Registered</th>{{ end }}
+        {{ if $directionLockedIn }}<th>Direction Locked In</th>{{ end }}
         {{ if $active }}<th>Active</th>{{ end }}
         {{ if $smoke }}<th>Smoke</th>{{ end }}
         {{ if $iceCreated }}<th>Ice Created</th>{{ end }}
@@ -151,13 +151,22 @@
               {{ if reflect.IsMap . }}
                 {{ if isset . "min" }}{{ .min }}-{{ end -}}
                 {{ with .max }}{{ . }}{{ end }}
+                {{ if isset . "withBomb" }}
+                  {{ .withoutBomb }} (+{{ sub .withBomb .withoutBomb }} With Bomb)
+                {{ end }}
               {{ else }}{{ . }}{{ end }} (Initial)<br>
             {{ end }}
             {{ with .startup.charge }}
               {{ if reflect.IsMap . }}
-              {{ if isset . "min" }}{{ .min }}-{{ end -}}
-              {{ with .max }}{{ . }}{{ end }}
+                {{ if isset . "min" }}{{ .min }}-{{ end -}}
+                {{ with .max }}{{ . }}{{ end }}
               {{ else }}{{ . }}{{ end }} (Charge)<br>
+            {{ end }}
+            {{ with .startup.aim }}
+              {{ if reflect.IsMap . }}
+                {{ if isset . "min" }}{{ .min }}-{{ end -}}
+                {{ with .max }}{{ . }}{{ end }}
+              {{ else }}{{ . }}{{ end }} (Aim)<br>
             {{ end }}
             {{ with .startup.fullCharge }}{{ . }} (Full Charge)<br>{{ end }}
             {{ with .startup.postCharge }}{{ . }} (Post-Charge){{ end }}
@@ -179,11 +188,12 @@
             {{ with .startup.throw }}{{ . }} (Throw){{ end }}
             {{ with .startup.missile }}{{ . }} (Shoot Missile){{ end }}
             {{ with .startup.explosion }}{{ . }} (Explosion){{ end }}
+            {{ with .startup.flareShot }}{{ . }} (Flare Shot){{ end }}
+            {{ with .startup.punch }}{{ . }} (Punch){{ end }}
+            {{ with .startup.grab }}{{ . }} (Grab){{ end }}
             {{ with .startup.detonation }}
               {{ .initial }} (Initial Detonation)<br>{{ .lockedIn }} (Locked In Detonation)
             {{ end }}
-            {{ with .startup.punch }}{{ . }} (Punch){{ end }}
-            {{ with .startup.grab }}{{ . }} (Grab){{ end }}
           {{ end }}
         {{- else }}{{ .startup }}{{ end }}
         {{ with .mustConnect }}({{ . }} Must Hit){{ end }}
@@ -197,7 +207,7 @@
         {{ end }}
       </td>{{ end }}
 
-      {{ if $angleRegistered }}<td>{{ .angleRegistered }}</td>{{ end }}
+      {{ if $directionLockedIn }}<td>{{ .directionLockedIn }}</td>{{ end }}
 
       {{ if $active }}<td>
         {{ if reflect.IsSlice .active }}
@@ -330,6 +340,75 @@
                 {{ with .to }}{{ . }}{{ end -}}
               {{ end }}
             {{ end }}
+            {{ with .fullCan }}Full Can:
+              {{ with .minimum }}
+                {{ if reflect.IsSlice . }}
+                  {{ $len = len . }}
+                  {{ range $index, $_ := . }}
+                    {{ with .on }}{{ . }}{{ end -}}
+                    {{ with .from }}{{ . }}-{{ end -}}
+                    {{ with .to }}{{ . }}{{ end -}}
+                    {{ if lt (add $index 1) $len }}, {{ end -}}
+                    {{ if eq $index 4 }}<br>{{ end }}
+                  {{ end -}}
+                {{ else }}
+                  {{ with .on }}{{ . }}{{ end -}}
+                  {{ with .from }}{{ . }}-{{ end -}}
+                  {{ with .to }}{{ . }}{{ end -}}
+                {{ end }}
+              {{ end }}
+              {{ with .continue }}
+                [
+                {{ if reflect.IsSlice . -}}
+                  {{ $len = len . -}}
+                  {{ range $index, $_ := . -}}
+                    {{ with .on }}{{ . }}{{ end -}}
+                    {{ with .from }}{{ . }}-{{ end -}}
+                    {{ with .to }}{{ . }}{{ end -}}
+                    {{ if lt (add $index 1) $len }}, {{ end -}}
+                  {{ end -}}
+                {{ else }}
+                  {{ with .on }}{{ . }}{{ end -}}
+                  {{ with .from }}{{ . }}-{{ end -}}
+                  {{ with .to }}{{ . }}{{ end -}}
+                {{ end }}
+                ]
+              {{ end }}<br>
+            {{ end }}
+            {{ with .emptyCan }}Empty Can:
+              {{ with .minimum }}
+                {{ if reflect.IsSlice . }}
+                  {{ $len = len . }}
+                  {{ range $index, $_ := . }}
+                    {{ with .on }}{{ . }}{{ end -}}
+                    {{ with .from }}{{ . }}-{{ end -}}
+                    {{ with .to }}{{ . }}{{ end -}}
+                    {{ if lt (add $index 1) $len }}, {{ end -}}
+                    {{ if eq $index 4 }}<br>{{ end }}
+                  {{ end -}}
+                {{ else }}
+                  {{ with .on }}{{ . }}{{ end -}}
+                  {{ with .from }}{{ . }}-{{ end -}}
+                  {{ with .to }}{{ . }}{{ end -}}
+                {{ end }}
+              {{ end }}
+              {{ with .loop }}
+                [
+                {{ $len = 2 }}{{ $iter = slice . . -}}
+                {{- range $index, $_ := $iter }}
+                  {{- $counter = mul $index (add .frames .gap) -}}
+                  {{ add .start $counter }}-
+                  {{- sub (add (add .start .frames) $counter) 1 }}
+                  {{- if lt (add $index 1) $len }}, {{ else }}...{{ end -}}
+                {{ end }}
+                ]
+              {{- end }}
+            {{ end }}
+            {{ if isset . "withBomb" }}
+              Without Bomb: {{ .withoutBomb.from }}-{{ .withoutBomb.to }}<br>
+              With Bomb: {{ .withBomb.from }}-{{ .withBomb.to }}<br>
+            {{ end }}
+
             (Soonest)
           {{- end -}}
           {{ if and (isset .active "soonest") (isset .active "latest") }}<br>{{ end }}
@@ -534,6 +613,10 @@
             {{ .endlag.offGrass }} ({{ .endlag.onGrass }} on grass)
           {{ end }}
           {{ with .endlag.rebuildMech }}Rebuild Mech: {{ . }}{{ end }}
+          {{ with .endlag.firstSpray }}First Spray: {{ . }}<br>{{ end }}
+          {{ with .endlag.releaseAttack }}Release Attack: {{ . }}{{ end }}
+          {{ with .endlag.slide }}Slide: {{ .hit }} / {{ .whiff }}<br>{{ end }}
+          {{ with .endlag.noSlide }}No Slide: {{ .hit }} / {{ .whiff }}{{ end }}
           {{ with .endlag.noHarmonyField }}No Harmony Field: {{ . }}<br>{{ end }}
           {{ with .endlag.harmonyField }}Harmony Field: {{ . }}{{ end }}
           {{ with .endlag.sein }}Sein:
@@ -604,7 +687,13 @@
 
       {{ if $firstActiveFrame }}<td>
         {{ if reflect.IsMap .firstActiveFrame }}
-          {{ with .firstActiveFrame.soonest }}{{ . }} (Soonest){{ end }}
+          {{ with .firstActiveFrame.soonest }}
+            {{ if reflect.IsMap . }}
+              {{ with .withoutBomb }}Without Bomb: {{ . }}<br>{{ end }}
+              {{ with .withBomb }}With Bomb: {{ . }}<br>{{ end }}
+            {{ else }}{{ . }}{{ end }}
+            (Soonest)
+          {{ end }}
           {{ if isset .firstActiveFrame "max" }}
             {{ .firstActiveFrame.min }}-{{ .firstActiveFrame.max }}
           {{ end }}
@@ -643,6 +732,8 @@
             Slingshot (Aerial): {{ .aerial.min }}-{{ .aerial.max }}
           {{ end }}
           {{ with .firstActiveFrame.rebuildMech }}Rebuild Mech: {{ . }}{{ end }}
+          {{ with .firstActiveFrame.slide }}Slide: {{ . }}<br>{{ end }}
+          {{ with .firstActiveFrame.noSlide }}No Slide: {{ . }}{{ end }}
           {{ with .firstActiveFrame.noHarmonyField }}No Harmony Field: {{ .pratFall }} (In Prat Fall)<br>{{ end }}
           {{ with .firstActiveFrame.harmonyField }}Harmony Field: {{ . }}{{ end }}
           {{ with .firstActiveFrame.anchorIsUnableToCast }}Anchor is unable to cast: {{ . }}{{ end }}

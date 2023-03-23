@@ -950,9 +950,10 @@ neutralSpecial:
 sideSpecial:
   hitboxes:
   - startup:
-      initial:
-        min: 19
-        max: 69
+      initial: 19
+      aim:
+        min: 0
+        max: 50
       cloud: 8
     active:
       soonest:

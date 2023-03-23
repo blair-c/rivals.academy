@@ -117,6 +117,7 @@
               <th>Shorthop Speed</th>
               <th>Double Jump Speed</th>
               {{ with $c.doubleJump.accel }}<th>Double Jump Accel</th>{{ end }}
+              {{ with $c.tripleJump.speed }}<th>Triple Jump Speed</th>{{ end }}
               <th>Walljump Vertical Speed</th>
               <th>Walljump Horizontal Speed</th>
               {{ with $c.wallcling.max }}<th>Wallcling Max</th>{{ end }}
@@ -132,6 +133,7 @@
               <td>{{ printf "%.1f" $c.shorthop.speed }}</td>
               <td>{{ printf "%.2f" $c.doubleJump.speed }}</td>
               {{ with $c.doubleJump.accel }}<td>{{ . }}</td>{{ end }}
+              {{ with $c.tripleJump.speed }}<td>{{ printf "%.2f" $c.tripleJump.speed }}</td>{{ end }}
               <td>{{ $c.walljump.speed.vertical }}</td>
               <td>{{ $c.walljump.speed.horizontal }}</td>
               {{ with $c.wallcling.max }}<td>{{ . }}</td>{{ end }}

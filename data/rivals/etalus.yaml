@@ -1542,6 +1542,7 @@ downSpecial:
   hitboxes:
   - lifetime:
       duration: 94
+    directionLockedIn: 65
     notes:
     - Hitpause frames extend lifetime, including Clairen's tipper stun.
     - Frozen character's tech direction is locked in when the ice cracks on f65.

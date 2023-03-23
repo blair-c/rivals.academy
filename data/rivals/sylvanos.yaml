@@ -608,7 +608,7 @@ backAir:
 - hitboxes:
   - name: Extending Hit 1
     startup: 15
-    angleRegistered: 15
+    directionLockedIn: 15
     active:
       from: 16
       to: 18

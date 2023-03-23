@@ -996,7 +996,7 @@ upSpecial:
       from: 19
       to: 42
       frames: 24
-    angleRegistered: 20
+    directionLockedIn: 20
     active:
       from: 44
       to: 48
@@ -1027,7 +1027,7 @@ upSpecial:
       from: 19
       to: 37
       frames: 19
-    angleRegistered: 20
+    directionLockedIn: 20
     endlag: 0
     firstActiveFrame: 38
     notes:
