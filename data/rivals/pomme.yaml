@@ -972,7 +972,7 @@ taunt:
       scaling: 40
     priority: 3
     killsProjectiles: true
-    parryStun: true
+    parryStun: "?"
     notes:
     - Active for 2 frames upon hitting the ground before disappearing.
   image:
