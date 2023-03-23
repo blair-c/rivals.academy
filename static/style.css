@@ -720,12 +720,6 @@ article h4 {
   color: var(--clr-training-bg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  #TableOfContents .visible > a {
-    transition: color .1s ease-in-out;
-  }
-}
-
 .to-top {
   display: inline-block;
   text-align: center;
