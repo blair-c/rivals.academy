@@ -27,7 +27,7 @@
   --nav-height: 4rem;
   --page-padding: 1.5rem;
   --content-max-width: 56rem;
-  --footer-margin: 2rem;
+  --footer-margin: 2.5rem;
 }
 @media only screen and (max-width:48rem) {
   :root {
@@ -635,6 +635,10 @@ article h4 {
   gap: .3125rem;
 }
 
+.footer-bottom a:hover {
+  color: var(--clr-text-on-img);
+}
+
 .footer-bottom svg {
   height: 1rem;
 }
@@ -888,18 +892,38 @@ article h4 {
 }
 
 .library-footer {
-  margin: 2rem;
+  margin: var(--page-padding);
   margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: 1px solid var(--clr-highlight);
-  border-bottom: 1px solid var(--clr-highlight);
+  padding: 1rem 0;
+  text-align: center;
+  border: 3px solid var(--clr-gray-1);
+  border-radius: 1rem;
 }
 
 .library-footer svg {
   height: .75rem;
   margin-right: 1px;
   fill: var(--clr-text);
+}
+
+.library-footer a {
+  white-space: nowrap;
+}
+
+.mobile-break {
+  display: none;
+}
+
+@media only screen and (max-width:40rem) {
+  .mobile-break {
+    display: inline;
+  }
+}
+
+.article-footer-divider {
+  height: 1px;
+  background: var(--clr-gray-1);
+  margin: var(--footer-margin) var(--page-padding);
 }
 
 .tournament-hosts {
