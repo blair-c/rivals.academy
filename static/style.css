@@ -894,7 +894,7 @@ article h4 {
 .library-footer {
   margin: var(--page-padding);
   margin-bottom: 0;
-  padding: 1rem 0;
+  padding: 1rem;
   text-align: center;
   border: 3px solid var(--clr-gray-1);
   border-radius: 1rem;
