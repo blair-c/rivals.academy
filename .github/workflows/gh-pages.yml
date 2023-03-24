@@ -41,7 +41,7 @@ jobs:
         #   # extended: true
         run: |
           pushd /tmp
-          wget https://github.com/gohugoio/hugo/releases/download/v0.111.3/hugo_0.111.3_Linux-64bit.tar.gz
+          wget https://github.com/gohugoio/hugo/releases/download/v0.111.3/hugo_0.111.3_Linux-64bit.tar.gz --no-check-certificate
           tar xzvf hugo_0.111.3_Linux-64bit.tar.gz
           cp hugo /usr/local/bin
           popd
