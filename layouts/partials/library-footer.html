@@ -1,0 +1,14 @@
+<section class="library-footer">
+  {{ $u := site.Data.library }}
+  <p>
+    Data curated by the <a>Sector 7-G</a> team ‣
+    Up to date as of <a href="{{ $u.patchNotes }}">Patch {{ $u.patch }}</a>
+  </p>
+  <p>
+    {{ partial "partials/svg/code.svg" }}
+    For Developers: 
+    <a href="{{ page.Permalink }}data.json">Raw data of this page</a> |
+    <a>YAML Source</a> |
+    <a href="/library/docs">API Docs</a>
+  </p>
+</section>
