@@ -15,7 +15,7 @@ roaa:
   time: 8:30 PM CEST
   freq: weekly
   link: https://euras.challonge.com/
-  description: Europe's take on the RAS format, with a seasonal ban format for three-time winners. Joining the [EU Rivals Discord](https://bit.ly/eurivals-discordapp) is required to enter this event.
+  description: Europe's take on the RAS format, with a seasonal, resetting ban format for three-time winners. Joining the [EU Rivals Discord](https://bit.ly/eurivals-discordapp) is required to enter this event.
 - name: Go to School
   day: Wednesdays
   time: 8:00 PM ET
@@ -36,11 +36,10 @@ rrc:
   freq: weekly
   link: https://rivalsrecess.challonge.com/
   description: Recess' weekly open bracket, with a substantial amount of top level representation and making up the bulk of Rivals' active online scene alongside GTS.
-- name: The Kingpin
-  day: Saturdays
+- name: Rivals Recess Major
+  day: Saturday, April 22nd
   time: 4:00 PM ET
-  freq: monthly
-  link: https://start.gg/thekingpin
-  description: Monthly open series boasting the largest prize pots, entrant counts, and stakes. Features an extended stream to cover the action.
+  link: https://start.gg/rivals-recess-major-3
+  description: Major online event, counting towards [RCS Top 50](https://rivalsofaether.com/category/news/esports/) and [Grassroots League](https://twitter.com/RivalsGRL) rankings. Featuring a $400 pot, RCS-style stream, and amateur/intermediate brackets. 
 ---
 
