@@ -414,16 +414,11 @@ forwardAir:
       initial: 5
       charge:
         min: 6
-        max: 30
       postCharge: 4
     active:
       soonest:
         from: 16
         to: 19
-        frames: 4
-      latest:
-        from:
-        to:
         frames: 4
     endlag:
       hit: 16
@@ -432,8 +427,7 @@ forwardAir:
     - with: Walljump
       from: 2
     firstActiveFrame:
-      min: 24
-      max:
+      soonest: 24
     landingLag:
       hit: 8
       whiff: 12
@@ -454,7 +448,8 @@ forwardAir:
     killsProjectiles: true
     parryStun: true
     notes:
-    - Strong attack charge mechanic, which increases the damage of an attack by 1.6x and the total knockback by 1.25x. Charge time is over a reduced period of 30 frames, with the charge value increasing at twice the regular rate.
+    - Strong attack charge mechanic, which increases the damage of an attack by 1.6x and the total knockback by 1.25x.
+    - Charge time is over a reduced period of 30 frames, with the charge value increasing at twice the regular rate and becoming fully charged on f37.
   image:
     baseRes: https://rivals.academy/library/mollo/forward-air.png
     highRes: https://rivals.academy/library/mollo/1080_forward-air.png
@@ -975,9 +970,6 @@ neutralSpecial:
     parryStun: false
   notes:
   - Bombs will not bonk players in hitstun moving faster than 8px/frame.
-  image:
-    baseRes: https://rivals.academy/library/mollo/neutral-special-bonk.png
-    highRes: https://rivals.academy/library/mollo/1080_neutral-special-bonk.png
 - name: Cherry Bomb Explosion
   hitboxes:
   - name: Inner
