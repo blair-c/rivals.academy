@@ -937,24 +937,18 @@ downStrong:
 
 # Specials
 neutralSpecial:
-- name: Bomb Pull
+- name: Bomb
   hitboxes:
-  - startup: 4
+  - name: Pull
+    startup: 4
     endlag: 13
     firstActiveFrame:
       soonest: 19
     notes:
     - On airdodging, bomb is dropped behind Mollo on f5. On parry, bomb is dropped to the ground beneath Mollo on f4. 
     - Holding up selects Cherry Bomb, left selects Firecracker, right selects Flashbang, and down selects Finisher.
-  notes:
-  - 120 frame fuse begins f16, after which the bomb will become unstable and detonate 50f later, 50f after being thrown, on impact with a character or surface, or on Mollo being hit.
-  - The exception to this rule is when bomb hits specific objects, such as Sylvanos' Flowers, Ranno's Bubble, and Olympia's Crystal, in which bomb will bounce upwards a short distance regardless of what state it is in.
-  image:
-    baseRes: https://rivals.academy/library/mollo/neutral-special-bomb-pull.png
-    highRes: https://rivals.academy/library/mollo/1080_neutral-special-bomb-pull.png
-- name: Physical Hit (Bonk)
-  hitboxes:
-  - damage: 2
+  - name: Bonk
+    damage: 2
     angle: 35
     angleFlipper: 3
     knockback:
@@ -968,8 +962,14 @@ neutralSpecial:
     priority: 1
     killsProjectiles: true
     parryStun: false
+    notes:
+    - Bombs will not bonk players in hitstun moving faster than 8px/frame.
   notes:
-  - Bombs will not bonk players in hitstun moving faster than 8px/frame.
+  - 120 frame fuse begins f16 of Bomb Pull, after which the bomb will become unstable and detonate 50f later, 50f after being thrown, on impact with a character or surface, or on Mollo being hit.
+  - The exception to this rule is when bomb hits specific objects, such as Sylvanos' Flowers, Ranno's Bubble, and Olympia's Crystal, in which bomb will bounce upwards a short distance regardless of what state it is in.
+  image:
+    baseRes: https://rivals.academy/library/mollo/neutral-special-bomb-pull.png
+    highRes: https://rivals.academy/library/mollo/1080_neutral-special-bomb-pull.png
 - name: Cherry Bomb Explosion
   hitboxes:
   - name: Inner
