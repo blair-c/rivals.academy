@@ -35,10 +35,17 @@ jobs:
           done
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2.6.0
-        with:
-          hugo-version: 'latest'
-          # extended: true
+        # uses: peaceiris/actions-hugo@v2.6.0
+        # with:
+        #   hugo-version: 'latest'
+        #   # extended: true
+        run: |
+          pushd /tmp
+        wget https://github.com/gohugoio/hugo/releases/download/v0.111.3/hugo_0.111.3_Linux-64bit.tar.gz
+        tar xzvf hugo_0.111.3_Linux-64bit.tar.gz
+        cp hugo /usr/local/bin
+        popd
+        hugo version
 
       - name: Build
         run: hugo --minify
