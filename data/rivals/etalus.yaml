@@ -294,7 +294,7 @@ forwardTilt:
     - from: 12
       to: 13
       frames: 2
-    iceCreated: [10, 12, 15]
+    iceCreated: [10, 12]
     damage: 2
     angle: 361
     angleFlipper: 0
@@ -314,6 +314,7 @@ forwardTilt:
       from: 15
       to: 17
       frames: 3
+    iceCreated: 15
     endlag:
       hit: 11
       whiff: 17

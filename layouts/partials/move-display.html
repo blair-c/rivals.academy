@@ -575,6 +575,20 @@
           {{ if .active.onlyHitsProjectiles }}<br>(Only Hits Projectiles){{ end }}
         {{ end -}}
         {{ if .notActiveDuringHitpause }}<br>(Not active during hitpause){{ end }}
+        {{ with .dartsCharged }}
+          (Darts charged
+          {{ $len = len . }}
+          {{ range $index, $_ := . }}
+            {{ . }}{{ if lt (add $index 1) $len }}, {{ end -}}
+          {{ end }})
+        {{ end }}
+        {{ with .notesRecorded }}
+          (Notes recorded
+          {{ $len = len . }}
+          {{ range $index, $_ := . }}
+            {{ . }}{{ if lt (add $index 1) $len }}, {{ end -}}
+          {{ end }})
+        {{ end }}
       </td>{{ end }}
 
       {{ if $smoke }}<td>

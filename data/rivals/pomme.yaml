@@ -749,21 +749,22 @@ downStrong:
 neutralSpecial:
   name: Notes
   hitboxes:
-  - name: Record
-    startup:
-      initial: 6
+  - name: Record Single
+    startup: 6
+    notesRecorded: [7, 22, 37, 52]
     cancellable:
     - with: Cancel
       input: Parry
       from: 7
+      to: 53
       endlag: 3
     endlag: 14
     firstActiveFrame:
       possible: [21, 36, 51, 66]
     notes:
-    - Notes recorded on frames 7, 22, 37 and 52.
+    - Actionable next FAF window upon releasing special.
     - Stored notes are lost upon being hit or parried.
-    - Recording notes while in float cancels the float, but retains the remaining float time for future use in the air.
+    - Recording notes while in float cancels the float, but retains the remaining float time for future use.
   - name: Release Record
     startup: 7
     active:

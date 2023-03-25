@@ -926,8 +926,8 @@ neutralSpecial:
   name: Darts
   hitboxes:
   - name: Charge
-    startup:
-      initial: 9
+    startup: 9
+    dartsCharged: [33, 57, 81]
     cancellable:
     - with: Cancel
       input: Parry
