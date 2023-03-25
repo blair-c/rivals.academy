@@ -1000,6 +1000,9 @@ downSpecial:
       from: 8
     endlag: 18
     firstActiveFrame: 26
+    cooldown:
+    - move: Neutral Special
+      time: 30
     damage: 2
     asdiModifier: 1.2
     hitLockout:
