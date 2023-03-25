@@ -244,8 +244,49 @@
             {{ end }}
           {{ end }}
           {{ with .active.continue }}
-            [
-            {{ if reflect.IsSlice . -}}
+            {{ if reflect.IsMap . }}
+              {{ with .noSpirits }}
+                <br>[...{{ $len = len . -}}
+                  {{ range $index, $_ := . -}}
+                    {{ with .on }}{{ . }}{{ end -}}
+                    {{ with .from }}{{ . }}-{{ end -}}
+                    {{ with .to }}{{ . }}{{ end -}}
+                    {{ if lt (add $index 1) $len }}, {{ end -}}
+                  {{ end }}
+                ] (No Spirits)
+              {{ end }}
+              {{ with .oneSpirit }}
+                <br>[...{{ $len = len . -}}
+                  {{ range $index, $_ := . -}}
+                    {{ with .on }}{{ . }}{{ end -}}
+                    {{ with .from }}{{ . }}-{{ end -}}
+                    {{ with .to }}{{ . }}{{ end -}}
+                    {{ if lt (add $index 1) $len }}, {{ end -}}
+                  {{ end }}
+                ] (1 Spirit)
+              {{ end }}
+              {{ with .twoSpirits }}
+                <br>[...{{ $len = len . -}}
+                  {{ range $index, $_ := . -}}
+                    {{ with .on }}{{ . }}{{ end -}}
+                    {{ with .from }}{{ . }}-{{ end -}}
+                    {{ with .to }}{{ . }}{{ end -}}
+                    {{ if lt (add $index 1) $len }}, {{ end -}}
+                  {{ end }}
+                ] (2 Spirits)
+              {{ end }}
+              {{ with .threeSpirits }}
+                <br>[...{{ $len = len . -}}
+                  {{ range $index, $_ := . -}}
+                    {{ with .on }}{{ . }}{{ end -}}
+                    {{ with .from }}{{ . }}-{{ end -}}
+                    {{ with .to }}{{ . }}{{ end -}}
+                    {{ if lt (add $index 1) $len }}, {{ end -}}
+                  {{ end }}
+                ] (3 Spirits)
+              {{ end }}
+            {{ else if reflect.IsSlice . -}}
+              [
               {{ $len = len . -}}
               {{ range $index, $_ := . -}}
                 {{ with .on }}{{ . }}{{ end -}}
@@ -253,12 +294,14 @@
                 {{ with .to }}{{ . }}{{ end -}}
                 {{ if lt (add $index 1) $len }}, {{ end -}}
               {{ end -}}
+              ]
             {{ else }}
+              [
               {{ with .on }}{{ . }}{{ end -}}
               {{ with .from }}{{ . }}-{{ end -}}
               {{ with .to }}{{ . }}{{ end -}}
+              ]
             {{ end }}
-            ]
           {{ end }}
           {{ with .active.loop }}
             [
@@ -413,6 +456,17 @@
           {{- end -}}
           {{ if and (isset .active "soonest") (isset .active "latest") }}<br>{{ end }}
           {{ with .active.latest }}
+            {{ with .possible }}
+              [
+              {{ $len = len . }}
+              {{ range $index, $_ := . }}
+                {{ with .on }}{{ . }}{{ end -}}
+                {{ with .from }}{{ . }}-{{ end -}}
+                {{ with .to }}{{ . }}{{ end -}}
+                {{ if lt (add $index 1) $len }} / {{ end -}}
+              {{ end }}
+              ]
+            {{ end }}
             {{ with .on }}{{ . }}{{ end }}
             {{ with .from }}{{ . }}-{{ end -}}
             {{ with .to }}{{ . }}{{ end }}
@@ -445,6 +499,18 @@
             {{ with .to }}{{ . }}{{ end }}<br>
           {{ end }}
           {{- with .active.onLanding }}On Landing:
+            {{ with .loop }}
+            [
+            {{ $len = 2 }}{{ $iter = slice . . -}}
+            {{ if .pairs }}{{ $len = 4 }}{{ $iter = slice . . . . }}{{ end }}
+            {{- range $index, $_ := $iter }}
+              {{- $counter = mul $index (add .frames .gap) -}}
+              {{ add .start $counter }}-
+              {{- sub (add (add .start .frames) $counter) 1 }}
+              {{- if lt (add $index 1) $len }}, {{ else }}...{{ end -}}
+            {{ end }}
+            ]
+          {{- end -}}
             {{ with .on }}{{ . }}{{ end -}}
             {{ with .from }}{{ . }}-{{ end -}}
             {{ with .to }}{{ . }}{{ end }}
@@ -467,6 +533,11 @@
               {{ end }}
             {{ end }}
           {{ end }}
+          {{- with .active.onParry }}On Parry:
+            {{ with .on }}{{ . }}{{ end -}}
+            {{ with .from }}{{ . }}-{{ end -}}
+            {{ with .to }}{{ . }}{{ end }}
+          {{- end -}}
           {{ if isset .active "targetInHitstun" }}
             {{ with .active.targetNotInHitstun.on }}{{ . }}{{ end -}}
             {{ with .active.targetNotInHitstun.from }}{{ . }}-{{ end -}}
@@ -534,7 +605,7 @@
       </td>{{ end }}
 
       {{ if $capture }}<td>
-        {{ if isset . "capture" }}{{ .capture.from }}-{{ end }}
+        {{ if isset . "capture" }}{{ .capture.entity }}: {{ .capture.from }}-{{ end }}
       </td>{{ end }}
 
       {{ if $invuln }}<td>
@@ -617,6 +688,8 @@
           {{ with .endlag.releaseAttack }}Release Attack: {{ . }}{{ end }}
           {{ with .endlag.slide }}Slide: {{ .hit }} / {{ .whiff }}<br>{{ end }}
           {{ with .endlag.noSlide }}No Slide: {{ .hit }} / {{ .whiff }}{{ end }}
+          {{ with .endlag.nonDizzy }}Non-Dizzy: {{ . }}<br>{{ end }}
+          {{ with .endlag.dizzy }}Dizzy: {{ .min }}-{{ .max }}{{ end }}
           {{ with .endlag.noHarmonyField }}No Harmony Field: {{ . }}<br>{{ end }}
           {{ with .endlag.harmonyField }}Harmony Field: {{ . }}{{ end }}
           {{ with .endlag.sein }}Sein:

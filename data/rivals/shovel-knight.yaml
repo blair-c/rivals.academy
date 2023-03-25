@@ -691,7 +691,8 @@ downAir:
     endlag:
       hit: 10
       whiff: 15
-    firstActiveFrame: 33
+    firstActiveFrame:
+      soonest: 33
     landingLag:
       hit: 12
       whiff: 18
@@ -709,8 +710,6 @@ downAir:
     priority: 8
     killsProjectiles: true
     parryStun: true
-    notes:
-    - Releasing attack after frame 17 will make the hitbox disappear 1 frame later if the attack has not yet hit another character or object. When hitting another character or object, Shovel Knight will bounce and Dair will remain active for a further 11 frames before you are able to begin the endlag state.
   - name: Late (Spike)
     active:
       from: 9
@@ -742,7 +741,9 @@ downAir:
       onlyHitsProjectiles: true
     killsProjectiles: true
   notes:
-  - Dair has unique interactions after bouncing off of both Lily, causing her to bite, and Absa's cloud, pushing it down slightly.
+  - Late/Shoulder hitboxes disappear 1f after releasing attack f17- if the attack has not yet hit another character or object.
+  - When hitting another character or object, Shovel Knight will bounce and Dair will remain active for a further 11 frames before you are able to begin the endlag state.
+  - Unique interactions after bouncing off of both Lily, causing her to bite, and Absa's cloud, pushing it down slightly.
   image:
     baseRes: https://rivals.academy/library/shovel-knight/down-air.png
     highRes: https://rivals.academy/library/shovel-knight/1080_down-air.png
@@ -1001,6 +1002,7 @@ neutralSpecial:
   hitboxes:
   - startup: 7
     capture:
+      entity: Coins
       from: 8
     endlag: 20
     firstActiveFrame: 28

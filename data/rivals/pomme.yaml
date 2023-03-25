@@ -133,7 +133,7 @@ jab:
       scaling: 40
     priority: 2
     killsProjectiles: true
-    parryStun: "?"
+    # parryStun: 
   notes:
   - Jab 2 has varying startup depending on when the attack is input. A jab input within the final 2 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
   image:
@@ -972,7 +972,7 @@ taunt:
       scaling: 40
     priority: 3
     killsProjectiles: true
-    parryStun: "?"
+    # parryStun: 
     notes:
     - Active for 2 frames upon hitting the ground before disappearing.
   image:

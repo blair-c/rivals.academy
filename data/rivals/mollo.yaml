@@ -201,7 +201,7 @@ jab:
       scaling: 0
     priority: 1
     killsProjectiles: true
-    parryStun: "?"
+    # parryStun: 
     notes:
     - Spray can begins refilling after approximately 2 seconds without using it.
     - Loop endlag begins immediately upon releasing attack.
@@ -296,8 +296,7 @@ forwardTilt:
 
 upTilt:
   hitboxes:
-  - name: Hit 1
-    startup: 6
+  - startup: 6
     active:
     - from: 7
       to: 8
