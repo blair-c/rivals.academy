@@ -47,7 +47,7 @@ walljump:
     horizontal: 5
 wallcling:
   max: 60
-pratFall:
+pratfall:
   accel: 0.40
   landTime: 10
 
@@ -1323,7 +1323,7 @@ downSpecial:
     endlag:
       whiff: 18
     firstActiveFrame:
-      pratFall: 42
+      pratfall: 42
     landingLag: 10
     damage: 0
     angle: 90
@@ -1383,7 +1383,7 @@ downSpecial:
     endlag:
       whiff: 18
     firstActiveFrame:
-      pratFall: 42
+      pratfall: 42
     landingLag: 10
     killsProjectiles: true
   - name: Throw

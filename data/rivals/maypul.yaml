@@ -47,7 +47,7 @@ walljump:
     horizontal: 4
 wallcling:
   max: 60
-pratFall:
+pratfall:
   accel: 0.85
   landTime: 10
 
@@ -720,7 +720,7 @@ sideSpecial:
     firstActiveFrame:
       grounded: 34
       groundedReverse: 26
-      pratFall: 26
+      pratfall: 26
     damage: 4
     angle: 120
     angleFlipper: 0
@@ -771,7 +771,7 @@ upSpecial:
     killsProjectiles: true
     parryStun: true
     notes:
-    - On being parried, Maypul is unable to drop through platforms for a short period of time, extending a few frames into the prat-fall state.
+    - On being parried, Maypul is unable to drop through platforms for a short period of time, extending a few frames into the pratfall state.
   - name: Hit 2
     active:
       from: 11
@@ -779,7 +779,7 @@ upSpecial:
       frames: 8
     endlag: 14
     firstActiveFrame:
-      pratFall: 33
+      pratfall: 33
     damage: 8
     angle: 90
     angleFlipper: 6

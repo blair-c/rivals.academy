@@ -45,7 +45,7 @@ walljump:
   speed:
     vertical: 8
     horizontal: 7
-pratFall:
+pratfall:
   accel: 0.85
   landTime: 16
 
@@ -1005,7 +1005,7 @@ upSpecial:
       grounded: 28
       airborne: 9
     firstActiveFrame:
-      pratFall: 58
+      pratfall: 58
     damage: 8
     angle: 80
     angleFlipper: 6
@@ -1020,7 +1020,7 @@ upSpecial:
     killsProjectiles: true
     parryStun: true
     notes:
-    - Landing immediately out of up-special increases the prat-fall landing lag time, causing Forsburn to remain in grounded landing lag for 20 frames after 8 frames of endlag from the teleport. If airborne, Forsburn can control his aerial drift from frame 58 and has a decreased prat-fall landing lag value of 10, which make landing directly from the teleport slower than ending up-special in the air in some circumstances.
+    - Landing immediately out of up-special increases the pratfall landing lag time, causing Forsburn to remain in grounded landing lag for 20 frames after 8 frames of endlag from the teleport. If airborne, Forsburn can control his aerial drift from frame 58 and has a decreased pratfall landing lag value of 10, which make landing directly from the teleport slower than ending Up Special in the air in some circumstances.
   - name: Into Smoke
     startup: 18
     intangible:

@@ -45,7 +45,7 @@ walljump:
   speed:
     vertical: 9
     horizontal: 6
-pratFall:
+pratfall:
   accel: 1.50
   landTime: 15
 
@@ -1148,7 +1148,7 @@ sideSpecial:
     - with: Walljump
       from: 25
     firstActiveFrame:
-      pratFall: 52
+      pratfall: 52
     damage: 8
     angle: 45
     angleFlipper: 0
@@ -1165,7 +1165,7 @@ sideSpecial:
   notes:
   - Holding special while on grass on the 2nd frame of endlag allows you to continue the attack until either releasing special, no grass remains or you become airborne.
   - Sylvanos spawns grass behind him if there isn't any or he eats any grass beneath him from f14 onwards.
-  - Hitting another character or object will prevent Sylvanos from entering prat-fall at the end of the move.
+  - Hitting another character or object will prevent Sylvanos from entering pratfall at the end of the move.
   - Holding either horizontal direction allows you to increase or decrease the move's travel speed.
   image:
     baseRes: https://rivals.academy/library/sylvanos/side-special.png

@@ -45,7 +45,7 @@ walljump:
   speed:
     vertical: 8
     horizontal: 7
-pratFall:
+pratfall:
   accel: 0.50
   landTime: 8
 
@@ -1037,7 +1037,7 @@ sideSpecial:
     notes:
     - Unable to swallow any opponent that has been trapped in a bubble in the last 60 frames, will instead spit them back.
     - If tongue connects with an object, platform, ground, or wall, Ranno will be pulled towards it.
-    - Ranno will enter prat-fall if the object he has connected to breaks, barring bubble.
+    - Ranno will enter pratfall if the object he has connected to breaks, barring bubble.
   - name: Swallow
     startup: 25
     mustConnect: Tongue
@@ -1087,7 +1087,7 @@ upSpecial:
       to: 27
       window: 9
     firstActiveFrame:
-      pratFall: 45
+      pratfall: 45
     damage: 4
     angle: 361
     angleFlipper: 0
@@ -1234,7 +1234,7 @@ upSpecial:
         "on": 106
     endlag: 8
     firstActiveFrame:
-      pratFall:
+      pratfall:
         min: 67
         max: 115
     damage: 1

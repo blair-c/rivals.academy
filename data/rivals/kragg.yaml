@@ -45,7 +45,7 @@ walljump:
   speed:
     vertical: 8
     horizontal: 7
-pratFall:
+pratfall:
   accel: 0.50
   landTime: 11
 
@@ -957,7 +957,7 @@ sideSpecial:
       max: 15
     endlag: 9
     firstActiveFrame:
-      pratFall:
+      pratfall:
         min: 11
         max: 24
   notes:
@@ -1015,7 +1015,7 @@ upSpecial:
   - startup: 1
     endlag: 9
     firstActiveFrame:
-      pratFall: 10
+      pratfall: 10
   notes:
   - Destroys existing pillar on 2nd frame of animation. Interrupting Kragg on this frame does not prevent the pillar from breaking once pillarless has been input.
 

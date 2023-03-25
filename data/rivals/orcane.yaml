@@ -45,7 +45,7 @@ walljump:
   speed:
     vertical: 8
     horizontal: 7
-pratFall:
+pratfall:
   accel: 0.80
   landTime: 9
 
@@ -815,7 +815,7 @@ sideSpecial:
       from: 48
     firstActiveFrame:
       grounded: 57
-      pratFall: 50
+      pratfall: 50
     damage: 8
     angle: 361
     angleFlipper: 6
@@ -853,7 +853,7 @@ sideSpecial:
       from: 48
     firstActiveFrame:
       grounded: 57
-      pratFall: 50
+      pratfall: 50
     damage: 14
     angle: 361
     angleFlipper: 6
@@ -956,7 +956,7 @@ upSpecial:
       from: "?"
     endlag: 12
     firstActiveFrame:
-      pratFall: 31
+      pratfall: 31
     notes:
     - If you have an available puddle on stage to teleport to, you can prevent the teleportation by holding parry on frame 18 of Up Special.
 

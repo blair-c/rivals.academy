@@ -121,8 +121,8 @@
               <th>Walljump Vertical Speed</th>
               <th>Walljump Horizontal Speed</th>
               {{ with $c.wallcling.max }}<th>Wallcling Max</th>{{ end }}
-              <th>Prat Fall Accel</th>
-              <th>Prat Fall Land Time</th>
+              <th>Pratfall Accel</th>
+              <th>Pratfall Land Time</th>
             </tr>
           </thead>
           <tbody>
@@ -137,8 +137,8 @@
               <td>{{ $c.walljump.speed.vertical }}</td>
               <td>{{ $c.walljump.speed.horizontal }}</td>
               {{ with $c.wallcling.max }}<td>{{ . }}</td>{{ end }}
-              <td>{{ printf "%.2f" $c.pratFall.accel }}</td>
-              <td>{{ $c.pratFall.landTime }}</td>
+              <td>{{ printf "%.2f" $c.pratfall.accel }}</td>
+              <td>{{ $c.pratfall.landTime }}</td>
             </tr>
           </tbody>
         </table>

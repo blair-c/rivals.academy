@@ -45,7 +45,7 @@ walljump:
   speed:
     vertical: 9
     horizontal: 6
-pratFall:
+pratfall:
   accel: 0.70
   landTime: 11
 
@@ -1551,7 +1551,7 @@ upSpecial:
       from: 36
     endlag: 44
     firstActiveFrame:
-      pratFall: 69
+      pratfall: 69
     damage: 8
     angle: 60
     angleFlipper: 0
@@ -1641,7 +1641,7 @@ upSpecial:
       from: 32
     endlag: 42
     firstActiveFrame:
-      pratFall: 69
+      pratfall: 69
     damage: 8
     angle: 80
     angleFlipper: 0

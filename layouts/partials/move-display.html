@@ -786,8 +786,8 @@
           {{ with .firstActiveFrame.airborne }}Airborne: {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.groundedReverse }}Reverse (Grounded): {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.onLanding }}On Landing: {{ . }}{{ end }}
-          {{ with .firstActiveFrame.pratFall }}
-            {{ if isset . "min" }}{{ .min }}-{{ .max }}{{ else }}{{ . }}{{ end }} (In Prat Fall)<br>
+          {{ with .firstActiveFrame.pratfall }}
+            {{ if isset . "min" }}{{ .min }}-{{ .max }}{{ else }}{{ . }}{{ end }} (In Pratfall)<br>
           {{ end }}
           {{ with .firstActiveFrame.cancel }}
             Cancel: {{ if reflect.IsMap . }}{{ .hit }} / {{ .whiff }}{{ else }}{{ . }}{{ end }}
@@ -807,7 +807,7 @@
           {{ with .firstActiveFrame.rebuildMech }}Rebuild Mech: {{ . }}{{ end }}
           {{ with .firstActiveFrame.slide }}Slide: {{ . }}<br>{{ end }}
           {{ with .firstActiveFrame.noSlide }}No Slide: {{ . }}{{ end }}
-          {{ with .firstActiveFrame.noHarmonyField }}No Harmony Field: {{ .pratFall }} (In Prat Fall)<br>{{ end }}
+          {{ with .firstActiveFrame.noHarmonyField }}No Harmony Field: {{ .pratfall }} (In Pratfall)<br>{{ end }}
           {{ with .firstActiveFrame.harmonyField }}Harmony Field: {{ . }}{{ end }}
           {{ with .firstActiveFrame.anchorIsUnableToCast }}Anchor is unable to cast: {{ . }}{{ end }}
           {{ with .firstActiveFrame.fromAnchorReachingSK }}From Anchor Reaching SK: {{ . }}{{ end }}

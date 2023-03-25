@@ -45,7 +45,7 @@ walljump:
   speed:
     vertical: 9
     horizontal: 5
-pratFall:
+pratfall:
   accel: 1.00
   landTime: 20
 

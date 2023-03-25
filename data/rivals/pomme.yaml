@@ -45,7 +45,7 @@ walljump:
   speed:
     vertical: 8
     horizontal: 5
-pratFall:
+pratfall:
   accel: 0.85
   landTime: 16
 # Character Mechanics
@@ -905,7 +905,7 @@ upSpecial:
       harmonyField: 9
     firstActiveFrame:
       noHarmonyField:
-        pratFall: 35
+        pratfall: 35
       harmonyField: 39
     damage: 6
     angle: 75
@@ -926,7 +926,7 @@ upSpecial:
     - with: Walljump
       from: 2
     firstActiveFrame:
-      pratFall: 17
+      pratfall: 17
     notes:
     - Performed by using Up Special a 2nd time after using it already within the Harmony Field without landing or wall-jumping.
   notes:
