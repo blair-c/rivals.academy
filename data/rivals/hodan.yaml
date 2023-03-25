@@ -1730,7 +1730,7 @@ downSpecial:
     killsProjectiles: true
     parryStun: true
     notes:
-    - Parry cancel does not remove the active hitboxes during it's 12 frames of endlag, after which Hodan is either in pratfall on whiff or actionable on hit.
+    - Parry cancel does not remove the active hitboxes during its 12 frames of endlag, after which Hodan is either in pratfall on whiff or actionable on hit.
     - On capturing a Sweatwhirl, a spirit is placed rather than being captured entirely, however Hodan still receives the full benefits of capturing it.
     - It is not possible to capture Sweatwhirls if they have been parried.
     - Wall-jumping after capturing a Spirit will place the Spirit at the wall.
