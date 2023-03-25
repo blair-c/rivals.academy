@@ -901,7 +901,7 @@ upStrong:
       scaling: 0
     hitstunModifier: 20
     untechable:
-      note: Untechable value of 3.
+      note: Forces a missed tech instead of bouncing the opponent off the ground.
     hitpause:
       base: 10
       scaling: 0
