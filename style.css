@@ -659,20 +659,23 @@ article h4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0 .25rem;
-  max-width: 100%;
+  max-width: 35rem;
   margin: var(--page-padding);
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: var(--footer-margin);
 }
 
 .library-select li a img {
-  border: 3px solid var(--clr-text-hc);
+  border: .25rem solid var(--clr-text-hc);
+  border-bottom: .125rem solid var(--clr-text-hc);
+  max-width: 100%;
+  height: auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .library-select li:hover {
     transform: scale(1.02);
-    transition: transform .1s ease-in;
+    transition: transform .05s ease-in;
   }
 }
 
@@ -711,7 +714,6 @@ article h4 {
 
 .library-grid li a div img {
   margin: auto;
-  height: 2rem;
 }
 
 .toc {
