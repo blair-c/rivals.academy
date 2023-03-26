@@ -1219,6 +1219,7 @@ sideSpecial:
     parryStun: true
     notes:
     - If on the ground when cancelling you can hold back and jump to turnaround on the first frame of jump-squat.
+    - Clairen does not enter pratfall on hit.
   - name: Sweet
     active:
       from: 24
@@ -1238,6 +1239,8 @@ sideSpecial:
     priority: 6
     killsProjectiles: true
     parryStun: true
+    notes:
+    - Clairen does not enter pratfall on hit.
   image:
     baseRes: https://rivals.academy/library/clairen/side-special.png
     highRes: https://rivals.academy/library/clairen/1080_side-special.png

@@ -831,6 +831,7 @@ sideSpecial:
     parryStun: true
     notes:
     - Can shift downwards while airborne by inputting fast-fall.
+    - Orcane does not enter pratfall on hit.
   image:
     baseRes: https://rivals.academy/library/orcane/side-special.png
     highRes: https://rivals.academy/library/orcane/1080_side-special.png
@@ -869,6 +870,7 @@ sideSpecial:
     parryStun: true
     notes:
     - Can shift downwards while airborne by inputting fast-fall.
+    - Orcane does not enter pratfall on hit.
   image:
     baseRes: https://rivals.academy/library/orcane/side-special-puddle.png
     highRes: https://rivals.academy/library/orcane/1080_side-special-puddle.png
