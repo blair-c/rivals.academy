@@ -178,7 +178,7 @@ article h4 {
 
 .heading-link svg {
   display: none;
-  height: .875em;
+  height: .8em;
   padding: 0 .125rem;
   fill: var(--clr-gray-1);
 }
