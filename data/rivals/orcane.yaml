@@ -348,9 +348,6 @@ forwardAir:
     startup: 9
     active:
       from: 10
-    landingLag:
-      hit: 6
-      whiff: 9
     damage: 2
     asdiModifier: 1.2
     hitLockout:
