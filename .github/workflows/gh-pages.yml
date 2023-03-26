@@ -33,21 +33,15 @@ jobs:
               echo "Created $(dirname $i)/1080_$(basename $i)"
             done
           done
-          for dir in static/img/icons-full/*/
-          do
-            for i in "$dir"/*.png
-            do 
-              convert "$i" -sample 400% "$(dirname $i)/emote_$(basename $i)"
-              echo "Created $(dirname $i)/emote_$(basename $i)"
-            done
+          for i in static/img/icons-full/*.png
+          do 
+            convert "$i" -sample 400% "$(dirname $i)/emote_$(basename $i)"
+            echo "Created $(dirname $i)/emote_$(basename $i)"
           done
-          for dir in static/img/library-select/*/
-          do
-            for i in "$dir"/*.png
-            do 
-              convert "$i" -sample 200% "$(dirname $i)/2x_$(basename $i)"
-              echo "Created $(dirname $i)/2x_$(basename $i)"
-            done
+          for i in static/img/library-select/*.png
+          do 
+            convert "$i" -sample 200% "$(dirname $i)/2x_$(basename $i)"
+            echo "Created $(dirname $i)/2x_$(basename $i)"
           done
 
       - name: Setup Hugo
