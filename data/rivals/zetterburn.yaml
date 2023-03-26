@@ -1073,9 +1073,11 @@ downSpecial:
     - with: Airdodge/Up Special/Jump
       from: 54
     refresh:
-      doubleJump:
-        oneTime: 24
-        always: 44
+    - resource: Jump
+      "on": Walljump
+      perAirtime: 1
+    - resource: Jump
+      frame: 44
     damage: 2
     angle: -75
     angleFlipper: 0

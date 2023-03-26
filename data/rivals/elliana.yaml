@@ -1161,6 +1161,8 @@ upSpecial:
       from: 4
       to: 7
       frames: 4
+    refresh:
+    - resource: Airdodge
     projectileInvuln:
       during: While Rising
     cancellable:

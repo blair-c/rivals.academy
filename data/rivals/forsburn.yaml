@@ -1028,6 +1028,11 @@ upSpecial:
       to: 37
       frames: 19
     directionLockedIn: 20
+    refresh:
+    - resource: Up Special
+      perAirtime: 2
+    - resource: Jump
+      perAirtime: 1
     endlag: 0
     firstActiveFrame: 38
     notes:

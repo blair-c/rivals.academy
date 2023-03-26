@@ -1161,8 +1161,8 @@ downSpecial:
         to: 23
         frames: 23
     refresh:
-    - resource: Jump
-      condition: On Hit
+    - resource: Jumps
+      "on": Hit
     endlag: 6
     firstActiveFrame: 30
     damage: 6

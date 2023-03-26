@@ -10,6 +10,7 @@
 {{ $iceCreated := false }}
 {{ $capture := false }}
 {{ $invuln := false }}
+{{ $refresh := false }}
 {{ $projectileInvuln := false }}
 {{ $endlag := false }}
 {{ $cancellable := false }}
@@ -52,6 +53,7 @@
   {{ if isset . "iceCreated" }} {{ $iceCreated = true }} {{ end }}
   {{ if isset . "capture" }} {{ $capture = true }} {{ end }}
   {{ if isset . "invuln" }} {{ $invuln = true }} {{ end }}
+  {{ if isset . "refresh" }} {{ $refresh = true }} {{ end }}
   {{ if isset . "projectileInvuln" }} {{ $projectileInvuln = true }} {{ end }}
   {{ if isset . "endlag" }} {{ $endlag = true }} {{ end }}
   {{ if isset . "cancellable" }} {{ $cancellable = true }} {{ end }}
@@ -101,6 +103,7 @@
         {{ if $iceCreated }}<th>Ice Created</th>{{ end }}
         {{ if $capture }}<th>Capture</th>{{ end }}
         {{ if $invuln }}<th>Invulnerable</th>{{ end }}
+        {{ if $refresh }}<th>Refresh</th>{{ end }}
         {{ if $projectileInvuln }}<th>Projectile Invuln.</th>{{ end }}
         {{ if $endlag }}<th>Endlag</th>{{ end }}
         {{ if $cancellable }}<th>Cancellable</th>{{ end }}
@@ -624,6 +627,15 @@
 
       {{ if $invuln }}<td>
         {{ if isset . "invuln" }}{{ .invuln.from }}-{{ .invuln.to }}{{ end }}
+      </td>{{ end }}
+
+      {{ if $refresh }}<td>
+        {{ range .refresh }}
+          {{ with .resource }}{{ . }}:{{ end }}
+          {{ with .frame }}f{{ . }}{{ end }}
+          {{ with .on }}On {{ . }}{{ end }}
+          {{ with .perAirtime }}({{ . }} per airtime){{ end }}<br>
+        {{ end }}
       </td>{{ end }}
 
       {{ if $projectileInvuln }}<td>

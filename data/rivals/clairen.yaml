@@ -1088,6 +1088,10 @@ neutralSpecial:
       from: 9
       to: 11
       frames: 3
+    refresh:
+    - resource: Jump
+      "on": Hit
+      perAirtime: 1
     endlag:
       whiff: 24
     firstActiveFrame: 36
@@ -1106,7 +1110,6 @@ neutralSpecial:
     parryStun: false
     notes:
     - Can shift downwards while airborne after a succesful grab by inputting fast-fall.
-    - Neutral special will refresh your double-jump on grabbing another character a single time while you are airborne. This one time refresh is not used if you already have a double-jump.
   - name: Forward Throw
     startup: 9
     active:

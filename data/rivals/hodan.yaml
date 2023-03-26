@@ -1576,6 +1576,9 @@ upSpecial:
       from: 48
       to: 53
       frames: 6
+    refresh:
+    - resource: Up Special
+      perAirtime: 1
     endlag: 9
     firstActiveFrame: 63
     cooldown:
@@ -1595,8 +1598,6 @@ upSpecial:
     priority: 2
     killsProjectiles: true
     parryStun: false
-    notes:
-    - If Spirit Toss is repeated more than once per airtime then Hodan will enter pratfall after endlag.
   notes:
   - It is not possible to capture Sweatwhirls if they have been parried.
   image:
