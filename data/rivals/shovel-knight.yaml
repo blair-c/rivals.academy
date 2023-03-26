@@ -1207,7 +1207,9 @@ sideSpecial:
       min: 6
       max: 8
       basedOn: charge
-      calculator: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY
+      calculator:
+        description: Calculate travel duration, speed, damage, and knockback scaling
+        link: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY
     angle: 361
     angleFlipper: 0
     knockback:
@@ -1215,12 +1217,16 @@ sideSpecial:
         min: 6
         max: 7
         basedOn: charge
-        calculator: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY
+        calculator:
+          description: Calculate travel duration, speed, damage, and knockback scaling
+          link: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY
       scaling:
         min: 50
         max: 60
         basedOn: charge
-        calculator: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY
+        calculator:
+          description: Calculate travel duration, speed, damage, and knockback scaling
+          link: https://docs.google.com/spreadsheets/d/1YNgIbi2TWxxqVOEXj-HK9XmvMXWPZRdVFHantc3bjXY
     hitstunModifier: 1
     hitpause:
       base: 8

@@ -389,7 +389,9 @@ forwardAir:
         min: 50
         max: 110
         basedOn: speed
-        calculator: https://docs.google.com/spreadsheets/d/1ZsC6x5aoGiC5gq8rijwoy93l8AF1T9geuPQLZtrvQ-Q
+        calculator:
+          description: Calculate knockback scaling
+          link: https://docs.google.com/spreadsheets/d/1ZsC6x5aoGiC5gq8rijwoy93l8AF1T9geuPQLZtrvQ-Q
     hitstunModifier: 0.85
     hitpause:
       base: 9

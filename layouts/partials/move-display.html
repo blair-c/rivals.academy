@@ -646,7 +646,7 @@
           {{ with .endlag.hit }}
             {{ if reflect.IsMap . }}
               {{ with .calculator }}
-                <a href="{{ . }}" title="Calculator" target="_blank" rel="noopener noreferrer">
+                <a href="{{ .link }}" title="{{ .description }}" target="_blank" rel="noopener noreferrer">
               {{ end }}
               {{ with .min }}{{ . }}-{{ end -}}
               {{ with .max }}{{ . }}{{ end }}
@@ -874,7 +874,7 @@
         {{ if isset . "damage" }}
           {{ if reflect.IsMap .damage }}
             {{ with .damage.calculator }}
-              <a href="{{ . }}" title="Calculator" target="_blank" rel="noopener noreferrer">
+              <a href="{{ .link }}" title="{{ .description }}" target="_blank" rel="noopener noreferrer">
             {{ end }}
             {{ with .damage.min }}{{ . }}-{{ end -}}
             {{ with .damage.max }}{{ . }}%{{ end }}
@@ -920,7 +920,7 @@
           {{ with .base.to }}{{ . }}{{ end }}
           {{ with .base.scaling }}({{ . }}){{ end }}
           {{ with .base.calculator }}
-            <a href="{{ . }}" title="Calculator" target="_blank" rel="noopener noreferrer">
+            <a href="{{ .link }}" title="{{ .description }}" target="_blank" rel="noopener noreferrer">
           {{ end }}
           {{ with .base.min }}{{ . }}-{{ end -}}
           {{ with .base.max }}{{ . }}{{ end }}
@@ -931,7 +931,7 @@
         {{ end }} |
         {{ if reflect.IsMap .scaling }}
           {{ with .scaling.calculator }}
-            <a href="{{ . }}" title="Calculator" target="_blank" rel="noopener noreferrer">
+            <a href="{{ .link }}" title="{{ .description}}" target="_blank" rel="noopener noreferrer">
           {{ end }}
           {{ with .scaling.min }}{{ . }}-{{ end -}}
           {{ with .scaling.max }}{{ . }}{{ end }}

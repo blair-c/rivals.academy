@@ -1187,7 +1187,10 @@ sideSpecial:
     damage:
       min: 3
       max: 7
-      calculator: https://docs.google.com/spreadsheets/d/1PCtOZj_RfMQiHetcAXIhzhoCcnVSl4g0o0fbyqURlqY
+      basedOn: charge
+      calculator:
+        description: Calculate throw angle, speed, damage, and knockback
+        link: https://docs.google.com/spreadsheets/d/1PCtOZj_RfMQiHetcAXIhzhoCcnVSl4g0o0fbyqURlqY
     angle: 361
     angleFlipper: 3
     knockback:
@@ -1195,7 +1198,9 @@ sideSpecial:
       scaling:
         min: 15
         max: 60
-        calculator: https://docs.google.com/spreadsheets/d/1PCtOZj_RfMQiHetcAXIhzhoCcnVSl4g0o0fbyqURlqY
+        calculator:
+          description: Calculate throw angle, speed, damage, and knockback
+          link: https://docs.google.com/spreadsheets/d/1PCtOZj_RfMQiHetcAXIhzhoCcnVSl4g0o0fbyqURlqY
     hitstunModifier: 0.6
     hitpause:
       base: 6

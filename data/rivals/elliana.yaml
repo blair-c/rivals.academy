@@ -252,7 +252,9 @@ upTilt:
         min: 9
         max: 25
         basedOn: heat consumed
-        calculator: https://docs.google.com/spreadsheets/d/1Yabcbi1i4bi6zcaXWH8AcyHIff3XNIINvjzZPRvmzmI
+        calculator:
+          description: Calculate endlag and knockback
+          link: https://docs.google.com/spreadsheets/d/1Yabcbi1i4bi6zcaXWH8AcyHIff3XNIINvjzZPRvmzmI
     firstActiveFrame:
       min: 35
       max: 51
@@ -264,12 +266,16 @@ upTilt:
         min: 7
         max: 9
         basedOn: heat consumed
-        calculator: https://docs.google.com/spreadsheets/d/1Yabcbi1i4bi6zcaXWH8AcyHIff3XNIINvjzZPRvmzmI
+        calculator:
+          description: Calculate endlag and knockback
+          link: https://docs.google.com/spreadsheets/d/1Yabcbi1i4bi6zcaXWH8AcyHIff3XNIINvjzZPRvmzmI
       scaling:
         min: 60
         max: 90
         basedOn: heat consumed
-        calculator: https://docs.google.com/spreadsheets/d/1Yabcbi1i4bi6zcaXWH8AcyHIff3XNIINvjzZPRvmzmI
+        calculator:
+          description: Calculate endlag and knockback
+          link: https://docs.google.com/spreadsheets/d/1Yabcbi1i4bi6zcaXWH8AcyHIff3XNIINvjzZPRvmzmI
     hitstunModifier: 1
     hitpause:
       base: 6

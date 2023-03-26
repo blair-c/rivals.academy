@@ -888,7 +888,9 @@ sideSpecial:
     endlag:
       min: 30
       max: 38
-      calculator: https://docs.google.com/spreadsheets/d/16v6aPfEKQ8ErQTRgOWRYTf3atl29CfGBa1k-dSf2f9A
+      calculator:
+        description: Calculate travel duration, speed, endlag, damage, and knockback
+        link: https://docs.google.com/spreadsheets/d/16v6aPfEKQ8ErQTRgOWRYTf3atl29CfGBa1k-dSf2f9A
     cancellable:
     - with: Walljump
       from: 11
@@ -913,7 +915,9 @@ sideSpecial:
       min: 6
       max: 16
       basedOn: charge
-      calculator: https://docs.google.com/spreadsheets/d/16v6aPfEKQ8ErQTRgOWRYTf3atl29CfGBa1k-dSf2f9A
+      calculator:
+        description: Calculate travel duration, speed, endlag, damage, and knockback
+        link: https://docs.google.com/spreadsheets/d/16v6aPfEKQ8ErQTRgOWRYTf3atl29CfGBa1k-dSf2f9A
     angle: 60
     angleFlipper: 0
     knockback:
@@ -921,12 +925,16 @@ sideSpecial:
         min: 6
         max: 8
         basedOn: charge
-        calculator: https://docs.google.com/spreadsheets/d/16v6aPfEKQ8ErQTRgOWRYTf3atl29CfGBa1k-dSf2f9A
+        calculator:
+          description: Calculate travel duration, speed, endlag, damage, and knockback
+          link: https://docs.google.com/spreadsheets/d/16v6aPfEKQ8ErQTRgOWRYTf3atl29CfGBa1k-dSf2f9A
       scaling:
         min: 70
         max: 95
         basedOn: charge
-        calculator: https://docs.google.com/spreadsheets/d/16v6aPfEKQ8ErQTRgOWRYTf3atl29CfGBa1k-dSf2f9A
+        calculator:
+          description: Calculate travel duration, speed, endlag, damage, and knockback
+          link: https://docs.google.com/spreadsheets/d/16v6aPfEKQ8ErQTRgOWRYTf3atl29CfGBa1k-dSf2f9A
     hitstunModifier: 1
     hitpause:
       base: 9
