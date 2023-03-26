@@ -10,17 +10,22 @@
         <a href="{{ site.Data.links.s7g.twitter }}" target="_blank" rel="noopener noreferrer">Sector 7-G</a>
       </p>
     </header>
-
-    <ul class="library-select">
-      {{ range (slice "zetterburn" "orcane" "kragg" "wrastor" 
-                      "forsburn" "etalus" "maypul" "absa"
-                      "clairen" "ranno" "sylvanos" "elliana"
-                      "mollo" "hodan" "olympia" "pomme"
-                      "ori" "shovel-knight") }}
-        <li><a href="/library/{{ . }}">{{ humanize . | title }}</a></li>
-      {{ end }}
-      <li><a href="/library/stages">Stages</a></li>
-    </ul>
+    
+    <div class="center">
+      <ul class="library-select">
+        {{ range (slice "zetterburn" "orcane" "kragg" "wrastor" 
+                        "forsburn" "etalus" "maypul" "absa"
+                        "clairen" "ranno" "sylvanos" "elliana"
+                        "mollo" "hodan" "olympia" "pomme"
+                        "ori" "shovel-knight") }}
+          <li><a href="/library/{{ . }}"><div>
+            <span class="sr-only">{{ humanize . | title }}</span>
+            <img aria-hidden="true" src="/img/library-select/{{ . }}.png">
+          </div></a></li>
+        {{ end }}
+        <li><a href="/library/stages">Stages</a></li>
+      </ul>
+    </div>
   </main>
 {{ end }}
 
