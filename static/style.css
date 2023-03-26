@@ -358,16 +358,6 @@ article h4 {
 }
 
 @media only screen and (max-width:40rem) {
-  .navbar {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-  }
-
-  html {
-    scroll-padding-top: var(--nav-height);
-  }
-
   .data-disable-scroll-mobile {
     height: 100%;
     overflow: hidden;
@@ -667,7 +657,8 @@ article h4 {
 
 .library-select li a img {
   border: .25rem solid var(--clr-text-hc);
-  border-bottom: .125rem solid var(--clr-text-hc);
+  border-bottom: 1px solid var(--clr-text-hc);
+  border-radius: .25rem;
   max-width: 100%;
   height: auto;
 }
@@ -676,6 +667,11 @@ article h4 {
   .library-select li:hover {
     transform: scale(1.02);
     transition: transform .05s ease-in;
+  }
+
+  .library-select li:active {
+    transform: scale(.99);
+    transition: transform: .05s linear;
   }
 }
 
