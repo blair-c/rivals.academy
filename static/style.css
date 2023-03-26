@@ -649,10 +649,10 @@ article h4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0 .25rem;
-  max-width: 35rem;
+  max-width: 40rem;
   margin: var(--page-padding);
-  margin-top: 1rem;
-  margin-bottom: var(--footer-margin);
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 .library-select li a img {
@@ -664,14 +664,9 @@ article h4 {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .library-select li:hover {
-    transform: scale(1.02);
-    transition: transform .05s ease-in;
-  }
-
   .library-select li:active {
-    transform: scale(.99);
-    transition: transform: .05s linear;
+    transform: scale(.95);
+    transition: transform .025s ease-out;
   }
 }
 
