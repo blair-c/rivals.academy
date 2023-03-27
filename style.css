@@ -915,22 +915,12 @@ article h4 {
 
 .library-footer svg {
   height: .75rem;
-  margin-right: 1px;
+  margin-right: .25rem;
   fill: var(--clr-text);
 }
 
 .library-footer a {
   white-space: nowrap;
-}
-
-.mobile-break {
-  display: none;
-}
-
-@media only screen and (max-width:40rem) {
-  .mobile-break {
-    display: inline;
-  }
 }
 
 .article-footer-divider {
