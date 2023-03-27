@@ -1,5 +1,5 @@
 ---
-title: Ori - Rivals Academy Library
+title: Ori
 description: Ori frame data and hitbox info
 layout: character
 outputs:

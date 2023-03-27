@@ -1,5 +1,5 @@
 ---
-title: Forsburn - Rivals Academy Library
+title: Forsburn
 description: Forsburn frame data and hitbox info
 layout: character
 outputs:

@@ -1,5 +1,5 @@
 ---
-title: Hodan - Rivals Academy Library
+title: Hodan
 description: Hodan frame data and hitbox info
 layout: character
 outputs:

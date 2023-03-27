@@ -1,5 +1,5 @@
 ---
-title: Kragg - Rivals Academy Library
+title: Kragg
 description: Kragg frame data and hitbox info
 layout: character
 outputs:

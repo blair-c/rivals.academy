@@ -1,5 +1,5 @@
 ---
-title: Shovel Knight - Rivals Academy Library
+title: Shovel Knight
 description: Shovel Knight frame data and hitbox info
 layout: character
 outputs:

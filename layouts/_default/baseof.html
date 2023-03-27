@@ -6,7 +6,12 @@
     {{ if eq (len page.Ancestors) 0 }}
       <meta http-equiv="Refresh" content="0; url='/library'"/>
     {{ end }}
-    <title>{{ .Page.Title }}</title>
+    <title>
+      {{ .Page.Title }}
+      {{ if and .Page.IsPage (not .Page.FirstSection.IsHome) }}
+        - {{ .Page.FirstSection.Title }}
+      {{ end }}
+    </title>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/style.css"type="text/css">

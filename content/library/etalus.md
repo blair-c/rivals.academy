@@ -1,5 +1,5 @@
 ---
-title: Etalus - Rivals Academy Library
+title: Etalus
 description: Etalus frame data and hitbox info
 layout: character
 outputs:

@@ -1,5 +1,5 @@
 ---
-title: Pomme - Rivals Academy Library
+title: Pomme
 description: Pomme frame data and hitbox info
 layout: character
 outputs:

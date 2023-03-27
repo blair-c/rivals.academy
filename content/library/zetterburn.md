@@ -1,5 +1,5 @@
 ---
-title: Zetterburn - Rivals Academy Library
+title: Zetterburn
 description: Zetterburn frame data and hitbox info
 layout: character
 outputs:

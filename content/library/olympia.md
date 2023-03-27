@@ -1,5 +1,5 @@
 ---
-title: Olympia - Rivals Academy Library
+title: Olympia
 description: Olympia frame data and hitbox info
 layout: character
 outputs:

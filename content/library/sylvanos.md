@@ -1,5 +1,5 @@
 ---
-title: Sylvanos - Rivals Academy Library
+title: Sylvanos
 description: Sylvanos frame data and hitbox info
 layout: character
 outputs:

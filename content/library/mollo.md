@@ -1,5 +1,5 @@
 ---
-title: Mollo - Rivals Academy Library
+title: Mollo
 description: Mollo frame data and hitbox info
 layout: character
 outputs:

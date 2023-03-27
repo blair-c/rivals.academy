@@ -1,5 +1,5 @@
 ---
-title: Absa - Rivals Academy Library
+title: Absa
 description: Absa frame data and hitbox info
 layout: character
 outputs:

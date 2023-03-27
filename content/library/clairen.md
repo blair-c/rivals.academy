@@ -1,5 +1,5 @@
 ---
-title: Clairen - Rivals Academy Library
+title: Clairen
 description: Clairen frame data and hitbox info
 layout: character
 outputs:

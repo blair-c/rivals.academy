@@ -1,5 +1,5 @@
 ---
-title: Ranno - Rivals Academy Library
+title: Ranno
 description: Ranno frame data and hitbox info
 layout: character
 outputs:

@@ -1,5 +1,5 @@
 ---
-title: Elliana - Rivals Academy Library
+title: Elliana
 description: Elliana frame data and hitbox info
 layout: character
 outputs:

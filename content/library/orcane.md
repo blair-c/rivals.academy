@@ -1,5 +1,5 @@
 ---
-title: Orcane - Rivals Academy Library
+title: Orcane
 description: Orcane frame data and hitbox info
 layout: character
 outputs:
