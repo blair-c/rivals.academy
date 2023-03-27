@@ -901,7 +901,7 @@ sideSpecial:
     killsProjectiles: true
     parryStun: true
     notes:
-    - Kragg can turnaround after moving on the ground with an active hitbox for 9 frames, causing the hitbox to become inactive but your super armour to remain. The hitbox will remain inactive for 18 frames before becoming active again if in the active window.
+    - Kragg can turnaround after moving on the ground with an active hitbox for 9 frames, causing the hitbox to become inactive but your super armor to remain. The hitbox will remain inactive for 18 frames before becoming active again if in the active window.
   - name: Airborne
     startup: 14
     active:
