@@ -843,7 +843,7 @@ neutralSpecial:
   image:
     baseRes: https://rivals.academy/library/olympia/neutral-special-activate.png
     highRes: https://rivals.academy/library/olympia/1080_neutral-special-activate.png
-- name: crystallize (Break Out)
+- name: Crystallize (Break Out)
   hitboxes:
   - active:
       "on": 1
