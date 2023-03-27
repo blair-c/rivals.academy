@@ -665,8 +665,8 @@ article h4 {
 
 @media (prefers-reduced-motion: no-preference) {
   .library-select li:active {
-    transform: scale(.95);
-    transition: transform .025s ease-out;
+    transform: scale(.97);
+    transition: transform .05s ease-out;
   }
 }
 
