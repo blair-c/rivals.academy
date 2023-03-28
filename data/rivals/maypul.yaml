@@ -156,7 +156,7 @@ jab:
     - Jab 2 loops back into Jab 1.
     - Varying startup depending on when the attack is input. A jab input within the final 2 frames of the cancel window will not begin its startup until after the remaining frames of endlag are completed.
   notes:
-  - If you hit another character or object at any time during the jab loop, Maypul will be able to cancel into a turnaround tilt at any point in the loop afterwards.
+  - If you hit another character or object at any time during the jab loop, Maypul is able to cancel into a turnaround tilt at any point in the loop afterwards.
   image:
     baseRes: https://rivals.academy/library/maypul/jab.png
     highRes: https://rivals.academy/library/maypul/1080_jab.png
