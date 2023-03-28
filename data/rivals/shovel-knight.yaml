@@ -1183,6 +1183,7 @@ sideSpecial:
     endlag:
       hit: 11
       whiff: 17
+      bounce: 11
     cancellable:
     - with: Jump
       condition: While Grounded
@@ -1254,6 +1255,7 @@ sideSpecial:
       from: 98
     endlag:
       hit: 11
+      bounce: 11
     cancellable:
     - with: Jump
       condition: While Grounded

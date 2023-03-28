@@ -654,25 +654,24 @@
       </td>{{ end }}
 
       {{ if $endlag }}<td>
-        {{ if or (isset .endlag "hit") (isset .endlag "whiff") }}
-          {{ with .endlag.hit }}
-            {{ if reflect.IsMap . }}
-              {{ with .calculator }}
-                <a href="{{ .link }}" title="{{ .description }}" target="_blank" rel="noopener noreferrer">
-              {{ end }}
-              {{ with .min }}{{ . }}-{{ end -}}
-              {{ with .max }}{{ . }}{{ end }}
-              {{ with .basedOn }}({{ . }}){{ end }}
-              {{ with .calculator }}</a>{{ end }}
-            {{ else }}{{ . }}{{ end }}
-          {{ else }} - {{ end }} /
-          {{ with .endlag.whiff }}
-            {{ if isset . "bothHits" }}
-              <br>{{ .bothHits }} (Whiff both Hit 1-2)
-              <br>{{ .onlyHit2 }} (Whiff only Hit 2)
-            {{- else }}{{ . }}{{ end -}}
-          {{ else }} - {{ end -}}<br>
+        {{ if and (isset .endlag "hit") (isset .endlag "whiff") }}
+          {{ if reflect.IsMap .endlag.hit }}
+            {{ with .endlag.hit.calculator }}
+              <a href="{{ .link }}" title="{{ .description }}" target="_blank" rel="noopener noreferrer">
+            {{ end }}
+            {{ with .endlag.hit.min }}{{ . }}-{{ end -}}
+            {{ with .endlag.hit.max }}{{ . }}{{ end }}
+            {{ with .endlag.hit.basedOn }}({{ . }}){{ end }}
+            {{ with .endlag.hit.calculator }}</a>{{ end }}
+          {{ else }}{{ .endlag.hit }}{{ end }} /
+          {{ if isset .endlag.whiff "bothHits" }}
+            <br>{{ .endlag.whiff.bothHits }} (Whiff both Hit 1-2)
+            <br>{{ .endlag.whiff.onlyHit2 }} (Whiff only Hit 2)
+          {{- else }}{{ .endlag.whiff }}{{ end -}}<br>
+        {{ else if isset .endlag "hit" }}Hit: {{ .endlag.hit }}<br>
+        {{ else if isset .endlag "whiff" }}Whiff: {{ .endlag.whiff }}<br>
         {{ end }}
+        {{ if isset .endlag "bounce" }}Bounce: {{ .endlag.bounce }}{{ end }}
         {{ if reflect.IsMap .endlag }}
           {{ with .endlag.min }}{{ . }}-{{ end -}}
           {{ with .endlag.max }}{{ . }}{{ end }}
@@ -735,8 +734,8 @@
           {{ .with }}
           {{- with .condition }} ({{ . }}){{ end }}
           {{- with .input }} (Input {{ . }}){{ end }}
-          {{- with or (isset . "during") (isset . "windows")
-            (isset . "hit") (isset . "on") (isset . "from") }}:{{ end }}
+          {{- with or (isset . "during") (isset . "windows") (isset . "hit")
+                      (isset . "min") (isset . "on") (isset . "from") }}:{{ end }}
           {{ with .last }}Last {{ . }}f{{ end }}
           {{ with .during }}{{ title . }}{{ end }}
           {{ with .windows -}}
