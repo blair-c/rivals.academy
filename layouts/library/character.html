@@ -193,9 +193,11 @@
             {{ partial "partials/move-display.html" $move }}
           {{ else }}
             {{ range $move }}
-              {{ if isset . "name" }}<h4 id="{{ $attack }}-{{ replace (lower .name) " " "-" }}">
-                {{ .name }}{{ with .cost }} ({{ . }} Gems){{ end }}
-              </h4>{{ end }}
+              {{ if isset . "name" }}
+                <h4 id="{{ $attack }}-{{ replace (replace (lower .name) " " "-") ":" "" }}">
+                  {{ .name }}{{ with .cost }} ({{ . }} Gems){{ end }}
+                </h4>
+              {{ end }}
               {{ partial "partials/move-display.html" . }}
             {{ end }}
           {{ end }}
@@ -204,7 +206,7 @@
 
       {{ with index $c "taunt" }}
         {{ $.RenderString "### Taunt" }}
-        {{ with .name }}<h4 id="taunt-{{ replace (lower .) " " "-" }}">{{ . }}</h4>{{ end }}
+        {{ with .name }}<h4 id="taunt-{{ replace (replace (lower .) " " "-") ":" "" }}">{{ . }}</h4>{{ end }}
         {{ partial "partials/move-display.html" . }}
       {{ end }}
     </article>
