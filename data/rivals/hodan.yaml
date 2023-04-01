@@ -1692,8 +1692,8 @@ upSpecial:
   notes:
   - It is not possible to capture Sweatwhirls if they have been parried.
   image:
-    baseRes: https://rivals.academy/library/hodan/up-special.png
-    highRes: https://rivals.academy/library/hodan/1080_up-special.png
+    baseRes: https://rivals.academy/library/hodan/up-special-charged.png
+    highRes: https://rivals.academy/library/hodan/1080_up-special-charged.png
 
 downSpecial:
 - hitboxes:
