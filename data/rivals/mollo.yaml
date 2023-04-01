@@ -1267,6 +1267,7 @@ upSpecial:
     highRes: https://rivals.academy/library/mollo/1080_up-special.png
 
 downSpecial:
+  name: Bat
   hitboxes:
   - name: Hit 1
     startup: 38
