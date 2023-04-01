@@ -183,14 +183,17 @@
       }}
         {{ $.RenderString (print "## " .section " Attacks") }}
         {{ range .attacks }}
+          {{ $attack := replace (lower (humanize .)) " " "-" }}
           {{ $.RenderString (print "### " (humanize . | title)) }}
           {{ $move := index $c . }}
           {{ if reflect.IsMap $move }}
-            {{ with $move.name }}<h4>{{ . }}</h4>{{ end }}
+            {{ with $move.name }}
+              <h4 id="{{ $attack }}-{{ replace (lower .) " " "-" }}">{{ . }}</h4>
+            {{ end }}
             {{ partial "partials/move-display.html" $move }}
           {{ else }}
             {{ range $move }}
-              {{ if isset . "name" }}<h4>
+              {{ if isset . "name" }}<h4 id="{{ $attack }}-{{ replace (lower .name) " " "-" }}">
                 {{ .name }}{{ with .cost }} ({{ . }} Gems){{ end }}
               </h4>{{ end }}
               {{ partial "partials/move-display.html" . }}
@@ -201,7 +204,7 @@
 
       {{ with index $c "taunt" }}
         {{ $.RenderString "### Taunt" }}
-        {{ with .name }}<h4>{{ . }}</h4>{{ end }}
+        {{ with .name }}<h4 id="taunt-{{ replace (lower .) " " "-" }}">{{ . }}</h4>{{ end }}
         {{ partial "partials/move-display.html" . }}
       {{ end }}
     </article>
