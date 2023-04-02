@@ -194,7 +194,7 @@
           {{ else }}
             {{ range $move }}
               {{ if isset . "name" }}
-                <h4 id="{{ $attack }}-{{ replace (replace (replace (lower .name) " " "-") ":" "") "/" "-" }}">
+                <h4 id="{{ $attack }}-{{ replace (replace (replace (replace (replace (lower .name) " " "-") ":" "") "/" "-") "(" "") ")" "" }}">
                   {{ .name }}{{ with .cost }} ({{ . }} Gems){{ end }}
                 </h4>
               {{ end }}
