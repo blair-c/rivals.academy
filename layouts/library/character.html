@@ -198,9 +198,11 @@
       {{ end }}
 
       {{ with index $c "taunt" }}
-        {{ $.RenderString "### Taunt" }}
-        {{ with .name }}<h4 id="taunt-{{ replace (lower .) " " "-" }}">{{ . }}</h4>{{ end }}
-        {{ partial "partials/move-display.html" . }}
+        {{ range . }}
+          {{ $.RenderString "### Taunt" }}
+          {{ with .name }}<h4 id="taunt-{{ replace (lower .) " " "-" }}">{{ . }}</h4>{{ end }}
+          {{ partial "partials/move-display.html" . }}
+        {{ end }}
       {{ end }}
     </article>
     {{ partial "partials/library-footer.html" . }}
