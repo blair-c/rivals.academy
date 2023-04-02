@@ -65,7 +65,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes:
   - name: Jab 1
     startup: 5
     active:
@@ -171,7 +171,7 @@ jab:
     highRes: https://rivals.academy/library/forsburn/1080_jab.png
 
 dashAttack:
-  hitboxes:
+- hitboxes:
   - startup: 8
     active:
       from: 9
@@ -199,7 +199,7 @@ dashAttack:
     highRes: https://rivals.academy/library/forsburn/1080_dash-attack.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 6
     active:
@@ -251,7 +251,7 @@ forwardTilt:
     highRes: https://rivals.academy/library/forsburn/1080_forward-tilt.png
 
 upTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 9
     active:
@@ -303,7 +303,7 @@ upTilt:
     highRes: https://rivals.academy/library/forsburn/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - startup: 6
     active:
       from: 7
@@ -332,7 +332,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1 (Behind)
     startup: 6
     active:
@@ -428,7 +428,7 @@ neutralAir:
     highRes: https://rivals.academy/library/forsburn/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes:
   - startup: 6
     active:
       from: 7
@@ -459,7 +459,7 @@ forwardAir:
     highRes: https://rivals.academy/library/forsburn/1080_forward-air.png
 
 backAir:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 13
     active:
@@ -512,7 +512,7 @@ backAir:
     highRes: https://rivals.academy/library/forsburn/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes:
   - startup: 7
     active:
       from: 8
@@ -546,7 +546,7 @@ upAir:
     highRes: https://rivals.academy/library/forsburn/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes:
   - name: Front
     startup: 11
     active:
@@ -602,7 +602,7 @@ downAir:
 
 # Strongs
 forwardStrong:
-  hitboxes:
+- hitboxes:
   - name: Cape
     startup: 14
     active:
@@ -684,7 +684,7 @@ forwardStrong:
     highRes: https://rivals.academy/library/forsburn/1080_forward-strong.png
 
 upStrong:
-  hitboxes:
+- hitboxes:
   - name: Cape Hit 1
     active:
       from: 15
@@ -804,7 +804,7 @@ upStrong:
     highRes: https://rivals.academy/library/forsburn/1080_up-strong.png
 
 downStrong:
-  hitboxes:
+- hitboxes:
   - startup: 8
     active:
       from: 9
@@ -833,7 +833,7 @@ downStrong:
 
 # Specials
 neutralSpecial:
-  name: Release Smoke
+- name: Release Smoke
   hitboxes:
   - smoke:
       inactive: [26, 36, 46, 56, 66, 76, 86, 96, 106, 116]
@@ -990,7 +990,7 @@ sideSpecial:
     highRes: https://rivals.academy/library/forsburn/1080_side-special-empowered.png
 
 upSpecial:
-  hitboxes:
+- hitboxes:
   - startup: 18
     intangible:
       from: 19

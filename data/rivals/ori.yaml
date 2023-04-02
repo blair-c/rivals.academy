@@ -67,7 +67,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes:
   - name: Jab 1
     startup: 2
     active:
@@ -173,7 +173,7 @@ jab:
     highRes: https://rivals.academy/library/ori/1080_jab.png
 
 dashAttack:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 8
     active:
@@ -223,7 +223,7 @@ dashAttack:
     highRes: https://rivals.academy/library/ori/1080_dash-attack.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes:
   - startup: 6
     active:
       from: 7
@@ -251,7 +251,7 @@ forwardTilt:
     highRes: https://rivals.academy/library/ori/1080_forward-tilt.png
 
 upTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 7
     active:
@@ -304,7 +304,7 @@ upTilt:
     highRes: https://rivals.academy/library/ori/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 7
     active:
@@ -357,7 +357,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - startup: 4
     active:
       from: 5
@@ -388,7 +388,7 @@ neutralAir:
     highRes: https://rivals.academy/library/ori/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 6
     active:
@@ -441,7 +441,7 @@ forwardAir:
     highRes: https://rivals.academy/library/ori/1080_forward-air.png
 
 backAir:
-  hitboxes:
+- hitboxes:
   - name: Early
     startup: 9
     active:
@@ -521,7 +521,7 @@ backAir:
     highRes: https://rivals.academy/library/ori/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes:
   - name: Front
     startup: 5
     active:
@@ -595,7 +595,7 @@ upAir:
     highRes: https://rivals.academy/library/ori/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes:
   - name: Falling
     startup: 15
     active:
@@ -1148,7 +1148,7 @@ neutralSpecial:
     highRes: https://rivals.academy/library/ori/1080_neutral-special-charged.png
 
 sideSpecial:
-  name: Light Orb
+- name: Light Orb
   hitboxes:
   - name: Projectile
     startup:
@@ -1213,7 +1213,7 @@ sideSpecial:
     highRes: https://rivals.academy/library/ori/1080_side-special.png
 
 upSpecial:
-  name: Parasol
+- name: Parasol
   hitboxes:
   - name: Hit 1-4
     startup: 16

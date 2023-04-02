@@ -67,7 +67,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes:
   - name: Jab 1
     startup: 3
     active:
@@ -162,7 +162,7 @@ jab:
     highRes: https://rivals.academy/library/maypul/1080_jab.png
 
 dashAttack:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 8
     active:
@@ -213,7 +213,7 @@ dashAttack:
     highRes: https://rivals.academy/library/maypul/1080_dash-attack.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes:
   - startup: 4
     active:
       from: 5
@@ -241,7 +241,7 @@ forwardTilt:
     highRes: https://rivals.academy/library/maypul/1080_forward-tilt.png
 
 upTilt:
-  hitboxes:
+- hitboxes:
   - startup: 8
     active:
       from: 9
@@ -269,7 +269,7 @@ upTilt:
     highRes: https://rivals.academy/library/maypul/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - startup: 4
     active:
       from: 5
@@ -298,7 +298,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - name: Early
     startup: 8
     active:
@@ -351,7 +351,7 @@ neutralAir:
     highRes: https://rivals.academy/library/maypul/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 12
     active:
@@ -383,7 +383,7 @@ forwardAir:
     highRes: https://rivals.academy/library/maypul/1080_forward-air.png
 
 backAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 6
     active:
@@ -436,7 +436,7 @@ backAir:
     highRes: https://rivals.academy/library/maypul/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 8
     active:
@@ -505,7 +505,7 @@ upAir:
     highRes: https://rivals.academy/library/maypul/1080_up-air.png
 
 downAir:
-  name: Root
+- name: Root
   hitboxes:
   - startup:
       initial: 7
@@ -543,7 +543,7 @@ downAir:
 
 # Strongs
 forwardStrong:
-  hitboxes:
+- hitboxes:
   - startup: 20
     active:
       from: 21
@@ -573,7 +573,7 @@ forwardStrong:
     highRes: https://rivals.academy/library/maypul/1080_forward-strong.png
 
 upStrong:
-  hitboxes:
+- hitboxes:
   - startup: 22
     active:
       from: 23
@@ -623,7 +623,7 @@ upStrong:
     highRes: https://rivals.academy/library/maypul/1080_up-strong.png
 
 downStrong:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 12
     active:
@@ -675,7 +675,7 @@ downStrong:
 
 # Specials
 neutralSpecial:
-  name: Seed
+- name: Seed
   hitboxes:
   - startup: 6
     active:
@@ -702,7 +702,7 @@ neutralSpecial:
     highRes: https://rivals.academy/library/maypul/1080_neutral-special.png
 
 sideSpecial:
-  hitboxes:
+- hitboxes:
   - startup: 8
     active:
       from: 9

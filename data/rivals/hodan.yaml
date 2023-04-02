@@ -65,7 +65,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes:
   - name: Jab 1
     startup: 5
     active:
@@ -227,7 +227,7 @@ dashAttack:
     highRes: https://rivals.academy/library/hodan/1080_dash-attack-charged.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes:
   - startup: 17
     active:
       from: 18
@@ -397,7 +397,7 @@ upTilt:
     highRes: https://rivals.academy/library/hodan/1080_up-tilt-charged.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - startup: 5
     active:
       from: 6
@@ -444,7 +444,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - name: Early
     startup: 7
     active:
@@ -626,7 +626,7 @@ forwardAir:
     highRes: https://rivals.academy/library/hodan/1080_forward-air-charged.png
 
 backAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 5
     active:
@@ -679,7 +679,7 @@ backAir:
     highRes: https://rivals.academy/library/hodan/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 8
     active:
@@ -740,7 +740,7 @@ upAir:
     highRes: https://rivals.academy/library/hodan/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 16
     active:
@@ -794,8 +794,7 @@ downAir:
 
 # Strongs
 forwardStrong:
-  hitboxes:
-  hitboxes:
+- hitboxes:
   - name: Early
     startup: 19
     active:
@@ -847,7 +846,7 @@ forwardStrong:
     highRes: https://rivals.academy/library/hodan/1080_forward-strong.png
 
 upStrong:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 12
     active:
@@ -1067,7 +1066,7 @@ downStrong:
 
 # Specials
 neutralSpecial:
-  hitboxes:
+- hitboxes:
   - name: Spin
     startup: 6
     capture:

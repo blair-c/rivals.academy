@@ -239,7 +239,7 @@ jab:
     highRes: https://rivals.academy/library/sylvanos/1080_jab-special.png
 
 dashAttack:
-  hitboxes:
+- hitboxes:
   - name: Early
     startup: 6
     active:
@@ -375,7 +375,7 @@ forwardTilt:
   - Hitting only a flower will cause the players move to have halved hitpause.
 
 upTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 8
     active:
@@ -425,7 +425,7 @@ upTilt:
     highRes: https://rivals.academy/library/sylvanos/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1 (Sour)
     startup: 9
     active:
@@ -515,7 +515,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - startup: 8
     active:
     - "on": 9
@@ -552,7 +552,7 @@ neutralAir:
     highRes: https://rivals.academy/library/sylvanos/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 12
     active:
@@ -783,7 +783,7 @@ backAir:
   - Landing during unpin cancel endlag will incur whiff landing lag even if the attack hit an opponent prior to this. Allowing pin to end naturally will cause landing lag to consider if the move had hit an opponent or whiffed prior to the pin.					
 
 upAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 6
     active:
@@ -838,7 +838,7 @@ upAir:
     highRes: https://rivals.academy/library/sylvanos/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes:
   - name: Spike
     startup: 8
     active:
@@ -893,7 +893,7 @@ downAir:
 
 # Strongs
 forwardStrong:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 14
     active:
@@ -946,7 +946,7 @@ forwardStrong:
     highRes: https://rivals.academy/library/sylvanos/1080_forward-strong.png
 
 upStrong:
-  hitboxes:
+- hitboxes:
   - name: Top
     startup: 26
     active:
@@ -1022,7 +1022,7 @@ upStrong:
     highRes: https://rivals.academy/library/sylvanos/1080_up-strong.png
 
 downStrong:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 10
     active:
@@ -1121,7 +1121,7 @@ neutralSpecial:
   - Hitting only a flower will cause the players move to have halved hitpause.
 
 sideSpecial:
-  name: Beast Dash
+- name: Beast Dash
   hitboxes:
   - startup:
       initial: 17
@@ -1453,7 +1453,7 @@ upSpecial:
     highRes: https://rivals.academy/library/sylvanos/1080_up-special-burrow-bite.png
 
 downSpecial:
-  name: Howl
+- name: Howl
   hitboxes:
   - startup:
       initial: 16

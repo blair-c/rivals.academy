@@ -65,7 +65,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes:
   - name: Jab 1
     startup: 4
     active:
@@ -171,7 +171,7 @@ jab:
     highRes: https://rivals.academy/library/olympia/1080_jab.png
 
 dashAttack:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 6
     active:
@@ -218,7 +218,7 @@ dashAttack:
     highRes: https://rivals.academy/library/olympia/1080_dash-attack.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes:
   - startup: 10
     active:
       from: 11
@@ -246,7 +246,7 @@ forwardTilt:
     highRes: https://rivals.academy/library/olympia/1080_forward-tilt.png
 
 upTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 5
     active:
@@ -313,7 +313,7 @@ upTilt:
     highRes: https://rivals.academy/library/olympia/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - startup: 4
     active:
       from: 5
@@ -342,7 +342,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 4
     active:
@@ -395,7 +395,7 @@ neutralAir:
     highRes: https://rivals.academy/library/olympia/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes:
   - startup: 11
     active:
       from: 12
@@ -446,7 +446,7 @@ forwardAir:
     highRes: https://rivals.academy/library/olympia/1080_forward-air.png
 
 backAir:
-  hitboxes:
+- hitboxes:
   - startup: 7
     active:
       from: 8
@@ -482,7 +482,7 @@ backAir:
     highRes: https://rivals.academy/library/olympia/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 6
     active:
@@ -556,7 +556,7 @@ upAir:
     highRes: https://rivals.academy/library/olympia/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes:
   - startup: 14
     active:
       from: 15
@@ -609,7 +609,7 @@ downAir:
 
 # Strongs
 forwardStrong:
-  hitboxes:
+- hitboxes:
   - name: Early
     startup: 22
     active:
@@ -657,7 +657,7 @@ forwardStrong:
     highRes: https://rivals.academy/library/olympia/1080_forward-strong.png
 
 upStrong:
-  hitboxes:
+- hitboxes:
   - name: Hit 1 (Lower)
     startup: 15
     active:
@@ -722,7 +722,7 @@ upStrong:
     highRes: https://rivals.academy/library/olympia/1080_up-strong.png
 
 downStrong:
-  hitboxes:
+- hitboxes:
   - startup: 23
     active:
       from: 24
@@ -869,7 +869,7 @@ neutralSpecial:
     highRes: https://rivals.academy/library/olympia/1080_crystallize-break-out.png
 
 sideSpecial:
-  hitboxes:
+- hitboxes:
   - startup:
       initial: 9
       charge:
@@ -950,7 +950,7 @@ sideSpecial:
     highRes: https://rivals.academy/library/olympia/1080_side-special.png
 
 upSpecial:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 7
     active:

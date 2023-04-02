@@ -65,7 +65,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes:
   - startup: 4
     active:
       from: 5
@@ -102,7 +102,7 @@ jab:
     highRes: https://rivals.academy/library/elliana/1080_jab.png
 
 dashAttack:
-  hitboxes:
+- hitboxes:
   - startup: 6
     active:
       minimum:
@@ -147,7 +147,7 @@ dashAttack:
     highRes: https://rivals.academy/library/elliana/1080_dash-attack.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 7
     active:
@@ -211,7 +211,7 @@ forwardTilt:
     highRes: https://rivals.academy/library/elliana/1080_forward-tilt.png
 
 upTilt:
-  hitboxes:
+- hitboxes:
   - name: Claw
     startup: 10
     active:
@@ -291,7 +291,7 @@ upTilt:
     highRes: https://rivals.academy/library/elliana/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 6
     active:
@@ -362,7 +362,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - name: Center
     startup: 6
     active:
@@ -416,7 +416,7 @@ neutralAir:
     highRes: https://rivals.academy/library/elliana/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 8
     active:
@@ -473,7 +473,7 @@ forwardAir:
     highRes: https://rivals.academy/library/elliana/1080_forward-air.png
 
 backAir:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 11
     active:
@@ -527,7 +527,7 @@ backAir:
     highRes: https://rivals.academy/library/elliana/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes:
   - startup: 8
     active:
     - from: 9
@@ -565,7 +565,7 @@ upAir:
     highRes: https://rivals.academy/library/elliana/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 9
     active:
@@ -985,7 +985,7 @@ downStrong:
 
 # Specials
 neutralSpecial:
-  hitboxes:
+- hitboxes:
   - name: Fist
     startup: 32
     active:

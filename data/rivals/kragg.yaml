@@ -65,7 +65,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes:
   - name: Jab 1
     startup: 4
     active:
@@ -178,7 +178,7 @@ jab:
     highRes: https://rivals.academy/library/kragg/1080_jab.png
 
 dashAttack:
-  hitboxes:
+- hitboxes:
   - startup: 7
     active:
       from: 8
@@ -214,7 +214,7 @@ dashAttack:
     highRes: https://rivals.academy/library/kragg/1080_dash-attack.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes:
   - startup: 9
     active:
       from: 10
@@ -242,7 +242,7 @@ forwardTilt:
     highRes: https://rivals.academy/library/kragg/1080_forward-tilt.png
 
 upTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 4
     active:
@@ -292,7 +292,7 @@ upTilt:
     highRes: https://rivals.academy/library/kragg/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - startup: 3
     active:
       from: 4
@@ -321,7 +321,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 4
     active:
@@ -419,7 +419,7 @@ neutralAir:
     highRes: https://rivals.academy/library/kragg/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes:
   - startup: 12
     active:
       from: 12
@@ -450,7 +450,7 @@ forwardAir:
     highRes: https://rivals.academy/library/kragg/1080_forward-air.png
 
 backAir:
-  hitboxes:
+- hitboxes:
   - startup: 7
     active:
       from: 8
@@ -481,7 +481,7 @@ backAir:
     highRes: https://rivals.academy/library/kragg/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes:
   - startup: 12
     active:
       from: 13
@@ -513,7 +513,7 @@ upAir:
     highRes: https://rivals.academy/library/kragg/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes:
   - startup: 13
     active:
       from: 14
@@ -545,7 +545,7 @@ downAir:
 
 # Strongs
 forwardStrong:
-  hitboxes:
+- hitboxes:
   - startup: 24
     active:
       from: 25
@@ -574,7 +574,7 @@ forwardStrong:
     highRes: https://rivals.academy/library/kragg/1080_forward-strong.png
 
 upStrong:
-  hitboxes:
+- hitboxes:
   - startup: 16
     active:
       from: 17
@@ -622,7 +622,7 @@ upStrong:
     highRes: https://rivals.academy/library/kragg/1080_up-strong.png
 
 downStrong:
-  hitboxes:
+- hitboxes:
   - name: Front/Behind
     startup: 12
     active:
@@ -1141,7 +1141,7 @@ downSpecial:
     highRes: https://rivals.academy/library/kragg/1080_down-special-aerial.png
 
 taunt:
-  hitboxes:
+- hitboxes:
   - startup: 12
     active:
       from: 13

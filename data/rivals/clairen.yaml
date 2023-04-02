@@ -65,7 +65,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 5
     active:
@@ -121,7 +121,7 @@ jab:
     highRes: https://rivals.academy/library/clairen/1080_jab.png
 
 dashAttack:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 18
     active:
@@ -183,7 +183,7 @@ dashAttack:
     highRes: https://rivals.academy/library/clairen/1080_dash-attack.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 7
     active:
@@ -231,7 +231,7 @@ forwardTilt:
     highRes: https://rivals.academy/library/clairen/1080_forward-tilt.png
 
 upTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1 Sour
     startup: 8
     active:
@@ -316,7 +316,7 @@ upTilt:
     highRes: https://rivals.academy/library/clairen/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 6
     active:
@@ -370,7 +370,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-5 Sour
     startup: 9
     active:
@@ -482,7 +482,7 @@ neutralAir:
     highRes: https://rivals.academy/library/clairen/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1 Sour
     startup: 6
     active:
@@ -604,7 +604,7 @@ forwardAir:
     highRes: https://rivals.academy/library/clairen/1080_forward-air.png
 
 backAir:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 8
     active:
@@ -658,7 +658,7 @@ backAir:
     highRes: https://rivals.academy/library/clairen/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes:
   - name: Sour (Blade)
     startup: 15
     active:
@@ -733,7 +733,7 @@ upAir:
     highRes: https://rivals.academy/library/clairen/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1 Sour
     startup: 15
     active:
@@ -831,7 +831,7 @@ downAir:
 
 # Strongs
 forwardStrong:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 10
     active:
@@ -926,7 +926,7 @@ forwardStrong:
     highRes: https://rivals.academy/library/clairen/1080_forward-strong.png
 
 upStrong:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 11
     active:
@@ -991,7 +991,7 @@ upStrong:
     highRes: https://rivals.academy/library/clairen/1080_up-strong.png
 
 downStrong:
-  hitboxes:
+- hitboxes:
   - name: Hit 1 Sour
     startup: 7
     active:
@@ -1081,7 +1081,7 @@ downStrong:
 
 # Specials
 neutralSpecial:
-  hitboxes:
+- hitboxes:
   - name: Grab
     startup: 8
     active:
@@ -1177,7 +1177,7 @@ neutralSpecial:
     highRes: https://rivals.academy/library/clairen/1080_neutral-special.png
 
 sideSpecial:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 23
     intangible:
@@ -1249,7 +1249,7 @@ sideSpecial:
     highRes: https://rivals.academy/library/clairen/1080_side-special.png
 
 upSpecial:
-  hitboxes:
+- hitboxes:
   - name: Rising Hit 1
     startup: 15
     active:

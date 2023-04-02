@@ -65,7 +65,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes:
   - name: Jab 1
     startup: 5
     active:
@@ -190,7 +190,7 @@ jab:
     highRes: https://rivals.academy/library/etalus/1080_jab.png
 
 dashAttack:
-  hitboxes:
+- hitboxes:
   - startup: 8
     active:
       from: 9
@@ -265,7 +265,7 @@ dashAttack:
     highRes: https://rivals.academy/library/etalus/1080_dash-attack.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1 (Behind)
     startup: 8
     active:
@@ -337,7 +337,7 @@ forwardTilt:
     highRes: https://rivals.academy/library/etalus/1080_forward-tilt.png
 
 upTilt:
-  hitboxes:
+- hitboxes:
   - startup: 8
     active:
       from: 9
@@ -365,7 +365,7 @@ upTilt:
     highRes: https://rivals.academy/library/etalus/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 5
     active:
@@ -437,7 +437,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 5
     active:
@@ -493,7 +493,7 @@ neutralAir:
     highRes: https://rivals.academy/library/etalus/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes:
   - name: Armor
     startup: 2
     weakArmor:
@@ -551,7 +551,7 @@ forwardAir:
     highRes: https://rivals.academy/library/etalus/1080_forward-air.png
 
 backAir:
-  hitboxes:
+- hitboxes:
   - startup: 9
     active:
       from: 10
@@ -582,7 +582,7 @@ backAir:
     highRes: https://rivals.academy/library/etalus/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes:
   - name: Grab
     startup: 8
     active:
@@ -662,7 +662,7 @@ upAir:
     highRes: https://rivals.academy/library/etalus/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 12
     active:
@@ -1235,7 +1235,7 @@ neutralSpecial:
     highRes: https://rivals.academy/library/etalus/1080_neutral-special.png
 
 sideSpecial:
-  name: Icicles
+- name: Icicles
   hitboxes:
   - startup:
       initial: 11

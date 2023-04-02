@@ -65,7 +65,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes:
   - name: Jab 1
     startup: 4
     active:
@@ -230,7 +230,7 @@ jab:
     highRes: https://rivals.academy/library/ranno/1080_jab.png
 
 dashAttack:
-  hitboxes:
+- hitboxes:
   - startup: 6
     active:
       from: 7
@@ -258,7 +258,7 @@ dashAttack:
     highRes: https://rivals.academy/library/ranno/1080_dash-attack.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 4
     active:
@@ -325,7 +325,7 @@ forwardTilt:
     highRes: https://rivals.academy/library/ranno/1080_forward-tilt.png
 
 upTilt:
-  hitboxes:
+- hitboxes:
   - name: Front
     startup: 8
     active:
@@ -376,7 +376,7 @@ upTilt:
     highRes: https://rivals.academy/library/ranno/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - startup: 4
     active:
       from: 5
@@ -405,7 +405,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - startup: 3
     active:
       from: 4
@@ -463,7 +463,7 @@ neutralAir:
     highRes: https://rivals.academy/library/ranno/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes:
   - startup: 7
     active:
       from: 8
@@ -536,7 +536,7 @@ forwardAir:
     highRes: https://rivals.academy/library/ranno/1080_forward-air.png
 
 backAir:
-  hitboxes:
+- hitboxes:
   - name: Sweet
     startup: 4
     active:
@@ -596,7 +596,7 @@ backAir:
     highRes: https://rivals.academy/library/ranno/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 4
     active:
@@ -649,7 +649,7 @@ upAir:
     highRes: https://rivals.academy/library/ranno/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 12
     active:
@@ -735,7 +735,7 @@ downAir:
 
 # Strongs
 forwardStrong:
-  hitboxes:
+- hitboxes:
   - name: Sweet
     startup: 14
     active:
@@ -786,7 +786,7 @@ forwardStrong:
     highRes: https://rivals.academy/library/ranno/1080_forward-strong.png
 
 upStrong:
-  hitboxes:
+- hitboxes:
   - name: Sweet
     startup: 10
     active:
@@ -854,7 +854,7 @@ upStrong:
     highRes: https://rivals.academy/library/ranno/1080_up-strong.png
 
 downStrong:
-  hitboxes:
+- hitboxes:
   - name: Above
     startup: 22
     active:
@@ -923,7 +923,7 @@ downStrong:
 
 # Specials
 neutralSpecial:
-  name: Darts
+- name: Poison Darts
   hitboxes:
   - name: Charge
     startup: 9

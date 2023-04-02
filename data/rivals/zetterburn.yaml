@@ -65,7 +65,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes:
   - name: Jab 1
     startup: 5
     active:
@@ -171,7 +171,7 @@ jab:
     highRes: https://rivals.academy/library/zetterburn/1080_jab.png
 
 dashAttack:
-  hitboxes:
+- hitboxes:
   - name: Front
     startup: 10
     active:
@@ -226,7 +226,7 @@ dashAttack:
     highRes: https://rivals.academy/library/zetterburn/1080_dash-attack.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 8
     active:
@@ -274,7 +274,7 @@ forwardTilt:
     highRes: https://rivals.academy/library/zetterburn/1080_forward-tilt.png
 
 upTilt:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 8
     active:
@@ -339,7 +339,7 @@ upTilt:
     highRes: https://rivals.academy/library/zetterburn/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - startup: 4
     active:
       from: 5
@@ -368,7 +368,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1-2
     startup: 5
     active:
@@ -424,7 +424,7 @@ neutralAir:
     highRes: https://rivals.academy/library/zetterburn/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 10
     active:
@@ -498,7 +498,7 @@ forwardAir:
     highRes: https://rivals.academy/library/zetterburn/1080_forward-air.png
 
 backAir:
-  hitboxes:
+- hitboxes:
   - startup: 9
     active:
       from: 10
@@ -530,7 +530,7 @@ backAir:
     highRes: https://rivals.academy/library/zetterburn/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes:
   - name: Sour
     startup: 8
     active:
@@ -604,7 +604,7 @@ upAir:
     highRes: https://rivals.academy/library/zetterburn/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes:
   - startup: 13
     active:
       from: 14
@@ -636,7 +636,7 @@ downAir:
 
 # Strongs
 forwardStrong:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 13
     active:
@@ -712,7 +712,7 @@ forwardStrong:
     highRes: https://rivals.academy/library/zetterburn/1080_forward-strong.png
 
 upStrong:
-  hitboxes:
+- hitboxes:
   - startup: 11
     active:
       "on": 12
@@ -762,7 +762,7 @@ upStrong:
     highRes: https://rivals.academy/library/zetterburn/1080_up-strong.png
 
 downStrong:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 4
     active:
@@ -838,7 +838,7 @@ downStrong:
 
 # Specials
 neutralSpecial:
-  name: Shine
+- name: Shine
   hitboxes:
   - name: Uncharged
     startup: 1
@@ -901,7 +901,7 @@ neutralSpecial:
     highRes: https://rivals.academy/library/zetterburn/1080_neutral-special.png
 
 sideSpecial:
-  name: Fireball
+- name: Fireball
   hitboxes:
   - name: Mane
     startup: 10
@@ -951,7 +951,7 @@ sideSpecial:
     highRes: https://rivals.academy/library/zetterburn/1080_side-special.png
 
 upSpecial:
-  hitboxes:
+- hitboxes:
   - name: Charging
     startup: 16
     active:

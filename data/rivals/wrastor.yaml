@@ -65,7 +65,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes::
   - name: Jab 1
     startup: 4
     active:
@@ -171,7 +171,7 @@ jab:
     highRes: https://rivals.academy/library/wrastor/1080_jab.png
 
 dashAttack:
-  hitboxes:
+- hitboxes::
   - name: Ground
     startup: 6
     active:
@@ -233,7 +233,7 @@ dashAttack:
     highRes: https://rivals.academy/library/wrastor/1080_dash-attack.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes::
   - name: Hit 1-2
     startup: 9
     active:
@@ -294,7 +294,7 @@ forwardTilt:
     highRes: https://rivals.academy/library/wrastor/1080_forward-tilt.png
 
 upTilt:
-  hitboxes:
+- hitboxes::
   - name: Front
     startup: 14
     active:
@@ -374,7 +374,7 @@ upTilt:
     highRes: https://rivals.academy/library/wrastor/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes::
   - startup: 6
     active:
       from: 7
@@ -409,7 +409,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes::
   - name: Hit 1
     startup: 4
     active:
@@ -465,7 +465,7 @@ neutralAir:
     highRes: https://rivals.academy/library/wrastor/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes::
   - name: Inside
     startup: 8
     active:
@@ -539,7 +539,7 @@ forwardAir:
     highRes: https://rivals.academy/library/wrastor/1080_forward-air.png
 
 backAir:
-  hitboxes:
+- hitboxes::
   - name: Hit 1
     startup: 5
     active:
@@ -592,7 +592,7 @@ backAir:
     highRes: https://rivals.academy/library/wrastor/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes::
   - name: Hit 1
     startup: 8
     active:
@@ -666,7 +666,7 @@ upAir:
     highRes: https://rivals.academy/library/wrastor/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes::
   - startup: 8
     active:
       from: 9
@@ -720,7 +720,7 @@ downAir:
 
 # Strongs
 forwardStrong:
-  hitboxes:
+- hitboxes::
   - name: Sour
     startup: 13
     active:
@@ -773,7 +773,7 @@ forwardStrong:
     highRes: https://rivals.academy/library/wrastor/1080_forward-strong.png
 
 upStrong:
-  hitboxes:
+- hitboxes::
   - name: Sour
     startup: 16
     active:
@@ -826,7 +826,7 @@ upStrong:
     highRes: https://rivals.academy/library/wrastor/1080_up-strong.png
 
 downStrong:
-  hitboxes:
+- hitboxes::
   - startup: 11
     active:
       from: 12
@@ -858,7 +858,7 @@ downStrong:
 
 # Specials
 neutralSpecial:
-  name: Tornado
+- name: Tornado
   hitboxes:
   - name: Bottom
     startup: 7
@@ -988,7 +988,7 @@ neutralSpecial:
     highRes: https://rivals.academy/library/wrastor/1080_neutral-special.png
 
 sideSpecial:
-  name: Slipstream
+- name: Slipstream
   hitboxes:
   - startup: 7
     active:
@@ -1023,7 +1023,7 @@ sideSpecial:
     highRes: https://rivals.academy/library/wrastor/1080_side-special.png
 
 upSpecial:
-  hitboxes:
+- hitboxes::
   - name: Sweet
     startup: 4
     active:
@@ -1089,7 +1089,7 @@ upSpecial:
     highRes: https://rivals.academy/library/wrastor/1080_up-special.png
 
 downSpecial:
-  hitboxes:
+- hitboxes::
   - name: Hit 1 (Grounded)
     startup: 16
     active:

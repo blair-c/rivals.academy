@@ -67,7 +67,7 @@ hurtbox:
 
 # Normals
 jab:
-  hitboxes:
+- hitboxes:
   - name: Jab 1
     startup: 5
     active:
@@ -212,7 +212,7 @@ jab:
     highRes: https://rivals.academy/library/mollo/1080_jab.png
 
 dashAttack:
-  hitboxes:
+- hitboxes:
   - startup: 6
     active:
       from: 7
@@ -267,7 +267,7 @@ dashAttack:
     highRes: https://rivals.academy/library/mollo/1080_dash-attack.png
 
 forwardTilt:
-  hitboxes:
+- hitboxes:
   - startup: 9
     active:
       from: 10
@@ -295,7 +295,7 @@ forwardTilt:
     highRes: https://rivals.academy/library/mollo/1080_forward-tilt.png
 
 upTilt:
-  hitboxes:
+- hitboxes:
   - startup: 6
     active:
     - from: 7
@@ -326,7 +326,7 @@ upTilt:
     highRes: https://rivals.academy/library/mollo/1080_up-tilt.png
 
 downTilt:
-  hitboxes:
+- hitboxes:
   - startup: 4
     active:
       from: 5
@@ -355,7 +355,7 @@ downTilt:
 
 # Aerials
 neutralAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 6
     active:
@@ -408,7 +408,7 @@ neutralAir:
     highRes: https://rivals.academy/library/mollo/1080_neutral-air.png
 
 forwardAir:
-  hitboxes:
+- hitboxes:
   - startup:
       initial: 5
       charge:
@@ -454,7 +454,7 @@ forwardAir:
     highRes: https://rivals.academy/library/mollo/1080_forward-air.png
 
 backAir:
-  hitboxes:
+- hitboxes:
   - startup: 6
     active:
       from: 7
@@ -485,7 +485,7 @@ backAir:
     highRes: https://rivals.academy/library/mollo/1080_back-air.png
 
 upAir:
-  hitboxes:
+- hitboxes:
   - name: Hit 1
     startup: 8
     active:
@@ -538,7 +538,7 @@ upAir:
     highRes: https://rivals.academy/library/mollo/1080_up-air.png
 
 downAir:
-  hitboxes:
+- hitboxes:
   - name: Spike
     startup: 8
     active:
@@ -1120,7 +1120,7 @@ neutralSpecial:
   
 
 sideSpecial:
-  name: Flare
+- name: Flare
   hitboxes:
   - name: Flare Shot
     startup:
@@ -1183,7 +1183,7 @@ sideSpecial:
     highRes: https://rivals.academy/library/mollo/1080_side-special.png
 
 upSpecial:
-  hitboxes:
+- hitboxes:
   - name: Launch
     startup: 14
     active:
@@ -1267,7 +1267,7 @@ upSpecial:
     highRes: https://rivals.academy/library/mollo/1080_up-special.png
 
 downSpecial:
-  name: Bat
+- name: Bat
   hitboxes:
   - name: Hit 1
     startup: 38
