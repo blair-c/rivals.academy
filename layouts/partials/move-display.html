@@ -668,7 +668,16 @@
             <br>{{ .endlag.whiff.bothHits }} (Whiff both Hit 1-2)
             <br>{{ .endlag.whiff.onlyHit2 }} (Whiff only Hit 2)
           {{- else }}{{ .endlag.whiff }}{{ end -}}<br>
-        {{ else if isset .endlag "hit" }}Hit: {{ .endlag.hit }}<br>
+        {{ else if isset .endlag "hit" }}Hit:
+          {{ if reflect.IsMap .endlag.hit }}
+            {{ with .endlag.hit.calculator }}
+              <a href="{{ .link }}" title="{{ .description }}" target="_blank" rel="noopener noreferrer">
+            {{ end }}
+            {{ with .endlag.hit.min }}{{ . }}-{{ end -}}
+            {{ with .endlag.hit.max }}{{ . }}{{ end }}
+            {{ with .endlag.hit.basedOn }}({{ . }}){{ end }}
+            {{ with .endlag.hit.calculator }}</a>{{ end }}
+          {{ else }}{{ .endlag.hit }}{{ end }}<br>
         {{ else if isset .endlag "whiff" }}Whiff: {{ .endlag.whiff }}<br>
         {{ end }}
         {{ if isset .endlag "bounce" }}Bounce: {{ .endlag.bounce }}{{ end }}
