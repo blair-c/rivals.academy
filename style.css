@@ -718,6 +718,12 @@ article h4 {
   padding-bottom: var(--footer-margin);
 }
 
+#TableOfContents {
+  max-height: fit-content;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+
 #TableOfContents ul {
   list-style: none;
   padding-left: 0;
