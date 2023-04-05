@@ -1360,6 +1360,9 @@ downSpecial:
       from: 7
       to: 23
       frames: 17
+    refresh:
+    - resource: Jump
+      "on": Counter
     endlag: 39
     firstActiveFrame: 53
     cooldown:
@@ -1368,8 +1371,6 @@ downSpecial:
     - "on": Counter
       time: 600
     killsProjectiles: true
-    notes:
-    - Double jump is immediately reset upon successfully countering an attack.
 - name: Plasma Field
   hitboxes:
   - name: Hit 1-2
