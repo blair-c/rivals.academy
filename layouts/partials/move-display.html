@@ -199,7 +199,7 @@
             {{ end }}
           {{ end }}
         {{- else }}{{ .startup }}{{ end }}
-        {{ with .mustConnect }}({{ . }} Must Hit){{ end }}
+        {{ with .mustConnect }}({{ . }} Must Connect){{ end }}
       </td>{{ end }}
 
       {{ if $intangible }}<td>
@@ -535,6 +535,15 @@
                 {{ if .onlyHitsProjectiles }}<br>(Only Hits Projectiles){{ end }}
               {{ end }}
             {{ end }}
+          {{ end }}
+          {{- with .active.onCounter }}On Counter:
+            {{ $len = len . }}
+            {{ range $index, $_ := . }}
+              {{ with .on }}{{ . }}{{ end -}}
+              {{ with .from }}{{ . }}-{{ end -}}
+              {{ with .to }}{{ . }}{{ end -}}
+              {{ if lt (add $index 1) $len }}, {{ end -}}
+            {{ end -}}
           {{ end }}
           {{- with .active.onParry }}On Parry:
             {{ with .on }}{{ . }}{{ end -}}
