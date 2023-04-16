@@ -874,6 +874,7 @@ article h4 {
     background-clip: padding-box;
     background-color: var(--clr-bg);
     border-right: none !important;
+    padding-right: calc(.5rem + 2px) !important;
   }
 
   .sticky-col::after {
