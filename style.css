@@ -81,8 +81,13 @@ a {
   color: var(--clr-training-border-hc);
 }
 
-a:hover {
-  color: var(--clr-training-border);
+p a {
+  border-bottom: 0px solid transparent;
+}
+
+p a:hover {
+  border-bottom: 1px solid currentColor;
+  transition: all .05s ease-in;
 }
 
 button {
