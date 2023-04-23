@@ -181,7 +181,7 @@
           "section" "Special"
           "attacks" (slice "neutralSpecial" "sideSpecial" "upSpecial" "downSpecial"))
       }}
-        {{ $.RenderString (print "## " .section " Attacks") }}
+        <h2>{{ .section }} Attacks</h2>
         {{ range .attacks }}
           {{ $attack := replace (lower (humanize .)) " " "-" }}
           {{ $.RenderString (print "### " (humanize . | title)) }}
