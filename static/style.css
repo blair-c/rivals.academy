@@ -5,6 +5,7 @@
   --clr-highlight: #ebebf0;
   --clr-gray-1: #cecee0;
   --clr-gray-2: #8b8b94;
+  --clr-gray-3: #6e6e75;
 
   --clr-darken-img: #303033;
   --clr-text-on-img: #ededf2;
@@ -15,7 +16,7 @@
 
   --clr-abxy-green: #009e4e;
   --clr-abxy-blue: #1f8ccc;
-  --clr-abxy-yellow: #ce8017;
+  --clr-abxy-yellow: #d18217;
   --clr-abxy-red: #de2c2c;
 
   --clr-discord: #5865f2;
@@ -738,7 +739,7 @@ article h4 {
 #TableOfContents li a {
   display: block;
   line-height: 1.625;
-  color: var(--clr-gray-2);
+  color: var(--clr-gray-3);
 }
 
 #TableOfContents li a:hover {
