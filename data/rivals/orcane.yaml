@@ -201,8 +201,7 @@ dashAttack:
 
 forwardTilt:
 - hitboxes:
-  - name: Hit 1
-    startup: 7
+  - startup: 7
     active:
       from: 8
       to: 10
@@ -771,8 +770,7 @@ downStrong:
 neutralSpecial:
 - name: Droplet
   hitboxes:
-  - name: Uncharged
-    startup: 9
+  - startup: 9
     active:
       from: 10
     endlag: 16
