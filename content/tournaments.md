@@ -36,10 +36,5 @@ rrc:
   freq: weekly
   link: https://rivalsrecess.challonge.com/
   description: Recess' weekly open bracket, with a substantial amount of top level representation and making up the bulk of Rivals' active online scene alongside GTS.
-- name: Rivals Recess Major
-  day: Saturday, April 22nd
-  time: 4:00 PM ET
-  link: https://start.gg/rivals-recess-major-3
-  description: Major online event, counting towards [RCS Top 50](https://rivalsofaether.com/category/news/esports/) and [Grassroots League](https://twitter.com/RivalsGRL) rankings. Featuring a $400 pot, RCS-style stream, and amateur/intermediate brackets. 
 ---
 
