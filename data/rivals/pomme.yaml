@@ -311,7 +311,8 @@ downTilt:
 # Aerials
 neutralAir:
 - hitboxes:
-  - startup: 4
+  - name: Early
+    startup: 4
     active:
       from: 5
       to: 8
@@ -556,6 +557,9 @@ downAir:
     - from: 24
       to: 25
       frames: 2
+    landingLag:
+      hit: 4
+      whiff: 6
     damage: 2
     angle: 55
     angleFlipper: 4

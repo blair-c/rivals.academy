@@ -540,7 +540,7 @@ forwardAir:
 
 backAir:
 - hitboxes:
-  - name: Hit 1
+  - name: Early
     startup: 5
     active:
       from: 6
@@ -562,7 +562,7 @@ backAir:
     priority: 2
     killsProjectiles: true
     parryStun: true
-  - name: Hit 2
+  - name: Late
     active:
       from: 8
       to: 15
@@ -689,7 +689,7 @@ downAir:
     killsProjectiles: true
     parryStun: true
     movesRocks: true
-  - name: Hit 2
+  - name: Spike
     active:
       from: 12
       to: 14

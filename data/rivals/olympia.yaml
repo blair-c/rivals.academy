@@ -511,8 +511,8 @@ upAir:
       to: 12
       frames: 4
     landingLag:
-      hit: 4
-      whiff: 6
+      hit: 8
+      whiff: 12
     damage: 8
     angle: 90
     angleFlipper: 6

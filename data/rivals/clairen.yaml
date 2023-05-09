@@ -308,7 +308,7 @@ upTilt:
       base: 10
       scaling: 50
     tipperStun: 20
-    priority: 6
+    priority: 3
     killsProjectiles: true
     parryStun: true
   image:

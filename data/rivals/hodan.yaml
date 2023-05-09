@@ -250,7 +250,7 @@ forwardTilt:
     priority: 3
     killsProjectiles: true
     parryStun: true
-  - name: Upper, Sour
+  - name: Splash
     active:
     - "on": 18
       frames: 1
@@ -371,7 +371,7 @@ upTilt:
     priority: 3
     killsProjectiles: true
     parryStun: true
-  - name: Sour
+  - name: Splash
     active:
     - from: 8
       to: 10
@@ -420,7 +420,7 @@ downTilt:
     priority: 2
     killsProjectiles: true
     parryStun: true
-  - name: Sour
+  - name: Splash
     active:
       from: 6
       to: 9
@@ -1072,6 +1072,7 @@ neutralSpecial:
   - name: Spin
     startup: 6
     capture:
+      entity: Spirits
       from: 14
     active:
       minimum:
@@ -1332,7 +1333,7 @@ sideSpecial:
     priority: 1
     killsProjectiles: true
     parryStun: false
-  - name: 1 Spirit (Multihit)
+  - name: 1 Spirit (Hit 1-2)
     damage: 1
     angle: 0
     angleFlipper: 9
@@ -1362,7 +1363,7 @@ sideSpecial:
     priority: 2
     killsProjectiles: true
     parryStun: false
-  - name: 2 Spirits (Multihit)
+  - name: 2 Spirits (Hit 1-4)
     damage: 1
     angle: 0
     angleFlipper: 9
@@ -1429,7 +1430,7 @@ sideSpecial:
     priority: 1
     killsProjectiles: true
     parryStun: false
-  - name: 1 Spirit (Multihit)
+  - name: 1 Spirit (Hit 1-2)
     damage: 1
     angle: 0
     angleFlipper: 9
@@ -1459,7 +1460,7 @@ sideSpecial:
     priority: 2
     killsProjectiles: true
     parryStun: false
-  - name: 2 Spirits (Multihit)
+  - name: 2 Spirits (Hit 1-4)
     damage: 1
     angle: 0
     angleFlipper: 9
