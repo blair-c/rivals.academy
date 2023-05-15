@@ -188,7 +188,7 @@
           {{ $move := index $c . }}
           {{ range $move }}
             {{ if isset . "name" }}
-              <h4 id="{{ $attack }}-{{ replaceRE "[ -:()]+" "-" (lower .name) }}">
+              <h4 id="{{ $attack }}-{{ replaceRE "^-|-$" "" (replaceRE "[ -:()]+" "-" (lower .name)) }}">
                 {{ .name }}{{ with .cost }} ({{ . }} Gems){{ end }}
               </h4>
             {{ end }}
