@@ -386,7 +386,7 @@ downTilt:
           from: 7
           to: 8
           window: 2
-      - whiff:
+        whiff:
           from: 7
           to: 12
           window: 6
