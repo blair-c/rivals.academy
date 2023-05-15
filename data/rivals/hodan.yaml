@@ -1019,7 +1019,12 @@ downStrong:
     priority: 7
     killsProjectiles: true
     parryStun: true
-  - name: Success (Center)
+  image:
+    baseRes: https://rivals.academy/library/hodan/down-strong-charged.png
+    highRes: https://rivals.academy/library/hodan/1080_down-strong-charged.png
+- name: EX Charged (Parry Success)
+  hitboxes:
+  - name: Center
     startup: 1
     active:
       onParry:
@@ -1039,7 +1044,7 @@ downStrong:
     priority: 6
     killsProjectiles: true
     parryStun: true
-  - name: Success (Outer)
+  - name: Outer
     active:
       onParry:
         from: 3
@@ -1061,10 +1066,10 @@ downStrong:
     killsProjectiles: true
     parryStun: true
   notes:
-  - Upon successfully parrying an attack during Charged Down Strong, Hodan will transition into a less powerful splash attack which instead covers a much larger area and is active for an increased period.
+  - Upon successfully parrying an attack during Charged Down Strong, Hodan transitions into a less powerful splash attack which instead covers a much larger area and is active for an increased period.
   image:
-    baseRes: https://rivals.academy/library/hodan/down-strong-charged.png
-    highRes: https://rivals.academy/library/hodan/1080_down-strong-charged.png
+    baseRes: https://rivals.academy/library/hodan/down-strong-charged-parry.png
+    highRes: https://rivals.academy/library/hodan/1080_down-strong-charged-parry.png
 
 # Specials
 neutralSpecial:
