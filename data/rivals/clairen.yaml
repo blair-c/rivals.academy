@@ -341,15 +341,10 @@ downTilt:
     killsProjectiles: true
     parryStun: true
   - name: Tipper
-    startup: 6
     active:
       from: 7
       to: 8
       frames: 2
-    endlag:
-      hit: 11
-      whiff: 17
-    firstActiveFrame: 26
     damage: 9
     angle: 32
     angleFlipper: 0
