@@ -25,9 +25,9 @@
   --clr-twitch: #8c45f7;
   --clr-youtube: #fd0000;
 
-  --nav-height: 4rem;
+  --nav-height: 5rem;
   --page-padding: 1.5rem;
-  --content-max-width: 56rem;
+  --content-max-width: 48rem;
   --footer-margin: 2.5rem;
 }
 @media only screen and (max-width:48rem) {
@@ -109,8 +109,7 @@ h3 {
 }
 
 article h1 {
-  margin-top: .5rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 article h2 {
@@ -124,6 +123,12 @@ article h3 {
 
 article h4 {
   margin-bottom: 0.3125rem;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  max-width: 40rem;
 }
 
 :not(:active):focus-visible {
@@ -647,6 +652,20 @@ article h4 {
 
 .site-section-header h1 {
   margin: .5rem 0;
+}
+
+.article-header {
+  margin-bottom: 2rem;
+}
+
+.article-header h1 {
+  margin-bottom: .5rem;
+}
+
+.article-header p {
+  margin: 0;
+  padding: 0 .5rem;
+  border-left: .125rem solid var(--clr-gray-1);
 }
 
 .library-select {

@@ -2,10 +2,27 @@
   {{ partial "navbar" }}
 {{ end }}
 {{ define "main" }}
+<div class="center"><div class="cols-sidebar-content">
+  <div class="sidebar">
+    <div class="toc">
+      {{ .TableOfContents }}
+      <a href="#" class="to-top" title="Jump to Top">
+        {{ partial "svg/up.svg" }}<span class="sr-only">Jump to Top</span>
+      </a>
+    </div>
+  </div>
   <main id="main-content">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+    <article class="padded-content">
+      <div class="article-header">
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+        {{ with .Params.author }}<p>By {{ . }}</p>{{ end }}
+      </div>
+      {{ .Content }}
+    </article>
+    <div class="article-footer-divider"></div>
   </main>
+</div></div>
 {{ end }}
 {{ define "footer" }}
   {{ partial "footer" }}
