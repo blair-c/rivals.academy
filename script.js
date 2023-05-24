@@ -41,17 +41,27 @@ if (toc) {
 
 	// Factor of screen size that the element must cross
 	// before it's considered visible
-	var TOP_MARGIN = -0.1,
-      BOTTOM_MARGIN = 0.2;
+	var TOP_MARGIN = 0.1,
+      BOTTOM_MARGIN = 0.1;
+
+  var footerDiv = document.querySelector(".article-footer-divider");
 
   window.addEventListener( 'scroll', sync, false );
   sync();
 
   function sync() {
     var windowHeight = window.innerHeight;
-    tocItems.forEach(function(item) {
-			var targetBounds = item.target.getBoundingClientRect();
-			if (targetBounds.bottom > windowHeight * TOP_MARGIN && targetBounds.top < windowHeight * (1 - BOTTOM_MARGIN)) {
+    tocItems.forEach(function(item, index, arr) {
+			var topBound = item.target.getBoundingClientRect().top;
+      var nextElement;
+      if (index === arr.length - 1) {
+        nextElement = footerDiv;
+      }
+      else {
+        nextElement = tocItems[index + 1].target;
+      }
+      var bottomBound = nextElement.getBoundingClientRect().top;
+			if (bottomBound > windowHeight * TOP_MARGIN && topBound < windowHeight * (1 - BOTTOM_MARGIN)) {
 				item.listItem.classList.add('visible');
 			}
 			else {
