@@ -125,6 +125,11 @@ article h4 {
   margin-bottom: 0.3125rem;
 }
 
+article ul {
+  padding-left: 1rem;
+}
+
+img,
 video {
   width: 100%;
   height: auto;
@@ -666,6 +671,10 @@ video {
   margin: 0;
   padding: 0 .5rem;
   border-left: .125rem solid var(--clr-gray-1);
+}
+
+.article-header .author {
+  color: var(--clr-training-border-hc);
 }
 
 .library-select {

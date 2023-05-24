@@ -15,8 +15,10 @@
     <article class="padded-content">
       <div class="article-header">
         <h1>{{ .Title }}</h1>
-        <p>{{ .Description }}</p>
-        {{ with .Params.author }}<p>By {{ . }}</p>{{ end }}
+        <p>{{ .Description }}.</p>
+        {{ with .Params.authors }}
+          <p class="author">By {{ delimit . ", " " and " }}</p>
+        {{ end }}
       </div>
       {{ .Content }}
     </article>

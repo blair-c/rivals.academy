@@ -1,11 +1,12 @@
 ---
 title: Niche Applications of Clone
-description: Advanced uses of Forsburn's side special past the basics.
-author: TaiTheGuy
-draft: false
+description: Advanced uses of Forsburn's side special past the basics
+authors:
+- TaiTheGuy
 tags:
   - forsburn
   - advanced
+draft: false
 ---
 
 These situational tactics are meant for players who are already proficient at using Forsburn's clone, so if you have not already learned to regularly implement cloning for recovery, stalling in the air, and as an edgeguarding tool, then I would recommend that you master those techniques before learning these. With that being said, let's begin!
