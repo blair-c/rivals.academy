@@ -129,8 +129,8 @@ article ul {
   padding-left: 1rem;
 }
 
-img,
-video {
+article img,
+article video {
   width: 100%;
   height: auto;
   max-width: 40rem;
