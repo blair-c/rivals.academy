@@ -39,7 +39,11 @@ Now all that's left is to put it all together!
 
 {{< video practice-all-together >}}
 
-There are two commons issue many have. First is that they fireball instead of getting the sliding shine. If this happens, you are holding the direction on your stick for too long which causes a side input to be read. Make sure that this stick returns to a neutral position to avoid those costly fireballs. 
+Note: Try to Shine as close to the center of your opponent's hurtbox as you can, for the Shine > Up Strong to connect on all DIs.
+
+### Common Issues
+
+There are two commons issues many have. The first is fireballing instead of getting the sliding shine. If this happens, you are holding the direction on your stick for too long which causes a side input to be read. Make sure that the stick returns to a neutral position to avoid those costly fireballs. 
 
 The second issue is an Up Special in place. This is caused by pressing jump too soon in the sequence which causes your Shine + Up Strong to be read as an Up Special since you are pressing special and up at the same time. Make sure that you are making your inputs in the order of Dash > Shine > Jump > Up Strong, and return to practicing each part individually if you find yourself struggling.
 
