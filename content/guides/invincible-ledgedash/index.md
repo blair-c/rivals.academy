@@ -5,8 +5,8 @@ authors:
 - Olsen
 - Blair
 tags:
-  - all characters
-  - advanced
+- all characters
+- advanced
 draft: false
 ---
 
