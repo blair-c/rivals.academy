@@ -21,7 +21,7 @@ Shine > Up Strong is performed by using a Shine from an initial dash so that you
 
 Note: Some players may find it helpful to bind one or more buttons used for this technique (special, jump, strong) to a spare shoulder button.
 
-## Breaking It Down
+### Breaking It Down
 
 Start by getting comfortable by Shining back and forth from initial dash.
 
