@@ -188,7 +188,7 @@
           {{ $move := index $c . }}
           {{ range $move }}
             {{ if isset . "name" }}
-              <h4 id="{{ $attack }}-{{ replaceRE "^-|-$" "" (replaceRE "[ -:()]+" "-" (lower .name)) }}">
+              <h4 id="{{ $attack }}-{{ anchorize .name }}">
                 {{ .name }}{{ with .cost }} ({{ . }} Gems){{ end }}
               </h4>
             {{ end }}
@@ -200,7 +200,7 @@
       {{ with index $c "taunt" }}
         {{ range . }}
           {{ $.RenderString "### Taunt" }}
-          {{ with .name }}<h4 id="taunt-{{ replace (lower .) " " "-" }}">{{ . }}</h4>{{ end }}
+          {{ with .name }}<h4 id="taunt-{{ anchorize . }}">{{ . }}</h4>{{ end }}
           {{ partial "partials/move-display.html" . }}
         {{ end }}
       {{ end }}
