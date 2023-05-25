@@ -13,13 +13,13 @@ Zetterburn's Shine > Up Strong is one of the strongest kill options in the game 
 
 {{< video shine-upstrong >}}
 
-Note: Some players may find it helpful to bind one or more buttons used for this technique (special, jump, strong) to a spare shoulder button.
-
 ## How To
 
 Shine > Up Strong is performed by using a Shine from an initial dash so that you slide forward while the Shine connects. From this, jump cancel out of the Shine, then use that to do a jump canceled Up Strong during your jump squat.
 
 {{< video inputs-slow >}}
+
+Note: Some players may find it helpful to bind one or more buttons used for this technique (special, jump, strong) to a spare shoulder button.
 
 ## Breaking It Down
 
