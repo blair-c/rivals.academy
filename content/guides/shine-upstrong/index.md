@@ -31,7 +31,7 @@ Next, make sure you're comfortable jump canceling out of Shine.
 
 {{< video practice-shine-jc >}}
 
-Now input Up Strong during the jump squat of your jump cancel.
+Next, practice cancelling into Up Strong during the jump squat of your jump cancelled Shine.
 
 {{< video practice-jc-upstrong >}}
 
