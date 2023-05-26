@@ -20,7 +20,7 @@ roaa:
   day: Wednesdays
   time: 8:00 PM ET
   freq: weekly
-  link: https://start.gg/gts
+  link: https://msb.challonge.com/
   description: Adopted from the long-running "Go-to-Sleep" tournament series, GTS is Academy's weekly open bracket open to all skill levels. Enter to compete with Rivals' best.
 
 rrc:

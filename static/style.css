@@ -1005,6 +1005,14 @@ article video {
   fill: var(--clr-gray-1);
 }
 
+.brackets-list h3 a:hover {
+  color: var(--clr-text-hc);
+}
+
+.brackets-list h3 a:hover svg {
+  fill: var(--clr-training-border-hc);
+}
+
 .bracket-desc {
   margin-top: .5rem;
 }
