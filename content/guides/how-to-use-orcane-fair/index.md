@@ -15,7 +15,7 @@ Orcane's Fair is a bit like a special move, with a lot of unique properties. Tod
 
 ## Basic Control
 
-First of all, it's very important that you input Fair with the right control stick. This gives you maximum control over your aerial drift. 
+First of all, it's very important that you input Fair with the right control stick. This gives you maximum control over your aerial drift. If you use keyboard controls, you can bind left/right RS buttons for the same effect.
 
 {{< video right-stick >}}
 
