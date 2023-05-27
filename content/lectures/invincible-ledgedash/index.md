@@ -26,7 +26,7 @@ When first starting out, it might be easier to hold down and toward the stage to
 
 {{< video ledgedash-options >}}
 
-### Practice tools
+### Practice Tools
 
 - [Ledge practice workshop stage](https://steamcommunity.com/sharedfiles/filedetails/?id=2353648017) shown in use throughout this guide.
 - If you don't have a practice partner, you can download [Axmos' Parry Bot](https://axmos.itch.io/axmos-parry-bot).
