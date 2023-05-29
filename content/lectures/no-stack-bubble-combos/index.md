@@ -1,6 +1,6 @@
 ---
 title: No Stack Bubble Combos
-description: Example combos and kill setups with no poison stacks
+description: Combos and kill setups with no poison stacks
 authors:
 - Dos Rogers
 tags:
