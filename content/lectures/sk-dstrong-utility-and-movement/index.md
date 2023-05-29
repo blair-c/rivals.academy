@@ -1,5 +1,5 @@
 ---
-title: SK Down Strong Utility & Movement 
+title: SK Dstrong Utility & Movement 
 description: Utility and movement mechanics of Shovel Knight's Down Strong
 authors:
 - SNC

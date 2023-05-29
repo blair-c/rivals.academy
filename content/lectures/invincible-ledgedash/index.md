@@ -3,11 +3,10 @@ title: Invincible Ledgedash
 description: Invincible ledgedash how to, practice methods, and application
 authors:
 - Olsen
-- Blair
 tags:
-- all characters
+- all-characters
 - advanced
-draft: false
+draft: true
 ---
 
 ## Why Ledgedash?
