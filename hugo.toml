@@ -10,3 +10,8 @@ enableGitInfo = true
   mediaType = "application/json"
   baseName = "data"
   isPlainText = true
+
+[outputFormats.RSS]
+  mediatype = "application/rss+xml"
+  baseName = "rss"
+  isPlainText = true
