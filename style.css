@@ -126,7 +126,7 @@ article h4 {
 }
 
 article ul {
-  padding-left: 1rem;
+  padding-left: 1.25rem;
 }
 
 article video {
@@ -657,6 +657,83 @@ article video {
   margin: .5rem 0;
 }
 
+.page-list {
+  display: grid;
+  gap: 2rem;
+  max-width: fit-content;
+  padding: 1.5rem var(--page-padding);
+}
+
+@media only screen and (min-width:calc(48rem + 1px)) {
+  .page-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.page-list a {
+  display: flex;
+  flex-direction: column;
+  color: var(--clr-text);
+  border: .25rem solid var(--clr-highlight);
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: border .05s ease-out;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .page-list a:hover,
+  .page-list a:focus-visible {
+    border: .25rem solid var(--clr-gray-1);
+    transform: scale(1.01);
+    transition: all .1s ease-in;
+  }
+
+  .page-list a:hover .headline
+  .page-list a:focus-visible .headline {
+    color: var(--clr-text-hc);
+    transition: all .1s ease-in;
+  }
+}
+
+.headline {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0;
+  transition: border .05s ease-out;
+}
+
+.tagline {
+  margin: 0;
+  margin-top: .25rem;
+  margin-bottom: .75rem;
+}
+
+.tag-list {
+  margin: 0;
+  margin-top: auto;
+  white-space: nowrap;
+}
+
+.tag {
+  color: var(--clr-gray-3);
+}
+
+.tag:not(:first-child) {
+  margin-left: .125rem;
+}
+
+.tag-beginner {
+  color: var(--clr-abxy-blue);
+}
+
+.tag-intermediate {
+  color: var(--clr-abxy-green);
+}
+
+.tag-advanced {
+  color: var(--clr-abxy-yellow);
+}
+
 .article-header {
   margin-bottom: 2rem;
 }
@@ -667,12 +744,17 @@ article video {
 
 .article-header p {
   margin: 0;
-  padding: 0 .5rem;
+  padding: 0;
+  padding-left: .5rem;
   border-left: .125rem solid var(--clr-gray-1);
 }
 
-.article-header .author {
+.article-authors {
   color: var(--clr-training-border-hc);
+}
+
+.article-description {
+  margin-right: .125rem;
 }
 
 .library-select {
@@ -778,7 +860,7 @@ article video {
 }
 
 #TableOfContents .visible > a {
-  color: var(--clr-training-bg);
+  color: var(--clr-text);
 }
 
 .to-top {
