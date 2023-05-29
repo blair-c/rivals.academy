@@ -45,7 +45,7 @@ For a slight increase in difficulty, you'll be able to achieve similar results a
 
 {{< video dart-throw-2 >}}
 
-**Dair 2 > Grounded Dart Throw > Dash Attack** (22%)  
+**Dair2 > Grounded Dart Throw > Dash Attack** (22%)  
 Depending on how close you are to your opponent after the Neutral Special, you can very well combo into Jab and from there tilt cancel. So even though this string does the least amount of damage in this category, it provides the most potential for versatility.
 
 {{< video dart-throw-3 >}}
