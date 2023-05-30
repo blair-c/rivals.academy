@@ -11,7 +11,7 @@ draft: false
 
 Although Shovel Knight’s Down Strong is weaker in terms of knockback when compared to his other strong attacks, the move has a few niche movement options that are important to learn if you want to bring out the full potential of the move.
 
-## Horzontal Range
+## Horizontal Range
 
 Down Strong allows you to cover a range of distances by preserving some of your momentum as you start the move, as well as allowing you to drift slightly in either direction during your rise into the air. The below clip demonstrates how different methods of movement allow you to manipulate the horizontal distance of your leap. Mail of Momentum (MoM) changes the properties of your wavedash and run turnaround significantly, having it equipped will change how you can use the move to your advantage.
 
