@@ -702,6 +702,11 @@ article video {
   transition: border .05s ease-out;
 }
 
+.headline img {
+  height: 1rem;
+  margin-left: .125rem;
+}
+
 .tagline {
   margin: 0;
   margin-top: .25rem;
