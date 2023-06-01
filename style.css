@@ -659,7 +659,7 @@ article video {
 
 .page-list {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   max-width: fit-content;
   padding: 1.5rem var(--page-padding);
 }
