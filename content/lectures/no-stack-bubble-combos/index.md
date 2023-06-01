@@ -72,7 +72,7 @@ An alternate kill option that is recommended if you notice that your opponent is
 
 {{< video kill-3 >}}
 
-**Fair > Forward Strong** (26%)  
+**Fair > Fstrong** (26%)  
 Ranno's Forward Strong is probably the move most players wouldnt expect him to opt for in terms of bubble options. It'll add a nice mix up to your repertoire and is great on stages with average to below-average side blastzones such as Rock Wall and Air Armada.
 
 {{< video kill-4 >}}

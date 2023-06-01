@@ -61,4 +61,4 @@ Note: None of these combos will true followup regardless of character weight, th
 
 Here's an example of Up Air 1's utility outside of being a move used to true combo into other moves:
 
-[ todo ]
+{{< video example >}}
