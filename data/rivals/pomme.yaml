@@ -287,6 +287,13 @@ downTilt:
       from: 5
       to: 7
       frames: 3
+    cancellable:
+    - with: Jump
+      condition: On Hit
+      during: endlag
+      from: 2
+      to: 11
+      window: 10
     endlag:
       hit: 11
       whiff: 17
