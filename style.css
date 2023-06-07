@@ -158,6 +158,10 @@ article video {
   white-space: nowrap;
 }/*https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html*/
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -696,18 +700,10 @@ article video {
 }
 
 .headline {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: bold;
   margin: 0;
   transition: border .05s ease-out;
-}
-
-.headline img {
-  height: 1rem;
-}
-
-.headline img:first-child {
-  margin-left: .125rem;
 }
 
 .tagline {
@@ -721,12 +717,16 @@ article video {
   margin-top: auto;
 }
 
-.tag {
-  color: var(--clr-gray-3);
+.tag-list img {
+  height: 1rem;
 }
 
-.tag:not(:first-child) {
-  margin-left: .125rem;
+.tag:first-child {
+  margin-right: .125rem;
+}
+
+.tag {
+  color: var(--clr-gray-3);
 }
 
 .tag-beginner {
