@@ -20,6 +20,7 @@
             {{ range .Params.tags }}
               {{ if fileExists (print "static/img/icons-full/" . ".png") }}
                 <img src="/img/icons-full/{{ . }}.png">
+                <span class="sr-only">{{ humanize . | title }}</span>
               {{ end }}
             {{ end }}
           </p>
