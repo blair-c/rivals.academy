@@ -17,9 +17,14 @@
         <h1>{{ .Title }}</h1>
         <p>
           <span class="article-description">{{ .Description }}.</span>
-          <span class="tag-list">
+          <span class="tag-list nowrap">
             {{ range .Params.tags }}
-              <span class="tag tag-{{ . }}">#{{ . }}</span>
+              <span class="tag tag-{{ . }}">
+                {{ if fileExists (print "static/img/icons-full/" . ".png") }}
+                  <img src="/img/icons-full/{{ . }}.png">
+                  <span class="sr-only">{{ humanize . | title }}</span>
+                {{ else }}#{{ . }}{{ end }}
+              </span>
               {{/*  <a href="/tags/{{ . }}" class="tag tag-{{ . }}">#{{ . }}</a>  */}}
             {{ end }}
           </span>

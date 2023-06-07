@@ -15,19 +15,16 @@
     <div class="centered page-list">
       {{ range .Pages }}{{ if ne .Draft true }}
         <a href="{{ .RelPermalink }}">
-          <p class="headline">
-            {{ .Title }}
-            {{ range .Params.tags }}
-              {{ if fileExists (print "static/img/icons-full/" . ".png") }}
-                <img src="/img/icons-full/{{ . }}.png">
-                <span class="sr-only">{{ humanize . | title }}</span>
-              {{ end }}
-            {{ end }}
-          </p>
+          <p class="headline">{{ .Title }}</p>
           <p class="tagline">{{ .Description }}.</p>
           <p class="tag-list">
             {{ range .Params.tags }}
-              <span href="/tags/{{ . }}" class="tag tag-{{ . }}">#{{ . }}</span>
+              <span href="/tags/{{ . }}" class="tag tag-{{ . }}">
+                {{ if fileExists (print "static/img/icons-full/" . ".png") }}
+                  <img src="/img/icons-full/{{ . }}.png">
+                  <span class="sr-only">{{ humanize . | title }}</span>
+                {{ else }}#{{ . }}{{ end }}
+              </span>
             {{ end }}
           </p>
         </a>

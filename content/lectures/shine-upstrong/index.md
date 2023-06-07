@@ -4,8 +4,8 @@ description: Zetterburn's most potent and reliable kill confirm, explained
 authors:
 - 10S
 tags:
-- zetterburn
 - intermediate
+- zetterburn
 draft: false
 ---
 

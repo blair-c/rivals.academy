@@ -4,8 +4,8 @@ description: Mechanics to act faster and hit harder
 authors:
 - SNC
 tags:
-- all-characters
 - intermediate
+- all-characters
 draft: false
 ---
 

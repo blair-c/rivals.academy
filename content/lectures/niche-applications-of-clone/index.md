@@ -4,8 +4,8 @@ description: Advanced uses of Forsburn's side special past the basics
 authors:
 - TaiTheGuy
 tags:
-- forsburn
 - advanced
+- forsburn
 draft: false
 ---
 

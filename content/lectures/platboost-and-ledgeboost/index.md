@@ -4,13 +4,17 @@ description: Viability and usage of these advanced movement techniques
 authors:
 - IGL
 tags:
+- intermediate
 - clairen
 - forsburn
 - zetterburn
 - kragg
 - olympia
 - hodan
-- intermediate
+- ranno
+- mollo
+- sylvanos
+- maypul
 draft: false
 ---
 

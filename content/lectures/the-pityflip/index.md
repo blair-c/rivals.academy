@@ -4,8 +4,8 @@ description: How to perform and apply Zetterburn's flashiest recovery mixup
 authors:
 - Pity
 tags:
-- zetterburn
 - advanced
+- zetterburn
 draft: false
 ---
 

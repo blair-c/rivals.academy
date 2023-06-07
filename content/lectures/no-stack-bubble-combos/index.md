@@ -4,8 +4,8 @@ description: Combos and kill setups with no poison stacks
 authors:
 - Dos Rogers
 tags:
-- ranno
 - beginner
+- ranno
 draft: false
 ---
 

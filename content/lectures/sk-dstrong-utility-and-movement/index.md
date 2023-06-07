@@ -4,8 +4,8 @@ description: Utility and movement mechanics of Shovel Knight's Down Strong
 authors:
 - SNC
 tags:
-- shovel-knight
 - intermediate
+- shovel-knight
 draft: false
 ---
 

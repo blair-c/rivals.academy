@@ -4,8 +4,8 @@ description: Utilizing Elliana's command grab to the fullest
 authors:
 - Invy
 tags:
-- elliana
 - beginner
+- elliana
 draft: false
 ---
 

@@ -4,8 +4,8 @@ description: A special quirk of Absa's unique double jump
 authors:
 - SNC
 tags:
-- absa
 - advanced
+- absa
 draft: false
 ---
 
