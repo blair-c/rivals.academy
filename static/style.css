@@ -716,7 +716,6 @@ article video {
 .tag-list {
   margin: 0;
   margin-top: auto;
-  white-space: nowrap;
 }
 
 .tag {
