@@ -704,6 +704,9 @@ article video {
 
 .headline img {
   height: 1rem;
+}
+
+.headline img:first-child {
   margin-left: .125rem;
 }
 
