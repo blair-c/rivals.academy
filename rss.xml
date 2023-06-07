@@ -175,7 +175,147 @@ or
 &lt;a href="https://rivals.academy/lectures/all-about-ori-dair/dair-save-368.mp4">MP4&lt;/a>
 video.
 &lt;/video>
-&lt;p>Happy Dairing!&lt;/p></description></item><item><title>How to Use Orcane's Forward Air</title><link>https://rivals.academy/lectures/how-to-use-orcane-fair/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/how-to-use-orcane-fair/</guid><description>
+&lt;p>Happy Dairing!&lt;/p></description></item><item><title>Elli Up Tilt Mechanics and Mixups</title><link>https://rivals.academy/lectures/elli-uptilt-mechanics-and-mixups/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/elli-uptilt-mechanics-and-mixups/</guid><description>
+&lt;h2 id="how-up-tilt-works" class="heading">
+How Up Tilt Works&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: How Up Tilt Works"
+onclick="copyHeadingLink(&amp;#34;how-up-tilt-works&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;p>Up Tilt is a move with relatively weak knockback at its base, but built-up heat can be expended to empower the move. Up Tilt’s knockback increases linearly based on how much heat is expended, from 7 base + 60 scaling with no heat to 9 base + 90 scaling at overheat, and its endlag on hit from 10 frames with no heat to 20 frames at overheat.&lt;/p>
+&lt;p>Up Tilt is a move with a multitude of mixups, but even without them the move is still very powerful. Overheat Up Tilt can kill confirm into Missile &amp;gt; Nair or almost any of Elli’s other deadly combos, or just outright kill. However, there are certain percent windows (which vary greatly depending on stage, character, and positioning) where a high heat Up Tilt may not be easy to convert off of while not killing outright either, and this is where our mixups become especially useful.&lt;/p>
+&lt;h2 id="mixups" class="heading">
+Mixups&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Mixups"
+onclick="copyHeadingLink(&amp;#34;mixups&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;h3 id="heat-retain" class="heading">
+Heat Retain&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Heat Retain"
+onclick="copyHeadingLink(&amp;#34;heat-retain&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h3>
+&lt;p>By holding the parry button as you release the opponent, you can retain all heat, and consequently lower the move’s knockback and endlag significantly (depending on how much heat you currently have). &lt;strong>This is a completely unreactable DI mixup.&lt;/strong>&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/elli-uptilt-mechanics-and-mixups/two-uptilts.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/elli-uptilt-mechanics-and-mixups/two-uptilts.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/elli-uptilt-mechanics-and-mixups/two-uptilts.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>Once your opponent hits mid percents, they typically have no choice but to DI in on high heat Up Tilt at ledge unless they make a hard read on your heat retain, which is a risk immensely stacked in your favour (especially since if they read you correctly and DI out, they’re still offstage versus one of the best edgeguarders in the game). As such, it ends up being very easy to confirm heat retain Up Tilt into an overheat strong attack, and depending on the percent any of the three strongs can be applied. This can net you kills in situations where you may not otherwise be able to secure the stock.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/elli-uptilt-mechanics-and-mixups/heat-retain.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/elli-uptilt-mechanics-and-mixups/heat-retain.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/elli-uptilt-mechanics-and-mixups/heat-retain.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;h3 id="turnaround" class="heading">
+Turnaround&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Turnaround"
+onclick="copyHeadingLink(&amp;#34;turnaround&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h3>
+&lt;p>Additionally, Up Tilt can be turned around by inputting the opposite direction before the opponent is swallowed by Elli’s mech. &lt;strong>This is a reactable DI mixup, with a 23 frame animation.&lt;/strong>&lt;/p>
+&lt;p>While not nearly as potent a mixup, turning around your Up Tilt to send the opponent to the opposite side of the stage can also function as a lethal DI check and keep your opponent on their toes.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/elli-uptilt-mechanics-and-mixups/turnaround.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/elli-uptilt-mechanics-and-mixups/turnaround.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/elli-uptilt-mechanics-and-mixups/turnaround.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>Once you start implementing Up Tilt’s multi-tiered mixups, you’ll be frustrating your opponents to no end! (even more than you were already)&lt;/p></description></item><item><title>Gravity Jump</title><link>https://rivals.academy/lectures/gravity-jump/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/gravity-jump/</guid><description>&lt;p>Absa has the ability to jump downwards by beginning her double jump on the same frame that her fastfall begins. Combined with her unique double jump momentum and the ability to double jump cancel with her aerials, this allows her to move through the air in unorthodox ways. There are a couple variations of this technique to learn, so let’s take look at how each of these are performed.&lt;/p>
+&lt;h2 id="midair" class="heading">
+Midair&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Midair"
+onclick="copyHeadingLink(&amp;#34;midair&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;p>The first of these is a midair Gravity Jump that can be performed anytime you are able to fastfall. For those of you who don’t know, fastfalling in Rivals of Aether is not an instant action and is delayed until 4 frames after the input is made. Since we need to begin our double jump on the same frame that our fastfall begins, to perform the technique in midair we will need to input our double jump exactly 4 frames after the fastfall input. If done correctly, Absa will begin falling towards the ground with reduced speed and more horizontal control. As this variation requires a frame perfect input, the reliability of the technique is questionable, however the movement it provides has some obvious benefits.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/gravity-jump/midair.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/gravity-jump/midair.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/gravity-jump/midair.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;h2 id="platform-drop" class="heading">
+Platform Drop&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Platform Drop"
+onclick="copyHeadingLink(&amp;#34;platform-drop&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;p>If you’d prefer to avoid a frame perfect input however, then you’re in luck! Due to a mechanic related to fastfalls from platform drops, the Gravity Jump is far more easily performed while standing on a platform. Anytime you platform drop you will begin an 8 frame timer. If you are holding down on the last frame of this timer your character will fastfall instantly. By using this timer to force a fastfall, the Gravity Jump becomes far easier to perform, simply drop from the platform and keep down held while you input your double jump. You may input the double jump anytime before the plat-drop timer ends, so long as you are holding down on the 8th frame of the timer, making this version consistent to perform and much easier to use fluidly in your movement. It&amp;rsquo;s worth noting that beginning your double jump earlier into the timer will cause your momentum in the air to stall slightly more before you start to fall, as the fastfall will always begin on the 8th frame of airtime.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/gravity-jump/platdrop.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/gravity-jump/platdrop.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/gravity-jump/platdrop.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;h3 id="application-up-air" class="heading">
+Application: Up Air&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Application: Up Air"
+onclick="copyHeadingLink(&amp;#34;application-up-air&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h3>
+&lt;p>There is one more notable property of the Gravity Jump to learn. Absa’s double jump normally begins by accelerating downwards slightly before quickly rising into the air. As her Gravity Jump reverses this momentum, the technique will cause her to accelerate upwards slightly before travelling downwards. When combined with the delayed fastfall of a platform drop Gravity Jump, you are able to slow your descent enough that you can reliably hit characters standing beside you on a platform from beneath with an instantaneous Up Air before you reach the ground. This can be performed even from some of the lowest platforms in the game. As your Up Air has the same knockback as your Up Strong, this is an extremely powerful mix-up to have at your disposal. Remember to hold the jump button during your aerial to preserve your momentum, as releasing it will instead perform a double jump cancel and will cause you to fall and land before your Up Air becomes active.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/gravity-jump/upair.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/gravity-jump/upair.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/gravity-jump/upair.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;h2 id="refresh" class="heading">
+Refresh&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Refresh"
+onclick="copyHeadingLink(&amp;#34;refresh&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;p>Our last important lesson is that Absa’s Gravity Jump is also able to restore her double jump, allowing you to use the technique without sacrificing the use of your double jump in the processs. This can allow you to move in unexpected ways and can extend your horizontal reach through the air quite significantly without the risk of being stuck off-stage without one of your most valuable resources. The double jump will be restored 7 frames into the animation, but only if your vertical speed is moving downwards fast enough. This allows you to cancel the animation and instantly input any of your aerial attacks whilst still refreshing your jump, however, moves such as your Up Special and Neutral Special will halt your momentum and prevent it from being restored. This double jump refresh applies to all variations of the Gravity Jump that have been discussed so far, and since you can perform the Gravity Jump in midair this even allows you to refresh your double jump multiple times if performed correctly!&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/gravity-jump/refresh.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/gravity-jump/refresh.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/gravity-jump/refresh.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>Try testing out the Gravity Jump on stages with different platform layouts, practicing your movement and your aerial control during your attacks. There’s a lot of room for experimentation in how you can use it with Absa’s unique double jump mechanics, but most importantly it’s also pretty fun to play with as well!&lt;/p></description></item><item><title>How to Use Orcane's Forward Air</title><link>https://rivals.academy/lectures/how-to-use-orcane-fair/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/how-to-use-orcane-fair/</guid><description>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://www.youtube.com/embed/zI7OoOzOlCg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="Orcane Guide | How to Use Forward-Air">&lt;/iframe>
 &lt;/div>
@@ -562,7 +702,50 @@ or
 &lt;a href="https://rivals.academy/lectures/no-stack-bubble-combos/kill-4.mp4">MP4&lt;/a>
 video.
 &lt;/video>
-&lt;p>I hope this has given you an idea of the multitude of combo options you have available on a bubbled opponent, even with no stacks. Now go and find even more for yourself!&lt;/p></description></item><item><title>Shine > Up Strong</title><link>https://rivals.academy/lectures/shine-upstrong/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/shine-upstrong/</guid><description>&lt;p>Zetterburn&amp;rsquo;s Shine &amp;gt; Up Strong is one of the strongest kill options in the game as it is almost always applicable for a parry punish and is a follow up off of a frame 2 move (Shine) that can also be used to whiff punish effectively. Performed correctly, it&amp;rsquo;s a true confirm on the entire cast well into Up Strong kill %.&lt;/p>
+&lt;p>I hope this has given you an idea of the multitude of combo options you have available on a bubbled opponent, even with no stacks. Now go and find even more for yourself!&lt;/p></description></item><item><title>Platboost &amp; Ledgeboost</title><link>https://rivals.academy/lectures/platboost-and-ledgeboost/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/platboost-and-ledgeboost/</guid><description>
+&lt;h2 id="what-is-boosting" class="heading">
+What is Boosting?&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: What is Boosting?"
+onclick="copyHeadingLink(&amp;#34;what-is-boosting&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;p>When characters leave a platform, they will carry some amount of speed with them into the air depending on their status and properties. Characters who are faster on the ground than in the air have their speed capped upon leaving mostly due to their &amp;ldquo;Max Horizontal Jump Speed&amp;rdquo; stat.&lt;/p>
+&lt;p>This is where &lt;strong>boosting&lt;/strong> comes in, a catch-all term for techniques involving leaving a platform during initial dash that enables certain characters to bypass those speed caps. This can be used to enable highly effective burst movement around platforms, shown below.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/platboost-and-ledgeboost/showcase.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/platboost-and-ledgeboost/showcase.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/platboost-and-ledgeboost/showcase.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;h3 id="techniques" class="heading">
+Techniques&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Techniques"
+onclick="copyHeadingLink(&amp;#34;techniques&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h3>
+&lt;p>Boosting is split up into four techniques: platboost, ledgeboost, platmoost, and ledgemoost.&lt;/p>
+&lt;p>The first two subcategories of these techniques are &lt;strong>platboosting&lt;/strong> vs. &lt;strong>ledgeboosting&lt;/strong>. These refer to whether you leave the platform by dropping through with a platform drop (&lt;strong>platboost&lt;/strong>) or by dashing off the edge (&lt;strong>ledgeboost&lt;/strong>) during your initial dash. Note that the duration of initial dashes varies across the cast from 8 to 16 frames, with the longer dashes giving you a larger window for performing the tech. These techniques will &lt;em>not&lt;/em> work if you enter the run animation.&lt;/p>
+&lt;p>The second distinction is &lt;strong>boosting&lt;/strong> vs. &lt;strong>moosting&lt;/strong>. &lt;strong>Boost&lt;/strong> refers to performing the tech via an initial dash. &lt;strong>Moost&lt;/strong> refers to performing the tech via a moonwalk, which has similar behavior to initial dash, but at max speed is 20% faster than initial dash for all characters (and you’ll be traveling backwards).&lt;/p>
+&lt;h2 id="cast-viability" class="heading">
+Cast Viability&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Cast Viability"
+onclick="copyHeadingLink(&amp;#34;cast-viability&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;p>With that explanation out of the way, here is my qualitative summary of the effectiveness of these techniques across the cast. Characters that stand to benefit from learning this tech (in my opinion) are bolded.&lt;/p>
+&lt;p>&lt;img src="cast-comparison.png" alt="Table summarizing the viability of Platboost, Ledgeboost, Platmoost, and Ledgemoost across the cast">&lt;/p>
+&lt;p>This tech can be used to enhance a variety of options: going deep for edgeguards, faster movement for platdrop aerials, traveling across platforms, and more. Go try it out!&lt;/p></description></item><item><title>Shine > Up Strong</title><link>https://rivals.academy/lectures/shine-upstrong/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/shine-upstrong/</guid><description>&lt;p>Zetterburn&amp;rsquo;s Shine &amp;gt; Up Strong is one of the strongest kill options in the game as it is almost always applicable for a parry punish and is a follow up off of a frame 2 move (Shine) that can also be used to whiff punish effectively. Performed correctly, it&amp;rsquo;s a true confirm on the entire cast well into Up Strong kill %.&lt;/p>
 &lt;video controls loop muted preload>
 &lt;source src="https://rivals.academy/lectures/shine-upstrong/shine-upstrong.mp4" type="video/mp4">
 Download the
@@ -794,7 +977,81 @@ or
 &lt;a href="https://rivals.academy/lectures/the-pityflip/clips.mp4">MP4&lt;/a>
 video.
 &lt;/video>
-&lt;p>Flip around and find out!&lt;/p></description></item><item><title>Understanding Ranno Up Air 1</title><link>https://rivals.academy/lectures/understanding-ranno-upair1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/understanding-ranno-upair1/</guid><description>&lt;p>There are a lot of misconceptions about whether this move is true in certain combos or not, and I&amp;rsquo;m here to clear them all up right here in this post! Ranno&amp;rsquo;s Up Air 1 is a unique move in that it applies a set amount of knockback and hitstun. This allows the move to function the same whether the enemy is at 0% or 200%. Knowing this, let&amp;rsquo;s look at what scenarios will allow us to reliably combo this hitbox into other moves. The factors this will depend on include:&lt;/p>
+&lt;p>Flip around and find out!&lt;/p></description></item><item><title>Understanding Landing Lag</title><link>https://rivals.academy/lectures/understanding-landing-lag/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/understanding-landing-lag/</guid><description>&lt;p>Any time you land onto a grounded surface from the air you will be forced into a state called landing lag, unable to act for a short period of time. All characters have both default landing lag values and specific landing lag values should you land during an aerial. The standard default landing lag value is 4 frames, with the six heavy characters (Kragg, Etalus, Sylvanos, Elliana, Hodan, and Olympia) having an increased default value of 6 frames. While the landing lag mechanic is designed to slow you down to some degree, you’ll find that there are several ways that you can avoid the full extent of your landing lag. Here are some of things that you need to know if you want to speed up your play.&lt;/p>
+&lt;h2 id="hit-vs-whiff" class="heading">
+Hit vs. Whiff&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Hit vs. Whiff"
+onclick="copyHeadingLink(&amp;#34;hit-vs-whiff&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;p>Similar to how the endlag of most of your normal attacks works, landing lag has interactions with the hit cancelling (or whiff lag) mechanic. On hitting your opponent your landing lag is reduced by one third, allowing you to more effectively combo your hits without any extra input required. If this reduced value on hit is lower than your default landing lag it will increase to the default value instead.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/understanding-landing-lag/hit-whiff.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/understanding-landing-lag/hit-whiff.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/understanding-landing-lag/hit-whiff.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;h2 id="using-jumpsquat" class="heading">
+Using Jumpsquat&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Using Jumpsquat"
+onclick="copyHeadingLink(&amp;#34;using-jumpsquat&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;p>If your aerial successfully connects with another character or object before you interrupt it by landing you will be able to cancel the last 5 frames of your aerial’s landing lag into jumpsquat, allowing you to become airborne on the same frame you would normally be actionable on the ground. Although this mechanic also works with your default landing lag, the ability to perform multiple aerials in quick succession or cancel your landing into a faster wavedash approach is invaluable in any character’s kit. Learning to hitfall your aerials and cancel your landing lag into jumpsquat is arguably one of the most important skills to learn if you want to improve.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/understanding-landing-lag/jumpsquat.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/understanding-landing-lag/jumpsquat.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/understanding-landing-lag/jumpsquat.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>It’s worth noting that heavy characters (Kragg, Etalus, Sylvanos, Elliana, Hodan, Olympia) arguably benefit more from being able to cancel their landing lag into jumpsquat. Since heavy characters&amp;rsquo; default landing lag value is 6, they will be unable to cancel the entirety of the landing lag into jumpsquat, only the last 5 frames. Despite this, if an aerial’s on hit landing lag value for a heavy character is 6 frames or less it will be possible to cancel the full amount into jumpsquat, effectively allowing you to act 1 frame sooner than what should be possible. The below example of Kragg’s neutral air, a move with 6 frames of landing on hit, when cancelled into jumpsquat on the first frame of landing lag is fully actionable in the air on frame 6.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/understanding-landing-lag/heavies.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/understanding-landing-lag/heavies.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/understanding-landing-lag/heavies.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;h2 id="cancelling-jumpsquat" class="heading">
+Cancelling Jumpsquat&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Cancelling Jumpsquat"
+onclick="copyHeadingLink(&amp;#34;cancelling-jumpsquat&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;p>As you can cancel your landing lag into jumpsquat, you are also effectively able to cancel it into other actions as well. There are obvious movement benefits of being able to wavedash out of your landing lag, which can then subsequently be cancelled into another attack of your choosing with the increased momentum. It is also possible to cancel your jumpsquat frames into either Up Strong (or Up Tilt as Wrastor) and Up Special. As a demonstration, the below clip presents an Orcane cancelling Nair’s landing lag directly into an up special to prevent their opponent from being able to tech before the attack begins.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/understanding-landing-lag/orca-upb.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/understanding-landing-lag/orca-upb.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/understanding-landing-lag/orca-upb.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>Although this was only a 4 frame difference in the previous clip, this technique opens up a wide variety of combo options that would not be otherwise available, or at a minimum strengthens existing options by allowing you to begin them 4-6 frames earlier. There are not many Up Specials which have increased combo potential from this technique, but there are many notable examples of aerials that can link into Up Strong when cancelling the landing lag. The below clip shows a handful of aerials from across the cast (in alphabetical order) that can lead to a kill if you hitfall and cancel your landing lag directly into your Up Strong or Up Special.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/understanding-landing-lag/examples.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/understanding-landing-lag/examples.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/understanding-landing-lag/examples.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>Not all of these will connect reliably on all DI options, but some are extremely strong options (or even true combos in some cases) that make the threat of any of your aerials increase tenfold.&lt;/p>
+&lt;p>Head into practice mode and start refining your options out of landing lag and you&amp;rsquo;re guaranteed to see some results.&lt;/p></description></item><item><title>Understanding Ranno Up Air 1</title><link>https://rivals.academy/lectures/understanding-ranno-upair1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/understanding-ranno-upair1/</guid><description>&lt;p>There are a lot of misconceptions about whether this move is true in certain combos or not, and I&amp;rsquo;m here to clear them all up right here in this post! Ranno&amp;rsquo;s Up Air 1 is a unique move in that it applies a set amount of knockback and hitstun. This allows the move to function the same whether the enemy is at 0% or 200%. Knowing this, let&amp;rsquo;s look at what scenarios will allow us to reliably combo this hitbox into other moves. The factors this will depend on include:&lt;/p>
 &lt;ul>
 &lt;li>The opponent&amp;rsquo;s weight&lt;/li>
 &lt;li>What move we choose to follow up with&lt;/li>
@@ -837,7 +1094,7 @@ onclick="copyHeadingLink(&amp;#34;followup&amp;#34;)">
 &lt;/button>
 &lt;span class="copied">Copied link!&lt;/span>
 &lt;/h2>
-&lt;p>Our move selection is affected by the fact that upon landing after connecting Up Air 1, we&amp;rsquo;ll be put into 4 frames of landing lag. We can choose to wait this lag out and use a grounded option like we did above, or we can cancel that lag into a jump, which lets us either follow up with an aerial or cancel our jump into an Up Strong instead.
+&lt;p>Our move selection is affected by the fact that upon landing after connecting Up Air 1, we&amp;rsquo;ll be put into 4 frames of landing lag. We can choose to wait this lag out and use a grounded option like we did above, or we can &lt;a href="https://rivals.academy/lectures/understanding-landing-lag">cancel that lag into a jump&lt;/a>, which lets us either follow up with an aerial or cancel our jump into an Up Strong instead.
 Ranno&amp;rsquo;s fastest grounded followups, shown in the earlier clips, take 9 frames (4f landing lag + 5f attack start up).&lt;/p>
 &lt;p>Following up with Nair also takes 9 frames (5f jumpsquat + 4f attack startup), making it a viable combo option as well.&lt;/p>
 &lt;video controls loop muted preload>

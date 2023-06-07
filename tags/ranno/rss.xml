@@ -189,7 +189,7 @@ onclick="copyHeadingLink(&amp;#34;followup&amp;#34;)">
 &lt;/button>
 &lt;span class="copied">Copied link!&lt;/span>
 &lt;/h2>
-&lt;p>Our move selection is affected by the fact that upon landing after connecting Up Air 1, we&amp;rsquo;ll be put into 4 frames of landing lag. We can choose to wait this lag out and use a grounded option like we did above, or we can cancel that lag into a jump, which lets us either follow up with an aerial or cancel our jump into an Up Strong instead.
+&lt;p>Our move selection is affected by the fact that upon landing after connecting Up Air 1, we&amp;rsquo;ll be put into 4 frames of landing lag. We can choose to wait this lag out and use a grounded option like we did above, or we can &lt;a href="https://rivals.academy/lectures/understanding-landing-lag">cancel that lag into a jump&lt;/a>, which lets us either follow up with an aerial or cancel our jump into an Up Strong instead.
 Ranno&amp;rsquo;s fastest grounded followups, shown in the earlier clips, take 9 frames (4f landing lag + 5f attack start up).&lt;/p>
 &lt;p>Following up with Nair also takes 9 frames (5f jumpsquat + 4f attack startup), making it a viable combo option as well.&lt;/p>
 &lt;video controls loop muted preload>
