@@ -129,9 +129,15 @@ article ul {
   padding-left: 1.25rem;
 }
 
+article img {
+  max-width: 100%;
+}
+
 article video {
   width: 100%;
   height: auto;
+  border-radius: .5rem;
+  margin-bottom: .25rem;
 }
 
 :not(:active):focus-visible {
@@ -668,15 +674,17 @@ article video {
   padding: 1.5rem var(--page-padding);
 }
 
-@media only screen and (min-width:calc(48rem + 1px)) {
+@media only screen and (min-width: 60rem) {
   .page-list {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-.page-list a {
+.article-preview {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
   color: var(--clr-text);
   border: .25rem solid var(--clr-highlight);
   padding: 1rem;
@@ -685,17 +693,33 @@ article video {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .page-list a:hover,
-  .page-list a:focus-visible {
+  .article-preview:hover,
+  .article-preview:focus-visible {
     border: .25rem solid var(--clr-gray-1);
     transform: scale(1.01);
     transition: all .1s ease-in;
   }
 
-  .page-list a:hover .headline
-  .page-list a:focus-visible .headline {
+  .article-preview:hover .headline
+  .article-preview:focus-visible .headline {
     color: var(--clr-text-hc);
     transition: all .1s ease-in;
+  }
+}
+
+.article-preview > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail {
+  height: 5.625rem;
+  border-radius: .5rem;
+}
+
+@media only screen and (max-width: 40rem) {
+  .thumbnail {
+    display: none;
   }
 }
 
@@ -828,6 +852,12 @@ article video {
   margin: auto;
 }
 
+.sidebar-thumbnail {
+  width: 100%;
+  border-radius: .25rem;
+  margin-bottom: .5rem;
+}
+
 .toc {
   display: flex;
   flex-direction: column;
@@ -900,6 +930,7 @@ article video {
   }
 
   .library-grid,
+  .sidebar-thumbnail,
   #TableOfContents,
   .to-top {
     display: none;
@@ -1030,6 +1061,7 @@ article video {
   max-width: 100%;
   height: auto;
   max-height: 12.5rem;
+  border-radius: .125rem;
 }
 
 .library-footer {
