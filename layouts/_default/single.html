@@ -4,6 +4,9 @@
 {{ define "main" }}
 <div class="center"><div class="cols-sidebar-content">
   <div class="sidebar">
+    {{ if fileExists (print .RelPermalink "thumb.png") }}
+      <img class="sidebar-thumbnail" aria-hidden="true" src="thumb.png">
+    {{ end }}
     <div class="toc">
       {{ .TableOfContents }}
       <a href="#" class="to-top" title="Jump to Top">
