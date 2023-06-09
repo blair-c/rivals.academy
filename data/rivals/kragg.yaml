@@ -431,7 +431,7 @@ forwardAir:
     firstActiveFrame: 38
     landingLag:
       hit: 8
-      whiff: 912
+      whiff: 12
     damage: 11
     angle: 40
     angleFlipper: 0
