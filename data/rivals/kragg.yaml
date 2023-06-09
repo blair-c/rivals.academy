@@ -420,7 +420,7 @@ neutralAir:
 
 forwardAir:
 - hitboxes:
-  - startup: 12
+  - startup: 11
     active:
       from: 12
       to: 17
