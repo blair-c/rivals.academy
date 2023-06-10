@@ -745,7 +745,122 @@ onclick="copyHeadingLink(&amp;#34;cast-viability&amp;#34;)">
 &lt;/h2>
 &lt;p>With that explanation out of the way, here is my qualitative summary of the effectiveness of these techniques across the cast. Characters that stand to benefit from learning this tech (in my opinion) are bolded.&lt;/p>
 &lt;p>&lt;img src="cast-comparison.png" alt="Table summarizing the viability of Platboost, Ledgeboost, Platmoost, and Ledgemoost across the cast">&lt;/p>
-&lt;p>This tech can be used to enhance a variety of options: going deep for edgeguards, faster movement for platdrop aerials, traveling across platforms, and more. Go try it out!&lt;/p></description></item><item><title>Shine > Up Strong</title><link>https://rivals.academy/lectures/shine-upstrong/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/shine-upstrong/</guid><description>&lt;p>Zetterburn&amp;rsquo;s Shine &amp;gt; Up Strong is one of the strongest kill options in the game as it is almost always applicable for a parry punish and is a follow up off of a frame 2 move (Shine) that can also be used to whiff punish effectively. Performed correctly, it&amp;rsquo;s a true confirm on the entire cast well into Up Strong kill %.&lt;/p>
+&lt;p>This tech can be used to enhance a variety of options: going deep for edgeguards, faster movement for platdrop aerials, traveling across platforms, and more. Go try it out!&lt;/p></description></item><item><title>Reverse Maypul Side Special</title><link>https://rivals.academy/lectures/reverse-maypul-side-special/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/reverse-maypul-side-special/</guid><description>
+&lt;h2 id="how-to" class="heading">
+How To&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: How To"
+onclick="copyHeadingLink(&amp;#34;how-to&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;p>For the more experienced Maypul players (or just the ones who have finished Maypul’s tutorial), you’re likely aware that her Side Special can be reversed.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/reverse-maypul-side-special/reverse.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/reverse.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/reverse.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>Reverse Side Special is performed by inputting the opposite direction of your initial Side Special within four frames of inputting it.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/reverse-maypul-side-special/reverse-inputs-slow.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/reverse-inputs-slow.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/reverse-inputs-slow.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>Now, four frames seems like a very short amount of time, but practice this enough and you’ll get the hang of it in no time. However, this post isn’t just about the existence of Reverse Side Special. Instead, I’ll be going through some practical applications of Reverse Side Special and why it’s yet another invaluable tool in Maypul’s arsenal.&lt;/p>
+&lt;h2 id="followups" class="heading">
+Followups&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Followups"
+onclick="copyHeadingLink(&amp;#34;followups&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;p>Before continuing, I’d like to discuss the main problem with Side Special as a combo tool: the fact that it doesn’t easily lead into followups. As an example:&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/reverse-maypul-side-special/no-followup.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/no-followup.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/no-followup.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>Because of how separated Maypul and Zetterburn are, it turns any potential followups into a tech chase. Indeed, Side Special is even laggier of whiff than if reversed by 9 frames.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/reverse-maypul-side-special/endlag-comparison.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/endlag-comparison.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/endlag-comparison.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>So, how does reversing this hitbox help us follow up? Take a look at the Reverse Side Special demonstration again. Notice how the hitbox angle comes back with us? This is where things get spicy. Because the opponent is sent towards where Maypul ends up, Reverse Side Special into Dtilt is a very common combo.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/reverse-maypul-side-special/dtilt.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/dtilt.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/dtilt.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>This works on no DI and DI in consistently, however if the opponent chooses to DI out, it will connect at around 40%.&lt;/p>
+&lt;p>How about wrapping with Lily?&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/reverse-maypul-side-special/lily.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/lily.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/lily.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>Reverse Side Special can be used to knock the opponent into Lily on a platform, where we all love to place her so much, as well.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/reverse-maypul-side-special/lily-plat.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/lily-plat.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/lily-plat.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;h2 id="turnaround-reverse" class="heading">
+Turnaround Reverse&lt;button class="heading-link"
+title="Copy link"
+aria-label="Copy link to this section: Turnaround Reverse"
+onclick="copyHeadingLink(&amp;#34;turnaround-reverse&amp;#34;)">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
+&lt;/button>
+&lt;span class="copied">Copied link!&lt;/span>
+&lt;/h2>
+&lt;p>Let’s discuss a hypothetical situation:&lt;/p>
+&lt;p>&lt;img src="zetterburn-lily.png" alt="Zetterburn between Maypul and her Lily">&lt;/p>
+&lt;p>I’m in front of this Zetterburn, and I’d like him to get wrapped. Sure, I could throw seed and Ftilt him into Lily, but I’d like something I can do now. I can’t just Side Special, as that will send him opposite of Lily, and the same case with Reverse Side Special.&lt;/p>
+&lt;p>Introducing &lt;strong>Turnaround Reverse Side Special&lt;/strong>. If you input a Side Special &lt;em>opposite&lt;/em> to the direction you’re facing (even when running), you’ll immediately turn around and begin the Side Special animation.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/reverse-maypul-side-special/turnaround-reverse.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/turnaround-reverse.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/turnaround-reverse.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>Suddenly, this situation is simple! Simply Turnaround Reverse Side Special into Lily.&lt;/p>
+&lt;video controls loop muted preload>
+&lt;source src="https://rivals.academy/lectures/reverse-maypul-side-special/zetterburn-lily.mp4" type="video/mp4">
+Download the
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/zetterburn-lily.webm">WEBM&lt;/a>
+or
+&lt;a href="https://rivals.academy/lectures/reverse-maypul-side-special/zetterburn-lily.mp4">MP4&lt;/a>
+video.
+&lt;/video>
+&lt;p>Notice how we can approach using Turnaround Side Special and get an opening with all the benefits of Reverse Side Special without needing to be in close quarters with the opponent. In addition, notice how Reverse and Turnaround Reverse Side Special send in different directions. Reverse Side Special sends towards the initial hit, while Turnaround Reverse Side Special sends away from the initial hit. This can be used to punish predictable DI and get yourself into a position to extend combos even further.&lt;/p>
+&lt;p>As always, using this tech too much will get you punished (parries or otherwise), so be careful and don’t spam these in the midst of battle. However, with an appropriate use during a match, Reverse Side Special can lead to bonus opportunities and punishes that wouldn’t have been available otherwise.&lt;/p></description></item><item><title>Shine > Up Strong</title><link>https://rivals.academy/lectures/shine-upstrong/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rivals.academy/lectures/shine-upstrong/</guid><description>&lt;p>Zetterburn&amp;rsquo;s Shine &amp;gt; Up Strong is one of the strongest kill options in the game as it is almost always applicable for a parry punish and is a follow up off of a frame 2 move (Shine) that can also be used to whiff punish effectively. Performed correctly, it&amp;rsquo;s a true confirm on the entire cast well into Up Strong kill %.&lt;/p>
 &lt;video controls loop muted preload>
 &lt;source src="https://rivals.academy/lectures/shine-upstrong/shine-upstrong.mp4" type="video/mp4">
 Download the
