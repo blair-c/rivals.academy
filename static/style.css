@@ -100,7 +100,7 @@ h1 {
 
 h2 {
   color: var(--clr-text-hc);
-  border-bottom: 1px solid var(--clr-highlight);
+  border-bottom: 1px solid var(--clr-gray-1);
 }
 
 h3 {
