@@ -25,7 +25,7 @@ roaa:
 
 rrc:
 - name: Rivals Recess Circuit
-  day: Sundays
+  day: Saturdays
   time: 7:00 PM ET
   freq: weekly
   link: https://rivalsrecess.challonge.com/
