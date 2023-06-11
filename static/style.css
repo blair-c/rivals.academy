@@ -13,6 +13,7 @@
   --clr-training-bg: #16162e;
   --clr-training-border: #252244;
   --clr-training-border-hc: #3f3e6c;
+  --clr-training-ground: #a5a0cb;
 
   --clr-abxy-green: #009e4e;
   --clr-abxy-blue: #1f8ccc;
@@ -1130,7 +1131,7 @@ article video {
 }
 
 .brackets-list h3 a:hover svg {
-  fill: var(--clr-training-border-hc);
+  fill: var(--clr-training-ground);
 }
 
 .bracket-desc {
