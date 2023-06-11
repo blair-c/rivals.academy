@@ -20,6 +20,10 @@
   --clr-abxy-yellow: #d18217;
   --clr-abxy-red: #de2c2c;
 
+  --clr-beginner: var(--clr-abxy-blue);
+  --clr-intermediate: #0c9752;
+  --clr-advanced: #d16b17;
+
   --clr-discord: #5865f2;
   --clr-discord-hc: #4b53cc;
   --clr-twitter: #1d9bf0;
@@ -755,15 +759,15 @@ article video {
 }
 
 .tag-beginner {
-  color: var(--clr-abxy-blue);
+  color: var(--clr-beginner);
 }
 
 .tag-intermediate {
-  color: var(--clr-abxy-green);
+  color: var(--clr-intermediate);
 }
 
 .tag-advanced {
-  color: var(--clr-abxy-yellow);
+  color: var(--clr-advanced);
 }
 
 .article-header {
