@@ -13,26 +13,34 @@
     </header>
 
     <div class="centered page-list">
-      {{ range where .Pages "draft" "!=" "true" }}
-        <a class="article-preview" href="{{ .RelPermalink }}">
-          <div>
-            <p class="headline">{{ .Title }}</p>
-            <p class="tagline">{{ .Description }}.</p>
-            <p class="tag-list">
-              {{ range .Params.tags }}
-                <span href="/tags/{{ . }}" class="tag tag-{{ . }}">
-                  {{ if fileExists (print "static/img/icons-full/" . ".png") }}
-                    <img src="/img/icons-full/{{ . }}.png">
-                    <span class="sr-only">{{ humanize . | title }}</span>
-                  {{ else }}#{{ . }}{{ end }}
-                </span>
-              {{ end }}
-            </p>
-          </div>
-          {{ if fileExists (print .RelPermalink "thumb.png") }}
-            <img class="thumbnail" aria-hidden="true" src="{{ .RelPermalink }}thumb.png">
+      {{ $pages := where .Pages "draft" "!=" "true" }}
+      {{ range $pages }}
+        {{ if eq (index .Params.tags 1) "all-characters" }}
+          {{ partial "card.html" . }}
+        {{ end }}
+      {{ end }}
+      {{ range $pages }}
+        {{ if isset .Params "tags" }}
+          {{ if gt (len .Params.tags) 2 }}
+            {{ partial "card.html" . }}
           {{ end }}
-        </a>
+        {{ end }}
+      {{ end }}
+      {{ $chars := slice 
+        "zetterburn" "orcane" "kragg" "wrastor"
+        "forsburn" "etalus" "maypul" "absa"
+        "clairen" "ranno" "sylvanos" "elliana"
+        "ori" "shovel-knight"
+        "mollo" "hodan" "olympia" "pomme"
+      }}
+      {{ $c := "" }}
+      {{ range $chars }}
+        {{ $c = . }}
+        {{ range $pages }}
+          {{ if and (eq (index .Params.tags 1) $c) (lt (len .Params.tags) 3) }}
+            {{ partial "card.html" . }}
+          {{ end }}
+        {{ end }}
       {{ end }}
     </div>
 

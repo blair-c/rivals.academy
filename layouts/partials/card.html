@@ -1,0 +1,19 @@
+<a class="article-preview" href="{{ .RelPermalink }}">
+  <div>
+    <p class="headline">{{ .Title }}</p>
+    <p class="tagline">{{ .Description }}.</p>
+    <p class="tag-list">
+      {{ range .Params.tags }}
+        <span href="/tags/{{ . }}" class="tag tag-{{ . }}">
+          {{ if fileExists (print "static/img/icons-full/" . ".png") }}
+            <img src="/img/icons-full/{{ . }}.png">
+            <span class="sr-only">{{ humanize . | title }}</span>
+          {{ else }}#{{ . }}{{ end }}
+        </span>
+      {{ end }}
+    </p>
+  </div>
+  {{ if fileExists (print .RelPermalink "thumb.png") }}
+    <img class="thumbnail" aria-hidden="true" src="{{ .RelPermalink }}thumb.png">
+  {{ end }}
+</a>
