@@ -6,7 +6,7 @@
       {{ range .Params.tags }}
         <span href="/tags/{{ . }}" class="tag tag-{{ . }}">
           {{ if fileExists (print "static/img/icons-full/" . ".png") }}
-            <img src="/img/icons-full/{{ . }}.png">
+            <img src="/img/icons-full/{{ . }}.png" aria-hidden="true">
             <span class="sr-only">{{ humanize . | title }}</span>
           {{ else }}#{{ . }}{{ end }}
         </span>
