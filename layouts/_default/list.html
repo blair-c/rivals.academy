@@ -13,7 +13,7 @@
     </header>
 
     <div class="centered page-list">
-      {{ range .Pages }}{{ if ne .Draft true }}
+      {{ range where .Pages "draft" "!=" "true" }}
         <a class="article-preview" href="{{ .RelPermalink }}">
           <div>
             <p class="headline">{{ .Title }}</p>
@@ -33,7 +33,7 @@
             <img class="thumbnail" aria-hidden="true" src="{{ .RelPermalink }}thumb.png">
           {{ end }}
         </a>
-      {{ end }}{{ end }}
+      {{ end }}
     </div>
 
   </main>
