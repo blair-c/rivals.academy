@@ -14,7 +14,7 @@ Many newer Absa mains tend to dislike two main stages when starting out: Aethere
 
 ## Zip 2
 
-Absa has a movement trick that turns Blazing Hideout from a instant ban to a more neutral stage for her. By using a 45' angle with the second zip of her Up Special, she's at the perfect height to waveland on the top platform. This movement trick enhances her platform movement on this stage drastically, and makes Blazing Hideout into yet another stage that Absa can move seamlessly on.
+Absa has a movement trick that turns Blazing Hideout from a instant ban to a more neutral stage for her. By using a 45° angle with the second zip of her Up Special, she's at the perfect height to waveland on the top platform. This movement trick enhances her platform movement on this stage drastically, and makes Blazing Hideout into yet another stage that Absa can move seamlessly on.
 
 {{< video zip2 >}}
 
@@ -24,7 +24,7 @@ You can also start in the air, hit the ground with your Up Special, and then bou
 
 {{< video zip2-air >}}
 
-This technique also works with a 135' angle moving backwards, in case you don't feel like overcommitting with your Up Special movement.
+This technique also works with a 135° angle moving backwards, in case you don't feel like overcommitting with your Up Special movement.
 
 {{< video zip2-back >}}
 
