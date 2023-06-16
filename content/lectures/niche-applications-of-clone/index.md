@@ -50,9 +50,9 @@ Clone walling can also be used defensively against Shovel Knight's SideB and Wra
 
 Note: Kragg's rock is not on the list above because it stays active until it touches the ground after hitting the clone. Clone walling can stop the rock from hitting you on the initial throw, but be careful about running in directly behind the clone lest you get hit while the rock is still falling.
 
-## Clone Tech-Chasing
+## Clone Tech Chasing
 
-If you're like me and have an average (at best) reaction time and consistently tech-chasing is difficult, then this technique is for you. Forsburn has a lot of bread and butter combos to get the opponent from low to mid percents, but the opponent will typically start getting more chances to DI out and tech to escape your combos as they get to mid percents. Since the clone's AI is programmed to always follow the opponent (unless you're a maniac and press the Special button again), it has an essentially perfect reaction time and can do the tech-chasing for you:
+If you're like me and have an average (at best) reaction time and consistently tech chasing is difficult, then this technique is for you. Forsburn has a lot of bread and butter combos to get the opponent from low to mid percents, but the opponent will typically start getting more chances to DI out and tech to escape your combos as they get to mid percents. Since the clone's AI is programmed to always follow the opponent (unless you're a maniac and press the Special button again), it has an essentially perfect reaction time and can do the tech chasing for you:
 
 {{< video clone-tech-chase >}}
 
