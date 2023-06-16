@@ -630,15 +630,15 @@ video.
 &lt;p>Clone walling can also be used defensively against Shovel Knight&amp;rsquo;s SideB and Wrastor&amp;rsquo;s DownB since they have hit detection and stop as soon as they hit something. In both of these cases, it&amp;rsquo;s fairly difficult to convert the clone wall into a neutral win, but it at least prevents you from getting hit.&lt;/p>
 &lt;p>Note: Kragg&amp;rsquo;s rock is not on the list above because it stays active until it touches the ground after hitting the clone. Clone walling can stop the rock from hitting you on the initial throw, but be careful about running in directly behind the clone lest you get hit while the rock is still falling.&lt;/p>
 &lt;h2 id="clone-tech-chasing" class="heading">
-Clone Tech-Chasing&lt;button class="heading-link"
+Clone Tech Chasing&lt;button class="heading-link"
 title="Copy link"
-aria-label="Copy link to this section: Clone Tech-Chasing"
+aria-label="Copy link to this section: Clone Tech Chasing"
 onclick="copyHeadingLink(&amp;#34;clone-tech-chasing&amp;#34;)">
 &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/>&lt;/svg>
 &lt;/button>
 &lt;span class="copied">Copied link!&lt;/span>
 &lt;/h2>
-&lt;p>If you&amp;rsquo;re like me and have an average (at best) reaction time and consistently tech-chasing is difficult, then this technique is for you. Forsburn has a lot of bread and butter combos to get the opponent from low to mid percents, but the opponent will typically start getting more chances to DI out and tech to escape your combos as they get to mid percents. Since the clone&amp;rsquo;s AI is programmed to always follow the opponent (unless you&amp;rsquo;re a maniac and press the Special button again), it has an essentially perfect reaction time and can do the tech-chasing for you:&lt;/p>
+&lt;p>If you&amp;rsquo;re like me and have an average (at best) reaction time and consistently tech chasing is difficult, then this technique is for you. Forsburn has a lot of bread and butter combos to get the opponent from low to mid percents, but the opponent will typically start getting more chances to DI out and tech to escape your combos as they get to mid percents. Since the clone&amp;rsquo;s AI is programmed to always follow the opponent (unless you&amp;rsquo;re a maniac and press the Special button again), it has an essentially perfect reaction time and can do the tech chasing for you:&lt;/p>
 &lt;video controls loop muted preload>
 &lt;source src="https://rivals.academy/lectures/niche-applications-of-clone/clone-tech-chase.mp4" type="video/mp4">
 Download the
