@@ -4,3 +4,6 @@
 # Editors
 .vs
 .vscode
+
+# OS
+.DS_Store
