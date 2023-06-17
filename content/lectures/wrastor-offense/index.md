@@ -39,7 +39,7 @@ A common whiff punish situation is baiting aerials from below. Since Wrastor lac
 
 ### Aerial Play
 
-Wrastor's very high horizontal aerial mobility in Slipstream, combined with having access to 3 midair jumps, grants him unparallelled ability to feign attacks from above and bait his opponent into committing to a punishable anti-air. Drifting in and back out of their range is very effective, especially in Slipstream.
+Wrastor's very high horizontal aerial mobility in Slipstream, combined with having access to 3 midair jumps, grants him unparallelled ability to feign attacks from above and bait his opponent into committing to a punishable anti-air or defensive option. Drifting in and back out of their range is very effective, especially in Slipstream.
 
 {{< video jumps >}}
 
