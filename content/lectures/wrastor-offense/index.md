@@ -164,11 +164,9 @@ Now we have a similar scenario to last time, except it's even worse due to our m
 
 ### Throwing Slipstream
 
-Finally, let's consider a scenario where their DI got the better of you: they screwed up your momentum and are just outside of melee range. Here, we can consider **throwing the Slipstream projectile itself to attempt to keep the combo going**. 
+Finally, let's consider a scenario where their DI got the better of you: they screwed up your momentum and are just outside of melee range. Here, we can consider **throwing the Slipstream projectile itself to attempt to keep the combo going**. It barely has any hitstun, but can interrupt your opponent's momentum and/or attack startup and give you a brief window to combo. Plus, now you have slipstream active, which lets you follow up on DI out if they try it again.
 
 {{< video slipstream >}}
-
-It barely has any hitstun, but can interrupt your opponent's momentum and/or attack startup and give you a brief window to combo. Plus, now you have slipstream active, which lets you follow up on DI out if they try it again.
 
 This technique comes with a huge caveat, however: **followups off of Slipstream are almost never true**. Even with optimal spacing, if slipstream hits the front of their hurtbox it can always be airdodged out of or often countered by fast attacks. While it is difficult to react to, experienced opponents may be aware of this scenario and be ready to break out. Balancing the risk/reward of combo extensions is an essential Wrastor skill that comes with time, so experiment and model your playstyle accordingly.
 
