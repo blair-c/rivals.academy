@@ -33,13 +33,15 @@
         "ori" "shovel-knight"
         "mollo" "hodan" "olympia" "pomme"
       }}
-      {{ $c := "" }}
+      {{ $c := "" }} {{ $len := 0}}
       {{ range $chars }}
         {{ $c = . }}
         {{ range $pages }}
-          {{ $len := len .Params.tags }}
-          {{ if and (eq (index .Params.tags (sub $len 1)) $c) (lt $len 4) }}
-            {{ partial "card.html" . }}
+          {{ if isset .Params "tags" }}
+            {{ $len = len .Params.tags }}
+            {{ if and (eq (index .Params.tags (sub $len 1)) $c) (lt $len 4) }}
+              {{ partial "card.html" . }}
+            {{ end }}
           {{ end }}
         {{ end }}
       {{ end }}
