@@ -14,7 +14,7 @@ Shovel Knight’s passive ability allows him to create collectable gems on hitti
 
 ## Chester's Shop
 
-Once you amass enough gems you’ll be able to spend it using Shovel Knight’s taunt, summoning Chester and allowing you to browse the various relics and armors he has on offer. The relics will replace your neutral special with a new attack and the armors grant you new abilities or stats. 
+Once you amass enough gems you’ll be able to spend it using Shovel Knight’s taunt, summoning Chester and allowing you to browse the various relics and armors he has on offer. The relics will replace your Neutral Special with a new attack and the armors grant you new abilities or stats. 
 
 A significant feature of the shop is that you are able to quickly purchase relics and armors using the right stick!
 - **Left** will purchase the **War Horn**

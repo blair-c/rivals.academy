@@ -1,6 +1,6 @@
 ---
 title: Niche Applications of Clone
-description: Advanced uses of Forsburn's side special past the basics
+description: Advanced uses of Forsburn's Side Special past the basics
 authors:
 - TaiTheGuy
 tags:
