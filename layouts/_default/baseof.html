@@ -22,8 +22,8 @@
 
     <meta name="description" content="{{ .Description }}">
     {{ $img := "/img/default-cover.png" }}
-    {{ if fileExists (print .RelPermalink "img/featured.png") }}
-      {{ $img = print .Permalink "img/featured.png" }}{{ end }}
+    {{ if fileExists (print .RelPermalink "thumb.png") }}
+      {{ $img = print .Permalink "thumb.png" }}{{ end }}
     <meta name="image" content="{{ $img | absURL }}">
     <meta property="og:image" content="{{ $img | absURL }}" />
     <meta property="og:title" content="{{ .Title }}" />
