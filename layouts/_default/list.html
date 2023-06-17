@@ -21,7 +21,7 @@
       {{ end }}
       {{ range $pages }}
         {{ if isset .Params "tags" }}
-          {{ if gt (len .Params.tags) 2 }}
+          {{ if gt (len .Params.tags) 3 }}
             {{ partial "card.html" . }}
           {{ end }}
         {{ end }}
@@ -37,7 +37,8 @@
       {{ range $chars }}
         {{ $c = . }}
         {{ range $pages }}
-          {{ if and (eq (index .Params.tags 1) $c) (lt (len .Params.tags) 3) }}
+          {{ $len := len .Params.tags }}
+          {{ if and (eq (index .Params.tags (sub $len 1)) $c) (lt $len 4) }}
             {{ partial "card.html" . }}
           {{ end }}
         {{ end }}
