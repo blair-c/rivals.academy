@@ -89,7 +89,7 @@ Use Bair, Up Air, Fair, and Dair to juggle them, doing your best to anticipate t
 ### Set Up the Kill
 
 #### Off the Side
-All of your aerials can link into Forward Strong on the right DI. Sweetspot Up Special can replace it as it has similar strength (but different spacing), but it carries more risk. ~43% of Wrastor kills from [my study](https://docs.google.com/spreadsheets/d/18c7od0wON5htoKAXrdSFzmAy3B92KkhRy21s6n-aQeI) were from Fstrong, so it should be your primary kill option.
+All of your aerials and tilts can link into Forward Strong on the right DI. Sweetspot Up Special can replace it as it has similar strength (but different spacing), but it carries more risk and can be finicky to connect if the setup isn't quite right. ~43% of Wrastor kills from [my study](https://docs.google.com/spreadsheets/d/18c7od0wON5htoKAXrdSFzmAy3B92KkhRy21s6n-aQeI) were from Fstrong, so it should be your primary kill option.
 
 {{< video off-the-side >}}
 
@@ -112,7 +112,7 @@ The best mid-high% confirms for this include:
 - **Down Special > Clap**. This works best if you already have Slipstream out. If you can’t reach them, this move will force a techchase in almost any circumstance.
 
 {{< video high-percent >}}
-Here I set a bot to 130% with random DI and react to land the clap. You can also use Sweetspot Up Special in place of Clap, but it can be tougher to land.
+Here I set a bot to 130% with random DI and react to land the Clap. You can also use Sweetspot Up Special in place of Clap, but it can be tougher to land.
 
 There are plenty more options to consider here, but they are not as universal or as easy to set up as the above, often requiring a parry to set up or convenient DI to land. These include Up Tilt Spike > Clap and Jab 3 > Clap. Speaking of parry punishes, most Wrastors will just use raw Up Special (or run through Up Special), which can be countered by DI up. But by using one of the options discussed here instead, you can call out that DI up/in with a combo move, setting up for an easy Clap or Up Special that will kill earlier than the raw Up Special would have.
 
