@@ -74,7 +74,7 @@ onclick="copyHeadingLink(&amp;#34;chesters-shop&amp;#34;)">
 &lt;/button>
 &lt;span class="copied">Copied link!&lt;/span>
 &lt;/h2>
-&lt;p>Once you amass enough gems you’ll be able to spend it using Shovel Knight’s taunt, summoning Chester and allowing you to browse the various relics and armors he has on offer. The relics will replace your neutral special with a new attack and the armors grant you new abilities or stats.&lt;/p>
+&lt;p>Once you amass enough gems you’ll be able to spend it using Shovel Knight’s taunt, summoning Chester and allowing you to browse the various relics and armors he has on offer. The relics will replace your Neutral Special with a new attack and the armors grant you new abilities or stats.&lt;/p>
 &lt;p>A significant feature of the shop is that you are able to quickly purchase relics and armors using the right stick!&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Left&lt;/strong> will purchase the &lt;strong>War Horn&lt;/strong>&lt;/li>
@@ -468,7 +468,7 @@ onclick="copyHeadingLink(&amp;#34;aerial-play&amp;#34;)">
 &lt;/button>
 &lt;span class="copied">Copied link!&lt;/span>
 &lt;/h3>
-&lt;p>Wrastor&amp;rsquo;s very high horizontal aerial mobility in Slipstream, combined with having access to 3 midair jumps, grants him unparallelled ability to feign attacks from above and bait his opponent into committing to a punishable anti-air. Drifting in and back out of their range is very effective, especially in Slipstream.&lt;/p>
+&lt;p>Wrastor&amp;rsquo;s very high horizontal aerial mobility in Slipstream, combined with having access to 3 midair jumps, grants him unparallelled ability to feign attacks from above and bait his opponent into committing to a punishable anti-air or defensive option. Drifting in and back out of their range is very effective, especially in Slipstream.&lt;/p>
 &lt;video controls loop muted preload>
 &lt;source src="https://rivals.academy/lectures/wrastor-offense/jumps.mp4" type="video/mp4">
 Download the
@@ -594,7 +594,7 @@ or
 &lt;a href="https://rivals.academy/lectures/wrastor-offense/off-the-side.mp4">MP4&lt;/a>
 video.
 &lt;/video>
-&lt;p>If they&amp;rsquo;re close to the blastzone, a simple Nair, Tipper Fair, or Dair spike can often be enough to kill.&lt;/p>
+&lt;p>If they&amp;rsquo;re very close to the blastzone, a simple Nair, Tipper Fair, or Dair spike can often be enough to kill.&lt;/p>
 &lt;video controls loop muted preload>
 &lt;source src="https://rivals.academy/lectures/wrastor-offense/fair-kill.mp4" type="video/mp4">
 Download the
@@ -706,7 +706,7 @@ onclick="copyHeadingLink(&amp;#34;overshoot-dair&amp;#34;)">
 &lt;/h3>
 &lt;p>Dair also provides another useful function, arguably more important than the first. Say they unexpectedly held in and you&amp;rsquo;ve overshot your position— they&amp;rsquo;re behind you.&lt;/p>
 &lt;p>&lt;img src="example-overshoot.png" alt="Graphic displaying the ranges a Zetterburn at 50% behind Wrastor can be sent by Early Bair, Up Air 3, and Dair">&lt;/p>
-&lt;p>Now we have a similar scenario to last time, except it&amp;rsquo;s even worse due to our momentum being in the wrong direction (headed right, but need to chase left). Even with slipstream speed and a vertical move like Up Air 3, if they hold out (←) we may not be able to shift momentum in time. Dair rescues us again here. The back hit brings them in front of or above us, letting us combo and adjust for overshoot.&lt;/p>
+&lt;p>Now we have a similar scenario to last time, except it&amp;rsquo;s even worse due to our momentum being in the wrong direction (headed right, but need to chase left). Even with Slipstream speed and a vertical move like Up Air 3, if they hold out (←) we may not be able to shift momentum in time. Dair rescues us again here. The back hit brings them in front of or above us, letting us combo and adjust for overshoot.&lt;/p>
 &lt;video controls loop muted preload>
 &lt;source src="https://rivals.academy/lectures/wrastor-offense/dair-overshoot.mp4" type="video/mp4">
 Download the
@@ -724,7 +724,7 @@ onclick="copyHeadingLink(&amp;#34;throwing-slipstream&amp;#34;)">
 &lt;/button>
 &lt;span class="copied">Copied link!&lt;/span>
 &lt;/h3>
-&lt;p>Finally, let&amp;rsquo;s consider a scenario where their DI got the better of you: they screwed up your momentum and are just outside of melee range. Here, we can consider &lt;strong>throwing the Slipstream projectile itself to attempt to keep the combo going&lt;/strong>. It barely has any hitstun, but can interrupt your opponent&amp;rsquo;s momentum and/or attack startup and give you a brief window to combo. Plus, now you have slipstream active, which lets you follow up on DI out if they try it again.&lt;/p>
+&lt;p>Finally, let&amp;rsquo;s consider a scenario where their DI got the better of you: they screwed up your momentum and are just outside of melee range. Here, we can consider &lt;strong>throwing the Slipstream projectile itself to attempt to keep the combo going&lt;/strong>. It barely has any hitstun, but can interrupt your opponent&amp;rsquo;s momentum and/or attack startup and give you a brief window to combo. Plus, now you have Slipstream active, which lets you follow up on DI out if they try it again.&lt;/p>
 &lt;video controls loop muted preload>
 &lt;source src="https://rivals.academy/lectures/wrastor-offense/slipstream.mp4" type="video/mp4">
 Download the
@@ -733,7 +733,7 @@ or
 &lt;a href="https://rivals.academy/lectures/wrastor-offense/slipstream.mp4">MP4&lt;/a>
 video.
 &lt;/video>
-&lt;p>This technique comes with a huge caveat, however: &lt;strong>followups off of Slipstream are almost never true&lt;/strong>. Even with optimal spacing, if slipstream hits the front of their hurtbox it can always be airdodged out of or often countered by fast attacks. While it is difficult to react to, experienced opponents may be aware of this scenario and be ready to break out. Balancing the risk/reward of combo extensions is an essential Wrastor skill that comes with time, so experiment and model your playstyle accordingly.&lt;/p>
+&lt;p>This technique comes with a huge caveat, however: &lt;strong>followups off of Slipstream are almost never true&lt;/strong>. Even with optimal spacing, if Slipstream hits the front of their hurtbox it can always be airdodged out of or often countered by fast attacks. While it is difficult to react to, experienced opponents may be aware of this scenario and be ready to break out. Balancing the risk/reward of combo extensions is an essential Wrastor skill that comes with time, so experiment and model your playstyle accordingly.&lt;/p>
 &lt;h3 id="more" class="heading">
 More&lt;button class="heading-link"
 title="Copy link"
