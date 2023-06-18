@@ -1072,22 +1072,22 @@ article video {
   border-radius: .125rem;
 }
 
-.library-footer {
+.article-footer {
   margin: var(--page-padding);
   margin-bottom: 0;
   padding: 1rem;
   text-align: center;
   border: 3px solid var(--clr-gray-1);
-  border-radius: 1rem;
+  border-radius: .5rem;
 }
 
-.library-footer svg {
+.article-footer svg {
   height: .75rem;
   margin-right: .25rem;
   fill: var(--clr-text);
 }
 
-.library-footer a {
+.article-footer a {
   white-space: nowrap;
 }
 
