@@ -55,7 +55,7 @@ Another consideration is move choice. Generally you're looking to get in with mo
 If I had to rank Wrastor's moves in terms of their utility in neutral:
 - **S**: Bair, Dtilt  
 - **A**: Dash Attack, Jab, Nair, Slipstream (projectile), Fair  
-- **B**: Up Air, Dair, Dtilt, Down Special  
+- **B**: Up Air, Dair, Ftilt, Down Special  
 - **F**: Everything else  
  
 Now all this isn't to say this is the only effective neutral strategy. Mixing in raw approaches or some occasional chip-damage play keeps the opponent on their toes, especially if you've proven to them you can bait and punish so effectively that it makes them attack shy, giving you easy openings. Make sure to experiment and look to combine this neutral strategy with the upcoming punish game strategies and you'll be well on your way to winning more games with the bird.
