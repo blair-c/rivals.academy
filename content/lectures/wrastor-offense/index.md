@@ -3,7 +3,6 @@ title: Wrastor Offense
 description: An overview of Wrastor's neutral and punish strategy
 authors:
 - IGL
-- Blair
 tags:
 - beginner
 - intermediate
