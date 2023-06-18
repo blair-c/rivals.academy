@@ -811,7 +811,7 @@ article video {
 .library-select li a img {
   border: .25rem solid var(--clr-text-hc);
   border-bottom: 1px solid var(--clr-text-hc);
-  border-radius: .25rem;
+  border-radius: .125rem;
   max-width: 100%;
   height: auto;
 }
