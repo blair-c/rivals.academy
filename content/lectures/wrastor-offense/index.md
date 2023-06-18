@@ -93,7 +93,7 @@ All of your aerials can link into Forward Strong on the right DI. Sweetspot Up S
 
 {{< video off-the-side >}}
 
-If they're close to the blastzone, a simple Nair, Tipper Fair, or Dair spike can often be enough to kill.
+If they're very close to the blastzone, a simple Nair, Tipper Fair, or Dair spike can often be enough to kill.
 
 {{< video fair-kill >}}
 
