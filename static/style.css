@@ -67,6 +67,7 @@ main {
 
 p {
   line-height: 1.5;
+  margin-bottom: .75rem;
 }
 
 footer a {
@@ -133,6 +134,7 @@ article h4 {
 article ul,
 article ol {
   padding-left: 1.25rem;
+  margin-top: .5rem;
 }
 
 article img {
@@ -143,7 +145,7 @@ article video {
   width: 100%;
   height: auto;
   border-radius: .5rem;
-  margin-bottom: .25rem;
+  margin: .25rem 0;
 }
 
 :not(:active):focus-visible {
