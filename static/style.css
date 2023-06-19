@@ -359,8 +359,8 @@ article video {
 
 @media only screen and (min-width:calc(48rem + 1px)) {
   .nav-discord span {
-    padding: .15em .5em;
-    border-radius: .15em;
+    padding: .2em .5em;
+    border-radius: .2em;
     background-color: var(--clr-discord);
     color: var(--clr-bg);
   }
