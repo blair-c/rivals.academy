@@ -144,7 +144,7 @@ article img {
 article video {
   width: 100%;
   height: auto;
-  border-radius: .5rem;
+  border-radius: .25rem;
   margin: .25rem 0;
 }
 
