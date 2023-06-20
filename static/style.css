@@ -587,6 +587,7 @@ article video {
 .footer-socials {
   display: flex;
   gap: .5rem;
+  margin-top: 1.25rem;
 }
 
 .footer-socials li:active {
