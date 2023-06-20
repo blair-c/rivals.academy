@@ -816,6 +816,17 @@ article video {
   height: auto;
 }
 
+@media only screen and (max-width:40rem) {
+  .library-select {
+    gap: 0 .1875rem;
+  }
+
+  .library-select li a img {
+    border: .1875rem solid var(--clr-text-hc);
+    border-bottom: 0px solid transparent;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .library-select li:active {
     transform: scale(.97);
