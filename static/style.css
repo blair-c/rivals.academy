@@ -647,6 +647,7 @@ article video {
   margin: 1rem 0;
   font-size: 1.25rem;
   font-weight: bold;
+  line-height: normal;
 }
 
 .footer-bottom {
