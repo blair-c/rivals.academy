@@ -67,7 +67,6 @@ main {
 
 p {
   line-height: 1.5;
-  margin-bottom: .75rem;
 }
 
 footer a {
@@ -112,6 +111,10 @@ h2 {
 h3 {
   font-size: 1.4375rem;
   margin-bottom: 0.3125rem;
+}
+
+article p {
+  margin-bottom: .75rem;
 }
 
 article h1 {
@@ -555,10 +558,6 @@ article video {
   border-radius: 1rem;
 }
 
-.footer-hero p:not(.footer-title) {
-  margin-bottom: calc(1rem + .625rem);
-}
-
 @media only screen and (min-width:45rem) {
   .footer-main {
     grid-template-columns: 1fr 1fr;
@@ -599,6 +598,11 @@ article video {
   }
 }
 
+.footer-socials li {
+  display: flex;
+  align-items: center;
+}
+
 .footer-socials li a svg {
   display: flex;
   align-items: center;
@@ -619,14 +623,14 @@ article video {
 
 .footer-socials .join-discord {
   padding: .625rem 1rem;
-  margin: 1rem 0;
+  margin-right: .25rem;
   border-radius: .5rem;
   font-weight: 500;
   color: white;
   background-color: var(--clr-discord);
 }
 
-.footer-socials .join-discord:hover:not(:active) {
+.footer-socials .join-discord:hover {
   background-color: var(--clr-discord-hc);
 }
 
