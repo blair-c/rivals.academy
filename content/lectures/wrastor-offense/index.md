@@ -103,7 +103,7 @@ Look for Up Strong, rising Neutral Special, and Up Special. If you think they'll
 
 #### Higher Percent Setups
 
-Wrastor has endless combinations for combos, and can be played extremely freeform. Every Wrastor ends up developing their own combo style. But despite our best intentions, mistakes will happen and we’ll often be left with an opponent at mid-high%s in neutral. **Once most characters get past 80-100% or so, many of Wrastor’s aerial confirms stop working as well** and need the right setup and/or DI. In this situation, throwing out raw claps is an easy way to get yourself punished; Instead you’ll want to use moves that are safer to throw out and can combo better at a variety of %s, aiming to react to their DI.
+Wrastor has endless combinations for combos, and can be played extremely freeform. Every Wrastor ends up developing their own combo style. But despite our best intentions, mistakes will happen and we’ll often be left with an opponent at mid-high%s in neutral. **Once most characters get past 80-100% or so, many of Wrastor’s aerial confirms stop working as well** and need the right setup and/or DI. In this situation, throwing out raw Claps is an easy way to get yourself punished; Instead you’ll want to use moves that are safer to throw out and can combo better at a variety of %s, aiming to react to their DI.
 
 The best mid-high% confirms for this include:
 - **Dtilt > Clap**. Up Strong will usually kill earlier, but Fstrong works better to catch DI out, which will be easier if Slipstream is already out.
