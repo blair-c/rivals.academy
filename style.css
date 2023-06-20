@@ -516,6 +516,7 @@ article video {
   .footer-main-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1.5rem;
   }
 
@@ -586,6 +587,7 @@ article video {
 .footer-socials {
   display: flex;
   gap: .5rem;
+  margin-top: 1.25rem;
 }
 
 .footer-socials li:active {
@@ -645,6 +647,7 @@ article video {
   margin: 1rem 0;
   font-size: 1.25rem;
   font-weight: bold;
+  line-height: normal;
 }
 
 .footer-bottom {
