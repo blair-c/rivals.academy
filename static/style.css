@@ -795,12 +795,16 @@ article video {
   border-left: .125rem solid var(--clr-gray-1);
 }
 
-.article-authors {
-  color: var(--clr-training-border-hc);
+.article-header p:first-of-type {
+  border-radius: .125rem 0 0 0;
 }
 
 .article-description {
   margin-right: .125rem;
+}
+
+.article-authors {
+  color: var(--clr-training-border-hc);
 }
 
 .library-select {
