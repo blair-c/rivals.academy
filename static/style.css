@@ -1087,6 +1087,7 @@ article video {
   max-width: 100%;
   height: auto;
   max-height: 12.5rem;
+  border-radius: .125rem;
 }
 
 .article-footer {
