@@ -129,8 +129,8 @@ One of the first major guidelines players often abide by is “DI out to escape 
 
 The first thing to know is that being in Slipstream generally gives Wrastor the ability to cover DI out if you can maintain your momentum. Let's look at the basic scenario where they're in front of you at low-mid% and you're moving to the right. Here your main three combo tools will be Up Air, Fair, and Nair, which cover a good range of angles. The goal is to keep them within your melee attack range, but continue to push them sideways so you can maintain your momentum.
 
-- If you think they'll hold out (→), use Up Air (75°) or Inner Fair (60°) to keep them close. 
-- If you think they'll hold in (←), use Nair (30° + 45°) or Tipper Fair (40°) to push them outwards.
+If you think they'll hold out (→), use Up Air (75°) or Inner Fair (60°) to keep them close.  
+If you think they'll hold in (←), use Nair (30° + 45°) or Tipper Fair (40°) to push them outwards.
 
 Blend these together and switch between them based on your opponent's actions. Land a few of these, and they'll be offstage where you can set up to finish the stock. Pictured below are the zones where these moves can send vs. Zetter at 50%, with the main dotted path showing no DI or drift.
 

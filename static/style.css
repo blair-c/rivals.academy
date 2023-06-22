@@ -114,7 +114,7 @@ h3 {
 }
 
 article p {
-  margin-bottom: .75rem;
+  margin-bottom: .5rem;
 }
 
 article h1 {
@@ -148,7 +148,7 @@ article video {
   width: 100%;
   height: auto;
   border-radius: .25rem;
-  margin-top: .25rem;
+  margin-top: .5rem;
 }
 
 :not(:active):focus-visible {
