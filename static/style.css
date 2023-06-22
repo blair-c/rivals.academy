@@ -148,7 +148,7 @@ article video {
   width: 100%;
   height: auto;
   border-radius: .25rem;
-  margin: .25rem 0;
+  margin-top: .25rem;
 }
 
 :not(:active):focus-visible {
