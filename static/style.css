@@ -8,7 +8,7 @@
   --clr-gray-3: #75757d;
 
   --clr-darken-img: #303033;
-  --clr-text-on-img: #ededf2;
+  --clr-text-on-img: rgb(237, 237, 242);
 
   --clr-training-bg: #16162e;
   --clr-training-border: #252244;
@@ -544,7 +544,7 @@ article video {
 
 @media only screen and (min-width: 72rem) {
   .footer-main {
-    border-right: .125rem solid var(--clr-text-on-img);
+    border-right: .125rem solid rgba(237, 237, 242, .5);
   }
 }
 
