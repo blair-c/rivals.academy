@@ -35,12 +35,12 @@
   --content-max-width: 48rem;
   --footer-margin: 2.5rem;
 }
-@media only screen and (max-width:48rem) {
+@media (max-width:48rem) {
   :root {
     --page-padding: 1rem;
   }
 }
-@media only screen and (min-width:64rem) {
+@media (min-width:64rem) {
   :root {
     --page-padding: 2rem;
   }
@@ -360,7 +360,7 @@ article video {
   color: var(--clr-discord);
 }
 
-@media only screen and (min-width:calc(48rem + 1px)) {
+@media (min-width:calc(48rem + 1px)) {
   .nav-discord span {
     padding: .2em .5em;
     border-radius: .2em;
@@ -377,7 +377,7 @@ article video {
   }
 }
 
-@media only screen and (min-width:calc(40rem + 1px)) and (max-width:48rem) {
+@media (min-width:calc(40rem + 1px)) and (max-width:48rem) {
   .nav-discord svg {
     display: flex;
   }
@@ -392,7 +392,7 @@ article video {
   } /* .sr-only */
 }
 
-@media only screen and (max-width:40rem) {
+@media (max-width:40rem) {
   .data-disable-scroll-mobile {
     height: 100%;
     overflow: hidden;
@@ -512,7 +512,7 @@ article video {
   display: none;
 }
 
-@media only screen and (min-width:64rem) {
+@media (min-width:64rem) {
   .footer-main-container {
     display: flex;
     justify-content: center;
@@ -542,7 +542,7 @@ article video {
   padding: 0;
 }
 
-@media only screen and (min-width: 72rem) {
+@media (min-width: 72rem) {
   .footer-main {
     border-right: .125rem solid rgba(237, 237, 242, .5);
   }
@@ -559,7 +559,7 @@ article video {
   border-radius: 1rem;
 }
 
-@media only screen and (min-width:45rem) {
+@media (min-width:45rem) {
   .footer-main {
     grid-template-columns: 1fr 1fr;
   }
@@ -574,7 +574,7 @@ article video {
   }
 }
 
-@media only screen and (max-width:33rem) {
+@media (max-width:33rem) {
   .footer-hero {
     gap: 0;
   }
@@ -689,7 +689,7 @@ article video {
   padding: 1.5rem var(--page-padding);
 }
 
-@media only screen and (min-width: 60rem) {
+@media (min-width: 60rem) {
   .page-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -732,7 +732,7 @@ article video {
   border-radius: .5rem;
 }
 
-@media only screen and (max-width: 40rem) {
+@media (max-width: 40rem) {
   .thumbnail {
     display: none;
   }
@@ -827,7 +827,7 @@ article video {
   height: auto;
 }
 
-@media only screen and (max-width:40rem) {
+@media (max-width:40rem) {
   .library-select {
     gap: 0 .1875rem;
   }
@@ -949,7 +949,7 @@ article video {
   transition: all .1s ease-in;
 }
 
-@media only screen and (max-width:48rem) {
+@media (max-width:48rem) {
   .cols-sidebar-content {
     grid-template-columns: auto;
   }
@@ -1048,7 +1048,7 @@ article video {
   border-right: 2px solid var(--clr-gray-1) !important;
 }
 
-@media only screen and (min-width:calc(40rem + 1px)) {
+@media (min-width:calc(40rem + 1px)) {
   .sticky-col {
     position: sticky;
     position: -webkit-sticky;
@@ -1124,7 +1124,7 @@ article video {
   max-width: var(--content-max-width);
 }
 
-@media only screen and (min-width:64rem) {
+@media (min-width:64rem) {
   .tournament-hosts {
     display: grid;
     grid-template-columns: 1fr 1fr;
