@@ -14,15 +14,29 @@
 
     <div class="centered page-list">
       {{ $pages := where .Pages "draft" "!=" "true" }}
+      {{ $beginner := slice }}{{ $intermediate := slice }}{{ $advanced := slice }}
       {{ range $pages }}
-        {{ if eq (index .Params.tags 1) "all-characters" }}
-          {{ partial "card.html" . }}
+        {{ if eq (index .Params.tags 0) "beginner" }}
+          {{ $beginner = $beginner | append . }}
+        {{ else if eq (index .Params.tags 0) "intermediate" }}
+          {{ $intermediate = $intermediate | append . }}
+        {{ else if eq (index .Params.tags 0) "advanced" }}
+          {{ $intermediate = $intermediate | append . }}
         {{ end }}
       {{ end }}
-      {{ range $pages }}
-        {{ if isset .Params "tags" }}
-          {{ if gt (len .Params.tags) 3 }}
+      {{ range slice $beginner $intermediate $advanced }}
+        {{ range . }}
+          {{ if eq (index .Params.tags 1) "all-characters" }}
             {{ partial "card.html" . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ range slice $beginner $intermediate $advanced }}
+        {{ range . }}
+          {{ if isset .Params "tags" }}
+            {{ if gt (len .Params.tags) 3 }}
+              {{ partial "card.html" . }}
+            {{ end }}
           {{ end }}
         {{ end }}
       {{ end }}
@@ -36,11 +50,13 @@
       {{ $c := "" }} {{ $len := 0}}
       {{ range $chars }}
         {{ $c = . }}
-        {{ range $pages }}
-          {{ if isset .Params "tags" }}
-            {{ $len = len .Params.tags }}
-            {{ if and (eq (index .Params.tags (sub $len 1)) $c) (lt $len 4) }}
-              {{ partial "card.html" . }}
+        {{ range slice $beginner $intermediate $advanced }}
+          {{ range . }}
+            {{ if isset .Params "tags" }}
+              {{ $len = len .Params.tags }}
+              {{ if and (eq (index .Params.tags (sub $len 1)) $c) (lt $len 4) }}
+                {{ partial "card.html" . }}
+              {{ end }}
             {{ end }}
           {{ end }}
         {{ end }}
