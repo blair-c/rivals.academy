@@ -46,7 +46,7 @@ Down Tilt sends shards at a slightly shallower angle than Nair 1. This can be an
 
 {{< video dtilt >}}
 
-Spacing the Dtilt to reverse the shards can be a tricky way to catch an opponent off guard.
+Spacing the Dtilt to reverse the shards can be a tricky way to catch an opponent off guard. This is most easily performed by cancelling jab into the Dtilt.
 
 {{< video reverse-dtilt >}}
 
