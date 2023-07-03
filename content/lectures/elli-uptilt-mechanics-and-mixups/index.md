@@ -9,7 +9,7 @@ tags:
 draft: false
 ---
 
-## How Up Tilt Works
+## The Basics
 
 Up Tilt is a move with relatively weak knockback at its base, but built-up heat can be expended to empower the move. Up Tilt’s knockback increases linearly based on how much heat is expended, from 7 base + 60 scaling with no heat to 9 base + 90 scaling at overheat, and its endlag on hit from 10 frames with no heat to 20 frames at overheat.
 
