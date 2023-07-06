@@ -911,7 +911,7 @@ article video {
   margin: 0;
 }
 
-#TableOfContents ul ul {
+#TableOfContents ul ul li {
   padding-left: 1rem;
   border-left: 1px solid var(--clr-highlight);
 }
@@ -924,6 +924,10 @@ article video {
 
 #TableOfContents li a:hover {
   color: var(--clr-training-bg);
+}
+
+#TableOfContents ul ul .visible {
+  border-left: 1px solid var(--clr-gray-1);
 }
 
 #TableOfContents .visible > a {
