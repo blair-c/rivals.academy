@@ -1111,7 +1111,7 @@ article video {
 .article-footer svg {
   height: .75rem;
   margin-right: .25rem;
-  fill: var(--clr-text);
+  fill: var(--clr-training-ground);
 }
 
 .article-footer a {
