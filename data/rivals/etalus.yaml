@@ -259,7 +259,7 @@ dashAttack:
     notes:
     - Starting on ice and then moving onto normal ground will end active frames early.
   notes:
-  - Holding back on the same frame you jump-cancel will cause Etalus to turnaround on the last frame of jump-squat.
+  - Holding back on the same frame you jump-cancel will cause Etalus to turnaround on the last frame of jumpsquat.
   image:
     baseRes: https://rivals.academy/library/etalus/dash-attack.png
     highRes: https://rivals.academy/library/etalus/1080_dash-attack.png
