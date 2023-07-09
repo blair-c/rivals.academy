@@ -86,11 +86,13 @@ a {
   color: var(--clr-training-border-hc);
 }
 
-p a {
+p a,
+table a {
   border-bottom: 0px solid transparent;
 }
 
-p a:hover {
+p a:hover,
+table a:hover {
   border-bottom: 1px solid currentColor;
   transition: all .05s ease-in;
 }
