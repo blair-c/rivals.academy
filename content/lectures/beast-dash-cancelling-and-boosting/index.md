@@ -25,13 +25,12 @@ Upon hitting your opponent or just about anything that gives hitpause, you may i
 - Forsburn’s Clone
 - SK's Dirt Block and Treasure Pile
 
-Now when I said you can cancel into any action, I do mean any action that is normally valid to input:
+And are cancellable into any action barring pure left stick/movement key inputs (dash, walk, fastfall):
 
 - Grounded and aerial attacks
 - Jump (allowing for wavedash as a cancel)
 - Double Jump (will be discussed much much more later on in this guide)
 - Parry, rolls and airdodge
-- Movement options, including fastfall
 
 {{< video showcase >}}
 
@@ -55,7 +54,9 @@ However, it's not all unicorns and rainbows. DI out or to a platform will be eno
 
 ### Wavecancel
 
-Cancelling Beast Dash into a jump, then using jump input as a wavedash allows you to effectively cancel Beast Dash into a wavedash, a fast versatile option allowing for countless scenarios. Again, too many for me to go into. But even at its simplest, cancelling into a wavedash is much much faster than not cancelling on hit, so if you have no plan or idea what to do on hit, this is still a great option. Additionally it can be used to further mix up your movement and approaches, or for spacing yourself such as for Down Tilt tipper.
+Cancelling Beast Dash into a jump, then using jump input as a wavedash allows you to effectively cancel Beast Dash into a wavedash, a fast versatile option allowing for countless scenarios. But even at its simplest, cancelling into a wavedash is much much faster than not cancelling on hit, so if you have no plan or idea what to do on hit, this is still a great option. Additionally it can be used to further mix up your movement and approaches, or for spacing yourself such as for Down Tilt tipper.
+
+{{< video wavecancels >}}
 
 ### Flowers
 
@@ -73,7 +74,7 @@ Since Beast Boosting can be used upon hitting your opponent, it will allow you t
 
 You can also incorporate Beast Boosting as a movement option, taking advantage of flowers to quickly reposition yourself through the air, chasing opponents otherwise out of your reach, or quickly closing large gaps in an approach.
 
-{{< video a >}}
+{{< video beast-boost-movement >}}
 
 Additionally, by controlling your jump with the left stick, you can choose how much momentum you want to transfer, including nearly none at all. You actually make this input after your opponents launch begins, so if your reaction time is good, you can even use this to react to your opponent's DI, not carrying momentum to cover their DI in, or carrying it to chase DI out.
 
@@ -83,7 +84,7 @@ Additionally, by controlling your jump with the left stick, you can choose how m
 
 While Beast Boosting requires you to be airborne when cancelling, you can achieve nearly grounded Beast Boosts by inputting them just above the ground. This is simple and straightforward enough when hitting opponents, and it can work with flowers too, but the vertical spacing is more tight. Getting into this height window to hit the flower but be in the air can be done with a fast enough input from a jump, or by falling into the window after a shorthop, albeit slower than the former method. Keep in mind that missing the flower will result in a few weeks worth of endlag.
 
-{{< video grounded-beast-boost >}}
+{{< video nearly-grounded-beast-boost >}}
 
 ### Ledge Beast Boost
 
