@@ -15,7 +15,7 @@ Sylvanos' Side Special, a.k.a. Beast Dash, has a special property of being IASA 
 
 ## How it Works
 
-Upon hitting your opponent or just about anything that gives hitpause, you may input another action to cancel the move into the inputted action. Valid targets to cancel off include:
+Upon hitting your opponent or just about anything that gives hitpause with Side Special, you may input another action to cancel the move into the inputted action. Valid targets to cancel off include:
 
 - Opponents
 - Flowers (projectile or grounded)
