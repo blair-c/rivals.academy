@@ -3,9 +3,9 @@ title: Beast Dash Cancelling & Boosting
 description: Mixups and punishes with Sylvanos' Side Special Cancel
 authors:
 - Zoomander
-# tags:
-# - intermediate
-# - sylvanos
+tags:
+- intermediate
+- sylvanos
 draft: false
 ---
 
