@@ -20,9 +20,9 @@
   --clr-abxy-yellow: #d18217;
   --clr-abxy-red: #de2c2c;
 
-  --clr-beginner: var(--clr-abxy-blue);
+  --clr-beginner: #1a7bb8;
   --clr-intermediate: #0b8749;
-  --clr-advanced: #d16b17;
+  --clr-advanced: #ba5c14;
 
   --clr-discord: #5865f2;
   --clr-discord-hc: #4b53cc;
