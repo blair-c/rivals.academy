@@ -149,6 +149,7 @@ article img {
 article video {
   width: 100%;
   height: auto;
+  aspect-ratio: 16/9;
   border-radius: .25rem;
   margin-top: .5rem;
 }
