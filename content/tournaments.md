@@ -27,7 +27,7 @@ rrc:
 - name: Rivals Recess Circuit
   day: Saturdays
   time: 7:00 PM ET
-  freq: weekly
+  freq: biweekly
   link: https://rivalsrecess.challonge.com/
   description: Amateur bracket with a skill cap slightly below RAS's, a seasonal structure + invitational, and round robin pools giving everyone a chance to squeeze in many sets.
 - name: SSSS
