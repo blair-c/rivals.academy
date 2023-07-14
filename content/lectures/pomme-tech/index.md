@@ -4,10 +4,10 @@ description: Basic and not-so-basic Pomme techniques
 authors:
 - Kyb
 tags:
-# - beginner
-# - intermediate
-# - advanced
-# - pomme
+- beginner
+- intermediate
+- advanced
+- pomme
 ---
 
 ## Float
@@ -146,6 +146,12 @@ Vince is also a buggy mess and listing out all interactions here would be an ent
 Pomme can jump cancel out of Down Tilt for some reason lol
 
 {{< video jc-dtilt >}}
+
+### DACUS
+
+All characters in Rivals other than Wrastor can perform a Dash Attack Cancel Up Strong by inputting a Dash Attack then an Up Strong in quick succession. Pomme’s burst movement from Dash Attack combined with her low ground friction makes hers pretty significant.
+
+{{< video dacus >}}
 
 ### Up Special KB Angle
 
