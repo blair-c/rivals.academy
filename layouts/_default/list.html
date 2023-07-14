@@ -33,7 +33,7 @@
       {{ range slice $beginner $intermediate $advanced }}
         {{ range . }}
           {{ if isset .Params "tags" }}
-            {{ if gt (len .Params.tags) 3 }}
+            {{ if gt (len .Params.tags) 4 }}
               {{ partial "card.html" . }}
             {{ end }}
           {{ end }}
@@ -53,7 +53,7 @@
           {{ range . }}
             {{ if isset .Params "tags" }}
               {{ $len = len .Params.tags }}
-              {{ if and (eq (index .Params.tags (sub $len 1)) $c) (lt $len 4) }}
+              {{ if and (eq (index .Params.tags (sub $len 1)) $c) (lt $len 5) }}
                 {{ partial "card.html" . }}
               {{ end }}
             {{ end }}
