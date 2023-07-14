@@ -12,7 +12,7 @@ authors:
 
 ## Float
 
-Her signature mechanic, float is the cornerstone of ~~Peach~~Pomme's movement in all aspects of play. To start a float, you can either hold the jump button until Pomme reaches the  apex of the jump, or press down on the stick while holding the jump button to float sooner.
+Her signature mechanic, float is the cornerstone of ~~Peach~~Pomme's movement in all aspects of play. To start a float, you can either hold the jump button until Pomme reaches the  apex of her jump, or press down on the stick while holding the jump button to float sooner.
 
 {{< video float-basics >}}
 
@@ -53,7 +53,7 @@ Importantly, remaining float time does not get updated and just remains at howev
 * Starting an Up Special while floating
 * Starting a Down Special while floating
 
-All of these three effectively _pause_ a float without setting Pomme’s remaining float time to 0 like letting go of jump would do. This is useful in just allowing you to continue floating after the animation of those moves end. However, letting go of jump during the animation of the move will instead _store_ the remaining float time you had to use later. We usually call this “float storage”.
+All of these three effectively _pause_ a float without setting Pomme’s remaining float time to 0 like letting go of jump would do. This is useful in just allowing you to continue floating after the animation of those moves end. However, letting go of jump during the animation of the move will instead _store_ the remaining float time you had to use later.
 
 {{< video float-storage >}}
 
@@ -63,11 +63,11 @@ The note field of Pomme’s Down Special is her best tool for recovering and by 
 
 ### Omnifloat
 
-Down Special sets down a note field that empowers Pomme’s float, increasing her air acceleration significantly and letting her float in any direction instead of just horizontally (we call it “omnifloat”). This on its own can lead to some extended aerial combos or tricky neutral baits.
+Down Special places a note field that empowers Pomme’s float, increasing her air acceleration significantly and letting her float in any direction instead of just horizontally (we call it “omnifloat”). This on its own can lead to some extended aerial combos or tricky neutral baits.
 
 {{< video note-field-combos >}}
 
-Additionally, you can actually initialize omnifloat by holding jump+up rather than jump+down. Combined with [double jump protection](#dj-protection), you can use the initial momentum boost upwards you get from a double jump and then float upwards to get a slightly faster movement upwards in the note field, all without spending your double jump.
+Additionally, you can actually initialize omnifloat by holding jump+up rather than jump+down. Combined with [double jump protection](#dj-protection), you can use the initial momentum boost upwards you get from a double jump and then float upwards to get a slightly faster movement upwards in the note field, all without spending your double jump. Comparing the two:
 
 {{< video note-field-djp >}}
 
@@ -91,7 +91,7 @@ A note field that is too far offstage will also move towards the stage by itself
 
 ## Fair Momentum Boost
 
-When Pomme uses Forward Air she gets pushed to the opposite direction she’s facing, granting her a unique movement option that she can use while jumping or floating. This momentum boost is applied on top of Pomme’s current horizontal speed, so it has more or less effect based on your current speed, similar to Orcane’s Fair. Using Fair while moving forward you will barely push you back, while it while moving backwards it will push you back a lot more.
+Pomme's Forward Air pushes her backwards, granting her a unique movement option that she can use while jumping or floating. Its momentum boost is applied on top of Pomme’s current horizontal speed, so it has more or less effect based on your current speed, similar to Orcane’s Fair. Using Fair while moving forward will barely push you back, whereas using it while moving backwards will push you back a lot more.
 
 {{< video fair-boost-momentum >}}
 
@@ -101,7 +101,7 @@ Fair boost has the highest speed right when the attack starts (exactly 1 frame b
 
 {{< video fair-boost-go-brr >}}
 
-Fair boost slide is also relatively lenient to edgecancel, which is a fun movement and pressure option.
+Fair boost slide is also relatively lenient to edgecancel, which can be a great movement and pressure option.
 
 {{< video fair-edgecancel >}}
 
@@ -129,7 +129,7 @@ Pomme can also turn herself around by utilizing the cooldown on three of her spe
 
 ## Vince
 
-Pomme’s Side Special (Vince my beloved) can be hit back by the opponent to have his command grab canceled. Fully charging Side Special makes Vince invulnerable to all attacks, allowing the command grab to always go through even if Vince is hit. This a great tool especially for edgeguarding, as Vince getting hit will make the opponent go through hitpause and then grab them, allowing you to get an easy follow up.
+Pomme’s Side Special (Vince my beloved) can usually be hit back by the opponent to have his command grab canceled. However, fully charging Side Special makes Vince invulnerable to all attacks, allowing the command grab to always go through even if Vince is hit. This a great tool especially for edgeguarding, as Vince getting hit will make the opponent go through hitpause and then grab them, allowing you to get an easy follow up.
 
 {{< video full-charge-vince >}}
 
@@ -149,7 +149,7 @@ Pomme can jump cancel out of Down Tilt for some reason lol
 
 ### DACUS
 
-All characters in Rivals other than Wrastor can perform a Dash Attack Cancel Up Strong by inputting a Dash Attack then an Up Strong in quick succession. Pomme’s burst movement from Dash Attack combined with her low ground friction makes hers pretty significant.
+All characters in Rivals other than Wrastor can perform a Dash Attack Cancel Up Strong by inputting a Dash Attack followed by an Up Strong in quick succession. Pomme’s burst movement from Dash Attack combined with her low ground friction makes hers pretty significant.
 
 {{< video dacus >}}
 
