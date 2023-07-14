@@ -3,11 +3,11 @@ title: Pomme Tech
 description: Basic and not-so-basic Pomme techniques
 authors:
 - Kyb
-tags:
-- beginner
-- intermediate
-- advanced
-- pomme
+# tags:
+# - beginner
+# - intermediate
+# - advanced
+# - pomme
 ---
 
 ## Float
