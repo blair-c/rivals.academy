@@ -7,7 +7,6 @@ authors:
 tags:
 - intermediate
 - kragg
-draft: false
 ---
 
 When breaking Kragg’s rock it is recognised as a static object for the duration of hitpause and for 1-2 frames afterwards. This happens regardless of whether it is grounded or airborne, however a rock that is broken in midair takes 1 extra frame to begin breaking and change to a static state, preventing you from being able to interact with it under normal circumstances. As a result, break cancelling is only possible on grounded rocks, as you are able to stand on them while breaking them to remove the ground beneath you, and by doing so cancelling the remainder of the move.

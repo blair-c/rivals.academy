@@ -6,7 +6,6 @@ authors:
 tags:
 - intermediate
 - shovel-knight
-draft: false
 ---
 
 Although Shovel Knight’s Down Strong is weaker in terms of knockback when compared to his other strong attacks, the move has a few niche movement options that are important to learn if you want to bring out the full potential of the move.

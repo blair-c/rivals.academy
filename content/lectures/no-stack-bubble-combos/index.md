@@ -6,7 +6,6 @@ authors:
 tags:
 - beginner
 - ranno
-draft: false
 ---
 
 This is meant to be a basic starter guide of what is possible when landing a Side Special (Tongue) on an unstacked opponent. I will preface this guide by stating my intentions are not to provide optimal combos, but rather provide a general understanding of options that are available to you. An optimal bubble combo is one that follows and reacts to the opponent's bubble drift, so don't be afraid to be creative with the combos I have listed below.

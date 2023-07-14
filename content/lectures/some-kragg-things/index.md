@@ -8,7 +8,6 @@ tags:
 - beginner
 - intermediate
 - kragg
-draft: false
 ---
 
 ## Slideoff Rock Pull

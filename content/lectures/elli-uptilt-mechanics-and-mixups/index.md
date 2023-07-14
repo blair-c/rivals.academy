@@ -6,7 +6,6 @@ authors:
 tags:
 - beginner
 - elliana
-draft: false
 ---
 
 ## The Basics

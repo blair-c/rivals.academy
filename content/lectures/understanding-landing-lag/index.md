@@ -6,7 +6,6 @@ authors:
 tags:
 - intermediate
 - all-characters
-draft: false
 ---
 
 Any time you land onto a grounded surface from the air you will be forced into a state called landing lag, unable to act for a short period of time. All characters have both default landing lag values and specific landing lag values should you land during an aerial. The standard default landing lag value is 4 frames, with the six heavy characters (Kragg, Etalus, Sylvanos, Elliana, Hodan, and Olympia) having an increased default value of 6 frames. While the landing lag mechanic is designed to slow you down to some degree, you’ll find that there are several ways that you can avoid the full extent of your landing lag. Here are some of things that you need to know if you want to speed up your play.

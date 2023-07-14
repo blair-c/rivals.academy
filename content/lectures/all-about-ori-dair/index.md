@@ -6,7 +6,6 @@ authors:
 tags:
 - advanced
 - ori
-draft: false
 ---
 
 Ori Dair on the surface seems quite linear, but with clever usage of hitfalling and calculated risk, it can lead into some dangerous confirms and net you some early and satisfying kills.

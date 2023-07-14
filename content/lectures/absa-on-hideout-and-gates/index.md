@@ -7,7 +7,6 @@ authors:
 tags:
 - beginner
 - absa
-draft: false
 ---
 
 Many newer Absa mains tend to dislike two main stages when starting out: Aethereal Gates and Blazing Hideout. The first main turn-off is that her up tilt can't hit the top platform, which hinders her sharking abilities on both stages. These platform heights can also hinder her movement, since the platforms on both of these stages are very different from the "normal" platform heights on stages like Tower of Heaven, Frozen Fortress, Fire Capitol, Forest Floor, and many more. As a result, most Absa mains tend to strike these two stages immediately.

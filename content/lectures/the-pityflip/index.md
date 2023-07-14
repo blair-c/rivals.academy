@@ -6,7 +6,6 @@ authors:
 tags:
 - advanced
 - zetterburn
-draft: false
 ---
 
 Pityflip is, at its purest, just a wavebounce Dspecial cancelled into the flip. Alongside the flashy tricks, its main purposes are movement and recovery mix ups. Wavebouncing/reversing Dspecial alone is a great way to mix up your landings and platform movement, but the flip makes you that much more mobile and slippery (and cool).

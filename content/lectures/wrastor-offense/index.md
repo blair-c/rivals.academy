@@ -7,7 +7,6 @@ tags:
 - beginner
 - intermediate
 - wrastor
-draft: false
 ---
 
 Hello bird mains, this guide contains an explanation of how I approach Wrastor's offense— neutral, combo strategy, combo mixups, and kill confirms. Because of how freeform Wrastor can be played, this guide is more focused on explaining the strategy and concepts. As such, other Wrastor players may have their own approaches to the character but I believe the information here is general enough to be applicable by anyone. This guide is not intended to be all-encompassing; there are many more aspects of Wrastor's game to explore beyond what I write about here.

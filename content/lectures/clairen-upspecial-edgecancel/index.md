@@ -6,7 +6,6 @@ authors:
 tags:
 - advanced
 - clairen
-draft: false
 ---
 
 Clairen's Up Special gives her a horizontal momentum boost after the second hit. Combined with her above average air acceleration, this means she’s one of the best characters at edgecancelling her recovery. This is valuable as being able to edgecancel out of your pratfall can provide you with some unique recovery mixups, such as wavelanding back onto the stage or drifting back and approaching the ledge a second time with your resources refreshed.

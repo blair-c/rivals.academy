@@ -4,9 +4,8 @@ description: Invincible ledgedash how to, practice methods, and application
 authors:
 - Olsen
 tags:
-- advanced
-- all-characters
-draft: true
+# - advanced
+# - all-characters
 ---
 
 ## Why Ledgedash?

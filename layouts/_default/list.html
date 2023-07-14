@@ -13,9 +13,8 @@
     </header>
 
     <div class="centered page-list">
-      {{ $pages := where .Pages "draft" "!=" "true" }}
       {{ $beginner := slice }}{{ $intermediate := slice }}{{ $advanced := slice }}
-      {{ range $pages }}
+      {{ range .Pages }}
         {{ if eq (index .Params.tags 0) "beginner" }}
           {{ $beginner = $beginner | append . }}
         {{ else if eq (index .Params.tags 0) "intermediate" }}

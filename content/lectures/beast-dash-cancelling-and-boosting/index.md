@@ -6,7 +6,6 @@ authors:
 tags:
 - intermediate
 - sylvanos
-draft: false
 ---
 
 Sylvanos' Side Special, a.k.a. Beast Dash, has a special property of being IASA cancellable on hit, meaning it is cancellable into quite literally any action. This can be used for mixups, combos, kills, or really anything your heart desires. Canceling Beast Dash opens up a huge array of options and avenues for creativity and is what gives this move all its value.

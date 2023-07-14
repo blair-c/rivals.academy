@@ -6,7 +6,6 @@ authors:
 tags:
 - beginner
 - shovel-knight
-draft: false
 ---
 
 Shovel Knight’s passive ability allows him to create collectable gems on hitting an opponent. This amount will always be **17 times** the amount of damage that is dealt, with the gems that spawn randomly selected to make up the sum of this value. The gems are collectable for 240-260 frames each, with larger value gems fading away later than smaller valued gems.

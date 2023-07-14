@@ -6,7 +6,6 @@ authors:
 tags:
 - advanced
 - absa
-draft: false
 ---
 
 Absa has the ability to jump downwards by beginning her double jump on the same frame that her fastfall begins. Combined with her unique double jump momentum and the ability to double jump cancel with her aerials, this allows her to move through the air in unorthodox ways. There are a couple variations of this technique to learn, so let’s take look at how each of these are performed.

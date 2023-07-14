@@ -6,7 +6,6 @@ authors:
 tags:
 - advanced
 - forsburn
-draft: false
 ---
 
 These situational tactics are meant for players who are already proficient at using Forsburn's clone, so if you have not already learned to regularly implement cloning for recovery, stalling in the air, and as an edgeguarding tool, then I would recommend that you master those techniques before learning these. With that being said, let's begin!

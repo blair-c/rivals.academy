@@ -6,7 +6,6 @@ authors:
 tags:
 - intermediate
 - zetterburn
-draft: false
 ---
 
 Zetterburn's Shine > Up Strong is one of the strongest kill options in the game as it is almost always applicable for a parry punish and is a follow up off of a frame 2 move (Shine) that can also be used to whiff punish effectively. Performed correctly, it's a true confirm on the entire cast well into Up Strong kill %.
