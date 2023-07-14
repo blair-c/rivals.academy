@@ -12,7 +12,7 @@ authors:
 
 ## Float
 
-Her signature mechanic, float is the cornerstone of ~~Peach~~Pomme's movement in all aspects of play. To start a float, you can either hold the jump button until Pomme reaches the  apex of her jump, or press down on the stick while holding the jump button to float sooner.
+As her signature mechanic, float is the cornerstone of ~~Peach~~Pomme's movement in all aspects of play. To start a float, you can either hold the jump button until Pomme reaches the  apex of her jump, or press down on the stick while holding the jump button to float sooner.
 
 {{< video float-basics >}}
 
