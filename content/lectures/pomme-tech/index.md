@@ -4,10 +4,10 @@ description: Basic and not-so-basic Pomme techniques
 authors:
 - Kyb
 tags:
-- beginner
-- intermediate
-- advanced
-- pomme
+# - beginner
+# - intermediate
+# - advanced
+# - pomme
 ---
 
 ## Float
