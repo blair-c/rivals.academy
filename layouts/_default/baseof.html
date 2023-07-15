@@ -27,8 +27,11 @@
 
     <meta name="description" content="{{ .Description }}">
     {{ $img := "/img/default-cover.png" }}
-    {{ if fileExists (print .RelPermalink "thumb.png") }}
-      {{ $img = print .Permalink "thumb.png" }}{{ end }}
+    {{ $path := .RelPermalink }}
+    {{ if .IsTranslated }}
+      {{ $en := index .AllTranslations 0 }}{{ $path = $en.RelPermalink }}
+    {{ end }}
+    {{ if fileExists (print $path "thumb.png") }}{{ $img = (print $path "thumb.png") }}{{ end }}
     <meta name="image" content="{{ $img | absURL }}">
     <meta property="og:image" content="{{ $img | absURL }}" />
     <meta property="og:title" content="{{ .Title }}" />
@@ -38,7 +41,8 @@
     {{ template "_internal/twitter_cards.html" . }}
 
     {{ with .OutputFormats.Get "rss" -}}
-      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />`
+        .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
   </head>
   <body>
