@@ -48,7 +48,7 @@ jobs:
           pushd /tmp
           sudo apt-get install ca-certificates
           wget https://github.com/gohugoio/hugo/releases/download/v0.115.3/hugo_extended_0.115.3_Linux-64bit.tar.gz
-          tar xzvf hugo_0.115.3_Linux-64bit.tar.gz
+          tar xzvf hugo_extended_0.115.3_Linux-64bit.tar.gz
           cp hugo /usr/local/bin
           popd
           hugo version
