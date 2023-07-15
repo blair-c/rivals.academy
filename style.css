@@ -772,15 +772,18 @@ article video {
   color: var(--clr-gray-3);
 }
 
-.tag-beginner {
+.tag-beginner,
+.tag-principiante {
   color: var(--clr-beginner);
 }
 
-.tag-intermediate {
+.tag-intermediate,
+.tag-intermedio {
   color: var(--clr-intermediate);
 }
 
-.tag-advanced {
+.tag-advanced,
+.tag-avanzado {
   color: var(--clr-advanced);
 }
 
@@ -809,6 +812,19 @@ article video {
 
 .article-authors {
   color: var(--clr-training-border-hc);
+}
+
+.translator-separator {
+  color: var(--clr-gray-1);
+}
+
+.active-lang {
+  color: var(--clr-training-border-hc);
+  cursor: default;
+}
+
+.inactive-lang {
+  color: var(--clr-gray-3);
 }
 
 .library-select {
