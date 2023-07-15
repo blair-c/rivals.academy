@@ -13,7 +13,5 @@
       {{ end }}
     </p>
   </div>
-  {{ if fileExists (print .RelPermalink "thumb.png") }}
-    <img class="thumbnail" aria-hidden="true" src="{{ .RelPermalink }}thumb.png">
-  {{ end }}
+  <img class="thumbnail" aria-hidden="true" src="{{ .RelPermalink }}thumb.png">
 </a>

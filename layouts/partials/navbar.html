@@ -14,13 +14,15 @@
 
   <ul class="nav-list" id="nav-list">
     <li><a href="/library">Library</a></li>
-    <li><a href="/lectures">Lectures</a></li>
+    {{ if eq site.Language.Lang "en" }}
+      <li><a href="/lectures">Lectures</a></li>
+    {{ else if eq site.Language.Lang "es" }}
+      <li><a href="/es/lecturas">Lecturas</a></li>
+    {{ end }}
     <li><a href="/tournaments">Tournaments</a></li>
     <li><a href="/about">About</a></li>
     <li>
-      <a class="nav-discord"
-         href="{{ site.Data.links.roaa.discord }}"
-         target="_blank" rel="noopener noreferrer">
+      <a class="nav-discord" href="{{ site.Data.links.roaa.discord }}" target="_blank" rel="noopener noreferrer">
         {{ partial "svg/socials/discord.svg" }}<span>Discord</span>
       </a>
     </li>

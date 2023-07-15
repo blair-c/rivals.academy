@@ -5,27 +5,24 @@
 {{ define "main" }}
   <main id="main-content">
     <header class="site-section-header">
-      <h1>
-        {{ if page.IsSection }}{{ page.Section | title }}
-        {{ else }}{{ humanize .Title | title }}{{ end }}
-      </h1>
+      <h1>{{ T "lectures" | title }}</h1>
       <p>{{ .Description }}</p>
     </header>
 
     <div class="centered page-list">
       {{ $beginner := slice }}{{ $intermediate := slice }}{{ $advanced := slice }}
       {{ range .Pages }}
-        {{ if eq (index .Params.tags 0) "beginner" }}
+        {{ if eq (index .Params.tags 0) (T "beginner") }}
           {{ $beginner = $beginner | append . }}
-        {{ else if eq (index .Params.tags 0) "intermediate" }}
+        {{ else if eq (index .Params.tags 0) (T "intermediate") }}
           {{ $intermediate = $intermediate | append . }}
-        {{ else if eq (index .Params.tags 0) "advanced" }}
+        {{ else if eq (index .Params.tags 0) (T "advanced") }}
           {{ $intermediate = $intermediate | append . }}
         {{ end }}
       {{ end }}
       {{ range slice $beginner $intermediate $advanced }}
         {{ range . }}
-          {{ if eq (index .Params.tags 1) "all-characters" }}
+          {{ if eq (index .Params.tags 1) (T "all-characters") }}
             {{ partial "card.html" . }}
           {{ end }}
         {{ end }}

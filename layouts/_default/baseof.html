@@ -20,6 +20,11 @@
     <link rel="canonical" href="{{ .Permalink | absURL }}" />
     <link rel="manifest" href="/manifest.json">
 
+    {{ if .IsTranslated }}{{ range .Translations }}
+      <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" 
+            title="{{ .Language.LanguageName }}" type="text/html">
+    {{ end }}{{ end }}
+
     <meta name="description" content="{{ .Description }}">
     {{ $img := "/img/default-cover.png" }}
     {{ if fileExists (print .RelPermalink "thumb.png") }}
@@ -35,7 +40,6 @@
     {{ with .OutputFormats.Get "rss" -}}
       {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
-
   </head>
   <body>
     {{ block "header" . }}

@@ -1,0 +1,27 @@
+baseURL: https://rivals.academy/
+title: Rivals of Aether Academy
+enableGitInfo: true
+
+languages:
+  en:
+    languageName: English
+    languageCode: en
+    weight: 1
+  es:
+    languageName: Español
+    languageCode: es
+    weight: 2
+enableMissingTranslationPlaceholders: true
+
+social:
+  twitter: rivals_academy
+
+outputFormats:
+  data:
+    mediaType: application/json
+    baseName: data
+    isPlainText: true
+  RSS:
+    mediatype: application/rss+xml
+    baseName: rss
+    isPlainText: true

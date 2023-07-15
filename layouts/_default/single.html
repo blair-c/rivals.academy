@@ -4,13 +4,11 @@
 {{ define "main" }}
 <div class="center"><div class="cols-sidebar-content">
   <div class="sidebar">
-    {{ if fileExists (print .RelPermalink "thumb.png") }}
-      <img class="sidebar-thumbnail" aria-hidden="true" src="thumb.png">
-    {{ end }}
+    <img class="sidebar-thumbnail" aria-hidden="true" src="thumb.png">
     <div class="toc">
       {{ .TableOfContents }}
-      <a href="#" class="to-top" title="Jump to Top">
-        {{ partial "svg/up.svg" }}<span class="sr-only">Jump to Top</span>
+      <a href="#" class="to-top" title="{{ T "jump-to-top" }}">
+        {{ partial "svg/up.svg" }}<span class="sr-only">{{ T "jump-to-top" }}</span>
       </a>
     </div>
   </div>
@@ -33,7 +31,32 @@
           </span>
         </p>
         {{ with .Params.authors }}
-          <p class="article-authors">By {{ delimit . ", " " and " }}</p>
+          <p class="article-authors">
+            {{ T "by" }} {{ delimit . ", " (print " " (T "and") " ") }}
+            {{ with $.Params.translators }}
+              <span class="translator-separator">• </span>
+              {{ T "translated-by" }} {{ delimit . ", " (print " " (T "and") " ") }}
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .IsTranslated }}
+          <p>
+            {{ range $i, $t := .AllTranslations }}
+              {{ $lang := $t.Language}}
+              {{ if eq $lang site.Language}}
+                <span class="active-lang" title="{{ $lang.LanguageName }}" href="{{ $t.Permalink }}">
+                  {{ $lang.LanguageCode }}
+                </span>
+              {{ else }}
+                <a class="inactive-lang" title="{{ $lang.LanguageName }}" href="{{ $t.Permalink }}">
+                  {{ $lang.LanguageCode }}
+                </a>
+              {{ end }}
+              {{ if lt $i (sub (len site.Languages) 1) }}
+                <span class="translator-separator"> | </span>
+              {{ end }}
+            {{ end }}
+          </p>
         {{ end }}
       </div>
       {{ .Content }}
@@ -41,11 +64,16 @@
     <div class="article-footer-divider"></div>
     <section class="article-footer">
       <p>
-        {{ partial "partials/svg/chat.svg" }}
-        Questions?
-        <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.roaa.discord }}">
-          Ask on Discord!
-        </a>
+        {{ partial "partials/svg/chat.svg" }}{{ T "questions" }}
+        {{ if eq site.Language.Lang "en" }}
+          <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.roaa.discord }}">
+            Ask on Discord!
+          </a>
+        {{ else if eq site.Language.Lang "es" }}
+          <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.es.discord }}">
+            ¡Pregunta en Discord!
+          </a>
+        {{ end }}
       </p>
     </section>
   </main>

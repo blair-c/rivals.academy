@@ -4,11 +4,11 @@
   <h{{ .Level }} id="{{ .Anchor | safeURL }}" class="heading">
     {{ .Text | safeHTML -}}
     <button class="heading-link"
-            title="Copy link"
-            aria-label="Copy link to this section: {{ .Text | safeHTML }}"
+            title="{{ T "copy-link" }}"
+            aria-label="{{ T "copy-link" }} {{ T "to-this-section" }}: {{ .Text | safeHTML }}"
             onclick="copyHeadingLink({{ .Anchor | safeURL }})">
       {{ partial "svg/copy.svg" }}
     </button>
-    <span class="copied">Copied link!</span>
+    <span class="copied">{{ T "copied" }}</span>
   </h{{ .Level }}>
 {{ end }}
