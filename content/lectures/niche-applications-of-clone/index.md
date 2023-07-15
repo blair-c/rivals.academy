@@ -44,10 +44,13 @@ Projectiles this works against:
 - Elliana's missiles
 - Ori's light orb
 - Ranno's needles
+- Pomme's notes
+- Olympia's gem
+- Hodan's spirits/whirls
 
 Clone walling can also be used defensively against Shovel Knight's SideB and Wrastor's DownB since they have hit detection and stop as soon as they hit something. In both of these cases, it's fairly difficult to convert the clone wall into a neutral win, but it at least prevents you from getting hit.
 
-Note: Kragg's rock is not on the list above because it stays active until it touches the ground after hitting the clone. Clone walling can stop the rock from hitting you on the initial throw, but be careful about running in directly behind the clone lest you get hit while the rock is still falling.
+Note: Kragg's rock is not on the list above because it stays active until it touches the ground after hitting the clone. Clone walling can stop the rock from hitting you on the initial throw, but be careful about running in directly behind the clone lest you get hit while the rock is still falling. Mollo's bombs are a similar story.
 
 ## Clone Tech Chasing
 
