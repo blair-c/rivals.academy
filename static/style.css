@@ -755,6 +755,16 @@ article video {
   margin-bottom: .75rem;
 }
 
+.rss {
+  padding: 0 .25rem;
+}
+
+.rss svg {
+  fill: var(--clr-training-border);
+  width: 2.5rem;
+  margin-top: .25rem;
+}
+
 .tag-list {
   margin: 0;
   margin-top: auto;
