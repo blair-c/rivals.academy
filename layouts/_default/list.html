@@ -61,9 +61,11 @@
 
     {{ $rss := print "/" (T "lectures") "/rss.xml" }}
     {{ if eq site.Language.Lang "es" }}{{ $rss = print "/es" $rss }}{{ end }}
-    <div class="center">
+    <div class="rss-section center">
+      <div></div>
       <a href="{{ $rss }}" class="rss" title="RSS feed">{{ partial "svg/rss.svg"}}</a>
       <span class="sr-only">RSS feed</span>
+      <div></div>
     </div>
 
   </main>

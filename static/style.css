@@ -690,7 +690,7 @@ article video {
   display: grid;
   gap: 1rem;
   max-width: fit-content;
-  padding: 1.5rem var(--page-padding);
+  padding: 2rem var(--page-padding);
 }
 
 @media (min-width: 60rem) {
@@ -753,6 +753,18 @@ article video {
   margin: 0;
   margin-top: .25rem;
   margin-bottom: .75rem;
+}
+
+.rss-section {
+  margin: 0 calc(var(--page-padding) / 2);
+}
+
+.rss-section div {
+  background: var(--clr-highlight);
+  height: 1px;
+  width: 100%;
+  max-width: 35rem;
+  margin: auto var(--page-padding);
 }
 
 .rss {
@@ -845,7 +857,7 @@ article video {
   gap: 0 .25rem;
   max-width: 40rem;
   margin: var(--page-padding);
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   margin-bottom: 0;
 }
 
@@ -1156,6 +1168,7 @@ article video {
 
 .tournament-hosts {
   max-width: var(--content-max-width);
+  margin-top: .5rem;
 }
 
 @media (min-width:64rem) {
