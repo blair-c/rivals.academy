@@ -64,15 +64,20 @@
     <div class="article-footer-divider"></div>
     <section class="article-footer">
       <p>
-        {{ partial "partials/svg/chat.svg" }}{{ T "questions" }}
         {{ if eq site.Language.Lang "en" }}
+          {{ partial "partials/svg/chat.svg" }}Questions?
           <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.roaa.discord }}">
             Ask on Discord!
           </a>
+          {{ if not (eq page.Section "library") }}
+            <br><a href="/lectures/rss.xml">{{ partial "partials/svg/rss.svg" }}RSS feed</a>
+          {{ end }}
         {{ else if eq site.Language.Lang "es" }}
+          {{ partial "partials/svg/chat.svg" }}¿Tienes preguntas?
           <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.es.discord }}">
             ¡Pregunta en Discord!
           </a>
+          <br><a href="/es/lecturas/rss.xml">{{ partial "partials/svg/rss.svg" }}RSS feed</a>
         {{ end }}
       </p>
     </section>

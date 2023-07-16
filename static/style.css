@@ -1162,7 +1162,7 @@ article video {
 
 .article-footer-divider {
   height: 1px;
-  background: var(--clr-gray-1);
+  background: var(--clr-highlight);
   margin: var(--footer-margin) var(--page-padding);
 }
 
