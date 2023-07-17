@@ -851,7 +851,8 @@ article video {
   transition: all .05s ease-in;
 }
 
-.language-picker:hover #lang-btn::after {
+#lang-btn:hover::after,
+#lang-btn:focus-visible:after {
   border-top-color: var(--clr-text-hc);
 }
 
