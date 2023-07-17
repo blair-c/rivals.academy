@@ -2,6 +2,7 @@
   --clr-text: #202022;
   --clr-text-hc: black;
   --clr-bg: white;
+  --clr-highlighter: #f2f2f7;
   --clr-highlight: #ebebf0;
   --clr-gray-1: #cecee0;
   --clr-gray-2: #93939e;
@@ -484,7 +485,7 @@ article video {
 
   .nav-list li a:hover,
   .nav-list li a:focus-visible {
-    background-color: var(--clr-highlight);
+    background-color: var(--clr-highlighter);
   }
 }
 
@@ -665,7 +666,7 @@ article video {
 .site-section-header {
   text-align: center;
   padding: 1.5rem var(--page-padding);
-  background-color: var(--clr-highlight);
+  background-color: var(--clr-highlighter);
 }
 
 .site-section-header h1 {
@@ -878,7 +879,7 @@ article video {
 
 .lang-dropdown li:hover a {
   color: var(--clr-text-hc);
-  background: var(--clr-highlight);
+  background: var(--clr-highlighter);
   transition: all .05s ease-in; 
 }
 
@@ -1106,7 +1107,7 @@ article video {
 }
 
 .library-table tbody tr:hover td {
-  background-color: var(--clr-highlight);
+  background-color: var(--clr-highlighter);
 }
 
 .align-left {
