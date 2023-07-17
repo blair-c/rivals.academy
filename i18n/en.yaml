@@ -12,6 +12,13 @@ and:
 translated-by:
   other: Translated by
 
+language-switcher:
+  other: Language switcher
+selected-language:
+  other: Selected language
+available-translation:
+  other: Available translation
+
 jump-to-top:
   other: Jump to Top
 copy-link:

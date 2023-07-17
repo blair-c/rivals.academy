@@ -40,23 +40,7 @@
           </p>
         {{ end }}
         {{ if .IsTranslated }}
-          <p>
-            {{ range $i, $t := .AllTranslations }}
-              {{ $lang := $t.Language}}
-              {{ if eq $lang site.Language}}
-                <span class="active-lang" title="{{ $lang.LanguageName }}" href="{{ $t.Permalink }}">
-                  {{ $lang.LanguageCode }}
-                </span>
-              {{ else }}
-                <a class="inactive-lang" title="{{ $lang.LanguageName }}" href="{{ $t.Permalink }}">
-                  {{ $lang.LanguageCode }}
-                </a>
-              {{ end }}
-              {{ if lt $i (sub (len site.Languages) 1) }}
-                <span class="translator-separator"> | </span>
-              {{ end }}
-            {{ end }}
-          </p>
+          {{ partial "partials/language-picker.html" . }}
         {{ end }}
       </div>
       {{ .Content }}

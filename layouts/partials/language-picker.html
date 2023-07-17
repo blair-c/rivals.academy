@@ -1,0 +1,18 @@
+<nav class="language-picker" aria-label="{{ T "language-switcher" }}">
+  {{ range .AllTranslations }}
+    {{ if eq .Language site.Language }}
+      <button id="lang-btn" aria-expanded="false" onclick="toggleLangMenu()"
+              aria-label="{{ T "selected-language" }}: {{ .Language.LanguageName }}">
+        {{- .Language.LanguageName }}
+      </button>
+    {{ end }}
+  {{ end }}
+  <ul class="lang-dropdown" aria-labelledby="lang-btn">
+    {{ range .Translations }}
+      <li><a href="{{ .Permalink }}" tabindex="-1"
+            aria-label="{{ T "available-translation" }}: {{ .Language.LanguageName }}">
+        {{- .Language.LanguageName }}
+      </a></li>
+    {{ end }}
+  </ul>
+</nav>
