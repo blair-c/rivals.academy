@@ -155,20 +155,6 @@ article video {
   margin-top: .5rem;
 }
 
-:not(:active):focus-visible {
-  outline-offset: .125rem;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  :focus-visible {
-    transition: outline-offset .5s ease-out !important;
-  }
-
-  :not(:active):focus-visible {
-    transition-duration: .25s !important;
-  }
-}
-
 .sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
