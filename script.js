@@ -1,5 +1,5 @@
 function toggleHambMenu() {
-  var hamb = document.querySelector('.hamb-btn')
+  let hamb = document.querySelector('.hamb-btn')
   hamb.setAttribute(
     'aria-expanded', 
     `${!(hamb.getAttribute('aria-expanded') === 'true')}`
@@ -7,12 +7,43 @@ function toggleHambMenu() {
   document.body.classList.toggle('data-disable-scroll-mobile');
 }
 
+let lang = document.querySelector('#lang-btn');
+let translation = document.querySelector('.lang-dropdown');
+translation = translation.children[0].children[0];
+function toggleLangMenu() {
+  lang.setAttribute(
+    'aria-expanded', 
+    `${!(lang.getAttribute('aria-expanded') === 'true')}`
+  );
+  if (lang.getAttribute('aria-expanded')) {
+    translation.removeAttribute('tabindex');
+  }
+  else {
+    translation.setAttribute('tabindex', '-1');
+  }
+}
+// Alternate dismissals
+if (lang) {
+  window.onclick = function(e) {
+    if (!e.target.matches("#lang-btn")) {
+      lang.setAttribute('aria-expanded', false);
+      translation.setAttribute('tabindex', '-1');
+    }
+  }
+  document.addEventListener('keyup', (e) => {
+    if (e.key == 'Escape') {
+      lang.setAttribute('aria-expanded', false);
+      translation.setAttribute('tabindex', '-1');
+    }
+  });
+}
+
 async function copyHeadingLink(section) {
   // Copy
-  var baseUrl = window.location.href.split('#')[0];
+  let baseUrl = window.location.href.split('#')[0];
   navigator.clipboard.writeText(baseUrl + '#' + section);
   // Display tooltip
-  var heading = document.getElementById(section);
+  let heading = document.getElementById(section);
   if (!heading.classList.contains('data-copy-success')) {
     heading.classList.toggle('data-copy-success');
     await new Promise(r => setTimeout(r, 2000));
@@ -21,13 +52,13 @@ async function copyHeadingLink(section) {
 }
 
 // https://lab.hakim.se/progress-nav/
-var toc = document.querySelector('#TableOfContents');
+let toc = document.querySelector('#TableOfContents');
 if (toc) {
-  var tocItems = [].slice.call(toc.querySelectorAll('li'));
+  let tocItems = [].slice.call(toc.querySelectorAll('li'));
   // Cache element references and measurements
   tocItems = tocItems.map(function(item) {
-    var anchor = item.querySelector('a');
-    var target = document.getElementById(anchor.getAttribute('href').slice(1));
+    let anchor = item.querySelector('a');
+    let target = document.getElementById(anchor.getAttribute('href').slice(1));
     return {
       listItem: item,
       anchor: anchor,
@@ -41,26 +72,26 @@ if (toc) {
 
 	// Factor of screen size that the element must cross
 	// before it's considered visible
-	var TOP_MARGIN = 0.1,
+	let TOP_MARGIN = 0.1,
       BOTTOM_MARGIN = 0.1;
 
-  var footerDiv = document.querySelector(".article-footer-divider");
+  let footerDiv = document.querySelector(".article-footer-divider");
 
   window.addEventListener( 'scroll', sync, false );
   sync();
 
   function sync() {
-    var windowHeight = window.innerHeight;
+    let windowHeight = window.innerHeight;
     tocItems.forEach(function(item, index, arr) {
-			var topBound = item.target.getBoundingClientRect().top;
-      var nextElement;
+			let topBound = item.target.getBoundingClientRect().top;
+      let nextElement;
       if (index === arr.length - 1) {
         nextElement = footerDiv;
       }
       else {
         nextElement = tocItems[index + 1].target;
       }
-      var bottomBound = nextElement.getBoundingClientRect().top;
+      let bottomBound = nextElement.getBoundingClientRect().top;
 			if (bottomBound > windowHeight * TOP_MARGIN && topBound < windowHeight * (1 - BOTTOM_MARGIN)) {
 				item.listItem.classList.add('visible');
 			}

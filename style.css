@@ -2,6 +2,7 @@
   --clr-text: #202022;
   --clr-text-hc: black;
   --clr-bg: white;
+  --clr-highlighter: #f2f2f7;
   --clr-highlight: #ebebf0;
   --clr-gray-1: #cecee0;
   --clr-gray-2: #93939e;
@@ -153,20 +154,6 @@ article video {
   aspect-ratio: 16/9;
   border-radius: .25rem;
   margin-top: .5rem;
-}
-
-:not(:active):focus-visible {
-  outline-offset: .125rem;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  :focus-visible {
-    transition: outline-offset .5s ease-out !important;
-  }
-
-  :not(:active):focus-visible {
-    transition-duration: .25s !important;
-  }
 }
 
 .sr-only {
@@ -498,7 +485,7 @@ article video {
 
   .nav-list li a:hover,
   .nav-list li a:focus-visible {
-    background-color: var(--clr-highlight);
+    background-color: var(--clr-highlighter);
   }
 }
 
@@ -679,7 +666,7 @@ article video {
 .site-section-header {
   text-align: center;
   padding: 1.5rem var(--page-padding);
-  background-color: var(--clr-highlight);
+  background-color: var(--clr-highlighter);
 }
 
 .site-section-header h1 {
@@ -690,7 +677,7 @@ article video {
   display: grid;
   gap: 1rem;
   max-width: fit-content;
-  padding: 1.5rem var(--page-padding);
+  padding: 2rem var(--page-padding);
 }
 
 @media (min-width: 60rem) {
@@ -755,6 +742,28 @@ article video {
   margin-bottom: .75rem;
 }
 
+.rss-section {
+  margin: 0 calc(var(--page-padding) / 2);
+}
+
+.rss-section div {
+  background: var(--clr-highlight);
+  height: 1px;
+  width: 100%;
+  max-width: 35rem;
+  margin: auto var(--page-padding);
+}
+
+.rss {
+  padding: 0 .25rem;
+}
+
+.rss svg {
+  fill: var(--clr-training-border);
+  width: 2.5rem;
+  margin-top: .25rem;
+}
+
 .tag-list {
   margin: 0;
   margin-top: auto;
@@ -787,10 +796,6 @@ article video {
   color: var(--clr-advanced);
 }
 
-.article-header {
-  margin-bottom: 2rem;
-}
-
 .article-header h1 {
   margin-bottom: .5rem;
 }
@@ -818,13 +823,80 @@ article video {
   color: var(--clr-gray-1);
 }
 
-.active-lang {
-  color: var(--clr-training-border-hc);
-  cursor: default;
+.article-header .language-picker {
+  margin: .5rem 1px;
 }
 
-.inactive-lang {
-  color: var(--clr-gray-3);
+.language-picker {
+  width: fit-content;
+}
+
+#lang-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: inherit;
+  background: none;
+  color: var(--clr-text);
+  border: 1px solid var(--clr-gray-1);
+  border-radius: .125rem;
+  padding: .25rem .5rem;
+}
+
+#lang-btn::after {
+  content: "";
+  border: .25rem solid transparent;
+  border-top-color: var(--clr-text);
+  border-radius: .125rem;
+  margin-left: .25rem;
+  transform: translateY(1px);
+  transition: all .05s ease-in;
+}
+
+#lang-btn:hover::after,
+#lang-btn:focus-visible:after {
+  border-top-color: var(--clr-text-hc);
+}
+
+.lang-dropdown {
+  list-style: none;
+  background: var(--clr-bg);
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--clr-gray-1);
+  border-top: none;
+  border-radius: 0 0 .25rem .25rem;
+  opacity: 0.3;
+  transform: rotateX(-90deg);
+  transform-origin: top center;
+  transition: all .05s ease-in;
+}
+
+.lang-dropdown a {
+  display: block;
+  color: var(--clr-text);
+  padding: .25rem .5rem;
+}
+
+.lang-dropdown li:hover a {
+  color: var(--clr-text-hc);
+  background: var(--clr-highlighter);
+  transition: all .05s ease-in; 
+}
+
+/* open */
+#lang-btn[aria-expanded="true"] {
+  border-radius: .125rem .125rem 0 0;
+}
+
+#lang-btn[aria-expanded="true"]::after {
+  transform: rotate(90deg) translateY(2px) translateX(-1px);
+}
+
+#lang-btn[aria-expanded="true"]+.lang-dropdown {
+  opacity: 1;
+  transform: rotateX(0);
+  visibility: visible;
+  transition: all .05s ease-in;
 }
 
 .library-select {
@@ -835,7 +907,7 @@ article video {
   gap: 0 .25rem;
   max-width: 40rem;
   margin: var(--page-padding);
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   margin-bottom: 0;
 }
 
@@ -1035,7 +1107,7 @@ article video {
 }
 
 .library-table tbody tr:hover td {
-  background-color: var(--clr-highlight);
+  background-color: var(--clr-highlighter);
 }
 
 .align-left {
@@ -1140,12 +1212,13 @@ article video {
 
 .article-footer-divider {
   height: 1px;
-  background: var(--clr-gray-1);
+  background: var(--clr-highlight);
   margin: var(--footer-margin) var(--page-padding);
 }
 
 .tournament-hosts {
   max-width: var(--content-max-width);
+  margin-top: .5rem;
 }
 
 @media (min-width:64rem) {
