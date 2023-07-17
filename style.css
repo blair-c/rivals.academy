@@ -878,7 +878,6 @@ article video {
 }
 
 .lang-dropdown li:hover a {
-  color: var(--clr-text-hc);
   background: var(--clr-highlighter);
   transition: all .05s ease-in; 
 }
