@@ -720,6 +720,7 @@ article video {
 
 .thumbnail {
   height: 90px;
+  width: 90px;
   border-radius: .5rem;
 }
 
