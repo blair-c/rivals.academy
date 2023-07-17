@@ -940,9 +940,9 @@ upSpecial:
     firstActiveFrame:
       pratfall: 17
     notes:
-    - Performed by using Up Special a 2nd time after using it already within Harmony Field without landing or walljumping.
+    - Performed by using Up Special a 2nd time after using it already within Harmony Field without landing, walljumping, or being hit.
   notes:
-  - If Up Special interacts with Harmony Field at any time, Pomme will be actionable at the end of the move (with 4f additional endlag) with her float restored to a float time of 45 frames. The only exception to this float time refresh is if Pomme begins her up special out of a float which has more than 45 frames of time left, in which case Pomme's second float will use this remaining time instead.
+  - If Up Special interacts with Harmony Field at any time, Pomme will be actionable at the end of the move (with 4f additional endlag) with her float restored to the minimum between remaining float time and 45 frames.
   image:
     baseRes: https://rivals.academy/library/pomme/up-special.png
     highRes: https://rivals.academy/library/pomme/1080_up-special.png
