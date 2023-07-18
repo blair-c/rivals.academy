@@ -49,7 +49,7 @@ Ok yea, we need to talk about this one. Side Special > Up Strong is one of the m
 
 {{< video upstrong >}}
 
-However, it's not all unicorns and rainbows. DI out or to a platform will be enough for the opponent to to escape this setup, and with how slow Up Strong is, you will not be getting any other followup if you whiff. As a kill option it's simple and strong, but the opponent's counterplay is just as simple, so don't make a habit of relying on it as your primary means to kill.
+However, it's not all unicorns and rainbows. DI out or to a platform will be enough for the opponent to escape this setup, and with how slow Up Strong is, you will not be getting any other followup if you whiff. As a kill option it's simple and strong, but the opponent's counterplay is just as simple, so don't make a habit of relying on it as your primary means to kill.
 
 ### Wavecancel
 

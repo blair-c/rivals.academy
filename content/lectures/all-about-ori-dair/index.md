@@ -56,7 +56,7 @@ The scariest, riskiest, most satisfying thing to hit: Dair > Bash. This setup is
 
 An aspect unique to this setup is your position when going for the initial Dair. For lower %s, you should always aim to be above your opponent when landing the Dair, as being too low or inside of them will cause you to plummet below them, into an SD. At higher %s, you have flexibility as to where your initial Dair lands, but if possible, it’s the best option to always try to hit the Dair above. This setup will start to connect around 60% on the entire cast.
 
-The nature of Ori revolves around having less set in stone kill confirms, so while fishing for them is a good way to lose stocks,  having access to this list of consistent kill confirms out of Dair is still key to keep in mind.
+The nature of Ori revolves around having less set in stone kill confirms, so while fishing for them is a good way to lose stocks, having access to this list of consistent kill confirms out of Dair is still key to keep in mind.
 
 ## Whiffed Dair Saves
 
