@@ -1,6 +1,6 @@
 ---
 title: Todo sobre el DAir de Ori
-url: lecturas/Todo-sobre-el-DAir-de-Ori
+url: lecturas/todo-sobre-el-dair-de-ori
 description: Sip, TODO
 authors:
 - Nbad

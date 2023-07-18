@@ -1,6 +1,6 @@
 ---
 title: El Axmos Drop USpecial de Clairen
-url: lecturas/El-Axmos-Drop-USpecial-de-Clairen
+url: lecturas/el-axmos-drop-uspecial-de-clairen
 description: La aplicación más conocida de esta técnica nicho
 authors:
 - SNC

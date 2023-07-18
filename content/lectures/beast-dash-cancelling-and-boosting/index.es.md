@@ -1,6 +1,6 @@
 ---
 title: Cancelando e impulsando la Bestia
-url: lecturas/Cancelando-e-impulsando-la-Bestia
+url: lecturas/cancelando-e-impulsando-la-bestia
 description: Mixups y castigos con el FSpecial cancelado de Sylvanos
 authors:
 - Zoomander

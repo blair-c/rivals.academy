@@ -1,6 +1,6 @@
 ---
 title: Romper y Cancelar
-url: lecturas/Romper-y-Cancelar
+url: lecturas/romper-y-cancelar
 description: Una de las técnicas de Kragg más importantes con la roca
 authors:
 - SNC

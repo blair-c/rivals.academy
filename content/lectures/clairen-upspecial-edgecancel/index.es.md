@@ -1,6 +1,6 @@
 ---
 title: Cancelar USpecial en el borde
-url: lecturas/Cancelar-USpecial-en-el-borde
+url: lecturas/cancelar-uspecial-en-el-borde
 description: Hacer recovery cancelando el USpecial de Clairen
 authors:
 - Fireicey
