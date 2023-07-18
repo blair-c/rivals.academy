@@ -13,15 +13,13 @@ if (lang) {
   translation = translation.children[0].children[0];
 
   function toggleLangMenu() {
-    lang.setAttribute(
-      'aria-expanded', 
-      `${!(lang.getAttribute('aria-expanded') === 'true')}`
-    );
-    if (lang.getAttribute('aria-expanded')) {
-      translation.removeAttribute('tabindex');
+    if (lang.getAttribute('aria-expanded') === 'true') {
+      lang.setAttribute('aria-expanded', false);
+      translation.setAttribute('tabindex', '-1');
     }
     else {
-      translation.setAttribute('tabindex', '-1');
+      lang.setAttribute('aria-expanded', true);
+      translation.removeAttribute('tabindex');
     }
   }
   // Alternate dismissals
