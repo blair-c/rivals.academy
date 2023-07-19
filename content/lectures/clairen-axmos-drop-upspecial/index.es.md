@@ -13,7 +13,7 @@ tags:
 
 ## Como hacerlo
 
-Para una vista mas detallada del almacenamiento de fastfall y los Axmos Drops, visiten [esta guía](https://docs.google.com/document/d/1tZLo8hJ38uXZYSS9K4WB-nsnYTeoeqYEr-IBYQ-R_XE). Aquí hay una explicación bastante básica de como hacer el Axmos Drop con el USpecial de Clairen:
+Para una vista mas detallada del almacenamiento de fastfall y los Axmos Drops, visiten **[esta guía](https://docs.google.com/document/d/1tZLo8hJ38uXZYSS9K4WB-nsnYTeoeqYEr-IBYQ-R_XE)**. Aquí hay una explicación bastante básica de como hacer el Axmos Drop con el USpecial de Clairen:
 1. Baja a través de una plataforma
 2. Usa un airdodge para hacer waveland de vuelta en la plataforma inmediatamente para "almacenar" el fastfall para "más tarde".
 3. Golpea a tu oponente con USpecial.

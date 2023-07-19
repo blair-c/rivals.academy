@@ -34,7 +34,7 @@ Dynamo Mail allows Shovel Knight to perform any of his strong attacks in the air
 
 {{< video dynamo >}}
 
-You are also able to use the upwards boost you can gain during startup in combination with a super-jump Down Strong, meaning that while Dynamo Mail is equipped you have access to 6 different variations of Down Strong, each with a unique jump height. The below clip shows off the peak heights of each, with a detailed spreadsheet which records what variations can be used from the ground to quickly reach any platform in the game can be found [here](https://docs.google.com/spreadsheets/d/1qXCdb3DmMhVWXIrnwwBtX0DfPguaT7rN3sXTJ5StybI).
+You are also able to use the upwards boost you can gain during startup in combination with a super-jump Down Strong, meaning that while Dynamo Mail is equipped you have access to 6 different variations of Down Strong, each with a unique jump height. The below clip shows off the peak heights of each, with a detailed spreadsheet which records what variations can be used from the ground to quickly reach any platform in the game can be found **[here](https://docs.google.com/spreadsheets/d/1qXCdb3DmMhVWXIrnwwBtX0DfPguaT7rN3sXTJ5StybI)**.
 
 {{< video comparison >}}
 

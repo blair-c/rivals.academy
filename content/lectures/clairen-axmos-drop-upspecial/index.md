@@ -10,7 +10,7 @@ tags:
 
 ## How To
 
-For a deep dive into Fastfall Storage and Axmos Drops, visit my [in-depth guide](https://docs.google.com/document/d/1tZLo8hJ38uXZYSS9K4WB-nsnYTeoeqYEr-IBYQ-R_XE). Here is the basic explanation of how to Axmos Drop with Clairen's Up Special:
+For a deep dive into Fastfall Storage and Axmos Drops, visit my **[in-depth guide](https://docs.google.com/document/d/1tZLo8hJ38uXZYSS9K4WB-nsnYTeoeqYEr-IBYQ-R_XE)**. Here is the basic explanation of how to Axmos Drop with Clairen's Up Special:
 1. Perform a platform drop
 2. Airdodge and waveland back onto the platform ASAP to “store” your platdrop timer value
 3. Hit your opponent with Up Special

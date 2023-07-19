@@ -13,7 +13,7 @@ tags:
 
 El DAir de Ori puede parecer bastante lineal, pero si se combina con el hitfall y un poco de riesgo calculado, puede conseguirte algunos confirms bastante peligrosos para eliminar al oponente bastante temprano.
 
-## Kills en el escenario con Hitfall
+## Kills en el escenario con hitfall
 
 Mientras estás en el escenario, tienes acceso a los ataques fuertes, que junto al potente hitstun del DAir, te permite usar setups sencillos.
 
@@ -76,7 +76,7 @@ Los escenarios en los que se puede hacer esto son, en orden de más fácil a má
 
 {{< video dair-save-aa >}}
 
-Si añades un **shorthop** antes de usar el DAir fuera del escenario, puedes sobrevivir en escenarios donde la blastzone está a **396 pixels** de profundidad o más.
+Si añades un **Salto Corto** antes de usar el DAir fuera del escenario, puedes sobrevivir en escenarios donde la blastzone está a **396 pixels** de profundidad o más.
 Esto añade los siguientes escenarios a la lista, misma condición para el orden:
 - Pico Tormentoso
 - Villajuelos
@@ -85,7 +85,7 @@ Esto añade los siguientes escenarios a la lista, misma condición para el orden
 
 {{< video dair-save-396 >}}
 
-Si añades un **fullhop** antes del DAir, puedes sobrevivir a haber fallado el DAir en cualquier escenario, incluido el escenario con la blastzone inferior más pequeña (**368 pixels**), Cabaña del Árbol.
+Si añades un **Salto Alto** antes del DAir, puedes sobrevivir a haber fallado el DAir en cualquier escenario, incluido el escenario con la blastzone inferior más pequeña (**368 pixels**), Cabaña del Árbol.
 
 {{< video dair-save-368 >}}
 
