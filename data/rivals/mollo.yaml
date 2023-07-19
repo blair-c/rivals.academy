@@ -1194,7 +1194,7 @@ upSpecial:
     - with: Walljump
       from: 2
     - with: Cancel
-      input: Special
+      input: Parry
       from: 22
       to: 36
       window: 15
@@ -1236,7 +1236,7 @@ upSpecial:
     cancellable:
     - with: Walljump
     - with: Cancel
-      input: Special
+      input: Parry
       from: 22
       to: 36
       window: 15
