@@ -16,7 +16,7 @@ First, what is a ledgedash? Ledgedashing is teching the corner of the stage wall
 
 ## How To
 
-The inputs are pretty simple: simply press tech/dodge twice while holding in the direction of the stage. **You do not need to use your double jump.** The hard part is getting the timing and height correct. If you mash the dodge button, you might go into lockout and won’t be able to tech, and if you aren’t high enough when hit you might not get the waveland on stage.
+The inputs are pretty simple: simply press tech/dodge twice while holding in the direction of the stage. **You do not need to use your double jump.** The hard part is getting the timing and height correct. Mashing the dodge button can lock you out of teching, and if you aren’t high enough when hit you might not get the waveland on stage.
 
 {{< video inputs-slow >}}
 
@@ -26,9 +26,8 @@ When first starting out, it might be easier to hold down and toward the stage to
 
 ### Practice Tools
 
-- [Ledge practice workshop stage](https://steamcommunity.com/sharedfiles/filedetails/?id=2353648017) shown in use throughout this guide.
-- If you don't have a practice partner, you can download [Axmos' Parry Bot](https://axmos.itch.io/axmos-parry-bot).
-- The [Training+ workshop buddy](https://steamcommunity.com/sharedfiles/filedetails/?id=2835256077)'s save-state feature may be helpful as well.
+- **[Ledge Practice workshop stage](https://steamcommunity.com/sharedfiles/filedetails/?id=2353648017)** shown in use throughout this guide
+- If you don't have a practice partner, you can download the **[Training+ workshop buddy](https://steamcommunity.com/sharedfiles/filedetails/?id=2835256077)** for its move repetition and save state features
 
 {{< video kragg-practice >}}
 
