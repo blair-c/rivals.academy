@@ -27,7 +27,7 @@ Against a heavier character like Kragg, however, all 3 of these followups are ab
 
 ## Followup
 
-Our move selection is affected by the fact that upon landing after connecting Up Air 1, we'll be put into 4 frames of landing lag. We can choose to wait this lag out and use a grounded option like we did above, or we can [cancel that lag into a jump](/lectures/understanding-landing-lag/#using-jumpsquat), which lets us either follow up with an aerial or cancel our jump into an Up Strong instead. 
+Our move selection is affected by the fact that upon landing after connecting Up Air 1, we'll be put into 4 frames of landing lag. We can choose to wait this lag out and use a grounded option like we did above, or we can **[cancel that lag into a jump](/lectures/understanding-landing-lag/#using-jumpsquat)**, which lets us either follow up with an aerial or cancel our jump into an Up Strong instead. 
 Ranno's fastest grounded followups, shown in the earlier clips, take 9 frames (4f landing lag + 5f attack start up).
 
 Following up with Nair also takes 9 frames (5f jumpsquat + 4f attack startup), making it a viable combo option as well.
