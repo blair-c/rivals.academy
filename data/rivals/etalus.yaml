@@ -667,7 +667,7 @@ downAir:
     startup: 12
     active:
     - from: 13
-      to: 5
+      to: 15
       frames: 3
     - from: 18
       to: 20
