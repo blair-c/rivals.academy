@@ -916,7 +916,7 @@ downSpecial:
     parryStun: true
     appliesMark: true
   notes:
-  - Holding down will allow down-special to travel through platforms.
+  - Holding down allows Down Special to travel through platforms.
   image:
     baseRes: https://rivals.academy/library/maypul/down-special-aerial.png
     highRes: https://rivals.academy/library/maypul/1080_down-special-aerial.png
