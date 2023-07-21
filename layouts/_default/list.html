@@ -17,7 +17,7 @@
         {{ else if eq (index .Params.tags 0) (T "intermediate") }}
           {{ $intermediate = $intermediate | append . }}
         {{ else if eq (index .Params.tags 0) (T "advanced") }}
-          {{ $intermediate = $intermediate | append . }}
+          {{ $advanced = $advanced | append . }}
         {{ end }}
       {{ end }}
       {{ range slice $beginner $intermediate $advanced }}
