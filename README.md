@@ -1,6 +1,6 @@
-# Rivals Academy
+# rivals.academy
 
-Official website of Rivals Academy. Built with [Hugo](https://gohugo.io/).
+Official website and API of Rivals Academy. Built with [Hugo](https://gohugo.io/).
 
 ## Contributing
 
