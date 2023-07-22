@@ -728,12 +728,6 @@ article div:has(iframe) {
   border-radius: .5rem;
 }
 
-@media (max-width: 40rem) {
-  .thumbnail {
-    display: none;
-  }
-}
-
 .headline {
   font-size: 18px;
   font-weight: bold;
@@ -745,6 +739,21 @@ article div:has(iframe) {
   margin: 0;
   margin-top: .25rem;
   margin-bottom: .75rem;
+}
+
+@media (max-width: 40rem) {
+  .page-list {
+    gap: .75rem;
+  }
+
+  .article-preview {
+    padding: .75rem;
+    border-radius: .75rem;
+  }
+
+  .thumbnail {
+    display: none;
+  }
 }
 
 .rss-section {
