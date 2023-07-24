@@ -340,6 +340,7 @@ article div:has(iframe) {
   line-height: 1.75rem;
   font-weight: 700;
   color: currentColor;
+  padding: .5rem 0;
 }
 
 .nav-discord svg {
