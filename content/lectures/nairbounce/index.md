@@ -9,7 +9,7 @@ tags:
 # - orcane
 ---
 
-We've talked about Fair, now we're going to talk about the mechanic that makes Orcane's second most unique aerial, Nair.
+We've talked about [Fair](/lectures/how-to-use-orcane-fair), now we're going to talk about the mechanic that makes Orcane's second most unique aerial, Nair.
 
 ## How It Works
 
