@@ -8,8 +8,8 @@ authors:
 translators:
 - Doka
 tags:
-# - principiante
-# - orcane
+- principiante
+- orcane
 ---
 
 Ya vimos el [aéreo mas único de Orcane](/es/lecturas/como-usar-el-fair-de-orcane/), ahora veamos el segundo más único: NAir.

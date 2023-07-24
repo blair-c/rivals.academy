@@ -5,8 +5,8 @@ authors:
 - Quote_a
 - blair
 tags:
-# - beginner
-# - orcane
+- beginner
+- orcane
 ---
 
 We've talked about [Fair](/lectures/how-to-use-orcane-fair), now we're going to talk about the mechanic that makes Orcane's second most unique aerial, Nair.
