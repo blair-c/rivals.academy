@@ -30,7 +30,7 @@ Contra personajes mas pesados como Kragg, es posible hacerle Parry a estas 3 opc
 
 ## Combos
 
-Los movimientos que eligamos usar van a depender de algunas cosas. Como vamos a aterrizar luego del UAir 1 si elegimos usar un ataque terrestre tendremos que esperar 4 frames de Lag de aterrizaje, por otra parte podemos **[cancelar ese lag con un salto](/es/lecturas/entendiendo-el-lag-de-aterrizaje/#usando-el-jumpsquat)**, y usar un ataque aéreo o cancelar ese salto con un UStrong.
+Los movimientos que eligamos usar van a depender de algunas cosas. Como vamos a aterrizar luego del UAir 1 si elegimos usar un ataque terrestre tendremos que esperar 4 frames de Lag de aterrizaje, por otra parte podemos [cancelar ese lag con un salto](/es/lecturas/entendiendo-el-lag-de-aterrizaje/#usando-el-jumpsquat), y usar un ataque aéreo o cancelar ese salto con un UStrong.
 
 Las opciones terrestres más rápidas de Ranno, que se muestran en los clips anteriores, tardan 9 frames (4 frames de lag de aterrizaje y 5 frames de Startup) 
 

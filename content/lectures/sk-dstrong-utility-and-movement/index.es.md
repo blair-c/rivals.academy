@@ -37,7 +37,7 @@ La Malla Dínamo le permite a SK utilizar cualquier ataque fuerte en el aire, co
 
 {{< video dynamo >}}
 
-Puedes combinar todas las técnicas mostradas en esta guía para conseguir hasta 6 variantes de saltos con el DStrong según las condiciones. Cada una con una altura diferente. El siguiente clip muestra la altura máxima de cada variante. Existe un documento que explica con detalle cuáles variantes se pueden aplicar en cada plataforma del juego desde el suelo, puedes verla **[aquí](https://docs.google.com/spreadsheets/d/1qXCdb3DmMhVWXIrnwwBtX0DfPguaT7rN3sXTJ5StybI)**.
+Puedes combinar todas las técnicas mostradas en esta guía para conseguir hasta 6 variantes de saltos con el DStrong según las condiciones. Cada una con una altura diferente. El siguiente clip muestra la altura máxima de cada variante. Existe un documento que explica con detalle cuáles variantes se pueden aplicar en cada plataforma del juego desde el suelo, puedes verla [aquí](https://docs.google.com/spreadsheets/d/1qXCdb3DmMhVWXIrnwwBtX0DfPguaT7rN3sXTJ5StybI).
 
 {{< video comparison >}}
 

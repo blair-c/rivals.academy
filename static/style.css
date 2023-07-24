@@ -98,6 +98,10 @@ table a:hover {
   transition: all .05s ease-in;
 }
 
+article p a {
+  font-weight: 600;
+}
+
 button {
   cursor: pointer;
 }

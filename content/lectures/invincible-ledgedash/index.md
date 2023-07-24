@@ -26,8 +26,8 @@ When first starting out, it might be easier to hold down and toward the stage to
 
 ### Practice Tools
 
-- **[Ledge Practice workshop stage](https://steamcommunity.com/sharedfiles/filedetails/?id=2353648017)** shown in use throughout this guide
-- If you don't have a practice partner, you can download the **[Training+ workshop buddy](https://steamcommunity.com/sharedfiles/filedetails/?id=2835256077)** for its move repetition and save state features
+- [Ledge Practice workshop stage](https://steamcommunity.com/sharedfiles/filedetails/?id=2353648017) shown in use throughout this guide
+- If you don't have a practice partner, you can download the [Training+ workshop buddy](https://steamcommunity.com/sharedfiles/filedetails/?id=2835256077) for its move repetition and save state features
 
 {{< video kragg-practice >}}
 
