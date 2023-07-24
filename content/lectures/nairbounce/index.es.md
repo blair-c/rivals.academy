@@ -1,5 +1,6 @@
 ---
 title: Nairbote
+url: lecturas/nairbote
 description: Un tutorial para jugar basquetból con Orcane
 authors:
 - Quote_a
