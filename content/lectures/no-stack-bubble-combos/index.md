@@ -62,7 +62,7 @@ Up Air 1 is a fantastic move to keep your opponent from drifting too far away fr
 {{< video kill-1 >}}
 
 **Fair Spike > DACUS** (28%)  
-The classic go-to kill option that does its job very well in a multitude of situations. Please note that during kill range, this combo is very much avoidable by Di-ing down then immediately up, but the difficulty of such DI allows it to land far more often then it should.
+The classic go-to kill option that does its job very well in a multitude of situations. Please note that during kill range, this combo *is* very much avoidable through DI down then immediately up, but the difficulty of such DI allows it to land far more often than it should.
 
 {{< video kill-2 >}}
 
