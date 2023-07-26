@@ -4,8 +4,8 @@ description: Dispelling the myths
 authors:
 - HKP
 tags:
-- intermediate
-- ranno
+# - intermediate
+# - ranno
 ---
 
 There are a lot of misconceptions about whether this move is true in certain combos or not, and I'm here to clear them all up right here in this post! Ranno's Up Air 1 is a unique move in that it applies a set amount of knockback and hitstun. This allows the move to function the same whether the enemy is at 0% or 200%. Knowing this, let's look at what scenarios will allow us to reliably combo this hitbox into other moves. The factors this will depend on include:

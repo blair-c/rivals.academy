@@ -1,14 +1,14 @@
 ---
 title: Entendiendo el UAir 1 de Ranno
-url: lecturas/entendiendo-el-uair1-de-ranno
+url: lecturas/archivo/entendiendo-el-uair1-de-ranno
 description: Desmintamos los mitos que rodean este movimiento
 authors:
 - HKP
 translators:
 - Doka
 tags:
-- intermedio
-- ranno
+# - intermedio
+# - ranno
 ---
 
 El primer golpe del UAir de Ranno es un movimiento bastante único, tiene la característica de que siempre aplica la misma cantidad de Knockback y Hitstun sin importar el porcentaje. Sabiendo esto, veamos algunas situaciones en donde podemos aprovechar esto para hacer combos. Algunos detalles que si van a afectar son:
