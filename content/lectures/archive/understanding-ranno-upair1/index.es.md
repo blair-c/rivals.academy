@@ -7,8 +7,8 @@ authors:
 translators:
 - Doka
 tags:
-# - intermedio
-# - ranno
+- intermedio
+- ranno
 ---
 
 El primer golpe del UAir de Ranno es un movimiento bastante único, tiene la característica de que siempre aplica la misma cantidad de Knockback y Hitstun sin importar el porcentaje. Sabiendo esto, veamos algunas situaciones en donde podemos aprovechar esto para hacer combos. Algunos detalles que si van a afectar son:
