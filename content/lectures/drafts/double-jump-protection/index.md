@@ -4,8 +4,8 @@ description: Utilizing Rivals' built-in tap jump protection mechanic offstage
 authors:
 - SNC
 tags:
-# - intermediate
-# - all-characters
+- intermediate
+- all-characters
 ---
 
 A relatively unknown mechanic of the game, Rivals has a tap jump protection feature on both Up Special and airdodge to prevent players using tap jump controls from accidentally burning their double jump unintentionally. To achieve this, the game allows you a 4 frame window after your double jump to refresh your double jump by either inputting your Up Special or an upwards airdodge, being within the range of upwards directional inputs without being completely diagonal. On most characters, this effectively allows you to double jump offstage multiple times before you use your Up Special or airdodge to gain some slight height.
