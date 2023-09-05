@@ -3,6 +3,7 @@ title: Understanding Landing Lag
 description: Mechanics to act faster and hit harder
 authors:
 - SNC
+- Roofon
 tags:
 - intermediate
 - all-characters
@@ -36,6 +37,24 @@ Although this was only a 4 frame difference in the previous clip, this technique
 
 {{< video examples >}}
 
-Not all of these will connect reliably on all DI options, but some are extremely strong options (or even true combos in some cases) that make the threat of any of your aerials increase tenfold.
+Not all of these will connect reliably on all DIs, but some are extremely strong options (or even true combos in some cases) that make the threat of any of your aerials increase tenfold.
 
-Head into practice mode and start refining your options out of landing lag and you're guaranteed to see some results.
+## Special Override
+
+As mentioned, the default landing lag value of 4 or 6 frames is incurred any time you land onto a grounded surface. However, it does not occur if you land during a special move, even if landing during the last frames of its endlag.
+
+{{< video special-droplet >}}
+
+In the above clip, the Orcane on the left landed during the last frame of Neutral Special's endlag, and so effectively incurred only 1 frame of landing lag. If the Orcane had landed during the last two frames of Neutral Special then there would be a 2 frame wait, etc. For Orcane Neutral Special in particular, timing this is pretty trivial as simply buffering the move during the jumpsquat of a shorthop works out perfectly.
+
+Sylvanos can use Neutral Special about halfway into a fullhop and cut off some landing lag.
+
+{{< video special-seed >}}
+
+Kragg's Rock Shine works particularly nicely because it can serve a similar combo purpose to Nair 1, and missing the timing is less punishing due to the move's low endlag (4 frames) and FAF (13 frames).
+
+{{< video special-rockshine >}}
+
+This is far from a comprehensive list of moves that can override landing lag in this way, so experiment with your main and see what you can come up with.
+
+Head into practice mode and start refining your options out of landing lag, and you're guaranteed to see some results.
