@@ -1,0 +1,302 @@
+fireCapital:
+  name: Fire Capital
+  blastzones:
+    top: 612
+    side: 484
+    bottom: 432
+  stageWidth: 832
+  platforms:
+  - pos: 64
+    height: 192
+    width: 128
+  - pos: 194
+    height: 96
+    width: 124
+  - pos: 514
+    height: 96
+    width: 124
+  - pos: 640
+    height: 192
+    width: 128
+  cameraOffset: 154
+airArmada:
+  name: Air Armada
+  blastzones:
+    top: 564
+    side: 396
+    bottom: 416
+  stageWidth: 688
+  stageDepth: 162
+  platforms:
+  - pos: -4
+    height: 176
+    width: 184
+  - pos: 508
+    height: 176
+    width: 184
+  cameraOffset: 198
+  movingCamera: true
+rockWall:
+  name: The Rock Wall
+  blastzones:
+    top: 580
+    side: 356
+    bottom: 400
+  stageWidth: 768
+  platforms:
+  - pos: 128
+    height: 96
+    width: 128
+  - pos: 128
+    height: 192
+    width: 128
+  - pos: 512
+    height: 96
+    width: 128
+  - pos: 512
+    height: 192
+    width: 128
+  cameraOffset: 182
+merchantPort:
+  name: Merchant Port
+  blastzones:
+    top: 596
+    side: 452
+    bottom: 384
+  stageWidth: 672
+  platforms:
+  - pos: 16
+    height: 96
+    width: 112
+  - pos: 214
+    height: 176
+    width: 80
+  - pos: 378
+    height: 176
+    width: 80
+  - pos: 544
+    height: 96
+    width: 112
+  cameraOffset: 182
+treetopLodge:
+  name: Treetop Lodge
+  blastzones:
+    top: 612
+    side: 484
+    bottom: 368
+  stageWidth: 512
+  platforms:
+  - pos: 4
+    height: 96
+    width: 192
+  - pos: 320
+    height: 162
+    width: 188
+  cameraOffset: 150
+  doubles:
+    blastzones:
+      top: 612
+      side: 388
+      bottom: 368
+    stageWidth: 704
+    platforms:
+    - pos: 100
+      height: 96
+      width: 192
+    - pos: 136
+      height: 192
+      width: 112
+    - pos: 416
+      height: 162
+      width: 188
+    cameraOffset: 150
+blazingHideout:
+  name: Blazing Hideout
+  blastzones:
+    top: 596
+    side: 500
+    bottom: 384
+  stageWidth: 640
+  platforms:
+  - pos: 128
+    height: 128
+    width: 384
+  cameraOffset: 166
+tempestPeak:
+  name: Tempest Peak
+  blastzones:
+    top: 628
+    side: 536
+    bottom: 400
+  stageWidth: 512
+  platforms:
+  - pos: -174
+    height: 32
+    width: 124
+  - pos: 66
+    height: 96
+    width: 124
+  - pos: 322
+    height: 96
+    width: 124
+  - pos: 562
+    height: 32
+    width: 124
+  cameraOffset: 182
+frozenFortress:
+  name: Frozen Fortress
+  blastzones:
+    top: 600
+    side: 442
+    bottom: 396
+  stageWidth: 768
+  platforms:
+  - pos: 94
+    height: 192
+    width: 162
+  - pos: 308
+    height: 96
+    width: 154
+  - pos: 512
+    height: 192
+    width: 162
+  cameraOffset: 150
+towerOfHeaven:
+  name: Tower of Heaven
+  blastzones:
+    top: 596
+    side: 420
+    bottom: 384
+  stageWidth: 640
+  platforms:
+  - pos: 64
+    height: 96
+    width: 128
+  - pos: 256
+    height: 192
+    width: 128
+  - pos: 448
+    height: 96
+    width: 128
+  cameraOffset: 166
+aetherealGates:
+  name: Aethereal Gates
+  blastzones:
+    top: 612
+    side: 500
+    bottom: 376
+  stageWidth: 640
+  platforms:
+  - pos:
+      start: 36
+      min: 36
+      max: 164
+    height: 112
+    width: 162
+  - pos:
+      start: 452
+      min: 324
+      max: 452
+    height: 112
+    width: 162
+  cameraOffset: 182
+endlessAbyss:
+  name: The Endless Abyss
+  blastzones:
+    top: 570
+    side: 464
+    bottom: 432
+  stageWidth: 672
+  cameraOffset: 182
+spiritTree:
+  name: The Spirit Tree
+  blastzones:
+    top: 556
+    side: 484
+    bottom: 392
+  stageWidth: 576
+  platforms:
+  - pos: -96
+    height: 82
+    width: 192
+  - pos: 480
+    height: 82
+    width: 192
+  cameraOffset: 187
+forestFloor:
+  name: The Forest Floor
+  blastzones:
+    top: 564
+    side: 440
+    bottom: 376
+  stageWidth: 704
+  platforms:
+  - pos: 92
+    height: 96
+    width: 120
+  - pos: 492
+    height: 96
+    width: 120
+  cameraOffset: 138
+  doubles:
+    blastzones:
+      top: 564
+      side: 440
+      bottom: 376
+    stageWidth: 896
+    platforms:
+    - pos: 0
+      height: 96
+      width: 120
+    - pos: 192
+      height: 192
+      width: 120
+    - pos: 384
+      height: 96
+      width: 128
+    - pos: 576
+      height: 192
+      width: 120
+    - pos: 768
+      height: 96
+      width: 120
+    cameraOffset: 138
+julesvale:
+  name: Julesvale
+  blastzones:
+    top: 590
+    side: 460
+    bottom: 400
+  stageWidth: 576
+  platforms:
+  - pos:
+      start: 192
+      min: -96
+      max: 480
+    height: 96
+    width: 192
+  - pos:
+      start: -96
+      min: -96
+      max: 576
+    height: 192
+    width: 96
+  cameraOffset: 154
+troupplePond:
+  name: Troupple Pond
+  blastzones:
+    top: 600
+    side: 600
+    bottom: 416
+  stageWidth: 512
+  platforms:
+  - pos: -96
+    height: 96
+    width: 186
+  - pos: 164
+    height: 192
+    width: 186
+  - pos: 418
+    height: 96
+    width: 186
+  cameraOffset: 182
