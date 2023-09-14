@@ -30,10 +30,10 @@ airArmada:
   platforms:
   - pos: -4
     height: 176
-    width: 184
+    width: 192
   - pos: 508
     height: 176
-    width: 184
+    width: 192
   cameraOffset: 198
   movingCamera: true
 rockWall:
@@ -91,7 +91,7 @@ treetopLodge:
     width: 192
   - pos: 320
     height: 162
-    width: 188
+    width: 192
   cameraOffset: 150
   doubles:
     blastzones:
@@ -108,7 +108,7 @@ treetopLodge:
       width: 112
     - pos: 416
       height: 162
-      width: 188
+      width: 192
     cameraOffset: 150
 blazingHideout:
   name: Blazing Hideout
@@ -292,11 +292,11 @@ troupplePond:
   platforms:
   - pos: -96
     height: 96
-    width: 186
+    width: 192
   - pos: 164
     height: 192
-    width: 186
+    width: 192
   - pos: 418
     height: 96
-    width: 186
+    width: 192
   cameraOffset: 182
