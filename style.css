@@ -983,7 +983,7 @@ article div:has(iframe) {
   justify-content: center;
 }
 
-.library-grid li:not(:last-child):not(:nth-last-child(2)) a div:hover,
+.library-grid li:not(:last-child) a div:hover,
 .library-grid li a:focus-visible div {
   border: 3px solid var(--clr-training-border-hc);
 }
@@ -1155,6 +1155,12 @@ article div:has(iframe) {
 .no-col-borders td, 
 .no-col-borders th {
   border-right: none;
+}
+
+.stages th img {
+  display: block;
+  max-width: 30px;
+  margin: .25rem 0;
 }
 
 .sticky-col {
