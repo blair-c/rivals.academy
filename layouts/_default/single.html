@@ -21,8 +21,8 @@
           <span class="tag-list nowrap">
             {{ range .Params.tags }}
               <span class="tag tag-{{ . }}">
-                {{ if fileExists (print "static/img/icons-full/" . ".png") }}
-                  <img src="/img/icons-full/{{ . }}.png" aria-hidden="true">
+                {{ if fileExists (print "static/img/icons/" . ".png") }}
+                  <img src="/img/icons/{{ . }}.png" aria-hidden="true">
                   <span class="sr-only">{{ humanize . | title }}</span>
                 {{ else }}#{{ . }}{{ end }}
               </span>

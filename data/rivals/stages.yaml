@@ -19,6 +19,7 @@ fireCapital:
     height: 192
     width: 128
   cameraOffset: 154
+  icon: /img/icons/stages/fire-capital.png
 airArmada:
   name: Air Armada
   blastzones:
@@ -36,6 +37,7 @@ airArmada:
     width: 192
   cameraOffset: 198
   movingCamera: true
+  icon: /img/icons/stages/air-armada.png
 rockWall:
   name: The Rock Wall
   blastzones:
@@ -57,6 +59,7 @@ rockWall:
     height: 192
     width: 128
   cameraOffset: 182
+  icon: /img/icons/stages/rock-wall.png
 merchantPort:
   name: Merchant Port
   blastzones:
@@ -78,6 +81,7 @@ merchantPort:
     height: 96
     width: 112
   cameraOffset: 182
+  icon: /img/icons/stages/merchant-port.png
 treetopLodge:
   name: Treetop Lodge
   blastzones:
@@ -93,7 +97,9 @@ treetopLodge:
     height: 162
     width: 192
   cameraOffset: 150
+  icon: /img/icons/stages/treetop-lodge.png
   doubles:
+    name: Treetop Lodge (Doubles)
     blastzones:
       top: 612
       side: 388
@@ -110,6 +116,7 @@ treetopLodge:
       height: 162
       width: 192
     cameraOffset: 150
+    icon: /img/icons/stages/treetop-lodge-doubles.png
 blazingHideout:
   name: Blazing Hideout
   blastzones:
@@ -122,6 +129,7 @@ blazingHideout:
     height: 128
     width: 384
   cameraOffset: 166
+  icon: /img/icons/stages/blazing-hideout.png
 tempestPeak:
   name: Tempest Peak
   blastzones:
@@ -143,6 +151,7 @@ tempestPeak:
     height: 32
     width: 124
   cameraOffset: 182
+  icon: /img/icons/stages/tempest-peak.png
 frozenFortress:
   name: Frozen Fortress
   blastzones:
@@ -161,6 +170,7 @@ frozenFortress:
     height: 192
     width: 162
   cameraOffset: 150
+  icon: /img/icons/stages/frozen-fortress.png
 towerOfHeaven:
   name: Tower of Heaven
   blastzones:
@@ -179,6 +189,7 @@ towerOfHeaven:
     height: 96
     width: 128
   cameraOffset: 166
+  icon: /img/icons/stages/tower-of-heaven.png
 aetherealGates:
   name: Aethereal Gates
   blastzones:
@@ -200,6 +211,7 @@ aetherealGates:
     height: 112
     width: 162
   cameraOffset: 182
+  icon: /img/icons/stages/aethereal-gates.png
 endlessAbyss:
   name: The Endless Abyss
   blastzones:
@@ -208,6 +220,7 @@ endlessAbyss:
     bottom: 432
   stageWidth: 672
   cameraOffset: 182
+  icon: /img/icons/stages/endless-abyss.png
 spiritTree:
   name: The Spirit Tree
   blastzones:
@@ -223,6 +236,7 @@ spiritTree:
     height: 82
     width: 192
   cameraOffset: 187
+  icon: /img/icons/stages/spirit-tree.png
 forestFloor:
   name: The Forest Floor
   blastzones:
@@ -238,7 +252,9 @@ forestFloor:
     height: 96
     width: 120
   cameraOffset: 138
+  icon: /img/icons/stages/forest-floor.png
   doubles:
+    name: The Forest Floor (Doubles)
     blastzones:
       top: 564
       side: 440
@@ -261,6 +277,7 @@ forestFloor:
       height: 96
       width: 120
     cameraOffset: 138
+    icon: /img/icons/stages/forest-floor-doubles.png
 julesvale:
   name: Julesvale
   blastzones:
@@ -282,6 +299,7 @@ julesvale:
     height: 192
     width: 96
   cameraOffset: 154
+  icon: /img/icons/stages/julesvale.png
 troupplePond:
   name: Troupple Pond
   blastzones:
@@ -300,3 +318,4 @@ troupplePond:
     height: 96
     width: 192
   cameraOffset: 182
+  icon: /img/icons/stages/troupple-pond.png

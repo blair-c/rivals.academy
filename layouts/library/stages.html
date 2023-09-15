@@ -1,0 +1,207 @@
+{{ define "header" }}
+  {{ partial "navbar" }}
+{{ end }}
+
+{{ define "main" }}
+<div class="center"><div class="cols-sidebar-content">
+  <div class="sidebar">
+    <nav><ul class="library-grid">
+    {{ range (slice "zetterburn" "orcane" "kragg" "wrastor" 
+                    "forsburn" "etalus" "maypul" "absa"
+                    "clairen" "ranno" "sylvanos" "elliana"
+                    "mollo" "hodan" "olympia" "pomme"
+                    "ori" "shovel-knight") }}
+      <li><a href="/library/{{ . }}" title="{{ humanize . | title }}">
+        <div>
+          <img src="/img/icons/{{ . }}.png" aria-hidden="true">
+          <span class="sr-only">{{ humanize . | title }}</span>
+        </div>
+      </a></li>
+    {{ end }}
+    <li><a href="/library/stages" title="Stages">
+      <div>
+        <img src="/img/icons/stages.png" aria-hidden="true">
+        <span class="sr-only">Stages</span>
+      </div>
+    </a></li>
+    <li><div></div></li>
+    </ul></nav>
+    <div class="toc">
+      {{ .TableOfContents }}
+      <a href="#" class="to-top" title="Jump to Top">
+        {{ partial "svg/up.svg" }}<span class="sr-only">Jump to Top</span>
+      </a>
+    </div>
+  </div>
+  <main id="main-content">
+    <article class="padded-content library-article">
+      {{ $s := .Site.Data.rivals.stages }}
+      <h1>Stages</h1>
+
+      {{ .RenderString "## Stage Comparisons" }}
+      {{ $all := merge $s (dict "treetopLodgeD" $s.treetopLodge.doubles "forestFloorD" $s.forestFloor.doubles) }}
+      {{ $all = sort $all }}
+      {{ .RenderString "### Stage Width" }}
+      <div class="library-table stages"><table>
+        <thead><tr>
+          {{ range sort $all "stageWidth" }}
+            <th>
+              <a href="#{{ anchorize .name }}" title="{{ .name }}">
+                <img src="{{ .icon }}" alt="{{ .name }}">
+              </a>
+            </th>
+          {{ end }}
+        </tr></thead>
+        <tbody><tr>
+          {{ range sort $all "stageWidth" }}<td>{{ .stageWidth }}</td>{{ end }}
+        </tr></tbody>
+      </table></div>
+      <p class="move-notes">Width of the main stage ground</p>
+      {{ .RenderString "### Top Blastzone" }}
+      <div class="library-table stages"><table>
+        <thead><tr>
+          {{ range sort $all "blastzones.top" }}
+            <th>
+              <a href="#{{ anchorize .name }}" title="{{ .name }}">
+                <img src="{{ .icon }}" alt="{{ .name }}">
+              </a>
+            </th>
+          {{ end }}
+        </tr></thead>
+        <tbody><tr>
+          {{ range sort $all "blastzones.top" }}<td>{{ .blastzones.top }}</td>{{ end }}
+        </tr></tbody>
+      </table></div>
+      <p class="move-notes">Distance from ground to top blastzone</p>
+      {{ .RenderString "### Side Blastzones" }}
+      <div class="library-table stages"><table>
+        <thead><tr>
+          {{ range sort $all "blastzones.side" }}
+            <th>
+              <a href="#{{ anchorize .name }}" title="{{ .name }}">
+                <img src="{{ .icon }}" alt="{{ .name }}">
+              </a>
+            </th>
+          {{ end }}
+        </tr></thead>
+        <tbody><tr>
+          {{ range sort $all "blastzones.side" }}<td>{{ .blastzones.side }}</td>{{ end }}
+        </tr></tbody>
+      </table></div>
+      <p class="move-notes">Distance from ledge to side blastzone</p>
+      {{ .RenderString "### Bottom Blastzone" }}
+      <div class="library-table stages"><table>
+        <thead><tr>
+          {{ range sort $all "blastzones.bottom" }}
+            <th>
+              <a href="#{{ anchorize .name }}" title="{{ .name }}">
+                <img src="{{ .icon }}" alt="{{ .name }}">
+              </a>
+            </th>
+          {{ end }}
+        </tr></thead>
+        <tbody><tr>
+          {{ range sort $all "blastzones.bottom" }}<td>{{ .blastzones.bottom }}</td>{{ end }}
+        </tr></tbody>
+      </table></div>
+      <p class="move-notes">Distance from ledge to bottom blastzone</p>
+
+      {{ .RenderString "## Stage Details" }}
+      {{ $h := slice }}{{ $w := slice }}{{ $p := slice }}
+      {{ range (slice $s.fireCapital $s.airArmada $s.rockWall $s.merchantPort
+                      $s.treetopLodge $s.blazingHideout $s.tempestPeak $s.frozenFortress
+                      $s.towerOfHeaven $s.aetherealGates $s.endlessAbyss $s.spiritTree
+                      $s.forestFloor $s.julesvale $s.troupplePond) }}
+        {{ $.RenderString (print "### " .name) }}
+        <div class="library-table"><table>
+          <thead><tr>
+            <th>Stage Width</th>{{ with .stageDepth }}<th>Stage Depth</th>{{ end }}
+            <th>Top Blastzone</th><th>Side Blastzones</th><th>Bottom Blastzone</th>
+            {{ with .platforms }}
+              <th>Platform Height{{ if gt (len .) 1 }}s{{ end }}</th>
+              <th>Platform Width{{ if gt (len .) 1 }}s{{ end }}</th>
+              <th>Platform Position{{ if gt (len .) 1 }}s{{ end }}</th>
+            {{ end }}
+            <th>Camera Offset</th>{{ with .movingCamera }}<th>Moving Camera</th>{{ end }}
+          </tr></thead>
+          <tbody><tr>
+            <td>{{ .stageWidth }}</td>
+            {{ with .stageDepth }}<td>{{ . }}</td>{{ end }}
+            <td>{{ .blastzones.top }}</td>
+            <td>{{ .blastzones.side }}</td>
+            <td>{{ .blastzones.bottom }}</td>
+            {{ with .platforms }}
+              {{ range . }}{{ $h = $h | append .height }}{{ end }}
+              <td>{{ delimit $h " / " }}</td>{{ $h = slice }}
+              {{ range . }}{{ $w = $w | append .width }}{{ end }}
+              <td>{{ delimit $w " / " }}</td>{{ $w = slice }}
+              {{ range . }}
+                {{ if reflect.IsMap .pos }}
+                  {{ $p = $p | append (print .pos.min "-" .pos.max) }}
+                {{ else }}
+                  {{ $p = $p | append .pos }}
+                {{ end }}
+              {{ end }}
+              <td>{{ delimit $p ", " }}</td>{{ $p = slice }}
+            {{ end }}
+            <td>{{ .cameraOffset }}</td>{{ with .movingCamera }}<td>True</td>{{ end }}
+          </tr></tbody>
+        </table></div>
+        {{ with .doubles }}
+          <h4 id="{{ anchorize .name }}">Doubles Variant</h4>
+          <div class="library-table"><table>
+            <thead><tr>
+              <th>Stage Width</th>{{ with .stageDepth }}<th>Stage Depth</th>{{ end }}
+              <th>Top Blastzone</th><th>Side Blastzones</th><th>Bottom Blastzone</th>
+              {{ with .platforms }}
+                <th>Platform Height{{ if gt (len .) 1 }}s{{ end }}</th>
+                <th>Platform Width{{ if gt (len .) 1 }}s{{ end }}</th>
+                <th>Platform Position{{ if gt (len .) 1 }}s{{ end }}</th>
+              {{ end }}
+              <th>Camera Offset</th>{{ with .movingCamera }}<th>Moving Camera</th>{{ end }}
+            </tr></thead>
+            <tbody><tr>
+              <td>{{ .stageWidth }}</td>
+              {{ with .stageDepth }}<td>{{ . }}</td>{{ end }}
+              <td>{{ .blastzones.top }}</td>
+              <td>{{ .blastzones.side }}</td>
+              <td>{{ .blastzones.bottom }}</td>
+              {{ with .platforms }}
+                {{ range . }}{{ $h = $h | append .height }}{{ end }}
+                <td>{{ delimit $h " / " }}</td>{{ $h = slice }}
+                {{ range . }}{{ $w = $w | append .width }}{{ end }}
+                <td>{{ delimit $w " / " }}</td>{{ $w = slice }}
+                {{ range . }}{{ $p = $p | append .pos }}{{ end }}
+                <td>{{ delimit $p ", " }}</td>{{ $p = slice }}
+              {{ end }}
+              <td>{{ .cameraOffset }}</td>{{ with .movingCamera }}<td>True</td>{{ end }}
+            </tr></tbody>
+          </table></div>
+        {{ end }}
+      {{ end }}
+      
+    </article>
+    <div class="article-footer-divider"></div>
+    <section class="article-footer">
+      {{ $u := site.Data.library }}
+      <p>
+        Data curated by the <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.s7g.twitter }}">Sector 7-G</a> team:
+        SNC, Blair, Menace13, IGL, and Jade
+        ‣<br>
+        Up to date as of <a target="_blank" rel="noopener noreferrer" href="{{ $u.patchNotes }}">Patch {{ $u.patch }}</a>
+      </p>
+      <p>
+        {{ partial "partials/svg/code.svg" }}
+        For Developers:
+        <a target="_blank" rel="noopener noreferrer" href="{{ page.Permalink }}data.json">Raw data of this page</a> |
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/blair-c/rivals.academy/blob/main/data/rivals/{{ page.File.BaseFileName }}.yaml">YAML Source</a> |
+        <a href="/library/docs">API Docs</a>
+      </p>
+    </section>
+  </main>
+</div></div>
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "footer" }}
+{{ end }}
