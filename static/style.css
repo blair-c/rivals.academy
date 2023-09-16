@@ -33,7 +33,7 @@
 
   --nav-height: 5rem;
   --page-padding: 1.5rem;
-  --content-max-width: 48rem;
+  --content-max-width: 50rem;
   --footer-margin: 2.5rem;
 }
 @media (max-width:48rem) {
