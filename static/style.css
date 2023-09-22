@@ -149,7 +149,7 @@ article ol {
 
 article img {
   max-width: 100%;
-  max-height: 27rem;
+  max-height: 450px;
 }
 
 article video {
@@ -1213,6 +1213,26 @@ article div:has(iframe) {
   height: auto;
   max-height: 12.5rem;
   border-radius: .125rem;
+}
+
+.stage-image {
+  position: relative;
+}
+
+.stage-image img {
+  border-radius: .125rem;
+}
+
+.stage-image img:last-child {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.stage-image:hover img:last-child,
+.stage-image:focus-visible img:last-child {
+  opacity: 100;
 }
 
 .article-footer {

@@ -125,11 +125,43 @@
             <th>Camera Offset</th>{{ with .movingCamera }}<th>Moving Camera</th>{{ end }}
           </tr></thead>
           <tbody><tr>
-            <td>{{ .stageWidth }}</td>
-            {{ with .stageDepth }}<td>{{ . }}</td>{{ end }}
-            <td>{{ .blastzones.top }}</td>
-            <td>{{ .blastzones.side }}</td>
-            <td>{{ .blastzones.bottom }}</td>
+            <td>
+              {{ .stageWidth }}
+              ({{ if gt .stageWidth 890 }}Largest
+              {{- else if lt .stageWidth 520 }}Smallest
+              {{- else if gt .stageWidth 760 }}Large
+              {{- else if lt .stageWidth 580 }}Small
+              {{- else }}Average
+              {{- end }})
+            </td>
+            {{ with .stageDepth }}<td>{{ . }} (Unique)</td>{{ end }}
+            <td>
+              {{ .blastzones.top }}
+              ({{ if gt .blastzones.top 620 }}Largest
+              {{- else if lt .blastzones.top 560 }}Smallest
+              {{- else if gt .blastzones.top 610 }}Large
+              {{- else if lt .blastzones.top 575 }}Small
+              {{- else }}Average
+              {{- end }})
+            </td>
+            <td>
+              {{ .blastzones.side }}
+              ({{ if gt .blastzones.side 530 }}Largest
+              {{- else if lt .blastzones.side 360 }}Smallest
+              {{- else if gt .blastzones.side 480 }}Large
+              {{- else if lt .blastzones.side 400 }}Small
+              {{- else }}Average
+              {{- end }})
+            </td>
+            <td>
+              {{ .blastzones.bottom }}
+              ({{ if gt .blastzones.bottom 430 }}Largest
+              {{- else if lt .blastzones.bottom 370 }}Smallest
+              {{- else if gt .blastzones.bottom 410 }}Large
+              {{- else if lt .blastzones.bottom 390 }}Small
+              {{- else }}Average
+              {{- end }})
+            </td>
             {{ with .platforms }}
               {{ range . }}{{ $h = $h | append .height }}{{ end }}
               <td>{{ delimit $h " / " }}</td>{{ $h = slice }}
@@ -147,6 +179,10 @@
             <td>{{ .cameraOffset }}</td>{{ with .movingCamera }}<td>True</td>{{ end }}
           </tr></tbody>
         </table></div>
+        <div class="stage-image" tabindex="0">
+          <img src="{{ index .image.baseRes 0 }}" alt="{{ .name }}">
+          <img src="{{ index .image.baseRes 1 }}" alt="{{ .name }}">
+        </div>
         {{ with .doubles }}
           <h4 id="{{ anchorize .name }}">Doubles Variant</h4>
           <div class="library-table"><table>
@@ -161,11 +197,42 @@
               <th>Camera Offset</th>{{ with .movingCamera }}<th>Moving Camera</th>{{ end }}
             </tr></thead>
             <tbody><tr>
-              <td>{{ .stageWidth }}</td>
-              {{ with .stageDepth }}<td>{{ . }}</td>{{ end }}
-              <td>{{ .blastzones.top }}</td>
-              <td>{{ .blastzones.side }}</td>
-              <td>{{ .blastzones.bottom }}</td>
+              <td>
+                {{ .stageWidth }}
+                ({{ if gt .stageWidth 890 }}Largest
+                {{- else if lt .stageWidth 520 }}Smallest
+                {{- else if gt .stageWidth 760 }}Large
+                {{- else if lt .stageWidth 580 }}Small
+                {{- else }}Average
+                {{- end }})
+              </td>
+              <td>
+                {{ .blastzones.top }}
+                ({{ if gt .blastzones.top 620 }}Largest
+                {{- else if lt .blastzones.top 560 }}Smallest
+                {{- else if gt .blastzones.top 610 }}Large
+                {{- else if lt .blastzones.top 575 }}Small
+                {{- else }}Average
+                {{- end }})
+              </td>
+              <td>
+                {{ .blastzones.side }}
+                ({{ if gt .blastzones.side 530 }}Largest
+                {{- else if lt .blastzones.side 360 }}Smallest
+                {{- else if gt .blastzones.side 480 }}Large
+                {{- else if lt .blastzones.side 400 }}Small
+                {{- else }}Average
+                {{- end }})
+              </td>
+              <td>
+                {{ .blastzones.bottom }}
+                ({{ if gt .blastzones.bottom 430 }}Largest
+                {{- else if lt .blastzones.bottom 370 }}Smallest
+                {{- else if gt .blastzones.bottom 410 }}Large
+                {{- else if lt .blastzones.bottom 390 }}Small
+                {{- else }}Average
+                {{- end }})
+              </td>
               {{ with .platforms }}
                 {{ range . }}{{ $h = $h | append .height }}{{ end }}
                 <td>{{ delimit $h " / " }}</td>{{ $h = slice }}
@@ -177,6 +244,10 @@
               <td>{{ .cameraOffset }}</td>{{ with .movingCamera }}<td>True</td>{{ end }}
             </tr></tbody>
           </table></div>
+          <div class="stage-image" tabindex="0">
+            <img src="{{ index .image.baseRes 0 }}" alt="{{ .name }}">
+            <img src="{{ index .image.baseRes 1 }}" alt="{{ .name }}">
+          </div>
         {{ end }}
       {{ end }}
       

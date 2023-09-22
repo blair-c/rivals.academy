@@ -20,6 +20,13 @@ fireCapital:
     width: 128
   cameraOffset: 154
   icon: https://rivals.academy/img/icons/stages/fire-capital.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/fire-capital.png
+    - https://rivals.academy/library/stages/fire-capital-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_fire-capital.png
+    - https://rivals.academy/library/stages/1080_fire-capital-2.png
 airArmada:
   name: Air Armada
   blastzones:
@@ -36,8 +43,14 @@ airArmada:
     height: 176
     width: 192
   cameraOffset: 198
-  movingCamera: true
   icon: https://rivals.academy/img/icons/stages/air-armada.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/air-armada.png
+    - https://rivals.academy/library/stages/air-armada-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_air-armada.png
+    - https://rivals.academy/library/stages/1080_air-armada-2.png
 rockWall:
   name: The Rock Wall
   blastzones:
@@ -60,6 +73,13 @@ rockWall:
     width: 128
   cameraOffset: 182
   icon: https://rivals.academy/img/icons/stages/rock-wall.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/rock-wall.png
+    - https://rivals.academy/library/stages/rock-wall-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_rock-wall.png
+    - https://rivals.academy/library/stages/1080_rock-wall-2.png
 merchantPort:
   name: Merchant Port
   blastzones:
@@ -82,6 +102,13 @@ merchantPort:
     width: 112
   cameraOffset: 182
   icon: https://rivals.academy/img/icons/stages/merchant-port.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/merchant-port.png
+    - https://rivals.academy/library/stages/merchant-port-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_merchant-port.png
+    - https://rivals.academy/library/stages/1080_merchant-port-2.png
 treetopLodge:
   name: Treetop Lodge
   blastzones:
@@ -98,6 +125,13 @@ treetopLodge:
     width: 192
   cameraOffset: 150
   icon: https://rivals.academy/img/icons/stages/treetop-lodge.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/treetop-lodge.png
+    - https://rivals.academy/library/stages/treetop-lodge-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_treetop-lodge.png
+    - https://rivals.academy/library/stages/1080_treetop-lodge-2.png
   doubles:
     name: Treetop Lodge (Doubles)
     blastzones:
@@ -117,6 +151,13 @@ treetopLodge:
       width: 192
     cameraOffset: 150
     icon: https://rivals.academy/img/icons/stages/treetop-lodge-doubles.png
+    image:
+      baseRes:
+      - https://rivals.academy/library/stages/treetop-lodge-doubles.png
+      - https://rivals.academy/library/stages/treetop-lodge-doubles-2.png
+      highRes:
+      - https://rivals.academy/library/stages/1080_treetop-lodge-doubles.png
+      - https://rivals.academy/library/stages/1080_treetop-lodge-doubles-2.png
 blazingHideout:
   name: Blazing Hideout
   blastzones:
@@ -130,6 +171,13 @@ blazingHideout:
     width: 384
   cameraOffset: 166
   icon: https://rivals.academy/img/icons/stages/blazing-hideout.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/blazing-hideout.png
+    - https://rivals.academy/library/stages/blazing-hideout-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_blazing-hideout.png
+    - https://rivals.academy/library/stages/1080_blazing-hideout-2.png
 tempestPeak:
   name: Tempest Peak
   blastzones:
@@ -152,6 +200,13 @@ tempestPeak:
     width: 124
   cameraOffset: 182
   icon: https://rivals.academy/img/icons/stages/tempest-peak.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/tempest-peak.png
+    - https://rivals.academy/library/stages/tempest-peak-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_tempest-peak.png
+    - https://rivals.academy/library/stages/1080_tempest-peak-2.png
 frozenFortress:
   name: Frozen Fortress
   blastzones:
@@ -171,6 +226,13 @@ frozenFortress:
     width: 162
   cameraOffset: 150
   icon: https://rivals.academy/img/icons/stages/frozen-fortress.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/frozen-fortress.png
+    - https://rivals.academy/library/stages/frozen-fortress-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_frozen-fortress.png
+    - https://rivals.academy/library/stages/1080_frozen-fortress-2.png
 towerOfHeaven:
   name: Tower of Heaven
   blastzones:
@@ -190,6 +252,13 @@ towerOfHeaven:
     width: 128
   cameraOffset: 166
   icon: https://rivals.academy/img/icons/stages/tower-of-heaven.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/tower-of-heaven.png
+    - https://rivals.academy/library/stages/tower-of-heaven-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_tower-of-heaven.png
+    - https://rivals.academy/library/stages/1080_tower-of-heaven-2.png
 aetherealGates:
   name: Aethereal Gates
   blastzones:
@@ -212,6 +281,13 @@ aetherealGates:
     width: 162
   cameraOffset: 182
   icon: https://rivals.academy/img/icons/stages/aethereal-gates.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/aethereal-gates.png
+    - https://rivals.academy/library/stages/aethereal-gates-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_aethereal-gates.png
+    - https://rivals.academy/library/stages/1080_aethereal-gates-2.png
 endlessAbyss:
   name: The Endless Abyss
   blastzones:
@@ -221,6 +297,13 @@ endlessAbyss:
   stageWidth: 672
   cameraOffset: 182
   icon: https://rivals.academy/img/icons/stages/endless-abyss.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/endless-abyss.png
+    - https://rivals.academy/library/stages/endless-abyss-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_endless-abyss.png
+    - https://rivals.academy/library/stages/1080_endless-abyss-2.png
 spiritTree:
   name: The Spirit Tree
   blastzones:
@@ -237,6 +320,13 @@ spiritTree:
     width: 192
   cameraOffset: 187
   icon: https://rivals.academy/img/icons/stages/spirit-tree.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/spirit-tree.png
+    - https://rivals.academy/library/stages/spirit-tree-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_spirit-tree.png
+    - https://rivals.academy/library/stages/1080_spirit-tree-2.png
 forestFloor:
   name: The Forest Floor
   blastzones:
@@ -253,6 +343,13 @@ forestFloor:
     width: 120
   cameraOffset: 138
   icon: https://rivals.academy/img/icons/stages/forest-floor.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/forest-floor.png
+    - https://rivals.academy/library/stages/forest-floor-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_forest-floor.png
+    - https://rivals.academy/library/stages/1080_forest-floor-2.png
   doubles:
     name: The Forest Floor (Doubles)
     blastzones:
@@ -278,6 +375,13 @@ forestFloor:
       width: 120
     cameraOffset: 138
     icon: https://rivals.academy/img/icons/stages/forest-floor-doubles.png
+    image:
+      baseRes:
+      - https://rivals.academy/library/stages/forest-floor-doubles.png
+      - https://rivals.academy/library/stages/forest-floor-doubles-2.png
+      highRes:
+      - https://rivals.academy/library/stages/1080_forest-floor-doubles.png
+      - https://rivals.academy/library/stages/1080_forest-floor-doubles-2.png
 julesvale:
   name: Julesvale
   blastzones:
@@ -300,11 +404,18 @@ julesvale:
     width: 96
   cameraOffset: 154
   icon: https://rivals.academy/img/icons/stages/julesvale.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/julesvale.png
+    - https://rivals.academy/library/stages/julesvale-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_julesvale.png
+    - https://rivals.academy/library/stages/1080_julesvale-2.png
 troupplePond:
   name: Troupple Pond
   blastzones:
     top: 600
-    side: 600
+    side: 500
     bottom: 416
   stageWidth: 512
   platforms:
@@ -319,3 +430,10 @@ troupplePond:
     width: 192
   cameraOffset: 182
   icon: https://rivals.academy/img/icons/stages/troupple-pond.png
+  image:
+    baseRes:
+    - https://rivals.academy/library/stages/troupple-pond.png
+    - https://rivals.academy/library/stages/troupple-pond-2.png
+    highRes:
+    - https://rivals.academy/library/stages/1080_troupple-pond.png
+    - https://rivals.academy/library/stages/1080_troupple-pond-2.png
