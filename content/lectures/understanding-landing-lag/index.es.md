@@ -4,6 +4,7 @@ url: lecturas/entendiendo-el-lag-de-aterrizaje
 description: Mecánicas para actuar mas rápido y golpear mas fuerte
 authors:
 - SNC
+- Roofon
 translators:
 - Doka
 tags:
@@ -11,11 +12,11 @@ tags:
 - todos-los-personajes
 ---
 
-Existe una mecánica llamada "lag de aterrizaje" que funciona de la siguiente manera: siempre que tu personaje aterrice, te impedirá actuar durante un corto período. Todos los personajes tienen un valor predeterminado de lag de aterrizaje, así como también valores especificos para cada movimiento, si es que aterrizas utilizando algun movimiento. El valor del lag de aterrizaje estandar es de 4 frames, con los 6 personajes mas pesados (Kragg, Etalus, Sylvanos, Elliana, Hodan, y Olympia) teniendo un valor de 6 frames. A pesar de que el lag de aterrizaje es una mecánica diseñada para ralentizarte, te darás cuenta que hay varias formas de evadir en parte el lag de aterrizaje. Aquí hay algunas de las cosas que necesitas saber si quieres acelerar tu juego.
+Existe una mecánica llamada "lag de aterrizaje" que funciona de la siguiente manera: siempre que tu personaje aterrice, te impedirá actuar durante un corto período. Todos los personajes tienen un valor predeterminado de lag de aterrizaje, así como también valores específicos para cada movimiento, si es que aterrizas utilizando algun movimiento. El valor del lag de aterrizaje estandar es de 4 frames, con los 6 personajes mas pesados (Kragg, Etalus, Sylvanos, Elliana, Hodan, y Olympia) teniendo un valor de 6 frames. A pesar de que el lag de aterrizaje es una mecánica diseñada para ralentizarte, te darás cuenta que hay varias formas de evadir en parte el lag de aterrizaje. Aquí hay algunas de las cosas que necesitas saber si quieres acelerar tu juego.
 
 ## Acertar vs. Fallar
 
-De la misma manera en la que el endlag de la mayoría de ataques funciona, el lag de aterrizaje interactua con el lag de fallo. Si aciertas un golpe a tu oponente tu lag de aterrizaje se reducirá en una tercera parte (si antes era 3 ahora es 2), permitiendote ser mas efectivo con tus ataques sin necesidad de inputs adicionales. En caso de que el valor del "lag certero" sea menor al valor del lag de aterrizaje predeterminado, este se ajustará para ser igual al valor del lag de aterrizaje predeterminado.
+De la misma manera en la que funciona el endlag de la mayoría de ataques, el lag de aterrizaje interactua con el lag de fallo (whifflag). Si aciertas un golpe a tu oponente tu lag de aterrizaje se reducirá en una tercera parte (si antes era 3 ahora es 2), permitiendote ser mas efectivo con tus ataques sin necesidad de inputs adicionales. En caso de que el valor del "lag certero" sea menor al valor del lag de aterrizaje predeterminado, este se ajustará para ser igual al valor del lag de aterrizaje predeterminado.
 
 {{< video hit-whiff >}}
 
@@ -40,5 +41,23 @@ Aunque este clip solo muestra una diferencia de 4 frames comparado al clip anter
 {{< video examples >}}
 
 No todos los ejemplos son 100% fiables, ya que pueden depender del DI del oponente, pero algunos son opciones increiblemente fuertes que hacen que tus ataques sean 10 veces mas amenazantes.
+
+## Anulado especial
+
+Como se menciona antes, el valor por defecto del lag de aterrizaje sucede cada vez que aterrizas. Sin embargo podemos evitar que suceda si aterrizas durante un ataque especial, incluso si son los ultimos frames del endlag.
+
+{{< video special-droplet >}}
+
+En el clip anterior Orcane aterriza durante el último frame del endlag del NSpecial, por lo que "solo obtuvo" 1 frame de lag de aterrizaje. Si hubiera aterrizado en cualquier otro frame del endlag del NSpecial ese valor cualquiera hubiera sido el valor de su lag de aterrizaje. Para este caso específico el timing es bastante trivial ya que se puede hacer el input del NSpecial durante el jumpsquat de un salto corto para hacerlo perfecto.
+
+Otro ejemplo puede ser Sylvanos, que puede usar su NSpecial por ahí de la mitad de su salto alto y ahorrarse un poco de lag de aterrizaje. 
+
+{{< video special-seed >}}
+
+El "Shine" de Kragg (NSpecial sin sacar una roca) funciona particularmente bien porque además puede aprovecharse para hacer un combo con NAir, y en caso de que no se acierte el golpe es difícil ser castigado por el poco endlag del movimiento (4 frames) y el primer frame activo (13 frames).
+
+{{< video special-rockshine >}}
+
+Esta guía meramente explica con algunos ejemplos el potencial de esta técnica, así que puedes experimentar con tu main e intentar ver que se te ocurre para aplicarla.
 
 Dirígete al Modo de Práctica y comienza a refinar tus opciones a partir del lag de aterrizaje, con eso te garantizas ver mejoras en tus resultados.
