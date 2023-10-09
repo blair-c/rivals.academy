@@ -7,7 +7,7 @@
     {{ if eq (len page.Ancestors) 0 }}
       <meta http-equiv="Refresh" content="0; url='/library'"/>
       {{ $redirect = true }}
-    {{ else if eq .Page.Title "Rivals Academy Discord" }}
+    {{ else if eq .Page.Title "Join the Rivals Academy Discord" }}
       <meta http-equiv="Refresh" content="0; url='{{ site.Data.links.roaa.discord }}'"/>
       {{ $redirect = true }}
     {{ end }}
