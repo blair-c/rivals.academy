@@ -26,7 +26,7 @@ raw-data-of-this-page: Datos sin procesar de esta página
 source: fuente
 docs: docs
 
-stages: Escanarios
+stages: escanarios
 stage-comparisons: Comparición de escanarios
 stage-width: Ancho del escenario
 stage-width-desc: Ancho del suelo del escenario, medidas en píxeles

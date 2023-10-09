@@ -37,7 +37,7 @@
     <article class="padded-content library-article">
       {{ $s := .Site.Data.rivals.stages }}
       <div class="article-header">
-        <h1>Stages</h1>
+        <h1>{{ T "stages" | title }}</h1>
         {{ partial "language-picker" . }}
       </div>
 
