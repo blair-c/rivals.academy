@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{ if eq (len page.Ancestors) 0 }}
       <meta http-equiv="Refresh" content="0; url='/library'"/>
+    {{ else if eq .Page.Title "Rivals Academy Discord" }}
+      <meta http-equiv="Refresh" content="0; url='{{ site.Data.links.roaa.discord }}'"/>
     {{ end }}
     <title>
       {{ .Page.Title }}
