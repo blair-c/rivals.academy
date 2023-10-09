@@ -498,6 +498,16 @@ article div:has(iframe) {
   }
 }
 
+.redirect {
+  padding: 2rem var(--page-padding);
+  background-color: var(--clr-darken-img);
+  background-image: url("img/footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
 .footer-main-container {
   padding: 2rem var(--page-padding);
   background-color: var(--clr-darken-img);
