@@ -1,38 +1,53 @@
-lectures:
-  other: lectures
-roaa-lectures:
-  other: Rivals Academy Lectures
-recent-content-in:
-  other: Recent content in
+language-switcher: Language switcher
+selected-language: Selected language
+available-translation: Available translation
 
-by:
-  other: By
-and:
-  other: and
-translated-by:
-  other: Translated by
+jump-to-top: Jump to Top
+copy-link: Copy link
+to-this-section: to this section
+copied: Copied to clipboard
 
-language-switcher:
-  other: Language switcher
-selected-language:
-  other: Selected language
-available-translation:
-  other: Available translation
+lectures: lectures
+roaa-lectures: Rivals Academy Lectures
+recent-content-in: Recent content in
 
-jump-to-top:
-  other: Jump to Top
-copy-link:
-  other: Copy link
-to-this-section:
-  other: to this section
-copied:
-  other: Copied to clipboard
+by: By
+and: and
+translated-by: Translated by
 
-beginner:
-  other: beginner
-intermediate:
-  other: intermediate
-advanced:
-  other: advanced
-all-characters:
-  other: all-characters
+beginner: beginner
+intermediate: intermediate
+advanced: advanced
+all-characters: all-characters
+
+up-to-date-as-of: Up to date as of
+for-developers: For Developers
+raw-data-of-this-page: Raw data of this page
+source: Source
+docs: Docs
+
+stages: Stages
+stage-comparisons: Stage Comparisons
+stage-width: Stage Width
+stage-width-desc: Width of the main stage ground, measured in pixels
+top-blastzone: Top Blastzone
+top-blastzone-desc: Distance from ground to top blastzone, measured in pixels
+side-blastzones: Side Blastzones
+side-blastzones-desc: Distance from ledge to side blastzone, measured in pixels
+bottom-blastzone: Bottom Blastzone
+bottom-blastzone-desc: Distance from ledge to bottom blastzone, measured in pixels
+stage-details: Stage Details
+smallest: Smallest
+small: Small
+average: Average
+large: Large
+largest: Largest
+stage-depth: Stage Depth
+unique: Unique
+platform-heights: Platform Heights
+platform-widths: Platform Widths
+platform-positions: Platform Positions
+platform-height: Platform Height
+platform-width: Platform Width
+platform-position: Platform 
+camera-offset: Camera Offset

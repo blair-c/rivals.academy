@@ -1,31 +1,49 @@
-lectures:
-  other: lecturas
-roaa-lectures:
-  other: Lecturas de Rivals Academy
-recent-content-in:
-  other: Contenido reciente en las
+jump-to-top: Subir
+copy-link: Copiar enlace
+to-this-section: a esta sección
+copied: Copiado
 
-by:
-  other: Por
-and:
-  other: 'y'
-translated-by:
-  other: Traducido por
+lectures: lecturas
+roaa-lectures: Lecturas de Rivals Academy
+recent-content-in: Contenido reciente en las
 
-jump-to-top:
-  other: Subir
-copy-link:
-  other: Copiar enlace
-to-this-section:
-  other: a esta sección
-copied:
-  other: Copiado
+by: Por
+and: 'y'
+translated-by: Traducido por
 
-beginner:
-  other: principiante
-intermediate:
-  other: intermedio
-advanced:
-  other: avanzado
-all-characters:
-  other: todos-los-personajes
+beginner: principiante
+intermediate: intermedio
+advanced: avanzado
+all-characters: todos-los-personajes
+
+up-to-date-as-of: Actualizado a partir del
+for-developers: Para desarolladores
+raw-data-of-this-page: Datos sin procesar de esta página
+source: fuente
+docs: docs
+
+stages: Escanarios
+stage-comparisons: Comparición de escanarios
+stage-width: Ancho del escenario
+stage-width-desc: Ancho del suelo del escenario, medidas en píxeles
+top-blastzone: Blastzone superior
+top-blastzone-desc: Distancia del suelo a la blastzone superior, medidas en píxeles
+side-blastzones: Blastzones laterales
+side-blastzones-desc: Distancia del borde del escenario a la blastzone lateral, medidas en píxeles
+bottom-blastzone: Blastzone inferior
+bottom-blastzone-desc: Distancia del borde del escenario a la blastzone inferior, medidas en píxeles
+stage-details: Detalles de escanarios
+smallest: Mas pequeño
+small: Pequeño
+average: Promedio
+large: Grande
+largest: Mas Grande
+stage-depth: Profundidad del escenario
+unique: Unica
+platform-heights: Altura de las plataformas
+platform-widths: Ancho de las plataformas
+platform-positions: Posiciones de las plataformas
+platform-height: Altura de la plataform
+platform-width: Ancho de la plataform
+platform-position: Posiciones de la plataform
+camera-offset: Desplazamiento del cámera

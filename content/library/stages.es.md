@@ -1,10 +1,10 @@
 ---
 title: Stages
-description: Stage, platform, and blastzone size data
+url: biblioteca/escanarios
+description: Datos de escanarios, platformas, y blastzones
 layout: stages
 outputs:
 - html
-- data
 ---
 
 ## Fire Capital

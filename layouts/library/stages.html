@@ -28,20 +28,22 @@
     </ul></nav>
     <div class="toc">
       {{ .TableOfContents }}
-      <a href="#" class="to-top" title="Jump to Top">
-        {{ partial "svg/up.svg" }}<span class="sr-only">Jump to Top</span>
+      <a href="#" class="to-top" title="{{ T "jump-to-top" }}">
+        {{ partial "svg/up.svg" }}<span class="sr-only">{{ T "jump-to-top" }}</span>
       </a>
     </div>
   </div>
   <main id="main-content">
     <article class="padded-content library-article">
       {{ $s := .Site.Data.rivals.stages }}
-      <h1>Stages</h1>
+      <div class="article-header">
+        <h1>Stages</h1>
+        {{ partial "language-picker" . }}
+      </div>
 
-      {{ .RenderString "## Stage Comparisons" }}
       {{ $all := merge $s (dict "treetopLodgeD" $s.treetopLodge.doubles "forestFloorD" $s.forestFloor.doubles) }}
       {{ $all = sort $all }}
-      {{ .RenderString "### Stage Width" }}
+      {{ .RenderString (print "### " (T "stage-width")) }}
       <div class="library-table stages"><table>
         <thead><tr>
           {{ range sort $all "stageWidth" }}
@@ -56,8 +58,8 @@
           {{ range sort $all "stageWidth" }}<td>{{ .stageWidth }}</td>{{ end }}
         </tr></tbody>
       </table></div>
-      <p class="move-notes">Width of the main stage ground</p>
-      {{ .RenderString "### Top Blastzone" }}
+      <p class="move-notes">{{ T "stage-width-desc" }}</p>
+      {{ .RenderString (print "### " (T "top-blastzone")) }}
       <div class="library-table stages"><table>
         <thead><tr>
           {{ range sort $all "blastzones.top" }}
@@ -72,8 +74,8 @@
           {{ range sort $all "blastzones.top" }}<td>{{ .blastzones.top }}</td>{{ end }}
         </tr></tbody>
       </table></div>
-      <p class="move-notes">Distance from ground to top blastzone</p>
-      {{ .RenderString "### Side Blastzones" }}
+      <p class="move-notes">{{ T "top-blastzone-desc" }}</p>
+      {{ .RenderString (print "### " (T "side-blastzones")) }}
       <div class="library-table stages"><table>
         <thead><tr>
           {{ range sort $all "blastzones.side" }}
@@ -88,8 +90,8 @@
           {{ range sort $all "blastzones.side" }}<td>{{ .blastzones.side }}</td>{{ end }}
         </tr></tbody>
       </table></div>
-      <p class="move-notes">Distance from ledge to side blastzone</p>
-      {{ .RenderString "### Bottom Blastzone" }}
+      <p class="move-notes">{{ T "side-blastzones-desc" }}</p>
+      {{ .RenderString (print "### " (T "bottom-blastzone")) }}
       <div class="library-table stages"><table>
         <thead><tr>
           {{ range sort $all "blastzones.bottom" }}
@@ -104,9 +106,9 @@
           {{ range sort $all "blastzones.bottom" }}<td>{{ .blastzones.bottom }}</td>{{ end }}
         </tr></tbody>
       </table></div>
-      <p class="move-notes">Distance from ledge to bottom blastzone</p>
+      <p class="move-notes">{{ T "bottom-blastzone-desc" }}</p>
 
-      {{ .RenderString "## Stage Details" }}
+      {{ .RenderString (print "## " (T "stage-details")) }}
       {{ $h := slice }}{{ $w := slice }}{{ $p := slice }}
       {{ range (slice $s.fireCapital $s.airArmada $s.rockWall $s.merchantPort
                       $s.treetopLodge $s.blazingHideout $s.tempestPeak $s.frozenFortress
@@ -115,51 +117,60 @@
         {{ $.RenderString (print "### " .name) }}
         <div class="library-table"><table>
           <thead><tr>
-            <th>Stage Width</th>{{ with .stageDepth }}<th>Stage Depth</th>{{ end }}
-            <th>Top Blastzone</th><th>Side Blastzones</th><th>Bottom Blastzone</th>
+            <th>{{ T "stage-width" }}</th>
+            {{ with .stageDepth }}<th>{{ T "stage-depth" }}</th>{{ end }}
+            <th>{{ T "top-blastzone" }}</th>
+            <th>{{ T "side-blastzones" }}</th>
+            <th>{{ T "bottom-blastzone" }}</th>
             {{ with .platforms }}
-              <th>Platform Height{{ if gt (len .) 1 }}s{{ end }}</th>
-              <th>Platform Width{{ if gt (len .) 1 }}s{{ end }}</th>
-              <th>Platform Position{{ if gt (len .) 1 }}s{{ end }}</th>
+              {{ if gt (len .) 1 }}
+                <th>{{ T "platform-heights" }}</th>
+                <th>{{ T "platform-widths" }}</th>
+                <th>{{ T "platform-positions" }}</th>
+              {{ else }}
+                <th>{{ T "platform-height" }}</th>
+                <th>{{ T "platform-width" }}</th>
+                <th>{{ T "platform-position" }}</th>
+              {{ end }}
             {{ end }}
-            <th>Camera Offset</th>{{ with .movingCamera }}<th>Moving Camera</th>{{ end }}
+            <th>{{ T "camera-offset" }}</th>
           </tr></thead>
           <tbody><tr>
             <td>
               {{ .stageWidth }}
-              ({{ if gt .stageWidth 890 }}Largest
-              {{- else if lt .stageWidth 520 }}Smallest
-              {{- else if gt .stageWidth 760 }}Large
-              {{- else if lt .stageWidth 580 }}Small
-              {{- else }}Average
+              ({{ if gt .stageWidth 890 }}{{ T "largest" }}
+              {{- else if lt .stageWidth 520 }}{{ T "smallest" }}
+              {{- else if gt .stageWidth 760 }}{{ T "large" }}
+              {{- else if lt .stageWidth 580 }}{{ T "small" }}
+              {{- else }}{{ T "average" }}
               {{- end }})
             </td>
-            {{ with .stageDepth }}<td>{{ . }} (Unique)</td>{{ end }}
+            {{ with .stageDepth }}<td>{{ . }} ({{ T "unique" }})</td>{{ end }}
             <td>
               {{ .blastzones.top }}
-              ({{ if gt .blastzones.top 620 }}Largest
-              {{- else if lt .blastzones.top 560 }}Smallest
-              {{- else if gt .blastzones.top 610 }}Large
-              {{- else if lt .blastzones.top 575 }}Small
-              {{- else }}Average
+              ({{ if gt .blastzones.top 620 }}{{ T "largest" }}
+              {{- else if lt .blastzones.top 560 }}{{ T "smallest" }}
+              {{- else if gt .blastzones.top 610 }}{{ T "large" }}
+              {{- else if lt .blastzones.top 575 }}{{ T "small" }}
+              {{- else }}{{ T "average" }}
               {{- end }})
             </td>
             <td>
               {{ .blastzones.side }}
-              ({{ if gt .blastzones.side 530 }}Largest
-              {{- else if lt .blastzones.side 360 }}Smallest
-              {{- else if gt .blastzones.side 480 }}Large
-              {{- else if lt .blastzones.side 400 }}Small
-              {{- else }}Average
+              ({{ if gt .blastzones.side 530 }}{{ T "largest" }}
+              {{- else if lt .blastzones.side 360 }}{{ T "smallest" }}
+              {{- else if gt .blastzones.side 480 }}{{ T "large" }}
+              {{- else if lt .blastzones.side 400 }}{{ T "small" }}
+              {{- else }}{{ T "average" }}
               {{- end }})
             </td>
             <td>
               {{ .blastzones.bottom }}
-              ({{ if gt .blastzones.bottom 430 }}Largest
-              {{- else if lt .blastzones.bottom 370 }}Smallest
-              {{- else if gt .blastzones.bottom 410 }}Large
-              {{- else if lt .blastzones.bottom 390 }}Small
-              {{- else }}Average
+              ({{ if gt .blastzones.bottom 430 }}{{ T "largest" }}
+              {{- else if lt .blastzones.bottom 370 }}{{ T "smallest" }}
+              {{- else if gt .blastzones.bottom 410 }}{{ T "large" }}
+              {{- else if lt .blastzones.bottom 390 }}{{ T "small" }}
+              {{- else }}{{ T "average" }}
               {{- end }})
             </td>
             {{ with .platforms }}
@@ -187,50 +198,59 @@
           <h4 id="{{ anchorize .name }}">Doubles Variant</h4>
           <div class="library-table"><table>
             <thead><tr>
-              <th>Stage Width</th>{{ with .stageDepth }}<th>Stage Depth</th>{{ end }}
-              <th>Top Blastzone</th><th>Side Blastzones</th><th>Bottom Blastzone</th>
+              <th>{{ T "stage-width" }}</th>
+              {{ with .stageDepth }}<th>{{ T "stage-depth" }}</th>{{ end }}
+              <th>{{ T "top-blastzone" }}</th>
+              <th>{{ T "side-blastzones" }}</th>
+              <th>{{ T "bottom-blastzone" }}</th>
               {{ with .platforms }}
-                <th>Platform Height{{ if gt (len .) 1 }}s{{ end }}</th>
-                <th>Platform Width{{ if gt (len .) 1 }}s{{ end }}</th>
-                <th>Platform Position{{ if gt (len .) 1 }}s{{ end }}</th>
+                {{ if gt (len .) 1 }}
+                  <th>{{ T "platform-heights" }}</th>
+                  <th>{{ T "platform-widths" }}</th>
+                  <th>{{ T "platform-positions" }}</th>
+                {{ else }}
+                  <th>{{ T "platform-height" }}</th>
+                  <th>{{ T "platform-width" }}</th>
+                  <th>{{ T "platform-position" }}</th>
+                {{ end }}
               {{ end }}
-              <th>Camera Offset</th>{{ with .movingCamera }}<th>Moving Camera</th>{{ end }}
+              <th>{{ T "camera-offset" }}</th>
             </tr></thead>
             <tbody><tr>
               <td>
                 {{ .stageWidth }}
-                ({{ if gt .stageWidth 890 }}Largest
-                {{- else if lt .stageWidth 520 }}Smallest
-                {{- else if gt .stageWidth 760 }}Large
-                {{- else if lt .stageWidth 580 }}Small
-                {{- else }}Average
+                ({{ if gt .stageWidth 890 }}{{ T "largest" }}
+                {{- else if lt .stageWidth 520 }}{{ T "smallest" }}
+                {{- else if gt .stageWidth 760 }}{{ T "large" }}
+                {{- else if lt .stageWidth 580 }}{{ T "small" }}
+                {{- else }}{{ T "average" }}
                 {{- end }})
               </td>
               <td>
                 {{ .blastzones.top }}
-                ({{ if gt .blastzones.top 620 }}Largest
-                {{- else if lt .blastzones.top 560 }}Smallest
-                {{- else if gt .blastzones.top 610 }}Large
-                {{- else if lt .blastzones.top 575 }}Small
-                {{- else }}Average
+                ({{ if gt .blastzones.top 620 }}{{ T "largest" }}
+                {{- else if lt .blastzones.top 560 }}{{ T "smallest" }}
+                {{- else if gt .blastzones.top 610 }}{{ T "large" }}
+                {{- else if lt .blastzones.top 575 }}{{ T "small" }}
+                {{- else }}{{ T "average" }}
                 {{- end }})
               </td>
               <td>
                 {{ .blastzones.side }}
-                ({{ if gt .blastzones.side 530 }}Largest
-                {{- else if lt .blastzones.side 360 }}Smallest
-                {{- else if gt .blastzones.side 480 }}Large
-                {{- else if lt .blastzones.side 400 }}Small
-                {{- else }}Average
+                ({{ if gt .blastzones.side 530 }}{{ T "largest" }}
+                {{- else if lt .blastzones.side 360 }}{{ T "smallest" }}
+                {{- else if gt .blastzones.side 480 }}{{ T "large" }}
+                {{- else if lt .blastzones.side 400 }}{{ T "small" }}
+                {{- else }}{{ T "average" }}
                 {{- end }})
               </td>
               <td>
                 {{ .blastzones.bottom }}
-                ({{ if gt .blastzones.bottom 430 }}Largest
-                {{- else if lt .blastzones.bottom 370 }}Smallest
-                {{- else if gt .blastzones.bottom 410 }}Large
-                {{- else if lt .blastzones.bottom 390 }}Small
-                {{- else }}Average
+                ({{ if gt .blastzones.bottom 430 }}{{ T "largest" }}
+                {{- else if lt .blastzones.bottom 370 }}{{ T "smallest" }}
+                {{- else if gt .blastzones.bottom 410 }}{{ T "large" }}
+                {{- else if lt .blastzones.bottom 390 }}{{ T "small" }}
+                {{- else }}{{ T "average" }}
                 {{- end }})
               </td>
               {{ with .platforms }}
@@ -256,17 +276,27 @@
     <section class="article-footer">
       {{ $u := site.Data.library }}
       <p>
-        Data curated by the <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.s7g.twitter }}">Sector 7-G</a> team:
-        SNC, Blair, Menace13, IGL, and Jade
+        {{ if eq site.Language.Lang "en" }}
+          Data curated by the <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.s7g.twitter }}">Sector 7-G</a> team:
+        {{ else if eq site.Language.Lang "es" }}
+          Datos curados por el equipo del <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.s7g.twitter }}">Sector 7-G</a>:
+        {{ end }}
+        SNC, Blair, Menace13, IGL, {{ T "and" }} Jade
         ‣<br>
-        Up to date as of <a target="_blank" rel="noopener noreferrer" href="{{ $u.patchNotes }}">Patch {{ $u.patch }}</a>
+        {{ T "up-to-date-as-of" }} <a target="_blank" rel="noopener noreferrer" href="{{ $u.patchNotes }}">Patch {{ $u.patch }}</a>
       </p>
       <p>
         {{ partial "partials/svg/code.svg" }}
-        For Developers:
-        <a target="_blank" rel="noopener noreferrer" href="{{ page.Permalink }}data.json">Raw data of this page</a> |
-        <a target="_blank" rel="noopener noreferrer" href="https://github.com/blair-c/rivals.academy/blob/main/data/rivals/{{ page.File.BaseFileName }}.yaml">YAML Source</a> |
-        <a href="/library/docs">API Docs</a>
+        {{ T "for-developers" }}
+        {{ $link := "" }}{{ $file := "" }}
+        {{ range .AllTranslations }}{{ if eq .Language.Lang "en" }}
+          {{ $link = .Permalink }}{{ $file = .File.BaseFileName }}
+        {{ end }}{{ end }}
+        <a target="_blank" rel="noopener noreferrer" href="{{ $link }}data.json">
+          {{ T "raw-data-of-this-page" }}</a> |
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/blair-c/rivals.academy/blob/main/data/rivals/{{ $file }}.yaml">
+          YAML {{ T "source" }}</a> |
+        <a href="/library/docs">API {{ T "docs" }}</a>
       </p>
     </section>
   </main>
