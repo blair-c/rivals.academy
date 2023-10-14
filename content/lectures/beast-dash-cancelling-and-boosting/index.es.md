@@ -7,6 +7,7 @@ authors:
 translators:
 - Doka
 tags:
+- principiante
 - intermedio
 - sylvanos
 ---

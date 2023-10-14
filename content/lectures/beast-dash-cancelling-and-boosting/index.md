@@ -4,6 +4,7 @@ description: Mixups and punishes with Sylvanos' Side Special Cancel
 authors:
 - Zoomander
 tags:
+- beginner
 - intermediate
 - sylvanos
 ---
