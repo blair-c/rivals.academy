@@ -4,8 +4,8 @@ description: Learn to zoom off ledges no matter the airspeed
 authors:
 - Frigomaniac
 tags:
-# - advanced
-# - ranno
+- advanced
+- ranno
 ---
 
 With the worst airspeed in the game, Ranno can struggle to close gaps in the air. However, we can remedy this with a technique called needle boosting. If timed correctly, inputting needles right as Ranno moves off a ledge will shoot you flying forwards with a burst of speed.
