@@ -1,7 +1,7 @@
 ---
 title: Stages
-url: biblioteca/escanarios
-description: Datos de escanarios, platformas, y blastzones
+url: biblioteca/escenarios
+description: Datos de escenarios, platformas, y blastzones
 layout: stages
 outputs:
 - html

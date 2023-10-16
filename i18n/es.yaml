@@ -20,13 +20,13 @@ intermediate: intermedio
 advanced: avanzado
 all-characters: todos-los-personajes
 
-up-to-date-as-of: Actualizado a partir del
+up-to-date-as-of: Actualizado hasta el
 for-developers: Para desarolladores
 raw-data-of-this-page: Datos sin procesar de esta página
 source: fuente
 docs: docs
 
-stages: escanarios
+stages: escenarios
 stage-comparisons: Comparición de escanarios
 stage-width: Ancho del escenario
 stage-width-desc: Ancho del suelo del escenario, medidas en píxeles
@@ -50,4 +50,4 @@ platform-positions: Posiciones de las plataformas
 platform-height: Altura de la plataform
 platform-width: Ancho de la plataform
 platform-position: Posición de la plataform
-camera-offset: Desplazamiento del cámera
+camera-offset: Desplazamiento de cámara
