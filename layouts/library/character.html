@@ -36,7 +36,10 @@
   <main id="main-content">
     <article class="padded-content library-article">
       {{ $c := index .Site.Data.rivals .File.BaseFileName }}
-      <h1>{{ $c.name }}</h1>
+      <div class="article-header">
+        <h1>{{ $c.name }}</h1>
+        <p>{{ $c.tagline }}</p>
+      </div>
 
       {{ .RenderString "### Effective Weight" }}
       <div class="library-table no-col-borders">
