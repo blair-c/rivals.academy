@@ -1,7 +1,7 @@
 <a class="article-preview" href="{{ .RelPermalink }}">
   <div>
     <p class="headline">{{ .Title }}</p>
-    <p class="tagline">{{ .Description }}.</p>
+    <p class="tagline">{{ .Description }}</p>
     <p class="tag-list">
       {{ range .Params.tags }}
         <span href="/tags/{{ . }}" class="tag tag-{{ . }}">
