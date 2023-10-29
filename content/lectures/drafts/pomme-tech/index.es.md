@@ -1,5 +1,4 @@
-﻿
----
+﻿---
 title: Pomme Tech
 description: Técnicas básicas y no tan básicas de Pomme
 authors:
@@ -145,3 +144,4 @@ Todos los golpes del UpSpecial de Pomme antes del último golpe tienen un angle 
 
 ![Up Special linking hits sending a Zetterburn towards Pomme](upb-angle.png)
 
+[AAA]
