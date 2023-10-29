@@ -4,6 +4,9 @@ title: Pomme Tech
 description: Técnicas básicas y no tan básicas de Pomme
 authors:
 - Kyb
+translators:
+- Kyb
+- Doka
 tags:
 - beginner
 - intermediate
