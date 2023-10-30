@@ -44,7 +44,7 @@ Pomme can initiate a float as long as her remaining float time is more than 0 fr
 * Letting go of jump while floating: instantly sets it to 0
 * Getting hit while floating: instantly sets it to 0
 * Airdodging while floating: instantly sets it to 0
-* Using Up Special into a note field: Float time is set to the minimum between 45 frames and current remaining float time, note field timer is set to 1 second, and reduces Down Special's cooldown to a maximum of 5 seconds
+* Using Up Special into a note field: Float time is set to the minimum between 45 frames and current remaining float time, note field timer is set to 1 second, and Down Special's cooldown is reduced to a maximum of 5 seconds
 * Float time is refreshed back to 2 seconds upon landing on stage or a platform
 
 Importantly, remaining float time does not get updated and just remains at however many frames were remaining when:
