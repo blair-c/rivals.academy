@@ -287,7 +287,7 @@
       </p>
       <p>
         {{ partial "partials/svg/code.svg" }}
-        {{ T "for-developers" }}
+        {{ T "for-developers" }}:
         {{ $link := "" }}{{ $file := "" }}
         {{ range .AllTranslations }}{{ if eq .Language.Lang "en" }}
           {{ $link = .Permalink }}{{ $file = .File.BaseFileName }}
