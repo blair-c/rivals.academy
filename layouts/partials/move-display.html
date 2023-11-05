@@ -296,7 +296,7 @@
                 {{ with .from }}{{ . }}-{{ end -}}
                 {{ with .to }}{{ . }}{{ end -}}
                 {{ if lt (add $index 1) $len }}, {{ end -}}
-              {{ end -}}
+              {{ end }}
               ]
             {{ else }}
               [
