@@ -15,7 +15,7 @@ roaa:
   time: 8:30 PM CEST
   freq: weekly
   link: https://euras.challonge.com/
-  description: Europe's take on the RAS format, with council-based rather than graduation-based bans. Joining the **[EU Rivals Discord](https://bit.ly/eurivals-discordapp)** is required to enter this event.
+  description: Europe's take on the RAS format, with council-based rather than graduation-based bans. Joining the [EU Rivals Discord](https://bit.ly/eurivals-discordapp) is required to enter this event.
 - name: Go to School
   day: Wednesdays
   time: 8:00 PM ET

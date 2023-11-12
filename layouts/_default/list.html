@@ -4,9 +4,19 @@
 
 {{ define "main" }}
   <main id="main-content">
-    <header class="site-section-header">
+    <header class="site-section-header lectures">
       <h1>{{ T "lectures" | title }}</h1>
-      <p>{{ .Description }}</p>
+      <p>
+        {{ if eq site.Language.Lang "en" }}
+          General and character gameplay guides — Take notes!
+        {{ else if eq site.Language.Lang "es" }}
+          Guías generales o de gameplay de los personajes — ¡Tomen nota! —
+          <a href="https://docs.google.com/document/d/1xayvjcBerGuP4SwZ20obhp8XF0I-GzKijV3TBKiY3Sg"
+            target="_blank" rel="noopener noreferrer">Terminología
+          </a>
+        {{ end }}
+      </p>
+      <div class="center">{{ partial "partials/language-picker.html" . }}</div>
     </header>
 
     <div class="centered page-list">

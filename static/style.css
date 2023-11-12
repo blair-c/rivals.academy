@@ -98,7 +98,9 @@ table a:hover {
   transition: all .05s ease-in;
 }
 
-article p a {
+article p a,
+.site-section-header p a,
+.bracket-desc a {
   font-weight: 600;
 }
 
@@ -688,6 +690,10 @@ article div:has(iframe) {
   background-color: var(--clr-highlighter);
 }
 
+.lectures {
+  padding-bottom: .5rem;
+}
+
 .site-section-header h1 {
   margin: .5rem 0;
 }
@@ -858,13 +864,14 @@ article div:has(iframe) {
 
 .language-picker {
   width: fit-content;
+  text-align: left;
 }
 
 #lang-btn {
   display: inline-flex;
   align-items: center;
   font-size: inherit;
-  background: none;
+  background: var(--clr-bg);
   color: var(--clr-text);
   border: 1px solid var(--clr-gray-1);
   border-radius: .125rem;
