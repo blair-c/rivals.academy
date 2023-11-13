@@ -1,5 +1,6 @@
 ﻿---
-title: Pomme Tech
+title: Técnicas de Pomme
+url: lecturas/tecnicas-de-pomme
 description: Técnicas básicas y no tan básicas de Pomme
 authors:
 - Kyb
