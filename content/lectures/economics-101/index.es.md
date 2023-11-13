@@ -1,7 +1,7 @@
 ---
 title: Economía 101
 url: lecturas/economia-101
-description: An intro to Shovel Knight's gems and relic shop
+description: Una introducción a las gemas y la tienda de reliquias de Shovel Knight
 authors:
 - SNC
 translators:
