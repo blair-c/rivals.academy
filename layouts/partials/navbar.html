@@ -21,15 +21,17 @@
     {{ end }}
     <li><a href="/tournaments">Tournaments</a></li>
     <li><a href="/about">About</a></li>
-    <li>
-      <a class="nav-discord" href="{{ site.Data.links.roaa.discord }}" target="_blank" rel="noopener noreferrer">
-        {{ partial "svg/socials/discord.svg" }}<span class="sr-only">Discord</span>
-      </a>
-    </li>
-    <li>
-      <button class="theme-switcher" onclick="toggleTheme()" aria-label="Theme Toggle">
-        {{ partial "partials/svg/theme-sun.svg" . }}{{ partial "partials/svg/theme-moon.svg" . }}
-      </button>
-    </li>
+    <div class="nav-buttons">
+      <li>
+        <a class="nav-discord" href="{{ site.Data.links.roaa.discord }}" target="_blank" rel="noopener noreferrer">
+          {{ partial "svg/socials/discord.svg" }}<span class="sr-only">Discord</span>
+        </a>
+      </li>
+      <li>
+        <button class="theme-switcher" onclick="toggleTheme()" aria-label="Theme Toggle">
+          {{ partial "partials/svg/theme-sun.svg" . }}{{ partial "partials/svg/theme-moon.svg" . }}
+        </button>
+      </li>
+    </div>
   </ul>
 </nav>
