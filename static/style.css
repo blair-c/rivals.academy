@@ -746,7 +746,6 @@ article div:has(iframe) {
   border: .25rem solid var(--clr-highlight);
   padding: 1rem;
   border-radius: 1rem;
-  transition: border .05s ease-out;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -754,13 +753,13 @@ article div:has(iframe) {
   .article-preview:focus-visible {
     border: .25rem solid var(--clr-gray-1);
     transform: scale(1.01);
-    transition: all .1s ease-in;
+    transition: transform .1s ease-in;
   }
 
   .article-preview:hover .headline
   .article-preview:focus-visible .headline {
     color: var(--clr-text-hc);
-    transition: all .1s ease-in;
+    transition: transform .1s ease-in;
   }
 }
 
