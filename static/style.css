@@ -988,7 +988,7 @@ article div:has(iframe) {
   }
 
   .library-select li a img {
-    border: 3px solid var(--clr-text-hc);
+    border: 3px solid black;
     border-bottom: 0px solid transparent;
   }
 }
