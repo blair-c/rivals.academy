@@ -1,4 +1,43 @@
+{{ define "header" }}{{ partial "navbar" }}{{ end }}
+
 {{ define "main" }}
 <main id="main-content">
+  <header class="home-hero">
+    <div>
+      <h1>Rivals Academy</h1>
+      <p>
+        The premier Rivals of Aether learning resource & community,
+        <span class="nowrap">since 2016.</span>
+      </p>
+      <a href="{{ site.Data.links.roaa.discord }}"
+        target="_blank" rel="noopenernoreferrer">
+        Join the Discord →
+      </a>
+    </div>
+    <img src="/img/mascot-orcane-sxolian.png">
+  </header>
+  <div class="home-services">
+    <ul class="centered">
+      <li><a href="/library">
+        <h3>Library</h3>
+        <p>
+          In-depth and updated frame data, knockback, and character + stage stats
+        </p>
+        <p class="cta">Check Out →</p>
+      </a></li>
+      <li><a href="/lectures">
+        <h3>Lectures</h3>
+        <p>General and character strategy guides available in English & Spanish</p>
+        <p class="cta">Audit →</p>
+      </a></li>
+      <li><a href="/tournaments">
+        <h3>Tournaments</h3>
+        <p>Free beginner, amateur, and open online brackets held weekly on Discord</p>
+        <p class="cta">View Schedule →</p>
+      </a></li>
+    </ul>
+  </div>
 </main>
 {{ end }}
+
+{{ define "footer" }}{{ partial "footer" }}{{ end }}
