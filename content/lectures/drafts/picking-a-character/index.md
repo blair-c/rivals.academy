@@ -117,7 +117,7 @@ Kragg is arguably the closest thing Rivals has to a traditional platform fighter
 
 {{< video kragg-heavyweight >}}
 
-The bruiser that he is, Kragg, of course, hits very hard and one good read can quickly turn the tide of a battle.
+The bruiser that he is, Kragg hits very hard, and one good read can quickly turn the tide of a battle.
 
 {{< video kragg-kill >}}
 
