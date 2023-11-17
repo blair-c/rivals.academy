@@ -1,0 +1,8 @@
+<div class="cons">
+    <div class="cons-title">{{ with .Inner }}{{ . }}{{ else }}Pros:{{ end }}</div>
+    <div class="cons-list"><ul>
+      {{ range .Params }}
+        <li>{{ . }}</li>
+      {{ end }}
+    </ul></div>
+  </div>

@@ -1,0 +1,8 @@
+<div class="pros">
+  <div class="pros-title">{{ with .Inner }}{{ . }}{{ else }}Pros:{{ end }}</div>
+  <div class="pros-list"><ul>
+    {{ range .Params }}
+      <li>{{ . }}</li>
+    {{ end }}
+  </ul></div>
+</div>
