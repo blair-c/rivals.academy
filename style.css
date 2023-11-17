@@ -23,6 +23,9 @@
   --clr-intermediate: #0b8749;
   --clr-advanced: #ba5c14;
 
+  --clr-pros: rgba(0, 158, 79, .025);
+  --clr-cons: rgba(222, 44, 44, .025);
+
   --clr-ui-1: #cacace;
   --clr-ui-2: #a5a0cb;
 
@@ -93,8 +96,13 @@ main {
   padding-bottom: var(--footer-margin);
 }
 
-p {
+p,
+article ul {
   line-height: 1.5;
+}
+
+article ul li:has(img) {
+  list-style: none;
 }
 
 footer a {
@@ -1428,6 +1436,30 @@ article div:has(iframe) {
 .stage-image:hover img:last-child,
 .stage-image:focus-visible img:last-child {
   opacity: 100;
+}
+
+.pros,
+.cons {
+  padding: 1.5rem;
+  padding-bottom: .625rem;
+  border-radius: .25rem;
+  margin-top: 1rem;
+}
+
+.pros-title,
+.cons-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.pros {
+  background-color: var(--clr-pros);
+  border: 1px solid var(--clr-abxy-green);
+}
+
+.cons {
+  background-color: var(--clr-cons);
+  border: 1px solid var(--clr-abxy-red);
 }
 
 .article-footer {
