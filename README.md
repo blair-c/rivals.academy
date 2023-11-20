@@ -1,10 +1,16 @@
-# rivals.academy
+[![rivals.academy homepage](readme/home.png)](https://rivals.academy)
 
 Official website and API of Rivals Academy. Built with [Hugo](https://gohugo.io/).
 
-## Contributing
+### Library
+![](readme/library.png)
+Visualizations + detailed stats for all characters, attacks, and stages in the game. Data exposed as open JSON API, generated alongside page HTML from edited YAML.
 
-### Development
+### Lectures
+![](readme/lectures.png)
+General + character strategy guide articles in English and Spanish. Writing of new guides facilitated through [Discord](https://rivals.academy/discord) with 20+ contributors so far.
+
+## Development
 
 [Install Hugo (Extended)](https://gohugo.io/installation/)  
 Fetch source code and start live preview on `localhost`:
