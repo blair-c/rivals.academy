@@ -1541,7 +1541,6 @@ upSpecial:
     hitpause:
       base: 10
       scaling: 75
-    asdiModifier: 0.5
     hitLockout: 6
     priority: 8
     killsProjectiles: true
@@ -1632,7 +1631,6 @@ upSpecial:
     hitpause:
       base: 10
       scaling: 75
-    asdiModifier: 0.5
     hitLockout: 6
     priority: 8
     killsProjectiles: true
