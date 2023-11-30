@@ -979,6 +979,11 @@ article div:has(iframe) {
   padding: 0 .25rem;
 }
 
+.rss:hover:not(:active) {
+  transform: scale(1.025);
+  transition: transform .05s ease-in;
+}
+
 .rss svg {
   fill: var(--clr-rss);
   width: 2.5rem;
