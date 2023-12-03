@@ -1,0 +1,28 @@
+{{ $s := .Site.Data.rivals.stages }}
+{{ $all := merge $s (dict "treetopLodgeD" $s.treetopLodge.doubles "forestFloorD" $s.forestFloor.doubles) }}
+{{ $all = sort $all }}
+{{ $stat := .Get 0 }}
+
+<div class="library-table stages"><table>
+  <thead><tr>
+    {{ range sort $all $stat }}
+    <th>
+      {{ $name := replace .name "Doubles" (T "doubles") }}
+      <a href="#{{ anchorize $name }}" title="{{ $name }}">
+      <img src="{{ .icon }}" alt="{{ $name }}">
+      </a>
+    </th>
+    {{ end }}
+  </tr></thead>
+  <tbody><tr>
+    {{ range sort $all $stat }}
+      {{ if eq $stat "stageWidth" }}<td>{{ .stageWidth }}</td>
+      {{ else if eq $stat "blastzones.top" }}<td>{{ .blastzones.top }}</td>
+      {{ else if eq $stat "blastzones.side" }}<td>{{ .blastzones.side }}</td>
+      {{ else if eq $stat "blastzones.bottom" }}<td>{{ .blastzones.bottom }}</td>
+      {{ end }}
+    {{ end }}
+  </tr></tbody>
+</table></div>
+
+<p class="move-notes">{{ .Get 1 }}</p>

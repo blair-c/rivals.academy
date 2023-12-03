@@ -166,7 +166,7 @@ article h1 {
   margin: 1rem 0;
 }
 
-article h2 {
+article h2:not(:first-of-type) {
   margin-top: 3rem;
   margin-bottom: 1.75rem;
 }

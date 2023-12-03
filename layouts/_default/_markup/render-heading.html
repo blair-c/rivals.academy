@@ -1,6 +1,4 @@
-{{ if eq .Level 1 }}
-  <h1 id="{{ .Anchor | safeURL }}" class="heading">{{ .Text | safeHTML }}</h1>
-{{ else }}
+{{ if or (eq .Level 2) (eq .Level 3) (eq .Level 4) }}
   <h{{ .Level }} id="{{ .Anchor | safeURL }}" class="heading">
     {{ .Text | safeHTML -}}
     <button class="heading-link"
@@ -11,4 +9,6 @@
     </button>
     <span class="copied">{{ T "copied" }}</span>
   </h{{ .Level }}>
+{{ else }}
+  <h{{ .Level }} id="{{ .Anchor | safeURL }}" class="heading">{{ .Text | safeHTML }}</h{{ .Level }}>
 {{ end }}

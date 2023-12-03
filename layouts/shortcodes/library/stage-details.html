@@ -1,0 +1,89 @@
+{{ $s := index .Site.Data.rivals.stages (.Get 0) }}
+{{ with .Get 1 }}{{ $s = index $s . }}{{ end }}
+
+<div class="library-table"><table>
+  <thead><tr>
+    <th>{{ T "stage-width" }}</th>
+    {{ with $s.stageDepth }}<th>{{ T "stage-depth" }}</th>{{ end }}
+    <th>{{ T "top-blastzone" }}</th>
+    <th>{{ T "side-blastzones" }}</th>
+    <th>{{ T "bottom-blastzone" }}</th>
+    {{ with $s.platforms }}
+    {{ if gt (len .) 1 }}
+        <th>{{ T "platform-heights" }}</th>
+        <th>{{ T "platform-widths" }}</th>
+        <th>{{ T "platform-positions" }}</th>
+    {{ else }}
+        <th>{{ T "platform-height" }}</th>
+        <th>{{ T "platform-width" }}</th>
+        <th>{{ T "platform-position" }}</th>
+    {{ end }}
+    {{ end }}
+    <th>{{ T "camera-offset" }}</th>
+  </tr></thead>
+  <tbody><tr>
+    <td>
+    {{ $s.stageWidth }}
+    ({{ if gt $s.stageWidth 890 }}{{ T "largest" }}
+    {{- else if lt $s.stageWidth 520 }}{{ T "smallest" }}
+    {{- else if gt $s.stageWidth 760 }}{{ T "large" }}
+    {{- else if lt $s.stageWidth 580 }}{{ T "small" }}
+    {{- else }}{{ T "average" }}
+    {{- end }})
+    </td>
+    {{ with $s.stageDepth }}<td>{{ . }} ({{ T "unique" }})</td>{{ end }}
+    <td>
+
+    {{ $s.blastzones.top }}
+    ({{ if gt $s.blastzones.top 620 }}{{ T "largest" }}
+    {{- else if lt $s.blastzones.top 560 }}{{ T "smallest" }}
+    {{- else if gt $s.blastzones.top 610 }}{{ T "large" }}
+    {{- else if lt $s.blastzones.top 575 }}{{ T "small" }}
+    {{- else }}{{ T "average" }}
+    {{- end }})
+    </td>
+    <td>
+    {{ $s.blastzones.side }}
+    ({{ if gt $s.blastzones.side 530 }}{{ T "largest" }}
+    {{- else if lt $s.blastzones.side 360 }}{{ T "smallest" }}
+    {{- else if gt $s.blastzones.side 480 }}{{ T "large" }}
+    {{- else if lt $s.blastzones.side 400 }}{{ T "small" }}
+    {{- else }}{{ T "average" }}
+    {{- end }})
+    </td>
+    <td>
+    {{ $s.blastzones.bottom }}
+    ({{ if gt $s.blastzones.bottom 430 }}{{ T "largest" }}
+    {{- else if lt $s.blastzones.bottom 370 }}{{ T "smallest" }}
+    {{- else if gt $s.blastzones.bottom 410 }}{{ T "large" }}
+    {{- else if lt $s.blastzones.bottom 390 }}{{ T "small" }}
+    {{- else }}{{ T "average" }}
+    {{- end }})
+    </td>
+
+    {{ with $s.platforms }}
+      {{ $h := slice }}
+      {{ range . }}{{ $h = $h | append .height }}{{ end }}
+      <td>{{ delimit $h " / " }}</td>{{ $h = slice }}
+      {{ $w := slice }}
+      {{ range . }}{{ $w = $w | append .width }}{{ end }}
+      <td>{{ delimit $w " / " }}</td>{{ $w = slice }}
+      {{ $p := slice }}
+      {{ range . }}
+        {{ if reflect.IsMap .pos }}
+        {{ $p = $p | append (print .pos.min "-" .pos.max) }}
+        {{ else }}
+        {{ $p = $p | append .pos }}
+        {{ end }}
+      {{ end }}
+      <td>{{ delimit $p ", " }}</td>{{ $p = slice }}
+    {{ end }}
+
+    <td>{{ $s.cameraOffset }}</td>{{ with $s.movingCamera }}<td>True</td>{{ end }}
+  </tr></tbody>
+</table></div>
+
+<div class="stage-image" tabindex="0">
+  <img src="{{ index $s.image.baseRes 0 }}" alt="{{ $s.name }}">
+  <img src="{{ index $s.image.baseRes 1 }}" alt="{{ $s.name }}">
+</div>

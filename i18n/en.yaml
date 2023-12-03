@@ -26,17 +26,11 @@ raw-data-of-this-page: Raw data of this page
 source: Source
 docs: Docs
 
-stages: stages
-stage-comparisons: Stage Comparisons
+doubles: Doubles
 stage-width: Stage Width
-stage-width-desc: Width of the main stage ground, measured in pixels
 top-blastzone: Top Blastzone
-top-blastzone-desc: Distance from ground to top blastzone, measured in pixels
 side-blastzones: Side Blastzones
-side-blastzones-desc: Distance from ledge to side blastzone, measured in pixels
 bottom-blastzone: Bottom Blastzone
-bottom-blastzone-desc: Distance from ledge to bottom blastzone, measured in pixels
-stage-details: Stage Details
 smallest: Smallest
 small: Small
 average: Average

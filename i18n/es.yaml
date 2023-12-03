@@ -26,17 +26,11 @@ raw-data-of-this-page: Datos sin procesar de esta página
 source: fuente
 docs: docs
 
-stages: escenarios
-stage-comparisons: Comparición de escanarios
+doubles: Dobles
 stage-width: Ancho del escenario
-stage-width-desc: Ancho del suelo del escenario, medidas en píxeles
 top-blastzone: Blastzone superior
-top-blastzone-desc: Distancia del suelo a la blastzone superior, medidas en píxeles
 side-blastzones: Blastzones laterales
-side-blastzones-desc: Distancia del borde del escenario a la blastzone lateral, medidas en píxeles
 bottom-blastzone: Blastzone inferior
-bottom-blastzone-desc: Distancia del borde del escenario a la blastzone inferior, medidas en píxeles
-stage-details: Detalles de escanarios
 smallest: Mas pequeño
 small: Pequeño
 average: Promedio

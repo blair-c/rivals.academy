@@ -1,10 +1,34 @@
 {{ define "header" }}
   {{ partial "navbar" }}
 {{ end }}
+
 {{ define "main" }}
 <div class="center"><div class="cols-sidebar-content">
   <div class="sidebar">
-    <img class="sidebar-thumbnail" aria-hidden="true" src="thumb.png">
+    {{ if eq page.Section "library" }}
+      <nav><ul class="library-grid">
+      {{ range (slice "zetterburn" "orcane" "kragg" "wrastor" 
+                      "forsburn" "etalus" "maypul" "absa"
+                      "clairen" "ranno" "sylvanos" "elliana"
+                      "mollo" "hodan" "olympia" "pomme"
+                      "ori" "shovel-knight") }}
+        <li><a href="/library/{{ . }}" title="{{ humanize . | title }}">
+          <div>
+            <img src="/img/icons/{{ . }}.png" aria-hidden="true">
+            <span class="sr-only">{{ humanize . | title }}</span>
+          </div>
+        </a></li>
+      {{ end }}
+      <li><a href="/library/stages" title="Stages">
+        <div>
+          <img src="/img/icons/stages.png" aria-hidden="true">
+          <span class="sr-only">Stages</span>
+        </div>
+      </a></li>
+      <li><div></div></li>
+      </ul></nav>
+    {{ else }}<img class="sidebar-thumbnail" aria-hidden="true" src="thumb.png">{{ end }}
+
     <div class="toc">
       {{ .TableOfContents }}
       <a href="#" class="to-top" title="{{ T "jump-to-top" }}">
@@ -12,6 +36,7 @@
       </a>
     </div>
   </div>
+
   <main id="main-content">
     <article class="padded-content">
       <div class="article-header">
@@ -45,17 +70,42 @@
       </div>
       {{ .Content }}
     </article>
+
     <div class="article-footer-divider"></div>
     <section class="article-footer">
+      {{ if eq page.Section "library" }}
+      <p>
+        {{ if eq site.Language.Lang "en" }}
+          Data curated by the <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.s7g.twitter }}">Sector 7-G</a> team:
+        {{ else if eq site.Language.Lang "es" }}
+          Datos recopilados por el equipo del <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.s7g.twitter }}">Sector 7-G</a>:
+        {{ end }}
+        SNC, Blair, Menace13, IGL, {{ T "and" }} Jade
+        ‣<br>
+        {{ $u := site.Data.library }}{{ T "up-to-date-as-of" }}
+        <a target="_blank" rel="noopener noreferrer" href="{{ $u.patchNotes }}">Patch {{ $u.patch }}</a>
+      </p>
+      <p>
+        {{ partial "partials/svg/code.svg" }}
+        {{ T "for-developers" }}:
+        {{ $link := "" }}{{ $file := "" }}
+        {{ range .AllTranslations }}{{ if eq .Language.Lang "en" }}
+          {{ $link = .Permalink }}{{ $file = .File.BaseFileName }}
+        {{ end }}{{ end }}
+        <a target="_blank" rel="noopener noreferrer" href="{{ $link }}data.json">
+          {{ T "raw-data-of-this-page" }}</a> |
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/blair-c/rivals.academy/blob/main/data/rivals/{{ $file }}.yaml">
+          YAML {{ T "source" }}</a> |
+        <a href="/library/docs">API {{ T "docs" }}</a>
+      </p>
+      {{ else }}
       <p>
         {{ if eq site.Language.Lang "en" }}
           {{ partial "partials/svg/chat.svg" }}Questions?
           <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.roaa.discord }}">
             Ask on Discord!
           </a>
-          {{ if not (eq page.Section "library") }}
-            <br><a href="/lectures/rss.xml">{{ partial "partials/svg/rss.svg" }}RSS feed</a>
-          {{ end }}
+          <br><a href="/lectures/rss.xml">{{ partial "partials/svg/rss.svg" }}RSS feed</a>
         {{ else if eq site.Language.Lang "es" }}
           {{ partial "partials/svg/chat.svg" }}¿Tienes preguntas?
           <a target="_blank" rel="noopener noreferrer" href="{{ site.Data.links.es.discord }}">
@@ -64,10 +114,12 @@
           <br><a href="/es/lecturas/rss.xml">{{ partial "partials/svg/rss.svg" }}RSS feed</a>
         {{ end }}
       </p>
+      {{ end }}
     </section>
   </main>
 </div></div>
 {{ end }}
+
 {{ define "footer" }}
   {{ partial "footer" }}
 {{ end }}
