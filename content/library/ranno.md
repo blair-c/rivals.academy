@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "ranno" >}}
 ### Effective Weight
 {{< library/character-stats "ranno" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "ranno" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "ranno" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "ranno" >}}
 
 ## Normal Attacks
 ### Jab

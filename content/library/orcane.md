@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "orcane" >}}
 ### Effective Weight
 {{< library/character-stats "orcane" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "orcane" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "orcane" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "orcane" >}}
 
 ## Normal Attacks
 ### Jab

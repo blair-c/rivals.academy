@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "etalus" >}}
 ### Effective Weight
 {{< library/character-stats "etalus" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "etalus" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "etalus" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "etalus" >}}
 
 ## Normal Attacks
 ### Jab

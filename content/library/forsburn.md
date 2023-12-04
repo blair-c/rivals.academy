@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "forsburn" >}}
 ### Effective Weight
 {{< library/character-stats "forsburn" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "forsburn" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "forsburn" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "forsburn" >}}
 
 ## Normal Attacks
 ### Jab

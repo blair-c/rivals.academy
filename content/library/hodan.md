@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "hodan" >}}
 ### Effective Weight
 {{< library/character-stats "hodan" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "hodan" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "hodan" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "hodan" >}}
 
 ## Normal Attacks
 ### Jab

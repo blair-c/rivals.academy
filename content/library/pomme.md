@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "pomme" >}}
 ### Effective Weight
 {{< library/character-stats "pomme" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "pomme" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "pomme" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "pomme" >}}
 
 ## Normal Attacks
 ### Jab

@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "wrastor" >}}
 ### Effective Weight
 {{< library/character-stats "wrastor" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "wrastor" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "wrastor" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "wrastor" >}}
 
 ## Normal Attacks
 ### Jab

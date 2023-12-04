@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "clairen" >}}
 ### Effective Weight
 {{< library/character-stats "clairen" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "clairen" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "clairen" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "clairen" >}}
 
 ## Normal Attacks
 ### Jab

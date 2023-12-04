@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "shovel-knight" >}}
 ### Effective Weight
 {{< library/character-stats "shovel-knight" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "shovel-knight" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "shovel-knight" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "shovel-knight" >}}
 
 ## Normal Attacks
 ### Jab

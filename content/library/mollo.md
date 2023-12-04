@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "mollo" >}}
 ### Effective Weight
 {{< library/character-stats "mollo" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "mollo" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "mollo" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "mollo" >}}
 
 ## Normal Attacks
 ### Jab

@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "maypul" >}}
 ### Effective Weight
 {{< library/character-stats "maypul" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "maypul" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "maypul" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "maypul" >}}
 
 ## Normal Attacks
 ### Jab

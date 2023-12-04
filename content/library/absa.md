@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "absa" >}}
 ### Effective Weight
 {{< library/character-stats "absa" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "absa" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "absa" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "absa" >}}
 
 ## Normal Attacks
 ### Jab

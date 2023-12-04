@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "sylvanos" >}}
 ### Effective Weight
 {{< library/character-stats "sylvanos" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "sylvanos" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "sylvanos" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "sylvanos" >}}
 
 ## Normal Attacks
 ### Jab

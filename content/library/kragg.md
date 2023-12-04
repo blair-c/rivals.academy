@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "kragg" >}}
 ### Effective Weight
 {{< library/character-stats "kragg" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "kragg" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "kragg" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "kragg" >}}
 
 ## Normal Attacks
 ### Jab

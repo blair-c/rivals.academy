@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "ori" >}}
 ### Effective Weight
 {{< library/character-stats "ori" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "ori" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "ori" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "ori" >}}
 
 ## Normal Attacks
 ### Jab

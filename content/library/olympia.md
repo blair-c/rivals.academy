@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "olympia" >}}
 ### Effective Weight
 {{< library/character-stats "olympia" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "olympia" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "olympia" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "olympia" >}}
 
 ## Normal Attacks
 ### Jab

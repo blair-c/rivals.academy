@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "elliana" >}}
 ### Effective Weight
 {{< library/character-stats "elliana" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "elliana" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "elliana" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "elliana" >}}
 
 ## Normal Attacks
 ### Jab

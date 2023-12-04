@@ -9,14 +9,14 @@ outputs:
 ---
 
 ## Character Properties
+### Hurtbox
+{{< library/hurtbox "zetterburn" >}}
 ### Effective Weight
 {{< library/character-stats "zetterburn" "effective-weight" >}}
 ### Grounded Movement
 {{< library/character-stats "zetterburn" "grounded-movement" >}}
 ### Aerial Movement
 {{< library/character-stats "zetterburn" "aerial-movement" >}}
-### Hurtbox
-{{< library/hurtbox "zetterburn" >}}
 
 ## Normal Attacks
 ### Jab
