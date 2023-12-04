@@ -4,7 +4,7 @@ url: lecturas/nairbote
 description: Un tutorial para jugar basquetból con Orcane
 authors:
 - Quote_a
-- blair
+- Blair
 translators:
 - Doka
 tags:

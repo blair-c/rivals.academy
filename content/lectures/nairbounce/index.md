@@ -3,7 +3,7 @@ title: Nairbounce
 description: An intro to playing basketball as Orcane
 authors:
 - Quote_a
-- blair
+- Blair
 tags:
 - beginner
 - orcane
