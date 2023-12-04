@@ -33,7 +33,8 @@
 </div>
 {{ with $c.iceArmor }}
   <p class="move-notes">
-    <a href="#neutral-special">Ice Armor</a> increases Max Fall Speed to <code>{{ .maxFallSpeed }}</code>.
+    <a href="#neutral-special">Ice Armor</a> increases Max Fall Speed to <code>{{ .maxFallSpeed }}</code>
+    and applies a multiplier of <code>{{ .knockback.multiplier }}</code>× to the final value of the knockback formula.
   </p>
 {{ end }}
 
