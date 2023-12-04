@@ -2,55 +2,56 @@ name: Mollo
 tagline: The Smoldering Rage
 element: fire
 
-# Effective Weight
-knockbackAdjustment: 1.00
-gravityAccel: 0.50
-hitstunGravityAccel: 0.50
-airFriction: 0.02
-airAccel: 0.30
-maxFallSpeed: 10
-fastfallSpeed: 14
-jumpsquat: 5
-landTime: 4
-# Ground Movement
-groundFriction: 0.50
-initialDash:
-  speed: 7.25
-  time: 14
-run:
-  speed: 6.50
-  stop:
-    time: 4
-  turn:
-    time: 8
-    accel: 2.00
-walk:
-  speed: 3.00
-  accel: 0.20
-  turn:
-    time: 6
-waveland:
-  time: 9
-  friction: 0.15
-# Aerial Movement
-maxAirSpeed: 4.0
-maxJumpHorizontalSpeed: 5
-fullhop:
-  speed: 10.00
-shorthop:
-  speed: 7.0
-doubleJump:
-  amount: 1
-  speed: 9.50
-tripleJump:
-  speed: 7.50
-walljump:
-  speed:
-    vertical: 8
-    horizontal: 6
-pratfall:
-  accel: 1.00
-  landTime: 10
+stats:
+  # Effective Weight
+  knockbackAdjustment: 1.00
+  gravityAccel: 0.50
+  hitstunGravityAccel: 0.50
+  airFriction: 0.02
+  airAccel: 0.30
+  maxFallSpeed: 10
+  fastfallSpeed: 14
+  jumpsquat: 5
+  landTime: 4
+  # Ground Movement
+  groundFriction: 0.50
+  initialDash:
+    speed: 7.25
+    time: 14
+  run:
+    speed: 6.50
+    stop:
+      time: 4
+    turn:
+      time: 8
+      accel: 2.00
+  walk:
+    speed: 3.00
+    accel: 0.20
+    turn:
+      time: 6
+  waveland:
+    time: 9
+    friction: 0.15
+  # Aerial Movement
+  maxAirSpeed: 4.0
+  maxJumpHorizontalSpeed: 5
+  fullhop:
+    speed: 10.00
+  shorthop:
+    speed: 7.0
+  doubleJump:
+    amount: 1
+    speed: 9.50
+  tripleJump:
+    speed: 7.50
+  walljump:
+    speed:
+      vertical: 8
+      horizontal: 6
+  pratfall:
+    accel: 1.00
+    landTime: 10
 
 hurtbox:
   idle:

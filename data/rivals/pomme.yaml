@@ -2,58 +2,59 @@ name: Pomme
 tagline: The Superstar Songstress
 element: air
 
-# Effective Weight
-knockbackAdjustment: 1.10
-gravityAccel: 0.35
-hitstunGravityAccel: 0.45
-airFriction: 0.04
-airAccel: 0.30
-maxFallSpeed: 8
-fastfallSpeed: 12
-jumpsquat: 5
-landTime: 4
-# Ground Movement
-groundFriction: 0.50
-initialDash:
-  speed: 7.00
-  time: 14
-run:
-  speed: 6.25
-  stop:
-    time: 4
-  turn:
-    time: 10
-    accel: 1.50
-walk:
-  speed: 3.25
-  accel: 0.20
-  turn:
+stats:
+  # Effective Weight
+  knockbackAdjustment: 1.10
+  gravityAccel: 0.35
+  hitstunGravityAccel: 0.45
+  airFriction: 0.04
+  airAccel: 0.30
+  maxFallSpeed: 8
+  fastfallSpeed: 12
+  jumpsquat: 5
+  landTime: 4
+  # Ground Movement
+  groundFriction: 0.50
+  initialDash:
+    speed: 7.00
+    time: 14
+  run:
+    speed: 6.25
+    stop:
+      time: 4
+    turn:
+      time: 10
+      accel: 1.50
+  walk:
+    speed: 3.25
+    accel: 0.20
+    turn:
+      time: 6
+  waveland:
     time: 6
-waveland:
-  time: 6
-  friction: 0.00
-# Aerial Movement
-maxAirSpeed: 5.5
-maxJumpHorizontalSpeed: 8
-fullhop:
-  speed: 9.00
-shorthop:
-  speed: 4.5
-doubleJump:
-  amount: 1
-  speed: 8.00
-walljump:
-  speed:
-    vertical: 8
-    horizontal: 5
-pratfall:
-  accel: 0.85
-  landTime: 16
+    friction: 0.00
+  # Aerial Movement
+  maxAirSpeed: 5.5
+  maxJumpHorizontalSpeed: 8
+  fullhop:
+    speed: 9.00
+  shorthop:
+    speed: 4.5
+  doubleJump:
+    amount: 1
+    speed: 8.00
+  walljump:
+    speed:
+      vertical: 8
+      horizontal: 5
+  pratfall:
+    accel: 0.85
+    landTime: 16
+
 # Character Mechanics
 float:
   maxTime: 150
   notes:
-  - Float time limit is locked to a single float usage per airtime, unless Pomme is hit within the first 6 frames of her float, with Pomme losing all remaining float time upon being hit at any other time.
   - If Pomme is parried while in float it is instantly cancelled as she enters parry stun.
 
 hurtbox:

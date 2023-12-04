@@ -2,53 +2,54 @@ name: Olympia
 tagline: The Amethyst Fist
 element: earth
 
-# Effective Weight
-knockbackAdjustment: 0.98
-gravityAccel: 0.65
-hitstunGravityAccel: 0.51
-airFriction: 0.05
-airAccel: 0.30
-maxFallSpeed: 11
-fastfallSpeed: 16
-jumpsquat: 5
-landTime: 6
-# Ground Movement
-groundFriction: 0.35
-initialDash:
-  speed: 6.75
-  time: 8
-run:
-  speed: 5.30
-  stop:
+stats:
+  # Effective Weight
+  knockbackAdjustment: 0.98
+  gravityAccel: 0.65
+  hitstunGravityAccel: 0.51
+  airFriction: 0.05
+  airAccel: 0.30
+  maxFallSpeed: 11
+  fastfallSpeed: 16
+  jumpsquat: 5
+  landTime: 6
+  # Ground Movement
+  groundFriction: 0.35
+  initialDash:
+    speed: 6.75
     time: 8
-  turn:
-    time: 9
-    accel: 1.00
-walk:
-  speed: 2.25
-  accel: 0.30
-  turn:
-    time: 6
-waveland:
-  time: 8
-  friction: 0.07
-# Aerial Movement
-maxAirSpeed: 5.0
-maxJumpHorizontalSpeed: 7
-fullhop:
-  speed: 12.45
-shorthop:
-  speed: 7.0
-doubleJump:
-  amount: 1
-  speed: 10.75
-walljump:
-  speed:
-    vertical: 8
-    horizontal: 7
-pratfall:
-  accel: 0.85
-  landTime: 11
+  run:
+    speed: 5.30
+    stop:
+      time: 8
+    turn:
+      time: 9
+      accel: 1.00
+  walk:
+    speed: 2.25
+    accel: 0.30
+    turn:
+      time: 6
+  waveland:
+    time: 8
+    friction: 0.07
+  # Aerial Movement
+  maxAirSpeed: 5.0
+  maxJumpHorizontalSpeed: 7
+  fullhop:
+    speed: 12.45
+  shorthop:
+    speed: 7.0
+  doubleJump:
+    amount: 1
+    speed: 10.75
+  walljump:
+    speed:
+      vertical: 8
+      horizontal: 7
+  pratfall:
+    accel: 0.85
+    landTime: 11
 
 hurtbox:
   idle:

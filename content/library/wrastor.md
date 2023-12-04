@@ -1,34 +1,62 @@
 ---
 title: Wrastor
-description: Wrastor frame data and hitbox info
-layout: character
+description: The Wind's Fury • Frame data and knockback info
+authors:
+- Sector 7-G
 outputs:
 - html
 - data
 ---
 
-## Effective Weight
-## Grounded Movement
-## Aerial Movement
-## Hurtbox
+## Character Properties
+### Effective Weight
+{{< library/character-stats "wrastor" "effective-weight" >}}
+### Grounded Movement
+{{< library/character-stats "wrastor" "grounded-movement" >}}
+### Aerial Movement
+{{< library/character-stats "wrastor" "aerial-movement" >}}
+### Hurtbox
+{{< library/hurtbox "wrastor" >}}
 
-## Jab
-## Dash Attack
-## Forward Tilt
-## Up Tilt
-## Down Tilt
+## Normal Attacks
+### Jab
+{{< library/attack "wrastor" "jab" >}}
+### Dash Attack
+{{< library/attack "wrastor" "dash-attack" >}}
+### Forward Tilt
+{{< library/attack "wrastor" "forward-tilt" >}}
+### Up Tilt
+{{< library/attack "wrastor" "up-tilt" >}}
+### Down Tilt
+{{< library/attack "wrastor" "down-tilt" >}}
 
-## Neutral Air
-## Forward Air
-## Back Air
-## Up Air
-## Down Air
+## Aerial Attacks
+### Neutral Air
+{{< library/attack "wrastor" "neutral-air" >}}
+### Forward Air
+{{< library/attack "wrastor" "forward-air" >}}
+### Back Air
+{{< library/attack "wrastor" "back-air" >}}
+### Up Air
+{{< library/attack "wrastor" "up-air" >}}
+### Down Air
+{{< library/attack "wrastor" "down-air" >}}
 
-## Forward Strong
-## Up Strong
-## Down Strong
+## Strong Attacks
+### Forward Strong
+{{< library/attack "wrastor" "forward-strong" >}}
+### Up Strong
+{{< library/attack "wrastor" "up-strong" >}}
+### Down Strong
+{{< library/attack "wrastor" "down-strong" >}}
 
-## Neutral Special
-## Side Special
-## Up Special
-## Down Special
+## Special Attacks
+### Neutral Special
+{{< library/attack "wrastor" "neutral-special" >}}
+### Side Special
+{{< library/attack "wrastor" "side-special" >}}
+### Up Special
+{{< library/attack "wrastor" "up-special" >}}
+### Down Special
+{{< library/attack "wrastor" "down-special" >}}
+

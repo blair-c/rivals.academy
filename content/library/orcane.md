@@ -1,34 +1,61 @@
 ---
 title: Orcane
-description: Orcane frame data and hitbox info
-layout: character
+description: The Puddle Jumper • Frame data and knockback info
+authors:
+- Sector 7-G
 outputs:
 - html
 - data
 ---
 
-## Effective Weight
-## Grounded Movement
-## Aerial Movement
-## Hurtbox
+## Character Properties
+### Effective Weight
+{{< library/character-stats "orcane" "effective-weight" >}}
+### Grounded Movement
+{{< library/character-stats "orcane" "grounded-movement" >}}
+### Aerial Movement
+{{< library/character-stats "orcane" "aerial-movement" >}}
+### Hurtbox
+{{< library/hurtbox "orcane" >}}
 
-## Jab
-## Dash Attack
-## Forward Tilt
-## Up Tilt
-## Down Tilt
+## Normal Attacks
+### Jab
+{{< library/attack "orcane" "jab" >}}
+### Dash Attack
+{{< library/attack "orcane" "dash-attack" >}}
+### Forward Tilt
+{{< library/attack "orcane" "forward-tilt" >}}
+### Up Tilt
+{{< library/attack "orcane" "up-tilt" >}}
+### Down Tilt
+{{< library/attack "orcane" "down-tilt" >}}
 
-## Neutral Air
-## Forward Air
-## Back Air
-## Up Air
-## Down Air
+## Aerial Attacks
+### Neutral Air
+{{< library/attack "orcane" "neutral-air" >}}
+### Forward Air
+{{< library/attack "orcane" "forward-air" >}}
+### Back Air
+{{< library/attack "orcane" "back-air" >}}
+### Up Air
+{{< library/attack "orcane" "up-air" >}}
+### Down Air
+{{< library/attack "orcane" "down-air" >}}
 
-## Forward Strong
-## Up Strong
-## Down Strong
+## Strong Attacks
+### Forward Strong
+{{< library/attack "orcane" "forward-strong" >}}
+### Up Strong
+{{< library/attack "orcane" "up-strong" >}}
+### Down Strong
+{{< library/attack "orcane" "down-strong" >}}
 
-## Neutral Special
-## Side Special
-## Up Special
-## Down Special
+## Special Attacks
+### Neutral Special
+{{< library/attack "orcane" "neutral-special" >}}
+### Side Special
+{{< library/attack "orcane" "side-special" >}}
+### Up Special
+{{< library/attack "orcane" "up-special" >}}
+### Down Special
+{{< library/attack "orcane" "down-special" >}}

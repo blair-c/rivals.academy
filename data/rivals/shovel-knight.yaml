@@ -2,53 +2,54 @@ name: Shovel Knight
 tagline: The Shovel of Hope
 element: guest
 
-# Effective Weight
-knockbackAdjustment: 0.95
-gravityAccel: 0.50
-hitstunGravityAccel: 0.50
-airFriction: 0.04
-airAccel: 0.30
-maxFallSpeed: 10
-fastfallSpeed: 13
-jumpsquat: 5
-landTime: 4
-# Ground Movement
-groundFriction: 0.60
-initialDash:
-  speed: 6.25
-  time: 10
-run:
-  speed: 6.00
-  stop:
-    time: 6
-  turn:
-    time: 18
-    accel: 0.50
-walk:
-  speed: 3.25
-  accel: 0.20
-  turn:
-    time: 6
-waveland:
-  time: 8
-  friction: 0.13
-# Aerial Movement
-maxAirSpeed: 6.0
-maxJumpHorizontalSpeed: 7
-fullhop:
-  speed: 10.99
-shorthop:
-  speed: 6.0
-doubleJump:
-  amount: 1
-  speed: 10.00
-walljump:
-  speed:
-    vertical: 9
-    horizontal: 5
-pratfall:
-  accel: 1.00
-  landTime: 20
+stats:
+  # Effective Weight
+  knockbackAdjustment: 0.95
+  gravityAccel: 0.50
+  hitstunGravityAccel: 0.50
+  airFriction: 0.04
+  airAccel: 0.30
+  maxFallSpeed: 10
+  fastfallSpeed: 13
+  jumpsquat: 5
+  landTime: 4
+  # Ground Movement
+  groundFriction: 0.60
+  initialDash:
+    speed: 6.25
+    time: 10
+  run:
+    speed: 6.00
+    stop:
+      time: 6
+    turn:
+      time: 18
+      accel: 0.50
+  walk:
+    speed: 3.25
+    accel: 0.20
+    turn:
+      time: 6
+  waveland:
+    time: 8
+    friction: 0.13
+  # Aerial Movement
+  maxAirSpeed: 6.0
+  maxJumpHorizontalSpeed: 7
+  fullhop:
+    speed: 10.99
+  shorthop:
+    speed: 6.0
+  doubleJump:
+    amount: 1
+    speed: 10.00
+  walljump:
+    speed:
+      vertical: 9
+      horizontal: 5
+  pratfall:
+    accel: 1.00
+    landTime: 20
 
 hurtbox:
   idle:

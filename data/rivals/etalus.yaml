@@ -2,53 +2,76 @@ name: Etalus
 tagline: The Glacier's Might
 element: water
 
-# Effective Weight
-knockbackAdjustment: 0.90
-gravityAccel: 0.55
-hitstunGravityAccel: 0.50
-airFriction: 0.04
-airAccel: 0.30
-maxFallSpeed: 6
-fastfallSpeed: 15
-jumpsquat: 5
-landTime: 6
-# Ground Movement
-groundFriction: 0.30
-initialDash:
-  speed: 5.00
-  time: 14
-run:
-  speed: 5.00
-  stop:
-    time: 6
-  turn:
-    time: 14
-    accel: 0.25
-walk:
-  speed: 3.00
-  accel: 0.20
-  turn:
-    time: 6
-waveland:
-  time: 8
-  friction: 0.0
-# Aerial Movement
-maxAirSpeed: 4.0
-maxJumpHorizontalSpeed: 6
-fullhop:
-  speed: 11.00
-shorthop:
-  speed: 7.4
-doubleJump:
-  amount: 1
-  speed: 11.50
-walljump:
-  speed:
-    vertical: 8
-    horizontal: 7
-pratfall:
-  accel: 0.85
+stats:
+  # Effective Weight
+  knockbackAdjustment: 0.90
+  gravityAccel: 0.55
+  hitstunGravityAccel: 0.50
+  airFriction: 0.04
+  airAccel: 0.30
+  maxFallSpeed: 6
+  fastfallSpeed: 15
+  jumpsquat: 5
   landTime: 6
+  # Ground Movement
+  groundFriction: 0.30
+  initialDash:
+    speed: 5.00
+    time: 14
+  run:
+    speed: 5.00
+    stop:
+      time: 6
+    turn:
+      time: 14
+      accel: 0.25
+  walk:
+    speed: 3.00
+    accel: 0.20
+    turn:
+      time: 6
+  waveland:
+    time: 8
+    friction: 0.0
+  # Aerial Movement
+  maxAirSpeed: 4.0
+  maxJumpHorizontalSpeed: 6
+  fullhop:
+    speed: 11.00
+  shorthop:
+    speed: 7.4
+  doubleJump:
+    amount: 1
+    speed: 11.50
+  walljump:
+    speed:
+      vertical: 8
+      horizontal: 7
+  pratfall:
+    accel: 0.85
+    landTime: 6
+  # Ice
+  onIce:
+    groundFriction: 0.10
+    initialDash:
+      speed: 5.50
+    run:
+      speed: 5.50
+      turn:
+        time: 22
+        accel: 0.08
+    waveland:
+      time: 12
+  iceArmor:
+    maxFallSpeed: 11
+    fullhop:
+      speed: 11.95
+    shorthop:
+      speed: 8.1
+    doubleJump:
+      speed: 12.50
+    notes:
+    - Ice armor applies a multilpier of 0.7 to the final value of the knockback formula
 
 hurtbox:
   idle:

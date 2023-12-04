@@ -2,53 +2,67 @@ name: Wrastor
 tagline: The Wind's Fury
 element: air
 
-# Effective Weight
-knockbackAdjustment: 1.20
-gravityAccel: 0.30
-hitstunGravityAccel: 0.45
-airFriction: 0.05
-airAccel: 0.36
-maxFallSpeed: 8
-fastfallSpeed: 11
-jumpsquat: 5
-landTime: 4
-# Ground Movement
-groundFriction: 0.63
-initialDash:
-  speed: 5.50
-  time: 16
-run:
-  speed: 5.50
-  stop:
-    time: 4
-  turn:
-    time: 10
-    accel: 1.50
-walk:
-  speed: 3.00
-  accel: 0.20
-  turn:
-    time: 6
-waveland:
-  time: 7
-  friction: 0.07
-# Aerial Movement
-maxAirSpeed: 5.0
-maxJumpHorizontalSpeed: 8
-fullhop:
-  speed: 7.60
-shorthop:
-  speed: 4.0
-doubleJump:
-  amount: 1
-  speed: 8.00
-walljump:
-  speed:
-    vertical: 8
-    horizontal: 6
-pratfall:
-  accel: 0.40
-  landTime: 24
+stats:
+  # Effective Weight
+  knockbackAdjustment: 1.20
+  gravityAccel: 0.30
+  hitstunGravityAccel: 0.45
+  airFriction: 0.05
+  airAccel: 0.36
+  maxFallSpeed: 8
+  fastfallSpeed: 11
+  jumpsquat: 5
+  landTime: 4
+  # Ground Movement
+  groundFriction: 0.63
+  initialDash:
+    speed: 5.50
+    time: 16
+  run:
+    speed: 5.50
+    stop:
+      time: 4
+    turn:
+      time: 10
+      accel: 1.50
+  walk:
+    speed: 3.00
+    accel: 0.20
+    turn:
+      time: 6
+  waveland:
+    time: 7
+    friction: 0.07
+  # Aerial Movement
+  maxAirSpeed: 5.0
+  maxJumpHorizontalSpeed: 8
+  fullhop:
+    speed: 7.60
+  shorthop:
+    speed: 4.0
+  doubleJump:
+    amount: 1
+    speed: 8.00
+  walljump:
+    speed:
+      vertical: 8
+      horizontal: 6
+  pratfall:
+    accel: 0.40
+    landTime: 24
+  # Slipstream
+  inSlipstream:
+    initialDash:
+      speed: 8.00
+    run:
+      speed: 8.00
+      turn:
+        time: 6
+        accel: 2.25
+    walk:
+      speed: 6.00
+      accel: 0.40
+    maxAirSpeed: 7.0
 
 hurtbox:
   idle:

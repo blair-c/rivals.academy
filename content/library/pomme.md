@@ -1,36 +1,64 @@
 ---
 title: Pomme
-description: Pomme frame data and hitbox info
-layout: character
+description: The Superstar Songstress • Frame data and knockback info
+authors:
+- Sector 7-G
 outputs:
 - html
 - data
 ---
 
-## Effective Weight
-## Grounded Movement
-## Aerial Movement
-## Hurtbox
+## Character Properties
+### Effective Weight
+{{< library/character-stats "pomme" "effective-weight" >}}
+### Grounded Movement
+{{< library/character-stats "pomme" "grounded-movement" >}}
+### Aerial Movement
+{{< library/character-stats "pomme" "aerial-movement" >}}
+### Hurtbox
+{{< library/hurtbox "pomme" >}}
 
-## Jab
-## Dash Attack
-## Forward Tilt
-## Up Tilt
-## Down Tilt
+## Normal Attacks
+### Jab
+{{< library/attack "pomme" "jab" >}}
+### Dash Attack
+{{< library/attack "pomme" "dash-attack" >}}
+### Forward Tilt
+{{< library/attack "pomme" "forward-tilt" >}}
+### Up Tilt
+{{< library/attack "pomme" "up-tilt" >}}
+### Down Tilt
+{{< library/attack "pomme" "down-tilt" >}}
 
-## Neutral Air
-## Forward Air
-## Back Air
-## Up Air
-## Down Air
+## Aerial Attacks
+### Neutral Air
+{{< library/attack "pomme" "neutral-air" >}}
+### Forward Air
+{{< library/attack "pomme" "forward-air" >}}
+### Back Air
+{{< library/attack "pomme" "back-air" >}}
+### Up Air
+{{< library/attack "pomme" "up-air" >}}
+### Down Air
+{{< library/attack "pomme" "down-air" >}}
 
-## Forward Strong
-## Up Strong
-## Down Strong
+## Strong Attacks
+### Forward Strong
+{{< library/attack "pomme" "forward-strong" >}}
+### Up Strong
+{{< library/attack "pomme" "up-strong" >}}
+### Down Strong
+{{< library/attack "pomme" "down-strong" >}}
 
-## Neutral Special
-## Side Special
-## Up Special
-## Down Special
+## Special Attacks
+### Neutral Special
+{{< library/attack "pomme" "neutral-special" >}}
+### Side Special
+{{< library/attack "pomme" "side-special" >}}
+### Up Special
+{{< library/attack "pomme" "up-special" >}}
+### Down Special
+{{< library/attack "pomme" "down-special" >}}
 
-## Taunt
+### Taunt
+{{< library/attack "pomme" "taunt" >}}

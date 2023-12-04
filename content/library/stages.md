@@ -1,6 +1,8 @@
 ---
 title: Stages
 description: Stage, platform, and blastzone size data
+authors:
+- Sector 7-G
 outputs:
 - html
 - data

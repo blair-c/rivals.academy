@@ -2,53 +2,54 @@ name: Elliana
 tagline: The Aerial Arsenal
 element: air
 
-# Effective Weight
-knockbackAdjustment: 0.90
-gravityAccel: 0.40
-hitstunGravityAccel: 0.45
-airFriction: 0.05
-airAccel: 0.40
-maxFallSpeed: 9
-fastfallSpeed: 11
-jumpsquat: 5
-landTime: 6
-# Ground Movement
-groundFriction: 0.65
-initialDash:
-  speed: 5.50
-  time: 8
-run:
-  speed: 5.50
-  stop:
-    time: 6
-  turn:
-    time: 12
-    accel: 1.00
-walk:
-  speed: 3.00
-  accel: 0.20
-  turn:
-    time: 6
-waveland:
-  time: 8
-  friction: 0.12
-# Aerial Movement
-maxAirSpeed: 6.0
-maxJumpHorizontalSpeed: 8
-fullhop:
-  speed: 9.99
-shorthop:
-  speed: 5.0
-doubleJump:
-  amount: 0
-  speed: 6.00
-walljump:
-  speed:
-    vertical: 8
-    horizontal: 7
-pratfall:
-  accel: 0.85
-  landTime: 20
+stats:
+  # Effective Weight
+  knockbackAdjustment: 0.90
+  gravityAccel: 0.40
+  hitstunGravityAccel: 0.45
+  airFriction: 0.05
+  airAccel: 0.40
+  maxFallSpeed: 9
+  fastfallSpeed: 11
+  jumpsquat: 5
+  landTime: 6
+  # Ground Movement
+  groundFriction: 0.65
+  initialDash:
+    speed: 5.50
+    time: 8
+  run:
+    speed: 5.50
+    stop:
+      time: 6
+    turn:
+      time: 12
+      accel: 1.00
+  walk:
+    speed: 3.00
+    accel: 0.20
+    turn:
+      time: 6
+  waveland:
+    time: 8
+    friction: 0.12
+  # Aerial Movement
+  maxAirSpeed: 6.0
+  maxJumpHorizontalSpeed: 8
+  fullhop:
+    speed: 9.99
+  shorthop:
+    speed: 5.0
+  doubleJump:
+    amount: 0
+    speed: 6.00
+  walljump:
+    speed:
+      vertical: 8
+      horizontal: 7
+  pratfall:
+    accel: 0.85
+    landTime: 20
 
 hurtbox:
   idle:

@@ -2,53 +2,54 @@ name: Orcane
 tagline: The Puddle Jumper
 element: water
 
-# Effective Weight
-knockbackAdjustment: 1.00
-gravityAccel: 0.50
-hitstunGravityAccel: 0.50
-airFriction: 0.07
-airAccel: 0.25
-maxFallSpeed: 9
-fastfallSpeed: 12
-jumpsquat: 5
-landTime: 4
-# Ground Movement
-groundFriction: 0.40
-initialDash:
-  speed: 7.00
-  time: 12
-run:
-  speed: 7.00
-  stop:
-    time: 4
-  turn:
+stats:
+  # Effective Weight
+  knockbackAdjustment: 1.00
+  gravityAccel: 0.50
+  hitstunGravityAccel: 0.50
+  airFriction: 0.07
+  airAccel: 0.25
+  maxFallSpeed: 9
+  fastfallSpeed: 12
+  jumpsquat: 5
+  landTime: 4
+  # Ground Movement
+  groundFriction: 0.40
+  initialDash:
+    speed: 7.00
     time: 12
-    accel: 1.50
-walk:
-  speed: 3.00
-  accel: 0.20
-  turn:
-    time: 6
-waveland:
-  time: 12
-  friction: 0.04
-# Aerial Movement
-maxAirSpeed: 4.0
-maxJumpHorizontalSpeed: 7
-fullhop:
-  speed: 9.50
-shorthop:
-  speed: 6.0
-doubleJump:
-  amount: 1
-  speed: 11.50
-walljump:
-  speed:
-    vertical: 8
-    horizontal: 7
-pratfall:
-  accel: 0.80
-  landTime: 9
+  run:
+    speed: 7.00
+    stop:
+      time: 4
+    turn:
+      time: 12
+      accel: 1.50
+  walk:
+    speed: 3.00
+    accel: 0.20
+    turn:
+      time: 6
+  waveland:
+    time: 12
+    friction: 0.04
+  # Aerial Movement
+  maxAirSpeed: 4.0
+  maxJumpHorizontalSpeed: 7
+  fullhop:
+    speed: 9.50
+  shorthop:
+    speed: 6.0
+  doubleJump:
+    amount: 1
+    speed: 11.50
+  walljump:
+    speed:
+      vertical: 8
+      horizontal: 7
+  pratfall:
+    accel: 0.80
+    landTime: 9
 
 hurtbox:
   idle:

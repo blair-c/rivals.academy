@@ -1,36 +1,64 @@
 ---
 title: Shovel Knight
-description: Shovel Knight frame data and hitbox info
-layout: character
+description: The Shovel of Hope • Frame data and knockback info
+authors:
+- Sector 7-G
 outputs:
 - html
 - data
 ---
 
-## Effective Weight
-## Grounded Movement
-## Aerial Movement
-## Hurtbox
+## Character Properties
+### Effective Weight
+{{< library/character-stats "shovel-knight" "effective-weight" >}}
+### Grounded Movement
+{{< library/character-stats "shovel-knight" "grounded-movement" >}}
+### Aerial Movement
+{{< library/character-stats "shovel-knight" "aerial-movement" >}}
+### Hurtbox
+{{< library/hurtbox "shovel-knight" >}}
 
-## Jab
-## Dash Attack
-## Forward Tilt
-## Up Tilt
-## Down Tilt
+## Normal Attacks
+### Jab
+{{< library/attack "shovel-knight" "jab" >}}
+### Dash Attack
+{{< library/attack "shovel-knight" "dash-attack" >}}
+### Forward Tilt
+{{< library/attack "shovel-knight" "forward-tilt" >}}
+### Up Tilt
+{{< library/attack "shovel-knight" "up-tilt" >}}
+### Down Tilt
+{{< library/attack "shovel-knight" "down-tilt" >}}
 
-## Neutral Air
-## Forward Air
-## Back Air
-## Up Air
-## Down Air
+## Aerial Attacks
+### Neutral Air
+{{< library/attack "shovel-knight" "neutral-air" >}}
+### Forward Air
+{{< library/attack "shovel-knight" "forward-air" >}}
+### Back Air
+{{< library/attack "shovel-knight" "back-air" >}}
+### Up Air
+{{< library/attack "shovel-knight" "up-air" >}}
+### Down Air
+{{< library/attack "shovel-knight" "down-air" >}}
 
-## Forward Strong
-## Up Strong
-## Down Strong
+## Strong Attacks
+### Forward Strong
+{{< library/attack "shovel-knight" "forward-strong" >}}
+### Up Strong
+{{< library/attack "shovel-knight" "up-strong" >}}
+### Down Strong
+{{< library/attack "shovel-knight" "down-strong" >}}
 
-## Neutral Special
-## Side Special
-## Up Special
-## Down Special
+## Special Attacks
+### Neutral Special
+{{< library/attack "shovel-knight" "neutral-special" >}}
+### Side Special
+{{< library/attack "shovel-knight" "side-special" >}}
+### Up Special
+{{< library/attack "shovel-knight" "up-special" >}}
+### Down Special
+{{< library/attack "shovel-knight" "down-special" >}}
 
-## Taunt
+### Taunt
+{{< library/attack "shovel-knight" "taunt" >}}

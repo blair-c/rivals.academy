@@ -2,54 +2,55 @@ name: Absa
 tagline: The Storm Architect
 element: air
 
-# Effective Weight
-knockbackAdjustment: 1.10
-gravityAccel: 0.30
-hitstunGravityAccel: 0.45
-airFriction: 0.04
-airAccel: 0.40
-maxFallSpeed: 8
-fastfallSpeed: 12
-jumpsquat: 5
-landTime: 4
-# Ground Movement
-groundFriction: 0.63
-initialDash:
-  speed: 4.00
-  time: 8
-run:
-  speed: 6.25
-  stop:
-    time: 4
-  turn:
-    time: 10
-    accel: 1.50
-walk:
-  speed: 3.00
-  accel: 0.20
-  turn:
+stats:
+  # Effective Weight
+  knockbackAdjustment: 1.10
+  gravityAccel: 0.30
+  hitstunGravityAccel: 0.45
+  airFriction: 0.04
+  airAccel: 0.40
+  maxFallSpeed: 8
+  fastfallSpeed: 12
+  jumpsquat: 5
+  landTime: 4
+  # Ground Movement
+  groundFriction: 0.63
+  initialDash:
+    speed: 4.00
+    time: 8
+  run:
+    speed: 6.25
+    stop:
+      time: 4
+    turn:
+      time: 10
+      accel: 1.50
+  walk:
+    speed: 3.00
+    accel: 0.20
+    turn:
+      time: 6
+  waveland:
     time: 6
-waveland:
-  time: 6
-  friction: 0.00
-# Aerial Movement
-maxAirSpeed: 6.0
-maxJumpHorizontalSpeed: 8
-fullhop:
-  speed: 7.60
-shorthop:
-  speed: 4.5
-doubleJump:
-  amount: 1
-  speed: -1.00
-  accel: -1.40
-walljump:
-  speed:
-    vertical: 7
-    horizontal: 6
-pratfall:
-  accel: 0.40
-  landTime: 16
+    friction: 0.00
+  # Aerial Movement
+  maxAirSpeed: 6.0
+  maxJumpHorizontalSpeed: 8
+  fullhop:
+    speed: 7.60
+  shorthop:
+    speed: 4.5
+  doubleJump:
+    amount: 1
+    speed: -1.00
+    accel: -1.40
+  walljump:
+    speed:
+      vertical: 7
+      horizontal: 6
+  pratfall:
+    accel: 0.40
+    landTime: 16
 
 hurtbox:
   idle:

@@ -2,53 +2,54 @@ name: Clairen
 tagline: The Flame's Salvation
 element: fire
 
-# Effective Weight
-knockbackAdjustment: 1.00
-gravityAccel: 0.50
-hitstunGravityAccel: 0.50
-airFriction: 0.02
-airAccel: 0.35
-maxFallSpeed: 10
-fastfallSpeed: 13
-jumpsquat: 5
-landTime: 4
-# Ground Movement
-groundFriction: 0.63
-initialDash:
-  speed: 7.50
-  time: 16
-run:
-  speed: 6.50
-  stop:
-    time: 6
-  turn:
-    time: 10
-    accel: 1.00
-walk:
-  speed: 4.25
-  accel: 0.25
-  turn:
-    time: 6
-waveland:
-  time: 8
-  friction: 0.13
-# Aerial Movement
-maxAirSpeed: 4.0
-maxJumpHorizontalSpeed: 6
-fullhop:
-  speed: 10.99
-shorthop:
-  speed: 6.0
-doubleJump:
-  amount: 1
-  speed: 10.00
-walljump:
-  speed:
-    vertical: 9
-    horizontal: 5
-pratfall:
-  accel: 0.60
-  landTime: 10
+stats:
+  # Effective Weight
+  knockbackAdjustment: 1.00
+  gravityAccel: 0.50
+  hitstunGravityAccel: 0.50
+  airFriction: 0.02
+  airAccel: 0.35
+  maxFallSpeed: 10
+  fastfallSpeed: 13
+  jumpsquat: 5
+  landTime: 4
+  # Ground Movement
+  groundFriction: 0.63
+  initialDash:
+    speed: 7.50
+    time: 16
+  run:
+    speed: 6.50
+    stop:
+      time: 6
+    turn:
+      time: 10
+      accel: 1.00
+  walk:
+    speed: 4.25
+    accel: 0.25
+    turn:
+      time: 6
+  waveland:
+    time: 8
+    friction: 0.13
+  # Aerial Movement
+  maxAirSpeed: 4.0
+  maxJumpHorizontalSpeed: 6
+  fullhop:
+    speed: 10.99
+  shorthop:
+    speed: 6.0
+  doubleJump:
+    amount: 1
+    speed: 10.00
+  walljump:
+    speed:
+      vertical: 9
+      horizontal: 5
+  pratfall:
+    accel: 0.60
+    landTime: 10
 
 hurtbox:
   idle:

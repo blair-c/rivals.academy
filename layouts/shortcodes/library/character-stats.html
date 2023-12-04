@@ -1,0 +1,161 @@
+{{ $c := index .Site.Data.rivals (.Get 0) "stats" }}
+
+{{ if eq (.Get 1) "effective-weight" }}
+<div class="library-table no-col-borders">
+  <table>
+    <thead>
+      <tr>
+        <th>Knockback Adjust</th>
+        <th>Gravity Accel</th>
+        <th>Hitstun Gravity Accel</th>
+        <th>Air Friction</th>
+        <th>Air Accel</th>
+        <th>Max Fall Speed</th>
+        <th>Fastfall Speed</th>
+        <th>Jumpsquat</th>
+        <th>Land Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ printf "%.2f" $c.knockbackAdjustment }}</td>
+        <td>{{ printf "%.2f" $c.gravityAccel }}</td>
+        <td>{{ printf "%.2f" $c.hitstunGravityAccel }}</td>
+        <td>{{ printf "%.2f" $c.airFriction }}</td>
+        <td>{{ printf "%.2f" $c.airAccel }}</td>
+        <td>{{ $c.maxFallSpeed }}</td>
+        <td>{{ $c.fastfallSpeed }}</td>
+        <td>{{ $c.jumpsquat }}</td>
+        <td>{{ $c.landTime }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{{ with $c.iceArmor }}
+  <p class="move-notes">
+    <a href="#neutral-special">Ice Armor</a> increases Max Fall Speed to <code>{{ .maxFallSpeed }}</code>.
+  </p>
+{{ end }}
+
+{{ else if eq (.Get 1) "grounded-movement" }}
+<div class="library-table
+  {{ if not (or (isset $c "onIce") (isset $c "inSlipstream")) }} no-col-borders{{ end }}
+">
+  <table>
+    <thead>
+      <tr>
+        {{ with or $c.onIce $c.inSlipstream }}<th class="sticky-col"></th>{{ end }}
+        <th>Ground Friction</th>
+        <th>Dash Speed</th>
+        <th>Dash Time  </th>
+        <th>Run Speed</th>
+        <th>Run Stop Time</th>
+        <th>Run Turn Time</th>
+        <th>Run Turn Accel</th>
+        <th>Walk Speed</th>
+        <th>Walk Accel</th>
+        <th>Walk Turn Time</th>
+        <th>Waveland Time</th>
+        <th>Waveland Friction</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {{ with or $c.onIce $c.inSlipstream }}<td class="sticky-col">Base</td>{{ end }}
+        <td>{{ printf "%.2f" $c.groundFriction }}</td>
+        <td>{{ printf "%.2f" $c.initialDash.speed }}</td>
+        <td>{{ $c.initialDash.time }}</td>
+        <td>{{ printf "%.2f" $c.run.speed }}</td>
+        <td>{{ $c.run.stop.time }}</td>
+        <td>{{ $c.run.turn.time }}</td>
+        <td>{{ printf "%.2f" $c.run.turn.accel }}</td>
+        <td>{{ printf "%.2f" $c.walk.speed }}</td>
+        <td>{{ printf "%.2f" $c.walk.accel }}</td>
+        <td>{{ $c.walk.turn.time }}</td>
+        <td>{{ $c.waveland.time }}</td>
+        <td>{{ printf "%.2f" $c.waveland.friction }}</td>
+      </tr>
+      {{ with $c.onIce }}
+        <tr>
+          <td class="sticky-col">On Ice</td>
+          <td>{{ printf "%.2f" .groundFriction }}</td>
+          <td>{{ printf "%.2f" .initialDash.speed }}</td>
+          <td></td>
+          <td>{{ printf "%.2f" .run.speed }}</td>
+          <td></td>
+          <td>{{ .run.turn.time }}</td>
+          <td>{{ printf "%.2f" .run.turn.accel }}</td>
+          <td></td><td></td><td></td>
+          <td>{{ .waveland.time }}</td>
+          <td></td>
+        </tr>
+      {{ end }}
+      {{ with $c.inSlipstream }}
+        <tr>
+          <td class="sticky-col">In Slip</td>
+          <td></td>
+          <td>{{ printf "%.2f" .initialDash.speed }}</td>
+          <td></td>
+          <td>{{ printf "%.2f" .run.speed }}</td>
+          <td></td>
+          <td>{{ .run.turn.time }}</td>
+          <td>{{ printf "%.2f" .run.turn.accel }}</td>
+          <td>{{ printf "%.2f" .walk.speed }}</td>
+          <td>{{ printf "%.2f" .walk.accel }}</td>
+          <td></td><td></td><td></td>
+        </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+
+{{ else if eq (.Get 1) "aerial-movement" }}
+<div class="library-table no-col-borders">
+  <table>
+    <thead>
+      <tr>
+        <th>Max Air Speed</th>
+        <th>Max Jump Horizontal Speed</th>
+        <th>Fullhop Speed</th>
+        <th>Shorthop Speed</th>
+        <th>Double Jump Speed</th>
+        {{ with $c.doubleJump.accel }}<th>Double Jump Accel</th>{{ end }}
+        {{ with $c.tripleJump.speed }}<th>Triple Jump Speed</th>{{ end }}
+        <th>Walljump Vertical Speed</th>
+        <th>Walljump Horizontal Speed</th>
+        {{ with $c.wallcling.max }}<th>Max Wallcling</th>{{ end }}
+        <th>Pratfall Accel</th>
+        <th>Pratfall Land Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ printf "%.1f" $c.maxAirSpeed }}</td>
+        <td>{{ $c.maxJumpHorizontalSpeed }}</td>
+        <td>{{ printf "%.2f" $c.fullhop.speed }}</td>
+        <td>{{ printf "%.1f" $c.shorthop.speed }}</td>
+        <td>{{ printf "%.2f" $c.doubleJump.speed }}</td>
+        {{ with $c.doubleJump.accel }}<td>{{ . }}</td>{{ end }}
+        {{ with $c.tripleJump.speed }}<td>{{ printf "%.2f" $c.tripleJump.speed }}</td>{{ end }}
+        <td>{{ $c.walljump.speed.vertical }}</td>
+        <td>{{ $c.walljump.speed.horizontal }}</td>
+        {{ with $c.wallcling.max }}<td>{{ . }}</td>{{ end }}
+        <td>{{ printf "%.2f" $c.pratfall.accel }}</td>
+        <td>{{ $c.pratfall.landTime }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{{ with $c.iceArmor }}
+  <p class="move-notes">
+    <a href="#neutral-special">Ice Armor</a> increases Fullhop Speed to <code>{{ .fullhop.speed }}</code>,
+    Shorthop Speed to <code>{{ .shorthop.speed }}</code>, and Double Jump Speed to <code>{{ .doubleJump.speed}}</code>.
+  </p>
+{{ end }}
+{{ with $c.inSlipstream }}
+  <p class="move-notes">
+    <a href="#side-special">Slipstream</a> increases Max Air Speed to <code>{{ .maxAirSpeed }}</code>.
+  </p>
+{{ end }}
+
+{{ end }}

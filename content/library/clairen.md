@@ -1,34 +1,61 @@
 ---
 title: Clairen
-description: Clairen frame data and hitbox info
-layout: character
+description: The Flame's Salvation • Frame data and knockback info
+authors:
+- Sector 7-G
 outputs:
 - html
 - data
 ---
 
-## Effective Weight
-## Grounded Movement
-## Aerial Movement
-## Hurtbox
+## Character Properties
+### Effective Weight
+{{< library/character-stats "clairen" "effective-weight" >}}
+### Grounded Movement
+{{< library/character-stats "clairen" "grounded-movement" >}}
+### Aerial Movement
+{{< library/character-stats "clairen" "aerial-movement" >}}
+### Hurtbox
+{{< library/hurtbox "clairen" >}}
 
-## Jab
-## Dash Attack
-## Forward Tilt
-## Up Tilt
-## Down Tilt
+## Normal Attacks
+### Jab
+{{< library/attack "clairen" "jab" >}}
+### Dash Attack
+{{< library/attack "clairen" "dash-attack" >}}
+### Forward Tilt
+{{< library/attack "clairen" "forward-tilt" >}}
+### Up Tilt
+{{< library/attack "clairen" "up-tilt" >}}
+### Down Tilt
+{{< library/attack "clairen" "down-tilt" >}}
 
-## Neutral Air
-## Forward Air
-## Back Air
-## Up Air
-## Down Air
+## Aerial Attacks
+### Neutral Air
+{{< library/attack "clairen" "neutral-air" >}}
+### Forward Air
+{{< library/attack "clairen" "forward-air" >}}
+### Back Air
+{{< library/attack "clairen" "back-air" >}}
+### Up Air
+{{< library/attack "clairen" "up-air" >}}
+### Down Air
+{{< library/attack "clairen" "down-air" >}}
 
-## Forward Strong
-## Up Strong
-## Down Strong
+## Strong Attacks
+### Forward Strong
+{{< library/attack "clairen" "forward-strong" >}}
+### Up Strong
+{{< library/attack "clairen" "up-strong" >}}
+### Down Strong
+{{< library/attack "clairen" "down-strong" >}}
 
-## Neutral Special
-## Side Special
-## Up Special
-## Down Special
+## Special Attacks
+### Neutral Special
+{{< library/attack "clairen" "neutral-special" >}}
+### Side Special
+{{< library/attack "clairen" "side-special" >}}
+### Up Special
+{{< library/attack "clairen" "up-special" >}}
+### Down Special
+{{< library/attack "clairen" "down-special" >}}

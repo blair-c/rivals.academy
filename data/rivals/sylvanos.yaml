@@ -2,53 +2,54 @@ name: Sylvanos
 tagline: The Heart of the Forest
 element: earth
 
-# Effective Weight
-knockbackAdjustment: 0.95
-gravityAccel: 0.60
-hitstunGravityAccel: 0.51
-airFriction: 0.06
-airAccel: 0.20
-maxFallSpeed: 11
-fastfallSpeed: 16
-jumpsquat: 5
-landTime: 6
-# Ground Movement
-groundFriction: 0.80
-initialDash:
-  speed: 8.00
-  time: 10
-run:
-  speed: 7.50
-  stop:
-    time: 4
-  turn:
+stats:
+  # Effective Weight
+  knockbackAdjustment: 0.95
+  gravityAccel: 0.60
+  hitstunGravityAccel: 0.51
+  airFriction: 0.06
+  airAccel: 0.20
+  maxFallSpeed: 11
+  fastfallSpeed: 16
+  jumpsquat: 5
+  landTime: 6
+  # Ground Movement
+  groundFriction: 0.80
+  initialDash:
+    speed: 8.00
     time: 10
-    accel: 2.00
-walk:
-  speed: 4.50
-  accel: 0.35
-  turn:
-    time: 6
-waveland:
-  time: 8
-  friction: 0.06
-# Aerial Movement
-maxAirSpeed: 4.0
-maxJumpHorizontalSpeed: 8
-fullhop:
-  speed: 12.00
-shorthop:
-  speed: 7.40
-doubleJump:
-  amount: 1
-  speed: 12.00
-walljump:
-  speed:
-    vertical: 9
-    horizontal: 6
-pratfall:
-  accel: 1.50
-  landTime: 15
+  run:
+    speed: 7.50
+    stop:
+      time: 4
+    turn:
+      time: 10
+      accel: 2.00
+  walk:
+    speed: 4.50
+    accel: 0.35
+    turn:
+      time: 6
+  waveland:
+    time: 8
+    friction: 0.06
+  # Aerial Movement
+  maxAirSpeed: 4.0
+  maxJumpHorizontalSpeed: 8
+  fullhop:
+    speed: 12.00
+  shorthop:
+    speed: 7.40
+  doubleJump:
+    amount: 1
+    speed: 12.00
+  walljump:
+    speed:
+      vertical: 9
+      horizontal: 6
+  pratfall:
+    accel: 1.50
+    landTime: 15
 
 hurtbox:
   idle:

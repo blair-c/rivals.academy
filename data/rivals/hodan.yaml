@@ -2,53 +2,54 @@ name: Hodan
 tagline: The Hot Springs' Sage
 element: water
 
-# Effective Weight
-knockbackAdjustment: 0.90
-gravityAccel: 0.60
-hitstunGravityAccel: 0.52
-airFriction: 0.04
-airAccel: 0.30
-maxFallSpeed: 11
-fastfallSpeed: 16
-jumpsquat: 5
-landTime: 6
-# Ground Movement
-groundFriction: 0.60
-initialDash:
-  speed: 6.25
-  time: 14
-run:
-  speed: 6.00
-  stop:
-    time: 6
-  turn:
-    time: 16
-    accel: 0.65
-walk:
-  speed: 3.00
-  accel: 0.20
-  turn:
-    time: 6
-waveland:
-  time: 8
-  friction: 0.12
-# Aerial Movement
-maxAirSpeed: 4.0
-maxJumpHorizontalSpeed: 6
-fullhop:
-  speed: 11.50
-shorthop:
-  speed: 7.4
-doubleJump:
-  amount: 1
-  speed: 11.75
-walljump:
-  speed:
-    vertical: 9
-    horizontal: 6
-pratfall:
-  accel: 0.70
-  landTime: 11
+stats:
+  # Effective Weight
+  knockbackAdjustment: 0.90
+  gravityAccel: 0.60
+  hitstunGravityAccel: 0.52
+  airFriction: 0.04
+  airAccel: 0.30
+  maxFallSpeed: 11
+  fastfallSpeed: 16
+  jumpsquat: 5
+  landTime: 6
+  # Ground Movement
+  groundFriction: 0.60
+  initialDash:
+    speed: 6.25
+    time: 14
+  run:
+    speed: 6.00
+    stop:
+      time: 6
+    turn:
+      time: 16
+      accel: 0.65
+  walk:
+    speed: 3.00
+    accel: 0.20
+    turn:
+      time: 6
+  waveland:
+    time: 8
+    friction: 0.12
+  # Aerial Movement
+  maxAirSpeed: 4.0
+  maxJumpHorizontalSpeed: 6
+  fullhop:
+    speed: 11.50
+  shorthop:
+    speed: 7.4
+  doubleJump:
+    amount: 1
+    speed: 11.75
+  walljump:
+    speed:
+      vertical: 9
+      horizontal: 6
+  pratfall:
+    accel: 0.70
+    landTime: 11
 
 hurtbox:
   idle:

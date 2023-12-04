@@ -1,0 +1,12 @@
+{{ $c := index .Site.Data.rivals (.Get 0) }}
+{{ $slug := .Get 1 }}
+{{ $a := split $slug "-" }}
+{{ $a = print (index $a 0) (index $a 1 | title) }}
+{{ range index $c $a }}
+  {{ if isset . "name" }}
+    <h4 id="{{ $slug }}-{{ anchorize .name }}">
+      {{ .name }}{{ with .cost }} ({{ . }} Gems){{ end }}
+    </h4>
+  {{ end }}
+  {{ partial "partials/move-display.html" . }}
+{{ end }}

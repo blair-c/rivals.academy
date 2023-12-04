@@ -2,6 +2,10 @@
 title: Escenarios
 url: biblioteca/escenarios
 description: Datos de escenarios, platformas, y blastzones
+authors:
+- Sector 7-G
+translators:
+- Doka
 ---
 
 ## Comparición de escenarios

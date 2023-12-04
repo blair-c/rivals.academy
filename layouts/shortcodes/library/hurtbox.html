@@ -1,0 +1,25 @@
+{{ $c := index .Site.Data.rivals (.Get 0) }}
+{{ $h := index $c "hurtbox" }}
+
+<div class="library-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Idle</th>
+        <th>Crouch</th>
+        <th>Hitstun</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ $h.idle.width }} × {{ $h.idle.height }}</td>
+        <td>{{ $h.crouch.width }} × {{ $h.crouch.height }}</td>
+        <td>{{ $h.hitstun.width }} × {{ $h.hitstun.height }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="hitbox-image">
+  <img src="{{ $h.image.highRes }}" alt="In-game screenshot of {{ $c.name }}'s hurtbox during idle, crouch, and hitstun.">
+</div>

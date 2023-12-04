@@ -2,53 +2,54 @@ name: Kragg
 tagline: The Earth's Bastion
 element: earth
 
-# Effective Weight
-knockbackAdjustment: 0.90
-gravityAccel: 0.60
-hitstunGravityAccel: 0.53
-airFriction: 0.04
-airAccel: 0.30
-maxFallSpeed: 11
-fastfallSpeed: 16
-jumpsquat: 5
-landTime: 6
-# Ground Movement
-groundFriction: 0.50
-initialDash:
-  speed: 6.25
-  time: 12
-run:
-  speed: 5.75
-  stop:
-    time: 4
-  turn:
-    time: 10
+stats:
+  # Effective Weight
+  knockbackAdjustment: 0.90
+  gravityAccel: 0.60
+  hitstunGravityAccel: 0.53
+  airFriction: 0.04
+  airAccel: 0.30
+  maxFallSpeed: 11
+  fastfallSpeed: 16
+  jumpsquat: 5
+  landTime: 6
+  # Ground Movement
+  groundFriction: 0.50
+  initialDash:
+    speed: 6.25
+    time: 12
+  run:
+    speed: 5.75
+    stop:
+      time: 4
+    turn:
+      time: 10
+      accel: 0.50
+  walk:
+    speed: 3.00
+    accel: 0.25
+    turn:
+      time: 6
+  waveland:
+    time: 8
+    friction: 0.10
+  # Aerial Movement
+  maxAirSpeed: 4.0
+  maxJumpHorizontalSpeed: 6
+  fullhop:
+    speed: 12.00
+  shorthop:
+    speed: 7.4
+  doubleJump:
+    amount: 1
+    speed: 12.00
+  walljump:
+    speed:
+      vertical: 8
+      horizontal: 7
+  pratfall:
     accel: 0.50
-walk:
-  speed: 3.00
-  accel: 0.25
-  turn:
-    time: 6
-waveland:
-  time: 8
-  friction: 0.10
-# Aerial Movement
-maxAirSpeed: 4.0
-maxJumpHorizontalSpeed: 6
-fullhop:
-  speed: 12.00
-shorthop:
-  speed: 7.4
-doubleJump:
-  amount: 1
-  speed: 12.00
-walljump:
-  speed:
-    vertical: 8
-    horizontal: 7
-pratfall:
-  accel: 0.50
-  landTime: 11
+    landTime: 11
 
 hurtbox:
   idle:
