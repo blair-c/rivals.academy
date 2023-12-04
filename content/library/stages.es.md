@@ -30,7 +30,7 @@ translators:
 ### Treetop Lodge
 {{< library/stage-details "treetopLodge" >}}
 #### Treetop Lodge (Dobles)
-{{< library/stage-details "treetopLodge" "doubles" >}}
+{{< library/stage-details "treetopLodge.doubles" >}}
 ### Blazing Hideout
 {{< library/stage-details "blazingHideout" >}}
 ### Tempest Peak
@@ -48,7 +48,7 @@ translators:
 ### The Forest Floor
 {{< library/stage-details "forestFloor" >}}
 #### The Forest Floor (Dobles)
-{{< library/stage-details "forestFloor" "doubles" >}}
+{{< library/stage-details "forestFloor.doubles" >}}
 ### Julesvale
 {{< library/stage-details "julesvale" >}}
 ### Troupple Pond

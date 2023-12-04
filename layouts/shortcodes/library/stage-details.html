@@ -1,5 +1,5 @@
-{{ $s := index .Site.Data.rivals.stages (.Get 0) }}
-{{ with .Get 1 }}{{ $s = index $s . }}{{ end }}
+{{ $s := .Site.Data.rivals.stages }}
+{{ range split (.Get 0) "." }}{{ $s = index $s . }}{{ end }}
 
 <div class="library-table"><table>
   <thead><tr>

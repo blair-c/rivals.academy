@@ -30,7 +30,7 @@ outputs:
 ### Treetop Lodge
 {{< library/stage-details "treetopLodge" >}}
 #### Treetop Lodge (Doubles)
-{{< library/stage-details "treetopLodge" "doubles" >}}
+{{< library/stage-details "treetopLodge.doubles" >}}
 ### Blazing Hideout
 {{< library/stage-details "blazingHideout" >}}
 ### Tempest Peak
@@ -48,7 +48,7 @@ outputs:
 ### The Forest Floor
 {{< library/stage-details "forestFloor" >}}
 #### The Forest Floor (Doubles)
-{{< library/stage-details "forestFloor" "doubles" >}}
+{{< library/stage-details "forestFloor.doubles" >}}
 ### Julesvale
 {{< library/stage-details "julesvale" >}}
 ### Troupple Pond
