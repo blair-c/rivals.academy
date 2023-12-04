@@ -63,8 +63,7 @@ stats:
     waveland:
       time: 12
   iceArmor:
-    knockback:
-      multiplier: 0.7
+    knockbackMultiplier: 0.7
     maxFallSpeed: 11
     fullhop:
       speed: 11.95
