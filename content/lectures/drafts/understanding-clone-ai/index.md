@@ -81,3 +81,5 @@ While clone is on a platform, and the opponent's origin is below its own, there 
 While clone is about to run offstage, there is a 70% chance each frame that it will jump.
 
 ![](evade-runoff-prevention.png)
+
+I hope this has demystified clone's behavior to you by shedding some light on the inner workings of how it makes decisions. This knowledge can help you to have more agency and understanding of how to play with or around your clone.
