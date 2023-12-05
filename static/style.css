@@ -79,6 +79,7 @@
 
 * {
   box-sizing: border-box;
+  scrollbar-width: thin;
 }
 
 body {
@@ -1320,7 +1321,6 @@ article div:has(iframe) {
 
 .library-table {
   overflow-x: auto;
-  scrollbar-width: thin;
   border: 1px solid var(--clr-gray-1);
   max-width: fit-content;
   margin-bottom: .25rem;
