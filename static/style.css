@@ -189,6 +189,7 @@ article ol {
 article img {
   max-width: 100%;
   max-height: 450px;
+  border-radius: .125rem;
 }
 
 article video {
@@ -201,6 +202,7 @@ article video {
 
 article div:has(iframe) {
   margin-top: 1rem;
+  border-radius: .125rem;
 }
 
 .sr-only {
