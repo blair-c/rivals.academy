@@ -22,6 +22,7 @@
   --clr-beginner: #1a7bb8;
   --clr-intermediate: #0b8749;
   --clr-advanced: #ba5c14;
+  --clr-counterplay: #ac1b1b;
 
   --clr-pros: rgba(0, 158, 79, .025);
   --clr-cons: rgba(222, 44, 44, .025);
@@ -75,6 +76,7 @@
   --clr-beginner: #81c1e9;
   --clr-intermediate: #74cd74;
   --clr-advanced: #ffa666;
+  --clr-counterplay: #ffa3a3;
 }
 
 * {
@@ -1023,6 +1025,10 @@ article div:has(iframe) {
 .tag-advanced,
 .tag-avanzado {
   color: var(--clr-advanced);
+}
+
+.tag-counterplay {
+  color: var(--clr-counterplay);
 }
 
 .article-header h1 {

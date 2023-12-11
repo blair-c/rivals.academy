@@ -20,7 +20,7 @@
     </header>
 
     <div class="centered page-list">
-      {{ $beginner := slice }}{{ $intermediate := slice }}{{ $advanced := slice }}
+      {{ $beginner := slice }}{{ $intermediate := slice }}{{ $advanced := slice }}{{ $counterplay := slice }}
       {{ range .Pages }}
         {{ if eq (index .Params.tags 0) (T "beginner") }}
           {{ $beginner = $beginner | append . }}
@@ -28,6 +28,8 @@
           {{ $intermediate = $intermediate | append . }}
         {{ else if eq (index .Params.tags 0) (T "advanced") }}
           {{ $advanced = $advanced | append . }}
+        {{ else if eq (index .Params.tags 0) (T "counterplay") }}
+          {{ $counterplay = $counterplay | append . }}
         {{ end }}
       {{ end }}
       {{ range slice $beginner $intermediate $advanced }}
@@ -56,7 +58,7 @@
       {{ $c := "" }} {{ $len := 0}}
       {{ range $chars }}
         {{ $c = . }}
-        {{ range slice $beginner $intermediate $advanced }}
+        {{ range slice $beginner $intermediate $advanced $counterplay }}
           {{ range . }}
             {{ if isset .Params "tags" }}
               {{ $len = len .Params.tags }}
