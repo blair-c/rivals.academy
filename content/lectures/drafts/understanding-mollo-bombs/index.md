@@ -1,19 +1,18 @@
 ---
 title: Understanding Mollo's Bombs
-description: 
+description: Clearing up some confusion around Mollo's most important tool
 authors:
 - ColbyJackC
+- Sethix
 tags:
 - intermediate
 - counterplay
 - mollo
 ---
 
-Bombs are the most important part of Mollo's kit, so a fundamental understanding of them makes playing and fighting Mollo a much easier task. So, take notes, because at the end of this lecture you should understand when bombs explode, when parrying bombs puts Mollo into parry stun, and why finisher bomb didn't hit you.
+Bombs are the most important part of Mollo's kit, so a fundamental understanding of them makes playing and fighting Mollo a much easier task. So, take notes, because at the end of this lecture you should understand when bombs explode, when parrying bombs puts Mollo into parry stun, and why this finisher bomb doesn't hit Kragg:
 
 {{< video intro >}}
-
-(Additional thanks to Sethix for helping me record these clips)
 
 ## When Bombs Explode
 
