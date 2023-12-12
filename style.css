@@ -8,6 +8,7 @@
   --clr-gray-1: #cecee0;
   --clr-gray-2: #93939e;
   --clr-accent: #3f3e6c;
+  --clr-accent-tl: rgba(63, 62, 108, .05);
   --clr-rss: #252244;
 
   --clr-darken-img: #303033;
@@ -62,6 +63,7 @@
   --clr-gray-1: #1f1f29;
   --clr-gray-2: #21212c;
   --clr-accent: #bcb7d7;
+  --clr-accent-tl: rgba(188, 183, 215, .025);
   --clr-rss: #e1dfec;
 
   --clr-darken-img: var(--clr-bg);
@@ -145,6 +147,20 @@ article p a,
 button {
   cursor: pointer;
   color: currentColor;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: .5rem .75rem;
+  border-left: 2px solid var(--clr-accent);
+  background: var(--clr-accent-tl);
+  border-radius: .125rem;
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+blockquote p {
+  margin: 0 !important;
 }
 
 h1 {
