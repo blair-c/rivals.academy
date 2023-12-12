@@ -63,7 +63,7 @@ How much characters slow down at any point on the ground.
 
 {{< library/cast-comparison "groundFriction" "Measured in pixels per frame per frame (Unconfirmed)" >}}
 
-### Initial Dash
+### Dash / Run
 
 #### Initial Dash Speed
 
@@ -76,8 +76,6 @@ Initial speed when starting a dash.
 Number of frames after a dash input during which attacks register as dash attacks. This also determines dash dance length.
 
 {{< library/cast-comparison "initialDash.time" >}}
-
-### Run
 
 #### Run Speed
 
