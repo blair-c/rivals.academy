@@ -31,27 +31,25 @@ Maximum fall speed without fastfall. Can be superceded by knockback, at which po
 
 {{< library/cast-comparison "maxFallSpeed" "Measured in pixels per frame" >}}
 
-## Ground Movement
+## Grounded Movement
 
-### Ground Friction
+### Initial Dash / Run
 
-How much characters slow down at any point on the ground.
+> Upon initiating a dash (for >1 frame), characters will first be locked into [Initial Dash](#initial-dash-time). Initial dash's full duration will play out even if the movement stick/key is released, unless the dash is cancelled by jump, dash attack, parry, a special attack, or a dash in the opposite direction ("Dash Dancing").
 
-{{< library/cast-comparison "groundFriction" "Measured in pixels per frame per frame (Unconfirmed)" >}}
+> If the dash is simply continued, characters will enter [Run](#run-speed). Inputting the opposite direction while running instead results in a [Run Turn](#run-turn-time). Run can also be cancelled with crouch, or simply [stopped](#run-stop-time) by releasing the movement stick/key.
 
-### Dash / Run
+#### Initial Dash Time
+	
+Number of frames a character's initial dash lasts.
+
+{{< library/cast-comparison "initialDash.time" >}}
 
 #### Initial Dash Speed
 
 Initial speed when starting a dash.
 
 {{< library/cast-comparison "initialDash.speed" "Measured in pixels per frame" >}}
-
-#### Initial Dash Time
-	
-Number of frames after a dash input during which attacks register as dash attacks. This also determines dash dance length.
-
-{{< library/cast-comparison "initialDash.time" >}}
 
 #### Run Speed
 
@@ -94,6 +92,12 @@ Acceleration when beginning to walk.
 #### Walk Turn Time
 
 > Each character has a universal 6 frame walk turn animation.
+
+### Ground Friction
+
+How much characters slow down at any point on the ground.
+
+{{< library/cast-comparison "groundFriction" "Measured in pixels per frame per frame (Unconfirmed)" >}}
 
 ### Waveland
 
