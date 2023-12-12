@@ -163,7 +163,7 @@ Speed characters accelerate downwards due to gravity while not in hitstun, until
 
 ### Fastfall Speed
 
-Maximum fall speed in fastfall.
+Fall speed in fastfall.
 
 {{< library/cast-comparison "fastfallSpeed" "Measured in pixels per frame" >}}
 

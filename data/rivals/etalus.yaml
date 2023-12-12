@@ -9,7 +9,7 @@ stats:
   hitstunGravityAccel: 0.50
   airFriction: 0.04
   airAccel: 0.30
-  maxFallSpeed: 6
+  maxFallSpeed: 11
   fastfallSpeed: 15
   jumpsquat: 5
   landTime: 6
@@ -65,7 +65,7 @@ stats:
   # Ice Armor
   iceArmor:
     knockbackMultiplier: 0.7
-    maxFallSpeed: 11
+    maxFallSpeed: 11.5
     fullhop:
       speed: 11.95
     shorthop:
