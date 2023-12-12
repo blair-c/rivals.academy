@@ -50,6 +50,18 @@ stats:
   pratfall:
     accel: 1.00
     landTime: 20
+  # Momentum Mail
+  momentumMail:
+    knockbackAdjustment: 0.90
+    groundFriction: 0.30
+    run:
+      turn:
+        time: 30
+        accel: 0.25
+      stop:
+        time: 10
+    waveland:
+      friction: 0.05
 
 hurtbox:
   idle:

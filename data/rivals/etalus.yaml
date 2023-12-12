@@ -50,7 +50,7 @@ stats:
   pratfall:
     accel: 0.85
     landTime: 6
-  # Ice
+  # On Ice
   onIce:
     groundFriction: 0.10
     initialDash:
@@ -62,6 +62,7 @@ stats:
         accel: 0.08
     waveland:
       time: 12
+  # Ice Armor
   iceArmor:
     knockbackMultiplier: 0.7
     maxFallSpeed: 11

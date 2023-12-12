@@ -45,6 +45,17 @@
       {{ $all = append $all (slice $c) }}
     {{ end }}
   {{ end }}
+  {{ with $c.momentumMail }}
+    {{ $set = true }}{{ $cur = . }}
+    {{ range split $stat "." }}
+      {{ if not (isset $cur .) }}{{ $set = false }}
+      {{ else }}{{ $cur = index $cur . }}{{ end }}
+    {{ end }}
+    {{ if $set }}
+      {{ $c = merge $c.momentumMail (dict "name" "Shovel Knight" "buff" "Momentum Mail") }}
+      {{ $all = append $all (slice $c) }}
+    {{ end }}
+  {{ end }}
 {{ end }}
 
 {{ $sort := slice }}{{ $c := "" }}

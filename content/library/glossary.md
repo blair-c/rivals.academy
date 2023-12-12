@@ -13,47 +13,23 @@ The standard "weight" stat. Dictates how far a move hits a character by function
 
 {{< library/cast-comparison "knockbackAdjustment" >}}
 
-### Gravity Acceleration
-
-Relative speed characters accelerate downwards due to gravity while not in hitstun.
-
-{{< library/cast-comparison "gravityAccel" "Measured in pixels per frame per frame" >}}
-
-#### Hitstun Gravity Acceleration
-
-Speed characters accelerate downwards due to gravity while in hitstun (affects vertical KOs).
-
-{{< library/cast-comparison "hitstunGravityAccel" "Measured in pixels per frame per frame" >}}
-
 ### Air Friction
 
-Affects horizontal speed and mitigates knockback horizontally during hitstun (slows movement through the air after a hit). Also affects inward Drift DI.
+Affects horizontal speed and mitigates knockback horizontally during hitstun (slows movement through the air after a hit). Also affects Drift DI. Higher stat = better horizontal survivability.
 
 {{< library/cast-comparison "airFriction" "Measured in pixels per frame per frame (Unconfirmed)" >}}
 
-### Air Acceleration
+### Hitstun Gravity Accel
 
-A character's aerial drift when holding left/right in the air. Does not affect Drift DI.
+Speed characters accelerate downwards due to gravity while in hitstun. Higher stat = better survivability off the top, worse low % survivability off the bottom (before [Max Fall Speed](#max-fall-speed) is reached).
 
-{{< library/cast-comparison "airAccel" "Measured in pixels per frame per frame" >}}
+{{< library/cast-comparison "hitstunGravityAccel" "Measured in pixels per frame per frame" >}}
 
 ### Max Fall Speed
 
-Maximum fall speed without fastfall.
+Maximum fall speed without fastfall. Can be superceded by knockback, at which point [Hitstun Gravity Accel](#hitstun-gravity-accel) stops increasing speed.
 
 {{< library/cast-comparison "maxFallSpeed" "Measured in pixels per frame" >}}
-
-#### Fastfall Speed
-
-Maximum fall speed in fastfall.
-
-{{< library/cast-comparison "fastfallSpeed" "Measured in pixels per frame" >}}
-
-### Land Time
-
-Default amount of landing lag frames. 
-
-{{< library/cast-comparison "landTime" >}}
 
 ## Ground Movement
 
@@ -117,7 +93,7 @@ Acceleration when beginning to walk.
 
 #### Walk Turn Time
 
-Universal number of 6 frames in the walk turn animation.
+> Each character has a universal 6 frame walk turn animation.
 
 ### Waveland
 
@@ -135,6 +111,12 @@ Replaces [Ground Friction](#ground-friction) during wavelands.
 
 ## Aerial Movement
 
+### Air Acceleration
+
+A character's aerial drift when holding left/right in the air while not in hitstun.
+
+{{< library/cast-comparison "airAccel" "Measured in pixels per frame per frame" >}}
+
 ### Max Air Speed
 
 Maximum horizontal speed in the air while not in hitstun. Can be superceded by [Max Jump Horizontal Speed](#max-jump-horizontal-speed).
@@ -147,25 +129,49 @@ Maximum horizontal speed maintained when going from a grounded to aerial state. 
 
 {{< library/cast-comparison "maxJumpHorizontalSpeed" "Measured in pixels per frame" >}}
 
-### Fullhop Speed
+### Fullhop / Shorthop
+
+#### Jumpsquat
+
+> When jumping off the ground, each character undergoes a universal 5 frame "Jumpsquat" animation before actually leaving the ground. Holding jump for these full 5 frames results in a [Fullhop](#fullhop-speed), while releasing jump sooner results in a [Shorthop](#shorthop-speed)
+
+#### Fullhop Speed
 	
-Starting vertical velocity for a fullhop. Velocity goes down due to gravity.
+Starting vertical velocity for a fullhop. Velocity goes down due to [Gravity Acceleration](#gravity-acceleration).
 
 {{< library/cast-comparison "fullhop.speed" "Measured in pixels per frame" >}}
 
-### Shorthop Speed
+#### Shorthop Speed
 	
-Starting vertical velocity for a shorthop. Velocity goes down due to gravity.
+Starting vertical velocity for a shorthop. Velocity goes down due to [Gravity Acceleration](#gravity-acceleration).
 
 {{< library/cast-comparison "shorthop.speed" "Measured in pixels per frame" >}}
 
 ### Double Jump Speed
 	
-Starting vertical velocity for a double jump. Velocity goes down due to gravity.
+Starting vertical velocity for a double jump. Velocity goes down due to [Gravity Acceleration](#gravity-acceleration).
 
 {{< library/cast-comparison "doubleJump.speed" "Measured in pixels per frame" >}}
 
-> Absa's -1 value means she dips during the start of her double jump. She has a separate, unique Double Jump Acceleration stat with a value of -1.4 which accelerates her upwards.
+> Absa's -1 value means she dips during the start of her double jump. She has a separate, unique Double Jump Acceleration stat with a value of -1.4 pixels per frame per frame which accelerates her upwards.
+
+### Gravity Acceleration
+
+Speed characters accelerate downwards due to gravity while not in hitstun, until [Max Fall Speed](#max-fall-speed) is reached.
+
+{{< library/cast-comparison "gravityAccel" "Measured in pixels per frame per frame" >}}
+
+### Fastfall Speed
+
+Maximum fall speed in fastfall.
+
+{{< library/cast-comparison "fastfallSpeed" "Measured in pixels per frame" >}}
+
+### Land Time
+
+Default amount of landing lag frames. 
+
+{{< library/cast-comparison "landTime" >}}
 
 ### Walljump
 

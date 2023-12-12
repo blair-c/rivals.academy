@@ -50,7 +50,7 @@ stats:
   pratfall:
     accel: 0.40
     landTime: 24
-  # Slipstream
+  # In Slipstream
   inSlipstream:
     initialDash:
       speed: 8.00

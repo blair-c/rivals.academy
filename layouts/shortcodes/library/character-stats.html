@@ -37,15 +37,24 @@
     and applies a multiplier of <code>{{ .knockbackMultiplier }}</code>× to the final value of the knockback formula.
   </p>
 {{ end }}
+{{ with $c.momentumMail }}
+  <p class="move-notes">
+    <a href="#taunt">Momentum Mail</a> increases Knockback Adjust to <code>{{ .knockbackAdjustment }}</code>.
+  </p>
+{{ end }}
 
 {{ else if eq (.Get 1) "grounded-movement" }}
 <div class="library-table
-  {{ if not (or (isset $c "onIce") (isset $c "inSlipstream")) }} no-col-borders{{ end }}
+  {{ if not (or (isset $c "onIce") (isset $c "inSlipstream") (isset $c "momentumMail")) }}
+    no-col-borders
+  {{ end }}
 ">
   <table>
     <thead>
       <tr>
-        {{ with or $c.onIce $c.inSlipstream }}<th class="sticky-col"></th>{{ end }}
+        {{ with or $c.onIce $c.inSlipstream $c.momentumMail }}
+          <th class="sticky-col"></th>
+        {{ end }}
         <th>Ground Friction</th>
         <th>Dash Speed</th>
         <th>Dash Time  </th>
@@ -62,7 +71,9 @@
     </thead>
     <tbody>
       <tr>
-        {{ with or $c.onIce $c.inSlipstream }}<td class="sticky-col">Base</td>{{ end }}
+        {{ with or $c.onIce $c.inSlipstream $c.momentumMail }}
+          <td class="sticky-col">Base</td>
+        {{ end }}
         <td>{{ printf "%.2f" $c.groundFriction }}</td>
         <td>{{ printf "%.2f" $c.initialDash.speed }}</td>
         <td>{{ $c.initialDash.time }}</td>
@@ -104,6 +115,18 @@
           <td>{{ printf "%.2f" .walk.speed }}</td>
           <td>{{ printf "%.2f" .walk.accel }}</td>
           <td></td><td></td><td></td>
+        </tr>
+      {{ end }}
+      {{ with $c.momentumMail }}
+        <tr>
+          <td class="sticky-col">M. Mail</td>
+          <td>{{ printf "%.2f" .groundFriction }}</td>
+          <td></td><td></td><td></td>
+          <td>{{ .run.stop.time }}</td>
+          <td>{{ .run.turn.time }}</td>
+          <td>{{ printf "%.2f" .run.turn.accel }}</td>
+          <td></td><td></td><td></td><td></td>
+          <td>{{ .waveland.friction }}</td>
         </tr>
       {{ end }}
     </tbody>
