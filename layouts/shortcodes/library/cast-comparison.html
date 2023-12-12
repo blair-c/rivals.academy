@@ -1,0 +1,93 @@
+{{ $chars := .Site.Data.rivals }}
+{{ $stat := .Get 0 }}
+
+{{ $all := slice }}{{ $c := dict }}
+{{ $set := true }}{{ $cur := $c }}
+{{ range (slice "zetterburn" "orcane" "kragg" "wrastor" 
+                "forsburn" "etalus" "maypul" "absa"
+                "clairen" "ranno" "sylvanos" "elliana"
+                "mollo" "hodan" "olympia" "pomme"
+                "ori" "shovel-knight")}}
+  {{ $c = index $chars . }}
+  {{ $c = merge $c.stats (dict "name" (replace . "-" " " | title)) }}
+  {{ $all = append $all (slice $c) }}
+
+  {{ with $c.inSlipstream }}
+    {{ $set = true }}{{ $cur = . }}
+    {{ range split $stat "." }}
+      {{ if not (isset $cur .) }}{{ $set = false }}
+      {{ else }}{{ $cur = index $cur . }}{{ end }}
+    {{ end }}
+    {{ if $set }}
+      {{ $c = merge $c.inSlipstream (dict "name" "Wrastor" "buff" "In Slipstream") }}
+      {{ $all = append $all (slice $c) }}
+    {{ end }}
+  {{ end }}
+  {{ with $c.iceArmor }}
+    {{ $set = true }}{{ $cur = . }}
+    {{ range split $stat "." }}
+      {{ if not (isset $cur .) }}{{ $set = false }}
+      {{ else }}{{ $cur = index $cur . }}{{ end }}
+    {{ end }}
+    {{ if $set }}
+      {{ $c = merge $c.iceArmor (dict "name" "Etalus" "buff" "Ice Armored") }}
+      {{ $all = append $all (slice $c) }}
+    {{ end }}
+  {{ end }}
+  {{ with $c.onIce }}
+    {{ $set = true }}{{ $cur = . }}
+    {{ range split $stat "." }}
+      {{ if not (isset $cur .) }}{{ $set = false }}
+      {{ else }}{{ $cur = index $cur . }}{{ end }}
+    {{ end }}
+    {{ if $set }}
+      {{ $c = merge $c.onIce (dict "name" "Etalus" "buff" "On Ice") }}
+      {{ $all = append $all (slice $c) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $sort := slice }}{{ $c := "" }}
+{{ range (slice "Zetterburn" "Forsburn" "Clairen" "Mollo"
+                "Orcane" "Etalus" "Ranno" "Hodan"
+                "Kragg" "Maypul" "Sylvanos" "Olympia"
+                "Wrastor" "Absa" "Elliana" "Pomme"
+                "Ori" "Shovel Knight")}}
+  {{ $c = . }}
+  {{ range $all }}
+    {{ if eq .name $c }}
+      {{ $sort = append $sort (slice .) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $all = $sort | collections.Reverse }}
+
+{{ if eq $stat "knockbackAdjustment" }}
+  {{ $all = sort $all $stat "desc" }}
+{{ else }}
+  {{ $all = sort $all $stat }}
+{{ end }}
+
+<div class="library-table comparison"><table>
+  <thead><tr>
+    {{ range $all }}
+    <th>
+      <a href="/library/{{ anchorize .name }}" title="{{ .name }}{{ with .buff }} ({{ . }}){{ end }}">
+      <img 
+        src="/img/icons/{{ anchorize .name }}{{ with .buff }}-{{ anchorize . }}{{ end }}.png"
+        alt="{{ .name }}{{ with .buff }} ({{ . }}){{ end }}">
+      </a>
+    </th>
+    {{ end }}
+  </tr></thead>
+  <tbody><tr>
+    {{ $s := "" }}
+    {{ range $all }}
+      {{ $s = . }}
+      {{ range split $stat "." }}{{ $s = index $s . }}{{ end }}
+      <td>{{ $s }}</td>
+    {{ end }}
+  </tr></tbody>
+</table></div>
+
+<p class="move-notes">{{ .Get 1 }}</p>
