@@ -22,7 +22,7 @@ The fuse on bombs works on a 2 second timer when they are pulled. If it hits an 
 
 If it's not in Mollo's hand, it will explode 50 frames (a little less than a second) after it becomes unstable/is thrown.
 
-Note: the interactions with Mollo's specials. Bombs will immediately become unstable when Mollo throws them at the apex of Up Special or when he hits them with bat (Down Special). Bombs will immediately detonate when he shoots them with Side Special or if he uses Down Special while one is in his hand and he isn't drifting too far forwards
+> Interactions with Mollo's specials: Bombs will immediately become unstable when Mollo throws them at the apex of Up Special or when he hits them with bat (Down Special). Bombs will immediately detonate when he shoots them with Side Special or if he uses Down Special while one is in his hand and he isn't drifting too far forwards
 
 ### In Combos
 
@@ -42,7 +42,7 @@ If you successfully parry that hitbox when it is thrown at you, the bomb will fl
 
 {{< video parry-bonk >}}
 
-Note: if you parry Mollo's finisher at close range and it bonks him, get ready to follow up with a jab! This is one of the best forms of bomb counterplay.
+> Note: if you parry Mollo's finisher at close range and it bonks him, get ready to follow up with a jab! This is one of the best forms of bomb counterplay.
 
 If you don't parry this bonk hitbox and instead parry the explosion, Mollo will be put into parry stun as long as he isn't in hitstun. This is an important distinction when trying to parry bombs like firecracker or finisher bomb, as dashing back to parry the explosion can sometimes net you better punishes than parrying the bonk and sending the bomb back at Mollo.
 

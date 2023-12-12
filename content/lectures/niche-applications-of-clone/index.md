@@ -50,7 +50,7 @@ Projectiles this works against:
 
 Clone walling can also be used defensively against Shovel Knight's SideB and Wrastor's DownB since they have hit detection and stop as soon as they hit something. In both of these cases, it's fairly difficult to convert the clone wall into a neutral win, but it at least prevents you from getting hit.
 
-Note: Kragg's rock is not on the list above because it stays active until it touches the ground after hitting the clone. Clone walling can stop the rock from hitting you on the initial throw, but be careful about running in directly behind the clone lest you get hit while the rock is still falling. Mollo's bombs are a similar story.
+> Kragg's rock is not on the list above because it stays active until it touches the ground after hitting the clone. Clone walling can stop the rock from hitting you on the initial throw, but be careful about running in directly behind the clone lest you get hit while the rock is still falling. Mollo's bombs are a similar story.
 
 ## Clone Tech Chasing
 
@@ -64,7 +64,7 @@ Sometimes the opponent will be able to DI hard out and escape the combo if they 
 
 {{< video clone-tech-chase-2 >}}
 
-Note: This technique should only be used at mid percents. At low percents, you should be going for different combo options and likely won't have time to get the clone out mid-combo. At high percents, the opponent will be sent offstage or too far away for the clone to be meaningful.
+> Note: This technique should only be used at mid percents. At low percents, you should be going for different combo options and likely won't have time to get the clone out mid-combo. At high percents, the opponent will be sent offstage or too far away for the clone to be meaningful.
 
 ## Boosted Clone
 

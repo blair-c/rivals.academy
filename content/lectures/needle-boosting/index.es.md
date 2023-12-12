@@ -23,7 +23,7 @@ La velocidad terrestre de Ranno es mucho mejor que su velocidad aérea, por lo q
 
 Idealmente la técnica funciona mejor si usas el NSpecial en un rango no mayor a 3 frames de haber salido del borde. Eso puede sonar bastante preciso para ser consistente pero es mas fácil de lo que crees ya que solo es tocar el botón especial en medio de opciones de movimiento bastante comúnes.
  
-Nota: La forma en la que salgas de la plataforma no importa mientras lleves suficiente velocidad, puedes correr, hacer wavedash, moonwalk, etc. Si estás en el suelo y hay un borde, puedes propulsarte. Aún así la forma más común es corriendo ya que el dash inicial de Ranno es muy veloz.
+> La forma en la que salgas de la plataforma no importa mientras lleves suficiente velocidad, puedes correr, hacer wavedash, moonwalk, etc. Si estás en el suelo y hay un borde, puedes propulsarte. Aún así la forma más común es corriendo ya que el dash inicial de Ranno es muy veloz.
 
 ## Práctica
  
@@ -74,7 +74,7 @@ O para viajar muy lejos al propio para atrapar movilidad y opciones defensivas.
 
 {{< video needle-boost-nair >}}
 
-Nota: Sin importar que esta sea una técnica muy buena, con buenas recompensas, puede ser de un riesgo bastante alto. Por ejemplo, no usar correctamente la técnica te puede dejar muy lejos del escenario forzandote a gastar varios recursos para regresar dejándote vulnerable. Deberás saber cuando y cuando no vale la pena aplicar la técnica, según el riesgo y la recompensa.
+> Nota: Sin importar que esta sea una técnica muy buena, con buenas recompensas, puede ser de un riesgo bastante alto. Por ejemplo, no usar correctamente la técnica te puede dejar muy lejos del escenario forzandote a gastar varios recursos para regresar dejándote vulnerable. Deberás saber cuando y cuando no vale la pena aplicar la técnica, según el riesgo y la recompensa.
 
 ## Bonus: Repetidardo (Hacer sapito)
 

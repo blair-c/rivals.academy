@@ -21,7 +21,7 @@ Esta técnica consiste en los siguientes inputs: un DSpecial, seguido de tocar e
 
 Aprender a voltearse de este modo te permite iniciar el Pityflip sin importar que dirección estas viendo en el aire. Cuando estas viendo en dirección del borde no necesitas voltearte, y cuando estas viendo en la dirección opuesta a la del borde es cuando puedes aprovechar el cuarto de circulo para voltearte. Se recomienda practicar con las especificaciones de esta guía para fortalecer la memoria muscular.
 
-Nota: Tratar de controlar mientras vas cayendo, o hacer Fastfall en el momento exacto pueden ayudarte a lograr deslizarte del borde si el posicionamiento del giro no fue perfecto.
+> Tratar de controlar mientras vas cayendo, o hacer Fastfall en el momento exacto pueden ayudarte a lograr deslizarte del borde si el posicionamiento del giro no fue perfecto.
 
 ### Práctica
 

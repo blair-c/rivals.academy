@@ -42,7 +42,7 @@ Beast Dash's speed can also be controlled with the left stick, allowing for canc
 
 Now because this is a cancel from any Side Special hit into any action, there are countless uses to it and I encourage you to experiment and get creative. In this guide we're going to focus on some specific valuable cancels rather than find every single possible combination this move can create.
 
-Note: Since Side Special is only cancellable on hitting a character or object, you should generally only be using it with this aim. Beast Dash has significant endlag on whiff including pratfall in the air, so whiffing is very likely to get you punished.
+> Since Side Special is only cancellable on hitting a character or object, you should generally only be using it with this aim. Beast Dash has significant endlag on whiff including pratfall in the air, so whiffing is very likely to get you punished.
 
 ### Up Strong Cancel
 

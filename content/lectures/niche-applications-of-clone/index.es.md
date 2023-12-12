@@ -53,7 +53,7 @@ Proyectiles con los que esto funciona:
 
 El clon también funciona para detener el FSpecial de Shovel Knight y el DSpecial de Wrastor debido a que estos movimientos se detienen al entrar en contacto con algo. Para estas situaciones es difícil voltearla a tu favor, pero por lo menos previene que seas golpeado por los movimientos.
 
-Nota: La roca de Kragg no está en la lista debido a que la Hitbox se mantiene activa hasta tocar el suelo, el clon puede evitar que el lanzamiento de la roca te golpee, pero si caminas hacia la roca mientras va cayendo te va a golpear de igual manera, las bombas de Mollo caen dentro de una categoría similar.
+> La roca de Kragg no está en la lista debido a que la Hitbox se mantiene activa hasta tocar el suelo, el clon puede evitar que el lanzamiento de la roca te golpee, pero si caminas hacia la roca mientras va cayendo te va a golpear de igual manera, las bombas de Mollo caen dentro de una categoría similar.
 
 ## Tech Chase con el clon
 
@@ -67,7 +67,7 @@ A veces el oponente será capaz de escapar el combo con el DI correcto y si hay 
 
 {{< video clone-tech-chase-2 >}}
 
-Nota: Esta técnica solo debe utilizarse en porcentajes medios. En los porcentajes bajos existen otras opciones que funcionan mejor y es poco probable poder sacar el clon en medio del combo. En porcentajes altos el oponente saldrá volando demasiado lejos o incluso fuera del escenario como para que el clon sea útil.
+> Nota: Esta técnica solo debe utilizarse en porcentajes medios. En los porcentajes bajos existen otras opciones que funcionan mejor y es poco probable poder sacar el clon en medio del combo. En porcentajes altos el oponente saldrá volando demasiado lejos o incluso fuera del escenario como para que el clon sea útil.
 
 ## Clon impulsado
 

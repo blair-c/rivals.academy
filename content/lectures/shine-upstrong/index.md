@@ -18,7 +18,7 @@ Shine > Up Strong is performed by using a Shine from an initial dash so that you
 
 {{< video inputs-slow >}}
 
-Note: Some players may find it helpful to bind one or more buttons used for this technique (special, jump, strong) to a spare shoulder button.
+> Some players may find it helpful to bind one or more buttons used for this technique (special, jump, strong) to a spare shoulder button.
 
 ### Breaking It Down
 
@@ -38,7 +38,7 @@ Now all that's left is to put it all together!
 
 {{< video practice-all-together >}}
 
-Note: Try to Shine as close to the center of your opponent's hurtbox as you can, for the Shine > Up Strong to connect on all DIs.
+> Try to Shine as close to the center of your opponent's hurtbox as you can, for the Shine > Up Strong to connect on all DIs.
 
 ### Common Issues
 

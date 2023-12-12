@@ -22,7 +22,7 @@ Holding down before inputting jump lets you start float as soon as you leave the
 
 {{< video ground-float >}}
 
-Note: If you use a controller, most Pomme players recommend binding one of your shoulder buttons to Jump. This will allow you to easily use the right stick for float aerials without needing to switch to a claw grip.
+> If you use a controller, most Pomme players recommend binding one of your shoulder buttons to Jump. This will allow you to easily use the right stick for float aerials without needing to switch to a claw grip.
 
 ### Fastfall
 

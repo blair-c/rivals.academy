@@ -47,7 +47,7 @@ La velocidad del FSpecial puede controlarse con el stick izquierdo, lo que permi
 
 Como ya se ha mencionado, al poder cancelar el FSpecial en cualquier acción existen usos incontables, por lo que te queremos motivar a experimentar y ponerte creativo. Aún así vamos a ver algunas aplicaciones específicas que son bastante útiles, en lugar de tratar de descifrar todas las combinaciones posibles.
 
-Nota: Debido a que el FSpecial solo se puede cancelar si se acierta el golpe, solo debería usarse con ese enfoque. El FSpecial tiene mucho lag de fallo, e incluso te deja en caída libre si lo fallas en el aire, además de que tiene una posibilidad muy alta de que te castiguen por fallarlo.
+> Debido a que el FSpecial solo se puede cancelar si se acierta el golpe, solo debería usarse con ese enfoque. El FSpecial tiene mucho lag de fallo, e incluso te deja en caída libre si lo fallas en el aire, además de que tiene una posibilidad muy alta de que te castiguen por fallarlo.
 
 ### Cancelar a UStrong
 

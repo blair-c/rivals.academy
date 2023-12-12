@@ -16,7 +16,7 @@ Additionally, special can be held to prevent clone from double jumping or using 
 
 In this guide, we'll be diving in-depth into how positioning affects clone behavior in the two different modes.
 
-Note: "Origin points" mentioned throughout this guide are situated at the bottom center point of a character's hurtbox. I marked these points with a white dot, just enlarged for easier reference. Additionally, if there's an arrow pointing a certain direction, it just means the area of influence extends infinitely in that direction.
+> Note: "Origin points" mentioned throughout this guide are situated at the bottom center point of a character's hurtbox. I marked these points with a white dot, just enlarged for easier reference. Additionally, if there's an arrow pointing a certain direction, it just means the area of influence extends infinitely in that direction.
 
 ## Attack Mode
 

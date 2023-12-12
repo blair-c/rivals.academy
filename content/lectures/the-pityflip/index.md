@@ -18,7 +18,7 @@ The inputs consist firstly of a Down Special followed by a press of the dodge bu
 
 Learning the flip this way allows for the pityflip to be initiated whether facing towards or away from ledge. While facing towards, there is no need to start diagonally downwards, as you can just hold down and input the flip to launch the correct way. However when facing away from the stage, the diagonal turns you around first so that you launch towards the edge, while the quarter circle will turn you back around. The reason l say to practice with the diagonal anyways is to build muscle memory and become comfortable performing the tech regardless of which way you are facing.
 
-Note: Nuanced control of your aerial drift, and/or a fastfall input just above ledge can both help you hit the slideoff correctly if the spacing of the flip wasn't perfect.
+> Nuanced control of your aerial drift, and/or a fastfall input just above ledge can both help you hit the slideoff correctly if the spacing of the flip wasn't perfect.
 
 ### Practice
 

@@ -26,7 +26,7 @@ Si sostienes hacia abajo antes de tocar el botón de salto es posible hacer que 
 
 {{< video ground-float >}}
 
-Nota: Si juegas en control, es recomendable configurar uno de los gatillos para el salto. Esto te permite usar el c-stick (palanca derecha) para hacer los aéreos durante el flote sin tener que cambiar la forma en la que sostienes el control.
+> Si juegas en control, es recomendable configurar uno de los gatillos para el salto. Esto te permite usar el c-stick (palanca derecha) para hacer los aéreos durante el flote sin tener que cambiar la forma en la que sostienes el control.
 
 ### Fastfall
 

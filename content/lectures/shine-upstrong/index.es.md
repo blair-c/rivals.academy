@@ -21,7 +21,7 @@ Para ejecutar el combo se usa Shine a partir de un Dash inicial para que te desl
 
 {{< video inputs-slow >}}
 
-Nota: Es recomendable que coloques alguna de las acciones en uno de los gatillos del control (botón de salto, especiales o ataques fuertes), puede que así se te facilite el combo.
+> Es recomendable que coloques alguna de las acciones en uno de los gatillos del control (botón de salto, especiales o ataques fuertes), puede que así se te facilite el combo.
 
 ### Paso a paso
 
@@ -41,7 +41,7 @@ Ahora, ¡pongamóslo todo junto!
 
 {{< video practice-all-together >}}
 
-Nota: Trata de usar el Shine lo más cerca posible del oponente, para que el combo funcione en cualquier DI.
+> Trata de usar el Shine lo más cerca posible del oponente, para que el combo funcione en cualquier DI.
 
 ### Problemas comunes
 

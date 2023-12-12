@@ -20,7 +20,7 @@ What you’re doing with this tech is using needles to translate your grounded m
 
 Needle boosting works best when it's done within 3 frames of leaving the edge. That may sound like a tight window to hit consistently, but it’s easier to implement than you may think since all you’re doing is adding one special input to the end of common movement options.
 
-Note: The method of moving off of the edge doesn’t matter, you can dash, wavedash, moonwalk, etc. If you were on the ground before leaving via an edge, you can needle boost off of it. However, it's often most prominent with Ranno’s extremely quick initial dash. 
+> The method of moving off of the edge doesn’t matter, you can dash, wavedash, moonwalk, etc. If you were on the ground before leaving via an edge, you can needle boost off of it. However, it's often most prominent with Ranno’s extremely quick initial dash. 
 
 ## Practice
 
@@ -71,7 +71,7 @@ Or overshoot from a platform to catch dashbacks and other defensive movement.
 
 {{< video needle-boost-nair >}}
 
-Note: While needle boosting is a strong option, it can be a high risk, high reward one. For example, whiffing a needle boost offstage edgeguard can force you to burn resources doing a low recovery; the safer option is to stay on stage and charge needles. It’s up to the Ranno player to be decisive and gauge the risk/reward when it comes to implementing needle boosts into their gameplan. 
+> Note: While needle boosting is a strong option, it can be a high risk, high reward one. For example, whiffing a needle boost offstage edgeguard can force you to burn resources doing a low recovery; the safer option is to stay on stage and charge needles. It’s up to the Ranno player to be decisive and gauge the risk/reward when it comes to implementing needle boosts into their gameplan. 
 
 ## Bonus: Rock Skipping
 

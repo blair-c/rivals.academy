@@ -167,7 +167,7 @@ Starting vertical velocity for a double jump. Velocity goes down due to gravity.
 
 {{< library/cast-comparison "doubleJump.speed" "Measured in pixels per frame" >}}
 
-Absa's -1 value means she dips during the start of her double jump. She has a separate, unique Double Jump Acceleration stat with a value of -1.4 which accelerates her upwards.
+> Absa's -1 value means she dips during the start of her double jump. She has a separate, unique Double Jump Acceleration stat with a value of -1.4 which accelerates her upwards.
 
 ### Walljump
 
@@ -185,7 +185,7 @@ Starting horizontal velocity for a walljump.
 
 #### Wallcling
 
-Maypul and Ori are able to wallcling, holding their position on the wall for up to 60 frames before walljumping.
+> Maypul and Ori are able to wallcling, holding their position on the wall for up to 60 frames before walljumping.
 
 ### Pratfall
 
