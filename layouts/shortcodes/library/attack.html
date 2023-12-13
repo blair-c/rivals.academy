@@ -4,8 +4,17 @@
 {{ $a = print (index $a 0) (index $a 1 | title) }}
 {{ range index $c $a }}
   {{ if isset . "name" }}
-    <h4 id="{{ $slug }}-{{ anchorize .name }}">
-      {{ .name }}{{ with .cost }} ({{ . }} Gems){{ end }}
+    <h4 id="{{ $slug }}-{{ anchorize .name }}" class="heading">
+      {{ .name }}{{ with .cost }} ({{ . }} Gems){{ end -}}
+      <button
+        class="heading-link"
+        title="{{ T "copy-link" }}"
+        aria-label="{{ T "copy-link" }} {{ T "to-this-section" }}: {{ .name | safeHTML }}"
+        onclick="copyHeadingLink({{ print $slug "-" (anchorize .name) }})"
+      >
+        {{ partial "svg/copy.svg" }}
+      </button>
+    <span class="copied">{{ T "copied" }}</span>
     </h4>
   {{ end }}
   {{ partial "partials/move-display.html" . }}

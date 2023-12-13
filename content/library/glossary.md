@@ -233,7 +233,7 @@ A value that determines if and how the base launch angle is affected by the rela
 
 - **{{< code 0 >}}:** Sends at the exact knockback angle every time.
 - **{{< code 1 >}}:** Sends away from the center of the attacker or projectile.
-  - [Zetterburn Shine](/library/zetterburn#neutral-special), [Forsburn Combust](/library/forsburn#down-special)
+  - [Forsburn Combust](/library/forsburn#down-special)
 - **{{< code 2 >}}:** Sends toward the center of the attacker or projectile.
 - **{{< code 3 >}}:** Horizontal knockback is reversed if the enemy is behind the center of the hitbox.
 - **{{< code 4 >}}:** Horizontal knockback is reversed if the enemy is in front of the center of the hitbox.
@@ -243,6 +243,7 @@ A value that determines if and how the base launch angle is affected by the rela
   - [Maypul Neutral Air](/library/maypul#neutral-air), [Orcane Forward Tilt](/library/orcane#forward-tilt)
 - **{{< code 7 >}}:** Horizontal knockback is reversed if the enemy is in front of the attacker or projectile.
 - **{{< code 8 >}}:** Sends away from the center of the hitbox.
+  - [Shovel Knight War Horn](/library/shovel-knight#neutral-special-war-horn)
 - **{{< code 9 >}}:** Sends toward the center of the hitbox.
 - **{{< code 10 >}}:** Sends in the direction the attacker is moving.
   - [Zetterburn Up Special](/library/zetterburn#up-special) (Final Hit)

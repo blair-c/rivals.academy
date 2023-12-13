@@ -1,10 +1,12 @@
 {{ if or (eq .Level 2) (eq .Level 3) (eq .Level 4) }}
   <h{{ .Level }} id="{{ .Anchor | safeURL }}" class="heading">
     {{ .Text | safeHTML -}}
-    <button class="heading-link"
-            title="{{ T "copy-link" }}"
-            aria-label="{{ T "copy-link" }} {{ T "to-this-section" }}: {{ .Text | safeHTML }}"
-            onclick="copyHeadingLink({{ .Anchor | safeURL }})">
+    <button
+      class="heading-link"
+      title="{{ T "copy-link" }}"
+      aria-label="{{ T "copy-link" }} {{ T "to-this-section" }}: {{ .Text | safeHTML }}"
+      onclick="copyHeadingLink({{ .Anchor | safeURL }})"
+    >
       {{ partial "svg/copy.svg" }}
     </button>
     <span class="copied">{{ T "copied" }}</span>
