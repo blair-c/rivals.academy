@@ -254,7 +254,7 @@ The initial speed at which a hitbox sends its target flying, measured in pixels 
 
 > **Base_Knockback**{{< code " + (" >}}**Knockback_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × " >}}[Knockback_Adjust](#knockback-adjust){{< code " × 0.12)" >}}
 
-- Base Knockback and Knockback Scaling are hitbox properties, displayed as "Base | Scaling" on Library character pages.
+- Base Knockback and Knockback Scaling are hitbox properties.
 - [Knockback Adjust](#knockback-adjust) is the basic weight stat of the character being attacked. 
 
 ### Hitstun
@@ -263,8 +263,8 @@ The number of frames a character is stunned, unable to perform basic actions, af
 
 > **Hitstun_Multiplier**{{< code " × ((" >}}**Base_Knockback**{{< code " × 2.4 × (" >}}[Knockback_Adjust](#knockback-adjust){{< code " - 1)) + (" >}}**Knockback_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × " >}}[Knockback_Adjust](#knockback-adjust){{< code " × 0.312))" >}}
 
-- The vast majority of hitboxes have a Hitbox Multiplier of {{< code 1 >}}.
-- Base Knockback and Knockback Scaling are hitbox properties, displayed as "Base | Scaling" on Library character pages.
+- Hitstun Multiplier, Base Knockback, and Knockback Scaling are hitbox properties.
+- The vast majority of hitboxes have a Hitstun Multiplier of {{< code 1 >}}.
 - [Knockback Adjust](#knockback-adjust) is the basic weight stat of the character being attacked. 
 
 ### Hitpause
@@ -273,7 +273,7 @@ The number of frames that both characters experience a pause/freeze-frame effect
 
 > **Base_Hitpause**{{< code " + (" >}}**Hitpause_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × 0.05) + " >}}**Extra_Hitpause**
 
-- Base Hitpause and Hitpause Scaling are hitbox properties, displayed as "Base | Scaling" on Library character pages.
+- Base Hitpause, Hitpause Scaling, and Extra Hitpause are hitbox properties.
 - The vast majority of hitboxes do not have Extra Hitpause.
 
 > If the game calculates that the attacked character will be KO'd on all even angled DI possibilities (not accounting for possible ledge techs or interference from other hitboxes/objects), a "galaxy" effect will play, locking that move into 20 frames of hitpause.
