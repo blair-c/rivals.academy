@@ -181,6 +181,22 @@ Default amount of landing lag frames.
 
 {{< library/cast-comparison landTime >}}
 
+### Pratfall
+
+Commonly referred to as special fall or freefall, pratfall is an airborne state a character can enter in which they are unable to act, most commonly entered by using a recovery move or being parried. Can be cancelled with [Walljump](#walljump).
+
+#### Pratfall Acceleration
+
+Multiplier to [Air Acceleration](#air-acceleration) that restricts horizontal control during pratfall.
+
+{{< library/cast-comparison pratfall.accel >}}
+
+#### Pratfall Land Time
+
+Number of frames characters are unable to act after landing from pratfall. Specific moves or circumstances may result in this value increasing or decreasing.
+
+{{< library/cast-comparison pratfall.landTime >}}
+
 ### Walljump
 
 #### Vertical Walljump Speed
@@ -199,19 +215,93 @@ Starting horizontal velocity for a walljump.
 
 > Maypul and Ori are able to wallcling, holding their position on the wall for up to {{< library/stat maypul wallcling.max >}} frames before walljumping.
 
-### Pratfall
+## Knockback Data
 
-#### Pratfall Acceleration
+### Damage
 
-Multiplier to [Air Acceleration](#air-acceleration) that restricts horizontal control during prat/special/free fall.
+The amount of % that an attack hitbox deals. The amount of % a character has after being dealt this damage influences [knockback](#knockback), [hitstun](#hitstun), and [hitpause](#hitpause).
 
-{{< library/cast-comparison pratfall.accel >}}
+### Angle
 
-#### Pratfall Land Time
+The base launch angle at which a hitbox sends its target flying, with 0° being straight horizontally in the direction the attacker is facing and 90° being straight upwards.
 
-Number of frames characters are unable to act after landing from prat/special/free fall.
+> Attacks listed as having a 361° angle, known as the "Sakurai Angle," have a special property. Moves with this angle send grounded opponents at a 40° angle, and aerial opponents at a 45° angle.
 
-{{< library/cast-comparison pratfall.landTime >}}
+#### Angle Flippers
+
+A value that determines if and how the base launch angle is affected by the relative positioning of the two characters. Let's run through the definitions of all 10, plus some notable examples:
+
+- **{{< code 0 >}}:** Sends at the exact knockback angle every time.
+- **{{< code 1 >}}:** Sends away from the center of the attacker.
+  - [Zetterburn Shine](/library/zetterburn#neutral-special), [Forsburn Combust](/library/forsburn#down-special)
+- **{{< code 2 >}}:** Sends toward the center of the attacker.
+- **{{< code 3 >}}:** Horizontal knockback is reversed if the enemy is behind the center of the hitbox.
+- **{{< code 4 >}}:** Horizontal knockback is reversed if the enemy is in front of the center of the hitbox.
+  - [Wrastor Down Air](/library/wrastor#down-air), [Sylvanos Down Strong](/library/sylvanos#down-strong)
+- **{{< code 5 >}}:** Horizontal knockback is reversed.
+- **{{< code 6 >}}:** Horizontal knockback is reversed if the enemy is behind the attacker.
+  - [Maypul Neutral Air](/library/maypul#neutral-air), [Orcane Forward Tilt](/library/orcane#forward-tilt)
+- **{{< code 7 >}}:** Horizontal knockback is reversed if the enemy is in front of the attacker.
+- **{{< code 8 >}}:** Sends away from the center of the hitbox.
+- **{{< code 9 >}}:** Sends toward the center of the hitbox.
+- **{{< code 10 >}}:** Sends in the direction the attacker is moving.
+  - [Zetterburn Up Special](/library/zetterburn#up-special) (Final Hit)
+
+### Knockback
+
+The initial speed at which a hitbox sends its target flying, measured in pixels per frame. Calculated by the following formula:
+
+> **Base_Knockback**{{< code " + (" >}}**Knockback_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × " >}}[Knockback_Adjust](#knockback-adjust){{< code " × 0.12)" >}}
+
+- Base Knockback and Knockback Scaling are hitbox properties, displayed as "Base | Scaling" on Library character pages.
+- [Knockback Adjust](#knockback-adjust) is the basic weight stat of the character being attacked. 
+
+### Hitstun
+
+The number of frames a character is stunned, unable to perform basic actions, after being hit by an attack hitbox. Calculated by the following formula:
+
+> **Hitstun_Multiplier**{{< code " × ((" >}}**Base_Knockback**{{< code " × 2.4 × (" >}}[Knockback_Adjust](#knockback-adjust){{< code " - 1)) + (" >}}**Knockback_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × " >}}[Knockback_Adjust](#knockback-adjust){{< code " × 0.312))" >}}
+
+- The vast majority of hitboxes have a Hitbox Multiplier of {{< code 1 >}}.
+- Base Knockback and Knockback Scaling are hitbox properties, displayed as "Base | Scaling" on Library character pages.
+- [Knockback Adjust](#knockback-adjust) is the basic weight stat of the character being attacked. 
+
+### Hitpause
+
+The number of frames that both characters experience a pause/freeze-frame effect when a hitbox connects. Calculated by the following formula:
+
+> **Base_Hitpause**{{< code " + (" >}}**Hitpause_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × 0.05) + " >}}**Extra_Hitpause**
+
+- Base Hitpause and Hitpause Scaling are hitbox properties, displayed as "Base | Scaling" on Library character pages.
+- The vast majority of hitboxes do not have Extra Hitpause.
+
+> If the game calculates that the attacked character will be KO'd on all even angled DI possibilities (not accounting for possible ledge techs or interference from other hitboxes/objects), a "galaxy" effect will play, locking that move into 20 frames of hitpause.
+
+#### ASDI Modifier
+
+Modifier of the default 10 pixels you are able to travel during hitpause with ASDI.
+
+### More
+
+#### Force Flinch
+
+Unique property which changes how characters react to attacks. Flinch replaces hitstun if the knockback applied is too low to lift a character off the ground, and unlike hitstun will not scale with damage. Force flinch values can prevent moves from lifting characters off the ground at any percent, make them unable to cause the flinch state even if the attack is crouch cancelled or cause them to be crouch cancelllable at any percent.
+
+- **{{< code 1 >}}:** Forces the flinch state, unless the attack is crouch cancelled.
+- **{{< code 2 >}}:** Cannot cause flinch, even if crouch cancelled.
+- **{{< code 3 >}}:** Can always be crouch cancelled, regardless of percent.
+
+#### Hit Lockout
+
+Amount of frames after hitpause ends in which a character cannot be hit again. This value is mostly used on kill moves for characters who have projectiles that may interfere with their opponents' knockback.
+
+#### Priority
+
+If multiple hitboxes collide with a target on the same frame, the target will be hit by the hitbox with the higher priority value. This is relevant on moves with multiple hitboxes that are active at the same time.
+
+#### Untechable
+
+A property that prevents a character from being able to tech on the ground when hit. [Etalus Up Air](/library/etalus#up-air) has a unique untechable property that prevents characters from being able to land on a platform during hitstun. Zetterburn and Shovel Knight have untechable moves that force the missed tech state on their opponent.
 
 #### TODO:
 > Match char pages and yaml data files to this ordering as final step
