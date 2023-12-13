@@ -285,7 +285,7 @@ Modifier of the default 10 pixels you are able to travel during hitpause with AS
 
 #### Force Flinch
 
-Unique property which changes how characters react to attacks. Flinch replaces hitstun if the knockback applied is too low to lift a character off the ground, and unlike hitstun will not scale with damage. Force flinch values can prevent moves from lifting characters off the ground at any percent, make them unable to cause the flinch state even if the attack is crouch cancelled or cause them to be crouch cancelllable at any percent.
+Unique property which changes how characters react to attacks. Flinch replaces hitstun if the knockback applied is too low to lift a character off the ground, and unlike hitstun will not scale with damage. Force flinch values can prevent moves from lifting characters off the ground at any percent, make them unable to cause the flinch state even if the attack is crouch cancelled, or cause them to be crouch cancelllable at any percent.
 
 - **{{< code 1 >}}:** Forces the flinch state, unless the attack is crouch cancelled.
 - **{{< code 2 >}}:** Cannot cause flinch, even if crouch cancelled.
