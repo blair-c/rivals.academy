@@ -161,6 +161,8 @@ Starting vertical velocity for a double jump. Velocity goes down due to [Gravity
 
 > Absa's {{< library/stat absa doubleJump.speed >}} value means she dips during the start of her double jump. She has a separate, unique Double Jump Acceleration stat with a value of {{< library/stat absa doubleJump.accel >}} pixels per frame per frame which accelerates her upwards.
 
+> Wrastor's triple and quadruple jumps have starting vertical velocities of {{< library/stat wrastor tripleJump.speed >}} and {{< library/stat wrastor quadrupleJump.speed >}}, respectively. Mollo's triple jump has a speed of {{< library/stat mollo tripleJump.speed >}}.
+
 ### Gravity Acceleration
 
 Speed characters accelerate downwards due to gravity while not in hitstun, until [Max Fall Speed](#max-fall-speed) is reached.
@@ -195,7 +197,7 @@ Starting horizontal velocity for a walljump.
 
 #### Wallcling
 
-> Maypul and Ori are able to wallcling, holding their position on the wall for up to 60 frames before walljumping.
+> Maypul and Ori are able to wallcling, holding their position on the wall for up to {{< library/stat maypul wallcling.max >}} frames before walljumping.
 
 ### Pratfall
 
