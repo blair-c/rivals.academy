@@ -232,16 +232,16 @@ The base launch angle at which a hitbox sends its target flying, with 0° being 
 A value that determines if and how the base launch angle is affected by the relative positioning of the two characters. Let's run through the definitions of all 10, plus some notable examples:
 
 - **{{< code 0 >}}:** Sends at the exact knockback angle every time.
-- **{{< code 1 >}}:** Sends away from the center of the attacker.
+- **{{< code 1 >}}:** Sends away from the center of the attacker or projectile.
   - [Zetterburn Shine](/library/zetterburn#neutral-special), [Forsburn Combust](/library/forsburn#down-special)
-- **{{< code 2 >}}:** Sends toward the center of the attacker.
+- **{{< code 2 >}}:** Sends toward the center of the attacker or projectile.
 - **{{< code 3 >}}:** Horizontal knockback is reversed if the enemy is behind the center of the hitbox.
 - **{{< code 4 >}}:** Horizontal knockback is reversed if the enemy is in front of the center of the hitbox.
   - [Wrastor Down Air](/library/wrastor#down-air), [Sylvanos Down Strong](/library/sylvanos#down-strong)
 - **{{< code 5 >}}:** Horizontal knockback is reversed.
-- **{{< code 6 >}}:** Horizontal knockback is reversed if the enemy is behind the attacker.
+- **{{< code 6 >}}:** Horizontal knockback is reversed if the enemy is behind the attacker or projectile.
   - [Maypul Neutral Air](/library/maypul#neutral-air), [Orcane Forward Tilt](/library/orcane#forward-tilt)
-- **{{< code 7 >}}:** Horizontal knockback is reversed if the enemy is in front of the attacker.
+- **{{< code 7 >}}:** Horizontal knockback is reversed if the enemy is in front of the attacker or projectile.
 - **{{< code 8 >}}:** Sends away from the center of the hitbox.
 - **{{< code 9 >}}:** Sends toward the center of the hitbox.
 - **{{< code 10 >}}:** Sends in the direction the attacker is moving.
