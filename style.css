@@ -8,7 +8,7 @@
   --clr-gray-1: #cecee0;
   --clr-gray-2: #93939e;
   --clr-accent: #3f3e6c;
-  --clr-accent-tl: rgba(63, 62, 108, .05);
+  --clr-accent-tl: rgba(63, 62, 108, .075);
   --clr-rss: #252244;
 
   --clr-darken-img: #303033;
@@ -128,19 +128,23 @@ a {
 }
 
 p a,
-table a {
+table a,
+article li a {
   border-bottom: 0px solid transparent;
 }
 
 p a:hover,
-table a:hover {
+table a:hover,
+article li a:hover {
   border-bottom: 1px solid currentColor;
   transition: all .05s ease-in;
 }
 
 article p a,
+article li a,
 .site-section-header p a,
-.bracket-desc a {
+.bracket-desc a,
+b {
   font-weight: 600;
 }
 
@@ -152,11 +156,9 @@ button {
 blockquote {
   margin: 1rem 0;
   padding: .5rem .75rem;
-  border-left: 2px solid var(--clr-accent);
+  border-left: .25rem solid var(--clr-accent);
   background: var(--clr-accent-tl);
-  border-radius: .125rem;
-  border-top-right-radius: .5rem;
-  border-bottom-right-radius: .5rem;
+  border-radius: .25rem;
 }
 
 blockquote p {
@@ -206,6 +208,10 @@ article ul,
 article ol {
   padding-left: 1.25rem;
   margin-top: .5rem;
+}
+
+article ul ul {
+  margin-top: 0;
 }
 
 article img {
