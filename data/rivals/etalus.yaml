@@ -4,45 +4,45 @@ element: water
 
 stats:
   # Effective Weight
-  knockbackAdjustment: 0.90
+  knockbackAdjustment: 0.9
   gravityAccel: 0.55
-  hitstunGravityAccel: 0.50
+  hitstunGravityAccel: 0.5
   airFriction: 0.04
-  airAccel: 0.30
+  airAccel: 0.3
   maxFallSpeed: 11
   fastfallSpeed: 15
   jumpsquat: 5
   landTime: 6
   # Ground Movement
-  groundFriction: 0.30
+  groundFriction: 0.3
   initialDash:
-    speed: 5.00
+    speed: 5
     time: 14
   run:
-    speed: 5.00
+    speed: 5
     stop:
       time: 6
     turn:
       time: 14
       accel: 0.25
   walk:
-    speed: 3.00
-    accel: 0.20
+    speed: 3
+    accel: 0.2
     turn:
       time: 6
   waveland:
     time: 8
-    friction: 0.0
+    friction: 0
   # Aerial Movement
-  maxAirSpeed: 4.0
+  maxAirSpeed: 4
   maxJumpHorizontalSpeed: 6
   fullhop:
-    speed: 11.00
+    speed: 11
   shorthop:
     speed: 7.4
   doubleJump:
     amount: 1
-    speed: 11.50
+    speed: 11.5
   walljump:
     speed:
       vertical: 8
@@ -52,11 +52,11 @@ stats:
     landTime: 6
   # On Ice
   onIce:
-    groundFriction: 0.10
+    groundFriction: 0.1
     initialDash:
-      speed: 5.50
+      speed: 5.5
     run:
-      speed: 5.50
+      speed: 5.5
       turn:
         time: 22
         accel: 0.08
@@ -71,7 +71,7 @@ stats:
     shorthop:
       speed: 8.1
     doubleJump:
-      speed: 12.50
+      speed: 12.5
 
 hurtbox:
   idle:

@@ -5,28 +5,28 @@ element: earth
 stats:
   # Effective Weight
   knockbackAdjustment: 0.95
-  gravityAccel: 0.60
+  gravityAccel: 0.6
   hitstunGravityAccel: 0.51
   airFriction: 0.06
-  airAccel: 0.20
+  airAccel: 0.2
   maxFallSpeed: 11
   fastfallSpeed: 16
   jumpsquat: 5
   landTime: 6
   # Ground Movement
-  groundFriction: 0.80
+  groundFriction: 0.8
   initialDash:
-    speed: 8.00
+    speed: 8
     time: 10
   run:
-    speed: 7.50
+    speed: 7.5
     stop:
       time: 4
     turn:
       time: 10
-      accel: 2.00
+      accel: 2
   walk:
-    speed: 4.50
+    speed: 4.5
     accel: 0.35
     turn:
       time: 6
@@ -34,21 +34,21 @@ stats:
     time: 8
     friction: 0.06
   # Aerial Movement
-  maxAirSpeed: 4.0
+  maxAirSpeed: 4
   maxJumpHorizontalSpeed: 8
   fullhop:
-    speed: 12.00
+    speed: 12
   shorthop:
-    speed: 7.40
+    speed: 7.4
   doubleJump:
     amount: 1
-    speed: 12.00
+    speed: 12
   walljump:
     speed:
       vertical: 9
       horizontal: 6
   pratfall:
-    accel: 1.50
+    accel: 1.5
     landTime: 15
 
 hurtbox:

@@ -4,9 +4,9 @@ element: fire
 
 stats:
   # Effective Weight
-  knockbackAdjustment: 1.00
-  gravityAccel: 0.50
-  hitstunGravityAccel: 0.50
+  knockbackAdjustment: 1
+  gravityAccel: 0.5
+  hitstunGravityAccel: 0.5
   airFriction: 0.02
   airAccel: 0.35
   maxFallSpeed: 10
@@ -16,15 +16,15 @@ stats:
   # Ground Movement
   groundFriction: 0.63
   initialDash:
-    speed: 7.50
+    speed: 7.5
     time: 16
   run:
-    speed: 6.50
+    speed: 6.5
     stop:
       time: 6
     turn:
       time: 10
-      accel: 1.00
+      accel: 1
   walk:
     speed: 4.25
     accel: 0.25
@@ -34,21 +34,21 @@ stats:
     time: 8
     friction: 0.13
   # Aerial Movement
-  maxAirSpeed: 4.0
+  maxAirSpeed: 4
   maxJumpHorizontalSpeed: 6
   fullhop:
     speed: 10.99
   shorthop:
-    speed: 6.0
+    speed: 6
   doubleJump:
     amount: 1
-    speed: 10.00
+    speed: 10
   walljump:
     speed:
       vertical: 9
       horizontal: 5
   pratfall:
-    accel: 0.60
+    accel: 0.6
     landTime: 10
 
 hurtbox:

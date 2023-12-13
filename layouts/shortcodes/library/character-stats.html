@@ -18,11 +18,11 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{ printf "%.2f" $c.knockbackAdjustment }}</td>
-        <td>{{ printf "%.2f" $c.gravityAccel }}</td>
-        <td>{{ printf "%.2f" $c.hitstunGravityAccel }}</td>
-        <td>{{ printf "%.2f" $c.airFriction }}</td>
-        <td>{{ printf "%.2f" $c.airAccel }}</td>
+        <td>{{ $c.knockbackAdjustment }}</td>
+        <td>{{ $c.gravityAccel }}</td>
+        <td>{{ $c.hitstunGravityAccel }}</td>
+        <td>{{ $c.airFriction }}</td>
+        <td>{{ $c.airAccel }}</td>
         <td>{{ $c.maxFallSpeed }}</td>
         <td>{{ $c.fastfallSpeed }}</td>
         <td>{{ $c.landTime }}</td>
@@ -74,29 +74,29 @@
         {{ with or $c.onIce $c.inSlipstream $c.momentumMail }}
           <td class="sticky-col">Base</td>
         {{ end }}
-        <td>{{ printf "%.2f" $c.groundFriction }}</td>
-        <td>{{ printf "%.2f" $c.initialDash.speed }}</td>
+        <td>{{ $c.groundFriction }}</td>
+        <td>{{ $c.initialDash.speed }}</td>
         <td>{{ $c.initialDash.time }}</td>
-        <td>{{ printf "%.2f" $c.run.speed }}</td>
+        <td>{{ $c.run.speed }}</td>
         <td>{{ $c.run.stop.time }}</td>
         <td>{{ $c.run.turn.time }}</td>
-        <td>{{ printf "%.2f" $c.run.turn.accel }}</td>
-        <td>{{ printf "%.2f" $c.walk.speed }}</td>
-        <td>{{ printf "%.2f" $c.walk.accel }}</td>
+        <td>{{ $c.run.turn.accel }}</td>
+        <td>{{ $c.walk.speed }}</td>
+        <td>{{ $c.walk.accel }}</td>
         <td>{{ $c.walk.turn.time }}</td>
         <td>{{ $c.waveland.time }}</td>
-        <td>{{ printf "%.2f" $c.waveland.friction }}</td>
+        <td>{{ $c.waveland.friction }}</td>
       </tr>
       {{ with $c.onIce }}
         <tr>
           <td class="sticky-col">On Ice</td>
-          <td>{{ printf "%.2f" .groundFriction }}</td>
-          <td>{{ printf "%.2f" .initialDash.speed }}</td>
+          <td>{{ .groundFriction }}</td>
+          <td>{{ .initialDash.speed }}</td>
           <td></td>
-          <td>{{ printf "%.2f" .run.speed }}</td>
+          <td>{{ .run.speed }}</td>
           <td></td>
           <td>{{ .run.turn.time }}</td>
-          <td>{{ printf "%.2f" .run.turn.accel }}</td>
+          <td>{{ .run.turn.accel }}</td>
           <td></td><td></td><td></td>
           <td>{{ .waveland.time }}</td>
           <td></td>
@@ -106,25 +106,25 @@
         <tr>
           <td class="sticky-col">In Slip</td>
           <td></td>
-          <td>{{ printf "%.2f" .initialDash.speed }}</td>
+          <td>{{ .initialDash.speed }}</td>
           <td></td>
-          <td>{{ printf "%.2f" .run.speed }}</td>
+          <td>{{ .run.speed }}</td>
           <td></td>
           <td>{{ .run.turn.time }}</td>
-          <td>{{ printf "%.2f" .run.turn.accel }}</td>
-          <td>{{ printf "%.2f" .walk.speed }}</td>
-          <td>{{ printf "%.2f" .walk.accel }}</td>
+          <td>{{ .run.turn.accel }}</td>
+          <td>{{ .walk.speed }}</td>
+          <td>{{ .walk.accel }}</td>
           <td></td><td></td><td></td>
         </tr>
       {{ end }}
       {{ with $c.momentumMail }}
         <tr>
           <td class="sticky-col">M. Mail</td>
-          <td>{{ printf "%.2f" .groundFriction }}</td>
+          <td>{{ .groundFriction }}</td>
           <td></td><td></td><td></td>
           <td>{{ .run.stop.time }}</td>
           <td>{{ .run.turn.time }}</td>
-          <td>{{ printf "%.2f" .run.turn.accel }}</td>
+          <td>{{ .run.turn.accel }}</td>
           <td></td><td></td><td></td><td></td>
           <td>{{ .waveland.friction }}</td>
         </tr>
@@ -154,17 +154,17 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{ printf "%.1f" $c.maxAirSpeed }}</td>
+        <td>{{ $c.maxAirSpeed }}</td>
         <td>{{ $c.maxJumpHorizontalSpeed }}</td>
-        <td>{{ printf "%.2f" $c.fullhop.speed }}</td>
-        <td>{{ printf "%.1f" $c.shorthop.speed }}</td>
-        <td>{{ printf "%.2f" $c.doubleJump.speed }}</td>
+        <td>{{ $c.fullhop.speed }}</td>
+        <td>{{ $c.shorthop.speed }}</td>
+        <td>{{ $c.doubleJump.speed }}</td>
         {{ with $c.doubleJump.accel }}<td>{{ . }}</td>{{ end }}
-        {{ with $c.tripleJump.speed }}<td>{{ printf "%.2f" $c.tripleJump.speed }}</td>{{ end }}
+        {{ with $c.tripleJump.speed }}<td>{{ $c.tripleJump.speed }}</td>{{ end }}
         <td>{{ $c.walljump.speed.vertical }}</td>
         <td>{{ $c.walljump.speed.horizontal }}</td>
         {{ with $c.wallcling.max }}<td>{{ . }}</td>{{ end }}
-        <td>{{ printf "%.2f" $c.pratfall.accel }}</td>
+        <td>{{ $c.pratfall.accel }}</td>
         <td>{{ $c.pratfall.landTime }}</td>
       </tr>
     </tbody>

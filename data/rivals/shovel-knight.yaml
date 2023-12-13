@@ -5,55 +5,55 @@ element: guest
 stats:
   # Effective Weight
   knockbackAdjustment: 0.95
-  gravityAccel: 0.50
-  hitstunGravityAccel: 0.50
+  gravityAccel: 0.5
+  hitstunGravityAccel: 0.5
   airFriction: 0.04
-  airAccel: 0.30
+  airAccel: 0.3
   maxFallSpeed: 10
   fastfallSpeed: 13
   jumpsquat: 5
   landTime: 4
   # Ground Movement
-  groundFriction: 0.60
+  groundFriction: 0.6
   initialDash:
     speed: 6.25
     time: 10
   run:
-    speed: 6.00
+    speed: 6
     stop:
       time: 6
     turn:
       time: 18
-      accel: 0.50
+      accel: 0.5
   walk:
     speed: 3.25
-    accel: 0.20
+    accel: 0.2
     turn:
       time: 6
   waveland:
     time: 8
     friction: 0.13
   # Aerial Movement
-  maxAirSpeed: 6.0
+  maxAirSpeed: 6
   maxJumpHorizontalSpeed: 7
   fullhop:
     speed: 10.99
   shorthop:
-    speed: 6.0
+    speed: 6
   doubleJump:
     amount: 1
-    speed: 10.00
+    speed: 10
   walljump:
     speed:
       vertical: 9
       horizontal: 5
   pratfall:
-    accel: 1.00
+    accel: 1
     landTime: 20
   # Momentum Mail
   momentumMail:
-    knockbackAdjustment: 0.90
-    groundFriction: 0.30
+    knockbackAdjustment: 0.9
+    groundFriction: 0.3
     run:
       turn:
         time: 30

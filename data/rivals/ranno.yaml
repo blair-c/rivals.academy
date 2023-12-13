@@ -6,51 +6,51 @@ stats:
   # Effective Weight
   knockbackAdjustment: 1.05
   gravityAccel: 0.45
-  hitstunGravityAccel: 0.50
+  hitstunGravityAccel: 0.5
   airFriction: 0.02
-  airAccel: 0.30
+  airAccel: 0.3
   maxFallSpeed: 10
   fastfallSpeed: 13
   jumpsquat: 5
   landTime: 4
   # Ground Movement
-  groundFriction: 0.70
+  groundFriction: 0.7
   initialDash:
-    speed: 7.50
+    speed: 7.5
     time: 8
   run:
-    speed: 7.50
+    speed: 7.5
     stop:
       time: 4
     turn:
       time: 8
       accel: 1.75
   walk:
-    speed: 4.00
-    accel: 0.20
+    speed: 4
+    accel: 0.2
     turn:
       time: 6
   waveland:
     time: 8
     friction: 0.11
   # Aerial Movement
-  maxAirSpeed: 3.0
+  maxAirSpeed: 3
   maxJumpHorizontalSpeed: 4
   fullhop:
-    speed: 11.00
+    speed: 11
   shorthop:
-    speed: 7.0
+    speed: 7
   superJump:
     speed: 14
   doubleJump:
     amount: 1
-    speed: 11.50
+    speed: 11.5
   walljump:
     speed:
       vertical: 8
       horizontal: 7
   pratfall:
-    accel: 0.50
+    accel: 0.5
     landTime: 8
 
 hurtbox:

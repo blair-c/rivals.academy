@@ -4,8 +4,8 @@ element: air
 
 stats:
   # Effective Weight
-  knockbackAdjustment: 1.20
-  gravityAccel: 0.30
+  knockbackAdjustment: 1.2
+  gravityAccel: 0.3
   hitstunGravityAccel: 0.45
   airFriction: 0.05
   airAccel: 0.36
@@ -16,37 +16,37 @@ stats:
   # Ground Movement
   groundFriction: 0.63
   initialDash:
-    speed: 5.50
+    speed: 5.5
     time: 16
   run:
-    speed: 5.50
+    speed: 5.5
     stop:
       time: 4
     turn:
       time: 10
-      accel: 1.50
+      accel: 1.5
   walk:
-    speed: 3.00
-    accel: 0.20
+    speed: 3
+    accel: 0.2
     turn:
       time: 6
   waveland:
     time: 7
     friction: 0.07
   # Aerial Movement
-  maxAirSpeed: 5.0
+  maxAirSpeed: 5
   maxJumpHorizontalSpeed: 8
   fullhop:
-    speed: 7.60
+    speed: 7.6
   shorthop:
-    speed: 4.0
+    speed: 4
   doubleJump:
     amount: 1
-    speed: 8.00
+    speed: 8
   tripleJump:
-    speed: 7.00
+    speed: 7
   quadrupleJump:
-    speed: 6.00
+    speed: 6
   walljump:
     speed:
       vertical: 8
@@ -57,16 +57,16 @@ stats:
   # In Slipstream
   inSlipstream:
     initialDash:
-      speed: 8.00
+      speed: 8
     run:
-      speed: 8.00
+      speed: 8
       turn:
         time: 6
         accel: 2.25
     walk:
-      speed: 6.00
-      accel: 0.40
-    maxAirSpeed: 7.0
+      speed: 6
+      accel: 0.4
+    maxAirSpeed: 7
 
 hurtbox:
   idle:
