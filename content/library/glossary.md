@@ -9,7 +9,7 @@ authors:
 
 ### Knockback Adjust
 
-The standard "weight" stat. Dictates how far a move hits a character by functioning as a multiplier in the knockback formula.
+The standard "weight" stat. Dictates how far a move hits a character by functioning as a multiplier in the [knockback formula](#knockback).
 
 {{< library/cast-comparison knockbackAdjustment >}}
 
@@ -117,7 +117,7 @@ Replaces [Ground Friction](#ground-friction) during wavelands.
 
 ### Air Acceleration
 
-A character's aerial drift when holding left/right in the air while not in hitstun.
+A character's aerial drift when holding left/right in the air while not in hitstun, until [Max Air Speed](#max-air-speed) is reached.
 
 {{< library/cast-comparison airAccel "Measured in pixels per frame per frame" >}}
 
