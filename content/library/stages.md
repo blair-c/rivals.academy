@@ -10,46 +10,46 @@ outputs:
 
 ## Stage Comparisons
 ### Stage Width
-{{< library/stage-comparison "stageWidth" "Width of the main stage ground, measured in pixels" >}}
+{{< library/stage-comparison stageWidth "Width of the main stage ground, measured in pixels" >}}
 ### Top Blastzone
-{{< library/stage-comparison "blastzones.top" "Distance from ground to top blastzone, measured in pixels" >}}
+{{< library/stage-comparison blastzones.top "Distance from ground to top blastzone, measured in pixels" >}}
 ### Side Blastzones
-{{< library/stage-comparison "blastzones.side" "Distance from ledge to side blastzone, measured in pixels" >}}
+{{< library/stage-comparison blastzones.side "Distance from ledge to side blastzone, measured in pixels" >}}
 ### Bottom Blastzone
-{{< library/stage-comparison "blastzones.bottom" "Distance from ledge to bottom blastzone, measured in pixels" >}}
+{{< library/stage-comparison blastzones.bottom "Distance from ledge to bottom blastzone, measured in pixels" >}}
 
 ## Stage Details
 ### Fire Capital
-{{< library/stage-details "fireCapital" >}}
+{{< library/stage-details fireCapital >}}
 ### Air Armada
-{{< library/stage-details "airArmada" >}}
+{{< library/stage-details airArmada >}}
 ### The Rock Wall
-{{< library/stage-details "rockWall" >}}
+{{< library/stage-details rockWall >}}
 ### Merchant Port
-{{< library/stage-details "merchantPort" >}}
+{{< library/stage-details merchantPort >}}
 ### Treetop Lodge
-{{< library/stage-details "treetopLodge" >}}
+{{< library/stage-details treetopLodge >}}
 #### Treetop Lodge (Doubles)
-{{< library/stage-details "treetopLodge.doubles" >}}
+{{< library/stage-details treetopLodge.doubles >}}
 ### Blazing Hideout
-{{< library/stage-details "blazingHideout" >}}
+{{< library/stage-details blazingHideout >}}
 ### Tempest Peak
-{{< library/stage-details "tempestPeak" >}}
+{{< library/stage-details tempestPeak >}}
 ### Frozen Fortress
-{{< library/stage-details "frozenFortress" >}}
+{{< library/stage-details frozenFortress >}}
 ### Tower of Heaven
-{{< library/stage-details "towerOfHeaven" >}}
+{{< library/stage-details towerOfHeaven >}}
 ### Aethereal Gates
-{{< library/stage-details "aetherealGates" >}}
+{{< library/stage-details aetherealGates >}}
 ### The Endless Abyss
-{{< library/stage-details "endlessAbyss" >}}
+{{< library/stage-details endlessAbyss >}}
 ### The Spirit Tree
-{{< library/stage-details "spiritTree" >}}
+{{< library/stage-details spiritTree >}}
 ### The Forest Floor
-{{< library/stage-details "forestFloor" >}}
+{{< library/stage-details forestFloor >}}
 #### The Forest Floor (Doubles)
-{{< library/stage-details "forestFloor.doubles" >}}
+{{< library/stage-details forestFloor.doubles >}}
 ### Julesvale
-{{< library/stage-details "julesvale" >}}
+{{< library/stage-details julesvale >}}
 ### Troupple Pond
-{{< library/stage-details "troupplePond" >}}
+{{< library/stage-details troupplePond >}}

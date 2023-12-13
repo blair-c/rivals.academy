@@ -10,52 +10,52 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox "ori" >}}
+{{< library/hurtbox ori >}}
 ### Effective Weight
-{{< library/character-stats "ori" "effective-weight" >}}
+{{< library/character-stats ori effective-weight >}}
 ### Grounded Movement
-{{< library/character-stats "ori" "grounded-movement" >}}
+{{< library/character-stats ori grounded-movement >}}
 ### Aerial Movement
-{{< library/character-stats "ori" "aerial-movement" >}}
+{{< library/character-stats ori aerial-movement >}}
 
 ## Normal Attacks
 ### Jab
-{{< library/attack "ori" "jab" >}}
+{{< library/attack ori jab >}}
 ### Dash Attack
-{{< library/attack "ori" "dash-attack" >}}
+{{< library/attack ori dash-attack >}}
 ### Forward Tilt
-{{< library/attack "ori" "forward-tilt" >}}
+{{< library/attack ori forward-tilt >}}
 ### Up Tilt
-{{< library/attack "ori" "up-tilt" >}}
+{{< library/attack ori up-tilt >}}
 ### Down Tilt
-{{< library/attack "ori" "down-tilt" >}}
+{{< library/attack ori down-tilt >}}
 
 ## Aerial Attacks
 ### Neutral Air
-{{< library/attack "ori" "neutral-air" >}}
+{{< library/attack ori neutral-air >}}
 ### Forward Air
-{{< library/attack "ori" "forward-air" >}}
+{{< library/attack ori forward-air >}}
 ### Back Air
-{{< library/attack "ori" "back-air" >}}
+{{< library/attack ori back-air >}}
 ### Up Air
-{{< library/attack "ori" "up-air" >}}
+{{< library/attack ori up-air >}}
 ### Down Air
-{{< library/attack "ori" "down-air" >}}
+{{< library/attack ori down-air >}}
 
 ## Strong Attacks
 ### Forward Strong
-{{< library/attack "ori" "forward-strong" >}}
+{{< library/attack ori forward-strong >}}
 ### Up Strong
-{{< library/attack "ori" "up-strong" >}}
+{{< library/attack ori up-strong >}}
 ### Down Strong
-{{< library/attack "ori" "down-strong" >}}
+{{< library/attack ori down-strong >}}
 
 ## Special Attacks
 ### Neutral Special
-{{< library/attack "ori" "neutral-special" >}}
+{{< library/attack ori neutral-special >}}
 ### Side Special
-{{< library/attack "ori" "side-special" >}}
+{{< library/attack ori side-special >}}
 ### Up Special
-{{< library/attack "ori" "up-special" >}}
+{{< library/attack ori up-special >}}
 ### Down Special
-{{< library/attack "ori" "down-special" >}}
+{{< library/attack ori down-special >}}

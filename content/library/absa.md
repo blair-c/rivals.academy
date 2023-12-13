@@ -10,52 +10,52 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox "absa" >}}
+{{< library/hurtbox absa >}}
 ### Effective Weight
-{{< library/character-stats "absa" "effective-weight" >}}
+{{< library/character-stats absa effective-weight >}}
 ### Grounded Movement
-{{< library/character-stats "absa" "grounded-movement" >}}
+{{< library/character-stats absa grounded-movement >}}
 ### Aerial Movement
-{{< library/character-stats "absa" "aerial-movement" >}}
+{{< library/character-stats absa aerial-movement >}}
 
 ## Normal Attacks
 ### Jab
-{{< library/attack "absa" "jab" >}}
+{{< library/attack absa jab >}}
 ### Dash Attack
-{{< library/attack "absa" "dash-attack" >}}
+{{< library/attack absa dash-attack >}}
 ### Forward Tilt
-{{< library/attack "absa" "forward-tilt" >}}
+{{< library/attack absa forward-tilt >}}
 ### Up Tilt
-{{< library/attack "absa" "up-tilt" >}}
+{{< library/attack absa up-tilt >}}
 ### Down Tilt
-{{< library/attack "absa" "down-tilt" >}}
+{{< library/attack absa down-tilt >}}
 
 ## Aerial Attacks
 ### Neutral Air
-{{< library/attack "absa" "neutral-air" >}}
+{{< library/attack absa neutral-air >}}
 ### Forward Air
-{{< library/attack "absa" "forward-air" >}}
+{{< library/attack absa forward-air >}}
 ### Back Air
-{{< library/attack "absa" "back-air" >}}
+{{< library/attack absa back-air >}}
 ### Up Air
-{{< library/attack "absa" "up-air" >}}
+{{< library/attack absa up-air >}}
 ### Down Air
-{{< library/attack "absa" "down-air" >}}
+{{< library/attack absa down-air >}}
 
 ## Strong Attacks
 ### Forward Strong
-{{< library/attack "absa" "forward-strong" >}}
+{{< library/attack absa forward-strong >}}
 ### Up Strong
-{{< library/attack "absa" "up-strong" >}}
+{{< library/attack absa up-strong >}}
 ### Down Strong
-{{< library/attack "absa" "down-strong" >}}
+{{< library/attack absa down-strong >}}
 
 ## Special Attacks
 ### Neutral Special
-{{< library/attack "absa" "neutral-special" >}}
+{{< library/attack absa neutral-special >}}
 ### Side Special
-{{< library/attack "absa" "side-special" >}}
+{{< library/attack absa side-special >}}
 ### Up Special
-{{< library/attack "absa" "up-special" >}}
+{{< library/attack absa up-special >}}
 ### Down Special
-{{< library/attack "absa" "down-special" >}}
+{{< library/attack absa down-special >}}

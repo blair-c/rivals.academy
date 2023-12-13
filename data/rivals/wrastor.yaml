@@ -43,6 +43,10 @@ stats:
   doubleJump:
     amount: 1
     speed: 8.00
+  tripleJump:
+    speed: 7.00
+  quadrupleJump:
+    speed: 6.00
   walljump:
     speed:
       vertical: 8

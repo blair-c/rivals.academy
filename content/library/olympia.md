@@ -10,52 +10,52 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox "olympia" >}}
+{{< library/hurtbox olympia >}}
 ### Effective Weight
-{{< library/character-stats "olympia" "effective-weight" >}}
+{{< library/character-stats olympia effective-weight >}}
 ### Grounded Movement
-{{< library/character-stats "olympia" "grounded-movement" >}}
+{{< library/character-stats olympia grounded-movement >}}
 ### Aerial Movement
-{{< library/character-stats "olympia" "aerial-movement" >}}
+{{< library/character-stats olympia aerial-movement >}}
 
 ## Normal Attacks
 ### Jab
-{{< library/attack "olympia" "jab" >}}
+{{< library/attack olympia jab >}}
 ### Dash Attack
-{{< library/attack "olympia" "dash-attack" >}}
+{{< library/attack olympia dash-attack >}}
 ### Forward Tilt
-{{< library/attack "olympia" "forward-tilt" >}}
+{{< library/attack olympia forward-tilt >}}
 ### Up Tilt
-{{< library/attack "olympia" "up-tilt" >}}
+{{< library/attack olympia up-tilt >}}
 ### Down Tilt
-{{< library/attack "olympia" "down-tilt" >}}
+{{< library/attack olympia down-tilt >}}
 
 ## Aerial Attacks
 ### Neutral Air
-{{< library/attack "olympia" "neutral-air" >}}
+{{< library/attack olympia neutral-air >}}
 ### Forward Air
-{{< library/attack "olympia" "forward-air" >}}
+{{< library/attack olympia forward-air >}}
 ### Back Air
-{{< library/attack "olympia" "back-air" >}}
+{{< library/attack olympia back-air >}}
 ### Up Air
-{{< library/attack "olympia" "up-air" >}}
+{{< library/attack olympia up-air >}}
 ### Down Air
-{{< library/attack "olympia" "down-air" >}}
+{{< library/attack olympia down-air >}}
 
 ## Strong Attacks
 ### Forward Strong
-{{< library/attack "olympia" "forward-strong" >}}
+{{< library/attack olympia forward-strong >}}
 ### Up Strong
-{{< library/attack "olympia" "up-strong" >}}
+{{< library/attack olympia up-strong >}}
 ### Down Strong
-{{< library/attack "olympia" "down-strong" >}}
+{{< library/attack olympia down-strong >}}
 
 ## Special Attacks
 ### Neutral Special
-{{< library/attack "olympia" "neutral-special" >}}
+{{< library/attack olympia neutral-special >}}
 ### Side Special
-{{< library/attack "olympia" "side-special" >}}
+{{< library/attack olympia side-special >}}
 ### Up Special
-{{< library/attack "olympia" "up-special" >}}
+{{< library/attack olympia up-special >}}
 ### Down Special
-{{< library/attack "olympia" "down-special" >}}
+{{< library/attack olympia down-special >}}

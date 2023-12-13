@@ -10,52 +10,52 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox "ranno" >}}
+{{< library/hurtbox ranno >}}
 ### Effective Weight
-{{< library/character-stats "ranno" "effective-weight" >}}
+{{< library/character-stats ranno effective-weight >}}
 ### Grounded Movement
-{{< library/character-stats "ranno" "grounded-movement" >}}
+{{< library/character-stats ranno grounded-movement >}}
 ### Aerial Movement
-{{< library/character-stats "ranno" "aerial-movement" >}}
+{{< library/character-stats ranno aerial-movement >}}
 
 ## Normal Attacks
 ### Jab
-{{< library/attack "ranno" "jab" >}}
+{{< library/attack ranno jab >}}
 ### Dash Attack
-{{< library/attack "ranno" "dash-attack" >}}
+{{< library/attack ranno dash-attack >}}
 ### Forward Tilt
-{{< library/attack "ranno" "forward-tilt" >}}
+{{< library/attack ranno forward-tilt >}}
 ### Up Tilt
-{{< library/attack "ranno" "up-tilt" >}}
+{{< library/attack ranno up-tilt >}}
 ### Down Tilt
-{{< library/attack "ranno" "down-tilt" >}}
+{{< library/attack ranno down-tilt >}}
 
 ## Aerial Attacks
 ### Neutral Air
-{{< library/attack "ranno" "neutral-air" >}}
+{{< library/attack ranno neutral-air >}}
 ### Forward Air
-{{< library/attack "ranno" "forward-air" >}}
+{{< library/attack ranno forward-air >}}
 ### Back Air
-{{< library/attack "ranno" "back-air" >}}
+{{< library/attack ranno back-air >}}
 ### Up Air
-{{< library/attack "ranno" "up-air" >}}
+{{< library/attack ranno up-air >}}
 ### Down Air
-{{< library/attack "ranno" "down-air" >}}
+{{< library/attack ranno down-air >}}
 
 ## Strong Attacks
 ### Forward Strong
-{{< library/attack "ranno" "forward-strong" >}}
+{{< library/attack ranno forward-strong >}}
 ### Up Strong
-{{< library/attack "ranno" "up-strong" >}}
+{{< library/attack ranno up-strong >}}
 ### Down Strong
-{{< library/attack "ranno" "down-strong" >}}
+{{< library/attack ranno down-strong >}}
 
 ## Special Attacks
 ### Neutral Special
-{{< library/attack "ranno" "neutral-special" >}}
+{{< library/attack ranno neutral-special >}}
 ### Side Special
-{{< library/attack "ranno" "side-special" >}}
+{{< library/attack ranno side-special >}}
 ### Up Special
-{{< library/attack "ranno" "up-special" >}}
+{{< library/attack ranno up-special >}}
 ### Down Special
-{{< library/attack "ranno" "down-special" >}}
+{{< library/attack ranno down-special >}}

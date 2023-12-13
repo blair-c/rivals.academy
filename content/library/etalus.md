@@ -10,52 +10,52 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox "etalus" >}}
+{{< library/hurtbox etalus >}}
 ### Effective Weight
-{{< library/character-stats "etalus" "effective-weight" >}}
+{{< library/character-stats etalus effective-weight >}}
 ### Grounded Movement
-{{< library/character-stats "etalus" "grounded-movement" >}}
+{{< library/character-stats etalus grounded-movement >}}
 ### Aerial Movement
-{{< library/character-stats "etalus" "aerial-movement" >}}
+{{< library/character-stats etalus aerial-movement >}}
 
 ## Normal Attacks
 ### Jab
-{{< library/attack "etalus" "jab" >}}
+{{< library/attack etalus jab >}}
 ### Dash Attack
-{{< library/attack "etalus" "dash-attack" >}}
+{{< library/attack etalus dash-attack >}}
 ### Forward Tilt
-{{< library/attack "etalus" "forward-tilt" >}}
+{{< library/attack etalus forward-tilt >}}
 ### Up Tilt
-{{< library/attack "etalus" "up-tilt" >}}
+{{< library/attack etalus up-tilt >}}
 ### Down Tilt
-{{< library/attack "etalus" "down-tilt" >}}
+{{< library/attack etalus down-tilt >}}
 
 ## Aerial Attacks
 ### Neutral Air
-{{< library/attack "etalus" "neutral-air" >}}
+{{< library/attack etalus neutral-air >}}
 ### Forward Air
-{{< library/attack "etalus" "forward-air" >}}
+{{< library/attack etalus forward-air >}}
 ### Back Air
-{{< library/attack "etalus" "back-air" >}}
+{{< library/attack etalus back-air >}}
 ### Up Air
-{{< library/attack "etalus" "up-air" >}}
+{{< library/attack etalus up-air >}}
 ### Down Air
-{{< library/attack "etalus" "down-air" >}}
+{{< library/attack etalus down-air >}}
 
 ## Strong Attacks
 ### Forward Strong
-{{< library/attack "etalus" "forward-strong" >}}
+{{< library/attack etalus forward-strong >}}
 ### Up Strong
-{{< library/attack "etalus" "up-strong" >}}
+{{< library/attack etalus up-strong >}}
 ### Down Strong
-{{< library/attack "etalus" "down-strong" >}}
+{{< library/attack etalus down-strong >}}
 
 ## Special Attacks
 ### Neutral Special
-{{< library/attack "etalus" "neutral-special" >}}
+{{< library/attack etalus neutral-special >}}
 ### Side Special
-{{< library/attack "etalus" "side-special" >}}
+{{< library/attack etalus side-special >}}
 ### Up Special
-{{< library/attack "etalus" "up-special" >}}
+{{< library/attack etalus up-special >}}
 ### Down Special
-{{< library/attack "etalus" "down-special" >}}
+{{< library/attack etalus down-special >}}

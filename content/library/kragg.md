@@ -10,55 +10,55 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox "kragg" >}}
+{{< library/hurtbox kragg >}}
 ### Effective Weight
-{{< library/character-stats "kragg" "effective-weight" >}}
+{{< library/character-stats kragg effective-weight >}}
 ### Grounded Movement
-{{< library/character-stats "kragg" "grounded-movement" >}}
+{{< library/character-stats kragg grounded-movement >}}
 ### Aerial Movement
-{{< library/character-stats "kragg" "aerial-movement" >}}
+{{< library/character-stats kragg aerial-movement >}}
 
 ## Normal Attacks
 ### Jab
-{{< library/attack "kragg" "jab" >}}
+{{< library/attack kragg jab >}}
 ### Dash Attack
-{{< library/attack "kragg" "dash-attack" >}}
+{{< library/attack kragg dash-attack >}}
 ### Forward Tilt
-{{< library/attack "kragg" "forward-tilt" >}}
+{{< library/attack kragg forward-tilt >}}
 ### Up Tilt
-{{< library/attack "kragg" "up-tilt" >}}
+{{< library/attack kragg up-tilt >}}
 ### Down Tilt
-{{< library/attack "kragg" "down-tilt" >}}
+{{< library/attack kragg down-tilt >}}
 
 ## Aerial Attacks
 ### Neutral Air
-{{< library/attack "kragg" "neutral-air" >}}
+{{< library/attack kragg neutral-air >}}
 ### Forward Air
-{{< library/attack "kragg" "forward-air" >}}
+{{< library/attack kragg forward-air >}}
 ### Back Air
-{{< library/attack "kragg" "back-air" >}}
+{{< library/attack kragg back-air >}}
 ### Up Air
-{{< library/attack "kragg" "up-air" >}}
+{{< library/attack kragg up-air >}}
 ### Down Air
-{{< library/attack "kragg" "down-air" >}}
+{{< library/attack kragg down-air >}}
 
 ## Strong Attacks
 ### Forward Strong
-{{< library/attack "kragg" "forward-strong" >}}
+{{< library/attack kragg forward-strong >}}
 ### Up Strong
-{{< library/attack "kragg" "up-strong" >}}
+{{< library/attack kragg up-strong >}}
 ### Down Strong
-{{< library/attack "kragg" "down-strong" >}}
+{{< library/attack kragg down-strong >}}
 
 ## Special Attacks
 ### Neutral Special
-{{< library/attack "kragg" "neutral-special" >}}
+{{< library/attack kragg neutral-special >}}
 ### Side Special
-{{< library/attack "kragg" "side-special" >}}
+{{< library/attack kragg side-special >}}
 ### Up Special
-{{< library/attack "kragg" "up-special" >}}
+{{< library/attack kragg up-special >}}
 ### Down Special
-{{< library/attack "kragg" "down-special" >}}
+{{< library/attack kragg down-special >}}
 
 ### Taunt
-{{< library/attack "kragg" "taunt" >}}
+{{< library/attack kragg taunt >}}

@@ -10,52 +10,52 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox "forsburn" >}}
+{{< library/hurtbox forsburn >}}
 ### Effective Weight
-{{< library/character-stats "forsburn" "effective-weight" >}}
+{{< library/character-stats forsburn effective-weight >}}
 ### Grounded Movement
-{{< library/character-stats "forsburn" "grounded-movement" >}}
+{{< library/character-stats forsburn grounded-movement >}}
 ### Aerial Movement
-{{< library/character-stats "forsburn" "aerial-movement" >}}
+{{< library/character-stats forsburn aerial-movement >}}
 
 ## Normal Attacks
 ### Jab
-{{< library/attack "forsburn" "jab" >}}
+{{< library/attack forsburn jab >}}
 ### Dash Attack
-{{< library/attack "forsburn" "dash-attack" >}}
+{{< library/attack forsburn dash-attack >}}
 ### Forward Tilt
-{{< library/attack "forsburn" "forward-tilt" >}}
+{{< library/attack forsburn forward-tilt >}}
 ### Up Tilt
-{{< library/attack "forsburn" "up-tilt" >}}
+{{< library/attack forsburn up-tilt >}}
 ### Down Tilt
-{{< library/attack "forsburn" "down-tilt" >}}
+{{< library/attack forsburn down-tilt >}}
 
 ## Aerial Attacks
 ### Neutral Air
-{{< library/attack "forsburn" "neutral-air" >}}
+{{< library/attack forsburn neutral-air >}}
 ### Forward Air
-{{< library/attack "forsburn" "forward-air" >}}
+{{< library/attack forsburn forward-air >}}
 ### Back Air
-{{< library/attack "forsburn" "back-air" >}}
+{{< library/attack forsburn back-air >}}
 ### Up Air
-{{< library/attack "forsburn" "up-air" >}}
+{{< library/attack forsburn up-air >}}
 ### Down Air
-{{< library/attack "forsburn" "down-air" >}}
+{{< library/attack forsburn down-air >}}
 
 ## Strong Attacks
 ### Forward Strong
-{{< library/attack "forsburn" "forward-strong" >}}
+{{< library/attack forsburn forward-strong >}}
 ### Up Strong
-{{< library/attack "forsburn" "up-strong" >}}
+{{< library/attack forsburn up-strong >}}
 ### Down Strong
-{{< library/attack "forsburn" "down-strong" >}}
+{{< library/attack forsburn down-strong >}}
 
 ## Special Attacks
 ### Neutral Special
-{{< library/attack "forsburn" "neutral-special" >}}
+{{< library/attack forsburn neutral-special >}}
 ### Side Special
-{{< library/attack "forsburn" "side-special" >}}
+{{< library/attack forsburn side-special >}}
 ### Up Special
-{{< library/attack "forsburn" "up-special" >}}
+{{< library/attack forsburn up-special >}}
 ### Down Special
-{{< library/attack "forsburn" "down-special" >}}
+{{< library/attack forsburn down-special >}}

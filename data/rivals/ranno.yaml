@@ -40,6 +40,8 @@ stats:
     speed: 11.00
   shorthop:
     speed: 7.0
+  superJump:
+    speed: 14
   doubleJump:
     amount: 1
     speed: 11.50

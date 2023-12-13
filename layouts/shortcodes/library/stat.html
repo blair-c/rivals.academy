@@ -1,0 +1,6 @@
+{{ $c := index site.Data.rivals (.Get 0) }}
+{{ $s := $c.stats }}
+{{ range split (.Get 1) "." }}
+    {{ $s = index $s . }}
+{{ end }}
+<code>{{ $s }}</code>

@@ -20,36 +20,36 @@ translators:
 
 ## Detalles de escenerios
 ### Fire Capital
-{{< library/stage-details "fireCapital" >}}
+{{< library/stage-details fireCapital >}}
 ### Air Armada
-{{< library/stage-details "airArmada" >}}
+{{< library/stage-details airArmada >}}
 ### The Rock Wall
-{{< library/stage-details "rockWall" >}}
+{{< library/stage-details rockWall >}}
 ### Merchant Port
-{{< library/stage-details "merchantPort" >}}
+{{< library/stage-details merchantPort >}}
 ### Treetop Lodge
-{{< library/stage-details "treetopLodge" >}}
+{{< library/stage-details treetopLodge >}}
 #### Treetop Lodge (Dobles)
-{{< library/stage-details "treetopLodge.doubles" >}}
+{{< library/stage-details treetopLodge.doubles >}}
 ### Blazing Hideout
-{{< library/stage-details "blazingHideout" >}}
+{{< library/stage-details blazingHideout >}}
 ### Tempest Peak
-{{< library/stage-details "tempestPeak" >}}
+{{< library/stage-details tempestPeak >}}
 ### Frozen Fortress
-{{< library/stage-details "frozenFortress" >}}
+{{< library/stage-details frozenFortress >}}
 ### Tower of Heaven
-{{< library/stage-details "towerOfHeaven" >}}
+{{< library/stage-details towerOfHeaven >}}
 ### Aethereal Gates
-{{< library/stage-details "aetherealGates" >}}
+{{< library/stage-details aetherealGates >}}
 ### The Endless Abyss
-{{< library/stage-details "endlessAbyss" >}}
+{{< library/stage-details endlessAbyss >}}
 ### The Spirit Tree
-{{< library/stage-details "spiritTree" >}}
+{{< library/stage-details spiritTree >}}
 ### The Forest Floor
-{{< library/stage-details "forestFloor" >}}
+{{< library/stage-details forestFloor >}}
 #### The Forest Floor (Dobles)
-{{< library/stage-details "forestFloor.doubles" >}}
+{{< library/stage-details forestFloor.doubles >}}
 ### Julesvale
-{{< library/stage-details "julesvale" >}}
+{{< library/stage-details julesvale >}}
 ### Troupple Pond
-{{< library/stage-details "troupplePond" >}}
+{{< library/stage-details troupplePond >}}

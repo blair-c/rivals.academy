@@ -10,52 +10,52 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox "mollo" >}}
+{{< library/hurtbox mollo >}}
 ### Effective Weight
-{{< library/character-stats "mollo" "effective-weight" >}}
+{{< library/character-stats mollo effective-weight >}}
 ### Grounded Movement
-{{< library/character-stats "mollo" "grounded-movement" >}}
+{{< library/character-stats mollo grounded-movement >}}
 ### Aerial Movement
-{{< library/character-stats "mollo" "aerial-movement" >}}
+{{< library/character-stats mollo aerial-movement >}}
 
 ## Normal Attacks
 ### Jab
-{{< library/attack "mollo" "jab" >}}
+{{< library/attack mollo jab >}}
 ### Dash Attack
-{{< library/attack "mollo" "dash-attack" >}}
+{{< library/attack mollo dash-attack >}}
 ### Forward Tilt
-{{< library/attack "mollo" "forward-tilt" >}}
+{{< library/attack mollo forward-tilt >}}
 ### Up Tilt
-{{< library/attack "mollo" "up-tilt" >}}
+{{< library/attack mollo up-tilt >}}
 ### Down Tilt
-{{< library/attack "mollo" "down-tilt" >}}
+{{< library/attack mollo down-tilt >}}
 
 ## Aerial Attacks
 ### Neutral Air
-{{< library/attack "mollo" "neutral-air" >}}
+{{< library/attack mollo neutral-air >}}
 ### Forward Air
-{{< library/attack "mollo" "forward-air" >}}
+{{< library/attack mollo forward-air >}}
 ### Back Air
-{{< library/attack "mollo" "back-air" >}}
+{{< library/attack mollo back-air >}}
 ### Up Air
-{{< library/attack "mollo" "up-air" >}}
+{{< library/attack mollo up-air >}}
 ### Down Air
-{{< library/attack "mollo" "down-air" >}}
+{{< library/attack mollo down-air >}}
 
 ## Strong Attacks
 ### Forward Strong
-{{< library/attack "mollo" "forward-strong" >}}
+{{< library/attack mollo forward-strong >}}
 ### Up Strong
-{{< library/attack "mollo" "up-strong" >}}
+{{< library/attack mollo up-strong >}}
 ### Down Strong
-{{< library/attack "mollo" "down-strong" >}}
+{{< library/attack mollo down-strong >}}
 
 ## Special Attacks
 ### Neutral Special
-{{< library/attack "mollo" "neutral-special" >}}
+{{< library/attack mollo neutral-special >}}
 ### Side Special
-{{< library/attack "mollo" "side-special" >}}
+{{< library/attack mollo side-special >}}
 ### Up Special
-{{< library/attack "mollo" "up-special" >}}
+{{< library/attack mollo up-special >}}
 ### Down Special
-{{< library/attack "mollo" "down-special" >}}
+{{< library/attack mollo down-special >}}
