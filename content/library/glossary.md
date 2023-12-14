@@ -77,8 +77,8 @@ A value that determines if and how the base launch angle is affected by the rela
 - **{{< code 1 >}}:** Sends away from the center of the attacker or projectile.
   - [Forsburn Combust](/library/forsburn#down-special)
 - **{{< code 2 >}}:** Sends toward the center of the attacker or projectile.
-- **{{< code 3 >}}:** Horizontal knockback is reversed if the enemy is behind the center of the hitbox.
-- **{{< code 4 >}}:** Horizontal knockback is reversed if the enemy is in front of the center of the hitbox.
+- **{{< code 3 >}}:** Horizontal knockback sends away from the center of the hitbox.
+- **{{< code 4 >}}:** Horizontal knockback sends toward the center of the hitbox.
   - [Wrastor Down Air](/library/wrastor#down-air), [Sylvanos Down Strong](/library/sylvanos#down-strong)
 - **{{< code 5 >}}:** Horizontal knockback is reversed.
 - **{{< code 6 >}}:** Horizontal knockback is reversed if the enemy is behind the attacker or projectile.
@@ -97,6 +97,8 @@ The initial speed at which a hitbox sends its target flying, measured in pixels 
 > **Base_Knockback**{{< code " + (" >}}**Knockback_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × " >}}[Knockback_Adjust](#knockback-adjust){{< code " × 0.12)" >}}
 
 - Base Knockback and Knockback Scaling are hitbox properties.
+  - Knockback Scaling listed is divided by 100 for the formula, eg. 25 {{< code "⇒" >}} 0.25.
+- [Percent After Hit](#damage) is represented as an integer for the formula, eg. 50% ⇒ 50.
 - [Knockback Adjust](#knockback-adjust) is the basic weight stat of the character being attacked. 
 
 ### Hitstun
@@ -106,8 +108,11 @@ The number of frames a character is stunned, unable to perform basic actions, af
 > **Hitstun_Multiplier**{{< code " × ((" >}}**Base_Knockback**{{< code " × 2.4 × (" >}}[Knockback_Adjust](#knockback-adjust){{< code " - 1)) + (" >}}**Knockback_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × " >}}[Knockback_Adjust](#knockback-adjust){{< code " × 0.312))" >}}
 
 - Hitstun Multiplier, Base Knockback, and Knockback Scaling are hitbox properties.
-- The vast majority of hitboxes have a Hitstun Multiplier of {{< code 1 >}}.
-- [Knockback Adjust](#knockback-adjust) is the basic weight stat of the character being attacked. 
+  - The vast majority of hitboxes have a Hitstun Multiplier of {{< code 1 >}}.
+  - Knockback Scaling listed is divided by 100 for the formula, eg. 25 {{< code "⇒" >}} 0.25.
+- [Percent After Hit](#damage) is represented as an integer for the formula, eg. 50% ⇒ 50.
+- [Knockback Adjust](#knockback-adjust) is the basic weight stat of the character being attacked.
+- Final value is rounded up to the nearest integer.
 
 ### Hitpause
 
@@ -116,7 +121,10 @@ The number of frames that both characters experience a pause/freeze-frame effect
 > **Base_Hitpause**{{< code " + (" >}}**Hitpause_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × 0.05) + " >}}**Extra_Hitpause**
 
 - Base Hitpause, Hitpause Scaling, and Extra Hitpause are hitbox properties.
-- The vast majority of hitboxes do not have Extra Hitpause.
+  - The vast majority of hitboxes do not have Extra Hitpause.
+  - Hitpause Scaling listed is divided by 100 for the formula, eg. 25 {{< code "⇒" >}} 0.25.
+- [Percent After Hit](#damage) is represented as an integer for the formula, eg. 50% ⇒ 50.
+- Final value is rounded up to the nearest integer.
 
 > If the game calculates that the attacked character will be KO'd on all even angled DI possibilities (not accounting for possible ledge techs or interference from other hitboxes/objects), a "galaxy" effect will play, locking that hit into 20 frames of hitpause.
 
