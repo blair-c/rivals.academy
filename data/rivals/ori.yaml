@@ -205,7 +205,7 @@ dashAttack:
       to: 19
       frames: 3
     cancellable:
-    - with: IASA
+    - with: Auto
       condition: On Hitting Character
     damage: 10
     angle: 90

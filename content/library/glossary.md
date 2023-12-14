@@ -5,6 +5,8 @@ authors:
 - Sector 7-G
 ---
 
+> Rivals of Aether runs at 60 frames per second, and natively at 512×960px resolution. Throughout this document and site, we use these frames and pixels as units of time and distance, respectively.
+
 ## Effective Weight
 
 ### Knockback Adjust
@@ -177,7 +179,7 @@ Fall speed in fastfall.
 
 ### Land Time
 
-Default amount of landing lag frames. 
+Default amount of landing lag frames incurred when a character lands from the air onto the ground or a platform. 
 
 {{< library/cast-comparison landTime >}}
 
@@ -214,6 +216,56 @@ Starting horizontal velocity for a walljump.
 #### Wallcling
 
 > Maypul and Ori are able to wallcling, holding their position on the wall for up to {{< library/stat maypul wallcling.max >}} frames before walljumping.
+
+## Frame Data
+
+All attacks are composed of three main sections: [startup](#startup), [active](#active), and [endlag](#endlag) frames.
+
+### Startup
+
+The number of frames between inputting an attack and the first hitbox becoming active. Attacks with low startup are referred to as "fast," since they are active quickly after being inputted, while attacks with high startup are referred to as "slow."
+
+### Active
+
+The window in which an attack has a hitbox, dealing damage and knockback. Some attacks have multiple hitboxes, each with their own active windows that may or may not overlap with each other, or leave gaps of time between.
+
+### Endlag
+
+The number of frames between the last frame that an attack has an active hitbox and the first frame the character can perform other actions again (commonly referred to as "First Actionable Frame," or FAF).
+
+> All attacks besides most jabs and specials have separate endlag values for if the attack hit or whiffed, generally 1.5× the amount on whiff vs. on hit.
+
+#### Landing Lag
+
+A special endlag value that is incurred if the character lands during the startup, active, or endlag frames of an aerial attack. Landing during the last 5 frames of endlag will autocancel into the character's [land time](#land-time) (4 or 6 frames) instead.
+
+> Like with endlag, all aerials have separate landing lag values for if the attack hit or whiffed, generally 1.5× the amount on whiff vs. on hit. On hit you are also able to cancel the last 5 frames of landing lag into [jumpsquat](#jumpsquat), allowing you to become airborne on the same frame you would normally be actionable. [More](/lectures/understanding-landing-lag)..
+
+### More
+
+#### Cancelable
+
+A number of attacks have different ways in which you can cancel it early, either preventing further active frames or cancelling part of, if not all of, endlag. The most common methods of cancelling a move is a regular cancel, commonly input as a parry or a second special input, or cancelling into another attack/action (jump, walljump, airdodge) after a certain amount of time (see: [Zetterburn Down Special](/library/zetterburn#down-special)).
+
+Some attacks are only cancellable on hit, such as [Kragg Dash Attack](/library/kragg#dash-attack) being cancellable into jabs and tilts, and his [Side Special](/library/kragg#side-special) being cancellable into jump on hit. [Ori Sweetspot Dash Attack](/library/ori#dash-attack) automatically cancels into an actionable state on hit.
+
+Attacks with a listed "IASA" (Interruptable As Soon As) cancel window can be cancelled into nearly any action.
+
+#### Intangible
+
+Intangible frames are those in which a character does not have a hurtbox, effectively making them invincible for that period of time.
+
+> Attacks with intangibility frames often have their [startup](#startup) and [endlag](#endlag) frames listed relative to these frames as an extension of the "active" window.
+
+#### Projectile Invuln.
+
+Certain attacks or objects have invulnerability to projectiles, in which case they still have a hurtbox and can be hit by all physical moves.
+
+#### Cooldown
+
+The amount of frames before an attack is usable again, extending past endlag when the character is otherwise fully actionable. Most commonly found on special attacks, and sometimes accompanied by a display indicator on the character's HUD.
+
+![](cooldowns.png)
 
 ## Knockback Data
 
@@ -278,11 +330,11 @@ The number of frames that both characters experience a pause/freeze-frame effect
 
 > If the game calculates that the attacked character will be KO'd on all even angled DI possibilities (not accounting for possible ledge techs or interference from other hitboxes/objects), a "galaxy" effect will play, locking that move into 20 frames of hitpause.
 
+### More
+
 #### ASDI Modifier
 
 Modifier of the default 10 pixels you are able to travel during hitpause with ASDI.
-
-### More
 
 #### Force Flinch
 
