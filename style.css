@@ -1140,8 +1140,13 @@ article div:has(iframe) {
 
 .lang-dropdown a {
   display: block;
+  font-weight: normal;
   color: var(--clr-text);
   padding: .25rem .5rem;
+}
+
+.lang-dropdown a:hover {
+  border-bottom: none;
 }
 
 .lang-dropdown li:hover a {
