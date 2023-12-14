@@ -61,7 +61,7 @@ The amount of frames before an attack is usable again, extending past endlag whe
 
 ### Damage
 
-The amount of % that an attack hitbox deals. The amount of % a character has after being dealt this damage influences [knockback](#knockback), [hitstun](#hitstun), and [hitpause](#hitpause).
+The amount of % that an hitbox deals. The amount of % a character has after being dealt this damage influences [knockback](#knockback), [hitstun](#hitstun), and [hitpause](#hitpause).
 
 ### Angle
 
@@ -103,7 +103,7 @@ The initial speed at which a hitbox sends its target flying, measured in pixels 
 
 ### Hitstun
 
-The number of frames a character is stunned, unable to perform basic actions, after being hit by an attack hitbox. Calculated by the following formula:
+The number of frames a character is stunned, unable to perform basic actions, after being hit by an attack. Calculated by the following formula:
 
 > **Hitstun_Multiplier**{{< code " × ((" >}}**Base_Knockback**{{< code " × 2.4 × (" >}}[Knockback_Adjust](#knockback-adjust){{< code " - 1)) + (" >}}**Knockback_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × " >}}[Knockback_Adjust](#knockback-adjust){{< code " × 0.312))" >}}
 
