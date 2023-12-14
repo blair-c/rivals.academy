@@ -185,7 +185,7 @@ Default amount of landing lag frames incurred when a character lands from the ai
 
 ### Pratfall
 
-Commonly referred to as special fall or freefall, pratfall is an airborne state a character can enter in which they are unable to act, most commonly entered by using a recovery move or being parried. Can be cancelled with [Walljump](#walljump).
+An airborne state a character can enter in which they are unable to act, most commonly entered by using a recovery move or being parried. Also referred to as special fall or freefall. Can be cancelled with [walljump](#walljump).
 
 #### Pratfall Acceleration
 
@@ -215,11 +215,11 @@ Starting horizontal velocity for a walljump.
 
 #### Wallcling
 
-> Maypul and Ori are able to wallcling, holding their position on the wall for up to {{< library/stat maypul wallcling.max >}} frames before walljumping.
+[Maypul](/library/maypul) and [Ori](/library/ori) are able to wallcling, holding their position on the wall for up to {{< library/stat maypul wallcling.max >}} frames before walljumping.
 
 ## Frame Data
 
-All attacks are composed of three main sections: [startup](#startup), [active](#active), and [endlag](#endlag) frames.
+> All attacks are composed of three main sections: [startup](#startup), [active](#active), and [endlag](#endlag) frames.
 
 ### Startup
 
