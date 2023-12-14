@@ -11,7 +11,7 @@ authors:
 
 ### Knockback Adjust
 
-The standard "weight" stat. Dictates how far a move hits a character by functioning as a multiplier in the [knockback formula](#knockback).
+The standard "weight" stat. Dictates how far an attack hits a character by functioning as a multiplier in the [knockback formula](#knockback).
 
 {{< library/cast-comparison knockbackAdjustment >}}
 
@@ -245,7 +245,7 @@ A special endlag value that is incurred if the character lands during the startu
 
 #### Cancelable
 
-A number of attacks have different ways in which you can cancel it early, either preventing further active frames or cancelling part of, if not all of, endlag. The most common methods of cancelling a move is a regular cancel, commonly input as a parry or a second special input, or cancelling into another attack/action (jump, walljump, airdodge) after a certain amount of time (see: [Zetterburn Down Special](/library/zetterburn#down-special)).
+A number of attacks have different ways in which you can cancel it early, either preventing further active frames or cancelling part of, if not all of, endlag. The most common methods of cancelling an attack is a regular cancel, commonly input as a parry or a second special input, or cancelling into another attack/action (jump, walljump, airdodge) after a certain amount of time (see: [Zetterburn Down Special](/library/zetterburn#down-special)).
 
 Some attacks are only cancellable on hit, such as [Kragg Dash Attack](/library/kragg#dash-attack) being cancellable into jabs and tilts, and his [Side Special](/library/kragg#side-special) being cancellable into jump on hit. [Ori Sweetspot Dash Attack](/library/ori#dash-attack) automatically cancels into an actionable state on hit.
 
@@ -259,7 +259,7 @@ Intangible frames are those in which a character does not have a hurtbox, effect
 
 #### Projectile Invuln.
 
-Certain attacks or objects have invulnerability to projectiles, in which case they still have a hurtbox and can be hit by all physical moves.
+Certain attacks or objects have invulnerability to projectiles, in which case they still have a hurtbox and can be hit by all physical attacks.
 
 #### Cooldown
 
@@ -328,33 +328,33 @@ The number of frames that both characters experience a pause/freeze-frame effect
 - Base Hitpause, Hitpause Scaling, and Extra Hitpause are hitbox properties.
 - The vast majority of hitboxes do not have Extra Hitpause.
 
-> If the game calculates that the attacked character will be KO'd on all even angled DI possibilities (not accounting for possible ledge techs or interference from other hitboxes/objects), a "galaxy" effect will play, locking that move into 20 frames of hitpause.
+> If the game calculates that the attacked character will be KO'd on all even angled DI possibilities (not accounting for possible ledge techs or interference from other hitboxes/objects), a "galaxy" effect will play, locking that hit into 20 frames of hitpause.
 
 ### More
 
-#### ASDI Modifier
-
-Modifier of the default 10 pixels you are able to travel during hitpause with ASDI.
-
 #### Force Flinch
 
-Unique property which changes how characters react to attacks. Flinch replaces hitstun if the knockback applied is too low to lift a character off the ground, and unlike hitstun will not scale with damage. Force flinch values can prevent moves from lifting characters off the ground at any percent, make them unable to cause the flinch state even if the attack is crouch cancelled, or cause them to be crouch cancelllable at any percent.
+Unique property which changes how characters react to attacks. Flinch replaces hitstun if the knockback applied is too low to lift a character off the ground, and unlike hitstun will not scale with damage. Force flinch values can prevent hits from lifting characters off the ground at any percent, make them unable to cause the flinch state even if the attack is crouch cancelled, or cause them to be crouch cancelllable at any percent.
 
 - **{{< code 1 >}}:** Forces the flinch state, unless the attack is crouch cancelled.
 - **{{< code 2 >}}:** Cannot cause flinch, even if crouch cancelled.
 - **{{< code 3 >}}:** Can always be crouch cancelled, regardless of percent.
 
+#### ASDI Modifier
+
+Modifier of the default 10 pixels you are able to travel during [hitpause](#hitpause) with ASDI.
+
 #### Hit Lockout
 
-Amount of frames after hitpause ends in which a character cannot be hit again. This value is mostly used on kill moves for characters who have projectiles that may interfere with their opponents' knockback.
-
-#### Priority
-
-If multiple hitboxes collide with a target on the same frame, the target will be hit by the hitbox with the higher priority value. This is relevant on moves with multiple hitboxes that are active at the same time.
+Amount of frames after [hitpause](#hitpause) ends in which a character cannot be hit again. This value is mostly used on kill moves for characters who have projectiles that may interfere with their opponents' knockback.
 
 #### Untechable
 
-A property that prevents a character from being able to tech on the ground when hit. [Etalus Up Air](/library/etalus#up-air) has a unique untechable property that prevents characters from being able to land on a platform during hitstun. Zetterburn and Shovel Knight have untechable moves that force the missed tech state on their opponent.
+A property that prevents a character from being able to tech on the ground when hit. [Etalus Up Air](/library/etalus#up-air) has a unique untechable property that prevents characters from being able to land on a platform during hitstun. [Zetterburn](/library/zetterburn#down-special) and [Shovel Knight](/library/shovel-knight#up-special) have untechable attacks that force the grounded missed tech state on their opponent.
+
+#### Priority
+
+If multiple hitboxes collide with a target on the same frame, the target will be hit by the hitbox with the higher priority value. This is relevant on attacks with multiple hitboxes that are active at the same time.
 
 #### TODO:
 > Match char pages and yaml data files to this ordering as final step
