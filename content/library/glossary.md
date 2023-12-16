@@ -27,7 +27,7 @@ The number of frames between the last frame that an attack has an active hitbox 
 
 #### Landing Lag
 
-A special endlag value that is incurred if the character lands during the startup, active, or endlag frames of an aerial attack. Landing during the last 5 frames of endlag will autocancel into the character's [land time](#land-time) (4 or 6 frames) instead.
+A special endlag value that is incurred if the character lands during the startup, active, or endlag frames of an aerial attack (Neutral Air, Forward Air, Back Air, Up Air, or Down Air). Landing during the last 5 frames of endlag will autocancel into the character's [land time](#land-time) (4 or 6 frames) instead.
 
 > Like with endlag, all aerials have separate landing lag values for if the attack hit or whiffed, generally 1.5× the amount on whiff vs. on hit. Listed as "Hit / Whiff" on character pages.
 
