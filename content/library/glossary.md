@@ -33,7 +33,7 @@ A special endlag value that is incurred if the character lands during the startu
 
 ### More
 
-#### Cancelable
+#### Cancellable
 
 A number of attacks have different ways in which you can cancel it early, either preventing further active frames or cancelling part of, if not all of, endlag. The most common methods of cancelling an attack is a regular cancel, commonly input as a parry or a second special input, or cancelling into another attack/action (jump, walljump, airdodge) after a certain amount of time (see: [Zetterburn Down Special](/library/zetterburn#down-special)).
 
