@@ -81,7 +81,7 @@ if (toc) {
 
 	// Factor of screen size that the element must cross
 	// before it's considered visible
-	let TOP_MARGIN = 0,
+	let TOP_MARGIN = 0.075,
       BOTTOM_MARGIN = 0.025;
 
   let footerDiv = document.querySelector(".article-footer-divider");
@@ -107,6 +107,13 @@ if (toc) {
 			else {
 				item.listItem.classList.remove('visible');
 			}
+      for (const child of item.listItem.children) {
+        for (const c of child.children) {
+          if (c.classList.contains('visible')) {
+            item.listItem.classList.add('visible');
+          }
+        }
+      }
 		});
   }
 }
