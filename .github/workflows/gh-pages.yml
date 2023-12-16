@@ -33,7 +33,7 @@ jobs:
               echo "Created $(dirname $i)/1080_$(basename $i)"
             done
           done
-          for i in static/img/library-select/*.png
+          for i in content/library/_index/*.png
           do 
             convert "$i" -sample 200% "$(dirname $i)/2x_$(basename $i)"
             echo "Created $(dirname $i)/2x_$(basename $i)"
