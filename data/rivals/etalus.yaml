@@ -62,6 +62,7 @@ stats:
   # Ice Armor
   iceArmor:
     knockbackMultiplier: 0.7
+    hitstunGravityAccel: 0.6
     maxFallSpeed: 11.5
     shorthop:
       speed: 8.1
@@ -69,6 +70,7 @@ stats:
       speed: 11.95
     doubleJump:
       speed: 12.5
+    gravityAccel: 0.65
 
 hurtbox:
   idle:

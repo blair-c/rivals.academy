@@ -134,7 +134,7 @@ The number of frames that both characters experience a pause/freeze-frame effect
 
 #### Force Flinch
 
-Unique property which changes how characters react to attacks. Flinch replaces hitstun if the knockback applied is too low to lift a character off the ground, and unlike hitstun will not scale with damage. Force flinch values can prevent hits from lifting characters off the ground at any percent, make them unable to cause the flinch state even if the attack is crouch cancelled, or cause them to be crouch cancelllable at any percent.
+Unique property which changes how characters react to attacks. Flinch replaces hitstun if the knockback applied is too low to lift a character off the ground. Force flinch values can prevent hits from lifting characters off the ground at any percent, make them unable to cause the flinch state even if the attack is crouch cancelled, or cause them to be crouch cancelllable at any percent.
 
 - **{{< code 1 >}}:** Forces the flinch state, unless the attack is crouch cancelled.
 - **{{< code 2 >}}:** Cannot cause flinch, even if crouch cancelled.
@@ -282,7 +282,7 @@ Maximum horizontal speed in the air while not in hitstun. Can be superceded by [
 
 #### Max Jump Horizontal Speed
 
-Maximum horizontal speed maintained when going from a grounded to aerial state. Can be faster than [Max Air Speed](#max-air-speed) stat. For example: Maypul has a Max Air Speed of {{< library/stat maypul maxAirSpeed >}}, but a Max Jump Horizontal Speed of {{< library/stat maypul maxJumpHorizontalSpeed >}}, so she can jump offstage faster than she can get back.
+Maximum horizontal speed maintained when going from a grounded to aerial state. Can be faster than [Max Air Speed](#max-air-speed) stat. For example: Maypul has a Max Air Speed of {{< library/stat maypul maxAirSpeed >}}, but a Max Jump Horizontal Speed of {{< library/stat maypul maxJumpHorizontalSpeed >}}, so she can jump offstage faster than she can get back. Can be superceded by [plat/ledgeboosting](/lectures/platboost-and-ledgeboost) and certain moves.
 
 {{< library/cast-comparison maxJumpHorizontalSpeed "Measured in pixels per frame" >}}
 

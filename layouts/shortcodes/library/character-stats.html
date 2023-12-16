@@ -24,7 +24,9 @@
 </div>
 {{ with $c.iceArmor }}
   <p class="move-notes">
-    <a href="#neutral-special">Ice Armor</a> increases Max Fall Speed to <code>{{ .maxFallSpeed }}</code>
+    <a href="#neutral-special">Ice Armor</a> increases
+    Hitstun Gravity Accel to <code>{{ .hitstunGravityAccel }}</code>,
+    Max Fall Speed to <code>{{ .maxFallSpeed }}</code>,
     and applies a multiplier of <code>{{ .knockbackMultiplier }}</code>× to the final values of the 
     <a href="{{ $g }}#knockback">knockback</a> and <a href="{{ $g }}#hitstun">hitstun</a> formulas.
   </p>
@@ -173,7 +175,8 @@
 {{ with $c.iceArmor }}
   <p class="move-notes">
     <a href="#neutral-special">Ice Armor</a> increases Fullhop Speed to <code>{{ .fullhop.speed }}</code>,
-    Shorthop Speed to <code>{{ .shorthop.speed }}</code>, and Double Jump Speed to <code>{{ .doubleJump.speed}}</code>.
+    Shorthop Speed to <code>{{ .shorthop.speed }}</code>, Double Jump Speed to <code>{{ .doubleJump.speed}}</code>,
+    and Gravity Acceleration to <code>{{ .gravityAccel }}</code>.
   </p>
 {{ end }}
 {{ with $c.inSlipstream }}
