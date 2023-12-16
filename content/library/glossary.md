@@ -282,7 +282,7 @@ Maximum horizontal speed in the air while not in hitstun. Can be superceded by [
 
 #### Max Jump Horizontal Speed
 
-Maximum horizontal speed maintained when going from a grounded to aerial state. Can be faster than [Max Air Speed](#max-air-speed) stat. For example: Maypul has air speed {{< library/stat maypul maxAirSpeed >}}, but max jump horizontal speed {{< library/stat maypul maxJumpHorizontalSpeed >}}, so she can get off stage faster than she can get back.
+Maximum horizontal speed maintained when going from a grounded to aerial state. Can be faster than [Max Air Speed](#max-air-speed) stat. For example: Maypul has a Max Air Speed of {{< library/stat maypul maxAirSpeed >}}, but a Max Jump Horizontal Speed of {{< library/stat maypul maxJumpHorizontalSpeed >}}, so she can jump offstage faster than she can get back.
 
 {{< library/cast-comparison maxJumpHorizontalSpeed "Measured in pixels per frame" >}}
 
