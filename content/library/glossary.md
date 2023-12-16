@@ -23,13 +23,15 @@ The window in which an attack has a hitbox, dealing damage and knockback. Some a
 
 The number of frames between the last frame that an attack has an active hitbox and the first frame the character can perform other actions again (commonly referred to as "First Actionable Frame," or FAF).
 
-> All attacks besides most jabs and specials have separate endlag values for if the attack hit or whiffed, generally 1.5× the amount on whiff vs. on hit.
+> All attacks besides most jabs and specials have separate endlag values for if the attack hit or whiffed, generally 1.5× the amount on whiff vs. on hit. Listed as "Hit / Whiff" on character pages.
 
 #### Landing Lag
 
 A special endlag value that is incurred if the character lands during the startup, active, or endlag frames of an aerial attack. Landing during the last 5 frames of endlag will autocancel into the character's [land time](#land-time) (4 or 6 frames) instead.
 
-> Like with endlag, all aerials have separate landing lag values for if the attack hit or whiffed, generally 1.5× the amount on whiff vs. on hit. On hit you are also able to cancel the last 5 frames of landing lag into [jumpsquat](#jumpsquat), allowing you to become airborne on the same frame you would normally be actionable. [More](/lectures/understanding-landing-lag)..
+> Like with endlag, all aerials have separate landing lag values for if the attack hit or whiffed, generally 1.5× the amount on whiff vs. on hit. Listed as "Hit / Whiff" on character pages.
+
+> On hit, the last 5 frames of landing lag are cancellable into [jumpsquat](#jumpsquat), allowing you to become airborne on the same frame you would normally be actionable. [Learn more](/lectures/understanding-landing-lag)..
 
 ### More
 
