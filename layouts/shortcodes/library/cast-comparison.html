@@ -83,7 +83,7 @@
   <thead><tr>
     {{ range $all }}
     <th>
-      <a href="/library/{{ anchorize .name }}" title="{{ .name }}{{ with .buff }} ({{ . }}){{ end }}">
+      <a href="/library/{{ anchorize .name }}#effective-weight" title="{{ .name }}{{ with .buff }} ({{ . }}){{ end }}">
       <img 
         src="/img/icons/{{ anchorize .name }}{{ with .buff }}-{{ anchorize . }}{{ end }}.png"
         alt="{{ .name }}{{ with .buff }} ({{ . }}){{ end }}">
