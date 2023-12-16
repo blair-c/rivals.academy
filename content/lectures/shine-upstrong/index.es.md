@@ -15,7 +15,7 @@ Shine -> UStrong es uno de los combos más fuertes de todo el juego, ya que casi
 
 {{< video shine-upstrong >}}
 
-## Como hacerlo
+## Qué es
 
 Para ejecutar el combo se usa Shine a partir de un Dash inicial para que te deslices hacia delante mientras el Shine conecta. Luego debes cancelar el Endlag del Shine con un salto, e inmediatamente cancelar el salto con un UStrong (durante el Jumpsquat).
 
@@ -23,7 +23,7 @@ Para ejecutar el combo se usa Shine a partir de un Dash inicial para que te desl
 
 > Es recomendable que coloques alguna de las acciones en uno de los gatillos del control (botón de salto, especiales o ataques fuertes), puede que así se te facilite el combo.
 
-### Paso a paso
+## Paso a paso
 
 Primero debes acostumbrarte a usar Shine a partir del Dash inicial, hacia delante y hacia atrás.
 
@@ -43,7 +43,7 @@ Ahora, ¡pongamóslo todo junto!
 
 > Trata de usar el Shine lo más cerca posible del oponente, para que el combo funcione en cualquier DI.
 
-### Problemas comunes
+## Problemas comunes
 
 Es posible que te encuentres con alguno de los siguientes problemas:
 

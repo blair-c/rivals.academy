@@ -534,6 +534,7 @@ article div:has(iframe) {
     width: 100vw;
     max-height: 0;
     opacity: 0;
+    z-index: 2;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -1336,13 +1337,44 @@ article div:has(iframe) {
 
   .sidebar {
     position: fixed;
-    padding-top: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
   }
 
   .library-grid,
   .sidebar-thumbnail,
-  #TableOfContents,
   .toc-btns {
+    display: none;
+  }
+
+  .toc {
+    height: fit-content;
+    padding: 0;
+  }
+
+  #TableOfContents {
+    font-size: 14px;
+    padding: .25rem .3125rem;
+    margin: 0;
+    background: var(--clr-highlighter);
+  }
+
+  #TableOfContents > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #TableOfContents > ul li a {
+    text-wrap: nowrap;
+    padding: 0 .3125rem;
+    display: block;
+  }
+
+  #TableOfContents ul ul {
     display: none;
   }
 }

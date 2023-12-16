@@ -12,7 +12,7 @@ Zetterburn's Shine > Up Strong is one of the strongest kill options in the game 
 
 {{< video shine-upstrong >}}
 
-## How To
+## What It Is
 
 Shine > Up Strong is performed by using a Shine from an initial dash so that you slide forward while the Shine connects. From this, jump cancel out of the Shine, then use that to do a jump canceled Up Strong during your jump squat.
 
@@ -20,7 +20,7 @@ Shine > Up Strong is performed by using a Shine from an initial dash so that you
 
 > Some players may find it helpful to bind one or more buttons used for this technique (special, jump, strong) to a spare shoulder button.
 
-### Breaking It Down
+## Breaking It Down
 
 Start by getting comfortable by Shining back and forth from initial dash.
 
@@ -40,7 +40,7 @@ Now all that's left is to put it all together!
 
 > Try to Shine as close to the center of your opponent's hurtbox as you can, for the Shine > Up Strong to connect on all DIs.
 
-### Common Issues
+## Common Issues
 
 There are two commons issues many have. The first is fireballing instead of getting the sliding shine. If this happens, you are holding the direction on your stick for too long which causes a side input to be read. Make sure that the stick returns to a neutral position to avoid those costly fireballs. 
 
