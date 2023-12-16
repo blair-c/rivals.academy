@@ -1298,23 +1298,35 @@ article div:has(iframe) {
   border-left: 1px solid var(--clr-gray-1);
 }
 
-.to-top {
+.toc-btns a {
   display: inline-block;
   text-align: center;
-  width: 4rem;
   padding-top: .3125rem;
   border-radius: 100rem;
   border: 3px solid var(--clr-gray-1);
 }
 
-.to-top svg {
+.toc-btns a svg {
   fill: var(--clr-ui-2);
   height: 1.25rem;
 }
 
-.to-top:hover svg {
+.toc-btns a:hover svg {
   fill: var(--clr-accent);
   transition: all .1s ease-in;
+}
+
+.to-top {
+  width: 4rem;
+}
+
+.back-to {
+  width: 2.125rem;
+  margin-right: .125rem;
+}
+
+.back-to svg {
+  transform: translateY(-1px) translateX(0.5px);
 }
 
 @media (max-width:48rem) {
@@ -1330,7 +1342,7 @@ article div:has(iframe) {
   .library-grid,
   .sidebar-thumbnail,
   #TableOfContents,
-  .to-top {
+  .toc-btns {
     display: none;
   }
 }

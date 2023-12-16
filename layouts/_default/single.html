@@ -36,9 +36,14 @@
 
     <div class="toc">
       {{ .TableOfContents }}
-      <a href="#" class="to-top" title="{{ T "jump-to-top" }}">
-        {{ partial "svg/up.svg" }}<span class="sr-only">{{ T "jump-to-top" }}</span>
-      </a>
+      <div class="toc-btns">
+        <a href="/{{ page.Section }}" class="back-to" title="{{ T "back-to" }} {{ title page.Section }}">
+          {{ partial "svg/back.svg" }}<span class="sr-only">{{ T "back-to" }} {{ title page.Section }}</span>
+        </a>
+        <a href="#" class="to-top" title="{{ T "jump-to-top" }}">
+          {{ partial "svg/up.svg" }}<span class="sr-only">{{ T "jump-to-top" }}</span>
+        </a>
+      </div>
     </div>
   </div>
 
