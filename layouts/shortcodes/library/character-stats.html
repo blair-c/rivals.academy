@@ -1,14 +1,15 @@
 {{ $c := index .Site.Data.rivals (.Get 0) "stats" }}
+{{ $g := "/library/glossary" }}
 
 {{ if eq (.Get 1) "effective-weight" }}
 <div class="library-table no-col-borders">
   <table>
     <thead>
       <tr>
-        <th>Knockback Adjust</th>
-        <th>Air Friction</th>
-        <th>Hitstun Gravity Accel</th>
-        <th>Max Fall Speed</th>
+        <th><a href="{{ $g }}#{{ T "knockback-adjust" | anchorize }}">{{ T "knockback-adjust" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "air-friction" | anchorize }}">{{ T "air-friction" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "hitstun-gravity-accel" | anchorize }}">{{ T "hitstun-gravity-accel" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "max-fall-speed" | anchorize }}">{{ T "max-fall-speed" }}</a></th>
       </tr>
     </thead>
     <tbody>
@@ -45,17 +46,17 @@
         {{ with or $c.onIce $c.inSlipstream $c.momentumMail }}
           <th class="sticky-col"></th>
         {{ end }}
-        <th>Dash Time</th>
-        <th>Dash Speed</th>
-        <th>Run Speed</th>
-        <th>Run Stop Time</th>
-        <th>Run Turn Time</th>
-        <th>Run Turn Accel</th>
-        <th>Walk Speed</th>
-        <th>Walk Accel</th>
-        <th>Ground Friction</th>
-        <th>Waveland Time</th>
-        <th>Waveland Friction</th>
+        <th><a href="{{ $g }}#{{ T "initial-dash-time" | anchorize }}">{{ T "initial-dash-time" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "initial-dash-speed" | anchorize }}">{{ T "initial-dash-speed" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "run-speed" | anchorize }}">{{ T "run-speed" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "run-stop-time" | anchorize }}">{{ T "run-stop-time" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "run-turn-time" | anchorize }}">{{ T "run-turn-time" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "run-turn-accel" | anchorize }}">{{ T "run-turn-accel" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "walk-speed" | anchorize }}">{{ T "walk-speed" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "walk-accel" | anchorize }}">{{ T "walk-accel" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "ground-friction" | anchorize }}">{{ T "ground-friction" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "waveland-time" | anchorize }}">{{ T "waveland-time" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "waveland-friction" | anchorize }}">{{ T "waveland-friction" }}</a></th>
       </tr>
     </thead>
     <tbody>
@@ -126,23 +127,25 @@
   <table>
     <thead>
       <tr>
-        <th>Air Acceleration</th>
-        <th>Max Air Speed</th>
-        <th>Max Jump Horizontal Speed</th>
-        <th>Shorthop Speed</th>
-        <th>Fullhop Speed</th>
-        <th>Double Jump Speed</th>
-        {{ with $c.doubleJump.accel }}<th>Double Jump Accel</th>{{ end }}
-        {{ with $c.tripleJump.speed }}<th>Triple Jump Speed</th>{{ end }}
-        {{ with $c.quadrupleJump.speed }}<th>Quad Jump Speed</th>{{ end }}
-        <th>Gravity Accel</th>
-        <th>Fastfall Speed</th>
-        <th>Land Time</th>
-        <th>Vertical Walljump Speed</th>
-        <th>Horizontal Walljump Speed</th>
-        {{ with $c.wallcling.max }}<th>Max Wallcling</th>{{ end }}
-        <th>Pratfall Accel</th>
-        <th>Pratfall Land Time</th>
+        <th><a href="{{ $g }}#{{ T "air-acceleration" | anchorize }}">{{ T "air-acceleration" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "max-air-speed" | anchorize }}">{{ T "max-air-speed" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "max-jump-horizontal-speed" | anchorize }}">{{ T "max-jump-horizontal-speed" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "shorthop-speed" | anchorize }}">{{ T "shorthop-speed" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "fullhop-speed" | anchorize }}">{{ T "fullhop-speed" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "double-jump-speed" | anchorize }}">{{ T "double-jump-speed" }}</a></th>
+        {{ with $c.doubleJump.accel }}
+          <th><a href="{{ $g }}#{{ T "double-jump-speed" | anchorize }}">{{ T "double-jump-accel" }}</a></th>
+        {{ end }}
+        <th><a href="{{ $g }}#{{ T "gravity-acceleration" | anchorize }}">{{ T "gravity-acceleration" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "fastfall-speed" | anchorize }}">{{ T "fastfall-speed" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "land-time" | anchorize }}">{{ T "land-time" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "vertical-walljump-speed" | anchorize }}">{{ T "vertical-walljump-speed" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "horizontal-walljump-speed" | anchorize }}">{{ T "horizontal-walljump-speed" }}</a></th>
+        {{ with $c.wallcling.max }}
+          <th><a href="{{ $g }}#{{ T "wallcling" | anchorize }}">{{ T "max-wallcling" }}</a></th>
+        {{ end }}
+        <th><a href="{{ $g }}#{{ T "pratfall-accel" | anchorize }}">{{ T "pratfall-accel" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "pratfall-land-time" | anchorize }}">{{ T "pratfall-land-time" }}</a></th>
       </tr>
     </thead>
     <tbody>
@@ -152,10 +155,12 @@
         <td>{{ $c.maxJumpHorizontalSpeed }}</td>
         <td>{{ $c.shorthop.speed }}</td>
         <td>{{ $c.fullhop.speed }}</td>
-        <td>{{ $c.doubleJump.speed }}</td>
+        <td>
+          {{ $c.doubleJump.speed }}
+          {{ with $c.tripleJump.speed }}/ {{ . }}{{ end }}
+          {{ with $c.quadrupleJump.speed }}/ {{ . }}{{ end }}
+        </td>
         {{ with $c.doubleJump.accel }}<td>{{ . }}</td>{{ end }}
-        {{ with $c.tripleJump.speed }}<td>{{ $c.tripleJump.speed }}</td>{{ end }}
-        {{ with $c.quadrupleJump.speed }}<td>{{ $c.quadrupleJump.speed }}</td>{{ end }}
         <td>{{ $c.gravityAccel }}</td>
         <td>{{ $c.fastfallSpeed }}</td>
         <td>{{ $c.landTime }}</td>

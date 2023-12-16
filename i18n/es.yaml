@@ -7,25 +7,27 @@ copy-link: Copiar enlace
 to-this-section: a esta sección
 copied: Copiado
 
-lectures: lecturas
-roaa-lectures: Lecturas de Rivals Academy
-recent-content-in: Contenido reciente en las
-
 by: Por
 and: 'y'
 translated-by: Traducido por
 
+# Lectures
+lectures: lecturas
+roaa-lectures: Lecturas de Rivals Academy
+recent-content-in: Contenido reciente en las
+# Tags
 beginner: principiante
 intermediate: intermedio
 advanced: avanzado
 all-characters: todos-los-personajes
 
+# Library
 up-to-date-as-of: Actualizado hasta el
 for-developers: Para desarolladores
 raw-data-of-this-page: Datos sin procesar de esta página
 source: fuente
 docs: docs
-
+# Stages
 doubles: Dobles
 stage-width: Ancho del escenario
 top-blastzone: Blastzone superior

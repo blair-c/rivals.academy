@@ -7,26 +7,87 @@ copy-link: Copy link
 to-this-section: to this section
 copied: Copied to clipboard
 
-lectures: lectures
-roaa-lectures: Rivals Academy Lectures
-recent-content-in: Recent content in
-
 by: By
 and: and
 translated-by: Translated by
 
+# Lectures
+lectures: lectures
+roaa-lectures: Rivals Academy Lectures
+recent-content-in: Recent content in
+# Tags
 beginner: beginner
 intermediate: intermediate
 advanced: advanced
 all-characters: all-characters
 counterplay: counterplay
 
+# Library
 up-to-date-as-of: Up to date as of
 for-developers: For Developers
 raw-data-of-this-page: Raw data of this page
 source: Source
 docs: Docs
-
+# Frame Data
+frame-data: Frame Data
+startup: Startup
+active: Active
+endlag: Endlag
+faf: FAF
+landing-lag: Landing Lag
+cancellable: Cancellable
+intangible: Intangible
+projectile-invuln: Projectile Invuln.
+cooldown: Cooldown
+# Knockback Data
+damage: Damage
+angle: Angle
+angle-flipper: Angle Flipper
+knockback: Knockback
+hitstun: Hitstun
+hitpause: Hitpause
+force-flinch: Force Flinch
+asdi-modifier: ASDI Modifier
+hit-lockout: Hit Lockout
+untechable: Untechable
+priority: Priority
+# Effective Weight
+knockback-adjust: Knockback Adjust
+air-friction: Air Friction
+hitstun-gravity-accel: Hitstun Gravity Accel
+max-fall-speed: Max Fall Speed
+# Grounded Movement
+initial-dash-time: Initial Dash Time
+initial-dash-speed: Initial Dash Speed
+run-speed: Run Speed
+run-stop-time: Run Stop Time
+run-turn-time: Run Turn Time
+run-turn-accel: Run Turn Accel
+walk-speed: Walk Speed
+walk-accel: Walk Accel
+ground-friction: Ground Friction
+waveland-time: Waveland Time
+waveland-friction: Waveland Friction
+# Aerial Movement
+air-acceleration: Air Acceleration
+max-air-speed: Max Air Speed
+max-jump-horizontal-speed: Max Jump Horizontal Speed
+shorthop-speed: Shorthop Speed
+fullhop-speed: Fullhop Speed
+double-jump-speed: Double Jump Speed
+double-jump-accel: Double Jump Accel
+gravity-acceleration: Gravity Acceleration
+fastfall-speed: Fastfall Speed
+land-time: Land Time
+pratfall-accel: Pratfall Accel
+pratfall-land-time: Pratfall Land Time
+vertical-walljump-speed: Vertical Walljump Speed
+horizontal-walljump-speed: Horizontal Walljump Speed
+wallcling: Wallcling
+max-wallcling: Max Wallcling
+pratfall-accel: Pratfall Accel
+pratfall-land-time: Pratfall Land Time
+# Stages
 doubles: Doubles
 stage-width: Stage Width
 top-blastzone: Top Blastzone

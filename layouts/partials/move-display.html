@@ -94,35 +94,36 @@
   <table>
     <thead>
       <tr>
-        {{ if $multiple }}<th class="sticky-col">Hitbox</th>{{ end }}
-        {{ if $startup }}<th>Startup</th>{{ end }}
-        {{ if $intangible }}<th>Intangible</th>{{ end }}
+        {{ $g := "/library/glossary" }}
+        {{ if $multiple }}<th class="sticky-col"></th>{{ end }}
+        {{ if $startup }}<th><a href="{{ $g }}#{{ T "startup" | anchorize }}">{{ T "startup" }}</a></th>{{ end }}
+        {{ if $intangible }}<th><a href="{{ $g }}#{{ T "intangible" | anchorize }}">{{ T "intangible" }}</a></th>{{ end }}
         {{ if $directionLockedIn }}<th>Direction Locked In</th>{{ end }}
-        {{ if $active }}<th>Active</th>{{ end }}
+        {{ if $active }}<th><a href="{{ $g }}#{{ T "active" | anchorize }}">{{ T "active" }}</a></th>{{ end }}
         {{ if $smoke }}<th>Smoke</th>{{ end }}
         {{ if $iceCreated }}<th>Ice Created</th>{{ end }}
         {{ if $capture }}<th>Capture</th>{{ end }}
         {{ if $invuln }}<th>Invulnerable</th>{{ end }}
         {{ if $refresh }}<th>Refresh</th>{{ end }}
-        {{ if $projectileInvuln }}<th>Projectile Invuln.</th>{{ end }}
-        {{ if $endlag }}<th>Endlag</th>{{ end }}
-        {{ if $cancellable }}<th>Cancellable</th>{{ end }}
-        {{ if $firstActiveFrame }}<th>FAF</th>{{ end }}
-        {{ if $landingLag }}<th>Landing Lag</th>{{ end }}
+        {{ if $projectileInvuln }}<th><a href="{{ $g }}#{{ T "projectile-invuln" | anchorize }}">{{ T "projectile-invuln" }}</a></th>{{ end }}
+        {{ if $endlag }}<th><a href="{{ $g }}#{{ T "endlag" | anchorize }}">{{ T "endlag" }}</a></th>{{ end }}
+        {{ if $cancellable }}<th><a href="{{ $g }}#{{ T "cancellable" | anchorize }}">{{ T "cancellable" }}</a></th>{{ end }}
+        {{ if $firstActiveFrame }}<th><a href="{{ $g }}#{{ T "frame-data" | anchorize }}">{{ T "faf" }}</a></th>{{ end }}
+        {{ if $landingLag }}<th><a href="{{ $g }}#{{ T "landing-lag" | anchorize }}">{{ T "landing-lag" }}</a></th>{{ end }}
         {{ if $lifetime }}<th>Lifetime</th>{{ end }}
-        {{ if $cooldown }}<th>Cooldown</th>{{ end }}
-        {{ if $damage }}<th>Damage</th>{{ end }}
-        {{ if $angle }}<th>Angle</th>{{ end }}
-        {{ if $angleFlipper }}<th>Flipper</th>{{ end }}
-        {{ if $knockback }}<th>Knockback</th>{{ end }}
-        {{ if $hitstunModifier }}<th>Hitstun</th>{{ end }}
-        {{ if $forceFlinch }}<th>Force Flinch</th>{{ end }}
-        {{ if $untechable }}<th>Untechable</th>{{ end }}
-        {{ if $hitpause }}<th>Hitpause</th>{{ end }}
+        {{ if $cooldown }}<th><a href="{{ $g }}#{{ T "cooldown" | anchorize }}">{{ T "cooldown" }}</a></th>{{ end }}
+        {{ if $damage }}<th><a href="{{ $g }}#{{ T "damage" | anchorize }}">{{ T "damage" }}</a></th>{{ end }}
+        {{ if $angle }}<th><a href="{{ $g }}#{{ T "angle" | anchorize }}">{{ T "angle" }}</a></th>{{ end }}
+        {{ if $angleFlipper }}<th><a href="{{ $g }}#{{ T "angle-flipper" | anchorize }}s">{{ T "angle-flipper" }}</a></th>{{ end }}
+        {{ if $knockback }}<th><a href="{{ $g }}#{{ T "knockback" | anchorize }}">{{ T "knockback" }}</a></th>{{ end }}
+        {{ if $hitstunModifier }}<th><a href="{{ $g }}#{{ T "hitstun" | anchorize }}">{{ T "hitstun" }}</a></th>{{ end }}
+        {{ if $forceFlinch }}<th><a href="{{ $g }}#{{ T "force-flinch" | anchorize }}">{{ T "force-flinch" }}</a></th>{{ end }}
+        {{ if $untechable }}<th><a href="{{ $g }}#{{ T "untechable" | anchorize }}">{{ T "untechable" }}</a></th>{{ end }}
+        {{ if $hitpause }}<th><a href="{{ $g }}#{{ T "hitpause" | anchorize }}">{{ T "hitpause" }}</a></th>{{ end }}
         {{ if $tipperStun }}<th>Tipper Stun</th>{{ end }}
-        {{ if $asdiModifier }}<th>ASDI Mod</th>{{ end }}
-        {{ if $hitLockout }}<th>Hit Lockout</th>{{ end }}
-        {{ if $priority }}<th>Priority</th>{{ end }}
+        {{ if $asdiModifier }}<th><a href="{{ $g }}#{{ T "asdi-modifier" | anchorize }}">{{ T "asdi-modifier" }}</a></th>{{ end }}
+        {{ if $hitLockout }}<th><a href="{{ $g }}#{{ T "hit-lockout" | anchorize }}">{{ T "hit-lockout" }}</a></th>{{ end }}
+        {{ if $priority }}<th><a href="{{ $g }}#{{ T "priority" | anchorize }}">{{ T "priority" }}</a></th>{{ end }}
         {{ if $killsProjectiles }}<th>Kills Projectiles</th>{{ end }}
         {{ if $parryStun }}<th>Parry Stun</th>{{ end }}
         {{ if $cannotGalaxy }}<th>Cannot Galaxy</th>{{ end }}
