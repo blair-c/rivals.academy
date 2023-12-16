@@ -160,9 +160,11 @@ If multiple hitboxes collide with a target on the same frame, the target will be
 
 ### Knockback Adjust
 
-The standard "weight" stat. Dictates how far an attack hits a character by functioning as a multiplier in the [knockback formula](#knockback).
+The standard "weight" stat. Dictates how far an attack hits a character by functioning as a multiplier in the [knockback](#knockback) and [hitstun](#hitstun) formulas.
 
 {{< library/cast-comparison knockbackAdjustment >}}
+
+> Etalus Ice Armor applies a multiplier of {{< code "0.7×" >}} to the final values of the [knockback](#knockback) and [hitstun](#hitstun) formulas directly rather than altering Knockback Adjust.
 
 ### Air Friction
 

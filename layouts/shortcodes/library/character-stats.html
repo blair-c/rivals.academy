@@ -25,7 +25,8 @@
 {{ with $c.iceArmor }}
   <p class="move-notes">
     <a href="#neutral-special">Ice Armor</a> increases Max Fall Speed to <code>{{ .maxFallSpeed }}</code>
-    and applies a multiplier of <code>{{ .knockbackMultiplier }}</code>× to the final value of the knockback formula.
+    and applies a multiplier of <code>{{ .knockbackMultiplier }}</code>× to the final values of the 
+    <a href="{{ $g }}#knockback">knockback</a> and <a href="{{ $g }}#hitstun">hitstun</a> formulas.
   </p>
 {{ end }}
 {{ with $c.momentumMail }}
