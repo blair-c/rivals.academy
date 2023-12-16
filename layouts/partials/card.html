@@ -3,10 +3,12 @@
     <p class="headline">{{ .Title }}</p>
     <p class="tagline">{{ .Description }}</p>
     <p class="tag-list">
+      {{ $c := "" }}
       {{ range .Params.tags }}
         <span href="/tags/{{ . }}" class="tag tag-{{ . }}">
-          {{ if fileExists (print "static/img/icons/" . ".png") }}
-            <img src="/img/icons/{{ . }}.png" aria-hidden="true">
+          {{ if fileExists (print "static/img/icons-small/" . ".png") }}
+            {{ $c = index site.Data.rivals . "name" }}
+            <img src="/img/icons-small/{{ . }}.png" title="{{ $c }}" aria-hidden="true">
             <span class="sr-only">{{ humanize . | title }}</span>
           {{ else }}#{{ . }}{{ end }}
         </span>

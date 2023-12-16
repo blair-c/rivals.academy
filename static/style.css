@@ -1032,11 +1032,8 @@ article div:has(iframe) {
 }
 
 .tag-list img {
-  height: 1rem;
-}
-
-.tag:first-child {
-  margin-right: .125rem;
+  height: 14px;
+  transform: translateY(1px);
 }
 
 .tag {
