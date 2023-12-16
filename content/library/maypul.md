@@ -8,6 +8,8 @@ outputs:
 - data
 ---
 
+> {{< library/units-note >}}
+
 ## Character Properties
 ### Hurtbox
 {{< library/hurtbox maypul "Measured in pixels" >}}

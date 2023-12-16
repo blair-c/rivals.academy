@@ -2,7 +2,7 @@
 {{ $g := "/library/glossary" }}
 
 {{ if eq (.Get 1) "effective-weight" }}
-<div class="library-table no-col-borders">
+<div class="library-table stats-table">
   <table>
     <thead>
       <tr>
@@ -15,9 +15,9 @@
     <tbody>
       <tr>
         <td>{{ $c.knockbackAdjustment }}</td>
-        <td>{{ $c.airFriction }}</td>
-        <td>{{ $c.hitstunGravityAccel }}</td>
-        <td>{{ $c.maxFallSpeed }}</td>
+        <td>{{ $c.airFriction }} px/f<sup>2</sup></td>
+        <td>{{ $c.hitstunGravityAccel }} px/f<sup>2</sup></td>
+        <td>{{ $c.maxFallSpeed }} px/f</td>
       </tr>
     </tbody>
   </table>
@@ -35,11 +35,7 @@
 {{ end }}
 
 {{ else if eq (.Get 1) "grounded-movement" }}
-<div class="library-table
-  {{ if not (or (isset $c "onIce") (isset $c "inSlipstream") (isset $c "momentumMail")) }}
-    no-col-borders
-  {{ end }}
-">
+<div class="library-table stats-table">
   <table>
     <thead>
       <tr>
@@ -64,30 +60,30 @@
         {{ with or $c.onIce $c.inSlipstream $c.momentumMail }}
           <td class="sticky-col">Base</td>
         {{ end }}
-        <td>{{ $c.initialDash.time }}</td>
-        <td>{{ $c.initialDash.speed }}</td>
-        <td>{{ $c.run.speed }}</td>
-        <td>{{ $c.run.stop.time }}</td>
-        <td>{{ $c.run.turn.time }}</td>
-        <td>{{ $c.run.turn.accel }}</td>
-        <td>{{ $c.walk.speed }}</td>
-        <td>{{ $c.walk.accel }}</td>
-        <td>{{ $c.groundFriction }}</td>
-        <td>{{ $c.waveland.time }}</td>
-        <td>{{ $c.waveland.friction }}</td>
+        <td>{{ $c.initialDash.time }} frames</td>
+        <td>{{ $c.initialDash.speed }} px/f</td>
+        <td>{{ $c.run.speed }} px/f</td>
+        <td>{{ $c.run.stop.time }} frames</td>
+        <td>{{ $c.run.turn.time }} frames</td>
+        <td>{{ $c.run.turn.accel }} px/f<sup>2</sup></td>
+        <td>{{ $c.walk.speed }} px/f</td>
+        <td>{{ $c.walk.accel }} px/f<sup>2</sup></td>
+        <td>{{ $c.groundFriction }} px/f<sup>2</sup></td>
+        <td>{{ $c.waveland.time }} frames</td>
+        <td>{{ $c.waveland.friction }} px/f<sup>2</sup></td>
       </tr>
       {{ with $c.onIce }}
         <tr>
           <td class="sticky-col">On Ice</td>
           <td></td>
-          <td>{{ .initialDash.speed }}</td>
-          <td>{{ .run.speed }}</td>
+          <td>{{ .initialDash.speed }} px/f</td>
+          <td>{{ .run.speed }} px/f</td>
           <td></td>
-          <td>{{ .run.turn.time }}</td>
-          <td>{{ .run.turn.accel }}</td>
+          <td>{{ .run.turn.time }} frames</td>
+          <td>{{ .run.turn.accel }} px/f<sup>2</sup></td>
           <td></td><td></td>
-          <td>{{ .groundFriction }}</td>
-          <td>{{ .waveland.time }}</td>
+          <td>{{ .groundFriction }} px/f<sup>2</sup></td>
+          <td>{{ .waveland.time }} frames</td>
           <td></td>
         </tr>
       {{ end }}
@@ -95,27 +91,27 @@
         <tr>
           <td class="sticky-col">In Slip</td>
           <td></td>
-          <td>{{ .initialDash.speed }}</td>
-          <td>{{ .run.speed }}</td>
+          <td>{{ .initialDash.speed }} px/f</td>
+          <td>{{ .run.speed }} px/f</td>
           <td></td>
-          <td>{{ .run.turn.time }}</td>
-          <td>{{ .run.turn.accel }}</td>
-          <td>{{ .walk.speed }}</td>
-          <td>{{ .walk.accel }}</td>
+          <td>{{ .run.turn.time }} frames</td>
+          <td>{{ .run.turn.accel }} px/f<sup>2</sup></td>
+          <td>{{ .walk.speed }} px/f</td>
+          <td>{{ .walk.accel }} px/f<sup>2</sup></td>
           <td></td><td></td><td></td>
         </tr>
       {{ end }}
       {{ with $c.momentumMail }}
         <tr>
           <td class="sticky-col">M. Mail</td>
+          <td></td><td></td><td></td>
+          <td>{{ .run.stop.time }} frames</td>
+          <td>{{ .run.turn.time }} frames</td>
+          <td>{{ .run.turn.accel }} px/f<sup>2</sup></td>
           <td></td><td></td>
-          <td>{{ .run.stop.time }}</td>
-          <td>{{ .run.turn.time }}</td>
-          <td>{{ .run.turn.accel }}</td>
-          <td></td><td></td>
-          <td>{{ .groundFriction }}</td>
+          <td>{{ .groundFriction }} px/f<sup>2</sup></td>
           <td></td>
-          <td>{{ .waveland.friction }}</td>
+          <td>{{ .waveland.friction }} px/f<sup>2</sup></td>
         </tr>
       {{ end }}
     </tbody>
@@ -123,7 +119,7 @@
 </div>
 
 {{ else if eq (.Get 1) "aerial-movement" }}
-<div class="library-table no-col-borders">
+<div class="library-table stats-table">
   <table>
     <thead>
       <tr>
@@ -150,25 +146,25 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{ $c.airAccel }}</td>
-        <td>{{ $c.maxAirSpeed }}</td>
-        <td>{{ $c.maxJumpHorizontalSpeed }}</td>
-        <td>{{ $c.shorthop.speed }}</td>
-        <td>{{ $c.fullhop.speed }}</td>
+        <td>{{ $c.airAccel }} px/f<sup>2</sup></td>
+        <td>{{ $c.maxAirSpeed }} px/f</td>
+        <td>{{ $c.maxJumpHorizontalSpeed }} px/f</td>
+        <td>{{ $c.shorthop.speed }} px/f</td>
+        <td>{{ $c.fullhop.speed }} px/f</td>
         <td>
           {{ $c.doubleJump.speed }}
           {{ with $c.tripleJump.speed }}/ {{ . }}{{ end }}
           {{ with $c.quadrupleJump.speed }}/ {{ . }}{{ end }}
-        </td>
-        {{ with $c.doubleJump.accel }}<td>{{ . }}</td>{{ end }}
-        <td>{{ $c.gravityAccel }}</td>
-        <td>{{ $c.fastfallSpeed }}</td>
-        <td>{{ $c.landTime }}</td>
-        <td>{{ $c.walljump.speed.vertical }}</td>
-        <td>{{ $c.walljump.speed.horizontal }}</td>
-        {{ with $c.wallcling.max }}<td>{{ . }}</td>{{ end }}
-        <td>{{ $c.pratfall.accel }}</td>
-        <td>{{ $c.pratfall.landTime }}</td>
+        px/f</td>
+        {{ with $c.doubleJump.accel }}<td>{{ . }} px/f<sup>2</sup></td>{{ end }}
+        <td>{{ $c.gravityAccel }} px/f<sup>2</sup></td>
+        <td>{{ $c.fastfallSpeed }} px/f</td>
+        <td>{{ $c.landTime }} frames</td>
+        <td>{{ $c.walljump.speed.vertical }} px/f</td>
+        <td>{{ $c.walljump.speed.horizontal }} px/f</td>
+        {{ with $c.wallcling.max }}<td>{{ . }} frames</td>{{ end }}
+        <td>{{ $c.pratfall.accel }} px/f<sup>2</sup></td>
+        <td>{{ $c.pratfall.landTime }} frames</td>
       </tr>
     </tbody>
   </table>

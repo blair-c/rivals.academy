@@ -1412,6 +1412,10 @@ article div:has(iframe) {
   border-top: 1px solid var(--clr-gray-1);
 }
 
+.library-table tr:has(sup) td {
+  padding-bottom: .5rem;
+}
+
 .no-col-borders td, 
 .no-col-borders th {
   border-right: none;

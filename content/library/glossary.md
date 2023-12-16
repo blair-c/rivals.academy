@@ -5,7 +5,7 @@ authors:
 - Sector 7-G
 ---
 
-> Rivals of Aether runs at 60 frames per second, and natively at 512×960px resolution. Throughout this document and site, we use these frames and pixels as units of time and distance, respectively.
+> {{< library/units-note >}}
 
 ## Frame Data
 
