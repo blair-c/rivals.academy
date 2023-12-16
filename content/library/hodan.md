@@ -10,7 +10,7 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox hodan >}}
+{{< library/hurtbox hodan "Measured in pixels" >}}
 ### Effective Weight
 {{< library/character-stats hodan effective-weight >}}
 ### Grounded Movement

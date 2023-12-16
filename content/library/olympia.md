@@ -10,7 +10,7 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox olympia >}}
+{{< library/hurtbox olympia "Measured in pixels" >}}
 ### Effective Weight
 {{< library/character-stats olympia effective-weight >}}
 ### Grounded Movement

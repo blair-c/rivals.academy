@@ -10,7 +10,7 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox orcane >}}
+{{< library/hurtbox orcane "Measured in pixels" >}}
 ### Effective Weight
 {{< library/character-stats orcane effective-weight >}}
 ### Grounded Movement

@@ -6,27 +6,17 @@
     <thead>
       <tr>
         <th>Knockback Adjust</th>
-        <th>Gravity Accel</th>
-        <th>Hitstun Gravity Accel</th>
         <th>Air Friction</th>
-        <th>Air Accel</th>
+        <th>Hitstun Gravity Accel</th>
         <th>Max Fall Speed</th>
-        <th>Fastfall Speed</th>
-        <th>Land Time</th>
-        <th>Jumpsquat</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>{{ $c.knockbackAdjustment }}</td>
-        <td>{{ $c.gravityAccel }}</td>
-        <td>{{ $c.hitstunGravityAccel }}</td>
         <td>{{ $c.airFriction }}</td>
-        <td>{{ $c.airAccel }}</td>
+        <td>{{ $c.hitstunGravityAccel }}</td>
         <td>{{ $c.maxFallSpeed }}</td>
-        <td>{{ $c.fastfallSpeed }}</td>
-        <td>{{ $c.landTime }}</td>
-        <td>{{ $c.jumpsquat }}</td>
       </tr>
     </tbody>
   </table>
@@ -55,16 +45,15 @@
         {{ with or $c.onIce $c.inSlipstream $c.momentumMail }}
           <th class="sticky-col"></th>
         {{ end }}
-        <th>Ground Friction</th>
+        <th>Dash Time</th>
         <th>Dash Speed</th>
-        <th>Dash Time  </th>
         <th>Run Speed</th>
         <th>Run Stop Time</th>
         <th>Run Turn Time</th>
         <th>Run Turn Accel</th>
         <th>Walk Speed</th>
         <th>Walk Accel</th>
-        <th>Walk Turn Time</th>
+        <th>Ground Friction</th>
         <th>Waveland Time</th>
         <th>Waveland Friction</th>
       </tr>
@@ -74,30 +63,29 @@
         {{ with or $c.onIce $c.inSlipstream $c.momentumMail }}
           <td class="sticky-col">Base</td>
         {{ end }}
-        <td>{{ $c.groundFriction }}</td>
-        <td>{{ $c.initialDash.speed }}</td>
         <td>{{ $c.initialDash.time }}</td>
+        <td>{{ $c.initialDash.speed }}</td>
         <td>{{ $c.run.speed }}</td>
         <td>{{ $c.run.stop.time }}</td>
         <td>{{ $c.run.turn.time }}</td>
         <td>{{ $c.run.turn.accel }}</td>
         <td>{{ $c.walk.speed }}</td>
         <td>{{ $c.walk.accel }}</td>
-        <td>{{ $c.walk.turn.time }}</td>
+        <td>{{ $c.groundFriction }}</td>
         <td>{{ $c.waveland.time }}</td>
         <td>{{ $c.waveland.friction }}</td>
       </tr>
       {{ with $c.onIce }}
         <tr>
           <td class="sticky-col">On Ice</td>
-          <td>{{ .groundFriction }}</td>
-          <td>{{ .initialDash.speed }}</td>
           <td></td>
+          <td>{{ .initialDash.speed }}</td>
           <td>{{ .run.speed }}</td>
           <td></td>
           <td>{{ .run.turn.time }}</td>
           <td>{{ .run.turn.accel }}</td>
-          <td></td><td></td><td></td>
+          <td></td><td></td>
+          <td>{{ .groundFriction }}</td>
           <td>{{ .waveland.time }}</td>
           <td></td>
         </tr>
@@ -107,7 +95,6 @@
           <td class="sticky-col">In Slip</td>
           <td></td>
           <td>{{ .initialDash.speed }}</td>
-          <td></td>
           <td>{{ .run.speed }}</td>
           <td></td>
           <td>{{ .run.turn.time }}</td>
@@ -120,12 +107,13 @@
       {{ with $c.momentumMail }}
         <tr>
           <td class="sticky-col">M. Mail</td>
-          <td>{{ .groundFriction }}</td>
-          <td></td><td></td><td></td>
+          <td></td><td></td>
           <td>{{ .run.stop.time }}</td>
           <td>{{ .run.turn.time }}</td>
           <td>{{ .run.turn.accel }}</td>
-          <td></td><td></td><td></td><td></td>
+          <td></td><td></td>
+          <td>{{ .groundFriction }}</td>
+          <td></td>
           <td>{{ .waveland.friction }}</td>
         </tr>
       {{ end }}
@@ -138,13 +126,18 @@
   <table>
     <thead>
       <tr>
+        <th>Air Acceleration</th>
         <th>Max Air Speed</th>
         <th>Max Jump Horizontal Speed</th>
-        <th>Fullhop Speed</th>
         <th>Shorthop Speed</th>
+        <th>Fullhop Speed</th>
         <th>Double Jump Speed</th>
         {{ with $c.doubleJump.accel }}<th>Double Jump Accel</th>{{ end }}
         {{ with $c.tripleJump.speed }}<th>Triple Jump Speed</th>{{ end }}
+        {{ with $c.quadrupleJump.speed }}<th>Quad Jump Speed</th>{{ end }}
+        <th>Gravity Accel</th>
+        <th>Fastfall Speed</th>
+        <th>Land Time</th>
         <th>Vertical Walljump Speed</th>
         <th>Horizontal Walljump Speed</th>
         {{ with $c.wallcling.max }}<th>Max Wallcling</th>{{ end }}
@@ -154,13 +147,18 @@
     </thead>
     <tbody>
       <tr>
+        <td>{{ $c.airAccel }}</td>
         <td>{{ $c.maxAirSpeed }}</td>
         <td>{{ $c.maxJumpHorizontalSpeed }}</td>
-        <td>{{ $c.fullhop.speed }}</td>
         <td>{{ $c.shorthop.speed }}</td>
+        <td>{{ $c.fullhop.speed }}</td>
         <td>{{ $c.doubleJump.speed }}</td>
         {{ with $c.doubleJump.accel }}<td>{{ . }}</td>{{ end }}
         {{ with $c.tripleJump.speed }}<td>{{ $c.tripleJump.speed }}</td>{{ end }}
+        {{ with $c.quadrupleJump.speed }}<td>{{ $c.quadrupleJump.speed }}</td>{{ end }}
+        <td>{{ $c.gravityAccel }}</td>
+        <td>{{ $c.fastfallSpeed }}</td>
+        <td>{{ $c.landTime }}</td>
         <td>{{ $c.walljump.speed.vertical }}</td>
         <td>{{ $c.walljump.speed.horizontal }}</td>
         {{ with $c.wallcling.max }}<td>{{ . }}</td>{{ end }}

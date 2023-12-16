@@ -10,7 +10,7 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox shovel-knight >}}
+{{< library/hurtbox shovel-knight "Measured in pixels" >}}
 ### Effective Weight
 {{< library/character-stats shovel-knight effective-weight >}}
 ### Grounded Movement

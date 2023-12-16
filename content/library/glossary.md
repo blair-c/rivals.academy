@@ -363,6 +363,3 @@ Starting horizontal velocity for a walljump.
 #### Wallcling
 
 [Maypul](/library/maypul) and [Ori](/library/ori) are able to wallcling, holding their position on the wall for up to {{< library/stat maypul wallcling.max >}} frames before walljumping.
-
-#### TODO:
-> Match char pages and yaml data files to this ordering as final step

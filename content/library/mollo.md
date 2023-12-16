@@ -10,7 +10,7 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox mollo >}}
+{{< library/hurtbox mollo "Measured in pixels" >}}
 ### Effective Weight
 {{< library/character-stats mollo effective-weight >}}
 ### Grounded Movement

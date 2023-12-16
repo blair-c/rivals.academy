@@ -10,7 +10,7 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox etalus >}}
+{{< library/hurtbox etalus "Measured in pixels" >}}
 ### Effective Weight
 {{< library/character-stats etalus effective-weight >}}
 ### Grounded Movement

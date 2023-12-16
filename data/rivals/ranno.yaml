@@ -5,14 +5,9 @@ element: water
 stats:
   # Effective Weight
   knockbackAdjustment: 1.05
-  gravityAccel: 0.45
-  hitstunGravityAccel: 0.5
   airFriction: 0.02
-  airAccel: 0.3
+  hitstunGravityAccel: 0.5
   maxFallSpeed: 10
-  fastfallSpeed: 13
-  jumpsquat: 5
-  landTime: 4
   # Ground Movement
   groundFriction: 0.7
   initialDash:
@@ -28,18 +23,17 @@ stats:
   walk:
     speed: 4
     accel: 0.2
-    turn:
-      time: 6
   waveland:
     time: 8
     friction: 0.11
   # Aerial Movement
+  airAccel: 0.3
   maxAirSpeed: 3
   maxJumpHorizontalSpeed: 4
-  fullhop:
-    speed: 11
   shorthop:
     speed: 7
+  fullhop:
+    speed: 11
   superJump:
     speed: 14
   doubleJump:
@@ -49,6 +43,9 @@ stats:
     speed:
       vertical: 8
       horizontal: 7
+  gravityAccel: 0.45
+  fastfallSpeed: 13
+  landTime: 4
   pratfall:
     accel: 0.5
     landTime: 8

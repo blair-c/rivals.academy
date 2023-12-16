@@ -10,7 +10,7 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox clairen >}}
+{{< library/hurtbox clairen "Measured in pixels" >}}
 ### Effective Weight
 {{< library/character-stats clairen effective-weight >}}
 ### Grounded Movement

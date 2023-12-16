@@ -10,7 +10,7 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox maypul >}}
+{{< library/hurtbox maypul "Measured in pixels" >}}
 ### Effective Weight
 {{< library/character-stats maypul effective-weight >}}
 ### Grounded Movement

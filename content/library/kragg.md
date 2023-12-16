@@ -10,7 +10,7 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox kragg >}}
+{{< library/hurtbox kragg "Measured in pixels" >}}
 ### Effective Weight
 {{< library/character-stats kragg effective-weight >}}
 ### Grounded Movement

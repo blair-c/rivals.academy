@@ -10,7 +10,7 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox absa >}}
+{{< library/hurtbox absa "Measured in pixels" >}}
 ### Effective Weight
 {{< library/character-stats absa effective-weight >}}
 ### Grounded Movement

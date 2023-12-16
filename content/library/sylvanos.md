@@ -10,7 +10,7 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox sylvanos >}}
+{{< library/hurtbox sylvanos "Measured in pixels" >}}
 ### Effective Weight
 {{< library/character-stats sylvanos effective-weight >}}
 ### Grounded Movement

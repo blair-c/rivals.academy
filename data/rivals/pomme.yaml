@@ -5,14 +5,9 @@ element: air
 stats:
   # Effective Weight
   knockbackAdjustment: 1.1
-  gravityAccel: 0.35
-  hitstunGravityAccel: 0.45
   airFriction: 0.04
-  airAccel: 0.3
+  hitstunGravityAccel: 0.45
   maxFallSpeed: 8
-  fastfallSpeed: 12
-  jumpsquat: 5
-  landTime: 4
   # Ground Movement
   groundFriction: 0.5
   initialDash:
@@ -28,18 +23,17 @@ stats:
   walk:
     speed: 3.25
     accel: 0.2
-    turn:
-      time: 6
   waveland:
     time: 6
     friction: 0
   # Aerial Movement
+  airAccel: 0.3
   maxAirSpeed: 5.5
   maxJumpHorizontalSpeed: 8
-  fullhop:
-    speed: 9
   shorthop:
     speed: 4.5
+  fullhop:
+    speed: 9
   doubleJump:
     amount: 1
     speed: 8
@@ -47,6 +41,9 @@ stats:
     speed:
       vertical: 8
       horizontal: 5
+  gravityAccel: 0.35
+  fastfallSpeed: 12
+  landTime: 4
   pratfall:
     accel: 0.85
     landTime: 16

@@ -10,7 +10,7 @@ outputs:
 
 ## Character Properties
 ### Hurtbox
-{{< library/hurtbox elliana >}}
+{{< library/hurtbox elliana "Measured in pixels" >}}
 ### Effective Weight
 {{< library/character-stats elliana effective-weight >}}
 ### Grounded Movement

@@ -5,14 +5,9 @@ element: guest
 stats:
   # Effective Weight
   knockbackAdjustment: 1.15
-  gravityAccel: 0.5
-  hitstunGravityAccel: 0.5
   airFriction: 0.03
-  airAccel: 0.3
+  hitstunGravityAccel: 0.5
   maxFallSpeed: 10
-  fastfallSpeed: 15
-  jumpsquat: 5
-  landTime: 4
   # Ground Movement
   groundFriction: 0.7
   initialDash:
@@ -28,18 +23,17 @@ stats:
   walk:
     speed: 3.5
     accel: 0.5
-    turn:
-      time: 6
   waveland:
     time: 8
     friction: 0.06
   # Aerial Movement
+  airAccel: 0.3
   maxAirSpeed: 7
   maxJumpHorizontalSpeed: 7
-  fullhop:
-    speed: 10.5
   shorthop:
     speed: 6
+  fullhop:
+    speed: 10.5
   doubleJump:
     amount: 1
     speed: 10.5
@@ -49,6 +43,9 @@ stats:
       horizontal: 5
   wallcling:
     max: 60
+  gravityAccel: 0.5
+  fastfallSpeed: 15
+  landTime: 4
   pratfall:
     accel: 0.4
     landTime: 10
