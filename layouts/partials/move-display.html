@@ -962,13 +962,26 @@
           {{ with .scaling.calculator }}
             <a href="{{ .link }}" title="{{ .description}}" target="_blank" rel="noopener noreferrer">
           {{ end }}
-          {{ with .scaling.min }}{{ . }}-{{ end -}}
-          {{ with .scaling.max }}{{ . }}{{ end }}
+          {{ with .scaling.min }}
+            {{ if modBool (mul . 100) 10 }}
+              {{ printf "%.2f" . -}}
+            {{ else }}{{ . }}{{ end -}}
+          -{{ end -}}
+          {{ with .scaling.max -}}
+            {{ if modBool (mul . 100) 10 -}}
+              {{ printf "%.2f" . -}}
+            {{ else }}{{ . }}{{ end }}
+          {{ end }}
           {{ with .scaling.basedOn }}({{ . }}){{ end }}
           {{ with .scaling.calculator }}</a>{{ end }}
           {{ .scaling.standard }}
           {{ with .scaling.tetherCancel }}({{ . }} after Tether cancel){{ end }}
-        {{ else }}{{ .scaling }}{{ end }}
+        {{ else }}
+          {{ if eq .scaling 0 }}0.00
+          {{ else if modBool (mul .scaling 100) 10 }}
+            {{ printf "%.2f" .scaling }}
+          {{ else }}{{ .scaling }}{{ end }}
+        {{ end }}
       {{ end }}</td>{{ end }}
 
       {{ if $hitstunModifier }}<td>
@@ -994,7 +1007,13 @@
       </td>{{ end }}
 
       {{ if $hitpause }}<td>
-        {{ with .hitpause }}{{ .base }} | {{ .scaling }}{{ end -}}
+        {{ with .hitpause }}
+          {{ .base }} | 
+          {{ if eq .scaling 0 }}0.00
+          {{ else if modBool (mul .scaling 100) 10 }}
+            {{ printf "%.2f" .scaling }}
+          {{ else }}{{ .scaling }}{{ end }}
+        {{ end }}
         {{ with .hitpause.extra }}<br>
           {{ if isset . "onOpponent" }} (+{{ .onOpponent }} on opponent)
           {{ else }}(+{{ . }}){{ end }}

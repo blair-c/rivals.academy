@@ -97,7 +97,7 @@ The initial speed at which a hitbox sends its target flying, measured in pixels 
 > **Base_Knockback**{{< code " + (" >}}**Knockback_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × " >}}[Knockback_Adjust](#knockback-adjust){{< code " × 0.12)" >}}
 
 - Base Knockback and Knockback Scaling are hitbox properties.
-  - Knockback Scaling listed is divided by 100 for the formula, eg. 25 {{< code "⇒" >}} 0.25.
+  - Listed as "Base | Scaling" on character pages.
 - [Percent After Hit](#damage) is represented as an integer for the formula, eg. 50% {{< code "⇒" >}} 50.
 - [Knockback Adjust](#knockback-adjust) is the basic weight stat of the character being attacked. 
 
@@ -108,8 +108,8 @@ The number of frames a character is stunned, unable to perform basic actions, af
 > **Hitstun_Multiplier**{{< code " × ((" >}}**Base_Knockback**{{< code " × 2.4 × (" >}}[Knockback_Adjust](#knockback-adjust){{< code " - 1)) + (" >}}**Knockback_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × " >}}[Knockback_Adjust](#knockback-adjust){{< code " × 0.312))" >}}
 
 - Hitstun Multiplier, Base Knockback, and Knockback Scaling are hitbox properties.
+  - Listed as "Multiplier {{< code "×" >}}" and "Base | Scaling" on character pages.
   - The vast majority of hitboxes have a Hitstun Multiplier of {{< code 1 >}}.
-  - Knockback Scaling listed is divided by 100 for the formula, eg. 25 {{< code "⇒" >}} 0.25.
 - [Percent After Hit](#damage) is represented as an integer for the formula, eg. 50% {{< code "⇒" >}} 50.
 - [Knockback Adjust](#knockback-adjust) is the basic weight stat of the character being attacked.
 - Final value is rounded up to the nearest integer.
@@ -121,8 +121,8 @@ The number of frames that both characters experience a pause/freeze-frame effect
 > **Base_Hitpause**{{< code " + (" >}}**Hitpause_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × 0.05) + " >}}**Extra_Hitpause**
 
 - Base Hitpause, Hitpause Scaling, and Extra Hitpause are hitbox properties.
+  - Listed as "Base | Scaling{{< code " + " >}}Extra" on character pages.
   - The vast majority of hitboxes do not have Extra Hitpause.
-  - Hitpause Scaling listed is divided by 100 for the formula, eg. 25 {{< code "⇒" >}} 0.25.
 - [Percent After Hit](#damage) is represented as an integer for the formula, eg. 50% {{< code "⇒" >}} 50.
 - Final value is rounded up to the nearest integer.
 

@@ -144,11 +144,11 @@ dashAttack:
     angleFlipper: 0
     knockback:
       base: 7
-      scaling: 60
+      scaling: 0.60
     hitstunModifier: 1
     hitpause:
       base: 8
-      scaling: 60
+      scaling: 0.60
     priority: 1
     killsProjectiles: true
     parryStun: true
@@ -166,11 +166,11 @@ dashAttack:
     angleFlipper: 0
     knockback:
       base: 4
-      scaling: 60
+      scaling: 0.60
     hitstunModifier: 1
     hitpause:
       base: 6
-      scaling: 60
+      scaling: 0.60
     priority: 1
     killsProjectiles: true
     parryStun: true
@@ -192,11 +192,11 @@ dashAttack:
     angleFlipper: 0
     knockback:
       base: 8
-      scaling: 85
+      scaling: 0.85
     hitstunModifier: 1
     hitpause:
       base: 1
-      scaling: 80
+      scaling: 0.80
     priority: 1
     killsProjectiles: true
     parryStun: true
@@ -214,11 +214,11 @@ dashAttack:
     angleFlipper: 0
     knockback:
       base: 7
-      scaling: 70
+      scaling: 0.70
     hitstunModifier: 1
     hitpause:
       base: 8
-      scaling: 80
+      scaling: 0.80
     priority: 1
     killsProjectiles: true
     parryStun: true
@@ -244,11 +244,11 @@ forwardTilt:
     angleFlipper: 0
     knockback:
       base: 9
-      scaling: 20
+      scaling: 0.20
     hitstunModifier: 1
     hitpause:
       base: 8
-      scaling: 35
+      scaling: 0.35
     priority: 3
     killsProjectiles: true
     parryStun: true
@@ -280,11 +280,11 @@ forwardTilt:
     angleFlipper: 0
     knockback:
       base: 11
-      scaling: 75
+      scaling: 0.75
     hitstunModifier: 1
     hitpause:
       base: 8
-      scaling: 75
+      scaling: 0.75
     priority: 2
     killsProjectiles: true
     parryStun: true
@@ -308,11 +308,11 @@ upTilt:
     angleFlipper: 0
     knockback:
       base: 9
-      scaling: 55
+      scaling: 0.55
     hitstunModifier: 1
     hitpause:
       base: 8
-      scaling: 50
+      scaling: 0.50
     priority: 3
     killsProjectiles: true
     parryStun: true
@@ -365,11 +365,11 @@ upTilt:
     angleFlipper: 0
     knockback:
       base: 10
-      scaling: 70
+      scaling: 0.70
     hitstunModifier: 1
     hitpause:
       base: 8
-      scaling: 50
+      scaling: 0.50
     priority: 3
     killsProjectiles: true
     parryStun: true
@@ -414,11 +414,11 @@ downTilt:
     angleFlipper: 6
     knockback:
       base: 6
-      scaling: 50
+      scaling: 0.50
     hitstunModifier: 1
     hitpause:
       base: 7
-      scaling: 25
+      scaling: 0.25
     priority: 2
     killsProjectiles: true
     parryStun: true
@@ -458,11 +458,11 @@ neutralAir:
     angleFlipper: 6
     knockback:
       base: 8
-      scaling: 50
+      scaling: 0.50
     hitstunModifier: 1
     hitpause:
       base: 7
-      scaling: 50
+      scaling: 0.50
     priority: 2
     killsProjectiles: true
     parryStun: true
@@ -482,11 +482,11 @@ neutralAir:
     angleFlipper: 6
     knockback:
       base: 3
-      scaling: 30
+      scaling: 0.30
     hitstunModifier: 1
     hitpause:
       base: 4
-      scaling: 25
+      scaling: 0.25
     priority: 1
     killsProjectiles: true
     parryStun: true
@@ -538,11 +538,11 @@ forwardAir:
     angleFlipper: 0
     knockback:
       base: 6
-      scaling: 65
+      scaling: 0.65
     hitstunModifier: 1
     hitpause:
       base: 8
-      scaling: 80
+      scaling: 0.80
     priority: 1
     killsProjectiles: true
     parryStun: true
@@ -563,11 +563,11 @@ forwardAir:
     angleFlipper: 0
     knockback:
       base: 6
-      scaling: 70
+      scaling: 0.70
     hitstunModifier: 1
     hitpause:
       base: 8
-      scaling: 80
+      scaling: 0.80
     priority: 1
     killsProjectiles: true
     parryStun: true
@@ -590,11 +590,11 @@ forwardAir:
     angleFlipper: 0
     knockback:
       base: 7.5
-      scaling: 85
+      scaling: 0.85
     hitstunModifier: 1
     hitpause:
       base: 8
-      scaling: 80
+      scaling: 0.80
     priority: 1
     killsProjectiles: true
     parryStun: true
@@ -615,11 +615,11 @@ forwardAir:
     angleFlipper: 0
     knockback:
       base: 6
-      scaling: 70
+      scaling: 0.70
     hitstunModifier: 1
     hitpause:
       base: 8
-      scaling: 80
+      scaling: 0.80
     priority: 1
     killsProjectiles: true
     parryStun: true
@@ -643,7 +643,7 @@ backAir:
     angleFlipper: 6
     knockback:
       base: 4
-      scaling: 25
+      scaling: 0.25
     hitstunModifier: 0.6
     hitpause:
       base: 6
@@ -668,11 +668,11 @@ backAir:
     angleFlipper: 6
     knockback:
       base: 6
-      scaling: 50
+      scaling: 0.50
     hitstunModifier: 1
     hitpause:
       base: 5
-      scaling: 40
+      scaling: 0.40
     priority: 2
     killsProjectiles: true
     parryStun: true
@@ -696,11 +696,11 @@ upAir:
     angleFlipper: 0
     knockback:
       base: 4
-      scaling: 30
+      scaling: 0.30
     hitstunModifier: 1
     hitpause:
       base: 4
-      scaling: 25
+      scaling: 0.25
     priority:
     - hitbox: Upper
       priority: 2
@@ -725,11 +725,11 @@ upAir:
     angleFlipper: 0
     knockback:
       base: 5
-      scaling: 50
+      scaling: 0.50
     hitstunModifier: 1
     hitpause:
       base: 5
-      scaling: 50
+      scaling: 0.50
     priority:
     - hitbox: Upper
       priority: 2
@@ -761,11 +761,11 @@ downAir:
     angleFlipper: 6
     knockback:
       base: 9
-      scaling: 75
+      scaling: 0.75
     hitstunModifier: 1
     hitpause:
       base: 9
-      scaling: 75
+      scaling: 0.75
     priority: 1
     killsProjectiles: true
     parryStun: true
@@ -782,11 +782,11 @@ downAir:
     angleFlipper: 6
     knockback:
       base: 6
-      scaling: 65
+      scaling: 0.65
     hitstunModifier: 1
     hitpause:
       base: 8
-      scaling: 65
+      scaling: 0.65
     priority: 2
     killsProjectiles: true
     parryStun: true
@@ -808,11 +808,11 @@ forwardStrong:
     angleFlipper: 0
     knockback:
       base: 8
-      scaling: 105
+      scaling: 1.05
     hitstunModifier: 1
     hitpause:
       base: 10
-      scaling: 75
+      scaling: 0.75
     hitLockout: 10
     priority: 4
     killsProjectiles: true
@@ -834,11 +834,11 @@ forwardStrong:
         from: 6
         to: 4
         scaling: linear
-      scaling: 100
+      scaling: 1.00
     hitstunModifier: 1
     hitpause:
       base: 10
-      scaling: 50
+      scaling: 0.50
     hitLockout: 10
     priority: 5
     killsProjectiles: true
@@ -860,11 +860,11 @@ upStrong:
     angleFlipper: 0
     knockback:
       base: 8
-      scaling: 80
+      scaling: 0.80
     hitstunModifier: 1
     hitpause:
       base: 7
-      scaling: 75
+      scaling: 0.75
     priority: 4
     killsProjectiles: true
     parryStun: true
@@ -882,11 +882,11 @@ upStrong:
     angleFlipper: 0
     knockback:
       base: 7
-      scaling: 100
+      scaling: 1.00
     hitstunModifier: 1
     hitpause:
       base: 7
-      scaling: 75
+      scaling: 0.75
     priority: 4
     killsProjectiles: true
     parryStun: true
@@ -933,7 +933,7 @@ upStrong:
     angleFlipper: 0
     knockback:
       base: 9
-      scaling: 125
+      scaling: 1.25
     hitstunModifier: 0.5
     hitpause:
       base: 12
@@ -953,7 +953,7 @@ upStrong:
     angleFlipper: 0
     knockback:
       base: 8
-      scaling: 135
+      scaling: 1.35
     hitstunModifier: 0.5
     hitpause:
       base: 12
@@ -982,11 +982,11 @@ downStrong:
     angleFlipper: 6
     knockback:
       base: 8.5
-      scaling: 115
+      scaling: 1.15
     hitstunModifier: 1
     hitpause:
       base: 10
-      scaling: 100
+      scaling: 1.00
     priority: 7
     killsProjectiles: true
     parryStun: true
@@ -1013,11 +1013,11 @@ downStrong:
     angleFlipper: 6
     knockback:
       base: 8.5
-      scaling: 115
+      scaling: 1.15
     hitstunModifier: 1
     hitpause:
       base: 10
-      scaling: 100
+      scaling: 1.00
     priority: 7
     killsProjectiles: true
     parryStun: true
@@ -1038,11 +1038,11 @@ downStrong:
     angleFlipper: 6
     knockback:
       base: 8.5
-      scaling: 115
+      scaling: 1.15
     hitstunModifier: 1
     hitpause:
       base: 10
-      scaling: 100
+      scaling: 1.00
     priority: 6
     killsProjectiles: true
     parryStun: true
@@ -1059,11 +1059,11 @@ downStrong:
     angleFlipper: 6
     knockback:
       base: 8.5
-      scaling: 95
+      scaling: 0.95
     hitstunModifier: 1
     hitpause:
       base: 8
-      scaling: 100
+      scaling: 1.00
     priority: 5
     killsProjectiles: true
     parryStun: true
@@ -1299,7 +1299,7 @@ neutralSpecial:
     hitstunModifier: 1
     hitpause:
       base: 6
-      scaling: 60
+      scaling: 0.60
     priority: 8
     killsProjectiles: true
     parryStun: true
@@ -1332,11 +1332,11 @@ sideSpecial:
     angleFlipper: 0
     knockback:
       base: 7
-      scaling: 20
+      scaling: 0.20
     hitstunModifier: 0.5
     hitpause:
       base: 4
-      scaling: 25
+      scaling: 0.25
     priority: 1
     killsProjectiles: true
     parryStun: false
@@ -1362,11 +1362,11 @@ sideSpecial:
     angleFlipper: 0
     knockback:
       base: 10
-      scaling: 20
+      scaling: 0.20
     hitstunModifier: 0.5
     hitpause:
       base: 4
-      scaling: 25
+      scaling: 0.25
     priority: 2
     killsProjectiles: true
     parryStun: false
@@ -1392,11 +1392,11 @@ sideSpecial:
     angleFlipper: 0
     knockback:
       base: 12
-      scaling: 20
+      scaling: 0.20
     hitstunModifier: 0.5
     hitpause:
       base: 4
-      scaling: 25
+      scaling: 0.25
     priority: 2
     killsProjectiles: true
     parryStun: false
@@ -1429,11 +1429,11 @@ sideSpecial:
     angleFlipper: 0
     knockback:
       base: 7
-      scaling: 20
+      scaling: 0.20
     hitstunModifier: 0.5
     hitpause:
       base: 4
-      scaling: 25
+      scaling: 0.25
     priority: 1
     killsProjectiles: true
     parryStun: false
@@ -1459,11 +1459,11 @@ sideSpecial:
     angleFlipper: 0
     knockback:
       base: 10
-      scaling: 20
+      scaling: 0.20
     hitstunModifier: 0.5
     hitpause:
       base: 4
-      scaling: 25
+      scaling: 0.25
     priority: 2
     killsProjectiles: true
     parryStun: false
@@ -1489,11 +1489,11 @@ sideSpecial:
     angleFlipper: 0
     knockback:
       base: 12
-      scaling: 20
+      scaling: 0.20
     hitstunModifier: 0.5
     hitpause:
       base: 4
-      scaling: 25
+      scaling: 0.25
     priority: 2
     killsProjectiles: true
     parryStun: false
@@ -1503,11 +1503,11 @@ sideSpecial:
     angleFlipper: 0
     knockback:
       base: 6
-      scaling: 40
+      scaling: 0.40
     hitstunModifier: 0.7
     hitpause:
       base: 8
-      scaling: 25
+      scaling: 0.25
     priority: 1
     killsProjectiles: true
     parryStun: false
@@ -1537,11 +1537,11 @@ upSpecial:
     angleFlipper: 0
     knockback:
       base: 9
-      scaling: 70
+      scaling: 0.70
     hitstunModifier: 1
     hitpause:
       base: 10
-      scaling: 75
+      scaling: 0.75
     hitLockout: 6
     priority: 8
     killsProjectiles: true
@@ -1568,11 +1568,11 @@ upSpecial:
         from: 7
         to: 6
         scaling: Linear
-      scaling: 60
+      scaling: 0.60
     hitstunModifier: 1
     hitpause:
       base: 4
-      scaling: 25
+      scaling: 0.25
     priority: 6
     killsProjectiles: true
     parryStun: true
@@ -1597,11 +1597,11 @@ upSpecial:
     angleFlipper: 0
     knockback:
       base: 7
-      scaling: 40
+      scaling: 0.40
     hitstunModifier: 1
     hitpause:
       base: 6
-      scaling: 25
+      scaling: 0.25
     hitLockout: 6
     priority: 2
     killsProjectiles: true
@@ -1627,11 +1627,11 @@ upSpecial:
     angleFlipper: 0
     knockback:
       base: 9
-      scaling: 110
+      scaling: 1.10
     hitstunModifier: 1
     hitpause:
       base: 10
-      scaling: 75
+      scaling: 0.75
     hitLockout: 6
     priority: 8
     killsProjectiles: true
@@ -1658,11 +1658,11 @@ upSpecial:
         from: 8
         to: 6
         scaling: Linear
-      scaling: 70
+      scaling: 0.70
     hitstunModifier: 1
     hitpause:
       base: 5
-      scaling: 45
+      scaling: 0.45
     priority: 6
     killsProjectiles: true
     parryStun: true
@@ -1685,11 +1685,11 @@ upSpecial:
     angleFlipper: 0
     knockback:
       base: 7
-      scaling: 40
+      scaling: 0.40
     hitstunModifier: 1
     hitpause:
       base: 6
-      scaling: 25
+      scaling: 0.25
     hitLockout: 6
     priority: 2
     killsProjectiles: true
@@ -1729,11 +1729,11 @@ downSpecial:
     angleFlipper: 0
     knockback:
       base: 6
-      scaling: 30
+      scaling: 0.30
     hitstunModifier: 1
     hitpause:
       base: 6
-      scaling: 25
+      scaling: 0.25
     priority: 2
     killsProjectiles: true
     parryStun: true
@@ -1755,11 +1755,11 @@ downSpecial:
     angleFlipper: 0
     knockback:
       base: 7
-      scaling: 50
+      scaling: 0.50
     hitstunModifier: 1
     hitpause:
       base: 6
-      scaling: 25
+      scaling: 0.25
     priority: 2
     killsProjectiles: true
     parryStun: true
@@ -1779,12 +1779,12 @@ downSpecial:
     angleFlipper: 0
     knockback:
       base: 7
-      scaling: 50
+      scaling: 0.50
     hitstunModifier: 1
     untechable: true
     hitpause:
       base: 6
-      scaling: 25
+      scaling: 0.25
     priority: 3
     killsProjectiles: true
     parryStun: true
@@ -1804,12 +1804,12 @@ downSpecial:
     angleFlipper: 0
     knockback:
       base: 7
-      scaling: 50
+      scaling: 0.50
     hitstunModifier: 1
     untechable: true
     hitpause:
       base: 6
-      scaling: 25
+      scaling: 0.25
     priority: 2
     killsProjectiles: false
     parryStun: true
