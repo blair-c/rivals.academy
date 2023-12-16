@@ -81,8 +81,8 @@ if (toc) {
 
 	// Factor of screen size that the element must cross
 	// before it's considered visible
-	let TOP_MARGIN = 0.1,
-      BOTTOM_MARGIN = 0.1;
+	let TOP_MARGIN = 0,
+      BOTTOM_MARGIN = 0.025;
 
   let footerDiv = document.querySelector(".article-footer-divider");
 

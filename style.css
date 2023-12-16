@@ -1236,7 +1236,7 @@ article div:has(iframe) {
   justify-content: center;
 }
 
-.library-grid li:not(:last-child) a div:hover,
+.library-grid li a div:hover,
 .library-grid li a:focus-visible div {
   border: 3px solid #3f3e6c;
 }
@@ -1398,10 +1398,22 @@ article div:has(iframe) {
   padding: .25rem .5rem;
 }
 
+.library-table th a {
+  color: currentColor;
+}
+
+.library-table th a:hover {
+  color: var(--clr-text-hc);
+}
+
 .library-table td {
   padding: .375rem .5rem;
   vertical-align: bottom;
   border-top: 1px solid var(--clr-gray-1);
+}
+
+.library-table tr:has(sup) td {
+  padding-bottom: .5rem;
 }
 
 .no-col-borders td, 
