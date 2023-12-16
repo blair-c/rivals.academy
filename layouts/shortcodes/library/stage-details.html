@@ -3,11 +3,11 @@
 
 <div class="library-table"><table>
   <thead><tr>
-    <th>{{ T "stage-width" }}</th>
-    {{ with $s.stageDepth }}<th>{{ T "stage-depth" }}</th>{{ end }}
-    <th>{{ T "top-blastzone" }}</th>
-    <th>{{ T "side-blastzones" }}</th>
-    <th>{{ T "bottom-blastzone" }}</th>
+    <th><a href="#{{ T "stage-width" | anchorize }}">{{ T "stage-width" }}</a></th>
+    {{ with $s.stageDepth }}<th><a href="#{{ T "stage-depth" | anchorize }}">{{ T "stage-depth" }}</a></th>{{ end }}
+    <th><a href="#{{ T "top-blastzone" | anchorize }}">{{ T "top-blastzone" }}</a></th>
+    <th><a href="#{{ T "side-blastzones" | anchorize }}">{{ T "side-blastzones" }}</a></th>
+    <th><a href="#{{ T "bottom-blastzone" | anchorize }}">{{ T "bottom-blastzone" }}</a></th>
     {{ with $s.platforms }}
     {{ if gt (len .) 1 }}
         <th>{{ T "platform-heights" }}</th>

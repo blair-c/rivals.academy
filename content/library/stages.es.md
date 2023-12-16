@@ -8,6 +8,8 @@ translators:
 - Doka
 ---
 
+> Rivals of Aether corre nativamente a una resolución de 512x960 pixeles. A lo largo de este documento y este sitio, utilizamos estos pixeles como unidades de distancia.
+
 ## Comparición de escenarios
 ### Ancho del escenario
 {{< library/stage-comparison "stageWidth" "Ancho del suelo del escenario, medidas en píxeles" >}}

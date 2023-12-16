@@ -8,6 +8,8 @@ outputs:
 - data
 ---
 
+> Rivals of Aether runs natively at 512×960px resolution. Throughout this document and site, we use these pixels as units of distance.
+
 ## Stage Comparisons
 ### Stage Width
 {{< library/stage-comparison stageWidth "Width of the main stage ground, measured in pixels" >}}

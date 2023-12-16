@@ -1398,6 +1398,14 @@ article div:has(iframe) {
   padding: .25rem .5rem;
 }
 
+.library-table th a {
+  color: currentColor;
+}
+
+.library-table th a:hover {
+  color: var(--clr-text-hc);
+}
+
 .library-table td {
   padding: .375rem .5rem;
   vertical-align: bottom;
