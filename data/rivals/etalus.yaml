@@ -45,7 +45,7 @@ stats:
   fastfallSpeed: 15
   landTime: 6
   pratfall:
-    accel: 0.85
+    adjust: 0.85
     landTime: 6
   # On Ice
   onIce:

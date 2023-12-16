@@ -140,7 +140,7 @@
         {{ with $c.wallcling.max }}
           <th><a href="{{ $g }}#{{ T "wallcling" | anchorize }}">{{ T "max-wallcling" }}</a></th>
         {{ end }}
-        <th><a href="{{ $g }}#{{ T "pratfall-accel" | anchorize }}">{{ T "pratfall-accel" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "pratfall-adjust" | anchorize }}">{{ T "pratfall-adjust" }}</a></th>
         <th><a href="{{ $g }}#{{ T "pratfall-land-time" | anchorize }}">{{ T "pratfall-land-time" }}</a></th>
       </tr>
     </thead>
@@ -163,7 +163,7 @@
         <td>{{ $c.walljump.speed.vertical }} px/f</td>
         <td>{{ $c.walljump.speed.horizontal }} px/f</td>
         {{ with $c.wallcling.max }}<td>{{ . }} frames</td>{{ end }}
-        <td>{{ $c.pratfall.accel }} px/f<sup>2</sup></td>
+        <td>{{ $c.pratfall.adjust }}</td>
         <td>{{ $c.pratfall.landTime }} frames</td>
       </tr>
     </tbody>

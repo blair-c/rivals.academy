@@ -45,7 +45,7 @@ stats:
   fastfallSpeed: 13
   landTime: 4
   pratfall:
-    accel: 1
+    adjust: 1
     landTime: 20
   # Momentum Mail
   momentumMail:

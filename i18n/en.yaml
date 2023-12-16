@@ -79,7 +79,7 @@ double-jump-accel: Double Jump Accel
 gravity-acceleration: Gravity Acceleration
 fastfall-speed: Fastfall Speed
 land-time: Land Time
-pratfall-accel: Pratfall Accel
+pratfall-adjust: Pratfall Adjust
 pratfall-land-time: Pratfall Land Time
 vertical-walljump-speed: Vertical Walljump Speed
 horizontal-walljump-speed: Horizontal Walljump Speed

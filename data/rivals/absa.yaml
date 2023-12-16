@@ -46,7 +46,7 @@ stats:
   fastfallSpeed: 12
   landTime: 4
   pratfall:
-    accel: 0.4
+    adjust: 0.4
     landTime: 16
 
 hurtbox:

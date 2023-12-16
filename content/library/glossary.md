@@ -336,11 +336,11 @@ Default amount of landing lag frames incurred when a character lands from the ai
 
 An airborne state a character can enter in which they are unable to act, most commonly entered by using a recovery move or being parried. Also referred to as special fall or freefall. Can be cancelled with [walljump](#walljump).
 
-#### Pratfall Accel
+#### Pratfall Adjust
 
-Multiplier to [Air Acceleration](#air-acceleration) that restricts horizontal control during pratfall.
+Multiplier to [Air Acceleration](#air-acceleration) that restricts or improves horizontal control during pratfall.
 
-{{< library/cast-comparison pratfall.accel >}}
+{{< library/cast-comparison pratfall.adjust >}}
 
 #### Pratfall Land Time
 

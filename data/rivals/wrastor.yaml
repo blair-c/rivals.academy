@@ -49,7 +49,7 @@ stats:
   fastfallSpeed: 11
   landTime: 4
   pratfall:
-    accel: 0.40
+    adjust: 0.40
     landTime: 24
   # In Slipstream
   inSlipstream:
