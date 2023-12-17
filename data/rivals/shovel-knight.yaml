@@ -47,6 +47,15 @@ stats:
   pratfall:
     adjust: 1
     landTime: 20
+  # Dodges
+  roll:
+    speed: 9
+    bodyDistance: 127
+  airdodge:
+    speed: 7.5
+  techRoll:
+    speed: 9
+    bodyDistance: 134
   # Momentum Mail
   momentumMail:
     knockbackAdjustment: 0.9

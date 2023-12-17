@@ -48,6 +48,15 @@ stats:
   pratfall:
     adjust: 0.4
     landTime: 16
+  # Dodges
+  roll:
+    speed: 9.5
+    bodyDistance: 135
+  airdodge:
+    speed: 8
+  techRoll:
+    speed: 8
+    bodyDistance: 116
 
 hurtbox:
   idle:
@@ -1151,52 +1160,3 @@ downSpecial:
   image:
     baseRes: https://rivals.academy/library/absa/down-special-charged.png
     highRes: https://rivals.academy/library/absa/1080_down-special-charged.png
-
-parry:
-  startup: 2
-  invuln:
-    from: 3
-    to: 10
-    frames: 8
-  endlag: 20
-  firstActiveFrame: 31
-  cooldown: 20
-roll:
-  startup: 3
-  invuln:
-    from: 4
-    to: 17
-    frames: 14
-  endlag: 12
-  firstActiveFrame: 30
-  speed: 9.5
-airdodge:
-  startup: 2
-  invuln:
-    from: 3
-    to: 
-    active: 12
-  endlag: 12
-  firstActiveFrame: 
-  speed: 8.0
-
-tech:
-  inPlace:
-    startup: 0
-    invuln:
-      from: 1
-      to: 14
-      frames: 14
-    endlag: 4
-    firstActiveFrame: 
-  roll:
-    startup: 8
-    invuln:
-      from: 
-      to: 
-      frames: 12
-    endlag: 14
-    firstActiveFrame: 
-    speed: 8
-  miss:
-    firstActiveFrame: 

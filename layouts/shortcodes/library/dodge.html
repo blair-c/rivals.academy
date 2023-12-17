@@ -1,0 +1,86 @@
+{{ $d := site.Data.library.universal }}
+
+<div class="library-table"><table>
+
+{{ if eq (.Get 0) "tech" }}
+<thead><tr>
+  <th class="sticky-col"></th>
+  <th><a href="#{{ T "intangible" | anchorize }}">{{ T "intangible" }}</a></th>
+  <th><a href="#{{ T "endlag" | anchorize }}">{{ T "endlag" }}</a></th>
+  <th><a href="#{{ T "frame-data" | anchorize }}">{{ T "faf" }}</a></th>
+  <th><a href="#{{ T "cancellable" | anchorize }}">{{ T "cancellable" }}</a></th>
+</tr></thead>
+<tbody>
+  {{ with $d.tech.inPlace }}<tr>
+    <td class="sticky-col">Tech In Place</td>
+    <td>{{ .intangible.from }}-{{ .intangible.to }}</td>
+    <td>{{ .endlag }}</td>
+    <td>{{ .firstActiveFrame }}</td>
+    <td></td>
+  </tr>{{ end }}
+  {{ with $d.tech.roll }}<tr>
+    <td class="sticky-col">Tech Roll</td>
+    <td>{{ .intangible.from }}-{{ .intangible.to }}</td>
+    <td>{{ .endlag }}</td>
+    <td>{{ .firstActiveFrame }}</td>
+    <td></td>
+  </tr>{{ end }}
+  {{ with $d.tech.miss.hitstun }}<tr>
+    <td class="sticky-col">Missed (Hitstun)</td>
+    <td></td>
+    <td>{{ .endlag }}</td>
+    <td>{{ .firstActiveFrame }}</td>
+    <td></td>
+  </tr>{{ end }}
+  {{ with $d.tech.miss.tumble }}<tr>
+    <td class="sticky-col">Missed (Tumble)</td>
+    <td></td>
+    <td>{{ .endlag }}</td>
+    <td>{{ .firstActiveFrame }}</td>
+    <td></td>
+  </tr>{{ end }}
+  {{ with $d.tech.wall }}<tr>
+    <td class="sticky-col">Wall Tech</td>
+    <td>{{ .intangible.from }}-{{ .intangible.to }}</td>
+    <td></td>
+    <td>{{ .firstActiveFrame }}</td>
+    <td>{{ range .cancellable }}{{ .with }}: {{ .from }}-{{ .to }}{{ end }}</td>
+  </tr>{{ end }}
+  {{ with $d.tech.ceiling }}<tr>
+    <td class="sticky-col">Ceiling Tech</td>
+    <td>{{ .intangible.from }}-{{ .intangible.to }}</td>
+    <td></td>
+    <td>{{ .firstActiveFrame }}</td>
+    <td>{{ range .cancellable }}{{ .with }}: {{ .from }}-{{ .to }}{{ end }}</td>
+  </tr>{{ end }}
+</tbody>
+
+{{ else }}{{ $d = index $d (.Get 0) }}
+<thead><tr>
+  <th><a href="#{{ T "startup" | anchorize }}">{{ T "startup" }}</a></th>
+  {{ if isset  $d "parry" }}<th>{{ T "parry" }}</th>{{ end }}
+  {{ if isset  $d "intangible" }}
+    <th><a href="#{{ T "intangible" | anchorize }}">{{ T "intangible" }}</a></th>
+  {{ end }}
+  <th><a href="#{{ T "endlag" | anchorize }}">{{ T "endlag" }}</a></th>
+  <th><a href="#{{ T "frame-data" | anchorize }}">{{ T "faf" }}</a></th>
+  {{ if isset  $d "cooldown" }}
+    <th><a href="#{{ T "cooldown" | anchorize }}">{{ T "cooldown" }}</a></th>
+  {{ end }}
+  {{ if isset $d "notes" }}<th>Notes</th>{{ end }}
+</tr></thead>
+<tbody>
+  <tr>
+    {{ with $d.startup }}<td>{{ . }}</td>{{ end }}
+    {{ with $d.parry }}<td>{{ .from }}-{{ .to }}</td>{{ end }}
+    {{ with $d.intangible }}<td>{{ .from }}-{{ .to }}</td>{{ end }}
+    {{ with $d.endlag }}<td>{{ . }}</td>{{ end }}
+    {{ with $d.firstActiveFrame }}<td>{{ . }}</td>{{ end }}
+    {{ with $d.cooldown }}<td>{{ . }}</td>{{ end }}
+    {{ with $d.notes }}<td>{{ range . }}{{ . }} {{ end }}</td>{{ end }}
+  </tr>
+</tbody>
+
+{{ end }}
+
+</table></div>

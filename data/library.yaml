@@ -2,3 +2,80 @@
 
 patch: 2.1.5.6
 patchNotes: https://rivalsofaether.com/patch-2-1-5-6-stages-galore/
+
+universal:
+  jumpsquat: 5
+  walkTurnTime: 6
+  parry:
+    startup: 2
+    parry:
+      from: 3
+      to: 10
+      frames: 8
+    endlag: 20
+    firstActiveFrame: 31
+    cooldown: 20
+  roll:
+    startup: 3
+    intangible:
+      from: 4
+      to: 17
+      frames: 14
+    endlag: 12
+    firstActiveFrame: 30
+  airdodge:
+    startup: 2
+    intangible:
+      from: 3
+      to: 14
+      active: 12
+    endlag: 12
+    firstActiveFrame: 27
+    notes:
+    - Only usable once per airtime.
+  tech:
+    window: 20
+    lockout: 20
+    inPlace:
+      intangible:
+        from: 1
+        to: 14
+        frames: 14
+      endlag: 4
+      firstActiveFrame: 19
+    roll:
+      intangible:
+        from: 1
+        to: 20
+        frames: 20
+      endlag: 14
+      firstActiveFrame: 35
+    miss:
+      hitstun:
+        endlag: 13
+        firstActiveFrame: 14
+      tumble:
+        endlag: 7
+        firstActiveFrame: 8
+    wall:
+      intangible:
+        from: 1
+        to: 15
+        frames: 15
+      firstActiveFrame: 12
+      cancellable:
+      - with: Airdodge/Jump
+        from: 4
+        to: 11
+        window: 8
+    ceiling:
+      intangible:
+        from: 1
+        to: 15
+        frames: 19
+      firstActiveFrame: 12
+      cancellable:
+      - with: IASA
+        from: 1
+        to: 19
+        window: 19

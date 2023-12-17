@@ -116,6 +116,10 @@ The number of frames a character is stunned, unable to perform basic actions, af
 - [Knockback Adjust](#knockback-adjust) is the basic weight stat of the character being attacked.
 - Final value is rounded up to the nearest integer.
 
+#### Tumble
+
+After hitpause, characters enter a state called tumble. Tumble can be cancelled by any action or a hard press in any direction, other than holding dodge which results in a [tech](#teching).
+
 ### Hitpause
 
 The number of frames that both characters experience a pause/freeze-frame effect when a hitbox connects. Calculated by the following formula:
@@ -180,7 +184,7 @@ Speed characters accelerate downwards due to gravity while in hitstun. Higher st
 
 ### Max Fall Speed
 
-Maximum fall speed without fastfall. Can be superceded by knockback, at which point [Hitstun Gravity Accel](#hitstun-gravity-accel) stops increasing speed.
+Maximum falling velocity without fastfall. Can be superceded by knockback, at which point [Hitstun Gravity Accel](#hitstun-gravity-accel) stops increasing speed.
 
 {{< library/cast-comparison maxFallSpeed "Measured in pixels per frame" >}}
 
@@ -324,7 +328,7 @@ Speed characters accelerate downwards due to gravity while not in hitstun, until
 
 ### Fastfall Speed
 
-Fall speed in fastfall.
+Constant falling velocity in fastfall.
 
 {{< library/cast-comparison fastfallSpeed "Measured in pixels per frame" >}}
 
@@ -367,3 +371,62 @@ Starting horizontal velocity for a walljump.
 #### Wallcling
 
 [Maypul](/library/maypul) and [Ori](/library/ori) are able to wallcling, holding their position on the wall for up to {{< library/stat maypul wallcling.max >}} frames before walljumping.
+
+## Dodges
+
+All characters share the same universal dodge frame data. However, the travel speed of rolls and airdodge vary across the cast, affecting distance.
+
+### Parry
+
+{{< library/dodge parry >}}
+
+A successful parry always grants 40 frames of invulnerability, and can inflict standard parry stun, extended parry stun, or no parry stun on the attacker. Standard parry stun is 40 frames, while extended parry stun adds onto this based on the distance between the two characters when the parry occurred. Extended parry stun a minimum of 60 frames (20 frames more than default) over distances less than 150px away and a maximum of 100 frames for characters further than 600px away. If a character is parried when they are not currently in an attacking state a further 10 frames of parry stun will also be applied.
+
+
+> Parry stun only begins once the parried character has completed endlag and/or landed, and can be increased to include relevant [landing lag](#landing-lag).
+
+### Airdodge
+
+{{< library/dodge airdodge >}}
+
+#### Airdodge Speed
+
+Constant velocity during airdodge.
+
+{{< library/cast-comparison airdodge.speed "Measured in pixels per frame" >}}
+
+### Roll
+
+{{< library/dodge roll >}}
+
+#### Roll Speed
+
+Constant horizontal velocity during roll.
+
+{{< library/cast-comparison roll.speed "Measured in pixels per frame" >}}
+
+#### Roll Body Distance
+
+Distance between starting point and nearest point of character's hurtbox after roll. Not an inherent character property, but rather the result of [Roll Speed](#roll-speed) and idle hurtbox width.
+
+{{< library/cast-comparison roll.bodyDistance "Measured in pixels" >}}
+
+### Teching
+
+Pressing dodge within 20 frames before colliding with a surface while in [histun](#hitstun) or [tumble](#tumble) results in a tech. Teching out of tumble requires the dodge button to be held, as releasing it results in an airdodge instead. Holding left or right when teching on the ground results in a tech roll in that direction.
+
+{{< library/dodge tech >}}
+
+> All dodge presses that don't result in a successful tech within the 20 frame window begin a 20 frame tech "lockout" afterwards during which teching is not possible.
+
+#### Tech Roll Speed
+
+Constant horizontal velocity during tech roll.
+
+{{< library/cast-comparison techRoll.speed "Measured in pixels per frame" >}}
+
+#### Tech Roll Body Distance
+
+Distance between starting point and nearest point of character's hurtbox after tech roll. Not an inherent character property, but rather the result of [Tech Roll Speed](#tech-roll-speed) and idle hurtbox width.
+
+{{< library/cast-comparison techRoll.bodyDistance "Measured in pixels" >}}

@@ -88,6 +88,13 @@ wallcling: Wallcling
 max-wallcling: Max Wallcling
 pratfall-accel: Pratfall Accel
 pratfall-land-time: Pratfall Land Time
+# Dodges
+parry: Parry
+airdodge-speed: Airdodge Speed
+roll-speed: Roll Speed
+roll-body-distance: Roll Body Distance
+tech-roll-speed: Tech Roll Speed
+tech-roll-body-distance: Tech Roll Body Distance
 # Stages
 doubles: Doubles
 stage-width: Stage Width

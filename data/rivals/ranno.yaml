@@ -49,6 +49,15 @@ stats:
   pratfall:
     adjust: 0.5
     landTime: 8
+  # Dodges
+  roll:
+    speed: 10
+    bodyDistance: 144
+  airdodge:
+    speed: 8
+  techRoll:
+    speed: 10
+    bodyDistance: 149
 
 hurtbox:
   idle:

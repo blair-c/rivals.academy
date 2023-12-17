@@ -19,6 +19,9 @@ outputs:
 {{< library/character-stats olympia grounded-movement >}}
 ### Aerial Movement
 {{< library/character-stats olympia aerial-movement >}}
+### Dodges
+All characters share the same [universal dodge frame data](/library/glossary#dodges). However, the travel speed of rolls and airdodge vary across the cast, affecting distance.
+{{< library/character-stats olympia dodges >}}
 
 ## Normal Attacks
 ### Jab

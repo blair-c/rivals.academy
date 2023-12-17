@@ -19,6 +19,9 @@ outputs:
 {{< library/character-stats shovel-knight grounded-movement >}}
 ### Aerial Movement
 {{< library/character-stats shovel-knight aerial-movement >}}
+### Dodges
+All characters share the same [universal dodge frame data](/library/glossary#dodges). However, the travel speed of rolls and airdodge vary across the cast, affecting distance.
+{{< library/character-stats shovel-knight dodges >}}
 
 ## Normal Attacks
 ### Jab

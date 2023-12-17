@@ -185,4 +185,26 @@
   </p>
 {{ end }}
 
+{{ else if eq (.Get 1) "dodges" }}
+<div class="library-table stats-table">
+  <table>
+    <thead>
+      <tr>
+        <th><a href="{{ $g }}#{{ T "airdodge-speed" | anchorize }}">{{ T "airdodge-speed" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "roll-speed" | anchorize }}">{{ T "roll-speed" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "roll-body-distance" | anchorize }}">{{ T "roll-body-distance" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "tech-roll-speed" | anchorize }}">{{ T "tech-roll-speed" }}</a></th>
+        <th><a href="{{ $g }}#{{ T "tech-roll-body-distance" | anchorize }}">{{ T "tech-roll-body-distance" }}</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <td>{{ $c.airdodge.speed }} px/f</td>
+      <td>{{ $c.roll.speed }} px/f</td>
+      <td>{{ $c.roll.bodyDistance }} px</td>
+      <td>{{ $c.techRoll.speed }} px/f</td>
+      <td>{{ $c.techRoll.bodyDistance }} px</td>
+    </tbody>
+  </table>
+</div>
+
 {{ end }}

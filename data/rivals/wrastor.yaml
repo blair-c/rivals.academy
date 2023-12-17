@@ -51,6 +51,15 @@ stats:
   pratfall:
     adjust: 0.40
     landTime: 24
+  # Dodges
+  roll:
+    speed: 9.5
+    bodyDistance: 136.5
+  airdodge:
+    speed: 7.5
+  techRoll:
+    speed: 8
+    bodyDistance: 116
   # In Slipstream
   inSlipstream:
     initialDash:

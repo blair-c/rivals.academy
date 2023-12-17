@@ -47,6 +47,15 @@ stats:
   pratfall:
     adjust: 0.85
     landTime: 6
+  # Dodges
+  roll:
+    speed: 9
+    bodyDistance: 108
+  airdodge:
+    speed: 7.5
+  techRoll:
+    speed: 11
+    bodyDistance: 147
   # On Ice
   onIce:
     groundFriction: 0.1

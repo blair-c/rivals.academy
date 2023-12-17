@@ -47,6 +47,15 @@ stats:
   pratfall:
     adjust: 0.7
     landTime: 11
+  # Dodges
+  roll:
+    speed: 9
+    bodyDistance: 118
+  airdodge:
+    speed: 7.5
+  techRoll:
+    speed: 10
+    bodyDistance: 140
 
 hurtbox:
   idle:
@@ -993,7 +1002,7 @@ downStrong:
 - name: EX Charged
   hitboxes:
   - startup: 23
-    invuln:
+    parry:
       from: 18
       to: 23
       frames: 6

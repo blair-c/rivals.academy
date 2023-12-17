@@ -3,6 +3,7 @@
 {{ range .hitboxes }}{{ if isset . "name" }}{{ $multiple = true }}{{ end }}{{ end }}
 {{/*  Initialize all possible columns to false  */}}
 {{ $startup := false }}
+{{ $parry := false }}
 {{ $intangible := false }}
 {{ $directionLockedIn := false }}
 {{ $active := false }}
@@ -46,6 +47,7 @@
 {{/*  Iterate through rows, set existing columns to true  */}}
 {{ range .hitboxes }}
   {{ if isset . "startup" }} {{ $startup = true }} {{ end }}
+  {{ if isset . "parry" }} {{ $parry = true }} {{ end }}
   {{ if isset . "intangible" }} {{ $intangible = true }} {{ end }}
   {{ if isset . "directionLockedIn" }} {{ $directionLockedIn = true }} {{ end }}
   {{ if isset . "active" }} {{ $active = true }} {{ end }}
@@ -97,6 +99,7 @@
         {{ $g := "/library/glossary" }}
         {{ if $multiple }}<th class="sticky-col"></th>{{ end }}
         {{ if $startup }}<th><a href="{{ $g }}#{{ T "startup" | anchorize }}">{{ T "startup" }}</a></th>{{ end }}
+        {{ if $parry }}<th><a href="{{ $g }}#{{ T "parry" | anchorize }}">{{ T "parry" }}</a></th>{{ end }}
         {{ if $intangible }}<th><a href="{{ $g }}#{{ T "intangible" | anchorize }}">{{ T "intangible" }}</a></th>{{ end }}
         {{ if $directionLockedIn }}<th>Direction Locked In</th>{{ end }}
         {{ if $active }}<th><a href="{{ $g }}#{{ T "active" | anchorize }}">{{ T "active" }}</a></th>{{ end }}
@@ -202,6 +205,8 @@
         {{- else }}{{ .startup }}{{ end }}
         {{ with .mustConnect }}({{ . }} Must Connect){{ end }}
       </td>{{ end }}
+
+      {{ if $parry }}<td>{{ .parry.from }}-{{ .parry.to }}</td>{{ end }}
 
       {{ if $intangible }}<td>
         {{ if isset .intangible "from" }}{{ .intangible.from }}-{{ .intangible.to }}
