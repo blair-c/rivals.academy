@@ -107,6 +107,8 @@ if (toc) {
 			else {
 				item.listItem.classList.remove('visible');
 			}
+		});
+    tocItems.forEach(function(item) {
       for (const child of item.listItem.children) {
         for (const c of child.children) {
           if (c.classList.contains('visible')) {
@@ -114,6 +116,6 @@ if (toc) {
           }
         }
       }
-		});
+    });
   }
 }
