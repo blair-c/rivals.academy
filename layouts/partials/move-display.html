@@ -941,9 +941,16 @@
           {{ if reflect.IsSlice .angle }}
             {{ $len = len .angle }}
             {{ range $index, $_ := .angle }}
-              {{ .angle }}°{{ if lt (add $index 1) $len }} / {{ end -}}
+              {{ if eq . 361 }}
+                <a href="{{ $g }}#{{ T "angle" | anchorize }}">361°</a>
+              {{ else }}{{ . }}°{{ end }}
+              {{ if lt (add $index 1) $len }}/{{ end }}
             {{ end }}
-          {{- else }}{{ .angle }}°{{ end -}}
+          {{ else }}
+            {{ if eq .angle 361 }}
+              <a href="{{ $g }}#{{ T "angle" | anchorize }}">361°</a>
+            {{ else }}{{ .angle }}°{{ end }}
+          {{ end }}
         {{ end }}
       </td>{{ end }}
 
