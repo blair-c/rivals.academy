@@ -800,6 +800,10 @@ upStrong:
       from: 24
       to: 27
       frames: 4
+    endlag:
+      hit: 17
+      whiff: 26
+    firstActiveFrame: 54
     damage: 5
     angle: 90
     angleFlipper: 0
