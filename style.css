@@ -1364,6 +1364,7 @@ article div:has(iframe) {
 
   #TableOfContents li a {
     color: var(--clr-text);
+    line-height: 1.375rem;
   }
 
   #TableOfContents .visible > a {
