@@ -102,7 +102,8 @@ main {
 }
 
 p,
-article ul {
+article ul,
+article ol {
   line-height: 1.5;
 }
 
