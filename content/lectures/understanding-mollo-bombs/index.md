@@ -54,7 +54,7 @@ In this section, we're going to answer the question of "Why didn't that bomb hit
 
 {{< video ownership-firecracker >}}
 
-This is very self explanatory with every other bomb, as you can't get hit by bombs that explode in Mollo's hand, but with the other bombs it's rare to even be close enough for this to be a factor. But, when combined with finisher's 50 frames of detonation, it's very common for Mollo to throw a finisher back at its "owner" (the player that hit him), putting them in a situation where they're suddenly put into the scary situation of a finisher exploding on top of them. But when they try to parry, nothing happens. They can't even get hit by the bonk hitbox.
+This is very self explanatory with every other bomb, as you can't get hit by bombs that explode in Mollo's hand, but with the other bombs it's rare to even be close enough for this to be a factor. But, when combined with finisher's 50 frames of detonation, it's very common for Mollo to throw a finisher back at its "owner" (the player that hit him), putting them into the scary situation of a finisher exploding on top of them. But when they try to parry, nothing happens. They can't even get hit by the bonk hitbox.
 
 {{< video ownership-finisher >}}
 

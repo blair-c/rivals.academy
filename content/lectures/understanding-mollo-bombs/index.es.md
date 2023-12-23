@@ -45,30 +45,28 @@ Si le haces Parry a esa Hitbox cuando te lanzan una bomba esta rebotará y volar
 
 {{< video parry-bonk >}}
 
-> Note: if you parry Mollo's finisher at close range and it bonks him, get ready to follow up with a jab! This is one of the best forms of bomb counterplay.
+> Nota: Si le haces Parry a la Gran Bomba a poca distancia de Mollo y esta lo golpea ¡preparate para darle un Jab! así lo mantendras aturdido hasta que esta explote.
 
-If you don't parry this bonk hitbox and instead parry the explosion, Mollo will be put into parry stun as long as he isn't in hitstun. This is an important distinction when trying to parry bombs like firecracker or finisher bomb, as dashing back to parry the explosion can sometimes net you better punishes than parrying the bonk and sending the bomb back at Mollo.
+Ahora, si en lugar de hacerle Parry a esta Hitbox le haces Parry a la explosión de la bomba, Mollo quedará aturdido (como si le hubieras hecho Parry a alguno de sus golpes) siempre y cuando no haya estado en Hitstun. Esta diferencia es importante al lidiar con el Petardo y con la Gran Bomba, ya que en estos casos puede ser más beneficioso retroceder para hacerle Parry a la explosión que hacerle Parry a la bomba para enviarla de vuelta a Mollo.
 
 {{< video parry-explosion >}}
 
-## Bomb Ownership
+## Dueño de la bomba
 
-In this section, we're going to answer the question of "Why didn't that bomb hit me?" Now, this final chapter might seem kind of ambiguous and redundant if you haven't seen this interaction, but oh my goodness, I'm only writing this guide so I can link it to people once they ask. With every bomb, whenever it explodes in your hand, it can't hit the person that hit you. This is what I like to call "bomb ownership."
+En esta sección se responderá la pregunta del principio: "¿Por qué esa bomba no me golpeó?". Puede parecer algo ambiguo o redundante si nunca te ha pasado esta situación, pero en el particular caso de que te suceda, aquí está la respuesta. Cuando una bomba explota en las manos de Mollo, es literalmente imposible que la explosión afecte a quien esté golpeando a Mollo. Se le puede llamar a este fenómeno "dueño de la bomba".
 
 {{< video ownership-firecracker >}}
 
-This is very self explanatory with every other bomb, as you can't get hit by bombs that explode in Mollo's hand, but with the other bombs it's rare to even be close enough for this to be a factor. But, when combined with finisher's 50 frames of detonation, it's very common for Mollo to throw a finisher back at its "owner" (the player that hit him), putting them in a situation where they're suddenly put into the scary situation of a finisher exploding on top of them. But when they try to parry, nothing happens. They can't even get hit by the bonk hitbox.
+Sin importar el tipo de bomba, estas no te haran daño mientras sigan en manos de Mollo, usualmente sus explosiones no tienen suficiente alcance como para ver una situación donde parece que debió golpearte y no lo hace; pero una excepción es la Gran Bomba, como esta bomba tarda 50 frames en detonar, no es raro ver que Mollo la lanza hacia el oponente y esta parece no tener efecto, esto se debe a que el oponente sigue siendo el "dueño" de la bomba porque es quien estaba golpeando a Mollo cuando se activó (debió explotar en manos de Mollo cuando sale del Hitstun pero esos 50 frames le permitieron lanzarla), como el oponente es el dueño hacer Parry a la bomba o la explosión no hará nada.
 
 {{< video ownership-finisher >}}
 
-Learning when finisher bomb can and can't hit you will allow you to follow up on edgeguards better and push your advantage state further than you think you can. So if you hear the finisher beep and it's still in Mollo's hand, you don't need to worry about the explosion hitting you.
+Aprender cuando es que la Gran Bomba puede o no golpearte te permitirá decidir cuando hay o no peligro para mejorar tus Edgeguard y sacar más ventaja de lo que se creía posible. En resumen, si escuchas el "bip bip" de la Gran Bomba mientras sigue en manos de Mollo, no debes preocuparte por que la bomba te haga daño.
 
 ### Detalles
 
-One last note about finishers that can't hit your opponents, you can still use this finisher to break articles, one of the best being Forsburn smoke/clone, which can be very useful. But, don't throw this bomb at Clairen. 
+Una última cosa sobre la Gran Bomba, aunque esta no haga daño al oponente por lo que se explicó en la sección anterior, esta aún va a afectar objetos u otros, por ejemplo el clón de Forsburn o activar el DSpecial de Clairen.
 
 {{< video ownership-counter >}}
 
-She can still counter it.
-
-Now, there are definitely plenty of bomb properties that I haven't mentioned here, but I hope that after reading this lecture you're now equipped with enough knowledge on bombs to start learning how to fight the explody moth. Knowing how bombs work isn't all that you need to know to beat Mollo, but it's a good start.
+Aparte de eso, hay varios detalles acerca de las bombas que no se cubrieron con profundidad o no fueron mencionados del todo, pero esta guía puede ser un inicio para aprender a lidiar con la polilla explosiva. Saber como funcionan las bombas no es lo único que debes saber si quieres vencer a Mollo, pero es un buen comienzo.
