@@ -1,6 +1,6 @@
 {{ $link := print (page.RelPermalink) (.Get 0) }}
 <video controls loop muted preload="metadata">
-  {{ if fileExists (print $link "-compressed.mp4") }}
+  {{ if fileExists (print $link "_compressed.mp4") }}
     <source src="{{ $link }}_compressed.mp4" type="video/mp4">
   {{ else }}
     <source src="{{ $link }}.mp4" type="video/mp4">
