@@ -47,7 +47,7 @@ jobs:
         run: |
           for dir in content/lectures/*/
           do
-            if ! [ -n "(echo $dir/*.mp4)"]; then continue; fi
+            if ! [ -n "(echo $dir/*.mp4)" ]; then continue; fi
             for i in "$dir"/*.mp4
             do 
               ffmpeg -i "$i" -vcodec h264 -b:v 2000k -an "${i%.*}"_compressed.mp4
