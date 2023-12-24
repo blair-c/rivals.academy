@@ -39,6 +39,21 @@ jobs:
             echo "Created $(dirname $i)/2x_$(basename $i)"
           done
 
+      - name: Setup FFmpeg
+        uses: FedericoCarboni/setup-ffmpeg@v2
+        id: setup-ffmpeg
+
+      - name: Compress Videos
+        run: |
+          for dir in content/lectures/*/
+          do
+            for i in "$dir"/*.mp4
+            do 
+              ffmpeg -i "$i" -vcodec h264 -b:v 2000k -an "{$i%.*}"_compressed.mp4
+              echo "Created {$i%.*}_compressed.mp4"
+            done
+          done
+
       - name: Setup Hugo
         # uses: peaceiris/actions-hugo@v2.6.0
         # with:
