@@ -25,16 +25,13 @@ jobs:
 
       - name: Scale Images
         run: |
-          for dir in content/library/*/
-          do
-            for i in "$dir"/*.png
-            do 
+          for dir in content/library/*/; do
+            for i in "$dir"/*.png; do 
               convert "$i" -sample 200% "$(dirname $i)/1080_$(basename $i)"
               echo "Created $(dirname $i)/1080_$(basename $i)"
             done
           done
-          for i in content/library/_index/*.png
-          do 
+          for i in content/library/_index/*.png; do 
             convert "$i" -sample 200% "$(dirname $i)/2x_$(basename $i)"
             echo "Created $(dirname $i)/2x_$(basename $i)"
           done
@@ -45,11 +42,9 @@ jobs:
 
       - name: Compress Videos
         run: |
-          for dir in content/lectures/*/
-          do
+          for dir in content/lectures/*/; do
             if ! [ -n "(echo $dir/*.mp4)" ]; then continue; fi
-            for i in "$dir"/*.mp4
-            do 
+            for i in "$dir"/*.mp4; do 
               ffmpeg -i "$i" -vcodec h264 -b:v 2000k -an "${i%.*}"_compressed.mp4
               echo "Created ${i%.*}_compressed.mp4"
             done
