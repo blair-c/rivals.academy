@@ -46,6 +46,7 @@ jobs:
       - name: Compress Videos
         run: |
           for dir in content/lectures/*/
+          if ! [ -n "(echo $dir/*.mp4)"]; then continue; fi
           do
             for i in "$dir"/*.mp4
             do 
