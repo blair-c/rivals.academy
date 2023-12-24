@@ -1,5 +1,7 @@
 {{ $link := print (page.RelPermalink) (.Get 0) }}
-<video controls loop muted preload="metadata">
+<video controls loop muted preload="none"
+  onclick="this.paused ? this.play() : this.pause(); arguments[0].preventDefault();"
+  poster="{{ $link }}.jpg">
   <source src="{{ $link }}_compressed.mp4" type="video/mp4">
   <source src="{{ $link }}.mp4" type="video/mp4">
   Download the

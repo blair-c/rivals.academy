@@ -47,6 +47,9 @@ jobs:
             for i in "$dir"/*.mp4; do 
               ffmpeg -i "$i" -vcodec h264 -b:v 2000k -an "${i%.*}"_compressed.mp4
               echo "Created ${i%.*}_compressed.mp4"
+              ffmpeg -i "$i" -frames:v 1 -q:v 1 "${i%.*}".png
+              echo "Created ${i%.*}.png"
+              rm "$i"
             done
           done
 
