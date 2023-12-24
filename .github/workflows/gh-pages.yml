@@ -43,7 +43,7 @@ jobs:
       - name: Compress Videos
         run: |
           for dir in content/lectures/*/; do
-            if ! [ -n "(echo $dir/*.mp4)" ]; then continue; fi
+            if [[ $(basename $dir) = archive ]] || [[ $(basename $dir) = drafts ]] || [[ $(basename $dir) = economics-101 ]]; then continue; fi
             for i in "$dir"/*.mp4; do 
               ffmpeg -i "$i" -vcodec h264 -b:v 2000k -an "${i%.*}"_compressed.mp4
               echo "Created ${i%.*}_compressed.mp4"
