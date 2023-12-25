@@ -83,9 +83,9 @@ A value that determines if and how the base launch angle is affected by the rela
 - **{{< code 4 >}}:** Horizontal knockback sends toward the center of the hitbox.
   - [Wrastor Down Air](/library/wrastor#down-air), [Sylvanos Down Strong](/library/sylvanos#down-strong)
 - **{{< code 5 >}}:** Horizontal knockback is reversed.
-- **{{< code 6 >}}:** Horizontal knockback is reversed if the enemy is behind the attacker or projectile.
+- **{{< code 6 >}}:** Horizontal knockback sends away from the center of the attacker or projectile.
   - [Maypul Neutral Air](/library/maypul#neutral-air), [Orcane Forward Tilt](/library/orcane#forward-tilt)
-- **{{< code 7 >}}:** Horizontal knockback is reversed if the enemy is in front of the attacker or projectile.
+- **{{< code 7 >}}:** Horizontal knockback sends toward the center of the attacker or projectile.
 - **{{< code 8 >}}:** Sends away from the center of the hitbox.
   - [Shovel Knight War Horn](/library/shovel-knight#neutral-special-war-horn)
 - **{{< code 9 >}}:** Sends toward the center of the hitbox.
