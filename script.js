@@ -9,11 +9,11 @@ function toggleHambMenu() {
 
 function toggleTheme() {
   if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.remove('dark')
-    localStorage.theme = 'light'
+    document.documentElement.classList.remove('dark');
+    localStorage.theme = 'light';
   } else {
-    document.documentElement.classList.add('dark')
-    localStorage.theme = 'dark'
+    document.documentElement.classList.add('dark');
+    localStorage.theme = 'dark';
   }
 }
 
@@ -34,7 +34,7 @@ if (lang) {
   }
   // Alternate dismissals
   window.onclick = function(e) {
-    if (!e.target.matches("#lang-btn")) {
+    if (!e.target.matches('#lang-btn')) {
       lang.setAttribute('aria-expanded', false);
       translation.setAttribute('tabindex', '-1');
     }
@@ -57,6 +57,30 @@ async function copyHeadingLink(section) {
     heading.classList.toggle('data-copy-success');
     await new Promise(r => setTimeout(r, 2000));
     heading.classList.toggle('data-copy-success');
+  }
+}
+
+// https://web.dev/articles/lazy-loading-video
+var videos = [].slice.call(document.querySelectorAll('video'));
+if (videos.length > 0) {
+  if ('IntersectionObserver' in window) {
+    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(video) {
+        if (video.isIntersecting) {
+          video.target.setAttribute('preload', 'metadata');
+          video.target.removeAttribute('poster');
+          lazyVideoObserver.unobserve(video.target);
+        }
+      });
+    }, {rootMargin: "100%"});  // options
+    videos.forEach(function(video) {
+      lazyVideoObserver.observe(video);
+    });
+  } else {
+    videos.forEach(function(video) {
+      video.target.setAttribute('preload', 'metadata');
+      video.target.removeAttribute('poster');
+    });
   }
 }
 
