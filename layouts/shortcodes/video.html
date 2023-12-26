@@ -1,12 +1,6 @@
 {{ $vid := print (page.RelPermalink) "vid/" (.Get 0) ".mp4" }}
 {{ $comp := print (page.RelPermalink) "vid/compressed/" (.Get 0) ".mp4" }}
-{{ $thumb := print "vid/thumb/" (.Get 0) ".png" }}
-<video controls loop muted preload="none"
-  {{ with $i := page.Resources.Get $thumb }}
-    {{ $i = $i.Resize "16x9" }}
-    poster="{{ $i.RelPermalink }}"
-  {{ end }}
->
+<video controls loop muted preload="none">
   <source src="{{ $comp }}" type="video/mp4">
   <source src="{{ $vid }}" type="video/mp4">
   Download the
