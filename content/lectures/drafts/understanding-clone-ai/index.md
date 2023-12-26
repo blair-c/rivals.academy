@@ -24,25 +24,25 @@ In this guide, we'll be diving in-depth into how positioning affects clone behav
 
 While clone is grounded, and the opponent's origin is outside of a 50px horizontal range around its own, there is a 50% chance each frame that it will dash towards the opponent.
 
-![](attack-dash-towards.png)
+![](img/attack-dash-towards.png)
 
 ### Double Jump
 
 While clone is falling, and the opponent's origin is above its own, there is a 10% chance each frame that it will double jump.
 
-![](attack-double-jump.png)
+![](img/attack-double-jump.png)
 
 ### Fullhop
 
 While clone is grounded, and the opponent's origin is over 100px above its own, there is an 8% chance each frame that it will fullhop.
 
-![](attack-fullhop.png)
+![](img/attack-fullhop.png)
 
 ### Platform Drop
 
 While clone is on a platform, and the opponent's origin is over 20px below its own, there is a 6% chance each frame that it will drop through the platform.
 
-![](attack-platdrop.png)
+![](img/attack-platdrop.png)
 
 ## Evade Mode
 
@@ -50,36 +50,36 @@ While clone is on a platform, and the opponent's origin is over 20px below its o
 
 While clone is grounded, and the opponent's origin is horizontally within 100px of its own, there is a 90% chance each frame that it will dash away from the opponent.
 
-![](evade-dash-away.png)
+![](img/evade-dash-away.png)
 
 ### Dash Towards
 
 While clone is grounded, and the opponent's origin is outside of a 400px horizontal range around its own, there is a 45% chance each frame that it will dash towards the opponent.
 
-![](evade-dash-towards.png)
+![](img/evade-dash-towards.png)
 
 ### Fullhop
 
 While clone is grounded, and the opponent's origin is horizontally within 100px of plus not over 100px above its own, there is an 8% chance each frame that it will fullhop.
 
-![](evade-fullhop.png)
+![](img/evade-fullhop.png)
 
 ### Double Jump
 
 While clone is falling, and the opponent's origin is within a 100px range below its own, there is a 10% chance each frame that it will double jump.
 
-![](evade-double-jump.png)
+![](img/evade-double-jump.png)
 
 ### Platform Drop
 
 While clone is on a platform, and the opponent's origin is below its own, there is a 6% chance each frame that it will drop through the platform.
 
-![](evade-platform-drop.png)
+![](img/evade-platform-drop.png)
 
 ### Runoff Prevention
 
 While clone is about to run offstage, there is a 70% chance each frame that it will jump.
 
-![](evade-runoff-prevention.png)
+![](img/evade-runoff-prevention.png)
 
 I hope this has demystified clone's behavior to you by shedding some light on the inner workings of how it makes decisions. This knowledge can help you to have more agency and understanding of how to better use and play around your clone.

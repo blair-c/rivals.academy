@@ -27,11 +27,11 @@ If you would like to quick-buy **Ghost Gloves**, simply **press A** upon enterin
 
 Since this currency system is such an important part of Shovel Knight’s playstyle, with the relics and armours greatly impacting how you will play each game, it’s important to understand the values of each gem and item. The below image shows the value of each gem and item, as well as the values for an Up Strong Rock, Down Special's Treasure Pile, and the Golden Troupple Fish. 
 
-![](values.png)
+![](img/values.png)
 
 There is one more source of gems however…
 
-![](money-bags.png)
+![](img/money-bags.png)
 
 On dying, Shovel Knight will lose 25% of his total savings, with this amount being split between three different valued bags. One bag will always contain half of this amount, a second bag will contain a third and the final bag will contain only a sixth of the total spawned on death. These bags are collectable for a total of 600 frames, however after 300 frames they can be nabbed up by your opponent, so make sure to recover your lost goods before they’re snatched up! As there are three different sized bags that can spawn, prioritize those larger bags and start saving towards your next big purchase!
 

@@ -30,11 +30,11 @@ Si quisieras comprar los **Guantes Fantasma**, solo presiona el botón de ataque
 
 Debido a que este sistema de divisas es una de las partes más importantes del gameplay de Shovel Knight, ya que las reliquias y las armaduras pueden hacer una gran diferencia en la partida, es muy importante entender el valor de cada gema y cada objeto. La siguiente imagen muestra el valor de cada gema y objeto, así como también el valor de la roca del UStrong, la roca del DSpecial y el Pez Dorado.
 
-![](values.png)
+![](img/values.png)
 
 Aún queda otro objeto que da gemas…
 
-![](money-bags.png)
+![](img/money-bags.png)
 
 Al morir, Shovel Knight perderá 25% (una cuarta parte) de sus ahorros totales, esa cantidad se dividirá en 3 bolsas de diferente valor cada una. La bolsa grande tendrá la mitad de esta cantidad, la bolsa mediana tendrá una tercera parte de esa cantidad y la bolsa pequeña una sexta parte de esa cantidad. Las bolsas pueden ser recolectadas durante 600 frames (10 segundos), pero después de los primeros 300 frames (5 segundos) el oponente será capaz de recolectarla, así que asegurate de recuperar tu dinero perdido antes de que te lo quiten. Como son varias bolsas de diferente tamaño trata de darle prioridad a las más grandes primero ¡y ahorra para tu próxima gran compra!
 

@@ -1,12 +1,17 @@
-{{ $link := print (page.RelPermalink) (.Get 0) }}
+{{ $vid := print (page.RelPermalink) "vid/" (.Get 0) ".mp4" }}
+{{ $comp := print (page.RelPermalink) "vid/compressed/" (.Get 0) ".mp4" }}
+{{ $thumb := print "vid/thumb/" (.Get 0) ".png" }}
 <video controls loop muted preload="none"
-  onclick="this.paused ? this.play() : this.pause(); arguments[0].preventDefault();"
-  poster="{{ $link }}.png">
-  <source src="{{ $link }}_compressed.mp4" type="video/mp4">
-  <source src="{{ $link }}.mp4" type="video/mp4">
+  {{ with $i := page.Resources.Get $thumb }}
+    {{ $i = $i.Resize "16x9" }}
+    poster="{{ $i.RelPermalink }}"
+  {{ end }}
+>
+  <source src="{{ $comp }}" type="video/mp4">
+  <source src="{{ $vid }}" type="video/mp4">
   Download the
   {{/*  <a href="{{ $link }}.webm">WEBM</a>
   or  */}}
-  <a href="{{ $link }}.mp4">MP4</a>
+  <a href="{{ $vid }}">MP4</a>
   video.
 </video>

@@ -139,7 +139,7 @@ Blend these together and switch between them based on your opponent's actions. L
 
 Pictured below are the zones where these moves can send vs. Zetter at 50%, with the main dotted path showing no DI or drift.
 
-![Graphic displaying the ranges a Zetterburn at 50% can be sent by Wrastor Up Air 1, Inner Fair, and Nair](example.png)
+![Graphic displaying the ranges a Zetterburn at 50% can be sent by Wrastor Up Air 1, Inner Fair, and Nair](img/example.png)
 
 If you're the one getting comboed by Wrastor in Slipstream, you want to leave that zone. Your options include:
 - Holding in the first few hits to shift yourself up and disrupt his momentum, giving you better odds at escape
@@ -150,17 +150,17 @@ If you're the one getting comboed by Wrastor in Slipstream, you want to leave th
 
 Now, let’s discuss the same scenario as before, but without access to Slipstream. Our main three combo tools won’t keep them close enough vs. DI out, especially if our rightward momentum has been disrupted. You could try an early Fstrong or Up Special and send them flying sideways, but if they hold in, it probably won't kill. Here we can consider using the greatest mix up tool in the game: **Dair**. Unlike most moves that push up and/or away, Dair will instead throw them *across* Wrastor.
 
-![Graphic demonstrating that Dair sends across Wrastor](dair.png)
+![Graphic demonstrating that Dair sends across Wrastor](img/dair.png)
 
 Dair is absurdly powerful for combos. Normally, DI out/down lets people escape once they're in front of you, so the main mix up most characters have is simply whether they use a combo move (like Fair) or kill move (like Fstrong/Up Special), but Dair gives us a 3rd option: throw them backwards, keeping them close for follow up and allowing you to continue the combo upwards instead. This lets you choose between setting up an edgeguard vs. juggling them for more damage. The best counterplay to avoid this mixup is to DI straight down, but this can be risky as it does almost nothing vs. Up Air and is also very poor DI on Fstrong/Up Special.
 
-![Previous Zetterburn example graphic, with Dair added](example-dair.png)
+![Previous Zetterburn example graphic, with Dair added](img/example-dair.png)
 
 ### Overshoot Dair
 
 Dair also provides another useful function, arguably more important than the first. Say they unexpectedly held in and you've overshot your position— they're behind you.
 
-![Graphic displaying the ranges a Zetterburn at 50% behind Wrastor can be sent by Early Bair, Up Air 3, and Dair](example-overshoot.png)
+![Graphic displaying the ranges a Zetterburn at 50% behind Wrastor can be sent by Early Bair, Up Air 3, and Dair](img/example-overshoot.png)
 
 Now we have a similar scenario to last time, except it's even worse due to our momentum being in the wrong direction (headed right, but need to chase left). Even with Slipstream speed and a vertical move like Up Air 3, if they hold out (←) we may not be able to shift momentum in time. Dair rescues us again here. The back hit brings them in front of or above us, letting us combo and adjust for overshoot.
 

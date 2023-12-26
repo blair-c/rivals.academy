@@ -144,7 +144,7 @@ Combina estas opciones e intercambialas según sea necesario. Si logras conectar
 
 La siguiente imagen muestra el área en la que cada movimiento lanza a Zetterburn con 50%, con la línea punteada central siendo la trayectoría sin DI y sin Drift.
 
-![Graphic displaying the ranges a Zetterburn at 50% can be sent by Wrastor Up Air 1, Inner Fair, and Nair](example.png)
+![Graphic displaying the ranges a Zetterburn at 50% can be sent by Wrastor Up Air 1, Inner Fair, and Nair](img/example.png)
 
 Si te encuentras atrapado en un combo de Wrastor mientras está en el Slipstream, considera las siguientes opciones para escapar:
 - Hacer DI hacia dentro a los primeros golpes para obligar a Wrastor a frenar, aumentando tus probabilidades de escapar.
@@ -155,17 +155,17 @@ Si te encuentras atrapado en un combo de Wrastor mientras está en el Slipstream
 
 Ahora, discutamos la misma situaición que antes, pero sin acceso al Slipstream. Nuestras 3 herramientas principales no van a ser suficiente si el oponente hace DI hacia fuera, especialmente si no mantienes correctamente tu velocidad. Puedes tratar de utilizar un FStrong o un USpecial más temprano de lo usual para lanzarlo, pero es posible que no sea suficiente para eliminarlo si hacen DI hacia dentro. En este caso podemos considerar una de las mejores herramientas para Mixup en todo el juego: **DAir**. A diferencia de la mayoría de movimientos, en lugar de enviar el oponente hacia fuera o hacia arriba, el DAir lanzará al oponente *a través* de Wrastor, como en la siguiente imagen.
 
-![Graphic demonstrating that Dair sends across Wrastor](dair.png)
+![Graphic demonstrating that Dair sends across Wrastor](img/dair.png)
 
 DAir es absurdamente poderoso en los combos. Normalmente un DI hacia fuera/abajo le permite escapar a los oponentes que estan frente a Wrastor, así que las opciones que ya fueron mencionadas son FAir para extender el combo o FStrong/USpecial para tratar de eliminarlos. Pero en este caso tenemos una tercera opción: Lanzarlos hacia atrás con el DAir, de este modo podemos mantenerlos cerca para alargar el combo hacia arriba. Gracias a esto puedes escoger entre sacarlos del escenario o malabarearlos un poco para subir el %. La mejor opción del oponente para escapar el DAir es hacer DI hacia abajo, pero esto es riesgoso ya que el DI hacia abajo es casi completamente inútil contra el UAir y es una mala opción contra el FStrong y el USpecial.
 
-![Previous Zetterburn example graphic, with Dair added](example-dair.png)
+![Previous Zetterburn example graphic, with Dair added](img/example-dair.png)
 
 ### DAir sobreextendido
 
 El DAir se puede aplicar a otra situación. Digamos que el oponente hace DI hacia dentro y te sobreextendiste hacia adelante, el rival está detrás de ti.
 
-![Graphic displaying the ranges a Zetterburn at 50% behind Wrastor can be sent by Early Bair, Up Air 3, and Dair](example-overshoot.png)
+![Graphic displaying the ranges a Zetterburn at 50% behind Wrastor can be sent by Early Bair, Up Air 3, and Dair](img/example-overshoot.png)
 
 Ahora tenemos una situación similar a la anterior, excepto que es peor ya que la inercia nos va a llevar en la dirección equivocada (vamos hacia adelante, necesitamos perseguir hacia atrás). Aún con el Slipstream y las diferentes Hitbox del UAir, si el oponente mantiene el DI hacia atrás es posible que no podamos frenar a tiempo. Aquí es donde el DAir nos va a salvar de nuevo, la parte trasera del movimiento va a lanzar el oponente de manera en la que va a quedar frente a Wrastor o por encima de Wrastor una vez más, lo que permite ajustar la posición y continuar el combo.
 

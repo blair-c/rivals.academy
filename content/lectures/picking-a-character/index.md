@@ -18,7 +18,7 @@ I’m not going to be addressing competitive viability or tier list placement an
 - Firstly, for new players, I'd recommend that you play a character that you resonate with so that you want to actually play and learn the game, and picking a character purely because some stranger on the Internet told you that they’re “the strongest” probably isn’t the healthiest way to learn any fighting game, and it can really warp your expectations if you're not handling them correctly.
 - Secondly, everyone is good enough to be viable anyway in this game so it’s kind of a moot point. The game is generally pretty well balanced and anybody can succeed with any character. You can take a look at the most recent RCS rankings and see just how much representation there is across the whole roster:
 
-- ![Top 50 character representation graphic by @PantchToGo](top-50.jpeg)
+- ![Top 50 character representation graphic by @PantchToGo](img/top-50.jpeg)
 
 In other words: you won’t be holding yourself back because of your character choice, so just pick whatever sounds most appealing. Without any further ado, let’s get started!
 

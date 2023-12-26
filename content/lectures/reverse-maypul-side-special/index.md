@@ -48,7 +48,7 @@ Reverse Side Special can be used to knock the opponent into Lily on a platform, 
 
 Let’s discuss a hypothetical situation:
 
-![Zetterburn between Maypul and her Lily](zetterburn-lily.png)
+![Zetterburn between Maypul and her Lily](img/zetterburn-lily.png)
 
 I’m in front of this Zetterburn, and I’d like him to get wrapped. Sure, I could throw seed and Ftilt him into Lily, but I’d like something I can do now. I can’t just Side Special, as that will send him opposite of Lily, and the same case with Reverse Side Special.
 

@@ -56,7 +56,7 @@ Con ese ligero cambio en los frames, ¡ahora podemos usar UStrong en el combo!
 
 Ahora que entendemos todos los factores que rodean este movimiento, podemos ver esta tabla que resume que tan viables son los combos con el UAir:
 
-![Tabla resumiendo la viabilidad del UAir 1 de Ranno según el peso, movimiento y posicionamiento](table.es.png)
+![Tabla resumiendo la viabilidad del UAir 1 de Ranno según el peso, movimiento y posicionamiento](img/table.es.png)
 
 Nota: A pesar que algunos de estos combos dicen que son "true" (son verdaderos, no fallan), puede ser muy difícil ejecutarlos con la precisión necesaria para cumplir esa condición (pueden ser "frame perfect"). Pero esto no le resta valor al UAir 1, es un movimiento increíblemente rápido (especialmente si se toma en cuenta el Hitfall) y casi no le da tiempo al oponente para reaccionar y/o defenderse.
 

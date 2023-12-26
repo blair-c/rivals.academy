@@ -37,6 +37,6 @@ The second distinction is **boosting** vs. **moosting**. **Boost** refers to per
 
 With that explanation out of the way, here is my qualitative summary of the effectiveness of these techniques across the cast. Characters that stand to benefit from learning this tech (in my opinion) are bolded.
 
-![Table summarizing the viability of Platboost, Ledgeboost, Platmoost, and Ledgemoost across the cast](cast-comparison.png)
+![Table summarizing the viability of Platboost, Ledgeboost, Platmoost, and Ledgemoost across the cast](img/cast-comparison.png)
 
 This tech can be used to enhance a variety of options: going deep for edgeguards, faster movement for platdrop aerials, traveling across platforms, and more. Go try it out!

@@ -85,7 +85,7 @@ You can see the potential for many creative recoveries with these tools. Pomme a
 
 A note field that is too far offstage will also move towards the stage by itself. Horizontally, the note field will always try to approach the stage until one of its corners is touching or contained within the stage ground's edges (not overhanging platforms). Vertically, it’s more of a mystery, but it will try to get away from the edge of the screen and closer to the stage.
 
-![A note field that has aligned itself with the edge of the stage and thus stopped moving](offstage-note-field.png)
+![A note field that has aligned itself with the edge of the stage and thus stopped moving](img/offstage-note-field.png)
 
 Down Special has some serious bugs that i'll not get into detail, but here's a clip taking advantage of the way the cooldown should activate.
 
@@ -159,6 +159,6 @@ All characters in Rivals other than Wrastor can perform a Dash Attack Cancel Up 
 
 All linking hits of Pomme's Up Special before the final launcher have an angle flipper of 2, which makes the knockback angle a line that starts from the center of the enemy hurtbox and points towards the center of Up Special’s hitbox. This can cause very funny edgeguard situations where using Up Special from below an opponent and wall jumping to cancel the final hit may end up killing the opponent from the bottom blastzone.
 
-![Up Special linking hits sending a Zetterburn towards Pomme](upb-angle.png)
+![Up Special linking hits sending a Zetterburn towards Pomme](img/upb-angle.png)
 
 "Did you know that Pomme's name is short for Pomegranate? This is a reference to Peach, a similar character from Melee whose name is also a fruit that starts with P."

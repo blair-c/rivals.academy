@@ -89,7 +89,7 @@ Este ejemplo muestra el potencial y la posible creatividad que permiten estas he
 
 Si el campo musical se encuentra muy lejos del escenario, este se acercará al mismo por si solo. Horizontalmente, intentará acercarse al escenario hasta que una de sus esquinas toque o esté contenida en los bordes del escenario (ignorando las plataformas que sobresalgan). Verticalmente es más un misterio, pero en general tratará de alejarse de los bordes de la pantalla.
 
-![El campo musical se ha alineado con la esquina del escenario y ya dejó de moverse](offstage-note-field.png)
+![El campo musical se ha alineado con la esquina del escenario y ya dejó de moverse](img/offstage-note-field.png)
 
 El DSpecial tiene unos bugs tremendos que no voy a explicar, pero aquí hay un clip abusando de la manera en la que el cooldown se supone debería activarse.
 
@@ -162,6 +162,6 @@ Todos los personajes de Rivals excepto Wrastor pueden hacer un DACUS. La alta ve
 
 Todos los golpes del UpSpecial de Pomme tienen un angle flipper 2, excepto el último que es el que lanza al oponente, esto hace que su ángulo de knockback sea una línea que empieza del centro de la hurtbox del oponente apuntando hacia el centro de la hitbox de USpecial. Esto puede causar edgeguards muy graciosos, en los que al golpear a un oponente por debajo con USpecial lo lanzará hacia abajo si se cancela el último golpe con un salto en la pared.
 
-![Los golpes del USpecial envian a Zetterburn directo hacia Pomme](upb-angle.png)
+![Los golpes del USpecial envian a Zetterburn directo hacia Pomme](img/upb-angle.png)
 
 "¿Sabias que Pomme en realidad es diminutivo de Pomelo? Esta es una referencia a otro personaje de Melee que también flota cuyo nombre es también una fruta que empieza con P."

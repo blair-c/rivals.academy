@@ -52,7 +52,7 @@ With those extra frames, we can now combo into Up Strong!
 
 Now that we're armed with an understanding of all the factors, we can reference this table that summarizes the viability of Ranno's Up Air 1 combos based on them:
 
-![Table summarizing the viability of Ranno's Up Air 1 combos based on weight, followup choice, and spacing](table.png)
+![Table summarizing the viability of Ranno's Up Air 1 combos based on weight, followup choice, and spacing](img/table.png)
 
 Note: Even though some of these combos are labeled "true", they can be really hard to pull off, as you have to be frame perfect in your jumps and attacks. However, this doesn't take away from the effectiveness of Up Air 1. The move comes out so fast (especially combined with hitfalls) it barely gives your opponent anytime to react and put out a defensive option.
 

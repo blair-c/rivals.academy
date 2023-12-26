@@ -36,20 +36,13 @@ jobs:
             echo "Created $(dirname $i)/2x_$(basename $i)"
           done
 
-      - name: Setup FFmpeg
-        uses: FedericoCarboni/setup-ffmpeg@v2
-        id: setup-ffmpeg
-
-      - name: Compress Videos
+      - name: Delete Uncompressed Videos
         run: |
           for dir in content/lectures/*/; do
             if [[ $(basename $dir) = archive ]] || [[ $(basename $dir) = drafts ]] || [[ $(basename $dir) = economics-101 ]]; then continue; fi
-            for i in "$dir"/*.mp4; do 
-              ffmpeg -i "$i" -vcodec h264 -b:v 2000k -an "${i%.*}"_compressed.mp4
-              echo "Created ${i%.*}_compressed.mp4"
-              ffmpeg -i "$i" -frames:v 1 -q:v 1 "${i%.*}".png
-              echo "Created ${i%.*}.png"
-              rm "$i"
+            for i in "$dir"/vid/*.mp4; do
+              rm -f "$i"
+              echo "Deleted $i"
             done
           done
 

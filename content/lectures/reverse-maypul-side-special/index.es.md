@@ -51,7 +51,7 @@ El FSpecial en reversa puede usarse para lanzar el oponente hacia Lily en una pl
 
 Discutamos una situación hipotética:
 
-![Zetterburn between Maypul and her Lily](zetterburn-lily.png)
+![Zetterburn between Maypul and her Lily](img/zetterburn-lily.png)
 
 Maypul está frente a Zetterburn, y necesitamos envolverlo, podríamos lanzarle una semilla y lanzarlo hacia Lily con un FTilt, pero intentemos algo diferente, no se puede hacer simplemente FSpecial, por que alejaría a Zetterburn de Lily, lo mismo que un FSpecial en reversa.
 

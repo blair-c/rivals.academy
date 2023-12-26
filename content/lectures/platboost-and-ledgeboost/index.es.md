@@ -46,7 +46,7 @@ Leyenda:
 - Platmoost => Plataforma lunar
 - Ledgemoost => Borde lunar
 
-![Table summarizing the viability of Platboost, Ledgeboost, Platmoost, and Ledgemoost across the cast](cast-comparison.png)
+![Table summarizing the viability of Platboost, Ledgeboost, Platmoost, and Ledgemoost across the cast](img/cast-comparison.png)
 
 
 Esta técnica puede ser usada para mejorar varias opciones: Ir por Edgeguards profundos, movilidad más rápida para los aéreos y viajar por el stage, incluso más. ¡Dale un intento!

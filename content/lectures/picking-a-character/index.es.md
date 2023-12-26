@@ -22,7 +22,7 @@ No se van a abordar resultados competitivos, ni posiciones en tier-lists por los
 - Primero que nada, como jugadores nuevos es recomendable jugar con el personaje que se diviertan más y que encaje con su estilo de juego para que eso los motive a seguir jugando y aprendiendo el juego, elegir un personaje por que alguien en internet dijo que era el mejor no es la forma más sana de aprender un juego de pelea y puede arruinar las expectativas del juego.
 - Segundo, en RoA cualquier personaje es lo suficientemente bueno para ser viable competitivamente y es un juego muy bien balanceado, por lo que depende de cada quien esforzarse para ser exitoso. Por ejemplo, démosle un vistazo al top 50 de la séptima temporada competitiva en norteamérica, aquí hay por lo menos uno de cada personaje en el juego:
 
-- ![Top 50 character representation graphic by @PantchToGo](top-50.jpeg)
+- ![Top 50 character representation graphic by @PantchToGo](img/top-50.jpeg)
 
 En otras palabras, no te vas a ver limitado por qué personaje elijas, escoge a quien quieras y te guste más. Ya sin más que decir, ¡comencemos!
 
