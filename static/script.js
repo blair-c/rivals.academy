@@ -68,18 +68,16 @@ if (videos.length > 0) {
       entries.forEach(function(video) {
         if (video.isIntersecting) {
           video.target.setAttribute('preload', 'metadata');
-          video.target.removeAttribute('poster');
-          lazyVideoObserver.unobserve(video.target);
+          observer.unobserve(video.target);
         }
       });
-    }, {rootMargin: "100%"});  // options
+    }, {rootMargin: "200%"});  // options
     videos.forEach(function(video) {
       lazyVideoObserver.observe(video);
     });
   } else {
     videos.forEach(function(video) {
       video.target.setAttribute('preload', 'metadata');
-      video.target.removeAttribute('poster');
     });
   }
 }
