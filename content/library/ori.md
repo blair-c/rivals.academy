@@ -1,5 +1,5 @@
 ---
-title: Ori
+title: Ori and Sein
 description: The Spirit of Nibel • Frame data and knockback info
 authors:
 - Sector 7-G
