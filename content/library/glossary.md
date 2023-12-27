@@ -107,7 +107,7 @@ The initial speed at which a hitbox sends its target flying, measured in pixels 
 
 The number of frames a character is stunned, unable to perform basic actions, after being hit by an attack. Calculated by the following formula:
 
-> **Hitstun_Multiplier**{{< code " × ((" >}}**Base_Knockback**{{< code " × 2.4 × (" >}}[Knockback_Adjust](#knockback-adjust){{< code " - 1)) + (" >}}**Knockback_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × " >}}[Knockback_Adjust](#knockback-adjust){{< code " × 0.312))" >}}
+> **Hitstun_Multiplier**{{< code " × ((" >}}**Base_Knockback**{{< code " × (" >}}[Knockback_Adjust](#knockback-adjust){{< code " × 2.4 + 1.6)) + (" >}}**Knockback_Scaling**{{< code " × " >}}[Percent_After_Hit](#damage){{< code " × " >}}[Knockback_Adjust](#knockback-adjust){{< code " × 0.312))" >}}
 
 - Hitstun Multiplier, Base Knockback, and Knockback Scaling are hitbox properties.
   - Listed as "Multiplier {{< code "×" >}}" and "Base | Scaling" on character pages.
@@ -370,7 +370,7 @@ Starting horizontal velocity for a walljump.
 
 #### Wallcling
 
-[Maypul](/library/maypul) and [Ori](/library/ori) are able to wallcling, holding their position on the wall for up to {{< library/stat maypul wallcling.max >}} frames before walljumping.
+[Maypul](/library/maypul) and [Ori](/library/ori) are able to wallcling, holding their position on the wall for up to 60 frames before walljumping.
 
 ## Dodges
 
