@@ -24,3 +24,14 @@ hugo server --minify
 >Live preview often requires a `CTRL+Shift+R` / `CMD+Shift+R` browser refresh for CSS changes, and a full restart for content file deletions/renames.
 
 >Many images including [Library](https://rivals.academy/library) hitbox images are scaled via GitHub Actions at build, and so changes to them won't display on site pages during development.
+
+### Lectures Videos Compression
+
+[Install FFmpeg](https://ffmpeg.org/download.html)  
+Uncompressed videos in the base `/lectures` directories are removed during a GitHub Actions build step. The following script should be run when publishing a new strategy guide after moving it from `/lectures/drafts`:
+
+```bash
+sh compress_videos.sh [new-guide-directory]
+```
+
+> The path to the `ffmpeg` binary in this script may also need to be altered for the script to run properly.
