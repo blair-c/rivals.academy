@@ -25,7 +25,7 @@ Cuatro frames puede parecer una ventana muy pequeña, pero si practicas lo sufic
 
 ## Posibles combos
 
-Antes de seguir se debe mencionar un pequeño detalle del FSpecial: no es muy fácil hacer combos a partir del mocimiento. Por ejemplo:
+Antes de seguir se debe mencionar un pequeño detalle del FSpecial: no es muy fácil hacer combos a partir del movimiento. Por ejemplo:
 
 {{< video no-followup >}}
 
