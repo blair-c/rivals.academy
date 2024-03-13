@@ -1237,6 +1237,8 @@ article div:has(iframe) {
 }
 
 .library-grid li a div img {
+  height: 2rem;
+  width: auto;
   margin: auto;
 }
 
@@ -1478,6 +1480,8 @@ article div:has(iframe) {
 .comparison th img {
   display: block;
   margin: .125rem 0;
+  height: 100%;
+  max-height: 2rem;
 }
 
 .sticky-col {
