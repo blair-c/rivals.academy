@@ -26,6 +26,11 @@
     </script>
     <script defer src="/script.js"></script>
 
+    {{ if .Params.youtube }}
+      <script defer src="/lib/lite-yt-embed.js"></script>
+      <link rel="stylesheet" href="/lib/lite-yt-embed.css"type="text/css">
+    {{ end }}
+
     <link rel="canonical" href="{{ .Permalink | absURL }}" />
     <link rel="manifest" href="/manifest.json">
 

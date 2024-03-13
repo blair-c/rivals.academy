@@ -6,9 +6,10 @@ authors:
 tags:
 - beginner
 - orcane
+youtube: true
 ---
 
-{{< youtube title="Orcane Guide | How to Use Forward-Air" id="zI7OoOzOlCg" >}}
+{{< yt title="Orcane Guide | How to Use Forward-Air" id="zI7OoOzOlCg" >}}
 
 Orcane's Fair is a bit like a special move, with a lot of unique properties. Today we're going to talk about how to use it. We'll talk about everything from the absolute basics to some more in-depth stuff. Let's get into it.
 

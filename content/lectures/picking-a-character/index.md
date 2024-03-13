@@ -6,9 +6,10 @@ authors:
 tags:
 - beginner
 - all-characters
+youtube: true
 ---
 
-{{< youtube title="Character Overviews - Rivals of Aether: The Competitive Smash Player's Guide" id="Hb6APRdNNag" >}}
+{{< yt title="Character Overviews - Rivals of Aether: The Competitive Smash Player's Guide" id="Hb6APRdNNag" >}}
 
 In this guide, we’re going to answer the classic new fighting game player question of "Who should I play?"
 

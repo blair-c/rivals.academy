@@ -9,9 +9,10 @@ translators:
 tags:
 - principiante
 - todos-los-personajes
+youtube: true
 ---
 
-{{< youtube title="Character Overviews - Rivals of Aether: The Competitive Smash Player's Guide" id="Hb6APRdNNag" >}}
+{{< yt title="Character Overviews - Rivals of Aether: The Competitive Smash Player's Guide" id="Hb6APRdNNag" >}}
 -*Video en inglés que explica un poco cada personaje, al igual que esta guía*-
 
 En esta guía vamos a responder la pregunta clásica de cualquier jugador nuevo en un juego de peleas: "¿Que personaje elijo?"

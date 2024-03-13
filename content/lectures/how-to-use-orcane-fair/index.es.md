@@ -9,9 +9,10 @@ translators:
 tags:
 - principiante
 - orcane
+youtube: true
 ---
 
-{{< youtube title="Orcane Guide | How to Use Forward-Air" id="zI7OoOzOlCg" >}}
+{{< yt title="Orcane Guide | How to Use Forward-Air" id="zI7OoOzOlCg" >}}
 
 El FAir de Orcane se parece un poco a un movimiento especial ya que tiene bastantes propiedades únicas. Hoy vamos a ver cómo usarlo. Iniciando por las bases hasta los detalles más minúsculos, vamos allá.
 
