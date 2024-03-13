@@ -381,6 +381,8 @@ article div:has(iframe) {
 }
 
 .nav-list {
+  display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -447,11 +449,6 @@ article div:has(iframe) {
 
 .dark #theme-moon {
   display: none;
-}
-
-.nav-list .nav-buttons {
-  display: flex;
-  align-items: center;
 }
 
 @media (max-width:40rem) {
@@ -563,11 +560,6 @@ article div:has(iframe) {
   .nav-list li button:hover,
   .nav-list li button:focus-visible {
     background-color: var(--clr-highlighter);
-  }
-
-  .nav-list .nav-buttons {
-    display: flex;
-    align-items: center;
   }
 }
 
@@ -1245,6 +1237,8 @@ article div:has(iframe) {
 }
 
 .library-grid li a div img {
+  height: 2rem;
+  width: auto;
   margin: auto;
 }
 
@@ -1486,6 +1480,8 @@ article div:has(iframe) {
 .comparison th img {
   display: block;
   margin: .125rem 0;
+  height: 100%;
+  max-height: 2rem;
 }
 
 .sticky-col {
