@@ -31,7 +31,7 @@ A special endlag value that is incurred if the character lands during the startu
 
 > Like with endlag, all aerials have separate landing lag values for if the attack hit or whiffed, generally 1.5× the amount on whiff vs. on hit. Listed as "Hit / Whiff" on character pages.
 
-> On hit, the last 5 frames of landing lag are cancellable into [jumpsquat](#jumpsquat), allowing you to become airborne on the same frame you would normally be actionable. [Learn more](/lectures/understanding-landing-lag)..
+> On hit, the last 5 frames of landing lag are cancellable into [jumpsquat](#jumpsquat), allowing you to become airborne on the same frame you would normally be actionable. [Learn more about this mechanic](/lectures/understanding-landing-lag)..
 
 ### More
 
@@ -57,7 +57,7 @@ Certain attacks or objects have invulnerability to projectiles, in which case th
 
 The amount of frames before an attack is usable again, extending past endlag when the character is otherwise fully actionable. Most commonly found on special attacks, and sometimes accompanied by a display indicator on the character's HUD.
 
-![](cooldowns.png)
+![In-game screenshot of the HUD cooldown indicators for Forsburn's Clone, Clairen's Plasma Field, Olympia's Crystal, Pomme's Song Field, and Wrastor's Slipstream](cooldowns.png)
 
 ## Knockback Data
 
