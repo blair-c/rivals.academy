@@ -143,6 +143,7 @@ article li a:hover {
 
 article p a,
 article li a,
+.article-footer p a,
 .site-section-header p a,
 .bracket-desc a,
 b {
