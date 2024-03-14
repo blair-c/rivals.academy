@@ -2,7 +2,9 @@
 {{ $comp := print (page.RelPermalink) "vid/compressed/" (.Get 0) ".mp4" }}
 <video controls loop muted preload="none">
   <source src="{{ $comp }}" type="video/mp4">
-  <source src="{{ $vid }}" type="video/mp4">
+  {{ if fileExists (print (page.RelPermalink) "vid/" (.Get 0) ".mp4") }}
+    <source src="{{ $vid }}" type="video/mp4">
+  {{ end }}
   Download the
   {{/*  <a href="{{ $link }}.webm">WEBM</a>
   or  */}}
