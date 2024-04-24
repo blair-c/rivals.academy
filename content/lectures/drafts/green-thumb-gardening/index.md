@@ -63,3 +63,5 @@ Arguably the biggest use for flowers comes from your Side Special, as it not onl
 In the ditto,  there is no way for Sylvanos to support the grass of an opposing Sylvanos, nor can Sylv grow grass over an opponent's grass. Flowers also cannot grow grass over already existing grass. Grass must first be cleared before your own grass can be grown in its place.
 
 Howl will not activate another Sylv’s grass, nor can Sylvanos use the chomp from unburrow on another Sylv’s grass. However, Side Special may eat grass and flowers as normal regardless of ownership. This allows Sylv to clear opposing grass even if that grass is supported.
+
+Now that you have these seeds of knowledge planted, you can begin to play around grass and flowers to hedge your odds at winning, or grow your own strategies around them. Just remember to let your play blossom and dont get too distracted by the beautiful yardwork!
